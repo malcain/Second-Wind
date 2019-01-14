@@ -31,6 +31,7 @@ class CfgPatches {
 	};
 };
 
+
 #include "CfgVehicleClasses.hpp"
 #include "CfgFaces.hpp"
 #include "CfgVoice.hpp"
@@ -39,6 +40,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 //#include "CfgMovesPlayerSdr.hpp"
 #include "CfgMovesZombieSdr.hpp"
+//#include "CfgMovesHuntSdr.hpp"
 
 class CfgMovesAnimal_Base_F {
 	access = ReadAndCreate;
