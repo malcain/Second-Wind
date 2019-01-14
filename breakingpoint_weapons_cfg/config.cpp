@@ -16,7 +16,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui"};
+		requiredAddons[] = {"A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui"};
 	};
 };
 
