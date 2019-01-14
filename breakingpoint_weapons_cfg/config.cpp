@@ -1175,22 +1175,6 @@ class CfgMovesMaleSdr: CfgMovesBasic
 	};	
 };
 
-class CfgMovesMaleSdrHunt3 : CfgMovesMaleSdr
-{
-	class States
-	{
-		class AmovPercMrunSlowWrflDf : AmovPercMstpSlowWrflDnon
-		{
-			speed = 2.715882; //0.715882
-		};
-		class AmovPercMrunSrasWrflDf : AmovPercMstpSrasWrflDnon
-		{
-			speed = 2.684541; //0.684541
-		};
-	
-	};
-};
-
 class CfgGesturesMale 
 {
 	skeletonName = "OFP2_ManSkeleton";

@@ -4052,7 +4052,7 @@ class CfgVehicles
 		displayName = "Hunter 3";
 		uniformClass = "BP_Hunter_3";
 		model = "\breakingpoint_classes\models\BP_Hunter3.p3d";
-		moves = "CfgMovesMaleSdrHunt3";//
+		//moves = "CfgMovesMaleSdrHunt3";//
 		side = 3;
 		backpack = "";
 		weapons[] = {"Throw","Put"};
