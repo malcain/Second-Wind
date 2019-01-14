@@ -1177,7 +1177,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 
 class CfgMovesMaleSdrHunt3 : CfgMovesMaleSdr
 {
-	States
+	class States
 	{
 		class AmovPercMrunSlowWrflDf
 		{
