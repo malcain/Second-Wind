@@ -115,7 +115,7 @@
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_2"};
 					backpack[] = {"BP_Kitbag_drt"};
-					vest[] = {"V_VPack_BP"};
+					vest[] = {};
 					uniform[] = {"BP_Scavenger_2"};
 					headgear[]={""};
 					nvg[]={"TRYK_ESS_BLKTAN_NV"};
@@ -156,7 +156,7 @@
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_3"};
 					backpack[] = {"BP_Kitbag_grs"};
-					vest[] = {"V_CPack_BP"};
+					vest[] = {};
 					uniform[] = {"BP_Scavenger_3"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
@@ -174,18 +174,18 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_10Rnd_762Rubber_Mag","BP_10Rnd_762Rubber_Mag"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
 				class Backpack : BP_BaseGear 
 				{
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_TranQRifle"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_MRT","ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"Binocular"};
+					items[] = {};
 				};
 			};
 			class Level_4 : Level_Base {
@@ -198,7 +198,7 @@
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_4"};
 					backpack[] = {"BP_Kitbag_grs"};
-					vest[] = {"V_CPack_BP"};
+					vest[] = {};
 					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
@@ -216,18 +216,18 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_10Rnd_762Rubber_Mag","BP_10Rnd_762Rubber_Mag"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
 				class Backpack : BP_BaseGear 
 				{
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_TranQRifle"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_MRT","ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"Binocular"};
+					items[] = {};
 				};
 			};
 		};

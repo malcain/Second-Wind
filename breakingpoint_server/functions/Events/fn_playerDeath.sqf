@@ -87,7 +87,10 @@ if (_groupID != "0") then
 };
 
 // Handle Suicide
-if (_killer == _player) then { _killer = objNull; };
+if (_killer == _player) then { _killer = objNull; 
+_freshSpawn = _player getVariable ["freshSpawn",false];
+	if (_freshSpawn) then {
+	_player setVariable ["freshSpawnGrave", true ,true]; }; };
 
 // Process Kill Results
 if (!isNull _killer) then
@@ -114,6 +117,8 @@ if (!isNull _killer) then
 	// Fresh Spawn Check
 	_player call BPServer_fnc_freshSpawnCheck;
 	_freshSpawn = _player getVariable ["freshSpawn",false];
+	if (_freshSpawn) then {
+	_player setVariable ["freshSpawnGrave", true ,true]; };
 	if (_freshSpawn and _killerClass != 7) exitWith {
 		["playerDeath: Player: %1 was killed by %2. Stats Skipped. Fresh Spawn was killed.~0001",(name _player),(name _killer)] call BP_fnc_debugConsoleFormat;
 		BP_GameError = 6;

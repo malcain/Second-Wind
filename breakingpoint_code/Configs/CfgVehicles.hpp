@@ -118,16 +118,28 @@ class CfgVehicles
 		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
 	};
 	
-	class BP_GraveDirt : BP_DeadBody 
+	class BP_GraveForest : BP_DeadBody 
 	{
 		scope = protected;
 		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_forest_F.p3d";
 	};
 	
+	class BP_GraveRocks : BP_DeadBody 
+	{
+		scope = protected;
+		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_rocks_F.p3d";
+	};
+	
+	class BP_GraveDirt : BP_DeadBody 
+	{
+		scope = protected;
+		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_dirt_F.p3d";
+	};
+	
 	class BP_GraveDirtAI : BP_DeadBodyAI
 	{
 		scope = protected;
-		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_forest_F.p3d";
+		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_dirt_F.p3d";
 	};
 	
 	class B_supplyCrate_F;
