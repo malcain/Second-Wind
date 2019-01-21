@@ -191,7 +191,7 @@ class RscGearTemplates {
 #include "config\RscDisplayMain.hpp"
 #include "config\RscDisplayMultiplayer.hpp"
 
-#include "config\RscDisplayConfigure.hpp"
+//#include "config\RscDisplayConfigure.hpp"
 #include "config\RscDisplayGameOptions.hpp"
 #include "config\RscDisplayOptionsLayout.hpp"
 #include "config\RscDisplayOptionsAudio.hpp"

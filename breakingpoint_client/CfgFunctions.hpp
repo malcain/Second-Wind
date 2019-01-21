@@ -164,6 +164,16 @@ class CfgFunctions
 			class loginUILoaded {};
 			class loadFactionStatsDiary{};
 			class factionStatsDiary{};
+			class playerHeal{};
+			class playerJump{};
+			class playerLeaveGroup{};
+			class playerEat{};
+			class playerDrink{};
+			class playerBandage{};
+			class playerAutorun{};
+			class playerEarplugs{};
+			class playerZombieMovement{};
+			class playerDisableChat{};
 		};
 		class Inventory {
 			file = "\breakingpoint_client\functions\Inventory";

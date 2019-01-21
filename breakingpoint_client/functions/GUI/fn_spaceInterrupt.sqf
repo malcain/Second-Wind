@@ -470,7 +470,7 @@ if (_dikCode in actionKeys "SitDown") then {
 	_handled = true;
 };
 
-if (_dikCode in actionKeys "User1") then {
+/*if (_dikCode in actionKeys "User1") then {
 	if (time - BP_lastCheckBit > 1) then
 	{
 		BP_lastCheckBit = time;
@@ -608,7 +608,7 @@ if (_dikCode in actionKeys "User7") then {
 	_handled = true;
 };
 
-/*
+
 if (_dikCode in actionKeys "User8") then {
 	if (time - BP_lastCheckBit > 1) then
 	{
@@ -641,7 +641,7 @@ if (_dikCode in actionKeys "User8") then {
 	};
 	_handled = true;
 };
-*/
+
 
 if (_dikCode in actionKeys "User9") then 
 {
@@ -764,7 +764,7 @@ if (_dikCode in actionKeys "User19") then {
 		};
 	};
 	_handled = true;
-};
+};*/
 
 if (_dikCode in actionKeys "Gear" || {_dikCode in actionKeys "Inventory"}) then 
 { 
