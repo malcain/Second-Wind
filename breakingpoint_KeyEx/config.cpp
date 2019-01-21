@@ -37,52 +37,52 @@ class CfgFunctions {
 class CfgKeybindsEx {
 	class breakingpoint_FactionStats {
 		displayName = "Open Diary"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Diary { //Unique Identifier for this Keybind
 			displayName = "Open Diary"; //Display name of this keybinding
 			tooltip = "Opens your Diary with progress"; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x24,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_loadFactionStatsDiary;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Heal {
 		displayName = "Heal"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Heal { //Unique Identifier for this Keybind
 			displayName = "Heal"; //Display name of this keybinding
 			tooltip = "Sit to Heal"; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x23,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerHeal;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Jump {
 		displayName = "Jump"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Jump { //Unique Identifier for this Keybind
 			displayName = "Jump"; //Display name of this keybinding
 			tooltip = "Jump over walls and other obstacles."; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x2F,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerJump;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Eat  {
 		displayName = "Eat "; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Eat { //Unique Identifier for this Keybind
 			displayName = "Eat "; //Display name of this keybinding
 			tooltip = "Consumes random food if in inventory."; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x51,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerEat;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Drink  {
 		displayName = "Drink"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Drink { //Unique Identifier for this Keybind
 			displayName = "Drink"; //Display name of this keybinding
 			tooltip = "Consumes random drink if in inventory."; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x4F,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerDrink;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Bandage  {
 		displayName = "Bandage"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Bandage { //Unique Identifier for this Keybind
 			displayName = "Bandage"; //Display name of this keybinding
 			tooltip = "Uses a Small Bandage if in inventory."; //Tooltip
 			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
@@ -91,28 +91,28 @@ class CfgKeybindsEx {
 	};
 	class breakingpoint_Autorun  {
 		displayName = "Autorun"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Autorun { //Unique Identifier for this Keybind
 			displayName = "Autorun"; //Display name of this keybinding
 			tooltip = "Automatic fast movement with mouse steering. Cancelled with any action."; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x52,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerAutorun;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_Earplugs  {
 		displayName = "Earplugs"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class Earplugs { //Unique Identifier for this Keybind
 			displayName = "Earplugs"; //Display name of this keybinding
 			tooltip = "Automatically lowers sound volume for use in vehicles and helicopters. Using the key again will revert to normal volume."; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x19,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerEarplugs;"; //Code to run when this keybind is pressed
 		};
 	};
 	class breakingpoint_LeaveGroup {
 		displayName = "Leave Group"; //Tab Display Name
-		class Test { //Unique Identifier for this Keybind
+		class LeaveGroup { //Unique Identifier for this Keybind
 			displayName = "Leave Group"; //Display name of this keybinding
 			tooltip = "Leave current player group"; //Tooltip
-			defaultKeys[] = {{0x16,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x47,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerLeaveGroup;"; //Code to run when this keybind is pressed
 		};
 	};
