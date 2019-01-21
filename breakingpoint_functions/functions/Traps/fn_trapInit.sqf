@@ -7,7 +7,9 @@
 	Alderon Games Pty Ltd
 */
 
-params [["_trap",objNull,[objNull]]];
+params ["_trap"];
+
+_trap = _trap select 0;
 
 if (isNull _trap) exitWith {};
 

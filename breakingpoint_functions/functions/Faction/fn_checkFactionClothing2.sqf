@@ -110,7 +110,7 @@ if !(_oldUniform in _clothingArray) then
 	//Add New Uniform
 	removeUniform player;
 	player addUniform _item;
-	[_cont, _item, 1] call CBA_fnc_removeItemCargo;
+	[_cont, _item, 1] call BP_fnc_removeItemCargo;
 
 	//Add Uniform Weapons
 	{
@@ -141,7 +141,7 @@ if !(_oldheadgear in _headgearArray) then
 	{
 		removeheadgear player;
 		player addheadgear _item;
-		[_cont, _item, 1] call CBA_fnc_removeItemCargo;
+		[_cont, _item, 1] call BP_fnc_removeItemCargo;
 		//Force Save Character
 		BP_forceSave = true;
 	};
@@ -150,7 +150,7 @@ if !(_oldnvg in _nvgArray) then
 	{
 		player unlinkItem _oldnvg;
 		player linkItem _item;
-		[_cont, _item, 1] call CBA_fnc_removeItemCargo;
+		[_cont, _item, 1] call BP_fnc_removeItemCargo;
 		//Force Save Character
 		BP_forceSave = true;
 	};
@@ -159,7 +159,7 @@ if !(_oldfacewear in _facewearArray) then
 	{
 		removegoggles player;
 		player addgoggles _item;
-		[_cont, _item, 1] call CBA_fnc_removeItemCargo;
+		[_cont, _item, 1] call BP_fnc_removeItemCargo;
 		//Force Save Character
 		BP_forceSave = true;
 	};

@@ -136,6 +136,11 @@ class CfgFunctions
 			class getObjectInventory {};
 			class setObjectInventory {};
 			class isEmptyInventory {};
+			class removeItemCargo {};
+			class getItemConfig {};
+			class getNonPresetClass {};
+			class weaponComponents {};
+			class createNamespace {};
 		};
 		class Local {
 			file = "\breakingpoint_functions\functions\Local";

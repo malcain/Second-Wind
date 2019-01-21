@@ -9,7 +9,7 @@
 
 ["trapActivate: %1",_this] call BP_fnc_debugConsoleFormat;
 
-params [["_trap",objNull,[objNull]],["_player",objNull,[objNull]]];
+params ["_trap","_player"];
 
 if (isNull _trap) exitWith {};
 
