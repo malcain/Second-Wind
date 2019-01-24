@@ -87,6 +87,18 @@ class BP_MedicalboxHelicrash: BP_LootBox
 	};
 };
 
+/* Contraband Crates*/
+
+class BP_ContrabandBox : BP_LootBox {
+    displayName = "Contraband Crate";
+	model = "\breakingpoint\models\plp_bo_CrateLaRosa.p3d";
+};
+
+class BP_ContrabandBoxEmpty : BP_LootBox {
+    displayName = "Empty Contraband Crate";
+	model = "\breakingpoint\models\plp_bo_CrateLaRosaOpen.p3d";
+};
+
 /* Apex Mil Boxes*/	
 
 class BP_ApexMilBox1 : BP_LootBox {
@@ -98,6 +110,32 @@ class BP_ApexMilBox2 : BP_LootBox {
     displayName = "Apex Gear Crate";
 	model = "\A3\Supplies_F_Exp\Ammoboxes\Equipment_Box_F.p3d";
 };
+
+class BP_ExplosiveBox : BP_LootBox {
+    displayName = "Explosive Box";
+	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicWeaponBox.p3d";
+};
+
+class BP_MarksmanWeaponBox : BP_LootBox {
+    displayName = "Explosive Box";
+	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
+};
+
+class BP_WeaponCratePacific : BP_LootBox {
+    displayName = "Weapon Crate Pacific";
+	model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F.p3d";
+	hiddenSelections[]=
+		{
+			"Camo_Signs",
+			"Camo"
+		};
+	hiddenSelectionsTextures[]=
+	{
+		"\A3\Supplies_F_Exp\Ammoboxes\Data\AmmoBox_signs_OPFOR_CA.paa",
+		"\A3\Supplies_F_Exp\Ammoboxes\Data\Box_T_East_Wps_F_co.paa"
+	};
+};
+
 	
 /* Military Boxes Very Small (Small Magazine Supply Boxes)*/	
 
