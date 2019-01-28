@@ -249,7 +249,7 @@ if (_dikCode == 6) then {
 			{
 				if ((vehicle player) == player) then {
 					//player action ["SwitchWeapon", player, player, 100];
-					player action ["SWITCHWEAPON",player,player,-1]
+					player action ["SWITCHWEAPON",player,player,-1];
 					player switchcamera cameraView;
 				};
 			};
