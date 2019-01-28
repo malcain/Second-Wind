@@ -21,7 +21,7 @@ scriptName "BP_fnc_cleanupLoot";
 // Loot Box Objects
 {
 	if !(_x getVariable ["permaLoot",false]) then {
-		_nearby = [(getPosATL _x),75] call BP_fnc_nearbyPlayers;
+		_nearby = [(getPosATL _x),225] call BP_fnc_nearbyPlayers;
 		if (!_nearby) then { 
 			deleteVehicle _x;
 		};

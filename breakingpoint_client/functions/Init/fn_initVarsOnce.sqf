@@ -142,10 +142,10 @@ BP_Threads = [];
 
 //Zombie Types
 _config = configFile >> "CfgBuildingLoot";
-if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+/*if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot";
-};
+};*/
 BP_baseTypes = getArray (_config >> "Default" >> "zombieClass");
 
 ////////////////////////////////////////////////////////////////////////

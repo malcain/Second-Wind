@@ -50,7 +50,11 @@ waitUntil
 	_isHunter = (_factionName == "Hunter");
 	_factionLevel = player call BP_fnc_getFactionLevel;
 	if (_isHunter and _factionLevel > 2) then {
+	if (_factionLevel > 3) then {
+	player setAnimSpeedCoef 1.05;}
+	else {
 	player setAnimSpeedCoef 1.07;
+	};
 	};
 	//Inside Buildings
 	//_building = nearestObject [player, "HouseBase"];

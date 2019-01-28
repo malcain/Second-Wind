@@ -98,6 +98,15 @@ class CfgKeybindsEx {
 			code = "call BP_fnc_playerAutorun;"; //Code to run when this keybind is pressed
 		};
 	};
+	class breakingpoint_Autoswim  {
+		displayName = "Autoswim"; //Tab Display Name
+		class Autoswim { //Unique Identifier for this Keybind
+			displayName = "Autoswim"; //Display name of this keybinding
+			tooltip = "Automatic swimming with mouse steering. Cancelled with any action."; //Tooltip
+			defaultKeys[] = {{0x4C,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			code = "call BP_fnc_playerAutoswim;"; //Code to run when this keybind is pressed
+		};
+	};
 	class breakingpoint_Earplugs  {
 		displayName = "Earplugs"; //Tab Display Name
 		class Earplugs { //Unique Identifier for this Keybind

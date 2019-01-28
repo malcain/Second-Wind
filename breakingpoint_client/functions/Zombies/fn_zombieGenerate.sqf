@@ -15,10 +15,10 @@ if (!BP_Zeds) exitWith {};
 if (BP_GlobalZeds > BP_ZedMaxGlobal) exitWith {};
 
 _config = configFile >> "CfgBuildingLoot";
-if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
+/*if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot";
-};
+};*/
 if (_unitTypes isEqualTo []) then { _unitTypes = []+ getArray (_config >> "Default" >> "zombieClass"); };
 _type = selectRandom _unitTypes;
 
@@ -68,7 +68,7 @@ _fsmid = [_position,_zombie] execFSM "\breakingpoint_code\system\zombie_agent.fs
 _fsmid setFSMVariable ["_handle", _fsmid];
 _zombie setVariable ["fsm_handle", _fsmid];
 
-if ((_rnd > 0.95) or (_rnd < 0.05)) then {
+/*if ((_rnd > 0.98) or (_rnd < 0.02)) then {
 _zombie setVariable ["fire",_zombie];
 [(netID _zombie),(netID _zombie)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
-};
+};*/

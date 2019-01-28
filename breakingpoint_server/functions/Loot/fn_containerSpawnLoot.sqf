@@ -20,10 +20,10 @@ _container setVariable ["lootType",nil];
 //Spawn In Loot
 //Mission config file loot table override.
 _config = 	configFile >> "CfgObjectLoot" >> _boxLootType;
-if (isClass (missionConfigFile >> "CfgObjectLoot" >> _boxLootType)) then
+/*if (isClass (missionConfigFile >> "CfgObjectLoot" >> _boxLootType)) then
 {
 	_config = missionConfigFile >> "CfgObjectLoot" >> _boxLootType;
-};
+};*/
 _itemTypes =	[] + getArray (_config >> "itemType");
 _cfgWeapons = configFile >> "CfgWeapons";
 
@@ -74,7 +74,7 @@ for "_i" from 1 to _lootMinItems do
 			//Add Random Mags ( Random 0-1 )
 			_mags = getArray (_cfgWeapons >> _lootClass >> "magazines");
 			if !(_mags isEqualTo []) then {
-				_magRndCount = round(random 1);
+				_magRndCount = round(random 2);
 				if (_magRndCount > 0) then {
 					_container addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
 				};

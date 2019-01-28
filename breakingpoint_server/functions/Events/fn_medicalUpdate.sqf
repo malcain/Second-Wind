@@ -325,9 +325,10 @@ switch (_event) do {
 						} count allPlayers;		
 						if (count _groupMembers > 1) then {
 							_friendlyClass = [1,4,5];
+							_hostileClass = [2,6];
 							for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
 								_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
-								if(((_groupMemberClass in _friendlyClass) && (_unitClassID in _friendlyClass)) || ((_groupMemberClass == 2) && (_unitClassID == 2))) then {
+								if(((_groupMemberClass in _friendlyClass) && (_unitClassID in _friendlyClass)) || ((_groupMemberClass in _hostileClass) && (_playerClass in _hostileClass))) then {
 									_pointsOff = true;
 								};
 							};
@@ -336,7 +337,7 @@ switch (_event) do {
 					};
 				};
 				
-				//No points if misxed group points off for gutting
+				//No points if mixed group points off for gutting
 				if(_pointsOff) then {
 					_pointsChange = 0;
 				};
@@ -351,7 +352,7 @@ switch (_event) do {
 				//Survivalist
 				if (_class == 5) then { _pointsChange = 10; };
 				//Nomad
-				if (_class == 4) then { _pointsChange = 25; };
+				if (_class == 4) then { _pointsChange = 15; };
 			};
 		};
 	};

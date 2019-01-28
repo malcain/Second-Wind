@@ -24,10 +24,10 @@ _buildingCount = {
 
 	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
-	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
 	{
 		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
-	};
+	};*/
 
 	_spawnLoot = isClass (_config);
 	if (_spawnLoot) then {
@@ -40,6 +40,7 @@ _buildingCount = {
 //Output Loot Debug Info
 _lootObjs =
 { _x enableSimulation false; } count (allMissionObjects "BP_LootBox");
+//{ _x enableDynamicSimulation true; } count (allMissionObjects "BP_LootBox");
 ["loot: Spawned Loot in %1 Buildings.",_buildingCount] call BP_fnc_debugConsoleFormat;
 ["loot: Lootbox Count: %1",_lootObjs] call BP_fnc_debugConsoleFormat;
 

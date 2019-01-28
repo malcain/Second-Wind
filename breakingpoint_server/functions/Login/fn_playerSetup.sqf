@@ -198,7 +198,7 @@ if (_class == 7) exitWith
 		_randomPlayer = selectRandom _nonUndeadPlayers;
 
 		//Find Zombie Spawn Position
-		_nearbyZombies = _randomPlayer nearEntities ["zZombie_Base", 250];
+		_nearbyZombies = _randomPlayer nearEntities ["zZombie_Base", 200];
 		if !(_nearbyZombies isEqualTo []) then
 		{
 			_zombie = selectRandom _nearbyZombies;
@@ -210,7 +210,7 @@ if (_class == 7) exitWith
 			};
 		} else {
 			//Fetch Nearby Buildings
-			_nearbyBuildings = (getPosATL _randomPlayer) nearObjects ["Building",200];
+			_nearbyBuildings = (getPosATL _randomPlayer) nearObjects ["Building",175];
 
 			//Delete Nearest Building from Player
 			_nearestBuilding = nearestObject [_randomPlayer, "HouseBase"];
@@ -230,10 +230,10 @@ if (_class == 7) exitWith
 					//Handle Spawning
 					// Mission config file loot table override.
 					_config = configFile >> "CfgBuildingLoot" >> (typeOf _x);
-					if (isClass (missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x))) then
+					/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x))) then
 					{
 						_config = missionConfigFile >> "CfgBuildingLoot" >> (typeOf _x);
-					};
+					};*/
 
 					if (isClass _config) then {
 						_unitTypes = getArray (_config >> "zombieClass");

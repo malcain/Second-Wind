@@ -1229,7 +1229,7 @@ class CfgMagazines
 	class FoodZombieRaw : FoodMeatRaw {
 		displayName = "Infected Raw Meat";
 		descriptionShort = "";
-		bloodRegen = -1000;
+		bloodRegen = -2500;
 		mass = 10;
 	};
 
@@ -1312,7 +1312,7 @@ class CfgMagazines
 	class FoodZombieCooked : FoodMeatCooked {
 		displayName = "Infected Meat (Cooked)";
 		descriptionShort = "";
-		bloodRegen = -450;
+		bloodRegen = -1250;
 		mass = 10;
 	};
 

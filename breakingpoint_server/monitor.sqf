@@ -109,19 +109,20 @@ if(_customLootSetting > 0) then
 {
 	{
 		_x params ["_minLoot","_maxLoot","_radius","_lootType","_lootPos",["_chance",1]];
-		if(_customLootSetting == 2 && _lootType == "AmmoPallet4") then
+		/*if(_customLootSetting == 2 && _lootType == "AmmoPallet4") then
 		{
 			_lootType = "GhostHotelWpn";
-		};
-		_rnd = random 1;
-		if (_rnd < _chance) then
-		{
+		};*/
+		//_rnd = random 1;
+		//if (_rnd < _chance) then
+		//{
 			_logic = createVehicle ["Land_House_Logic", _lootPos, [], 0, "NONE"];
+			_logic setPosATL _lootPos;
 			_logic setVariable ["minLoot",_minLoot,true];
 			_logic setVariable ["maxLoot",_maxLoot,true];
 			_logic setVariable ["lootRadius",_radius,true];
 			_logic setVariable ["lootType",_lootType,true];
-		};
+		//};
 	} count (getArray (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Loot" >> "customLoot"));
 };
 

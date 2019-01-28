@@ -10,10 +10,10 @@
 scriptName "BP_serverMgr";
 
 #define CLEANUP_CHECK_INT 60
-#define CLEANUP_PLAYER_TIME 600
+#define CLEANUP_PLAYER_TIME 750
 #define CLEANUP_BODY_TIME 120
 #define CLEANUP_WPNHOLDER_TIME 300
-#define CLEANUP_LOOT_TIME 1200
+#define CLEANUP_LOOT_TIME 1020
 
 #define SIM_CHECK_INT 30
 #define SIM_DIST_LOOT 8
@@ -25,7 +25,7 @@ scriptName "BP_serverMgr";
 
 #define DUPE_CHECK_INT 60
 
-#define HELI_CHECK_INT 1500
+#define HELI_CHECK_INT 300
 
 #define DEBUG_CHEK_INT 60
 
@@ -37,7 +37,7 @@ _lastDupeCheck = diag_tickTime;
 _lastHelicrashCheck = diag_tickTime;
 _lastTimeoutCheck = diag_tickTime;
 _lastDebugCheck = diag_tickTime;
-_helicrashCount = 5;
+_helicrashCount = 3;
 
 waitUntil
 {
@@ -95,9 +95,9 @@ waitUntil
 			call BPServer_fnc_updateAll;
 		};
 			
-		// Unused Objects Cleanup (15 min)
+		// Unused Objects Cleanup (17 min)
 		if ((diag_tickTime - BP_Cleanup_lastLoot) > BP_Cleanup_Loot_Interval) then {
-			["serverMgr: Unused Objects Cleanup (15 min)"] call BP_fnc_debugConsoleFormat;
+			["serverMgr: Unused Objects Cleanup (17 min)"] call BP_fnc_debugConsoleFormat;
 			call BPServer_fnc_cleanupLoot;
 		};
 			
@@ -163,7 +163,7 @@ waitUntil
 							} else {
 								if ((diag_tickTime - _processedDeath) > CLEANUP_WPNHOLDER_TIME) then 
 								{
-									_nearby = [(getPosATL _x),5] call BP_fnc_nearbyPlayers;
+									_nearby = [(getPosATL _x),10] call BP_fnc_nearbyPlayers;
 									if (!_nearby) then {
 										["cleanupDead: Cleaning Up Weapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
 										deleteVehicle _x;
@@ -454,6 +454,9 @@ waitUntil
 	if ((diag_tickTime - _lastHelicrashCheck) > HELI_CHECK_INT) then 
 	{
 		_lastHelicrashCheck = diag_tickTime;
+		
+		// Loot3.0 Cleanup (45 min)
+		//call BPServer_fnc_cleanupLoot3;
 		
 		if (_helicrashCount > 0 and BP_Helicrashes) then
 		{

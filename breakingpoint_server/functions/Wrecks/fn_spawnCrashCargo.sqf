@@ -199,10 +199,10 @@ _num	 = round(random _randomizedLoot) + _guaranteedLoot;
 
 // Mission config file loot table override.
 _config = configFile >> "CfgBuildingLoot" >> _lootTable;
-if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _lootTable)) then
+/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _lootTable)) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot" >> _lootTable;
-};
+};*/
 
 _itemTypes =	[] + getArray (_config >> "itemType");
 _index = BP_CBLBase  find _lootTable;

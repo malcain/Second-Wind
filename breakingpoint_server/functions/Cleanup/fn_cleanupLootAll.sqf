@@ -21,7 +21,10 @@ scriptName "BP_fnc_cleanupLoot";
 // Loot Box Objects
 {
 	if !(_x getVariable ["permaLoot",false]) then {
-		deleteVehicle _x;
+		_nearby = [(getPosATL _x),170] call BP_fnc_nearbyPlayers;
+		if (!_nearby) then { 
+			deleteVehicle _x;
+		};
 	};
 } count entities "BP_LootBox";
 

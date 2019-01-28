@@ -91,12 +91,12 @@ class BP_MedicalboxHelicrash: BP_LootBox
 
 class BP_ContrabandBox : BP_LootBox {
     displayName = "Contraband Crate";
-	model = "\breakingpoint\models\plp_bo_CrateLaRosa.p3d";
+	model = "\plp_beachobjects\plp_bo_CrateLaRosa.p3d";
 };
 
 class BP_ContrabandBoxEmpty : BP_LootBox {
     displayName = "Empty Contraband Crate";
-	model = "\breakingpoint\models\plp_bo_CrateLaRosaOpen.p3d";
+	model = "\plp_beachobjects\plp_bo_CrateLaRosaOpen.p3d";
 };
 
 /* Apex Mil Boxes*/	

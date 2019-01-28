@@ -11,14 +11,14 @@ _building = _this select 0;
 
 if (isNull _building) exitWith {};
 
-_buildingPos = getPosATL _building;
+_buildingPos = getPosASL _building;
 _buildingType = 	typeOf _building;
 _buildingSize = ((sizeOf _buildingType)+5);
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
-if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
-};
+};*/
 
 //Exit If Loot Is Disabled
 if (!BP_Loot) exitWith {};
@@ -60,14 +60,14 @@ _lootMax =	getNumber (_config >> "lootMax");
 
 //Fail-Safe Checks
 if (_positions isEqualTo []) exitWith {};
-if (_lootMax < 1) exitWith {};
+//if (_lootMax < 1) exitWith {};
 
 //Process Loot Min / Max Random
 private "_lootRnd";
 if (_lootMin == _lootMax) then {
 	_lootRnd = _lootMax;
 } else {
-	_lootRnd = floor (random _lootMax);
+	_lootRnd = round (random _lootMax);
 };
 if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
 if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };
@@ -94,7 +94,10 @@ for "_i" from 1 to (count _positions) do {
 
 	//Calculate Item Position in World Space
 	_iPos = _building modelToWorld _x;
-
+	if ((getTerrainHeightASL getPos _building) < -0.1) then {
+	_iPos = [(_buildingPos select 0) + (_x select 0), (_buildingPos select 1) + (_x select 1),(_buildingPos select 2) + (_x select 2)];
+	_iPos = ASLtoATL _iPos;
+	};
 	//Check If Any Loot Boxes are in that world position
 	_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
 

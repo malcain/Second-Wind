@@ -88,10 +88,10 @@ if ((diag_tickTime - BP_FiredTime) > 10 || {_ammo != BP_FiredAmmo}) then
 						_buildingPos = getPosATL _building;
 						_type = typeOf _building;
 						_config = configFile >> "CfgBuildingLoot" >> _type;
-						if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+						/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
 						{
 							_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
-						};
+						};*/
 						_canLoot = isClass (_config);
 						if ((netID _building) in BP_Buildings) exitWith {
 							_canLoot = false;

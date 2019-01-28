@@ -171,6 +171,7 @@ class CfgFunctions
 			class playerDrink{};
 			class playerBandage{};
 			class playerAutorun{};
+			class playerAutoswim{};
 			class playerEarplugs{};
 			class playerZombieMovement{};
 			class playerDisableChat{};

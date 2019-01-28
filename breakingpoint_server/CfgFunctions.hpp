@@ -127,6 +127,7 @@ class CfgFunctions
 		class Cleanup {
 			file = "\breakingpoint_server\functions\Cleanup";
 			class cleanupLoot {};
+			class cleanupLoot3 {};
 			class cleanupLootAll {};
 			class cleanupRestart {};
 		};

@@ -15,7 +15,18 @@ _buildingType = _x getVariable ["lootType",""];
 
 if (_buildingType == "") exitWith {};
 
-_buildingPos = getPosATL _building;
+//Loot timer vars
+_serverTime = servertime;
+_timer = _x getVariable ["loottimer",0];
+
+//logout spawn timer
+if (diag_tickTime < 60) exitWith {};
+//Loot timer
+if ((_serverTime - _timer) < 300) exitwith {};
+
+_x setVariable ["loottimer",_serverTime,true];
+
+_buildingPos = getPosASL _building;
 _buildingSize = _x getVariable ["lootRadius",5];
 _lootMin = _x getVariable ["minLoot",1];
 _lootMax = _x getVariable ["maxLoot",1];
@@ -24,10 +35,10 @@ _lootMax = _x getVariable ["maxLoot",1];
 if (_lootMax > 4) then { _lootMax = 4; };
 
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
-if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
+/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
-};
+};*/
 _itemTypes =	[] + getArray (_config >> "itemType");
 
 //Check Valid Logic Data
@@ -38,7 +49,7 @@ private "_lootRnd";
 if (_lootMin == _lootMax) then {
 	_lootRnd = _lootMax;
 } else {
-	_lootRnd = floor (random _lootMax);
+	_lootRnd = round (random _lootMax);
 };
 if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
 if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };

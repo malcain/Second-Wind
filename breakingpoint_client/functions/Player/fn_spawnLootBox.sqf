@@ -14,10 +14,10 @@ if (_iLootType == "") exitWith {};
 
 // Mission config file loot table override.
 _config = configFile >> "CfgObjectLoot" >> _iLootType;
-if (isClass (missionConfigFile >> "CfgObjectLoot" >> _iLootType)) then
+/*if (isClass (missionConfigFile >> "CfgObjectLoot" >> _iLootType)) then
 {
 	_config = missionConfigFile >> "CfgObjectLoot" >> _iLootType;
-};
+};*/
 
 _itemTypes =	[] + getArray (_config >> "itemType");
 _numItems = floor(random _max);
@@ -48,7 +48,7 @@ while {_numItems > 0} do
 			//Add Random Mags ( Random 0 or 1 )
 			_mags = [] + getArray (configFile >> "cfgWeapons" >> _lootClass >> "magazines");
 			if ((count _mags) > 0) then {
-				_magRndCount = round(random 3);
+				_magRndCount = round(random 2);
 				_object addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
 			};
 		};
@@ -65,7 +65,7 @@ while {_numItems > 0} do
 			//Add Random Mags ( Random 0 or 1 )
 			_mags = [] + getArray (configFile >> "cfgWeapons" >> _lootClass >> "magazines");
 			if ((count _mags) > 0) then {
-				_magRndCount = round(random 1);
+				_magRndCount = round(random 2);
 				if (_magRndCount > 0) then {
 					_object addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
 				};

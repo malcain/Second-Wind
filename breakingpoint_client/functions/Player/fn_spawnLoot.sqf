@@ -12,7 +12,7 @@
 params ["_iItem","_iClass","_iLootType","_iPos"];
 
 //if (BP_LootGlobal >= BP_LootMax && {!isServer}) exitWith {};
-if (surfaceIsWater _iPos) exitWith {};
+//if (surfaceIsWater _iPos) exitWith {};
 
 if (isNil "_iClass") then
 {
@@ -22,14 +22,14 @@ if (isNil "_iClass") then
 
 _item = objNull;
 
-if ((count _iPos) > 2) then
+/*if ((count _iPos) > 2) then
 {
     _height = getTerrainHeightASL _iPos;
     if (_height < 0) then 
 	{
 		_iPos set [2, (_iPos select 2) - _height]; 
 	};
-};
+};*/
 
 switch (_iClass) do {
 	default {
@@ -61,7 +61,7 @@ switch (_iClass) do {
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
 		if ((count _mags) > 0) then {
-			_magRndCount = round(random 1);
+			_magRndCount = round(random 2) + 1;
 			if (_magRndCount > 0) then {
 				_item addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
 			};
@@ -78,7 +78,7 @@ switch (_iClass) do {
 			_item addItemCargoGlobal [_x, 1];
 		} count _attach;
 		if ((count _mags) > 0) then {
-			_magRndCount = round(random 3);
+			_magRndCount = round(random 1) + 1;
 			if (_magRndCount < 1) then { _magRndCount = 1; };
 			_item addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
 		};
