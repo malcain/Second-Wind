@@ -41,7 +41,13 @@ if ((_itemorignal in food_with_output) && {!_inVehicle}) then
 	[player,(food_output select (food_with_output find _itemorignal))] call BP_fnc_dropWeaponHolderMag;
 };
 
-if ((_itemorignal in meatzombie) and (random 15 < 5)) then {
+if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
+{
+    sleep 1;
+	 call BP_fnc_dropWeaponHolderMag;
+};
+
+if (_itemorignal in meatzombie) then {
     r_player_infected = true;
 } else {
 	if ( (_itemorignal in meatraw) and (random 15 < 1)) then {

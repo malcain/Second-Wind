@@ -76,6 +76,8 @@ class CfgFunctions
 			class repair {};
 			class studyBody {};
 			class useMeds {};
+			class flash {};
+			class flash_effect {};
 		};
 		class Safe {
 			file = "\breakingpoint_client\functions\Safe";
@@ -129,6 +131,10 @@ class CfgFunctions
 			file = "\breakingpoint_client\functions\Events";
 			class onFactionPoints {};
 			class onDraw3D {};
+		};
+		class Effects {
+			file = "\breakingpoint_client\functions\Effects";
+			class hallucination {};
 		};
 		class Group {
 			file = "\breakingpoint_client\functions\Group";

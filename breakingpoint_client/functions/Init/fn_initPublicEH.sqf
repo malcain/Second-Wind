@@ -144,7 +144,7 @@ if (!hasInterface) exitWith {};
 		_config =   configFile >> "CfgMagazines" >> _classname;
 		_text =     getText (_config >> "displayName");
 		_regen =    getNumber (_config >> "bloodRegen");
-		if (_zombieMeat and (random 15 < 5)) then {
+		if (_zombieMeat) then {
 			r_player_infected = true;
 		} else {
 			if (_rawfood and (random 15 < 1)) then {
@@ -187,7 +187,7 @@ if (!hasInterface) exitWith {};
 		_config =   configFile >> "CfgMagazines" >> _classname;
 		_text =     getText (_config >> "displayName");
 		_regen =    getNumber (_config >> "bloodRegen");
-		if ( _zombieMeat and (random 15 < 5)) then {
+		if (_zombieMeat) then {
 			r_player_infected = true;
 		} else {
 			if ( _rawfood and (random 15 < 1)) then {

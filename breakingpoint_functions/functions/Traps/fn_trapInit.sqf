@@ -13,12 +13,23 @@ _trap = _trap select 0;
 
 if (isNull _trap) exitWith {};
 
+KK_fnc_setPosAGLS = {
+	params ["_obj", "_pos", "_offset"];
+	_offset = 0;
+	if (isNil "_offset") then {_offset = 0};
+	_pos set [2, worldSize]; 
+	_obj setPosASL _pos;
+	_pos set [2, vectorMagnitude (_pos vectorDiff getPosVisual _obj) + _offset];
+	_obj setPosASL _pos;
+};
+
 if (isServer) then
 {
-	_trigger = createTrigger ["EmptyDetector", getPosATL _trap,false];
+	_trigger = createTrigger ["EmptyDetector", getPos _trap,false];
+	//[_trigger, getPos _trap] call KK_fnc_setPosAGLS;
 	_trigger setPos getPosATL _trap;
 	_trigger setVariable ["trap",_trap,false];
-	_trigger setTriggerArea [0.5, 0.3, 0, true];
+	_trigger setTriggerArea [0.5, 0.3, 0, true, 1];
 	_trigger setTriggerActivation ["ANY", "PRESENT", true];
 	_trigger setTriggerStatements [
 		"this",

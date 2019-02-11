@@ -230,7 +230,6 @@ class UserActionGroups {
 	};
 };
 
-
 /* Blood Mist Effects */
 
 class CfgCloudlets {
@@ -258,6 +257,123 @@ class CfgCloudlets {
 		damageTime = 0.000000;
 		constantDistance = 0.000000;
 		damageType = "";
+	};
+	
+/* Flash Grenade Effects */
+	class Default;
+	class simplefb_flash: Default
+	{
+		interval = 0.265;
+		circleRadius = 0;
+		circleVelocity[] = {0,0,0};
+		angle = 0;
+		angleVar = 360;
+		animationName = "";
+		particleType = "Billboard";
+		lifeTime = 0.05;
+		moveVelocity[] = {0,0,0};
+		rotationVelocity = 0;
+		animationSpeed[] = {1000};
+		randomDirectionPeriod = 0.01;
+		randomDirectionIntensity = 1;
+		timerPeriod = 0.05;
+		onTimerScript = "";
+		beforeDestroyScript = "\breakingpoint_client\functions\Actions\fn_flash.sqf";
+		lifeTimeVar = 0;
+		positionVar[] = {0,0,0};
+		MoveVelocityVar[] = {0,0,0};
+		rotationVelocityVar = 0;
+		sizeVar = 0;
+	};
+	class simplefb_smoke: Default
+	{
+		circleVelocity[] = {0,0,0};
+		moveVelocity[] = {0,0,1};
+		size[] = {0.5,1};
+		color[] = {{0.1,0.1,0.1,0.8},{0.25,0.25,0.25,0.5},{0.5,0.5,0.5,0},{0.9,1,0.83,0}};
+		animationSpeed[] = {0.02};
+		positionVar[] = {1.2,0.6,1.2};
+		MoveVelocityVar[] = {0,0,1};
+		colorVar[] = {0,0,0,0.1};
+		interval = 0.01;
+		circleRadius = 0;
+		particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth = 16;
+		particleFSIndex = 12;
+		particleFSFrameCount = 8;
+		particleFSLoop = 0;
+		angleVar = 1;
+		animationName = "";
+		particleType = "Billboard";
+		timerPeriod = 1;
+		lifeTime = 2;
+		rotationVelocity = 0;
+		weight = 0.053;
+		volume = 0.04;
+		rubbing = 0.15;
+		randomDirectionPeriod = 0.01;
+		randomDirectionIntensity = 1;
+		onTimerScript = "";
+		beforeDestroyScript = "";
+		lifeTimeVar = 1;
+		rotationVelocityVar = 0.1;
+		sizeVar = 0.3;
+		randomDirectionPeriodVar = 0.01;
+		randomDirectionIntensityVar = 0.02;
+	};
+};
+
+//Flashbang grenade
+class CfgLights
+{
+	class simplefb_light
+	{
+		color[] = {11,11,9};
+		ambient[] = {0.4,0.45,0.45};
+		brightness = 1;
+		intensity = 1090;
+		diffuse[] = {0,0,0};
+		position[] = {0,0,0};
+		class Attenuation
+		{
+			start = 0.05;
+			constant = 0;
+			linear = 0;
+			quadratic = 40;
+			hardLimitStart = 2;
+			hardLimitEnd = 4;
+		};
+	};
+};
+
+class simplefbExplosion
+{
+	class Smoke1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "simplefb_flash";
+		intensity = 0.5;
+		interval = 1;
+		lifeTime = 1;
+	};
+	class Smoke2: Smoke1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "simplefb_smoke";
+		intensity = 0.5;
+		interval = 1;
+		lifeTime = 1;
+	};
+	class Light
+	{
+		position[] = {0,0,0};
+		simulation = "light";
+		type = "simplefb_light";
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
 	};
 };
 

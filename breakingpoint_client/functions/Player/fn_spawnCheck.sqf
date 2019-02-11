@@ -40,7 +40,7 @@ if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
 			//Loot
 			if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
 			{
-				if (_dis < 375 && {_dis > 30} && {!_inVehicle} && {_spawnLoot}) then {
+				if (_dis < 375 && {_dis > 25} && {!_inVehicle} && {_spawnLoot}) then {
 					[_x] call BP_fnc_buildingSpawnLoot;
 					//_handle = [_x] spawn BP_fnc_buildingSpawnLoot;
 					//[_handle] call BP_fnc_addThreadHandle;
@@ -49,7 +49,7 @@ if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
 			};
 
 			//Zombies
-			if ((_dis < 110) && {_dis > 30} && {_spawnZombies}) then {
+			if ((_dis < 110) && {_dis > 25} && {_spawnZombies}) then {
 				[_x] call BP_fnc_buildingSpawnZombies;
 				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
 				//[_handle] call BP_fnc_addThreadHandle;

@@ -22,11 +22,11 @@ _timer = _x getVariable ["loottimer",0];
 //logout spawn timer
 if (diag_tickTime < 60) exitWith {};
 //Loot timer
-if ((_serverTime - _timer) < 300) exitwith {};
+if ((_serverTime - _timer) < 100) exitwith {};
 
 _x setVariable ["loottimer",_serverTime,true];
 
-_buildingPos = getPosASL _building;
+_buildingPos = getPosATL _building;
 _buildingSize = _x getVariable ["lootRadius",5];
 _lootMin = _x getVariable ["minLoot",1];
 _lootMax = _x getVariable ["maxLoot",1];

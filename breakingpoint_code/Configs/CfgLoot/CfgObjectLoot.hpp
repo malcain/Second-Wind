@@ -2568,14 +2568,7 @@ class CfgObjectLoot {
 		lootChance = 0.75;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"BP_Rebel_4a","uniform"},
-			{"BP_Rebel_4b","uniform"},
-			{"BP_Rebel_4c","uniform"},
-			{"BP_Rebel_4d","uniform"},
-			/*{"BP_muzzle_snds_B","toolbelt"},
-			{"BP_mxm","weapon"},
-			{"BP_Mk12mod1","weapon"},*/
-			{"BP_svdk","weapon"},
+			{"BP_BearTrap_Mag","magazine"},
 			{"BP_m21","weapon"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
@@ -2623,10 +2616,7 @@ class CfgObjectLoot {
 			{"BP_762x54_7N1_10rnd","magazine"}
 		};
 		itemChance[] =	{
-			0.11,	//M21
-			0.32,	//Kar98 Scoped
-			0.32,	//Kar98 Scoped
-			0.52,	//Kar98 Scoped
+			0.81,	//M21
 			0.21,	//M21
 			0.02,	//Kar98 Scoped
 			0.02,   //ENFIELD SCOPED

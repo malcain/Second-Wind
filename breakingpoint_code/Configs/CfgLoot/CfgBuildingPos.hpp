@@ -485,17 +485,17 @@
 
 	class Land_School_01_F : MilitaryGeneral {
 		lootMin = 1;
-		lootMax = 7;
+		lootMax = 5;
 		lootPos[] = {{12.702, -1.02222, -1.24559},{-12.491, -1.08911, -1.25239},{13.046, 2.26733, -1.24836},{-1.76117, -0.354492, -1.24738},{-12.5974, 1.91821, -1.25342},{-8.28329, 1.45117, -1.24718},{3.41837, 1.00049, -1.24892},{7.23489, -4.87646, -1.34846},{-1.24472, -4.78638, -1.34846},{7.04395, -0.836914, -1.24507},{-12.7859, -4.34058, -1.34846}};
 		zombiePos[] = {{12.702, -1.02222, -1.24559}};
 	};
 
-	class Land_BasaltWall_01_gate_F : ApexMilBox2 {
+	/*class Land_BasaltWall_01_gate_F : ApexMilBox2 {
 		lootMin = 1;
 		lootMax = 1;
 		lootPos[] = {{-5.72754,0.770508,-0.959976},{-19.0254,0.921875,-0.959976},{5.50781,0.255859,-0.959976},{18.7998,0.182617,-0.959976},{5.5127,1.12305,-0.959991},{-5.44531,0.511719,-0.959991},{-18.6074,0.896484,-0.935181},{-5.5166,0.71875,-0.935181},{5.82715,0.87793,-0.935181},{5.51367,0.103516,-0.959976}};
 		zombiePos[] = {{5.51367,0.103516,-0.959976},{-19.0254,0.921875,-0.959976}};
-	};
+	};*/
 
 	class Land_SY_01_crusher_F : MilitaryAirfield {
 		lootMin = 1;
@@ -991,21 +991,28 @@
     };
 
 	class Land_Cargo_Patrol_V1_F: MilitaryGeneral {
-	  lootMin = 1;
-	  lootMax = 1;
+	  lootMin = 0;
+	  lootMax = 2;
 	  lootPos[] = {{-1.54395,-1.32568,-0.55952},{1.4873,-1.25635,-0.559514}};
 	  zombiePos[] = {{-0.0973206,-1.31689,0.00143862}};
 	};
 
 	class Land_Cargo_Patrol_V3_F: MilitaryGeneral {
-	  lootMin = 1;
-	  lootMax = 1;
+	  lootMin = 0;
+	  lootMax = 2;
+	  lootPos[] = {{-1.54395,-1.32568,-0.55952},{1.4873,-1.25635,-0.559514}};
+	  zombiePos[] = {{0.23333,-1.19385,0.00143862}};
+	};
+	
+	class Land_Cargo_Patrol_V4_F: MilitaryGeneral {
+	  lootMin = 0;
+	  lootMax = 2;
 	  lootPos[] = {{-1.54395,-1.32568,-0.55952},{1.4873,-1.25635,-0.559514}};
 	  zombiePos[] = {{0.23333,-1.19385,0.00143862}};
 	};
 
 	class Land_Cargo_House_V1_F: MilitaryGeneral {
-	  lootMin = 1;
+	  lootMin = 0;
 	  lootMax = 1;
 	  lootPos[] = {{-1.21692,1.12354,-0.0957499},{0.705078,3.18945,0.040287},{-1.16943,3.11414,0.0402908}};
 	  zombiePos[] = {{1.00847,1.84521,0.730287}};
@@ -1019,12 +1026,14 @@
 	};
 
 	class Land_Cargo_House_V3_F: MilitaryGeneral {
-	  lootMin = 1;
+	  lootMin = 0;
 	  lootMax = 1;
 	  lootPos[] = {{-1.21692,1.12354,-0.0957499},{0.705078,3.18945,0.040287},{-1.16943,3.11414,0.0402908}};
 	  zombiePos[] = {{0.1409,1.48486,0.730286}};
 	};
-
+	
+	class Land_Cargo_House_V4_F: Land_Cargo_House_V3_F {};
+	
 	class Land_Cargo_HQ_V1_F: MilitaryGeneral {
 	  lootMin = 1;
 	  lootMax = 3;
@@ -1034,7 +1043,7 @@
 
 	class Land_Research_HQ_F: Hospital {
 	  lootMin = 1;
-	  lootMax = 4;
+	  lootMax = 3;
 	  lootPos[] = {{0.193848,-5.96643,-3.15187},{-1.49219,-5.94324,-3.15187},{-3.16797,-5.87524,-3.15187},{-4.88477,0.80603,-3.15187},{3.18262,5.41174,-3.15187},{6.29736,5.44116,-3.15187},{4.90771,5.46997,-3.15187},{8.17627,3.14465,-3.15187},{-1.37695,2.05371,-3.27228},{-1.23828,-2.86804,-3.27228},{4.99902,-2.83301,-3.27228},{8.2085,-1.62073,-3.15187},{2.8667,-4.20215,-0.672282},{4.76563,2.05347,-3.27228}};
 	  zombiePos[] = {{1.66525,-2.68457,0.603112}};
 	};
@@ -1050,14 +1059,14 @@
 	};
 
 	class Land_Cargo_Patrol_V2_F: MilitarySpecial {
-	  lootMin = 1;
+	  lootMin = 0;
 	  lootMax = 1;
 	  lootPos[] = {{-1.37915,-1.27954,-0.559525},{1.68091,-1.25098,-0.559509}};
 	  zombiePos[] = {{-0.383286,-2.93799,0.00143957}};
 	};
 
 	class Land_Cargo_House_V2_F: MilitarySpecial {
-	  lootMin = 1;
+	  lootMin = 0;
 	  lootMax = 1;
 	  lootPos[] = {{-1.34229,3.15845,0.0402679},{-1.79907,0.930664,-0.0957489},{0.79248,2.94873,0.0402985}};
 	  zombiePos[] = {{0.963394,1.36963,0.730288}};
@@ -1407,7 +1416,7 @@
 	};
 
     class Land_cargo_house_slum_F: Farm {
-	  lootMin = 1;
+	  lootMin = 0;
 	  lootMax = 1;
       lootPos[] = {{-3.40723,-0.123047,-0.350254},{-0.66133,-0.123047,-0.360254}};
     };
@@ -1448,7 +1457,7 @@
 	};
 
     class Land_i_Windmill01_F: Windmill {
-	  lootMin = 1;
+	  lootMin = 0.2;
 	  lootMax = 1;
       lootPos[] = {{-0.145508,0.175781,-3.53161}};
       zombiePos[] = {{0.113251,-2.27097,0.258783}};
@@ -1463,6 +1472,7 @@
 
 	class Land_Cargo_Tower_V2_F: Land_Cargo_Tower_V1_F {};
 	class Land_Cargo_Tower_V3_F: Land_Cargo_Tower_V1_F {};
+	class Land_Cargo_Tower_V4_F: Land_Cargo_Tower_V1_F {};
 
 	class Land_Hangar_F: MilitaryGeneral {
 	  lootMin = 0;
@@ -2375,7 +2385,7 @@
 	class Land_Shed_08_brown_F : Land_Shed_08_grey_F{};
 	
 	class Land_Supermarket_01_malden_F : Supermarket {
-		lootMin = 2;
+		lootMin = 0;
 		lootMax = 7;
 		lootPos[] = {{1.04297,-7.88086,-1.44994},{6.69824,-7.44189,-1.44994},{7.12109,-1.93677,-1.41737},{0.376953,1.68433,-1.44994},{-0.157227,-2.65527,-1.44994},{-5.0332,-7.55322,-1.44994},{-4.18164,-2.25879,-1.44994}};
 		zombiePos[] = {{4.22656,-4.4458,-1.44994}};

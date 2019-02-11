@@ -1853,7 +1853,7 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"FoodPlayerCooked","magazine"},
+			{"BP_BearTrap_Mag","magazine"},
 			{"FoodRabbitCooked","magazine"},
 			{"FoodMushroom","magazine"}
 		};
@@ -1862,9 +1862,9 @@ class CfgBuildingLoot
 			0.01,    //Chestrig_blk
 			0.01,    //R7Sup
 			0.01,    //CZSup
-			0.35,    //MeatPlayerCooked
+			0.75,    //MeatPlayerCooked
 			0.15,    //MeatRabbitCooked
-			0.15    //MeatRabbitCooked
+			0.15    //Mushroom
 		};
 	};
 	

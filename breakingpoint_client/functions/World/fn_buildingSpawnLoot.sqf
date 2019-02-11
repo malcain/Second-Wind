@@ -11,8 +11,8 @@ _building = _this select 0;
 
 if (isNull _building) exitWith {};
 
-_buildingPos = getPosASL _building;
-_buildingType = 	typeOf _building;
+_buildingPos = getPosATL _building;
+_buildingType = typeOf _building;
 _buildingSize = ((sizeOf _buildingType)+5);
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
 /*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
@@ -94,9 +94,10 @@ for "_i" from 1 to (count _positions) do {
 
 	//Calculate Item Position in World Space
 	_iPos = _building modelToWorld _x;
-	if ((getTerrainHeightASL getPos _building) < -0.1) then {
+	_height = getTerrainHeightASL getPos _building;
+	if (_height < -0.1) then {
+	if (_height < -2) exitwith {};
 	_iPos = [(_buildingPos select 0) + (_x select 0), (_buildingPos select 1) + (_x select 1),(_buildingPos select 2) + (_x select 2)];
-	_iPos = ASLtoATL _iPos;
 	};
 	//Check If Any Loot Boxes are in that world position
 	_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];

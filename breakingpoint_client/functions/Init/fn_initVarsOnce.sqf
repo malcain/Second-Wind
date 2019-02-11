@@ -571,7 +571,7 @@ AllDrinks = ["ItemWatercan"];
 AllMedical = ["ItemBandage","ItemFieldDressing","ItemMorphine","ItemAdrenaline","ItemHeatPack","ItemPainkiller","ItemAntibiotic"];
 
 AllFood = meatcooked + food_with_output + no_output_food;
-AllFood = AllFood + ["ItemCereal1","ItemCereal2","ItemCereal3","ItemCereal4","ItemCereal5", "ItemCereal6"];
+AllFood = AllFood + ["ItemCereal1","ItemCereal2","ItemCereal3","ItemCereal4","ItemCereal5", "ItemCereal6", "FoodMushroom"];
 AllDrinks = no_output_drink + drink_with_output;
 
 //Survival Variables

@@ -17,6 +17,15 @@ class CfgSounds
         titles[]={};
     };
 	
+	//Custom Grenades
+	
+	class flashbang2
+	{
+		name = "flashbang2";
+		sound[] = {"breakingpoint_sfx\effects\flashbang2.wav",1,1};
+		titles[]={};
+	};
+	
 	//----=Infected Hounds=-----
 
 	//Thirst

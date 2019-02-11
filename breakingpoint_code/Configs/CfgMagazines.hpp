@@ -505,7 +505,7 @@ class CfgMagazines
 	/* Toolbelt */
 	
 	//class HandGrenade;	// External class reference
-
+	
 	class ItemKnife : HandGrenade {
 		scope = 2;
 		count = 1;

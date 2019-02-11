@@ -33001,7 +33001,7 @@ class CfgWeapons
 
 	class Throw: GrenadeLauncher 
 	{
-		muzzles[] = {"BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle"};
+		muzzles[] = {"BP_FlashMuzzle","BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle"};
 
 		class ThrowMuzzle: GrenadeLauncher 
 		{
@@ -33018,6 +33018,12 @@ class CfgWeapons
 			reloadtime = 0;
 			showempty = 0;
 			sound[] = {"", 0.000316, 1};
+		};
+		
+		class BP_FlashMuzzle: ThrowMuzzle 
+		{
+			displayName = "Flashbang";
+			magazines[] = {"simplefb"};
 		};
 
 		class BP_M84Muzzle: ThrowMuzzle 
@@ -55137,7 +55143,7 @@ class CfgAmmo {
 		audibleFire = 0.05;
 		visibleFireTime = 1;
 		fuseDistance = 5;
-	//	ExplosionEffects = "SUPER_flashExplosion";
+		ExplosionEffects = "simplefbExplosion";
 		soundHit1[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
 		soundHit2[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
 		soundHit3[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
@@ -55160,7 +55166,7 @@ class CfgAmmo {
 		audibleFire = 0.05;
 		visibleFireTime = 1;
 		fuseDistance = 4;
-	//	ExplosionEffects = "SUPER_flashExplosion";
+		ExplosionEffects = "simplefbExplosion";
 		soundHit[] = {"",0,1};
 		explosionSoundEffect = "";
 		explosionTime = 2.5;
