@@ -19,9 +19,9 @@ _units = _pos nearEntities ["CAManBase", _range];
 			_s = (_range-(_x distance _pos))/_range;
 			if (_a < 40 OR _a >310) then
 			{
-				[[_x,0,_s],"BP_fnc_flash_effect",_x,false] call BIS_fnc_MP;
+				[_x,0,_s] remoteExec ["BP_fnc_flash_effect", _x];
 			} else {
-				[[_x,1,_s],"BP_fnc_flash_effect",_x,false] call BIS_fnc_MP;
+				[_x,1,_s] remoteExec ["BP_fnc_flash_effect", _x]; 
 			};
 		};
 	};

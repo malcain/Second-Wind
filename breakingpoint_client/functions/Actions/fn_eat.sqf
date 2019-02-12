@@ -44,13 +44,13 @@ if ((_itemorignal in food_with_output) && {!_inVehicle}) then
 if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
 {
     sleep 1;
-	 call BP_fnc_dropWeaponHolderMag;
+	 call BP_fnc_hallucination;
 };
 
 if (_itemorignal in meatzombie) then {
     r_player_infected = true;
 } else {
-	if ( (_itemorignal in meatraw) and (random 15 < 1)) then {
+	if ( (_itemorignal in meatraw) and (random 10 < 1)) then {
 		r_player_infected = true;
 	};
 };

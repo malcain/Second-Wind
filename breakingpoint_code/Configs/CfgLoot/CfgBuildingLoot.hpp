@@ -1853,7 +1853,7 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"BP_BearTrap_Mag","magazine"},
+			{"BP_M84_Flash","magazine"},
 			{"FoodRabbitCooked","magazine"},
 			{"FoodMushroom","magazine"}
 		};

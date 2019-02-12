@@ -2568,7 +2568,7 @@ class CfgObjectLoot {
 		lootChance = 0.75;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"BP_BearTrap_Mag","magazine"},
+			{"BP_M84_Flash","magazine"},
 			{"BP_m21","weapon"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
