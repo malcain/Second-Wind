@@ -11,17 +11,22 @@ params ["_trigger","_units"];
 
 if (!isServer) exitWith {};
 
+_unit = _units select 0;
 _trap = _trigger getVariable ["trap",objNull];
 if (isNull _trap) exitWith {};
 
 _armed = _trap getVariable ["armed",false];
 if (!_armed) exitWith {};
 
-_players = nearestObjects [getPosATL _trap, ["CAManBase"], 5];
-_unit = _players select 0;
+_trapobj = getPosATL _trap;
+//_players = nearestObjects [_trapobj, ["CAManBase"], 5];
+//_height = abs ((getPosATL _unit select 2) - (_trapobj select 2));
+//if (_height < 1) exitwith {};
 
 //Deactivate Trap
 [_trap,objNull] call BP_fnc_trapDeactivate;
+
+if (isnil "_unit") exitwith {};
 
 //Bear Trap Triggered If Ran Over By Animal
 if (_unit isKindOf "Animal" || {_unit isKindOf "zZombie_Base"}) exitWith { _unit setDamage 1; };
