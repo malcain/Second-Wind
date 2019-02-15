@@ -60761,8 +60761,8 @@ class CfgAmmo {
 	};
 	class Human_Trap_Ammo: MineBase
 	{
-		hit = 10;
-		indirectHit = 10;
+		hit = 0;
+		indirectHit = 0;
 		indirectHitRange = 1;
 		model = "\breakingpoint\models\bp_beartrap.p3d";
 		mineModelDisabled = "\breakingpoint\models\bp_beartrap.p3d";
@@ -60780,6 +60780,22 @@ class CfgAmmo {
 		cost = 200;
 		mineInconspicuousness = 1;
 		mineTrigger = "RangeTriggerShort";
+		class AnimationSources 
+		{
+			class LeftShutter 
+			{
+				source = "user";
+				animPeriod = 0.1;
+				initPhase = 0;
+			};
+
+			class RightShutter 
+			{
+				source = "user";
+				animPeriod = 0.1;
+				initPhase = 0;
+			};
+		};
 	};
 };
 
