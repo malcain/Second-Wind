@@ -33146,7 +33146,7 @@ class CfgWeapons
 		type = 0;
 		displayName = "$STR_DN_PUT";
 		canDrop = 0;
-		muzzles[] = {"IED1Muzzle"};
+		muzzles[] = {"IED1Muzzle","HumanTrapMuzzle"};
 
 		class PutMuzzle: Default 
 		{
@@ -33174,6 +33174,15 @@ class CfgWeapons
 			autoreload = 0;
 			enableAttack = 1;
 			magazines[] = {"BP_IED1_Mag"};
+			picture = "\A3\Weapons_F\Data\clear_empty.paa";
+			showToPlayer = 0;
+		};
+		class HumanTrapMuzzle: PutMuzzle
+		{
+			autoreload = 0;
+			enableAttack = 1;
+			magazines[] = {"Human_Trap_Mag"};
+			displayName = "Human Trap";
 			picture = "\A3\Weapons_F\Data\clear_empty.paa";
 			showToPlayer = 0;
 		};
@@ -55104,6 +55113,22 @@ class CfgMagazines {
 		picture = "\A3\Weapons_F\Data\UI\gear_UGL_Flare_Green_CA.paa";
 		descriptionShort = "$STR_A3_CfgMagazines_UGL_FlareGreen_F1";
 	};
+	class Human_Trap_Mag: ATMine_Range_Mag
+	{
+		author = "Kol9yN";
+		mass = 10;
+		ammo = "Human_Trap_Ammo";
+		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
+		displayName = "Human Trap";
+		model = "\breakingpoint\models\bp_beartrap.p3d";
+		descriptionShort = "it will broke ur legs, and head maybe...";
+		class Library
+		{
+			libTextDesc = "Traps";
+		};
+		descriptionUse = "$STR_A3_use_mine";
+		allowedSlots[] = {901,701};
+	};
 };
 //-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CLASS CREATION BULLETS|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -60733,6 +60758,28 @@ class CfgAmmo {
 	{
 		model = "\A3\Weapons_F_Kart\Ammo\tracer_red.p3d";
 		lightColor[] = {0.500000, 0.250000, 0.250000, 0};
+	};
+	class Human_Trap_Ammo: MineBase
+	{
+		hit = 10;
+		indirectHit = 10;
+		indirectHitRange = 1;
+		model = "\breakingpoint\models\bp_beartrap.p3d";
+		mineModelDisabled = "\breakingpoint\models\bp_beartrap.p3d";
+		icon = "iconExplosiveAP";
+		defaultMagazine = "Human_Trap_Mag";
+		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\mines\AP_mines_explosion_01",3.1622777,1,1500};
+		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\mines\AP_mines_explosion_02",3.1622777,1,2000};
+		multiSoundHit[] = {"soundHit1",0.5,"soundHit2",0.5};
+		soundTrigger[] = {"A3\Sounds_F\weapons\mines\electron_trigger_1",0.56234133,1,30};
+		soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
+		soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
+		explosionEffects = "simplefbExplosion"; //MineExplosion
+		CraterEffects = "";
+		whistleDist = 0;
+		cost = 200;
+		mineInconspicuousness = 1;
+		mineTrigger = "RangeTriggerShort";
 	};
 };
 
