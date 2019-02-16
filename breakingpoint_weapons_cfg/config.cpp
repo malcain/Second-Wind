@@ -60780,6 +60780,48 @@ class CfgAmmo {
 		cost = 200;
 		mineInconspicuousness = 1;
 		mineTrigger = "RangeTriggerShort";
+		class AnimationSources 
+		{
+			class LeftShutter 
+			{
+				source = "user";
+				animPeriod = 0.1;
+				initPhase = 0;
+			};
+
+			class RightShutter 
+			{
+				source = "user";
+				animPeriod = 0.1;
+				initPhase = 0;
+			};
+		};
+		class Medical
+		{
+			//Instant Bleeding (Bullet will always make you bleed on impact)
+			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
+
+			//Medical State Level (Bullet Hit will always put you in this state)
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			MedicalState = 4;
+			MedicalChance = 100;
+			
+			// Bleeding Level (Rate of blood loss)
+			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			BleedingLevel = 3;
+			BleedingChance = 100;
+
+			// Infection (Bullet Wound Chance Of Infection)
+			Infection = 1; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 1; //Between 0.1 -> 1.0
+
+			// Knockout (Bullet Wound Chance Of Knockout)
+			Knockout = 0; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 0; //Between 0.1 -> 1.0
+
+			//Blood Damage Scale
+			scale = 0;
+		};
 	};
 };
 
