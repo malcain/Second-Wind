@@ -55116,12 +55116,12 @@ class CfgMagazines {
 	class Human_Trap_Mag: ATMine_Range_Mag
 	{
 		author = "Kol9yN";
-		mass = 10;
+		mass = 40;
 		ammo = "Human_Trap_Ammo";
 		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
 		displayName = "Human Trap";
 		model = "\breakingpoint\models\bp_beartrap.p3d";
-		descriptionShort = "it will broke ur legs, and head maybe...";
+		descriptionShort = "it will break ur legs, and head maybe...";
 		class Library
 		{
 			libTextDesc = "Traps";
@@ -60761,9 +60761,9 @@ class CfgAmmo {
 	};
 	class Human_Trap_Ammo: MineBase
 	{
-		hit = 0;
-		indirectHit = 0;
-		indirectHitRange = 1;
+		hit = 2;
+		indirectHit = 1;
+		indirectHitRange = 2;
 		model = "\breakingpoint\models\bp_beartrap.p3d";
 		mineModelDisabled = "\breakingpoint\models\bp_beartrap.p3d";
 		icon = "iconExplosiveAP";
@@ -60780,6 +60780,7 @@ class CfgAmmo {
 		cost = 200;
 		mineInconspicuousness = 1;
 		mineTrigger = "RangeTriggerShort";
+		legFracture = true;
 		class AnimationSources 
 		{
 			class LeftShutter 
@@ -60803,7 +60804,7 @@ class CfgAmmo {
 
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
-			MedicalState = 4;
+			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
