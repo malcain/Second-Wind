@@ -80,6 +80,19 @@ if (isBurning _unit) exitWith
 	r_player_blood = r_player_blood - (_damage * _scale);
 };
 
+//Bear Trap
+if ((_ammo == "Human_Trap_Ammo" && _hitpoint == "hitlegs") && _damage > 0.1) exitwith 
+{
+	r_player_infected = true;
+	r_player_injured = true;
+	r_player_inpain = true;
+	r_player_cardiac = true;
+	r_player_bleedingLevel = 2;
+	r_hit_legs = 1;
+	r_fracture_legs = true;
+	[player,"dog_damage",0,false] call BP_fnc_objSpeak;
+};
+
 // PVP Damage
 _scale = 200;
 
@@ -469,7 +482,7 @@ if (_damage > 0.4) then //0.25
 // BALISTIC DAMAGE (Grenades /  Missles etc)
 if (_type == 1) then 
 {
-	if (_damage > 0.01) then {
+	if (_damage > 0.1) then {
 		//affect the player
 		[20,45] call BP_fnc_medicalPitchWhine; //Visual , Sound
 	};
@@ -487,10 +500,10 @@ if (_type == 1) then
 };
 
 // HIGH CALIBRE
-if (_type == 2) then 
+/*if (_type == 2) then 
 {
 	//serious ballistic damage
 	if (!BP_isUndead) then {
 		if (_damage > 4) then { [4] call BP_fnc_death; };
 	};
-};
+};*/

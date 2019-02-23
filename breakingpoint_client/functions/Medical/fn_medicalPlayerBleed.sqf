@@ -17,8 +17,9 @@ _startingBleedingLevel = r_player_bleedingLevel;
 switch (_startingBleedingLevel) do {
 	case 0: 	{ _bleedPerSec = 30; };
 	case 1: 	{ _bleedPerSec = 50; };
-	case 2: 	{ _bleedPerSec = 75; };
-	case 3: 	{ _bleedPerSec = 100; };
+	case 2: 	{ _bleedPerSec = 100; };
+	case 3: 	{ _bleedPerSec = 150; };
+	case 4:		{ _bleedPerSec = 150; }; //Surgery required!
 };
 _total = r_player_bloodTotal;
 r_player_injured = true;

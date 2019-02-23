@@ -17,10 +17,10 @@ _needsSurgery = false;
 
 if (_unit == player) then {
 	_needsFieldBandage = r_player_cardiac;
-	_needsSurgery = (r_player_bleedingLevel > 2);
+	_needsSurgery = (r_player_bleedingLevel > 3);
 } else {
 	_bleedingLevel = _unit getVariable ["med_bleedingLevel",false];
-	_needsSurgery = (_bleedingLevel > 2);
+	_needsSurgery = (_bleedingLevel > 3);
 	_needsFieldBandage = _unit getVariable ["med_isCardiac",false];
 };
 

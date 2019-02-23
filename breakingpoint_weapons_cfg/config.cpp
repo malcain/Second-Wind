@@ -55238,12 +55238,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 60;
 
@@ -55295,12 +55295,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
@@ -55416,12 +55416,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
@@ -55603,12 +55603,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
@@ -55643,12 +55643,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 1;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
@@ -55683,12 +55683,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
@@ -55723,12 +55723,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
@@ -55763,12 +55763,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
@@ -55803,12 +55803,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
@@ -55845,12 +55845,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
@@ -55887,12 +55887,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
@@ -55927,12 +55927,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
@@ -55961,12 +55961,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 5;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
@@ -55995,12 +55995,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 5;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
@@ -56036,12 +56036,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56077,12 +56077,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56118,12 +56118,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56158,12 +56158,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56196,12 +56196,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56237,12 +56237,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
@@ -56303,12 +56303,12 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56518,12 +56518,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -56575,12 +56575,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -56633,12 +56633,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -56692,12 +56692,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 1;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -56750,18 +56750,18 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 60;
 
 			// Infection (Bullet Wound Chance Of Infection)
-			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			Infection = 1; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 0.4; //Between 0.1 -> 1.0
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
@@ -56807,12 +56807,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -56855,12 +56855,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 30;
 
@@ -56902,12 +56902,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -56950,7 +56950,7 @@ class CfgAmmo {
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
@@ -57014,7 +57014,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
@@ -57057,7 +57057,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
@@ -57099,7 +57099,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
@@ -57139,12 +57139,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -57183,12 +57183,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 70;
 
@@ -57237,12 +57237,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
-			MedicalState = 4;
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -57291,12 +57291,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 0;
 			MedicalChance = 0;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -57344,12 +57344,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 0;
 			MedicalChance = 0;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -57397,12 +57397,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
-			MedicalState = 4;
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -57444,12 +57444,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -57491,12 +57491,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
-			MedicalState = 4;
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -57541,7 +57541,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
@@ -57585,7 +57585,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
@@ -57629,7 +57629,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
@@ -57675,7 +57675,7 @@ class CfgAmmo {
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
@@ -57721,7 +57721,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -57770,7 +57770,7 @@ class CfgAmmo {
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 60;
 
@@ -57817,7 +57817,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 70;
 
@@ -57864,7 +57864,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -57899,7 +57899,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 45;
 
@@ -57969,7 +57969,7 @@ class CfgAmmo {
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
@@ -58017,7 +58017,7 @@ class CfgAmmo {
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
@@ -58061,7 +58061,7 @@ class CfgAmmo {
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
@@ -58105,7 +58105,7 @@ class CfgAmmo {
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
@@ -58148,7 +58148,7 @@ class CfgAmmo {
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
@@ -58250,12 +58250,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 35;
 
@@ -58309,12 +58309,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -58368,12 +58368,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 48;
 
@@ -58420,12 +58420,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 49;
 
@@ -58472,12 +58472,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 62;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 55;
 
@@ -58523,12 +58523,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -58570,12 +58570,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -58623,12 +58623,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -58678,7 +58678,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
@@ -58722,7 +58722,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
@@ -58769,7 +58769,7 @@ class CfgAmmo {
 			MedicalChance = 40;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
@@ -58828,7 +58828,7 @@ class CfgAmmo {
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -58874,7 +58874,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
@@ -58916,7 +58916,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -58973,7 +58973,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59023,12 +59023,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
@@ -59071,12 +59071,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
@@ -59121,12 +59121,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 4;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59168,12 +59168,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
@@ -59209,12 +59209,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -59255,12 +59255,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -59301,12 +59301,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -59348,12 +59348,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -59395,12 +59395,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 65;
 
@@ -59442,12 +59442,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -59489,12 +59489,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
@@ -59535,12 +59535,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 75;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 65;
 
@@ -59582,12 +59582,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
@@ -59632,7 +59632,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
@@ -59703,7 +59703,7 @@ class CfgAmmo {
 			MedicalChance = 40;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
@@ -59746,7 +59746,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59801,7 +59801,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59869,7 +59869,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59935,7 +59935,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
@@ -59992,7 +59992,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 35;
 
@@ -60030,7 +60030,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 35;
 
@@ -60067,7 +60067,7 @@ class CfgAmmo {
 			MedicalChance = 30;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
@@ -60106,7 +60106,7 @@ class CfgAmmo {
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 85;
 
@@ -60144,7 +60144,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 85;
 
@@ -60181,7 +60181,7 @@ class CfgAmmo {
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
@@ -60220,7 +60220,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
@@ -60272,7 +60272,7 @@ class CfgAmmo {
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
@@ -60308,7 +60308,7 @@ class CfgAmmo {
 			MedicalChance = 97;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
@@ -60354,7 +60354,7 @@ class CfgAmmo {
 			MedicalChance = 30;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 95;
 
@@ -60401,7 +60401,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -60444,7 +60444,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
@@ -60674,7 +60674,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -60720,7 +60720,7 @@ class CfgAmmo {
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
@@ -60761,26 +60761,26 @@ class CfgAmmo {
 	};
 	class Human_Trap_Ammo: MineBase
 	{
-		hit = 2;
+		hit = 0.1;
 		indirectHit = 1;
-		indirectHitRange = 2;
+		indirectHitRange = 0.4;
 		model = "\breakingpoint\models\bp_beartrap.p3d";
 		mineModelDisabled = "\breakingpoint\models\bp_beartrap.p3d";
 		icon = "iconExplosiveAP";
 		defaultMagazine = "Human_Trap_Mag";
-		soundHit1[] = {"A3\Sounds_F\arsenal\explosives\mines\AP_mines_explosion_01",3.1622777,1,1500};
+		soundHit1[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,1500};
 		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\mines\AP_mines_explosion_02",3.1622777,1,2000};
 		multiSoundHit[] = {"soundHit1",0.5,"soundHit2",0.5};
-		soundTrigger[] = {"A3\Sounds_F\weapons\mines\electron_trigger_1",0.56234133,1,30};
-		soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
-		soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
-		explosionEffects = "simplefbExplosion"; //MineExplosion
+		soundTrigger[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",0.56234133,1,30};
+		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
+		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
+		//explosionEffects = "simplefbExplosion"; //MineExplosion
 		CraterEffects = "";
 		whistleDist = 0;
 		cost = 200;
 		mineInconspicuousness = 1;
 		mineTrigger = "RangeTriggerShort";
-		legFracture = true;
+		//legFracture = true;
 		class AnimationSources 
 		{
 			class LeftShutter 
@@ -60803,12 +60803,12 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 

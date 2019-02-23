@@ -98,12 +98,12 @@ class CfgAmmo
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
 			MedicalState = 0;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 75bps / 3 - 100bps
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 

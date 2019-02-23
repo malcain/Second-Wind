@@ -14,10 +14,10 @@ _unit = (_this select 3) select 0;
 _needsSurgery = false;
 
 if (_unit == player) then {
-	_needsSurgery = (r_player_bleedingLevel > 2);
+	_needsSurgery = (r_player_bleedingLevel > 3);
 } else {
 	_bleedingLevel = _unit getVariable ["med_bleedingLevel",false];
-	_needsSurgery = (_bleedingLevel > 2);
+	_needsSurgery = (_bleedingLevel > 3);
 };
 
 if (_needsSurgery) exitWith { cutText ["Your wounds are too severe, you need Surgery.", "PLAIN DOWN"]; };
