@@ -262,6 +262,7 @@ class CfgFunctions
 			class medicalSync {};
 			class medicalUnconscious {};
 			class medicalUnconsciousRecover {};
+			class medicalKnockDown {};
 		};
 		class Zombies {
 			file = "\breakingpoint_client\functions\Zombies";

@@ -66,7 +66,7 @@ BP_HC_Connected = false;
 waitUntil {missionNameSpace getVariable ["bis_fnc_init",false]};
 
 //Update Time Sync
-call BPServer_fnc_updateTime;
+//call BPServer_fnc_updateTime;
 
 //Create Strongholds
 //if (BP_FactionStrongholds) then

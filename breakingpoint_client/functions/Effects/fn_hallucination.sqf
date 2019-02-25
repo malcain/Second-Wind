@@ -15,7 +15,7 @@ switch (_effect_tip) do
 				"dynamicBlur" ppEffectCommit 0;     
 				"dynamicBlur" ppEffectAdjust [0.0];
 				"dynamicBlur" ppEffectCommit 3;  
-				sleep 3;
+				uisleep 3;
 				"dynamicBlur" ppEffectEnable false; 
 				};
 	case "colorinv": 

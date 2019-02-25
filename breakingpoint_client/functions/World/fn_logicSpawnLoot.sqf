@@ -46,6 +46,11 @@ if (_buildingType == "") exitWith {};
 
 //Process Loot Min / Max Random
 private "_lootRnd";
+
+if (_lootMin < 1) then {
+_lootRnd = random 1;
+	if (_lootRnd > _lootMin) exitwith {};
+};
 if (_lootMin == _lootMax) then {
 	_lootRnd = _lootMax;
 } else {

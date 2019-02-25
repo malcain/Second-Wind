@@ -98,5 +98,11 @@ class CfgMissions
 			briefingName = "Breaking Point";
 			directory = "breakingpoint_code\MPScenarios\BP10_BreakingPoint.Bornholm";
 		};
+		
+		// St.George
+		class BP11_BreakingPoint {
+			briefingName = "Breaking Point";
+			directory = "breakingpoint_code\MPScenarios\BP11_BreakingPoint.126map";
+		};
 	};
 };

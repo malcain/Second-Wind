@@ -262,6 +262,7 @@ BP_Blueprints =
 
 BP_MeleeWeapons = ["MeleeHatchet","MeleeKatana","MeleePickaxe","MeleeHammer","MeleeHammer2","MeleeShovel","MeleeClub","MeleeCrowbar"];
 BP_RandomWeapons = ["MeleeHatchet"];
+BP_BoltAction = ["BP_M40A3","BP_M40A3_WDL","BP_M40A3_DES","BP_M40A3_URB","BP_Rem6","BP_R700","BP_M24Des","BP_M24Des_WDL","BP_M24Des_DES","BP_M24Des_URB"];
 
 BP_MeleeAmmo = ["Hatchet_Swing","Katana_Swing","Pickaxe_Swing","Hammer_Swing","BP_Bayonet_Stab","BP_Rifle_Butt"];
 

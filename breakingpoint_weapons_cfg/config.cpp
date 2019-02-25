@@ -48791,17 +48791,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					//"jsrs_7x62mm_reflector_1"
 					"jsrs_7x62mm_SD_reflector_1"
 				};
- 			};	
-		/*class Single : Mode_SemiAuto 
-		{			
-			sounds[] = {StandardSound, SilencedSound}; 
- 			class BaseSoundModeType 
- 			{
- 				weaponSoundEffect  = "DefaultRifle"; 
- 				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6", 0.307946, 1, 10};
- 				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7", 0.307946, 1, 10};
- 				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
- 			}; */
+ 			};
 			dispersion = 0.000608;
 			soundContinuous = 0;
 			reloadTime = 0.070000;
@@ -50007,23 +49997,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					"jsrs_762mm_echo_soundset"
 				};
 			};
-		/*class Single : Mode_SemiAuto 
-		{			
-			sounds[] = {StandardSound}; 
- 			class BaseSoundModeType 
- 			{
- 				weaponSoundEffect  = "DefaultRifle"; 
- 				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6", 0.307946, 1, 10};
- 				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7", 0.307946, 1, 10};
- 				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
- 			}; 
- 			class StandardSound: BaseSoundModeType 
- 			{
- 				begin1[] = {"\breakingpoint_jsrs\sounds\SVD_s1.wav", 1.122020, 1, 1200};
-				begin2[] = {"\breakingpoint_jsrs\sounds\SVD_s2.wav", 1.232020, 1, 1200};
-				begin3[] = {"\breakingpoint_jsrs\sounds\SVD_s1.wav", 1.212020, 1, 1200};
-				soundBegin[] = {"begin1", 0.340000, "begin2", 0.330000, "begin3", 0.330000};
- 			};		*/	
 			reloadTime = 0.085000;
 			//recoil = "recoil_single_ebr";
 			//recoilProne = "recoil_single_prone_ebr";
@@ -55238,22 +55211,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 60;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55295,22 +55268,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 1; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 1; //Between 0.1 -> 1.0
+			InfectionChance = 100; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55416,22 +55389,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
-			Infection = 1; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 1; //Between 0.1 -> 1.0
+			Infection = 0; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55603,22 +55576,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55643,22 +55616,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 1; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 1; //Between 0.1 -> 1.0
+			InfectionChance = 100; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55683,22 +55656,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55723,22 +55696,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55763,22 +55736,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 10;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 0;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55803,22 +55776,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55845,22 +55818,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 40; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55887,22 +55860,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 40; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55927,22 +55900,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55961,22 +55934,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 5;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -55995,22 +55968,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 5;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56036,22 +56009,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 25; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56077,22 +56050,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56118,22 +56091,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56158,22 +56131,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56196,22 +56169,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56237,22 +56210,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56303,22 +56276,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56518,22 +56491,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 25; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56575,22 +56548,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56633,22 +56606,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 30; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56692,22 +56665,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56750,22 +56723,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 60;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 1; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.4; //Between 0.1 -> 1.0
+			InfectionChance = 0.4; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 45; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56807,22 +56780,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 85;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56855,22 +56828,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 30;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 12; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56902,22 +56875,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 15; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56945,22 +56918,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57009,22 +56982,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57052,22 +57025,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57094,22 +57067,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57139,22 +57112,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57183,22 +57156,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 70;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57237,22 +57210,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 0.5; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 60; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57291,22 +57264,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 0;
 			MedicalChance = 0;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57344,22 +57317,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 0;
 			MedicalChance = 0;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57397,22 +57370,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0.1 -> 1.0
+			InfectionChance = 0; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57444,22 +57417,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			Knockout = 0.5; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 45; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57491,22 +57464,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57536,22 +57509,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57580,22 +57553,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57624,22 +57597,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57670,22 +57643,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57716,22 +57689,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57765,22 +57738,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 60;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57812,22 +57785,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 70;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57859,22 +57832,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57894,22 +57867,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 45;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -57964,22 +57937,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58012,22 +57985,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 60;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58056,22 +58029,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 15;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58100,22 +58073,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 45;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58143,22 +58116,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58250,22 +58223,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 25;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 35;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58309,22 +58282,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 65;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58368,22 +58341,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 48;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 10; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58420,22 +58393,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 49;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 20; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58472,22 +58445,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 62;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 55;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 35; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58523,22 +58496,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58570,22 +58543,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58623,22 +58596,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58673,22 +58646,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58717,22 +58690,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 90;
 
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 0;
 			BleedingChance = 10;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58764,22 +58737,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 40;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58823,22 +58796,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 0.5; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 25; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58869,22 +58842,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 1;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58911,22 +58884,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 95; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58968,22 +58941,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 95; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59023,22 +58996,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.4; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 65; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59071,22 +59044,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 85;
+			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.4; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 55; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59121,22 +59094,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
-			BleedingLevel = 3;
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 4;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.9; //Between 0.1 -> 1.0
+			InfectionChance = 0.9; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.9; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 90; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59168,22 +59141,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.4; //Between 0.1 -> 1.0
+			KnockoutChance = 0.4; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59209,22 +59182,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.4; //Between 0.1 -> 1.0
+			KnockoutChance = 0.4; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59255,22 +59228,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59301,22 +59274,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59348,22 +59321,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59395,22 +59368,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 95;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59442,22 +59415,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59489,22 +59462,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 55;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59535,22 +59508,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 75;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 65;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59582,22 +59555,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.4; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 45; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59627,22 +59600,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59698,22 +59671,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 40;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59741,22 +59714,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59796,22 +59769,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59864,22 +59837,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 75; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59930,22 +59903,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 35; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -59987,22 +59960,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 35;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60025,22 +59998,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 35;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60062,22 +60035,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 30;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60101,22 +60074,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 80;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60139,22 +60112,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 2;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60176,22 +60149,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 50;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.5; //Between 0.1 -> 1.0
+			KnockoutChance = 0.5; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60202,6 +60175,7 @@ class CfgAmmo {
 	{ 
 	    hit = 20.65;
 		typicalSpeed = 617;
+		caliber = 1.4;
 		audibleFire = 23;
 		visibleFire = 10;
 		airFriction = -0.001918;
@@ -60215,22 +60189,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 50;
+			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.5; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 50; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60267,22 +60241,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 90;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60303,22 +60277,22 @@ class CfgAmmo {
 			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 97;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
 			BleedingChance = 25;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.1; //Between 0.1 -> 1.0
+			KnockoutChance = 0.1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60349,22 +60323,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 30;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 2;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60396,22 +60370,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
-			MedicalChance = 70;
+			MedicalChance = 75;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 75; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60439,22 +60413,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 4;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 85;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60669,22 +60643,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0.1 -> 1.0
+			KnockoutChance = 0.2; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60715,22 +60689,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 5 - Surgery Kit
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 70;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 95;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0.5; //Between 0.1 -> 1.0
+			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 1; //Between 0.1 -> 1.0
+			KnockoutChance = 1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60774,7 +60748,7 @@ class CfgAmmo {
 		soundTrigger[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",0.56234133,1,30};
 		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
 		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
-		//explosionEffects = "simplefbExplosion"; //MineExplosion
+		explosionEffects = "simplefbExplosion"; //MineExplosion
 		CraterEffects = "";
 		whistleDist = 0;
 		cost = 200;
@@ -60803,22 +60777,22 @@ class CfgAmmo {
 			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
 
 			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Field Dressing
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
 			MedicalChance = 100;
 			
 			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 150bps /4 - 150bps Surgery Kit
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
 			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 1; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 1; //Between 0.1 -> 1.0
+			InfectionChance = 1; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0.1 -> 1.0
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

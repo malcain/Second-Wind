@@ -33,9 +33,9 @@ class CfgAmmo
 	class MineBase;
 	class BP_ATMine_Ammo : MineBase
 	{
-		hit=2000;
-		indirectHit=2000;
-		indirectHitRange=2;
+		hit=1500;
+		indirectHit=1500;
+		indirectHitRange=3;
 		model="\A3\Weapons_f\Explosives\mine_at";
 		mineModelDisabled="\A3\Weapons_f\Explosives\mine_at_d";
 		defaultMagazine="BP_ATMine_Mag";

@@ -194,7 +194,7 @@ if (_damage > 0.01) then
 			
 			if (_instantBleeding == 1) then { _instantBleeding = true; } else { _instantBleeding = false; };
 			if (_infection == 1) then { _infection = true; } else { _infection = false; };
-			if (_knockout == 1) then { _knockout = true; } else { _knockout = false; };
+			if (_knockout > 0) then { _knockout = true; } else { _knockout = false; };
 			
 			if (_ammoScale > 0) then {
 				_scale = _scale + _ammoScale;
@@ -219,6 +219,16 @@ if (_damage > 0.01) then
 			if (_knockout) then {
 				_rndKnockout = (random 100);
 				_hitKnockout = (_rndKnockout < _knockoutChance);
+					//bolt-action rifle check.
+					if (_knockout == 0.5) then {
+					if (currentWeapon _instigator in BP_BoltAction) then 
+						{_hitKnockout = true}
+						else 
+						{_hitKnockout = false};
+					};
+				if (_hitKnockout) then {
+				player call BP_fnc_medicalKnockDown;
+				};
 			};
 			
 			if (_medicalState > 0) then {
