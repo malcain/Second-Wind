@@ -990,14 +990,14 @@ class Land_i_House_Small_02_V1_F : House_Small_F {
 	class HitPoints {
 		class Hitzone_1_hitpoint
 		{
-			armor=45000;
+			armor=75000;
 			material=-1;
 			name="Dam_1";
 			visual="DamT_1";
 			passThrough=0.5;
 			radius=0.375;
 			convexComponent="Dam_1";
-			explosionShielding=50;
+			explosionShielding=950;
 			minimalHit=0.1;
 			class DestructionEffects {
                                         class Dust
