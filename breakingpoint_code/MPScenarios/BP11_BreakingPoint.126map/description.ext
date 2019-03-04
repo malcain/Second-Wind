@@ -43,7 +43,7 @@ class BreakingPoint
 {
 	class CfgSettings
 	{
-		class SpawnPos 
+		class SpawnPos
 		{
 			//Enable Spawn Selection Screen
 			enabled = false;
@@ -57,14 +57,14 @@ class BreakingPoint
 					{0,{2963.13,5932.83,0.0035}},
 					{0,{3058.32,5107.29,0.0035}},
 			};
-			
+
 		};
 
-		class HeliCrash 
+		class HeliCrash
 		{
 			//Enable Heli Crashes
 			enabled = true;
-		
+
 			//Random Start Position (x,y,z) {Can Have Multible Coords}
 			randStartPos[] = {{4956.751,10101.455,200},{136.605,2699.241,200},{9835.561,342.659,200}};
 
@@ -76,30 +76,30 @@ class BreakingPoint
 			centreRadius = 1500;
 		};
 
-		class Debug 
+		class Debug
 		{
 			marker = "respawn_west";
 			radius = 400;
 		};
 
-		class Loot 
+		class Loot
 		{
 			//Enable or Disable Loot
 			enabled = true;
-			
+
 			//Min Number Of Loot Items Per Box (Includes Weapons,Magazines,Items)
 			minItems = 2;
-			
+
 			//Max Number Of Loot Items per Box (Includes Weapons,Magazines,Items)
 			maxItems = 5;
-			
+
 			//Spawn Spawn Box If Under Minimum Items
 			minSpawn = false;
-			
+
 			//Override All Loot Boxes with a Specific Loot Class
 			lootOverride = false;
 			lootOverrideClass = "Brick";
-			
+
 			//Custom Loot Box Coords
 			customLoot[] =
 			{
@@ -182,17 +182,17 @@ class BreakingPoint
 		{
 			//Enable or Disable Faction System
 			enabled = true;
-			
+
 			/*
 			disable groups of different classes/faction , only players of the same faction will be able to group
 			[Ranger Nomads and Survivalists] , [Outlaw] , [Hunter, Independent/None] are able to group each other in the []
 			false => normal grouping is active
-			true => only players of the same class/faction are allowed to group 
+			true => only players of the same class/faction are allowed to group
 			*/
 			disableMixedgrouping = true;
 
 			undeadDisabled = false;
-			
+
 			//Enable or Disable Point Gain and Loss
 			class Points
 			{
@@ -204,7 +204,7 @@ class BreakingPoint
 				// 0.25 = 25% Point Gain/Loss
 				ratio = 1;
 			};
-			
+
 			//Enable or Disable Specific Classes
 			class Classes
 			{
@@ -217,9 +217,9 @@ class BreakingPoint
 			};
 		};
 
-		class Cleanup 
+		class Cleanup
 		{
-			class Dead 
+			class Dead
 			{
 				enabled = true;
 				//Interval At Which the Cleanup Runs ( 2 Mins )
@@ -229,12 +229,12 @@ class BreakingPoint
 				//Time of Player Body Cleanup ( 17 Mins )
 				player = 1020;
 			};
-			class Sync 
+			class Sync
 			{
 				enabled = true;
 				interval = 300; // 5 Mins
 			};
-			class Loot 
+			class Loot
 			{
 				enabled = true;
 				//Interval At Which the Cleanup Runs ( 17 Mins )
@@ -242,7 +242,7 @@ class BreakingPoint
 				//Distance A Player is Nearby That Will Prevent Cleanup ( 125 Meters )
 				nearby = 125;
 			};
-			class Entities 
+			class Entities
 			{
 				enabled = true;
 				//Interval At Which the Cleanup Runs ( 20 Mins )
@@ -250,25 +250,25 @@ class BreakingPoint
 				//Distance A Player Is Nearby That Will Prevent Cleanup ( 5 Meters )
 				nearby = 5;
 			};
-			class GlobalLoot 
+			class GlobalLoot
 			{
 				enabled = true;
 				interval = 3600; // 60 Mins
 			};
-			class Restart 
+			class Restart
 			{
 				enabled = true;
 				interval = 6900; //115 Mins
 			};
 		};
 
-		class Time 
+		class Time
 		{
 			dawn = 6;
 			dusk = 18;
 		};
 
-		class Zombies 
+		class Zombies
 		{
 			enabled = true;
 			maxLocal = 40; //Total Local
@@ -285,14 +285,14 @@ class BreakingPoint
 			distance = 1200;
 		};
 
-		class Survival 
+		class Survival
 		{
 			food = 3240; //2160 Minutes (48 hours)
 			water = 2160; //1440 Minutes (24 hours)
 			temperature = 90 / 100; //First Value = Minutes until Player reaches the coldest Point at night (without other effects! night factor expected to be -1)
 		};
 
-		class Temperature 
+		class Temperature
 		{
 			default = 36;
 			normal = 36;
@@ -302,7 +302,7 @@ class BreakingPoint
 	};
 };
 
-class Params 
+class Params
 {
 	class instance
 	{
@@ -439,25 +439,25 @@ class CfgSounds
 		name = "breath_toxic";
 		sound[] = {"\sound\breath_toxic.ogg", 0.6, 1.0};
 		titles[] = {0,""};
-	};			
+	};
 	class 01_breat_toxic
 	{
 		name = "01_breat_toxic";
 		sound[] = {"\sound\01_breat_toxic.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 02_breat_toxic
 	{
 		name = "02_breat_toxic";
 		sound[] = {"\sound\02_breat_toxic.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 03_breat_toxic
 	{
 		name = "03_breat_toxic";
 		sound[] = {"\sound\03_breat_toxic.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 04_breat_toxic
 	{
 		name = "04_breat_toxic";
@@ -475,25 +475,25 @@ class CfgSounds
 		name = "01_anomaly_move";
 		sound[] = {"\sound\01_anomaly_move.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 02_anomaly_move
 	{
 		name = "02_anomaly_move";
 		sound[] = {"\sound\02_anomaly_move.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 01_fart_attack
 	{
 		name = "01_fart_attack";
 		sound[] = {"\sound\01_fart_attack.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 02_fart_attack
 	{
 		name = "02_fart_attack";
 		sound[] = {"\sound\02_fart_attack.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class 01_strig_fart
 	{
 		name = "01_strig_fart";
@@ -517,31 +517,31 @@ class CfgSounds
 		name = "01_cave";
 		sound[] = {"\sound\01_cave.ogg", db+35, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class 01_eco
 	{
 		name = "01_eco";
 		sound[] = {"\sound\01_eco.ogg", 0.1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class 02_eco
 	{
 		name = "02_eco";
 		sound[] = {"\sound\02_eco.ogg", 0.05, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class 02_cave
 	{
 		name = "02_cave";
 		sound[] = {"\sound\02_cave.ogg", 0.05, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class 03_dry_drop
 	{
 		name = "03_dry_drop";
 		sound[] = {"\sound\03_dry_drop.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class shower
 	{
 		name = "shower";
@@ -565,43 +565,43 @@ class CfgSounds
 		name = "fundal_gas";
 		sound[] = {"\sound\fundal_gas.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class gas_1
 	{
 		name = "gas_1";
 		sound[] = {"\sound\gas_1.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class gas_2
 	{
 		name = "gas_2";
 		sound[] = {"\sound\gas_2.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class gas_3
 	{
 		name = "gas_3";
 		sound[] = {"\sound\gas_3.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class gas_4
 	{
 		name = "gas_4";
 		sound[] = {"\sound\gas_4.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class gas_9
 	{
 		name = "gas_9";
 		sound[] = {"\sound\gas_9.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class foc_0
 	{
 		name = "foc_0";
 		sound[] = {"\sound\foc_0.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class foc_1
 	{
 		name = "foc_1";
@@ -637,31 +637,31 @@ class CfgSounds
 		name = "foc_6";
 		sound[] = {"\sound\foc_6.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class foc_9
 	{
 		name = "foc_9";
 		sound[] = {"\sound\foc_9.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class foc_91
 	{
 		name = "foc_91";
 		sound[] = {"\sound\foc_91.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class fundal_foc_1
 	{
 		name = "fundal_foc_1";
 		sound[] = {"\sound\fundal_foc_1.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class fundal_foc_2
 	{
 		name = "fundal_foc_2";
 		sound[] = {"\sound\fundal_foc_2.ogg", 1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class fundal_foc_3
 	{
 		name = "fundal_foc_3";
@@ -744,238 +744,238 @@ class CfgSounds
 	{
 		name = "01_close"; // Name for mission editor
 		sound[] = {\Sound\01_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 02_close
 	{
 		name = "02_close"; // Name for mission editor
 		sound[] = {\Sound\02_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 03_close
 	{
 		name = "03_close"; // Name for mission editor
 		sound[] = {\Sound\03_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 04_close
 	{
 		name = "04_close"; // Name for mission editor
 		sound[] = {\Sound\04_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 05_close
 	{
 		name = "05_close"; // Name for mission editor
 		sound[] = {\Sound\05_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 06_close
 	{
 		name = "06_close"; // Name for mission editor
 		sound[] = {\Sound\06_close.ogg, db+10, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 07_close
 	{
 		name = "07_close"; // Name for mission editor
 		sound[] = {\Sound\07_close.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class 08_close
 	{
 		name = "08_close"; // Name for mission editor
 		sound[] = {\Sound\08_close.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 
-// far f	
+// far f
 	class 01_far
 	{
 		name = "01_far"; // Name for mission editor
 		sound[] = {\Sound\01_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 02_far
 	{
 		name = "02_far"; // Name for mission editor
 		sound[] = {\Sound\02_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 03_far
 	{
 		name = "03_far"; // Name for mission editor
 		sound[] = {\Sound\03_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 04_far
 	{
 		name = "04_far"; // Name for mission editor
 		sound[] = {\Sound\04_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 05_far
 	{
 		name = "05_far"; // Name for mission editor
 		sound[] = {\Sound\05_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 06_far
 	{
 		name = "06_far"; // Name for mission editor
 		sound[] = {\Sound\06_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 07_far
 	{
 		name = "07_far"; // Name for mission editor
 		sound[] = {\Sound\07_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 08_far
 	{
 		name = "08_far"; // Name for mission editor
 		sound[] = {\Sound\08_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 09_far
 	{
 		name = "09_far"; // Name for mission editor
 		sound[] = {\Sound\09_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 10_far
 	{
 		name = "10_far"; // Name for mission editor
 		sound[] = {\Sound\10_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 11_far
 	{
 		name = "11_far"; // Name for mission editor
 		sound[] = {\Sound\11_far.ogg,1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 12_far
 	{
 		name = "12_far"; // Name for mission editor
 		sound[] = {\Sound\12_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 13_far
 	{
 		name = "13_far"; // Name for mission editor
 		sound[] = {\Sound\13_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 14_far
 	{
 		name = "14_far"; // Name for mission editor
 		sound[] = {\Sound\14_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 16_far
 	{
 		name = "16_far"; // Name for mission editor
 		sound[] = {\Sound\16_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 17_far
 	{
 		name = "17_far"; // Name for mission editor
 		sound[] = {\Sound\17_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 18_far
 	{
 		name = "18_far"; // Name for mission editor
 		sound[] = {\Sound\18_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 19_far
 	{
 		name = "19_far"; // Name for mission editor
 		sound[] = {\Sound\19_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 20_far
 	{
 		name = "20_far"; // Name for mission editor
 		sound[] = {\Sound\20_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 21_far
 	{
 		name = "21_far"; // Name for mission editor
 		sound[] = {\Sound\21_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 22_far
 	{
 		name = "22_far"; // Name for mission editor
 		sound[] = {\Sound\22_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 23_far
 	{
 		name = "23_far"; // Name for mission editor
 		sound[] = {\Sound\23_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 24_far
 	{
 		name = "24_far"; // Name for mission editor
 		sound[] = {\Sound\24_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 25_far
 	{
 		name = "25_far"; // Name for mission editor
 		sound[] = {\Sound\25_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 26_far
 	{
 		name = "26_far"; // Name for mission editor
 		sound[] = {\Sound\26_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class 27_far
 	{
 		name = "27_far"; // Name for mission editor
 		sound[] = {\Sound\27_far.ogg, 1, 1.0};
-		titles[] = {0, ""};	
+		titles[] = {0, ""};
 	};
 	class tiuit
 	{
 		name = "tiuit"; // Name for mission editor
 		sound[] = {\Sound\tiuit.ogg, 0.2, 1.0};
-		titles[] = {0, ""};	
+		titles[] = {0, ""};
 	};
 	class bcg_wind
 	{
 		name = "bcg_wind";
 		sound[] = {"\sound\bcg_wind.ogg", db+5, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_1
 	{
 		name = "rafala_1";
 		sound[] = {"\sound\rafala_1.ogg", db+10, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_2
 	{
 		name = "rafala_2";
 		sound[] = {"\sound\rafala_2.ogg", db+5, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_4_dr
 	{
 		name = "rafala_4_dr";
 		sound[] = {"\sound\rafala_4_dr.ogg", db+10, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_5_st
 	{
 		name = "rafala_5_st";
@@ -987,19 +987,19 @@ class CfgSounds
 		name = "rafala_6";
 		sound[] = {"\sound\rafala_6.ogg", db+15, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_7
 	{
 		name = "rafala_7";
 		sound[] = {"\sound\rafala_7.ogg", db+10, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_8
 	{
 		name = "rafala_8";
 		sound[] = {"\sound\rafala_8.ogg", db+15, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class rafala_9
 	{
 		name = "rafala_9";
@@ -1030,20 +1030,20 @@ class CfgSounds
 		name = "echipare";
 		sound[] = {"\sound\echipare.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class dezechipare
 	{
 		name = "dezechipare";
 		sound[] = {"\sound\dezechipare.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class puls_1
 	{
 		name = "puls_1";
 		sound[] = {"\sound\puls_1.ogg", db+1, 1};
 		titles[] = {1, ""};
-	};	
-	class NoSound 
+	};
+	class NoSound
 	{
 		name = "NoSound";
 		sound[] = {"", 0, 1};
@@ -1114,7 +1114,7 @@ class CfgSounds
 		name = "07_tip_casp";
 		sound[] = {"\sound\07_tip_casp.ogg", db+5, 1};
 		titles[] = {};
-	};	
+	};
 	class 01_tease
 	{
 		name = "01_tease";
@@ -1138,7 +1138,7 @@ class CfgSounds
 		name = "04_tease";
 		sound[] = {"\sound\04_tease.ogg", 1, 1};
 		titles[] = {};
-	};	
+	};
 	class 01_atk_bg
 	{
 		name = "01_atk_bg";
@@ -1168,24 +1168,24 @@ class CfgSounds
 		name = "puls";
 		sound[] = {"\sound\puls.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class explozie_1
 	{
 		name = "explozie_1"; // Name for mission editor
 		sound[] = {\Sound\explozie_1.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};	
+		titles[] = {0, ""};
+	};
 	class explozie_2
 	{
 		name = "explozie_2"; // Name for mission editor
 		sound[] = {\Sound\explozie_2.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
-	};		
+		titles[] = {0, ""};
+	};
 	class explozie_3
 	{
 		name = "explozie_3"; // Name for mission editor
 		sound[] = {\Sound\explozie_3.ogg, db+30, 1.0};
-		titles[] = {0, ""};	
+		titles[] = {0, ""};
 	};
 	class prim
 	{
@@ -1222,26 +1222,26 @@ class CfgSounds
 		name = "spark2";
 		Sound[] = {"\Sound\spark2.ogg", db+5, 1};
 		titles[] = {};
-	};		
+	};
 	class spark22
 	{
 		name = "spark22";
 		Sound[] = {"\Sound\spark22.ogg", db+5, 1};
 		titles[] = {};
-	};	
-	class spark3	
+	};
+	class spark3
 	{
 		name = "spark3";
 		Sound[] = {"\Sound\spark3.ogg", db+5, 1};
 		titles[] = {};
 	};
-	class spark4	
+	class spark4
 	{
 		name = "spark4";
 		Sound[] = {"\Sound\spark4.ogg", db+5, 1};
 		titles[] = {};
 	};
-	class spark5	
+	class spark5
 	{
 		name = "spark5";
 		Sound[] = {"\Sound\spark5.ogg", db+5, 1};
@@ -1336,7 +1336,7 @@ class CfgSounds
 		name = "echipare_toxic";
 		Sound[] = {"\Sound\echipare_toxic.ogg", 1, 1.0};
 		titles[] = {0,""};
-	};	
+	};
 	class dezechipare_toxic
 	{
 		name = "dezechipare_toxic";
@@ -1366,13 +1366,13 @@ class CfgSounds
 		name = "01";
 		sound[] = {"\sound\01.ogg",1, 1};
 		titles[] = {1, ""};
-	};		
+	};
 	class 02
 	{
 		name = "02";
 		sound[] = {"\sound\02.ogg",1, 1};
 		titles[] = {1, ""};
-	};	
+	};
 	class 04
 	{
 		name = "04";
@@ -1450,13 +1450,13 @@ class CfgSounds
 		name = "telep_02";
 		sound[] = {"\sound\telep_02.ogg", db+5, 1};
 		titles[] = {};
-	};	
+	};
 	class telep_03
 	{
 		name = "telep_03";
 		sound[] = {"\sound\telep_03.ogg", db+5, 1};
 		titles[] = {};
-	};	
+	};
 	class telep_04
 	{
 		name = "telep_04";
@@ -1468,13 +1468,13 @@ class CfgSounds
 		name = "telep_05";
 		sound[] = {"\sound\telep_05.ogg", db+5, 1};
 		titles[] = {};
-	};		
+	};
 	class tremor
 	{
 		name = "tremor";
 		sound[] = {"\sound\tremor.ogg", db+5, 1};
 		titles[] = {};
-	};		
+	};
 	class rafala_smug_01
 	{
 		name = "rafala_smug_01";
@@ -1510,13 +1510,13 @@ class CfgSounds
 		name = "smugg_03";
 		sound[] = {"\sound\smugg_03.ogg", 1, 1};
 		titles[] = {};
-	};	
+	};
 	class zoomin
 	{
 		name = "zoomin";
 		sound[] = {"\sound\zoomin.ogg", db+25, 1};
 		titles[] = {};
-	};	
+	};
 	class strigat_6
 	{
 		name = "strigat_6";
@@ -1558,187 +1558,187 @@ class CfgSounds
 		name = "bodyfall_wood_2";
 		sound[] = {"\sound\bodyfall_wood_2.ogg", db+20, 1};
 		titles[] = {};
-	};	
+	};
 	class bodyfall_wood_3
 	{
 		name = "bodyfall_wood_3";
 		sound[] = {"\sound\bodyfall_wood_3.ogg", db+20, 1};
 		titles[] = {};
-	};		
+	};
 	class tele_message
 	{
 		name = "tele_message";
 		sound[] = {"\sound\tele_message.ogg", db+30, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_1
 	{
 		name = "halu_1";
 		sound[] = {"\sound\halu_1.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_2
 	{
 		name = "halu_2";
 		sound[] = {"\sound\halu_2.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_3
 	{
 		name = "halu_3";
 		sound[] = {"\sound\halu_3.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_4
 	{
 		name = "halu_4";
 		sound[] = {"\sound\halu_4.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_5
 	{
 		name = "halu_5";
 		sound[] = {"\sound\halu_5.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_6
 	{
 		name = "halu_6";
 		sound[] = {"\sound\halu_6.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_7
 	{
 		name = "halu_7";
 		sound[] = {"\sound\halu_7.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_8
 	{
 		name = "halu_8";
 		sound[] = {"\sound\halu_8.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_9
 	{
 		name = "halu_9";
 		sound[] = {"\sound\halu_9.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_91
 	{
 		name = "halu_91";
 		sound[] = {"\sound\halu_91.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_92
 	{
 		name = "halu_92";
 		sound[] = {"\sound\halu_92.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_93
 	{
 		name = "halu_93";
 		sound[] = {"\sound\halu_93.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_94
 	{
 		name = "halu_94";
 		sound[] = {"\sound\halu_94.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_95
 	{
 		name = "halu_95";
 		sound[] = {"\sound\halu_95.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_96
 	{
 		name = "halu_96";
 		sound[] = {"\sound\halu_96.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_97
 	{
 		name = "halu_97";
 		sound[] = {"\sound\halu_97.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_98
 	{
 		name = "halu_98";
 		sound[] = {"\sound\halu_98.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_99
 	{
 		name = "halu_99";
 		sound[] = {"\sound\halu_99.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_991
 	{
 		name = "halu_991";
 		sound[] = {"\sound\halu_991.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_992
 	{
 		name = "halu_992";
 		sound[] = {"\sound\halu_992.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_993
 	{
 		name = "halu_993";
 		sound[] = {"\sound\halu_993.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_994
 	{
 		name = "halu_994";
 		sound[] = {"\sound\halu_994.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_995
 	{
 		name = "halu_995";
 		sound[] = {"\sound\halu_995.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_996
 	{
 		name = "halu_996";
 		sound[] = {"\sound\halu_996.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_997
 	{
 		name = "halu_997";
 		sound[] = {"\sound\halu_997.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_998
 	{
 		name = "halu_998";
 		sound[] = {"\sound\halu_998.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_999
 	{
 		name = "halu_999";
 		sound[] = {"\sound\halu_999.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 	class halu_9999
 	{
 		name = "halu_9999";
 		sound[] = {"\sound\halu_9999.ogg", db+10, 1};
 		titles[] = {};
-	};	
+	};
 };
 
 class RscTitles
