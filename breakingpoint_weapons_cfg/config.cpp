@@ -16,7 +16,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui"};
+		requiredAddons[] = {"A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui","A3_Weapons_F_Mod"};
 	};
 };
 
@@ -50833,7 +50833,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mod\SMGs\SMG_03\data\body_hex_co.paa"};
 	};
-	class BP_P90_Silencer: ItemCore
+	class muzzle_snds_570;
+	class BP_P90_Silencer: muzzle_snds_570
 	{
 		author = "$STR_A3_Bohemia_Interactive";
 		_generalMacro = "BP_P90_Silencer";
