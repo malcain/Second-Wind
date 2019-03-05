@@ -55129,62 +55129,6 @@ class CfgAmmo {
 	class GrenadeHand;
 	class G_40mm_HE;
 	class SmokeShell;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	class B_570x28_Ball;
-	
-	class BP_P90_570x28_Ball: B_570x28_Ball
-	{
-		caliber = 0.559441;
-		hit = 8;
-		indirectHit = 0;
-		indirectHitRange = 0;
-		typicalSpeed = 715;
-		airFriction = -0.001412;
-		deflecting = 20;
-		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
-		tracerScale = 1;
-		tracerStartTime = 0.05;
-		tracerEndTime = 1;
-		nvgOnly = 1;
-		audibleFire = 25;
-		visibleFire = 3;
-		visibleFireTime = 5;
-		dangerRadiusBulletClose = 8;
-		suppressionRadiusBulletClose = 6;
-		dangerRadiusHit = 12;
-		suppressionRadiusHit = 8;
-		class Medical
-		{
-			//Instant Bleeding (Bullet will always make you bleed on impact)
-			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
-
-			//Medical State Level (Bullet Hit will always put you in this state)
-			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
-			MedicalState = 2;
-			MedicalChance = 50;
-
-			// Bleeding Level (Rate of blood loss)
-			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
-			BleedingLevel = 2;
-			BleedingChance = 30;
-
-			// Infection (Bullet Wound Chance Of Infection)
-			Infection = 0; // 0 - Disabled / 1 - Enabled
-			InfectionChance = 0; //Between 0 -> 100
-
-			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0 -> 100
-
-			//Blood Damage Scale
-			scale = 0;
-		};
-	};
-=======
->>>>>>> parent of 7e20e4d... P90 Variants Added (Need Scopes Tests!)
-=======
->>>>>>> parent of 7e20e4d... P90 Variants Added (Need Scopes Tests!)
 
 	class BP_Flashbang_Ammo: GrenadeHand
 	{
