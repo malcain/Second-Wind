@@ -633,7 +633,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Guardian3_F";
 			allowedSlots[] = {};
-			containerClass = "Supply70";
+			containerClass = "Supply60";
 			mass = 40;
 		};
 	};
@@ -648,7 +648,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Guardian3_Z";
 			allowedSlots[] = {};
-			containerClass = "Supply70";
+			containerClass = "Supply60";
 			mass = 40;
 		};
 	};
@@ -664,7 +664,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="FRITH_RUIN_coffdpm";
 			allowedSlots[] = {};
-			containerClass="Supply70";
+			containerClass="Supply60";
 			mass=40;
 		};
 	};
@@ -680,7 +680,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="usm_bdu_portliz";
 			allowedSlots[] = {};
-			containerClass="Supply70";
+			containerClass="Supply60";
 			mass=40;
 		};
 	};
@@ -696,7 +696,7 @@ class CfgWeapons
 			uniformModel="-";
 			uniformClass="usm_bdu_ERDL";
 			allowedSlots[] = {};
-			containerClass="Supply70";
+			containerClass="Supply60";
 			mass=40;
 		};
 	};
@@ -1030,7 +1030,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist1_F";
 			allowedSlots[] = {};
-			containerClass = "Supply50";
+			containerClass = "Supply40";
 			mass = 40;
 		};
 	};
@@ -1045,7 +1045,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist1_Z";
 			allowedSlots[] = {};
-			containerClass = "Supply50";
+			containerClass = "Supply40";
 			mass = 40;
 		};
 	};
@@ -1060,7 +1060,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist2_F";
 			allowedSlots[] = {};
-			containerClass = "Supply70";
+			containerClass = "Supply60";
 			mass = 40;
 		};
 	};
@@ -1075,7 +1075,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist2_Z";
 			allowedSlots[] = {};
-			containerClass = "Supply70";
+			containerClass = "Supply60";
 			mass = 40;
 		};
 	};
@@ -1090,7 +1090,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist3_F";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1105,7 +1105,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist3_Z";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1120,7 +1120,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist4_F";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1135,7 +1135,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_DirtGhillie";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1150,7 +1150,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_StoneGhillie";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1165,7 +1165,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist3_F";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1180,7 +1180,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_TreeGhillie";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1195,7 +1195,7 @@ class CfgWeapons
 			uniformModel = "-";
 			uniformClass = "BP_SnowGhillie";
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply70";
 			mass = 40;
 		};
 	};
@@ -1646,7 +1646,7 @@ class CfgWeapons
 
 		class ItemInfo: VestItem {
 			allowedSlots[] = {};
-			containerClass = "Supply100";
+			containerClass = "Supply90";
 			uniformModel = "\breakingpoint_classes\models\BP_HBelt.p3d";
 			mass = 85;
 			armor = "0";
@@ -1661,17 +1661,17 @@ class CfgWeapons
 		displayName = "Heavy Equipment Vest";
 		picture = "\A3\characters_f\Data\UI\icon_V_TacVestIR_blk_CA.paa";
 		model = "\breakingpoint_classes\models\BP_HVest.p3d";
-		//hiddenSelections[] = {"camo"};
-		//hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroVest_co.paa"};
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroVest_co.paa"};
 
 		class ItemInfo: VestItem {
 			allowedSlots[] = {};
-			containerClass = "Supply120";
+			containerClass = "Supply110";
 			uniformModel = "\breakingpoint_classes\models\BP_HVest.p3d";
 			mass = 95;
 			armor = "0";
 			passThrough = 1;
-			//hiddenSelections[] = {"camo"};
+			hiddenSelections[] = {"camo"};
 		};
 	};
 	
@@ -1685,7 +1685,7 @@ class CfgWeapons
 
 		class ItemInfo: VestItem {
 			allowedSlots[] = {};
-			containerClass = "Supply90";
+			containerClass = "Supply100";
 			uniformModel = "\breakingpoint_classes\models\BP_CPack.p3d";
 			mass = 50;
 			armor = "0";
@@ -1704,7 +1704,7 @@ class CfgWeapons
 
 		class ItemInfo: VestItem {
 			allowedSlots[] = {};
-			containerClass = "Supply50";
+			containerClass = "Supply70";
 			uniformModel = "\breakingpoint_classes\models\BP_VPack.p3d";
 			mass = 10;
 			armor = "0";
@@ -1724,7 +1724,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply80";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -1762,7 +1762,7 @@ class CfgWeapons
 		class ItemInfo: VestItem
 		{
 			uniformModel="\breakingpoint\models\outlawvest.p3d";
-			containerClass="Supply100";
+			containerClass="Supply80";
 			mass=50;
 			passThrough=1;
 			hiddenSelections[]=
@@ -1940,7 +1940,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply60";
+			containerClass = "Supply55";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.930000;
@@ -1959,7 +1959,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply60";
+			containerClass = "Supply55";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -1977,7 +1977,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply60";
+			containerClass = "Supply55";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -1996,7 +1996,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply60";
+			containerClass = "Supply55";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -2015,7 +2015,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply60";
+			containerClass = "Supply55";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -2032,7 +2032,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest01";
 			allowedSlots[] = {};
-			containerClass = "Supply110";
+			containerClass = "Supply90";
 			mass = 80;
 			armor = "0";
 			passThrough = 0.750000;
@@ -2048,7 +2048,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_vest02.p3d";
 			allowedSlots[] = {};
-			containerClass = "Supply100";
+			containerClass = "Supply80";
 			mass = 80;
 			armor = "0";
 			passThrough = 0.750000;
@@ -2214,10 +2214,34 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "A3\Characters_F\Common\equip_tacticalvest";
 			allowedSlots[] = {};
-			containerClass = "Supply150";
+			containerClass = "Supply70";
 			mass = 120;
-			armor = "5*0.6";
-			passThrough = 0.100000;
+			class HitpointsProtectionInfo
+			{
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 8;
+					passThrough = 0.5;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.5;
+				};
+			};
 			hiddenSelections[] = {"camo"};
 		};
 	};
@@ -2343,7 +2367,7 @@ class CfgWeapons
 		model = "\A3\Characters_F\OPFOR\equip_o_vest01";
 		picture = "\A3\characters_f_beta\Data\UI\icon_V_HarnessOU_gry_CA.paa";
 		class ItemInfo : ItemInfo {
-			containerClass = "Supply160";
+			containerClass = "Supply90";
 			hiddenSelections[] = {"Camo1","Camo2"};
 			mass = 40;
 			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest01";
@@ -2381,7 +2405,7 @@ class CfgWeapons
 			containerClass = "Supply80";
 			mass = 40;
 			armor = "0";
-			passThrough = 0.950000;
+			passThrough = 0.920000;
 			hiddenSelections[] = {"camo1", "camo2"};
 		};
 	};
@@ -2499,7 +2523,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "A3\Characters_F_Beta\INDEP\equip_ia_vest02";
 			allowedSlots[] = {};
-			containerClass = "Supply110";
+			containerClass = "Supply80";
 			mass = 80;
 			class HitpointsProtectionInfo
 			{
@@ -2578,7 +2602,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "A3\Characters_F\Common\equip_tacticalvest";
 			allowedSlots[] = {};
-			containerClass = "Supply80";
+			containerClass = "Supply70";
 			mass = 60;
 			hiddenSelections[] = {"camo"};
 		};
@@ -2595,7 +2619,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "A3\Characters_F\Common\equip_tacticalvest";
 			allowedSlots[] = {};
-			containerClass = "Supply80";
+			containerClass = "Supply70";
 			mass = 60;
 			hiddenSelections[] = {"camo"};
 		};

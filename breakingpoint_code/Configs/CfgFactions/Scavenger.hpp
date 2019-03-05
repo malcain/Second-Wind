@@ -74,13 +74,13 @@
 				class Spawn
 				{
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"G_MM_Hockey_Mask"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {};
+					launcher[] = {"MeleeShovel"};
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_1"};
-					backpack[] = {"BP_AssaultPack_blk"};
+					backpack[] = {"BP_AssaultPack_Worn"};
 					vest[] = {};
 					uniform[] = {"BP_Scavenger_1"};
 					headgear[]={""};
@@ -91,7 +91,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemBandage","ItemBandage","ItemPainkiller"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -100,7 +100,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -108,14 +108,14 @@
 			class Level_2 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"ItemMap","TRYK_ESS_BLKTAN_NV"};
+					toolbelt[] = {"TRYK_ESS_BLKTAN_NV","G_MM_FaceFork"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {};
+					launcher[] = {"MeleeShovel"};
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_2"};
-					backpack[] = {"BP_Kitbag_drt"};
-					vest[] = {};
+					backpack[] = {"BP_AssaultPack_Worn"};
+					vest[] = {"V_BanditBandolier_BP"};
 					uniform[] = {"BP_Scavenger_2"};
 					headgear[]={""};
 					nvg[]={"TRYK_ESS_BLKTAN_NV"};
@@ -125,7 +125,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemBandage","ItemBandage","ItemPainkiller"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -133,15 +133,15 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemKnife","BP_15Rnd_9x21_Rubber","BP_15Rnd_9x21_Rubber"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
 				class Backpack : BP_BaseGear  {
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_TranQPistol"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -149,14 +149,14 @@
 			class Level_3 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"ItemMap"};
+					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {};
+					launcher[] = {"MeleeShovel"};
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_3"};
-					backpack[] = {"BP_Kitbag_grs"};
-					vest[] = {};
+					backpack[] = {"BP_Carryall_Bandit"};
+					vest[] = {"V_BanditBandolier_BP"};
 					uniform[] = {"BP_Scavenger_3"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
@@ -183,7 +183,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemDuctTape"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -191,14 +191,14 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"ItemMap","G_MM_Crow_Dazzle_Mask"};
+					toolbelt[] = {"G_MM_Crow_Dazzle_Mask","ItemToolbox"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {};
+					launcher[] = {"MeleeShovel"};
 					handgun[] = {};
 					clothing[] = {"BP_Scavenger_4"};
-					backpack[] = {"BP_Kitbag_grs"};
-					vest[] = {};
+					backpack[] = {"BP_Coyote_Bandit"};
+					vest[] = {"V_BanditBandolier_BP"};
 					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
@@ -225,7 +225,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemDuctTape"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
