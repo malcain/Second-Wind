@@ -456,21 +456,6 @@ if (_dikCode in actionKeys "Chat") then {};
 //	};
 //};
 
-if (_dikCode in actionKeys "SitDown") then {
-	if (time - BP_lastCheckBit > 1) then
-	{
-		BP_lastCheckBit = time;
-
-		if ((vehicle player) == player) then {
-			if (!r_player_unconscious and !_isHostage and !_isWater) then {	
-				r_action_restTime = 0;
-				r_action_rest = true;
-			};
-		};
-	};
-	_handled = true;
-};
-
 /*if (_dikCode in actionKeys "User1") then {
 	if (time - BP_lastCheckBit > 1) then
 	{
