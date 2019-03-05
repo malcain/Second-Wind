@@ -103,7 +103,7 @@ class CfgBuildingLoot
 			{"BP_1866","weapon"},
 			{"BP_R300","weaponA"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"MeleeKatana","weapon"},
+			{"MeleeKatana","weaponNA"},
 			{"BP_Benelli","weapon"},
 			{"BP_Rem870","weapon"},
 			{"BP_7Rnd_45acp","magazine"},
@@ -113,8 +113,8 @@ class CfgBuildingLoot
 			{"ItemAntibiotic","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemBandage","magazine"},
-			{"Meleehatchet","weapon"},
-			{"MeleeShovel","weapon"},
+			{"Meleehatchet","weaponNA"},
+			{"MeleeShovel","weaponNA"},
 			{"BP_15Rnd_9x21_Rubber","magazine"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
@@ -256,7 +256,7 @@ class CfgBuildingLoot
 			{"BP_1866","weapon"},
 			{"BP_R300","weaponA"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"MeleeKatana","weapon"},
+			{"MeleeKatana","weaponNA"},
 			{"BP_Benelli","weapon"},
 			{"BP_Rem870","weapon"},
 			{"BP_7Rnd_45acp","magazine"},
@@ -266,8 +266,8 @@ class CfgBuildingLoot
 			{"ItemAntibiotic","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemBandage","magazine"},
-			{"Meleehatchet","weapon"},
-			{"MeleeShovel","weapon"},
+			{"Meleehatchet","weaponNA"},
+			{"MeleeShovel","weaponNA"},
 			{"BP_15Rnd_9x21_Rubber","magazine"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
@@ -628,9 +628,9 @@ class CfgBuildingLoot
 			{"MeleeHammer","weaponNA"},
 			{"MeleeHammer2","weaponNA"},
 			{"BlueprintStove","magazine"},
-			{"MeleeShovel","weapon"},
+			{"MeleeShovel","weaponNA"},
 			{"MeleeCrowbar","weaponNA"},
-			{"MeleeClub","weapon"},
+			{"MeleeClub","weaponNA"},
 			{"ItemStove","magazine"},
 			{"ItemToolbox","toolbelt"},
 			{"BP_8Rnd_45gov","magazine"},
@@ -736,14 +736,14 @@ class CfgBuildingLoot
 			{"ItemEngineCoolant","magazine"},
 			{"ItemFuelhoseKit","magazine"},
 			{"ItemToolbox","toolbelt"},
-			{"MeleeHammer","weapon"},
+			{"MeleeHammer","weaponNA"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"ItemStove","magazine"},
-			{"MeleeShovel","weapon"}, 
-			{"MeleeCrowbar","weapon"},
-            {"MeleeClub","weapon"},
+			{"MeleeShovel","weaponNA"}, 
+			{"MeleeCrowbar","weaponNA"},
+            {"MeleeClub","weaponNA"},
 			{"ItemSandbag","magazine"},
-			{"MeleeHammer2","weapon"}
+			{"MeleeHammer2","weaponNA"}
 		};
 		itemChance[] =	{
 			0.02,	//BP_CardBoardBox3
@@ -1853,8 +1853,8 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"Human_Trap_Mag","magazine"},
-			{"FoodRabbitCooked","magazine"},
+			{"BP_P90TR_BASE","weaponA"},
+			{"BP_P90C_BASE","weaponA"},
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
@@ -1862,8 +1862,8 @@ class CfgBuildingLoot
 			0.01,    //Chestrig_blk
 			0.01,    //R7Sup
 			0.01,    //CZSup
-			0.75,    //MeatPlayerCooked
-			0.15,    //MeatRabbitCooked
+			0.65,    //MeatPlayerCooked
+			0.25,    //MeatRabbitCooked
 			0.15    //Mushroom
 		};
 	};
