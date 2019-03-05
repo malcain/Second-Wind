@@ -50634,36 +50634,36 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			dispersion = 0.0012;
 		};
 	};
-	class BP_P90_TR_black:  BP_P90TR_BASE
+	class BP_P90TR_black:  BP_P90TR_BASE
 	{
 		author = "$STR_A3_Bohemia_Interactive";
-		_generalMacro = "BP_P90_TR_black";
+		_generalMacro = "BP_P90TR_black";
 		scope = 2;
 		displayName = "$STR_A3_CfgWeapons_SMG_03_TR_black0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_black_ca.paa";
 	};
-	class BP_P90_TR_camo: BP_P90TR_black
+	class BP_P90TR_camo: BP_P90TR_black
 	{
 		author = "$STR_A3_Bohemia_Interactive";
-		_generalMacro = "BP_P90_TR_camo";
+		_generalMacro = "BP_P90TR_camo";
 		displayName = "$STR_A3_CfgWeapons_SMG_03_TR_camo0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_camo_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mod\SMGs\SMG_03\data\body_camo_co.paa"};
 	};
-	class BP_P90_TR_khaki: BP_P90TR_black
+	class BP_P90TR_khaki: BP_P90TR_black
 	{
 		author = "$STR_A3_Bohemia_Interactive";
-		_generalMacro = "BP_P90_TR_khaki";
+		_generalMacro = "BP_P90TR_khaki";
 		displayName = "$STR_A3_CfgWeapons_SMG_03_TR_khaki0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_khaki_ca.paa";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Mod\SMGs\SMG_03\data\body_khaki_co.paa"};
 	};
-	class BP_P90_TR_hex: BP_P90_TR_BASE
+	class BP_P90TR_hex: BP_P90TR_BASE
 	{
 		author = "$STR_A3_Bohemia_Interactive";
-		_generalMacro = "BP_P90_TR_hex";
+		_generalMacro = "BP_P90TR_hex";
 		scope = 2;
 		displayName = "$STR_A3_CfgWeapons_SMG_03_TR_hex0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_hex_ca.paa";
