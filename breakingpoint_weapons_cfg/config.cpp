@@ -31948,6 +31948,7 @@ class CfgWeapons
 	class ItemInfo;
 	class CowsSlot;
 	class PointerSlot;
+	class MuzzleSlot;
 	class UGL_F;
 	class GrenadeLauncher;
     //Pistols
