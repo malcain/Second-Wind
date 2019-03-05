@@ -207,10 +207,10 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 // Breaking Point - Player Client Integration
 initialized = true;
 
-setViewDistance 2500;
+setViewDistance 2600;
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 
 waitUntil {time > 0};
-enableEnvironment [true,true];
+enableEnvironment [false,true];
 
 

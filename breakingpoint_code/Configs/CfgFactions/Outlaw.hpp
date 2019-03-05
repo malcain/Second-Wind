@@ -156,7 +156,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemFieldDressing","BlueprintIED1"};
+					magazines[] = {"ItemBandage","ItemBandage","ItemFieldDressing","BlueprintIED1"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -179,10 +179,10 @@
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Rebel_4"};
-					backpack[] = {"BP_Coyote_Bandit"};
+					backpack[] = {"BP_Rpack2"};
 					vest[]={"V_OutlawVest_BP"};
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_Agenda","BP_Rebel_4_Orange","BP_Rebel_4_ChocChip","BP_Rebel_4_Classic"};
-					headgear[]={"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
+					headgear[]={"","CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4","G_MM_bandana_worn_co"};
 				};
@@ -190,21 +190,14 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemFieldDressing","BlueprintIED1"};
+					magazines[] = {"ItemBandage","ItemBandage","ItemFieldDressing","BlueprintIED1"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
-				class Vest : BP_BaseGear {
-					//Array Of Weapons Inside Backpack
-					weapons[] = {};
-					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_2Rnd_Buckshot"};
-					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {};
-				};
+				class Vest : BP_BaseGear {};
 				class Backpack : BP_BaseGear {
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_Lupara"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
 					magazines[] = {"HandGrenade","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )

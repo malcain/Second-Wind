@@ -184,7 +184,7 @@ class Ranger : BP_BaseFaction
 				launcher[] = {};
 				handgun[] = {"BP_1911"};
 				clothing[] = {"BP_Guardian_4_Lizard"};
-				backpack[] = {"BP_Bergen_Hero"};
+				backpack[] = {"BP_Mpack"};
 				vest[] = {"CUP_V_C_Police_Holster"};
 				uniform[] = {"BP_Guardian_4_Lizard","BP_Guardian_4","BP_Guardian_4_Camo"};
 				headgear[] = {"CUP_H_NAPA_Fedora", "CUP_H_C_Policecap_01"};

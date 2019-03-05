@@ -281,8 +281,16 @@ class CfgVehicles
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_fast_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 120;
-		mass = 80;
+		maximumLoad = 150;
+		mass = 90;
+	};
+	
+	class BP_Bergen_Base: BP_Bag_Base {
+		scope = 2;
+		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_co.paa"};
+		allowedSlots[] = {};
+		maximumLoad = 220;
+		mass = 150;
 	};
 	
 	class BP_FieldPack_Base: BP_Bag_Base {
@@ -290,15 +298,7 @@ class CfgVehicles
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Gorod";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_cbr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 140;
-		mass = 120;
-	};
-	
-	class BP_Bergen_Base: BP_Bag_Base {
-		scope = 2;
-		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_co.paa"};
-		allowedSlots[] = {};
-		maximumLoad = 165;
+		maximumLoad = 190;
 		mass = 150;
 	};
 	
@@ -307,7 +307,7 @@ class CfgVehicles
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Tortila";
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_khk_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 230;
+		maximumLoad = 280;
 		mass = 200;
 	};
 	
@@ -316,8 +316,8 @@ class CfgVehicles
 		model = "\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\UAV_backpack_F.p3d";
 		hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 300;
-		mass = 270;
+		maximumLoad = 350;
+		mass = 120;
 	};
 	
 	class BP_HPack: BP_Bag_Base {
@@ -325,7 +325,7 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_HPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 240;
+		maximumLoad = 260;
 		mass = 200;
 		displayName = "Nomad Alice Pack";
 	};
@@ -335,7 +335,7 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_MPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 130;
+		maximumLoad = 150;
 		mass = 120;
 		displayName = "Ranger Medic Pack";
 	};
@@ -345,8 +345,8 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_SPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 250;
-		mass = 240;
+		maximumLoad = 330;
+		mass = 250;
 		displayName = "Czech Survival Pack";
 	};
 	
@@ -366,7 +366,7 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_RPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 160;
+		maximumLoad = 180;
 		mass = 90;
 		displayName = "Outlaw Equipment Pack";
 	};
@@ -376,7 +376,7 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_RPack2.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 200;
+		maximumLoad = 240;
 		mass = 100;
 		displayName = "Outlaw Heavy Pack";
 	};
@@ -466,7 +466,6 @@ class CfgVehicles
 	
 	class BP_AssaultPack_Worn: BP_AssaultPack_Base {
 		scope = 2;
-		displayName = "Civilian Bag (Worn)";
 		model = "\A3\weapons_f\Ammoboxes\bags\Backpack_Compact";
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\rvg_assault.paa"};
@@ -738,10 +737,9 @@ class CfgVehicles
 	
 	class BP_Bergen_Hero: BP_Bergen_Base {
 		scope = 2;
-		displayName = "British Military Pack";
+		displayName = "Rucksack (Hero)";
 		picture = "\A3\weapons_f\ammoboxes\bags\data\ui\icon_b_c_small_blk.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_herobergen_co.paa"};
-		maximumLoad = 170;
 	};
 	
 	class BP_Carryall_Hero: BP_Carryall_Base {
@@ -757,7 +755,7 @@ class CfgVehicles
 	
 	class BP_Carryall_Bandit: BP_Carryall_Base {
 		scope = 2;
-		displayName = "Survival pack (Scavenged)";
+		displayName = "MilitarySurvival (Bandit)";
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Tortila_cbr.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_tortila_cbr_co.paa"}; 
 		maximumLoad = 360;
@@ -766,7 +764,7 @@ class CfgVehicles
 	
 	class BP_Coyote_Bandit: BP_Coyote_Base {
 		scope = 2;
-		displayName = "Coyote pack (Scavenged)";
+		displayName = "Coyote (Bandit)";
 		model = "\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\UAV_backpack_F.p3d";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_coyote_bandit_co.paa"};
 		allowedSlots[] = {};

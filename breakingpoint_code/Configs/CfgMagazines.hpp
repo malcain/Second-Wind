@@ -310,7 +310,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_cementbag.p3d";
 		picture = "\breakingpoint\textures\icons\bp_cementbag_ca.paa";
 		descriptionShort = "";
-		mass = 35;
+		mass = 40;
 	};
 
 	class ItemSandBag : BP_Magazine {
@@ -322,7 +322,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_sandbag.p3d";
 		picture = "\breakingpoint\textures\icons\bp_sandbag_ca.paa";
 		descriptionShort = "";
-		mass = 35;
+		mass = 40;
 	};
 
 	// Consumable Items
@@ -583,7 +583,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_palette.p3d";
 		picture = "\breakingpoint\textures\icons\bp_palette_ca.paa";
 		descriptionShort = "Traditional wooden palette that can be used to build various storage containers.";
-		mass = 25;
+		mass = 30;
 	};
 
 	class PartWheel : BP_Magazine {
@@ -595,7 +595,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_tire.p3d";
 		picture = "\breakingpoint\textures\icons\bp_tire_ca.paa";
 		descriptionShort = $STR_EQUIP_DESC_9;
-		mass = 111;
+		mass = 101;
 	};
 	
 	class ItemLubricant : BP_Magazine {
@@ -643,7 +643,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_fuelhose.p3d";
 		picture = "\breakingpoint\textures\icons\bp_fuelhose_ca.paa";
 		descriptionShort = "";
-		mass = 45;
+		mass = 30;
 	};
 
 	class ItemBattery : BP_Magazine {
@@ -655,7 +655,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_battery.p3d";
 		picture = "\breakingpoint\textures\icons\bp_battery_ca.paa";
 		descriptionShort = "";
-		mass = 25;
+		mass = 30;
 	};
 
 	class ItemEngineCoolant : BP_Magazine {
@@ -679,7 +679,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_hydraulic.p3d";
 		picture = "\breakingpoint\textures\icons\bp_hydraulic_ca.paa";
 		descriptionShort = "";
-		mass = 75;
+		mass = 65;
 	};
 
 	class PartGlass : BP_Magazine {
@@ -802,7 +802,7 @@ class CfgMagazines
 		descriptionShort = "High quality nails that can be used to hold together wooden pallets.";
 		model = "\breakingpoint\models\bp_nails.p3d";
 		picture = "\breakingpoint\textures\icons\bp_nails_ca.paa";
-		mass = 5;
+		mass = 10;
 	};
 
 	class ItemBlueprint : BP_Magazine {

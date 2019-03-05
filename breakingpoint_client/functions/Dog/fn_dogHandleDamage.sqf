@@ -36,7 +36,6 @@ if (isNil "_blood") then {
 };
 
 // Self Damage
-if (_ammo == "") exitWith {0};
 if (_selfDamage) exitWith {0};
 
 // Non-Lethal Rounds

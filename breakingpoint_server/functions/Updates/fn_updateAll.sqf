@@ -14,5 +14,5 @@ scriptName "BP_fnc_updateAll";
 BP_Cleanup_lastSync = diag_tickTime;
 
 //Time Sync
-//call BPServer_fnc_updateTime;
+call BPServer_fnc_updateTime;
 call BPServer_fnc_updateTraps;
