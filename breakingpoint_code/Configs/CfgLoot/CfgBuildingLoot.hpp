@@ -1853,8 +1853,8 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"Human_Trap_Mag","magazine"},
-			{"FoodRabbitCooked","magazine"},
+			{"BP_P90TR_BASE","weaponA"},
+			{"BP_P90C_BASE","weaponA"},
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
@@ -1862,8 +1862,8 @@ class CfgBuildingLoot
 			0.01,    //Chestrig_blk
 			0.01,    //R7Sup
 			0.01,    //CZSup
-			0.75,    //MeatPlayerCooked
-			0.15,    //MeatRabbitCooked
+			0.65,    //MeatPlayerCooked
+			0.25,    //MeatRabbitCooked
 			0.15    //Mushroom
 		};
 	};

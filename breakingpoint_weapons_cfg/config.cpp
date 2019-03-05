@@ -55549,7 +55549,7 @@ class CfgAmmo {
 	class G_40mm_HE;
 	class SmokeShell;
 	class B_570x28_Ball;
-
+	
 	class BP_P90_570x28_Ball: B_570x28_Ball
 	{
 		caliber = 0.559441;
