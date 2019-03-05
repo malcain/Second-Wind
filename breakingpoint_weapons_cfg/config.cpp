@@ -50689,10 +50689,10 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			mass = 40;
 		};
 	};
-	class BP_P90TR_camo: BP_P90TR_black
+	class BP_P90CTR_camo: BP_P90TR_black
 	{
 		author = "$STR_A3_Bohemia_Interactive";
-		_generalMacro = "BP_P90TR_camo";
+		_generalMacro = "BP_P90CTR_camo";
 		displayName = "$STR_A3_CfgWeapons_SMG_03C_TR_camo0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_c_tr_camo_ca.paa";
 		hiddenSelections[] = {"camo"};
