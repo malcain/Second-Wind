@@ -55130,6 +55130,7 @@ class CfgAmmo {
 	class G_40mm_HE;
 	class SmokeShell;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	class B_570x28_Ball;
 	
 	class BP_P90_570x28_Ball: B_570x28_Ball
@@ -55180,6 +55181,8 @@ class CfgAmmo {
 			scale = 0;
 		};
 	};
+=======
+>>>>>>> parent of 7e20e4d... P90 Variants Added (Need Scopes Tests!)
 =======
 >>>>>>> parent of 7e20e4d... P90 Variants Added (Need Scopes Tests!)
 
