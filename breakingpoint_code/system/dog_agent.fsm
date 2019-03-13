@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Breaking Point Dog Agent">*/
+/*%FSM<COMPILE "D:\Games\Steam\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Breaking Point Dog Agent">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,27.961334,-187.167725,127.961327,-137.167725,0.000000,"init"};
@@ -64,7 +64,7 @@ item59[] = {"no_target",4,218,484.822876,-27.112068,584.822998,22.887932,4.00000
 item60[] = {"commanded",4,218,509.822876,-77.112068,609.822998,-27.112068,0.000000,"commanded"};
 item61[] = {"Tracking",2,250,434.822937,-152.112045,534.822998,-102.112068,0.000000,"Tracking"};
 item62[] = {"at_target",4,218,609.822998,-152.112045,709.822998,-102.112068,1.000000,"at target"};
-item63[] = {"Stop_1",2,250,609.822998,-27.112068,709.822998,22.887932,0.000000,"Stop"};
+item63[] = {"Stop_1",2,4346,609.822998,-27.112068,709.822998,22.887932,0.000000,"Stop"};
 item64[] = {"reorientate",4,218,309.822937,-152.112045,409.822937,-102.112068,0.000000,"reorientate"};
 version=1;
 class LayoutItems
@@ -177,514 +177,548 @@ link70[] = {61,64};
 link71[] = {62,63};
 link72[] = {63,13};
 link73[] = {64,61};
-globals[] = {0.000000,0,0,0,0,640,480,1,578,6316128,1,-117.300667,999.988770,617.891907,-150.923584,1337,920,1};
-window[] = {2,-1,-1,-1,-1,870,208,1168,208,3,1355};
+globals[] = {0.000000,0,0,0,0,640,480,1,578,6316128,1,-54.787109,1040.269531,660.349426,-47.300720,1337,864,1};
+window[] = {2,-1,-1,-1,-1,714,52,1012,52,3,1355};
 *//*%FSM</HEAD>*/
 class FSM
 {
-  fsmName = "Breaking Point Dog Agent";
-  class States
-  {
-    /*%FSM<STATE "init">*/
-    class init
-    {
-      name = "init";
-      init = /*%FSM<STATEINIT""">*/"params [""_dog"",""_type""];" \n
-       "" \n
-       "_command = ""none"";" \n
-       "_forceWalk = false;" \n
-       "_target = objNull;" \n
-       "_attackTarget = objNull;" \n
-       "_animation = ""Default"";" \n
-       "" \n
-       "_blood = 8000;" \n
-       "_hunger = 0;" \n
-       "_thrist = 0;" \n
-       "" \n
-       "_combatTime = diag_tickTime;" \n
-       "_waitTime = diag_tickTime;" \n
-       "" \n
-       "" \n
-       "" \n
-       "_standing = true;" \n
-       "_maxSpeed = 2;" \n
-       "_maxSpeedInit = _maxSpeed;" \n
-       "_forceChange = false;" \n
-       "_staySkill = 30;" \n
-       "_senseSkill = 300;	//x3 for tracking?" \n
-       "_target setVariable ['forceWalk',false];" \n
-       "_pos = position _dog;" \n
-       "_lastPos = _pos;" \n
-       "_move = """";" \n
-       "_movePos = [];" \n
-       "_watchDog = true;" \n
-       "_idlediag_tickTime = 5;" \n
-       "_coolDown = 0;" \n
-       "_actionLieDown = false;" \n
-       "_stayPosition = getPosATL _dog;" \n
-       "_character = player;" \n
-       "" \n
-       "_speedVal = [1,8,-1,60];" \n
-       "" \n
-       "_dog setVariable [""state"", ""passive"", true];" \n
-       "_dog setVariable [""currentSpeed"", _maxSpeed];" \n
-       "" \n
-       "//aggressive = 2" \n
-       "//defensive = 1" \n
-       "//passive = 0"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "preloaded">*/
-        class preloaded
+        fsmName = "Breaking Point Dog Agent";
+        class States
         {
-          priority = 0.000000;
-          to="action_init";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"BP_clientPreload and (_dog getVariable [""created"",false])"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"params [""_dog"",""_type""];" \n
+                         "" \n
+                         "_command = ""none"";" \n
+                         "_forceWalk = false;" \n
+                         "_target = objNull;" \n
+                         "_attackTarget = objNull;" \n
+                         "_animation = ""Default"";" \n
+                         "" \n
+                         "_blood = 8000;" \n
+                         "_hunger = 0;" \n
+                         "_thrist = 0;" \n
+                         "" \n
+                         "_combatTime = diag_tickTime;" \n
+                         "_waitTime = diag_tickTime;" \n
+                         "" \n
+                         "" \n
+                         "" \n
+                         "_standing = true;" \n
+                         "_maxSpeed = 2;" \n
+                         "_maxSpeedInit = _maxSpeed;" \n
+                         "_forceChange = false;" \n
+                         "_staySkill = 30;" \n
+                         "_senseSkill = 300;	//x3 for tracking?" \n
+                         "_target setVariable ['forceWalk',false];" \n
+                         "_pos = position _dog;" \n
+                         "_lastPos = _pos;" \n
+                         "_move = """";" \n
+                         "_movePos = [];" \n
+                         "_watchDog = true;" \n
+                         "_idlediag_tickTime = 5;" \n
+                         "_coolDown = 0;" \n
+                         "_actionLieDown = false;" \n
+                         "_stayPosition = getPosATL _dog;" \n
+                         "_character = player;" \n
+                         "" \n
+                         "_speedVal = [1,8,-1,60];" \n
+                         "" \n
+                         "_dog setVariable [""state"", ""passive"", true];" \n
+                         "_dog setVariable [""currentSpeed"", _maxSpeed];" \n
+                         "" \n
+                         "//aggressive = 2" \n
+                         "//defensive = 1" \n
+                         "//passive = 0"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "preloaded">*/
+                                class preloaded
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="action_init";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"BP_clientPreload and (_dog getVariable [""created"",false])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "action_init">*/
+                class action_init
+                {
+                        name = "action_init";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"_heartbeat = [_dog,_thisFSM] spawn" \n
+                         "{" \n
+                         "	params [""_dog"",""_handle""];" \n
+                         "" \n
+                         "	sleep 2;" \n
+                         "	" \n
+                         "	_lastAnimation = ""Stop"";" \n
+                         "" \n
+                         "	while {alive _dog} do" \n
+                         "	{" \n
+                         "		_hunger = _handle getFSMVariable ""_hunger"";" \n
+                         "		_thirst = _handle getFSMVariable ""_thirst"";" \n
+                         "		_blood = _handle getFSMVariable ""_blood""; " \n
+                         "		_zombieKills = _handle getFSMVariable ""_zombieKills""; " \n
+                         "		_playerKills = _handle getFSMVariable ""_playerKills""; " \n
+                         "		_animation = _handle getFSMVariable ""_animation""; " \n
+                         "" \n
+                         "		if (_blood <= 0) then { _dog setHitPointDamage [""HitHead"", 1]; };" \n
+                         "		" \n
+                         "		if (_animation != _lastAnimation) then" \n
+                         "		{" \n
+                         "			_dog playActionNow _animation;" \n
+                         "			_lastAnimation = _animation;" \n
+                         "		};" \n
+                         "		" \n
+                         "		sleep 0.5;" \n
+                         "	};" \n
+                         "};"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Waiting";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Waiting">*/
+                class Waiting
+                {
+                        name = "Waiting";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 6;
+                                        priority = 10.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "master_follow">*/
+                                class master_follow
+                                {
+                                        itemno = 55;
+                                        priority = 5.000000;
+                                        to="Moving";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((_command == ""none"" or _command == ""return"") and ((vehicle player) distance _dog > 3))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "combat">*/
+                                class combat
+                                {
+                                        itemno = 39;
+                                        priority = 2.000000;
+                                        to="Checking";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_combat > 0 and ((diag_tickTime - _combatTime) >1.5)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Waiting";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "track_animal">*/
+                                class track_animal
+                                {
+                                        itemno = 56;
+                                        priority = 0.000000;
+                                        to="Checking_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_command == ""trackAnimal"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/"terminate _heartbeat;" \n
+                         "player setVariable [""dogID"", 0];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Moving">*/
+                class Moving
+                {
+                        name = "Moving";
+                        itemno = 34;
+                        init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL player), ""LEADER PLANNED"", false];" \n
+                         "_dog setSpeedMode ""FULL"";" \n
+                         "_waitTime = diag_tickTime;" \n
+                         "_animation = ""FastF"";"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Waiting";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Checking">*/
+                class Checking
+                {
+                        name = "Checking";
+                        itemno = 40;
+                        init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
+                         "_attackTarget = [_dog,_combat] call BP_fnc_dogFindTargetAgent;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "no_target">*/
+                                class no_target
+                                {
+                                        itemno = 42;
+                                        priority = 4.000000;
+                                        to="Stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isNull _attackTarget"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "has_target">*/
+                                class has_target
+                                {
+                                        itemno = 41;
+                                        priority = 1.000000;
+                                        to="Chase";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull _attackTarget and (alive _attackTarget)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
+                                         "_dog enableAI ""MOVE"";" \n
+                                         "//_dog playMoveNow ""Dog_StopV2"";" \n
+                                         "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Chase">*/
+                class Chase
+                {
+                        name = "Chase";
+                        itemno = 44;
+                        init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL _attackTarget), ""LEADER PLANNED"", false];" \n
+                         "_dog forceSpeed (_speedVal select _maxSpeed);" \n
+                         "_forceChange = false;" \n
+                         "_waitTime = diag_tickTime;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "dead">*/
+                                class dead
+                                {
+                                        itemno = 52;
+                                        priority = 9.000000;
+                                        to="Stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+                                         "_lostTarget = true;" \n
+                                         "detach _dog;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "close">*/
+                                class close
+                                {
+                                        itemno = 45;
+                                        priority = 1.000000;
+                                        to="Chase";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(((diag_tickTime - _combatTime) > 0.75) and (_dog distance _attackTarget < 2))"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;" \n
+                                         "" \n
+                                         "_dog doTarget _attackTarget;" \n
+                                         "_dog lookAt _attackTarget;" \n
+                                         "_dir = [_dog,_attackTarget] call BIS_fnc_dirTo;" \n
+                                         "_dog setDir _dir;" \n
+                                         "" \n
+                                         "if (isPlayer _attackTarget) then" \n
+                                         "{" \n
+                                         "	[""medBite"",(netID _attackTarget),(netID player)] remoteExecCall [""BPServer_fnc_medicalUpdate"",2];" \n
+                                         "} else {" \n
+                                         "	_attackTarget setDamage ( damage _attackTarget + 0.35);" \n
+                                         "	_attackTarget sethit [""legs"", 1];" \n
+                                         "	//_dog attachTo [_attackTarget,[0,0.8,0],""hrudnik""];" \n
+                                         "	//_dog setDir 180;" \n
+                                         "};" \n
+                                         "" \n
+                                         "_dog setVelocity [0, 0, 2.5];" \n
+                                         "_dog playActionNow ""BP_Dog_Act_Attack1"";" \n
+                                         "[_dog,""dog_bite"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "target_dead">*/
+                                class target_dead
+                                {
+                                        itemno = 49;
+                                        priority = 0.000000;
+                                        to="Stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _attackTarget)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+                                         "_lostTarget = true;" \n
+                                         "detach _dog;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "commanded">*/
+                                class commanded
+                                {
+                                        itemno = 51;
+                                        priority = 0.000000;
+                                        to="Stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_combat < 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+                                         "_lostTarget = true;" \n
+                                         "detach _dog;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "target_lost">*/
+                                class target_lost
+                                {
+                                        itemno = 48;
+                                        priority = 0.000000;
+                                        to="Stop";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(isNull _attackTarget)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
+                                         "_lostTarget = true;" \n
+                                         "detach _dog;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "reorientate">*/
+                                class reorientate
+                                {
+                                        itemno = 47;
+                                        priority = 0.000000;
+                                        to="Chase";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 1)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
+                                         "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
+                                         "};"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Stop">*/
+                class Stop
+                {
+                        name = "Stop";
+                        itemno = 46;
+                        init = /*%FSM<STATEINIT""">*/"_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Waiting";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Checking_1">*/
+                class Checking_1
+                {
+                        name = "Checking_1";
+                        itemno = 57;
+                        init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
+                         "" \n
+                         "_list = (position _dog) nearEntities [""Animal"",(_senseSkill * 3)];" \n
+                         "_list = _list - [_dog];" \n
+                         "" \n
+                         "if (count _list > 0) then {" \n
+                         "	_target = _list select 0;" \n
+                         "} else {" \n
+                         "	_target = objNull;" \n
+                         "};" \n
+                         "" \n
+                         "_dog playActionNow ""GestureSniff"";" \n
+                         "_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "no_target">*/
+                                class no_target
+                                {
+                                        itemno = 59;
+                                        priority = 4.000000;
+                                        to="Stop_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_command = ""none"";" \n
+                                         "" \n
+                                         "_dog playMoveNow ""Dog_StopV2"";" \n
+                                         "[_dog,""dog_fail"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "has_target">*/
+                                class has_target
+                                {
+                                        itemno = 58;
+                                        priority = 1.000000;
+                                        to="Tracking";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
+                                         "" \n
+                                         "_dog playMoveNow ""Dog_StopV2"";" \n
+                                         "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Tracking">*/
+                class Tracking
+                {
+                        name = "Tracking";
+                        itemno = 61;
+                        init = /*%FSM<STATEINIT""">*/"//_pos = [(getPos _target),1,2,4,0,5,0] call BIS_fnc_findSafePos;" \n
+                         "_dog setDestination [(getPosATL _target), ""LEADER PLANNED"", false];" \n
+                         "_dog forceSpeed (_speedVal select _maxSpeed);" \n
+                         "_forceChange = false;" \n
+                         "_waitTime = diag_tickTime;" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "at_target">*/
+                                class at_target
+                                {
+                                        itemno = 62;
+                                        priority = 1.000000;
+                                        to="Stop_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_dog distance _target < 5"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"_dog playActionNow ""GestureBark"";" \n
+                                         "[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "reorientate">*/
+                                class reorientate
+                                {
+                                        itemno = 64;
+                                        priority = 0.000000;
+                                        to="Tracking";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 5)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
+                                         "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
+                                         "};"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "commanded">*/
+                                class commanded
+                                {
+                                        itemno = 60;
+                                        priority = 0.000000;
+                                        to="Stop_1";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_command != ""trackAnimal"""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"if (_command == ""return"") then {" \n
+                                         "	if (player distance _dog > 5) then {" \n
+                                         "		_dog playActionNow ""GestureBark"";" \n
+                                         "		[_dog,""dog_bark"",0,false] call BP_fnc_objSpeak;" \n
+                                         "	};" \n
+                                         "};"/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Stop_1">*/
+                class Stop_1
+                {
+                        name = "Stop_1";
+                        itemno = 63;
+                        init = /*%FSM<STATEINIT""">*/"//_command = ""return"";" \n
+                         "_waitTime = diag_tickTime;" \n
+                         "_standing = true;" \n
+                         "_actionLieDown = false;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Waiting";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "action_init">*/
-    class action_init
-    {
-      name = "action_init";
-      init = /*%FSM<STATEINIT""">*/"_heartbeat = [_dog,_thisFSM] spawn" \n
-       "{" \n
-       "	params [""_dog"",""_handle""];" \n
-       "" \n
-       "	sleep 2;" \n
-       "	" \n
-       "	_lastAnimation = ""Stop"";" \n
-       "" \n
-       "	while {alive _dog} do" \n
-       "	{" \n
-       "		_hunger = _handle getFSMVariable ""_hunger"";" \n
-       "		_thirst = _handle getFSMVariable ""_thirst"";" \n
-       "		_blood = _handle getFSMVariable ""_blood""; " \n
-       "		_zombieKills = _handle getFSMVariable ""_zombieKills""; " \n
-       "		_playerKills = _handle getFSMVariable ""_playerKills""; " \n
-       "		_animation = _handle getFSMVariable ""_animation""; " \n
-       "" \n
-       "		if (_blood <= 0) then { _dog setHitPointDamage [""HitHead"", 1]; };" \n
-       "		" \n
-       "		if (_animation != _lastAnimation) then" \n
-       "		{" \n
-       "			_dog playActionNow _animation;" \n
-       "			_lastAnimation = _animation;" \n
-       "		};" \n
-       "		" \n
-       "		sleep 0.5;" \n
-       "	};" \n
-       "};"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
+        initState="init";
+        finalStates[] =
         {
-          priority = 0.000000;
-          to="Waiting";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                "End",
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Waiting">*/
-    class Waiting
-    {
-      name = "Waiting";
-      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "dead">*/
-        class dead
-        {
-          priority = 10.000000;
-          to="End";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "master_follow">*/
-        class master_follow
-        {
-          priority = 5.000000;
-          to="Moving";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((_command == ""none"" or _command == ""return"") and ((vehicle player) distance _dog > 3))"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "combat">*/
-        class combat
-        {
-          priority = 2.000000;
-          to="Checking";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_combat > 0 and ((diag_tickTime - _combatTime) >1.5)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "true">*/
-        class true
-        {
-          priority = 0.000000;
-          to="Waiting";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "track_animal">*/
-        class track_animal
-        {
-          priority = 0.000000;
-          to="Checking_1";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_command == ""trackAnimal"""/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "End">*/
-    class End
-    {
-      name = "End";
-      init = /*%FSM<STATEINIT""">*/"terminate _heartbeat;" \n
-       "player setVariable [""dogID"", 0];"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Moving">*/
-    class Moving
-    {
-      name = "Moving";
-      init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL player), ""LEADER PLANNED"", false];" \n
-       "_dog setSpeedMode ""FULL"";" \n
-       "_waitTime = diag_tickTime;" \n
-       "_animation = ""FastF"";"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
-        {
-          priority = 0.000000;
-          to="Waiting";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Checking">*/
-    class Checking
-    {
-      name = "Checking";
-      init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
-       "_attackTarget = [_dog,_combat] call BP_fnc_dogFindTargetAgent;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "no_target">*/
-        class no_target
-        {
-          priority = 4.000000;
-          to="Stop";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"isNull _attackTarget"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "has_target">*/
-        class has_target
-        {
-          priority = 1.000000;
-          to="Chase";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!isNull _attackTarget and (alive _attackTarget)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
-           "_dog enableAI ""MOVE"";" \n
-           "//_dog playMoveNow ""Dog_StopV2"";" \n
-           "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Chase">*/
-    class Chase
-    {
-      name = "Chase";
-      init = /*%FSM<STATEINIT""">*/"_dog setDestination [(getPosATL _attackTarget), ""LEADER PLANNED"", false];" \n
-       "_dog forceSpeed (_speedVal select _maxSpeed);" \n
-       "_forceChange = false;" \n
-       "_waitTime = diag_tickTime;" \n
-       ""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "dead">*/
-        class dead
-        {
-          priority = 9.000000;
-          to="Stop";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
-           "_lostTarget = true;" \n
-           "detach _dog;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "close">*/
-        class close
-        {
-          priority = 1.000000;
-          to="Chase";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(((diag_tickTime - _combatTime) > 0.75) and (_dog distance _attackTarget < 2))"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;" \n
-           "" \n
-           "_dog doTarget _attackTarget;" \n
-           "_dog lookAt _attackTarget;" \n
-           "_dir = [_dog,_attackTarget] call BIS_fnc_dirTo;" \n
-           "_dog setDir _dir;" \n
-           "" \n
-           "if (isPlayer _attackTarget) then" \n
-           "{" \n
-           "	[""medBite"",(netID _attackTarget),(netID player)] remoteExecCall [""BPServer_fnc_medicalUpdate"",2];" \n
-           "} else {" \n
-           "	_attackTarget setDamage ( damage _attackTarget + 0.35);" \n
-           "	_attackTarget sethit [""legs"", 1];" \n
-           "	//_dog attachTo [_attackTarget,[0,0.8,0],""hrudnik""];" \n
-           "	//_dog setDir 180;" \n
-           "};" \n
-           "" \n
-           "_dog setVelocity [0, 0, 2.5];" \n
-           "_dog playActionNow ""BP_Dog_Act_Attack1"";" \n
-           "[_dog,""dog_bite"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "target_dead">*/
-        class target_dead
-        {
-          priority = 0.000000;
-          to="Stop";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!(alive _attackTarget)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
-           "_lostTarget = true;" \n
-           "detach _dog;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "commanded">*/
-        class commanded
-        {
-          priority = 0.000000;
-          to="Stop";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_combat < 1"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
-           "_lostTarget = true;" \n
-           "detach _dog;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "target_lost">*/
-        class target_lost
-        {
-          priority = 0.000000;
-          to="Stop";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(isNull _attackTarget)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_attackTarget = objNull;" \n
-           "_lostTarget = true;" \n
-           "detach _dog;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "reorientate">*/
-        class reorientate
-        {
-          priority = 0.000000;
-          to="Chase";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 1)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
-           "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
-           "};"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Stop">*/
-    class Stop
-    {
-      name = "Stop";
-      init = /*%FSM<STATEINIT""">*/"_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
-        {
-          priority = 0.000000;
-          to="Waiting";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Checking_1">*/
-    class Checking_1
-    {
-      name = "Checking_1";
-      init = /*%FSM<STATEINIT""">*/"_lastPos = position _dog;" \n
-       "" \n
-       "_list = (position _dog) nearEntities [""Animal"",(_senseSkill * 3)];" \n
-       "_list = _list - [_dog];" \n
-       "" \n
-       "if (count _list > 0) then {" \n
-       "	_target = _list select 0;" \n
-       "} else {" \n
-       "	_target = objNull;" \n
-       "};" \n
-       "" \n
-       "_dog playActionNow ""GestureSniff"";" \n
-       "_waitTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "no_target">*/
-        class no_target
-        {
-          priority = 4.000000;
-          to="Stop_1";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_command = ""none"";" \n
-           "" \n
-           "_dog playMoveNow ""Dog_StopV2"";" \n
-           "[_dog,""dog_fail"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "has_target">*/
-        class has_target
-        {
-          priority = 1.000000;
-          to="Tracking";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!isNull _target and ((diag_tickTime - _waitTime) > 2)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_lastPos = position _dog;" \n
-           "" \n
-           "_dog playMoveNow ""Dog_StopV2"";" \n
-           "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Tracking">*/
-    class Tracking
-    {
-      name = "Tracking";
-      init = /*%FSM<STATEINIT""">*/"//_pos = [(getPos _target),1,2,4,0,5,0] call BIS_fnc_findSafePos;" \n
-       "_dog setDestination [(getPosATL _target), ""LEADER PLANNED"", false];" \n
-       "_dog forceSpeed (_speedVal select _maxSpeed);" \n
-       "_forceChange = false;" \n
-       "_waitTime = diag_tickTime;" \n
-       ""/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "at_target">*/
-        class at_target
-        {
-          priority = 1.000000;
-          to="Stop_1";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_dog distance _target < 5"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_dog playActionNow ""GestureBark"";" \n
-           "[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "reorientate">*/
-        class reorientate
-        {
-          priority = 0.000000;
-          to="Tracking";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 5)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
-           "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
-           "};"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "commanded">*/
-        class commanded
-        {
-          priority = 0.000000;
-          to="Stop_1";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"_command != ""trackAnimal"""/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"if (_command == ""return"") then {" \n
-           "	if (player distance _dog > 5) then {" \n
-           "		_dog playActionNow ""GestureBark"";" \n
-           "		[_dog,""dog_bark"",0,false] call BP_fnc_objSpeak;" \n
-           "	};" \n
-           "};"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Stop_1">*/
-    class Stop_1
-    {
-      name = "Stop_1";
-      init = /*%FSM<STATEINIT""">*/"_command = ""return"";" \n
-       "_waitTime = diag_tickTime;" \n
-       "_standing = true;" \n
-       "_actionLieDown = false;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
-        {
-          priority = 0.000000;
-          to="Waiting";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-  };
-  initState="init";
-  finalStates[] =
-  {
-    "End",
-  };
 };
 /*%FSM</COMPILE>*/
