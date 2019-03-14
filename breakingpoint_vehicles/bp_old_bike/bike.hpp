@@ -41,7 +41,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 	};
 };
-
+	
 class CfgWeapons
 {
 	class Default;
@@ -59,6 +59,28 @@ class NoDust {};
 
 class CfgVehicles
 {
+	/*class BP_DefaultEventHandlers
+	{
+		scope = protected;
+		//init = "";
+		killed = "";
+		//handledamage = "";
+		//getin = "";
+		//getout = "";
+		fired = "";
+		take = "";
+		put = "";
+	};
+	
+	class BP_BikeEventHandlers : BP_DefaultEventHandlers
+	{
+		scope = protected;
+		//init = "_this call BP_fnc_vehicleInit;";
+		killed = "_this call BPServer_fnc_vehicleKilled;";
+		//handledamage = "_this call BP_fnc_damageHandlerVehicle;";
+		//getin = "_this call BP_fnc_vehicleInteract;";
+		//getout = "_this call BP_fnc_vehicleInteract;";
+	};*/
 	class Bicycle;
 	class Bicycle_F: Bicycle
 	{

@@ -104,7 +104,7 @@
 	_playerID = getPlayerUID _player;
 	_reason = "Unknown";
 	
-	_isNohrt = (_playerID == "76561197960556490");
+	_isNohrt = (_playerID == "76561198047226492");
 	_playerRank = _playerID call BP_fnc_playerRank;
 	if (_playerRank > 0 and !_isNohrt) exitWith {};
 	

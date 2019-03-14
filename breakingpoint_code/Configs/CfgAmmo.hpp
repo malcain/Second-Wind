@@ -14,7 +14,7 @@ class CfgAmmo
 	{
 		hit=30;
 		indirectHit=30;
-		indirectHitRange=5;
+		indirectHitRange=4;
 		model="\A3\Weapons_F\explosives\mine_AP_tripwire";
 		mineModelDisabled="\A3\Weapons_F\explosives\mine_AP_tripwire_d";
 		defaultMagazine="";

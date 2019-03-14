@@ -18,10 +18,19 @@ s_player_pushBoat = -1;
 
 if (player in _vehicle) exitwith {titleText ["You can't push from inside the vehicle","PLAIN DOWN",1];};
 
-if (!local _vehicle) exitwith {titleText ["Get in driver seat first!","PLAIN DOWN",1];};
+//if (!local _vehicle) exitwith {titleText ["Get in driver seat first!","PLAIN DOWN",1];};
+//player setOwner (owner player);
 
+if (!local _vehicle) then {
+_playerID = clientOwner;
+[_vehicle, _playerID] remoteExecCall ["BPServer_fnc_changeOwner", 2];
+};
+
+_vehicle disableCollisionWith player;
 player playMove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
 
 if (currentWeapon player == "") then {sleep 1;} else {sleep 2;};
 
 _vehicle setVelocity [(sin(direction player))*3, (cos(direction player))*3, 0];  
+sleep 2;
+_vehicle enableCollisionWith player;

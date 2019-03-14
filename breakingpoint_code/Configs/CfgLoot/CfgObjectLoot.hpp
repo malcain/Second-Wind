@@ -1843,9 +1843,9 @@ class CfgObjectLoot {
 			{"BP_M24DES","weaponA"},
 			{"BP_M4_300","weaponA"},
 			{"BP_AK74U","weapon"},
-			{"BP_M16a4","weapon"},
-			{"BP_SUD_AK108","weaponA"},
-			{"BP_SUD_AK109","weaponA"}
+			{"BP_M16a4","weapon"}
+			//{"BP_SUD_AK108","weaponA"},
+			//{"BP_SUD_AK109","weaponA"}
 		};
 		itemChance[] =	{
 			0.03,   //M4_300MK
@@ -1861,9 +1861,9 @@ class CfgObjectLoot {
 			0.01,   //M24 DESERT
 			0.02,	//AR15 OLD
 			0.25,	//AKS74U
-			0.17,   //M16A2
-			0.08,	//SUD_AK108
-			0.08	//SUD_AK109
+			0.17   //M16A2
+			//0.08,	//SUD_AK108
+			//0.08	//SUD_AK109
 		};
 	};
 	
@@ -1997,9 +1997,9 @@ class CfgObjectLoot {
 			{"BP_M4_300k","weapon"},
 			{"BP_AK74U","weapon"},
 			{"BP_SVT40","weaponA"},
-			{"BP_M16OLD","weapon"},
-			{"BP_SUD_AK108","weaponA"},
-			{"BP_SUD_AK109","weaponA"}			
+			{"BP_M16OLD","weapon"}
+			//{"BP_SUD_AK108","weaponA"},
+			//{"BP_SUD_AK109","weaponA"}			
 		};
 		itemChance[] =	{
 			0.01,	//M4_300MK
@@ -2020,9 +2020,9 @@ class CfgObjectLoot {
 			0.02,   //M4300K
 			0.25,	//AKS74U
 			0.02,	//SVT40 PSO
-			0.07,    //AR15
-			0.04,	//AK108
-			0.02	//AK109
+			0.07    //AR15
+			//0.04,	//AK108
+			//0.02	//AK109
 		};
 	};
 	

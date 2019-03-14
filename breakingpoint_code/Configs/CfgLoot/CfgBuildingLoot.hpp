@@ -981,8 +981,8 @@ class CfgBuildingLoot
 			{"BP_AK74U","weapon"},
 			{"BP_SVT40","weaponA"},
 			{"BP_M16OLD","weapon"},
-			{"BP_SUD_AK108","weaponA"},
-			{"BP_SUD_AK109","weaponA"},
+			//{"BP_SUD_AK108","weaponA"},
+			//{"BP_SUD_AK109","weaponA"},
 			{"optic_Aco","toolbelt"},
 			{"optic_mrco","toolbelt"},
 			{"Binocular","weaponNA"},
@@ -1048,8 +1048,8 @@ class CfgBuildingLoot
 			0.02,	//AKS74U
 			0.02,	//SVT40 PSO
 			0.02,    //AR15
-			0.02,	//AK108
-			0.02,	//AK109
+			//0.02,	//AK108
+			//0.02,	//AK109
 			0.02,	//ACO OPTIC
 			0.01,	//HAMR OPTIC
 			0.01,	//BINOCULARS

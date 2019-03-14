@@ -55763,10 +55763,10 @@ class CfgAmmo {
 
 	class BP_Arrow_Ball_Rambo: GrenadeBase
 	{
-		hit = 45;
+		hit = 37;
 		timeToLive = 30;
 		cost = 1;
-		indirectHit = 45;
+		indirectHit = 34;
 		indirectHitRange = 4;
 		cartridge = "";
 		typicalSpeed = 290;
@@ -61007,6 +61007,7 @@ class CfgAmmo {
 			frequency = 20;
 		};
 	};
+	
 
 	class BP_40mm_HE: GrenadeBase
 	{
@@ -61020,9 +61021,9 @@ class CfgAmmo {
 		explosionSoundEffect = "DefaultExplosion";
 		simulation = "shotShell";
 		model = "\A3\weapons_f\ammo\UGL_slug";
-		hit = 37;
-		indirectHit = 12;
-		indirectHitRange = 5;
+		hit = 47;
+		indirectHit = 45;
+		indirectHitRange = 4;
 		visibleFire = 1;
 		audibleFire = 3;
 		visibleFireTime = 3;
@@ -61030,7 +61031,7 @@ class CfgAmmo {
 		cost = 10;
 		deflecting = 5;
 		airFriction = -0.001000;
-		fuseDistance = 15;
+		fuseDistance = 10;
 		whistleDist = 16;
 		typicalSpeed = 185;
 		caliber = 2;
@@ -61095,7 +61096,7 @@ class CfgAmmo {
 	{
 		hit = 50;
 		indirectHit = 20;
-		indirectHitRange = 20;
+		indirectHitRange = 10;
 		audibleFire = 50;
 		model = "\A3\Weapons_F\explosives\IED_urban_small.p3d";
 		modelModelDisabled = "\A3\Weapons_F\explosives\IED_urban_small.p3d";

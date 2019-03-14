@@ -291,6 +291,9 @@
 				class Hunter {
 					storage = 50;
 				};
+				class None {
+					storage = 40;
+				};
 			};
 			class Hunt
 			{
@@ -334,7 +337,7 @@
 					Level_1 = 25;
 					Level_2 = 50;
 					Level_3 = 100;
-					Level_4 = 125;
+					Level_4 = 150;
 				};
 				class Outlaw {
 					Level_0 = 25;
@@ -348,7 +351,7 @@
 					Level_1 = 25;
 					Level_2 = 50;
 					Level_3 = 100;
-					Level_4 = 125;
+					Level_4 = 150;
 				};
 				class Nomad {
 					Level_0 = 25;

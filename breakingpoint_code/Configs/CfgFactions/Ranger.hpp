@@ -226,34 +226,34 @@ class Ranger : BP_BaseFaction
 				bandage = -10;
 				dressing = -20;
 				morphine = -20;
-				surgery = -50;
+				surgery = -75;
 				gut = 0;
 			};
 			class Ranger {
 				food = 10;
 				drink = 10;
 				bandage = 10;
-				dressing = 10;
-				morphine = 25;
-				surgery = 50;
-				gut = -3000;
+				dressing = 15;
+				morphine = 15;
+				surgery = 30;
+				gut = -2500;
 			};
 			class Nomad {
 				food = 10;
 				drink = 10;
 				bandage = 10;
-				dressing = 10;
-				morphine = 25;
-				surgery = 50;
+				dressing = 15;
+				morphine = 15;
+				surgery = 30;
 				gut = -1000;
 			};
 			class Survivalist {
-				food = 15;
-				drink = 15;
-				bandage = 15;
-				dressing = 20;
-				morphine = 35;
-				surgery = 50;
+				food = 10;
+				drink = 10;
+				bandage = 10;
+				dressing = 15;
+				morphine = 15;
+				surgery = 30;
 				gut = -1000;
 			};
 			class Outlaw {
@@ -276,7 +276,7 @@ class Ranger : BP_BaseFaction
 			};
 		};
 		class Destroy {
-			vehicle = 25;
+			vehicle = 10;
 			class scavenger {
 				storage = 50;
 			};
@@ -294,6 +294,9 @@ class Ranger : BP_BaseFaction
 			};
 			class Hunter {
 				storage = 50;
+			};
+			class None {
+					storage = 40;
 			};
 		};
 		class Hunt
@@ -327,14 +330,14 @@ class Ranger : BP_BaseFaction
 		};
 		class Kill {
 			class scavenger {
-				Level_0 = 50;
-				Level_1 = 50;
-				Level_2 = 100;
+				Level_0 = 25;
+				Level_1 = 25;
+				Level_2 = 75;
 				Level_3 = 150;
-				Level_4 = 200;
+				Level_4 = 150;
 			};
 			class Ranger {
-				Level_0 = 500;
+				Level_0 = 150;
 				Level_1 = -1000;
 				Level_2 = -2000;
 				Level_3 = -3000;
@@ -348,11 +351,11 @@ class Ranger : BP_BaseFaction
 				Level_4 = 200;
 			};
 			class Hunter {
-				Level_0 = 100;
-				Level_1 = 100;
-				Level_2 = 200;
-				Level_3 = 350;
-				Level_4 = 500;
+				Level_0 = 75;
+				Level_1 = 75;
+				Level_2 = 125;
+				Level_3 = 175;
+				Level_4 = 250;
 			};
 			class Nomad {
 				Level_0 = 100;

@@ -6094,28 +6094,28 @@ class CfgVehicles
 				passThrough = 0;
 			};
 			class HitLFWheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_1_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRFWheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_2_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRF2Wheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_2_2_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitLF2Wheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_1_2_steering";
 				visual = "";
@@ -6169,28 +6169,28 @@ class CfgVehicles
 				passThrough = 0;
 			};
 			class HitLFWheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_1_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRFWheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_2_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRF2Wheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_2_2_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitLF2Wheel {
-				armor = 0.8;
+				armor = 1;
 				material = -1;
 				name = "wheel_1_2_steering";
 				visual = "";
@@ -6944,6 +6944,7 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 5;
 		transportMaxBackpacks = 10;
+		transportFuel = 1000;	
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6971,7 +6972,7 @@ class CfgVehicles
 			};
 			
 			class HitFuel2 {
-				armor = 0;
+				armor = 0.5;
 				material = -1;
 				name = "palivo";
 				visual = "FuelHose";
@@ -7500,6 +7501,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
+		maxSpeed = 75;
 		
 		class HitPoints {
 			class HitEngine {
@@ -7544,6 +7546,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
+		maxSpeed = 37;
 		
 		class HitPoints {
 			class HitBody {

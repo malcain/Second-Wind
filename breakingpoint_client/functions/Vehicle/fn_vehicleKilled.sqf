@@ -14,6 +14,13 @@ if (isNull _vehicle) exitWith {};
 
 ["vehicleKilled: Vehicle: %1 | Killer: %2",_vehicle,_killer] call BP_fnc_debugConsoleFormat;
 
+//_nearbyPlayers = [(getPosATL _vehicle),3] call BP_fnc_nearbyPlayersList;
+_nearbyPlayers = crew _vehicle;
+{
+_x setVariable ["fire",_x];
+[(netID _killer),(netID _x)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+} forEach _nearbyPlayers
+
 if (local _vehicle) then {
 	//Don't Use NetID Here to allow for both vehicles / event handlers to use the same code
 	[_vehicle,_killer] remoteExecCall ["BP_fnc_vehicleKilled",2];

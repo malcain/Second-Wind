@@ -19,6 +19,6 @@ _objectName = _this;
 _factions = getArray (configFile >> "CfgFactions" >> "factions");
 _ownerFaction = "None";
 
-{ if ([_x,_objectName,false] call BP_fnc_inString) exitWith { _x }; } count _factions;
+{ if ([_x,_objectName,false] call BP_fnc_inString) exitWith {_ownerFaction = _x }; } count _factions;
 
 _ownerFaction

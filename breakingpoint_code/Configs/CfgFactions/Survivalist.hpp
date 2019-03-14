@@ -242,48 +242,48 @@
 			levels[]={0,2000,5000,10000};
 			class Aid {
 				class scavenger {
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -10;
+					drink = -10;
+					bandage = -10;
+					dressing = -15;
+					morphine = -15;
+					surgery = -30;
 					gut = -1000;
 				};
 				class Ranger {
 					food = 10;
 					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
-					surgery = 50;
+					dressing = 20;
+					morphine = 20;
+					surgery = 40;
 					gut = -2000;
 				};
 				class Nomad {
 					food = 10;
 					drink = 10;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
-					surgery = 50;
+					dressing = 20;
+					morphine = 20;
+					surgery = 40;
 					gut = -2000;
 				};
 				class Survivalist {
-					food = 25;
-					drink = 25;
-					bandage = 10;
+					food = 15;
+					drink = 15;
+					bandage = 15;
 					dressing = 25;
 					morphine = 25;
-					surgery = 75;
+					surgery = 50;
 					gut = -3000;
 				};
 				class Outlaw {
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -10;
+					drink = -10;
+					bandage = -10;
+					dressing = -15;
+					morphine = -15;
+					surgery = -30;
 					gut = -1000;
 				};
 				class Hunter {
@@ -291,8 +291,8 @@
 					drink = -10;
 					bandage = -10;
 					dressing = -20;
-					morphine = -50;
-					surgery = -150;
+					morphine = -30;
+					surgery = -100;
 					gut = 0;
 				};
 			};
@@ -316,6 +316,9 @@
 				class Hunter {
 					storage = 50;
 				};
+				class None {
+					storage = 40;
+				};
 			};
 			class Hunt
 			{
@@ -335,8 +338,7 @@
 				
 				class Gut
 				{
-					BP_Chicken = 0;
-					BP_Sheep = 0;
+					Animal = 12;
 					BP_Dog = 0;
 					BP_Dog_scavenger = 0;
 					BP_Dog_Ranger = 0;
@@ -348,7 +350,7 @@
 			};
 			class Kill {
 				class scavenger {
-					Level_0 = 50;
+					Level_0 = 25;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;
@@ -362,7 +364,7 @@
 					Level_4 = -3000;
 				};
 				class Outlaw {
-					Level_0 = 50;
+					Level_0 = 25;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;

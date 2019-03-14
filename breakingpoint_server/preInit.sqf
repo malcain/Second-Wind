@@ -102,7 +102,7 @@ call BP_fnc_initVarsOnce;
 call BP_fnc_initLoot;
 
 //Weather Types
-BP_Weather_None = 0;
+/*BP_Weather_None = 0;
 BP_Weather_Default = 1;
 BP_Weather_Sunny = 2;
 BP_Weather_Overcast = 3;
@@ -110,7 +110,7 @@ BP_Weather_Rain = 4;
 BP_Weather_Storm = 5;
 BP_Weather_ThunderStorm = 6;
 BP_Weather_Fog = 7;
-BP_Weather_SyncTime = 0;
+BP_Weather_SyncTime = 0;*/
 
 //Make Weather Sunny On Server Startup
-BP_Weather_Current = BP_Weather_None;
+//BP_Weather_Current = BP_Weather_None;

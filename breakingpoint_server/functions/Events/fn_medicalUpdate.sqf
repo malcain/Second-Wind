@@ -85,7 +85,7 @@ switch (_event) do {
 					BP_GameError = 4;
 					(owner _medic) publicVariableClient "BP_GameError";
 				} else {
-					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "bandage");
+					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "dressing");
 				};
 			};
 		};
@@ -350,9 +350,9 @@ switch (_event) do {
 			if (!_isZombie and _isAnimal) then {
 				_class = _medic getVariable ["class",0];
 				//Survivalist
-				if (_class == 5) then { _pointsChange = 10; };
+				if (_class == 5) then { _pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Hunt" >> "Gut" >> "Animal"); };
 				//Nomad
-				if (_class == 4) then { _pointsChange = 15; };
+				if (_class == 4) then { _pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Hunt" >> "Gut" >> "Animal"); };
 			};
 		};
 	};

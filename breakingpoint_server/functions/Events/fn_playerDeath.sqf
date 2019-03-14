@@ -283,9 +283,9 @@ if (_playerFactionName == "Survivalist") then
 	_scavenger = _player getVariable ["scavenger",0];
 	call {
 		//Level 3 and 4
-		if (_playerFactionLevel >= 3) exitWith { _playerPointLoss = 400 };
+		if (_playerFactionLevel >= 3) exitWith { _playerPointLoss = 350 };
 		//Level 2
-		if (_playerFactionLevel == 2) exitWith { _playerPointLoss = 250 };
+		if (_playerFactionLevel == 2) exitWith { _playerPointLoss = 225 };
 		//Level 1
 		if (_scavenger < 100) then {_playerPointLoss = 0} else {_playerPointLoss = 100 };
 	};

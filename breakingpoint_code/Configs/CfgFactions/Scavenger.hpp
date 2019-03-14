@@ -241,12 +241,12 @@
 			levels[] = {0,2000,5000,10000};
 			class Aid {
 				class Scavenger {
-					food = 10;
-					drink = 10;
+					food = 5;
+					drink = 5;
 					bandage = 10;
-					dressing = 25;
-					morphine = 25;
-					surgery = 50;
+					dressing = 15;
+					morphine = 15;
+					surgery = 25;
 					gut = -50;
 				};
 				class Ranger {
@@ -279,10 +279,10 @@
 				class Outlaw {
 					food = 5;
 					drink = 5;
-					bandage = 5;
+					bandage = 10;
 					dressing = 10;
 					morphine = 10;
-					surgery = 25;
+					surgery = 20;
 					gut = 0;
 				};
 				class Hunter {
@@ -327,6 +327,9 @@
 				class Engineer {
 					storage = 150;
 				};
+				class None {
+					storage = 40;
+				};
 			};
 			class Hunt
 			{
@@ -361,10 +364,10 @@
 			class Kill {
 				class Scavenger {
 					Level_0 = 50;
-					Level_1 = -350;
-					Level_2 = -700;
-					Level_3 = -1200;
-					Level_4 = -1500;
+					Level_1 = -500;
+					Level_2 = -800;
+					Level_3 = -1500;
+					Level_4 = -1750;
 				};
 				class Ranger {
 					Level_0 = 0;
@@ -375,10 +378,10 @@
 				};
 				class Outlaw {
 					Level_0 = 50;
-					Level_1 = -300;
-					Level_2 = -600;
-					Level_3 = -1000;
-					Level_4 = -1200;
+					Level_1 = -400;
+					Level_2 = -700;
+					Level_3 = -1200;
+					Level_4 = -1500;
 				};
 				class Hunter {
 					Level_0 = 0;

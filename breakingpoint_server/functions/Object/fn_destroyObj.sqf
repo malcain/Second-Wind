@@ -33,6 +33,7 @@ if (_refund) then
 		if (_object isKindOf "BP_GunCabinet") exitWith { _blueprint = "BlueprintGunCab"; };
 		if (_object isKindOf "BP_Stove") exitWith { _blueprint = "BlueprintStove"; };
 		if (_object isKindOf "BP_Television") exitWith { _blueprint = "BlueprintTele"; };
+		if (_object isKindOf "BP_Safe") exitWith { _blueprint = "BlueprintSafe"; };
 	};
 	
 	//Process Refunds Based On That Blueprint

@@ -23,9 +23,11 @@ _body allowDamage false;
 if !(simulationEnabled _body) then { _body enableSimulationGlobal true; };
 //_isAi = _body getVariable ["ai",false];
 
-//Grave type depending on terrain foliage.
-//_rocks = (nearestTerrainObjects [_player, ["HOUSE","BUILDING","HOSPITAL","ROCKS","ROCK","WALL"], 22]) select 0; 
-//_isforest = isNil _rocks;
+//Detect terrain foliage' grave type depends on.
+_dirtArray = ["#islandbeachSurface","#islandreddirtSurface","#islandmarshSurface","#islandwheatSurface","#islandmudSurface"];
+_rockyArray = ["#islandasphaltSurface","#islandcliffSurface"];
+_isDirt = surfaceType position _player in _dirtArray;
+_isRocky = ((isOnRoad _player) or ((getposatl _player select 2) > 1) or {surfaceType position _player in _rockyArray});
 
 //Undead Body Harvesting
 if (_player getVariable ["class",0] == 7) exitWith
@@ -68,8 +70,9 @@ _remainsType = "BP_DeadBody";
 if (_playerFactionName == "Hunter" || {_playerFactionName == "Outlaw"} || _playerFactionName == "Scavenger") then {
 _remainsType = "BP_SkeletonRemains";
 } else {
-_remainsType = "BP_GraveDirt";
-//if (_isforest) then { _remainsType = "BP_GraveDirt"; } else { _remainsType = "BP_GraveDirt"; };
+if (_isRocky) then { _remainsType = "BP_GraveRocks"; } else { 
+	if (_isDirt) then {_remainsType = "BP_GraveDirt";} else {_remainsType = "BP_GraveForest";};
+	};
 };
 
 //Ensure Remains Doesn't Glitch Under The Ground
@@ -89,9 +92,9 @@ if (_freshSpawn) then {["playerDeath: Player: %1 was killed by %2. Stats Skipped
 		(owner _player) publicVariableClient "BP_GameError";
 	} else {
 //Check player's remains are not his own
-if (_bodyName == _playername) then { [_player,10] call BPServer_fnc_addFactionPoints; 
+if (_bodyName == _playername) then { [_player,0] call BPServer_fnc_addFactionPoints; 
 	} else {
-	[_player,250] call BPServer_fnc_addFactionPoints;
+	[_player,150] call BPServer_fnc_addFactionPoints;
 	};
 };
 };
