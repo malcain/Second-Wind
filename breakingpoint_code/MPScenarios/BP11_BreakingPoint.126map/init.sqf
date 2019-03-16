@@ -96,6 +96,7 @@ execvm "initserver.sqf";
 if (hasInterface) then {
 [] execVm "nighttime.sqf";
 [] execVM "rain_drop.sqf";
+
 	//run on all player clients incl. player host
 /*execVM "AL_radiation\al_ini_fnc.sqf";
 

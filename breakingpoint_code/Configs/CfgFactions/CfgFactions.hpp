@@ -55,7 +55,7 @@ class CfgFactions
 		class Points {
 			base = 0;
 			min = -5000;
-			max = 5000;
+			max = 11000;
 			levels[]={0,2000,3000,4000};
 			class Aid {};
 			class Destroy {};

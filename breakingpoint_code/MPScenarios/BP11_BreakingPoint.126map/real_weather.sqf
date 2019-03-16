@@ -40,9 +40,9 @@
 	saveProfileNamespace;
 	
 	if (!_timeState) then {
-	_startingdate = [2035, 08, 10, 05, 40];
+	_startingdate = [2035, 12, 10, 07, 40];
 	} else {
-	_startingdate = [2035, 12, 09, 17, 38];
+	_startingdate = [2035, 12, 10, 17, 00];
 	}; 
 	
 	// Mission starting weather "CLEAR|CLOUDY|RAIN";
@@ -154,9 +154,9 @@
 		//if (!_firstrun) then {
 		//znul = [-1,-1,-1,false,true,false,"none",false,false] execVM "ALthunder\alias_thunderbolt.sqf";
 		//};
-		if ((date select 2 >= 11) and (date select 2 <= 13)) 
+		if (sunOrMoon < 0.5) 
 		then {
-		_overcast = 0.8;
+		_overcast = random 1;
 		if(_overcast > 0.80) then {
 		_rain = 0.2 + (random 0.7);
 		}
@@ -206,17 +206,17 @@
 		};
 		}
 		else {
-		_overcast = 0.8;
-		if(_overcast >= 0.8) then {
+		_overcast = random 1;
+		if(_overcast >= 0.85) then {
 		_rain = 0.2 + (random 0.7);
 		}
 		else {
-		if(_overcast >= 0.67)
+		if(_overcast >= 0.77)
 		then {
 		_rain = 0.1 + (random 0.35);
 		}
 		else {
-		if((_overcast >= 0.52) and (random 100 < 50)) then {
+		if((_overcast >= 0.62) and (random 100 < 50)) then {
 		_rain = 0.04 + (random 0.06);
 			}
 		else {
@@ -235,7 +235,7 @@
 			_wind2 = (random 8) - 4;
 		} 
 			else {
-			if((_overcast > 0.50) or (_lastovercast - _overcast > 0.38)) then {
+			if(_lastovercast - _overcast > 0.38) then {
 			_wind = (random 5) - 2.5;
 			_wind2 = (random 5) - 2.5;
 		} 

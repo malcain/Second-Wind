@@ -47,11 +47,11 @@ if (typeName _msgID == "STRING") then {
 		};
 		//Haven Explosive Success
 		case 9: {
-			_msg = "Successfully Planted IED on Lock.";
+			_msg = "Successfully Planted IED on a Lock.";
 		};
 		//Haven Explosive Failure
 		case 10: {
-			_msg = "Failed Planted IED on Lock. You already have a IED on the lock.";
+			_msg = "Failed to plant IED on Lock. You already have a IED on the lock.";
 		};
 		//Haven Reinforcement Success
 		case 11: {
@@ -60,6 +60,9 @@ if (typeName _msgID == "STRING") then {
 		//Haven Reinforcement Failure
 		case 12: {
 			_msg = "Failed To Reinforce Haven. Havens can only be reinforced up to level 5.";
+		};
+		case 13: {
+			_msg = "Failed To Reinforce a Haven. No water barrels nearby.";
 		};
 	};
 

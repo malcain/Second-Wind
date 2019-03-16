@@ -1940,7 +1940,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply55";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.930000;
@@ -1959,7 +1959,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply55";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -1977,7 +1977,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply55";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -1996,7 +1996,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply55";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;
@@ -2015,7 +2015,7 @@ class CfgWeapons
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_bandolier";
 			allowedSlots[] = {};
-			containerClass = "Supply55";
+			containerClass = "Supply60";
 			mass = 20;
 			armor = "0";
 			passThrough = 0.950000;

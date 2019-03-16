@@ -833,11 +833,11 @@ class CfgMagazines
 	class BlueprintHavenReinforce : ItemBlueprint {
 		displayName = "Blueprint Haven Reinforcement Kit";
 		descriptionUse = "Blueprint Haven Reinforcement Kit";
-		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside a unlocked haven. Haven can be upgraded multible times.<br/>Requires 1x Steel, 4x Cement Bag";
+		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside an unlocked haven. Haven can be upgraded up to 5 times.<br/>Requires- Haven Water Barrel, Shovel, 2x Steel, 3x Cement Bag";
 		class Construction {
 			Object = "BP_HavenReinforcement";  // Not a real object
-			Tools[] = {};
-			Materials[] = {"PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag", "ItemCementBag"};
+			Weapons[] = {"MeleeShovel"};
+			Materials[] = {"PartSteel","PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag"};
 		};
 	};
 	

@@ -248,6 +248,7 @@ class CfgFunctions
 			class initVarsOnce {};
 			class initLoot {};
 			class initMedical {};
+			class initDVS {};
 		};
 		class _Medical {
 			file = "\breakingpoint_client\functions\Medical";

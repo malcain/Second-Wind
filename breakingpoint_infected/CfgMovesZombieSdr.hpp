@@ -20463,7 +20463,7 @@ class CfgMovesZombieSdr: CfgMovesZombie {
 		
 		class AmovPzmbMstpSnonWnonDnon_gear: AmovPzmbMstpSnonWnonDnon {
 			variantsPlayer[] = {};
-			variantAfter[] = {};
+			variantAfter[] = {0, 0, 0};
 			file = "\A3\anims_f\Data\Anim\Sdr\inv\erc\stp\non\non\ainvpercmstpSnonWnondnon_G.rtm";
 			actions = "CivilZombieActions_inv";
 			interpolationRestart = 1;
@@ -21017,7 +21017,7 @@ class CfgMovesZombieSdr: CfgMovesZombie {
 		};
 
 		class AmovPercMwlkSlowWrflDf_v3: AmovPercMwlkSlowWrflDf_v1 {
-			file = "\A3\anims_f\Data\Anim\Sdr\Mov\Erc\Wlk\Low\Rfl\AmovPercMwlkSlowWrflDf_ver3";
+			//file = "\A3\anims_f\Data\Anim\Sdr\Mov\Erc\Wlk\Low\Rfl\AmovPercMwlkSlowWrflDf_ver3";
 			speed = 0.206897;
 			leftHandIKCurve[] = {1};
 			VariantsPlayer[] = {"AmovPercMwlkSlowWrflDf_v1", 0.100000, "AmovPercMwlkSlowWrflDf_v2", 0.100000, "AmovPercMwlkSlowWrflDf_v3", 0.800000};
@@ -40660,7 +40660,7 @@ class CfgMovesZombieSdr: CfgMovesZombie {
 		};
 
 		class HubWoundedProne_idle1: HubTemplateU {
-			file = "\A3\Anims_F_EPA\data\Anim\sdr\cts\HubCleaned\Wounded\HubWoundedProne_idle1.rtm";
+			//file = "\A3\Anims_F_EPA\data\Anim\sdr\cts\HubCleaned\Wounded\HubWoundedProne_idle1.rtm";
 			speed = 0.040000;
 		};
 

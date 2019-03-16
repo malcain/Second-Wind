@@ -35,6 +35,12 @@ if (_type == "info") then
 
 if (_type == "reinforcement") then
 {
+	//Water barrel requirement
+	_hasbarrel = (nearestObjects [_player, ["BP_BarrelWater","Land_StallWater_F","Land_BarrelWater_F","Land_BarrelWater_grey_F","Land_WaterBarrel_F","Land_WaterTank_F"], 17]) select 0;
+	if (isNil "_hasbarrel") exitWith {
+	BP_GameError = 13;
+	(owner _player) publicVariableClient "BP_GameError";
+	};
 	//Process Materials
 	_hasMats = true;
 	_mats = getArray (ConfigFile >> "CfgMagazines" >> "BlueprintHavenReinforce" >> "Construction" >> "Materials");

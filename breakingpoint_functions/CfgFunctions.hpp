@@ -44,6 +44,7 @@ class CfgFunctions
 			class relPos {};
 			class relScaledDist {};
 			class terrainGradAngle {};
+			class trueZoom {};
 		};
 		class Strings {
 			file = "\breakingpoint_functions\functions\Strings";

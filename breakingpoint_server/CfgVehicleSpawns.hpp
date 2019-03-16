@@ -9,7 +9,7 @@
 
 class CfgVehicleSpawns
 {
-	numVehicles = 75;
+	numVehicles = 50;
 	
 	class BaseVehicleSpawn
 	{
@@ -24,7 +24,7 @@ class CfgVehicleSpawns
 		{
 			class BP_Old_Bicycle : BaseVehicleSpawn
 			{
-				count = 10;
+				count = 5;
 			};			
 		};
 		

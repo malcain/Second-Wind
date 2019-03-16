@@ -91,8 +91,8 @@ class RscDisplayFactionSystem
 			color[] = { 1, 1, 1, 1 };
 			colorActive[] = { 1, 1, 1, 1 };
 			action = "closeDialog 0;createDialog 'RscDisplayFactionUndead';";
-			onMouseEnter = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\undead_hover.jpg'";
-			onMouseExit = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\undead.jpg'";
+			onMouseEnter = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\undead_soon_hover.jpg'";
+			onMouseExit = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\undead_soon.jpg'";
 		};
 		class BP_Scavenger: RscActiveText
 		{
