@@ -28,10 +28,17 @@ if (underwater _object) exitWith {
 	["Destroying Object %1 at %2 because it is underwater.",_object,_objectPos] call BP_fnc_debugConsoleFormat;
 };
 
-//Car or Storage Object on Water
+//Car Object on Water
 _isCar = _object isKindOf "Car";
-_isStorage = _object isKindOf "BP_Storage";
-if ((_isCar or _isStorage) && {surfaceIsWater _objectPos}) exitWith {
+_isUnderwater = (getPosASL _object) select 2 < 0.1;
+if ((_isCar and _isUnderwater) and {surfaceIsWater _objectPos}) exitWith {
 	_object setDamage 1;
-	["Destroying Object %1 at %2 because it is underwater.",_object,_objectPos] call BP_fnc_debugConsoleFormat;
+	["Destroying Vehicle %1 at %2 because it is underwater.",_object,_objectPos] call BP_fnc_debugConsoleFormat;
+};
+
+//Storage Object on Water
+_isStorage = _object isKindOf "BP_Storage";
+if (_isStorage && {surfaceIsWater _objectPos}) exitWith {
+	_object setDamage 1;
+	["Destroying Storage %1 at %2 because it is in water.",_object,_objectPos] call BP_fnc_debugConsoleFormat;
 };

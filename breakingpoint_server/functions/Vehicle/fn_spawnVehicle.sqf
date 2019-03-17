@@ -27,8 +27,9 @@ if (_damage > 0.85) then { _damage = 0.85; };
 
 //Clear Ammo & Set Fuel / Damage
 _vehicle setVehicleAmmo 0;
+if (_type != "BP_Old_Bicycle") then {
 _vehicle setFuel _fuel;
-_vehicle setDamage _damage;
+_vehicle setDamage _damage; };
 
 //Enable Rope Attachment
 _vehicle enableRopeAttach true;

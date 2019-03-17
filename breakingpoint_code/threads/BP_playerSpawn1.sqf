@@ -48,11 +48,9 @@ waitUntil
 	//Update hunter's speed
 	_class = player getVariable ["class",0];
 	if (_class == 3) then {
-	//_factionName = _class call BP_fnc_getFactionName;
-	//_isHunter = (_factionName == "Hunter");
 	_factionLevel = player call BP_fnc_getFactionLevel;
 	_speedcoef = getAnimSpeedCoef player;
-	if (_factionLevel > 2) then {
+	if (_factionLevel > 2 && _speedcoef <= 1) then {
 		if (_factionLevel > 3) then {
 		player setAnimSpeedCoef 1.07;}
 		else {player setAnimSpeedCoef 1.04; };

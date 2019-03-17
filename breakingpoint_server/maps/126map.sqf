@@ -1,1 +1,1 @@
-{_x setFuelCargo 0;} foreach (nearestTerrainObjects [[3369.46,3744.21,0],["FUELSTATION"],10]);
+{_x setFuelCargo 0;} foreach (nearestTerrainObjects [[3369.46,3744.21,0],["FUELSTATION","Land_FuelStation_01_pump_F","Land_FuelStation_01_pump_malevil_F"],10]);

@@ -22,25 +22,35 @@ class CfgVehicleSpawns
 	{
 		class Bikes
 		{
-			class BP_Old_Bicycle : BaseVehicleSpawn
-			{
-				count = 5;
-			};			
-		};
-		
-		class Low
-		{			
 			class BP_Quadbike_01 : BaseVehicleSpawn
 			{
 				count = 10;
 			};
 			
+			class BP_Old_Bicycle : BaseVehicleSpawn
+			{
+				count = 8;
+			};			
+		};
+		
+		class Low
+		{			
+			
 			class BP_Hatchback_01_F : BaseVehicleSpawn
 			{
-				count = 5;
+				count = 3;
 			};
 			
 			class BP_Hatchback_02_F : BP_Hatchback_01_F {};
+			
+			class BP_Hatchback_01_sport_F : BaseVehicleSpawn
+			{
+				count = 3;
+			};
+			class BP_Hatchback_02_sport_F : BaseVehicleSpawn
+			{
+				count = 2;
+			};
 		};
 		
 		class Medium
@@ -61,17 +71,9 @@ class CfgVehicleSpawns
 			{
 				count = 2;
 			};
-			class BP_Hatchback_01_sport_F : BaseVehicleSpawn
-			{
-				count = 2;
-			};
-			class BP_Hatchback_02_sport_F : BaseVehicleSpawn
-			{
-				count = 2;
-			};
 			class BP_Van_01_Fuel_F : BaseVehicleSpawn
 			{
-				count = 4;
+				count = 3;
 			};
 			class BP_C_Offroad_02_unarmed_F : BaseVehicleSpawn
 			{
@@ -169,6 +171,84 @@ class CfgVehicleSpawns
 	
 	class Spawns
 	{
+		class 126map
+		{
+			Low[] =
+			{
+				{3349.39,1286.31,0},
+				{3292.82,1682.38,0},
+				{4300.78,1592.94,0},
+				{3447.2,1928.27,0},
+				{3560.13,1732.88,0},
+				{4785.42,2357.99,0},
+				{5113.54,2845.58,0},
+				[1113.03,6401.96,0]
+			};
+			Medium[] = 
+			{
+				{3347.94,1305.51,0},
+				{3221.22,1711.74,0},
+				{4029.53,985.102,0},
+				{4625.37,1195.53,0},
+				{5172.29,2687.82,0},
+				{5336.58,2816.15,0},
+				{3399.76,3291.83,0},
+				{1140.51,6334.61,0.315074},
+			};
+			High[] = 
+			{
+				{3687.13,3622.08,0},
+				{3238.29,12463.5,0.00154352},
+				{17412,13175.2,0.0015831}
+				
+			};
+		 
+			Helicopters[] = 
+			{
+				{3536.23,3718.35,0},
+				{202.882,5950.52,0},
+				{781.014,6495.46,19.5529},
+				{960.935,6298.25,19.5531},
+				
+			};
+			
+			Bikes[] = 
+			{
+				{4886.91,1119.64,0},
+				{3916.26,942.726,0},
+				{4253.69,1646.8,0},
+				{3302.56,3285.2,0},
+				{729.133,6020.76,0},
+			};
+			
+			//FuelTrucks[] = {};
+			Boats[] = 
+			{
+				{3552.31,1980.85,0},
+				{1983.08,3343.34,0},
+				{2136.65,3285.77,0},
+				{2245.13,5656.82,0},
+				{1064.51,6492.61,0},
+				{878.879,6903.99,0},
+				{211.377,6158.83,0},
+				{890.146,3406.88,0},
+				{4492.73,459.797,0},
+				{4479.25,1024.04,0},
+				{3564.86,2351.77,0},
+				{3125.46,5951.71,0},
+				{2758.55,2733.48,0}
+			};
+			
+			Plane[] = 
+			{
+				{2166.33,13352.9,-0.00561047},
+				{12182.4,12972.2,-0.00538492},
+				{11695.6,13093.7,-0.00541115},
+				{13409.3,12048.6,-0.00582385},
+				{3770.37,13331.1,0.00200748}
+			};
+		};
+		
 		class Altis
 		{
 			Low[] =

@@ -2933,10 +2933,10 @@ class CfgWeapons
 	class ItemSurgeryKit : ItemCore {
 		scope = public;
 		displayName = "Portable Surgery Kit";
-		descriptionUse = "Full treatment operation. Requires morphine & military field dressing for operation to pass without consiquences!";
+		descriptionUse = "Portable Surgery Kit";
 		model = "\breakingpoint\models\bp_surgerykit.p3d";
 		picture = "\breakingpoint\textures\icons\bp_surgerykit_ca.paa";
-		descriptionShort = "Full treatment operation. Requires morphine & military field dressing for operation to pass without consiquences!";
+		descriptionShort = "Full treatment operation. Saves lifes in safe hands, deadly otherwise.<br/>Requires- 1x Morphine, 1x Military Field Dressing for operation to pass without consequences.";
 		simulation = "ItemRadio";
 		
 		class ItemInfo {

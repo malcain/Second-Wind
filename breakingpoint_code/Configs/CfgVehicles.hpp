@@ -6944,7 +6944,7 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 5;
 		transportMaxBackpacks = 10;
-		transportFuel = 1000;	
+		transportFuel = 1000;
 		
 		class HitPoints {
 			class HitGlass1 {

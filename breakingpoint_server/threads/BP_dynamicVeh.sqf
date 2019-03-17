@@ -58,7 +58,7 @@ if (_numVehicles < _maxVehicles) then
 			{
 				//Random Damage & Fuel
 				_damage = random 1;
-				_fuel = random 1;
+				_fuel = random 0.8;
 				
 				//Spawn The Vehicle
 				_vehicle = [_class,_pos,false,_damage,_fuel] call BP_fnc_spawnVehicle;
