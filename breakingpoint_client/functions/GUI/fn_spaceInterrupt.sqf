@@ -259,7 +259,7 @@ if (_dikCode == 6) then {
 };
 
 // 6 - Particle Effect to Check Wind
-if (_dikCode == 7) then {
+/*if (_dikCode == 7) then {
 	if (time - BP_lastCheckBit > 1) then
 	{
 		if (BP_isUndead) exitWith {};
@@ -267,7 +267,7 @@ if (_dikCode == 7) then {
 		[] spawn BP_fnc_windCheck;
 	};
 	_handled = true;
-};
+};*/
 
 // Movement Keys
 if (_dikCode in actionKeys "TurnLeft") then { 
