@@ -48,11 +48,12 @@ if (time - BP_lastCheckBit > 1) then
 									if (_curweap == (secondaryWeapon player)) then {
 										player playActionNow "BP_MeleeWeap_Jump";
 									} else {
-										if (_curweap == "Binocular" player || _curweap == "Rangefinder" player) then {
+										if (_curweap == "Binocular" || _curweap == "Rangefinder") then {
 										player playActionNow "BP_HolsterWeap_Jump";
 									};
 								};
 						};
 				};
 		};
+	};
 	};
