@@ -6,7 +6,13 @@ if (isNull _vehicle) exitWith {};
 _objectUID = _vehicle getVariable ["ObjectUID","0"];
 
 //Log Destruction
-["vehicleKilled: Vehicle: %1 | Killer: %2",_vehicle,_killer] call BP_fnc_debugConsoleFormat;
+["vehicleKilled(remoteexec): Vehicle: %1 | Killer: %2",_vehicle,_killer] call BP_fnc_debugConsoleFormat;
+
+_nearbyPlayers = crew _vehicle;
+{
+_x setVariable ["fire",_x];
+[(netID _killer),(netID _x)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+} forEach _nearbyPlayers;
 
 //Remove All Event Handlers
 _vehicle removeAllEventHandlers "FiredNear";

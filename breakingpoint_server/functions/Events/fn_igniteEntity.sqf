@@ -38,7 +38,7 @@ _pointsChange = [_player,_object] call BP_fnc_getFactionKillPoints;
 _pointsChange = _pointsChange * BP_Factions_PointsRatio;
 
 _isCar = (_object isKindOf "Car");
-_isHeli = (_object isKindOf "Helicopter");
+_isHeli = (_object isKindOf "Helicopter" or {_object isKindOf "Plane"});
 _isShip = (_object isKindOf "Ship");
 if (_isCar or _isHeli or _isShip) exitwith
 {

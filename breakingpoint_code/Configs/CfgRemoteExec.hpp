@@ -68,6 +68,7 @@ class CfgRemoteExec
 		
 		// Vehicles ( Call)
 		class BP_fnc_vehicleKilled { allowedTargets=2; };			//BP_VehicleKilled
+		class BPServer_fnc_changeOwner { allowedTargets=2; };		//for Push vehicle
 		
 		// Vehicles (Handle Repair Call)
 		class BP_fnc_vehicleHandleFuel { allowedTargets=1; };

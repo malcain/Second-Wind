@@ -19,7 +19,7 @@ _nearbyPlayers = crew _vehicle;
 {
 _x setVariable ["fire",_x];
 [(netID _killer),(netID _x)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
-} forEach _nearbyPlayers
+} forEach _nearbyPlayers;
 
 if (local _vehicle) then {
 	//Don't Use NetID Here to allow for both vehicles / event handlers to use the same code

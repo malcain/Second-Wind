@@ -4244,7 +4244,7 @@ class CfgWorlds
 				{
 					overcast=0;
 					cloudiness=0;
-					extinction=3.8
+					extinction=3.8;
 					diffusivity=0.001;
 					seqFileKeyframe=0;
 				};

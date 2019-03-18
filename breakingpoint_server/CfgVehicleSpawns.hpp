@@ -9,7 +9,7 @@
 
 class CfgVehicleSpawns
 {
-	numVehicles = 50;
+	numVehicles = 60;
 	
 	class BaseVehicleSpawn
 	{
@@ -47,34 +47,45 @@ class CfgVehicleSpawns
 			{
 				count = 3;
 			};
+			
 			class BP_Hatchback_02_sport_F : BaseVehicleSpawn
 			{
 				count = 2;
+			};
+			
+			class BP_SUV_01_F : BaseVehicleSpawn
+			{
+				count = 3;
+			};
+			
+			class BP_SUV_02_F : BaseVehicleSpawn
+			{
+				count = 3;
 			};
 		};
 		
 		class Medium
 		{
-			class BP_SUV_01_F : BaseVehicleSpawn
-			{
-				count = 3;
-			};
-			class BP_SUV_02_F : BaseVehicleSpawn
-			{
-				count = 3;
-			};
 			class BP_Offroad_01_armed_F : BaseVehicleSpawn 
 			{
-				count = 2;
+				count = 3;
 			};
+			
 			class BP_Offroad_02_armed_F : BaseVehicleSpawn 
 			{
-				count = 2;
+				count = 3;
 			};
+			
+			class BP_Offroad_03_armed_F : BaseVehicleSpawn
+			{
+				count = 4;
+			};
+			
 			class BP_Van_01_Fuel_F : BaseVehicleSpawn
 			{
 				count = 3;
 			};
+			
 			class BP_C_Offroad_02_unarmed_F : BaseVehicleSpawn
 			{
 				count = 6;
@@ -102,18 +113,8 @@ class CfgVehicleSpawns
 			{
 				count = 2;
 			};
-
-			class BP_Offroad_03_armed_F : BaseVehicleSpawn
-			{
-				count = 4;
-			};
 			
 			class BP_MRAP_01 : BaseVehicleSpawn
-			{
-				count = 2;
-			};
-			
-			class BP_MRAP_03_F : BaseVehicleSpawn
 			{
 				count = 2;
 			};
@@ -128,10 +129,25 @@ class CfgVehicleSpawns
 				count = 4;
 			};
 		};
-	
+		
+		class Vodnik
+		{	
+			class BP_MRAP_03_F : BaseVehicleSpawn
+			{
+				count = 2;
+			};
+		};
+		
+		class Littlebird
+		{			
+			class BP_Heli_Light_01 : BaseVehicleSpawn 
+			{
+				count = 2;
+			};
+		};
+		
 		class Helicopters
 		{			
-			class BP_Heli_Light_01 : BaseVehicleSpawn {};
 			class BP_Heli_Light_02_unarmed : BaseVehicleSpawn {};
 			class BP_Heli_Transport_01 : BaseVehicleSpawn {};
 			class BP_Heli_Transport_02 : BaseVehicleSpawn {};
@@ -180,9 +196,16 @@ class CfgVehicleSpawns
 				{4300.78,1592.94,0},
 				{3447.2,1928.27,0},
 				{3560.13,1732.88,0},
-				{4785.42,2357.99,0},
+				{4785.42,2357.99,0.73},
 				{5113.54,2845.58,0},
-				[1113.03,6401.96,0]
+				{1113.03,6401.96,0},
+				{2246.23,5290.09,0},
+				{6698.05,1542.07,0},
+				{6398.03,1540.43,0.0930023},
+				{2405.7,1586.22,1.467},
+				{1907.56,2905.67,0.24704},
+				{1771.57,2764.51,0.184185},
+				{1292.72,4814.05,0.313995}
 			};
 			Medium[] = 
 			{
@@ -194,21 +217,53 @@ class CfgVehicleSpawns
 				{5336.58,2816.15,0},
 				{3399.76,3291.83,0},
 				{1140.51,6334.61,0.315074},
+				{875.929,6085.78,0},
+				{6998.24,1446.48,0},
+				{6957.33,1254.65,0},
+				{6571.87,1528.11,0},
+				{6777.42,1647.68,0},
+				{920.545,4508.38,0}
 			};
 			High[] = 
 			{
 				{3687.13,3622.08,0},
-				{3238.29,12463.5,0.00154352},
-				{17412,13175.2,0.0015831}
+				{5415.22,248.008,0},
+				{5028.41,1259.97,0},
+				{5884.17,1600.61,0},
+				{2163.17,2209.91,0},
+				{2221.1,2230.62,0},
+				{1837.23,2618.43,0},
+				{765.181,1072.97,0}
 				
 			};
-		 
+			
+			Vodnik[] =
+			{
+				{1872.36,358.205,0},
+				{4556.95,290.508,0},
+				{3520.08,2339.26,22.311},
+				{4349.63,3424.28,0}
+			};
+			
+			Littlebird[] =
+			{
+				{4652.8,356.404,5.25876},
+				{2400.81,3038.45,18.8805},
+				{2237.47,2190.1,1.63916},
+				{734.717,949.772,6.468},
+				{758.922,932.505,6.59708},
+				{1374.41,4815.68,5.31308}
+			};
+			
 			Helicopters[] = 
 			{
 				{3536.23,3718.35,0},
 				{202.882,5950.52,0},
 				{781.014,6495.46,19.5529},
 				{960.935,6298.25,19.5531},
+				{3536.23,3718.35,25.669},
+				{831.44,4709.88,0},
+				{831.296,4709.15,0}
 				
 			};
 			
@@ -219,6 +274,11 @@ class CfgVehicleSpawns
 				{4253.69,1646.8,0},
 				{3302.56,3285.2,0},
 				{729.133,6020.76,0},
+				{2190.45,5221.1,0},
+				{6209.79,894.382,0},
+				{2400.99,1648.04,0},
+				{1979.35,2832.51,0},
+				{818.305,4821.01,0.234406}
 			};
 			
 			//FuelTrucks[] = {};
@@ -230,22 +290,23 @@ class CfgVehicleSpawns
 				{2245.13,5656.82,0},
 				{1064.51,6492.61,0},
 				{878.879,6903.99,0},
-				{211.377,6158.83,0},
+				{243.111,6235.48,0},
 				{890.146,3406.88,0},
 				{4492.73,459.797,0},
 				{4479.25,1024.04,0},
 				{3564.86,2351.77,0},
 				{3125.46,5951.71,0},
-				{2758.55,2733.48,0}
+				{2758.55,2733.48,0},
+				{4239.85,3651.6,0},
+				{2035.49,340.924,0}
 			};
 			
 			Plane[] = 
 			{
-				{2166.33,13352.9,-0.00561047},
-				{12182.4,12972.2,-0.00538492},
-				{11695.6,13093.7,-0.00541115},
-				{13409.3,12048.6,-0.00582385},
-				{3770.37,13331.1,0.00200748}
+				{803.448,4668.43,0.0939941},
+				{5029.33,5818.52,0},
+				{5051.75,5886.52,0.248322},
+				{3009.4,3114.15,0}
 			};
 		};
 		

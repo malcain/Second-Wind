@@ -29,7 +29,9 @@ _cfgWeapons = configFile >> "CfgWeapons";
 
 for "_i" from 1 to _lootMinItems do
 {
+	
 	_index = BP_COLBase find _boxLootType;
+	//diag_log text format ["index of weights array: %1",_index];
 	_weights = BP_COLChances select _index;
 	_cntWeights = count _weights;
 	_index = floor(random _cntWeights);

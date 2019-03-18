@@ -26,8 +26,8 @@ if (!_dynamic) then { _vehicle setVelocity [0,0,2]; };
 if (_damage > 0.85) then { _damage = 0.85; };
 
 //Clear Ammo & Set Fuel / Damage
+if !(_vehicle isKindOf "BP_Old_Bicycle") then {
 _vehicle setVehicleAmmo 0;
-if (_type != "BP_Old_Bicycle") then {
 _vehicle setFuel _fuel;
 _vehicle setDamage _damage; };
 

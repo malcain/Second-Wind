@@ -28,7 +28,7 @@ if !(isNull _fire) exitWith {};
 [(netID player),(netID _entity)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 
 _isCar = (_entity isKindOf "Car");
-_isHeli = (_entity isKindOf "Helicopter");
+_isHeli = (_entity isKindOf "Helicopter" or {_entity isKindOf "Plane"});
 _isShip = (_entity isKindOf "Ship");
 if (_isCar or _isHeli or _isShip) then
 {

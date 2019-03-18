@@ -20,7 +20,7 @@ if (isNull _victim) exitWith {0};
 if (isNull _killer) exitWith {0};
 
 _isCar = (_killer isKindOf "Car");
-_isHeli = (_killer isKindOf "Helicopter");
+_isHeli = (_killer isKindOf "Helicopter" or {_killer isKindOf "Plane"});
 _isShip = (_killer isKindOf "Ship");
 if (_isCar or _isHeli or _isShip) exitwith
 {

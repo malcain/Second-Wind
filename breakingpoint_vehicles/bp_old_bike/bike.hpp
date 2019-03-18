@@ -59,28 +59,35 @@ class NoDust {};
 
 class CfgVehicles
 {
-	/*class BP_DefaultEventHandlers
+	class EventHandlers
+		{
+			init = "";
+			local = "";
+		};
+		
+	class BP_DefaultEventHandlers
 	{
 		scope = protected;
-		//init = "";
+		init = "";
 		killed = "";
-		//handledamage = "";
-		//getin = "";
-		//getout = "";
+		handledamage = "";
+		getin = "";
+		getout = "";
 		fired = "";
 		take = "";
 		put = "";
 	};
 	
-	class BP_BikeEventHandlers : BP_DefaultEventHandlers
+	class BP_VehicleEventHandlers : BP_DefaultEventHandlers
 	{
 		scope = protected;
-		//init = "_this call BP_fnc_vehicleInit;";
-		killed = "_this call BPServer_fnc_vehicleKilled;";
-		//handledamage = "_this call BP_fnc_damageHandlerVehicle;";
-		//getin = "_this call BP_fnc_vehicleInteract;";
-		//getout = "_this call BP_fnc_vehicleInteract;";
-	};*/
+		init = "_this call BP_fnc_vehicleInit;";
+		killed = "_this call BP_fnc_vehicleKilled;";
+		handledamage = "_this call BP_fnc_damageHandlerVehicle;";
+		getin = "_this call BP_fnc_vehicleInteract;";
+		getout = "_this call BP_fnc_vehicleInteract;";
+	};
+	
 	class Bicycle;
 	class Bicycle_F: Bicycle
 	{
@@ -91,7 +98,7 @@ class CfgVehicles
 		scope = 2;
 		side = 3;
 		weapons[] = {"Old_Bike_Bell"};
-		turnCoef = 2;
+		turnCoef = 1.5;
 		model = "\breakingpoint_vehicles\bp_old_bike\bp_old_bike.p3d";
 		displayName = "Old Bicycle";
 		Picture = "\breakingpoint_vehicles\bp_old_bike\Data\Picture_MMT_CA.paa";
@@ -118,6 +125,13 @@ class CfgVehicles
 		{
 			"pos cargo dir"
 		};
+		wheelCircumference=1.5;
+		antiRollbarForceCoef=0.30000001;
+		antiRollbarForceLimit=0.2;
+		antiRollbarSpeedMin=20;
+		antiRollbarSpeedMax=50;
+		//simulation="carx";
+		//differentialType="rear_open";
 		damageResistance = 0.00913;
 		ejectDeadDriver = "true";
 		ejectDeadCargo = "true";
@@ -246,7 +260,7 @@ class CfgVehicles
 				priority = 10;
 				onlyforplayer = 1;
 				condition = "(player distance this < 5) and (alive this)";
-				statement = "[this] call BP_fnc_pickupBike;";
+				statement = "[this, player] spawn BP_fnc_pickupBike;";
 			};
 		};
 		class Reflectors 
@@ -274,5 +288,7 @@ class CfgVehicles
 				brightness = 0.1;
 			};
 		};
+		
+		class EventHandlers : BP_VehicleEventHandlers {};
 	};
 };

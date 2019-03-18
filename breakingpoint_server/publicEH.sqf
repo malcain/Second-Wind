@@ -11,7 +11,7 @@
 
 "BIS_fnc_MP_packet"	 addPublicVariableEventHandler {};
 
-"BP_PickupBike" addPublicVariableEventHandler
+/*"BP_PickupBike" addPublicVariableEventHandler
 {
 	(_this select 1) params ["_bicycle"];
 	_vecloc = getPosATL _bicycle;
@@ -23,7 +23,7 @@
 	_bicycle setPosATL [_vecloc select 0,_vecloc select 1,_vecloc select 2];
 	_bicycle setVelocity [0,0,0];
 	_bicycle enableSimulation true;
-};
+};*/
 
 "BP_WeaponSwitch" addPublicVariableEventHandler 
 {

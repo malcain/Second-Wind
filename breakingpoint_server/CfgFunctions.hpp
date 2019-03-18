@@ -235,6 +235,7 @@ class CfgFunctions
 			class simulationToggle {};
 			class igniteEntity {};
 			class checkHealRecent {};
+			class changeOwner {};
 		};
 		class Wrecks {
 			file = "\breakingpoint_server\functions\Wrecks";
