@@ -130,8 +130,6 @@ class CfgVehicles
 		antiRollbarForceLimit=0.2;
 		antiRollbarSpeedMin=20;
 		antiRollbarSpeedMax=50;
-		//simulation="carx";
-		//differentialType="rear_open";
 		damageResistance = 0.00913;
 		ejectDeadDriver = "true";
 		ejectDeadCargo = "true";
