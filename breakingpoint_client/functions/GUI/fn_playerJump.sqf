@@ -27,10 +27,10 @@ if (time - BP_lastCheckBit > 1) then
 			_vel = velocity player;
 			_dir = direction player;
 			_speed = 0.4;
-			If (_height > _max_height) then {_height = _max_height};// MAXIMUM HEIGHT OF JUMP 
+			If (_height > _max_height) then {_height = _max_height};// MAXIMUM HEIGHT OF JUMP
 			player setVelocity [(_vel select 0)+(sin _dir*_speed),(_vel select 1)+(cos _dir*_speed),(_vel select 2)+_height];
 			//player playActionNow "BP_Jump";
-			
+
 			_curweap = currentWeapon player;
 			if (_curweap == "") then {
 				player playActionNow "BP_HolsterWeap_Jump";
@@ -47,7 +47,10 @@ if (time - BP_lastCheckBit > 1) then
 								{
 									if (_curweap == (secondaryWeapon player)) then {
 										player playActionNow "BP_MeleeWeap_Jump";
-									}; 						
+									} else {
+										if (_curweap == "Binocular" player || _curweap == "Rangefinder" player) then {
+										player playActionNow "BP_HolsterWeap_Jump";
+									};
 								};
 						};
 				};
