@@ -1246,7 +1246,7 @@ class CfgGesturesMale
 			enableOptics = 1;
 			looped = 0;//false;
 			//collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
-			collisionShape = "";
+			collisionShape = "empty";
 			relSpeedMin = 1;
 			relSpeedMax = 1;
 			limitGunMovement = 1.0;

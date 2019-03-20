@@ -247,7 +247,15 @@ if (_dikCode == 6) then {
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{
-				if ((vehicle player) == player) then {
+				if (_stance == "PRONE" and {_currentWeapon == _rifle}) then {
+					[] spawn { 
+					player switchaction "HandGunOn"; 
+					sleep 0.0001;
+					player selectWeapon _handgun;
+					sleep 0.001;
+					player action ["SWITCHWEAPON", vehicle player, vehicle player, 100]; 
+					};
+				} else {
 					player action ["SwitchWeapon", player, player, 100];
 					//player action ["SWITCHWEAPON",player,player,-1];
 					player switchcamera cameraView;
