@@ -196,7 +196,7 @@ class CfgVehicles
 			local = "_this call BP_fnc_onStorageLocal;";
 			killed = "_this call BP_fnc_onStorageKilled;";
 		};
-		hideDistance = 1000;
+		hideDistance = 1400;
 	};
 	
 	//Base Class for All Breaking Point Storage Objects

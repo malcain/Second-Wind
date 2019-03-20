@@ -10,14 +10,13 @@
 		None
 	Example: [20,45] call BP_fnc_medicalPitchWhine;
 */
-private ["_player"];
+params ["_player","_sleep"];
+
 
 //_player = _this;
 
-[]spawn {
-	player setUnconscious true;
-	uisleep 1;
-	player setUnconscious false;
-	uisleep 0.1; 
-	player switchMove "amovppnemstpsnonwnondnon"; 
-	};
+_player setUnconscious true;
+uisleep _sleep;
+_player setUnconscious false;
+uisleep 0.1; 
+player switchMove "amovppnemstpsnonwnondnon"; 

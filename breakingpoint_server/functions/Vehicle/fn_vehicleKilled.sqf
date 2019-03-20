@@ -8,11 +8,13 @@ _objectUID = _vehicle getVariable ["ObjectUID","0"];
 //Log Destruction
 ["vehicleKilled(remoteexec): Vehicle: %1 | Killer: %2",_vehicle,_killer] call BP_fnc_debugConsoleFormat;
 
-_nearbyPlayers = crew _vehicle;
+/*_nearbyPlayers = crew _vehicle;
 {
-_x setVariable ["fire",_x];
-[(netID _killer),(netID _x)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
-} forEach _nearbyPlayers;
+_x action ["Eject",vehicle _x];
+_x setVariable ["fire",_x, true];
+[_x,5] spawn BP_fnc_medicalKnockDown;
+[(netID _x),(netID _x),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+} forEach _nearbyPlayers;*/
 
 //Remove All Event Handlers
 _vehicle removeAllEventHandlers "FiredNear";

@@ -17,8 +17,13 @@ if (isNull _vehicle) exitWith {};
 //_nearbyPlayers = [(getPosATL _vehicle),3] call BP_fnc_nearbyPlayersList;
 _nearbyPlayers = crew _vehicle;
 {
-_x setVariable ["fire",_x];
-[(netID _killer),(netID _x)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+spawn {
+_x action ["Eject",vehicle _x];
+_x setVariable ["fire",_x,true];
+sleep 0.1;
+[_x,2] call BP_fnc_medicalKnockDown;
+[(netID _x),(netID _x),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+};
 } forEach _nearbyPlayers;
 
 if (local _vehicle) then {

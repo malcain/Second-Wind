@@ -19,7 +19,7 @@ if (time - BP_lastCheckBit > 1) then
 	r_interrupt = true;
 	r_action_rest = false;
 		
-	if (surfaceIsWater (getPosATL player)) exitWith {};
+	if ((getPosASL player select 2) < 0) exitWith {};
 
 	if (!BP_AutoRun && {!r_fracture_legs} && {!(r_hit_legs > 0)}) then 
 	{
@@ -63,7 +63,7 @@ if (time - BP_lastCheckBit > 1) then
 				sleep 0.01;
 			
 				//Condition Checks
-				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {surfaceIsWater (getPosATL player)});
+				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASL player select 2) < 0});
 			};
 			
 			

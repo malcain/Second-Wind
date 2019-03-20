@@ -58,6 +58,9 @@ class CfgRemoteExec
 		class BPServer_fnc_lockObj { allowedTargets=2; };
 		class BPServer_fnc_unlockObj { allowedTargets=2; };
 		
+		// Global Effects
+		class BPServer_fnc_headGore { allowedTargets=2; };		//BP_effectHeadExplode
+		
 		// Ignite Things
 		class BPServer_fnc_igniteEntity { allowedTargets=2; };
 		

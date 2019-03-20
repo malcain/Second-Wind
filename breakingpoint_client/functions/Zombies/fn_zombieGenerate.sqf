@@ -70,5 +70,5 @@ _zombie setVariable ["fsm_handle", _fsmid];
 
 /*if ((_rnd > 0.98) or (_rnd < 0.02)) then {
 _zombie setVariable ["fire",_zombie];
-[(netID _zombie),(netID _zombie)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+[(netID _zombie),(netID _zombie),"Zombie"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 };*/

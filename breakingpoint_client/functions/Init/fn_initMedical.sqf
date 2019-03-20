@@ -118,13 +118,16 @@ waitUntil
 			//Set Current Fire Time
 			player setVariable ["fireTime",_fireTime];
 		} else {
+			//Increase chance to be ignited the longer the player is damaged by fire.
 			_fireNearTime = player getVariable ["fireNearTime",0];
 			_fireNearTime = _fireNearTime + 1;
-			
-			if (_fireNearTime > 4) then
-			{
-				_fireNearTime = 0;
-				[(netID player),(netID player)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+			if (_fireNearTime > 1) then{
+				_igniterandom = 25*_fireNearTime;
+				if (random 100 < _igniterandom) then
+				{
+					_fireNearTime = 0;
+					[(netID player),(netID player),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+				};
 			};
 			
 			player setVariable ["fireNearTime",_fireNearTime];

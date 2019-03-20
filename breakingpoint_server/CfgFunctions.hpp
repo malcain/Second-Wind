@@ -227,6 +227,7 @@ class CfgFunctions
 			class medicalUpdate {};
 			class setLocalVar {};
 			class handleDisconnect {};
+			class headGore {};
 			class setPosATL {};
 			class containerOpened {};
 			class containerClosed {};

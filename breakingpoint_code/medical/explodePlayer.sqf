@@ -22,12 +22,12 @@ if (!_leaveReturn) exitWith {};
 //_SVest = vest player;
 //if !(_SVest = "V_OutlawVest_BP") exitWith {};
 
-removeVest player;
 _objPos = getPosATL _unit;
 
-
-sleep 0.4;
+sleep 0.25;
 //Explode player
+removeVest player;
+sleep 0.01;
 _explosive = "BP_IED" createVehicle _objPos;
 _explosive setPosATL _objPos;
 _explosive setDamage 1;

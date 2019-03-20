@@ -678,14 +678,14 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Flip Vehicle */
-	if ((_isVehicletype) and !_canmove and _canDo and _isAlive and !_isWater and !_isHostage and (player distance _cursorTarget >= 2) and (count (crew _cursorTarget))== 0 and ((vectorUp _cursorTarget) select 2) < 0.5) then {
+	/*if ((_isVehicletype) and !_canmove and _canDo and _isAlive and !_isWater and !_isHostage and (player distance _cursorTarget >= 2) and (count (crew _cursorTarget))== 0 and ((vectorUp _cursorTarget) select 2) < 0.5) then {
 		if (s_player_flipveh  < 0) then {
 			s_player_flipveh = player addAction [format["Flip %1",_targetName], {_this spawn BP_fnc_flipVehicle; },_cursorTarget, 1, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_flipveh;
 		s_player_flipveh = -1;
-	};
+	};*/
 
 	// Fill Fuel Can
 	if (_isFuel && {_hasFuelE} && {!_isZombie} && {!_isAnimal} && {!_isHostage} && {!_isMan} && {_canDo} && {damage _cursorTarget < 1}) then {
@@ -917,7 +917,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 	//Ignite Entites
 	_manOrVehicle = (_isMan or _isVehicle);
-	if (_manOrVehicle && {_canDo} && {_hasFuel} && {_hasMatches} && {!_isHarvested}) then
+	if (_manOrVehicle && {_canDo} && {_hasFuel} && {_hasMatches} && {_isNotDestroyed} && {!_isHarvested}) then
 	{
 		_text = "Person";
 
@@ -931,7 +931,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		};
 
 		if (s_player_igniteEntity < 0) then {
-			s_player_igniteEntity = player addAction [format ["Ignite %1",_text], { _this spawn BP_fnc_entityIgnite; },_cursorTarget, 0, false, true, "",""];
+			s_player_igniteEntity = player addAction [format ["Ignite %1",_text], { _this spawn BP_fnc_entityIgnite; },[_cursorTarget,_text], 0, false, true, "",""];
 		};
 	} else {
 		player removeAction s_player_igniteEntity;
@@ -1009,8 +1009,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	s_player_playerFood = -1;
 	player removeAction s_player_playerWater;
 	s_player_playerWater = -1;
-	player removeAction s_player_flipveh;
-	s_player_flipveh = -1;
+	//player removeAction s_player_flipveh;
+	//s_player_flipveh = -1;
 	player removeAction s_player_sleep;
 	s_player_sleep = -1;
 	player removeAction s_player_saveVehicle;

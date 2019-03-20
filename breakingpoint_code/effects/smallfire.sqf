@@ -7,6 +7,7 @@ _pos01 = getPos _object;
 
 _source01 = "#particlesource" createVehicleLocal _pos01;
 _source01 setParticleClass "MediumDestructionFire";
+_emitter setParticleFire [1.25,1.0,10];
 _source01 attachto [_object,[0,0,0]];
 
 _source02 = "#particlesource" createVehicleLocal _pos01;

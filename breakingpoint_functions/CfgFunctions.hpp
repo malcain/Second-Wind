@@ -33,6 +33,7 @@ class CfgFunctions
 			file = "\breakingpoint_functions\functions\Fire";
 			class fireDelete {};
 		};
+
 		class Geometry {
 			file = "\breakingpoint_functions\functions\Geometry";
 			class dirTo {};

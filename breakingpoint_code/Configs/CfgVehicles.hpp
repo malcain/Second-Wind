@@ -176,6 +176,16 @@ class CfgVehicles
 		};
 	};
 	
+	//Gore effects
+	class BP_HeadGore : BP_Fire 
+	{
+		scope = protected;
+		displayName = "Head Gore Effect";
+		class Eventhandlers {
+			init = "(_this select 0) execVM '\breakingpoint_code\effects\headGore.sqf';";
+		};
+	};
+	
 	//Smoke Objects
 	class test_EmptyObjectForSmoke;
 	class BP_Smoke : test_EmptyObjectForSmoke

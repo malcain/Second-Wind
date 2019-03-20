@@ -43,7 +43,7 @@
 
 	//Vehicle
 	s_player_saveVehicle = -1;
-	s_player_flipveh = -1;
+	//s_player_flipveh = -1;
 	s_player_refuelVeh = -1;
 	s_player_siphonfuel =	-1;
 	s_player_pushBoat = -1;

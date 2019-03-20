@@ -7,7 +7,8 @@
 	Alderon Games Pty Ltd
 */
 
-_entity = _this select 3;
+_entity = _this select 3 select 0;
+_type = _this select 3 select 1;
 
 player removeAction s_player_igniteEntity;
 s_player_igniteEntity = -1;
@@ -24,17 +25,28 @@ if !(isNull _fire) exitWith {};
 //if (_isPlayer and _alive) then { _leaveReturn = ["Are you sure you want to ignite this entity? ","Ignite Entity",nil,true] call BIS_fnc_guiMessage; };
 //if (!_leaveReturn) exitWith {};
 
-//Tell the server to ignite it
-[(netID player),(netID _entity)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
-
+if (_type == "Vehicle") exitwith {
 _isCar = (_entity isKindOf "Car");
 _isHeli = (_entity isKindOf "Helicopter" or {_entity isKindOf "Plane"});
 _isShip = (_entity isKindOf "Ship");
-if (_isCar or _isHeli or _isShip) then
-{
-	[_entity] spawn
+	if (_isCar or _isHeli or _isShip) then
 	{
-		sleep 11;
-		[BP_characterID,(netID (_this select 0)),"Explode",(netID player)] remoteExecCall ["BPServer_fnc_deleteObj",2];
+		_type = "Explode";
+		[(netID player),(netID _entity),_type] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+		[_entity] spawn
+		{
+			sleep 11;
+			[BP_characterID,(netID (_this select 0)),"Explode",(netID player)] remoteExecCall ["BPServer_fnc_deleteObj",2];
+		};
+	} else {
+		[(netID player),(netID _entity),_type] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 	};
+};
+
+//Tell the server to ignite it
+[(netID player),(netID _entity),_type] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+
+if (_type == "Animal") then
+{
+_entity setdamage 1;
 };

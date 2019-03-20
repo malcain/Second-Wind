@@ -67,7 +67,7 @@ if (_ammo == "BP_Arrow_Ball_Fire") exitWith
 	if (isNull _fire) then
 	{
 		_unit setVariable ["fire",_unit];
-		[(netID _source),(netID _unit)] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+		[(netID _source),(netID _unit),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 	};
 };
 
@@ -227,7 +227,7 @@ if (_damage > 0.01) then
 						{_hitKnockout = false};
 					};
 				if (_hitKnockout) then {
-				player call BP_fnc_medicalKnockDown;
+				[player,1] spawn BP_fnc_medicalKnockDown;
 				};
 			};
 			

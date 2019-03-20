@@ -21,7 +21,7 @@ if (time - BP_lastCheckBit > 1) then
 	r_interrupt = true;
 	r_action_rest = false;
 		
-	if ((getTerrainHeightASL getPos player) > -1.5) exitWith {};
+	if ((getPosASL player select 2) > -1) exitWith {};
 	
 	if (!BP_AutoRun && {!r_fracture_legs} && {!(r_hit_legs > 0)}) then 
 	{
@@ -33,6 +33,18 @@ if (time - BP_lastCheckBit > 1) then
 			BP_AutoRunThread = scriptNull;
 		};
 		
+		//Autoswim speed depends on player's carrying weight.
+		_weight = loadAbs player;
+		if (_weight < 620) then {
+			player setanimspeedcoef 1.5;
+		} else {
+			if (_weight >= 800) then {
+				player setanimspeedcoef 1;
+			} else {
+				player setanimspeedcoef 1.3;
+			};
+		};
+		
 		BP_AutoRunThread = [] spawn 
 		{
 			sleep 0.05;
@@ -40,7 +52,6 @@ if (time - BP_lastCheckBit > 1) then
 
 			waitUntil
 			{
-				//_iswater = ((getPosASL player select 2) < -1.5);
 				//No Resting While Autorunning
 				if (r_action_rest) then { r_action_rest = false; };
 				
@@ -50,26 +61,13 @@ if (time - BP_lastCheckBit > 1) then
 				//Don't Autorun While TranQ
 				if (r_player_unconscious) exitWith {true};
 				
-				//Autorun speed depends on terrain gradient
-				_weight = loadAbs player;
-				if (_weight <= 620) then {
-					player setanimspeedcoef 1.5;
-					player playActionNow "FastF";
-				} else {
-					if (_weight >= 800) then {
-						player setanimspeedcoef 1;
-						player playActionNow "FastF";
-					} else {
-						player setanimspeedcoef 1.3;
-						player playActionNow "FastF";
-					};
-				};
+				player playActionNow "FastF";
 
 				//Delay
 				sleep 0.1;
 			
 				//Condition Checks
-				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getTerrainHeightASL getPos player) > -1.5});
+				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASL player select 2) > -1});
 			};
 			
 			player setanimspeedcoef _animspeedcoef;
