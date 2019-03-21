@@ -16,6 +16,7 @@ _isPond = 		false;
 _isWell = 		false;
 _pondPos = 		[];
 _objectsWell = 	[];
+_isWater = ((getPosASL player select 2) < -0.5);
 
 if (_canFill_1) then {
 	_canFill = true;
@@ -31,7 +32,7 @@ _text = getText (_config >> "displayName");
 
 if (!_hasbottleitem) exitWith {};
 
-if (!BP_isSwimming) then {
+if !((getPosASL player select 2) < -0.5) then {
 	player playActionNow "PutDown";
 };
 

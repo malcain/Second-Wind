@@ -41,7 +41,7 @@ if (_hasKnife or _hasKnifeBlunt) then
 	[player,"gut",0,false,_dis] call BP_fnc_objSpeak;  
 	[player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 	
-	_finished = call BP_fnc_medicAnim;
+	_finished = ["ainvpknlmstpsnonwnondr_medic3"] call BP_fnc_constructAnim;
 	if (_finished) then
 	{
 		//Remove Fire From Body

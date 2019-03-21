@@ -14,7 +14,7 @@ _canUse = count nearestObjects [_playerPos, ["Land_FuelStation_02_pump_F","Land_
 
 if (!_canUse) exitWith { cutText ["You must be near a fuel source to fill fuel cans." , "PLAIN DOWN"]; };
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["medic"] call BP_fnc_medicAnim;
 
 if (_finished) then
 {

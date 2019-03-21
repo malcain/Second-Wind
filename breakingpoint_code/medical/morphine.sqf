@@ -11,7 +11,7 @@ _unit = (_this select 3) select 0;
 
 call BP_fnc_medicalRemoveMedicActions;
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["medic"] call BP_fnc_medicAnim;
 if (_finished) then {
 	["medMorphine",(netID _unit),(netID player)] remoteExecCall ["BPServer_fnc_medicalUpdate",2];
 } else {

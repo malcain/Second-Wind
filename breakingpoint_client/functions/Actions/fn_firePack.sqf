@@ -11,17 +11,20 @@ private ["_obj"];
 
 _obj = _this select 3;
 
-player playActionNow "Medic";
+//player playActionNow "Medic";
+_finished = ["medic"] call BP_fnc_medicAnim;
 
-sleep 6;
+//sleep 6;
+if (_finished) then
+{
+	if (BP_hasFire == _obj) then {
+		BP_hasFire = objNull;
+	};
 
-if (BP_hasFire == _obj) then {
-	BP_hasFire = objNull;
+	deleteVehicle _obj;
+
+	cutText ["You have removed the fireplace.", "PLAIN DOWN"];
+
+	player removeAction s_player_fireout;
+	s_player_fireout = -1;
 };
-
-deleteVehicle _obj;
-
-cutText ["You have removed the fireplace.", "PLAIN DOWN"];
-
-player removeAction s_player_fireout;
-s_player_fireout = -1;

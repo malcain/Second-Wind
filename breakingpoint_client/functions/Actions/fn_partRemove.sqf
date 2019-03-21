@@ -62,7 +62,7 @@ if (_hasToolbox) then {
             [player,"repair",0,false] call BP_fnc_objSpeak;
             [player,10,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 			
-			_finished = call BP_fnc_medicAnim;
+			_finished = ["acts_carfixingwheel"] call BP_fnc_constructAnim;
 			if (_finished) then {
 				[_vehicle,_hitpoint,_damage,_pos,_part] remoteExec ["BP_fnc_vehicleRemove",2];
 				cutText [format["You have successfully taken %1 from the %2",_namePart,_nameType], "PLAIN DOWN"];

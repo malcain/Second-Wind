@@ -6,7 +6,7 @@
 
 	Alderon Games Pty Ltd
 */
-
+params ["_animation"];
 r_action = false;
 
 if (currentWeapon player in BP_MeleeWeapons) then
@@ -16,7 +16,7 @@ if (currentWeapon player in BP_MeleeWeapons) then
 	sleep 1;
 };
 
-player playActionNow "Medic";
+player playActionNow _animation; //"medicOther","medic"
 
 r_interrupt = false;
 _animState = animationState player;

@@ -28,7 +28,6 @@ class CfgFunctions
 			class houseExplosiveAdd {};
 			class houseInfo {};
 			class loadTurretAmmo {};
-			class medicAnim {};
 			class windCheck {};
 			class trapUpdate {};
 			class constructStorage {};
@@ -131,6 +130,8 @@ class CfgFunctions
 			file = "\breakingpoint_client\functions\Events";
 			class onFactionPoints {};
 			class onDraw3D {};
+			class medicAnim {};
+			class constructAnim {};
 		};
 		class Effects {
 			file = "\breakingpoint_client\functions\Effects";

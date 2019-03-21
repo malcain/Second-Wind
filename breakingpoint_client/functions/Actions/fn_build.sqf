@@ -14,7 +14,7 @@
 	-Custom Sounds, Animations, Effects
 */
 
-private ["_build","_object","_classname","_blueprint","_objectName","_isFlatEmpty"];
+private ["_build","_object","_classname","_blueprint","_objectName"];
 
 //Remove Actions To Avoid Duplicate Actions
 player removeAction s_player_buildComplete;
@@ -71,7 +71,7 @@ if (_build) then
 	} else {
 		_objectType = (typeOf _object);
 		_valid = _object call BP_fnc_objCheck;
-		if (!_valid) exitWith { cutText ["You must be on flat ground and clear of other objects.", "PLAIN DOWN"]; };
+		if (!_valid) exitWith { cutText ["Storage must be in place clear of other objects, not in the water or building.", "PLAIN DOWN"]; };
 
 		//Deattach Old Crate
 		detach _object;
@@ -86,7 +86,7 @@ if (_build) then
 		deleteVehicle _object;
 		
 		//Get Combo (If Safe)
-		_failure = false;
+		//_failure = false;
 
 		if (_isSafe) then 
 		{
@@ -111,7 +111,7 @@ if (_build) then
 			};
 		};
 		
-		if (_failure) exitWith {};
+		//if (_failure) exitWith {};
 		
 		_building = objNull;
 		if (_classname isKindOf "BP_HouseStorage" || {_classname isKindOf "BP_HouseObject"}) then {

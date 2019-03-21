@@ -22,7 +22,8 @@ _array = _this select 3;
 _array params ["_vehicle","_part","_hitpoint"];
 
 _type = typeOf _vehicle;
-_isWater = (surfaceIsWater (position player)) or BP_isSwimming;
+
+_isWater = (getPosASL player select 2) < -0.5;
 
 {BP_myCursorTarget removeAction _x} count s_player_repairActions;
 s_player_repairActions = [];
@@ -87,7 +88,7 @@ if (_damage > 0) then
 	//Animation Handles
 	_finished = false;
 	if (!_isWater) then {
-		_finished = call BP_fnc_medicAnim;
+		_finished = ["acts_carfixingwheel"] call BP_fnc_constructAnim;
 	} else {
 		_finished = true;
 	};

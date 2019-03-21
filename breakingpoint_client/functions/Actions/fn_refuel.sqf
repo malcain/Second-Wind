@@ -12,7 +12,7 @@ private ["_vehicle","_canSize","_configVeh","_capacity","_nameType","_curFuel","
 if (r_action_refuel or r_action_siphon or r_action_repair) exitWith { cutText ["An action is already in progress.", "PLAIN DOWN"]; };
 
 _vehicle = _this select 3;
-_isWater = (surfaceIsWater (position player)) or BP_isSwimming;
+_isWater = ((getPosASL player select 2) < -0.5);
 
 //Exit If Invalid Vehicle
 if (isNull _vehicle) exitWith {};
@@ -58,7 +58,7 @@ _finished = false;
 if (_isWater) then {
 	_finished = true;
 } else {
-	_finished = call BP_fnc_medicAnim;
+	_finished = ["medic"] call BP_fnc_medicAnim;
 };
 
 if (_finished) then

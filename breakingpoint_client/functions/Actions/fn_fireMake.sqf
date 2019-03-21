@@ -16,23 +16,25 @@ if !("PartWoodPile" in magazines player) exitWith { cutText ["You need wood to b
 // Remove Wood and Play Animation
 player removeMagazine "PartWoodPile";
 _dir = getDir player;
-player playActionNow "Medic";
-sleep 6;
-
-// Only One Active Fireplace per player
-if (!isNull BP_hasFire) then {
-	if (player distance BP_hasFire < 750) then {
-		cutText ["You can only have one active camp fire at a time. Your previous one has been destroyed.", "PLAIN DOWN"];
+//player playActionNow "Medic";
+_finished = ["ainvpknlmstpsnonwnondnon_medic0"] call BP_fnc_constructAnim;
+//sleep 6;
+if (_finished) then
+{
+	// Only One Active Fireplace per player
+	if (!isNull BP_hasFire) then {
+		if (player distance BP_hasFire < 750) then {
+			cutText ["You can only have one active camp fire at a time. Your previous one has been destroyed.", "PLAIN DOWN"];
+		};
+		deleteVehicle BP_hasFire;
+		BP_hasFire = objNull;
 	};
-	deleteVehicle BP_hasFire;
-	BP_hasFire = objNull;
+
+	BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"];
+	BP_hasFire setDir _dir;
+	BP_hasFire enableDynamicSimulation true;
+
+	cutText ["You have created a fireplace.", "PLAIN DOWN"];
+
+	player reveal BP_hasFire;
 };
-
-BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"];
-BP_hasFire setDir _dir;
-BP_hasFire enableDynamicSimulation true;
-
-cutText ["You have created a fireplace.", "PLAIN DOWN"];
-
-player reveal BP_hasFire;
-
