@@ -5,17 +5,12 @@
 	Real weather for MP GAMES v 1.5
 	*/
 
-	private ["_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_lastovercast", "_realtime", "_random","_startingdate", "_startingweather", "_timeforecast", "_daytimeratio", "_nighttimeratio", "_timesync", "_wind", "_wind2","_firstrun","_monsoon"];
+	private ["_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_lastovercast", "_realtime", "_startingdate", "_startingweather", "_timeforecast", "_daytimeratio", "_nighttimeratio", "_timesync", "_wind", "_wind2","_firstrun","_monsoon"];
 	
 	// Real time vs fast time
 	// true: Real time is more realistic weather conditions change slowly (ideal for persistent game)
 	// false: fast time give more different weather conditions (ideal for non persistent game) 
 	_realtime = false;
-
-	// Random time before new forecast
-	// true: forecast happens bewteen mintime and maxtime
-	// false: forecast happens at mintime
-	_random = false;
 
 	// Min time seconds (real time) before a new weather forecast
 	_mintime = 600;
@@ -60,48 +55,48 @@
 	_wind = random 3;
 	_wind2 = random 3;
 		case "CLEAR": {
-			wcweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
 		};
 		
 		case "CLOUDY": {
-			wcweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
 		};
 		
 		case "RAIN": {
-			wcweather = [0, 0, 0.7, [_wind, _wind2, true], date];
+			syncweather = [0, 0, 0.7, [_wind, _wind2, true], date];
 		};
 
 		default {
 			// clear
-			wcweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
 			diag_log "Real weather: wrong starting weather";
 		};
 	};
 
 	// add handler
 	if (hasInterface) then {
-		wcweatherstart = true;
-		"wcweather" addPublicVariableEventHandler {
+		syncweatherstart = true;
+		"syncweather" addPublicVariableEventHandler {
 			// first JIP synchronization
-			if(wcweatherstart) then {
-				wcweatherstart = false;
+			if(syncweatherstart) then {
+				syncweatherstart = false;
 				skipTime -24;
-				86400 setRain (wcweather select 0);
-				86400 setfog (wcweather select 1);
-				86400 setOvercast (wcweather select 2);
+				86400 setRain (syncweather select 0);
+				86400 setfog (syncweather select 1);
+				86400 setOvercast (syncweather select 2);
 				skipTime 24;
 				simulweatherSync;
-				setwind (wcweather select 3);
-				setdate (wcweather select 4);
+				setwind (syncweather select 3);
+				setdate (syncweather select 4);
 			}else{
-				wcweather = _this select 1;
-				60 setRain (wcweather select 0);
-				60 setfog (wcweather select 1);
-				60 setOvercast (wcweather select 2);
+				syncweather = _this select 1;
+				60 setRain (syncweather select 0);
+				60 setfog (syncweather select 1);
+				60 setOvercast (syncweather select 2);
 				if (!_monsoon) then {
-				setwind (wcweather select 3);
+				setwind (syncweather select 3);
 				};
-				setdate (wcweather select 4);
+				setdate (syncweather select 4);
 			};
 		};
 	};
@@ -112,13 +107,13 @@
 
 	// apply weather
 	skipTime -24;
-	86400 setRain (wcweather select 0);
-	86400 setfog (wcweather select 1);
-	86400 setOvercast (wcweather select 2);
+	86400 setRain (syncweather select 0);
+	86400 setfog (syncweather select 1);
+	86400 setOvercast (syncweather select 2);
 	skipTime 24;
 	simulweatherSync;
-	setwind (wcweather select 3);
-	setdate (wcweather select 4);
+	setwind (syncweather select 3);
+	setdate (syncweather select 4);
 
 	// sync server & client weather & time
 	[_realtime, _timesync, _daytimeratio, _nighttimeratio] spawn {
@@ -130,8 +125,8 @@
 		_nighttimeratio =  _this select 3;
 
 		while { true } do {
-			wcweather set [4, date];
-			publicvariable "wcweather";
+			syncweather set [4, date];
+			publicvariable "syncweather";
 			//if(!_realtime) then { 
 				if(sunOrMoon < 0.5) then {
 					setTimeMultiplier _nighttimeratio;
@@ -144,130 +139,116 @@
 	};
 
 	_rain = 0;
-	_overcast = 0.70;
+	_overcast = 0.50;
 	_lastovercast = 0.55;
 	_wind = 4;
-	_overcast = 0.70;
-	_firstrun = false;
+	_firstrun = true;
+	
 
 	while {true} do {
-		//if (!_firstrun) then {
+		//if (_firstrun) then {
 		//znul = [-1,-1,-1,false,true,false,"none",false,false] execVM "ALthunder\alias_thunderbolt.sqf";
 		//};
-		if (sunOrMoon < 0.5) 
-		then {
-		_overcast = random 1;
-		if(_overcast > 0.80) then {
-		_rain = 0.2 + (random 0.7);
-		}
-		else {
-		if(_overcast >= 0.67)
-		then {
-		_rain = 0.1 + (random 0.35);
-		}
-		else {
-		if((_overcast >= 0.52) and (random 100 < 95)) then {
-		_rain = 0.1 + (random 0.15);
-			}
-		else {
-			_rain = 0;
-		};
-		};
-		};
-		if ((_lastovercast < 0.50) and (_overcast >= 0.65)) then {
-			_wind = (random 16) - 8; 
-			_wind2 = (random 16) - 8;
-		}
-		else {
-		if((_overcast >= 0.60) and (_overcast < 0.78))  
-		then {
-			_wind = (random 10) - 5;
-			_wind2 = (random 10) - 5;
-		} 
-			else {
-			if((_overcast > 0.50) or (_lastovercast - _overcast > 0.38)) then {
-			_wind = (random 6) - 3;
-			_wind2 = (random 6) - 3 ;
-		} 
-		else {
-			_wind = (random 4) - 2;
-			_wind2 = (random 4) - 2;
-		};
-		};
-		};
-		if(((date select 3 >= 17) and (date select 3 <= 20)) or ((date select 3 >= 4) and (date select 3 <= 6)))  then {
-			if((abs _wind >= 2) or (abs _wind2 >= 2)) then {
-				_fog = 0;
+		if (sunOrMoon > 0.5) then { //Daytime!
+			_overcast = random 1;
+			if(_overcast > 0.80) then {
+			_rain = 0.4 + (random 0.6);
 			} else {
-				_fog = [0.9, 0.17, random 10];
+				if(_overcast >= 0.67) then {
+				_rain = 0.25 + (random 0.35);
+				} else {
+					if((_overcast >= 0.54) and (random 100 < 45)) then {
+					_rain = 0.1 + (random 0.25);
+					} else { 
+					_rain = 0;
+					};
+				};
 			};
-		}  else {
+			if ((_lastovercast < 0.50) and (_overcast >= 0.67)) then {
+				_wind = (random 16) - 8; 
+				_wind2 = (random 16) - 8;
+			} else {
+				if((_overcast >= 0.60) and (_overcast < 0.78)) then {
+					_wind = (random 10) - 5;
+					_wind2 = (random 10) - 5;
+				} else {
+					if((_overcast > 0.50) or (_lastovercast - _overcast > 0.38)) then {
+						_wind = (random 6) - 3;
+						_wind2 = (random 6) - 3 ;
+					} else {
+						_wind = (random 4) - 2;
+						_wind2 = (random 4) - 2;
+					};
+				};
+			};
+			if(((date select 3 >= 17) and (date select 3 <= 20)) or ((date select 3 >= 4) and (date select 3 <= 6)))  then {
+				if((abs _wind >= 2) or (abs _wind2 >= 2)) then {
+					_fog = 0;
+				} else {
+					_fog = [0.9, 0.17, random 10];
+				};
+			} else {
 				_fog = 0;
-		};
-		}
-		else {
-		_overcast = random 1;
-		if(_overcast >= 0.85) then {
-		_rain = 0.2 + (random 0.7);
-		}
-		else {
-		if(_overcast >= 0.77)
-		then {
-		_rain = 0.1 + (random 0.35);
-		}
-		else {
-		if((_overcast >= 0.62) and (random 100 < 50)) then {
-		_rain = 0.04 + (random 0.06);
-			}
-		else {
-			_rain = 0;
-		};
-		};
-		};
-		if ((_lastovercast < 0.50) and (_overcast >= 0.65)) then {
-			_wind = (random 16) - 8; 
-			_wind2 = (random 16) - 8;
-		}
-		else {
-		if((_overcast >= 0.6) and (_overcast < 0.78))
-		then {
-			_wind = (random 8) - 4;
-			_wind2 = (random 8) - 4;
-		} 
-			else {
-			if(_lastovercast - _overcast > 0.38) then {
-			_wind = (random 5) - 2.5;
-			_wind2 = (random 5) - 2.5;
-		} 
-		else {
-			_wind = (random 4) - 2;
-			_wind2 = (random 4) - 2;
-		};
-		};
-		};
-		if((abs _wind >= 2) or (abs _wind2 >= 2)) then {
+			};
+		} else { //The Night is Dark and full of Horrors
+			_overcast = random 1;
+			//Rain forecast:
+			if(_overcast >= 0.9) then {
+				_rain = 0.4 + (random 0.6);
+			} else {
+				if(_overcast >= 0.78) then {
+					_rain = 0.15 + (random 0.35);
+				} else {
+					if((_overcast >= 0.67) and (random 100 < 65)) then {
+						_rain = 0.1 + (random 0.2);
+					} else {
+						_rain = 0;
+					};
+				};
+			};
+			//Wind:
+			if ((_lastovercast < 0.50) and (_overcast >= 0.65)) then {
+				_wind = (random 16) - 8; 
+				_wind2 = (random 16) - 8;
+			} else {
+				if((_overcast >= 0.6) and (_overcast < 0.78)) then {
+					_wind = (random 8) - 4;
+					_wind2 = (random 8) - 4;
+				} else {
+					if(_lastovercast - _overcast > 0.38) then {
+						_wind = (random 5) - 2.5;
+						_wind2 = (random 5) - 2.5;
+					} else {
+						_wind = (random 4) - 2;
+						_wind2 = (random 4) - 2;
+					};
+				};
+			};
+			//Fog:
+			if((abs _wind >= 2) or (abs _wind2 >= 2)) then {
 				_fog = [0,0.01,0];
 			} else {
-				if (rain >= 0.45) then {
-				_fog = [0.2 + (random 0.3), 0.01, 0];
+				if (rain > 0.65) then {
+					_fog = [0.7 + (random 0.3), 0.01, 0];
 				} else {
-				if ((_lastovercast <= 0.4) and (_overcast <= 0.4)) then {
-				_fog = [0.1 + (random 0.3), 0.01, 0];
+					if ((_lastovercast < 0.4) and (_overcast < 0.4)) then {
+						_fog = [0.1 + (random 0.3), 0.01, 0];
 					} else {
-					_fog = [0, 0.01, 0];
+						_fog = [0, 0.01, 0];
 					};
 				};
 			};
 		};
-		wcweather = [_rain, _fog, _overcast, [_wind, _wind2, true], date];
-		180 setfog (wcweather select 1);
-		2 setOvercast (wcweather select 2);
-		setwind (wcweather select 3);
+		syncweather = [_rain, _fog, _overcast, [_wind, _wind2, true], date];
+		180 setfog (syncweather select 1);
+		2 setOvercast (syncweather select 2);
+		setwind (syncweather select 3);
 		if (_firstrun) then {
-		uisleep 750;
+			_firstrun = false;
+		} else {
+			sleep 750;
 		};
-		_firstrun = true;
-		180 setRain (wcweather select 0);
+		180 setRain (syncweather select 0);
 		if (((abs _wind >= 4) or (abs _wind2 >= 4))  and (_overcast >= 0.70)) then {
 		if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 		null = [random (360),580,true,true,false,false,false,1] execvm "AL_monsoon\al_monsoon.sqf";
@@ -276,9 +257,7 @@
 
 		_lastovercast = _overcast;
 		
-		if(_random) then {
-			_timeforecast = _mintime + (random (_maxtime - _mintime));
-		};
+		//_timeforecast = _mintime + (random (_maxtime - _mintime));
 		
 		sleep _timeforecast;
 		_monsoon = false;
