@@ -4120,7 +4120,7 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_semicloudy_sky.paa";
 					skyR="126map\data\OldSky\sky_semicloudy_lco.paa";
 					horizon="126map\data\OldSky\sky_clean_horizont_sky.paa";
-					overcast=0.35000001;
+					overcast=0.40000001;
 					alpha=0.80000001;
 					size=0.5;
 					height=0.80000001;
@@ -4227,7 +4227,7 @@ class CfgWorlds
 			alphaSharpness=0.85000002;
 			selfShadowScale=0.90499997;
 			mieAsymmetry=0.50870001;
-			minimumLightElevationDegrees=16;
+			minimumLightElevationDegrees=6;
 			directLightCoef=1;
 			indirectLightCoef=0.039000001;
 			fogStart=0;
