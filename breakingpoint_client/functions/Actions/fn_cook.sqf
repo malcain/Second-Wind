@@ -28,7 +28,8 @@ _cookedmeat = meatcooked;
 		call BP_fnc_medicalRemoveMedicActions;
 		r_action = false;
 
-		player playActionNow "Medic";
+		//player playActionNow "Medic";
+		player playmovenow "AinvPknlMstpSnonWnonDr_medic2";
 
 		r_interrupt = false;
 		_animState = animationState player;

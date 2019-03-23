@@ -9,7 +9,7 @@
 
 private ["_vehicle","_isWater","_configVeh","_capacity","_nameText","_isMan","_isAnimal","_isZombie"];
 _vehicle = _this select 3;
-_isWater = (surfaceIsWater (position player)) or BP_isSwimming;
+_isWater = (getPosASL player select 2) < -0.5;
 
 //Exit If Invalid Vehicle
 if (isNull _vehicle) exitWith {};
@@ -98,7 +98,7 @@ if (_newFuel > 0) then
 	if (_isWater) then {
 		_finished = true;
 	} else {
-		_finished = call BP_fnc_medicAnim;
+		_finished = ["medic"] call BP_fnc_medicAnim;
 	};
 
 	if (_finished) then

@@ -43,7 +43,7 @@ if !(simulationEnabled _body) then { _body enableSimulation true; };
 sleep 1;
 
 //Handle Animation Result
-_finished = call BP_fnc_medicAnim;
+_finished = ["medic"] call BP_fnc_medicAnim;
 
 if (_finished) then 
 {

@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-private ["_object","_valid","_list","_isRock","_xStr"];
+private ["_object","_valid","_list","_isRock","_xStr","_location"];
 _object = _this;
 _objectPos = (getPosATL _object);
 _objectType = (typeOf _object);
@@ -23,6 +23,9 @@ _onRoad = isOnRoad _objectPos;
 
 _isInsideObject = [_object] call BP_fnc_isInsideBuilding;
 _isInsidePlayer = [player] call BP_fnc_isInsideBuilding;
+
+_location = player modelToWorld [0,0.3,0];
+//if ((_location select 2) < 0) then { _location set [2,0]; };
 
 _badStrings =
 [
@@ -42,7 +45,7 @@ _badStrings =
 //Make sure the Object Isn't Near Rocks and the object is not a house Object
 if (!_houseObject && {!_houseStorage}) then 
 {
-	_list = nearestObjects [player, [],10];
+	_list = nearestObjects [_location, [],8];
 	_index = _list find _object;
 	if (_index >= 0) then { _list deleteAt _index; };
 	{
@@ -55,7 +58,7 @@ if (!_houseObject && {!_houseStorage}) then
 };
 
 //Make sure the object surface isn't in water
-if (surfaceIsWater _objectPos) exitWith {false};
+if (surfaceiswater _objectPos) exitWith {false};
 
 //Can't Place Rock Stashes On Roads
 if (_rockStash) then {

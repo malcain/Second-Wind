@@ -100,7 +100,7 @@ class CfgFunctions
 			class getBuildingID {};
 			class isInsideBuilding {};
 			class isInsideBuildingPos {};
-			class isUnderCover {};
+			class isUnderRoof {};
 			class setPitchBank {};
 			class sunRise {};
 			class surfaceNoise {};

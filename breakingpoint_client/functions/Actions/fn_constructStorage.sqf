@@ -108,7 +108,7 @@ _dis=20;
 [player,"tentunpack",0,false,_dis] call BP_fnc_objSpeak;
 [player,_dis,true,_playerPos] spawn BP_fnc_zombieAlert;
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["ainvpknlmstpsnonwnondr_medic5"] call BP_fnc_constructAnim;
 if (!_finished) exitWith {};
 
 if (_blueprint == "BlueprintIED1") exitWith
@@ -263,13 +263,15 @@ switch (_class) do {
 	//Ranger
 	case 1: { _ObjClassFaction = _ObjClassFaction + "_Ranger"};
 	//Outlaw
-	case 2: { _ObjClassFaction = _ObjClassFaction + "Outlaw"};
+	case 2: { _ObjClassFaction = _ObjClassFaction + "_Outlaw"};
 	//Hunter
 	case 3: { _ObjClassFaction = _ObjClassFaction + "_Hunter"};
 	//Nomad
 	case 4: { _ObjClassFaction = _ObjClassFaction + "_Nomad"};
 	//Survivalist
 	case 5: { _ObjClassFaction = _ObjClassFaction + "_Survivalist"};
+	//Survivalist
+	case 5: { _ObjClassFaction = _ObjClassFaction + "_Scavenger"};
 };
 
 //Handle Faction Specific Object Name If It Exists in CfgVehicles

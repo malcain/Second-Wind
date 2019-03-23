@@ -12,7 +12,7 @@ _vehicle = vehicle player;
 _cursorTarget = cursorTarget;
 _isPlayerChar = (isPlayer _cursorTarget);
 _inVehicle = (_vehicle != player);
-_isWater = (surfaceIsWater (position player)) or BP_isSwimming;
+_isWater = ((getPosASL player select 2) < -0.5);
 _isStove = (_cursorTarget isKindOf "BP_Stove");
 _isCookable = (inflamed _cursorTarget or _isStove);
 _hasAntiB = 	"ItemAntibiotic" in magazines player;

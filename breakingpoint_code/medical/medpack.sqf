@@ -15,7 +15,7 @@ call BP_fnc_medicalRemoveMedicActions;
 
 if (isNull _unit) exitWith {};
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["medic"] call BP_fnc_medicAnim;
 if (_finished) then {
 	["medMedkit",(netID _unit),(netID player)] remoteExecCall ["BPServer_fnc_medicalUpdate",2];
 } else {

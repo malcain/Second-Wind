@@ -24,7 +24,7 @@ if (_needsSurgery) exitWith { cutText ["Your wounds are too severe, you need Sur
 
 call BP_fnc_medicalRemoveMedicActions;
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["medic"] call BP_fnc_medicAnim;
 if (_finished) then
 {
 	["medFieldDressing",(netID _unit),(netID player)] remoteExecCall ["BPServer_fnc_medicalUpdate",2];

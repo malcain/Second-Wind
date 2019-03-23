@@ -16,7 +16,7 @@ call BP_fnc_medicalRemoveMedicActions;
 
 if (isNull _unit) exitWith {};
 
-_finished = call BP_fnc_medicAnim;
+_finished = ["medicOther"] call BP_fnc_medicAnim;
 if (_finished) then 
 {
 	_eventName = "medSurgery";
