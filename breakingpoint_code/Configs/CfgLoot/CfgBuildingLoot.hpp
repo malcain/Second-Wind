@@ -1853,8 +1853,8 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"BP_P90TR_BASE","weaponA"},
-			{"BP_P90C_BASE","weaponA"},
+			{"BP_P90TR_black","weaponA"},
+			{"BP_P90CTR_black","weaponA"},
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{

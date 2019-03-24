@@ -13,15 +13,16 @@ scriptName "BP_serverMgr";
 #define CLEANUP_PLAYER_TIME 750
 #define CLEANUP_BODY_TIME 120
 #define CLEANUP_WPNHOLDER_TIME 300
+#define CLEANUP_SIMWPNHOLDER_TIME 900
 #define CLEANUP_LOOT_TIME 1020
 
 #define SIM_CHECK_INT 30
-#define SIM_DIST_LOOT 8
+//#define SIM_DIST_LOOT 8
 #define SIM_DIST_VEH 1400
 #define SIM_DIST_MAN 1400
 #define SIM_DIST_ZED 1000
 
-#define QUEUE_CHECK_INT 10
+//#define QUEUE_CHECK_INT 10
 
 #define DUPE_CHECK_INT 60
 
@@ -32,8 +33,8 @@ scriptName "BP_serverMgr";
 private ["_lastSimulationCheck","_lastCleanupCheck","_lastQueueCheck","_lastHelicrashCheck","_lastTimeoutCheck","_lastDebugCheck","_helicrashCount"];
 _lastSimulationCheck = diag_tickTime;
 _lastCleanupCheck = diag_tickTime;
-_lastQueueCheck = diag_tickTime;
-_lastDupeCheck = diag_tickTime;
+//_lastQueueCheck = diag_tickTime;
+//_lastDupeCheck = diag_tickTime;
 _lastHelicrashCheck = diag_tickTime;
 _lastTimeoutCheck = diag_tickTime;
 _lastDebugCheck = diag_tickTime;
@@ -198,7 +199,7 @@ waitUntil
 								if (_processedDeath == 0) then {
 									_x setVariable ["processedDeath",diag_tickTime];
 								} else {
-									if ((diag_tickTime - _processedDeath) > CLEANUP_WPNHOLDER_TIME) then 
+									if ((diag_tickTime - _processedDeath) > CLEANUP_SIMWPNHOLDER_TIME) then 
 									{
 										_nearby = [(getPosATL _x),5] call BP_fnc_nearbyPlayers;
 										if (!_nearby) then {
@@ -312,9 +313,9 @@ waitUntil
 	};
 
 	//------ Vehicle Queue Updates ---------//
-	if ((diag_tickTime - _lastQueueCheck) > QUEUE_CHECK_INT) then
-	{
-		_lastQueueCheck = diag_tickTime;
+	//if ((diag_tickTime - _lastQueueCheck) > QUEUE_CHECK_INT) then
+	//{
+		//_lastQueueCheck = diag_tickTime;
 
 		if !(BP_ObjectUpdateQueue isEqualTo []) then
 		{
@@ -328,7 +329,7 @@ waitUntil
 				["serverMgr: Processing on %1 From Update Queue NetID: %2",_netObj,_netID] call BP_fnc_debugConsoleFormat;
 			};
 		};
-	};
+	//};
 	
 	//-- Anti Duping
 	/*
@@ -502,7 +503,7 @@ waitUntil
 	//	} count diag_activeMissionFSMs;
 	//};
 
-	sleep 5;
+	sleep 10;
 	
 	false
 };

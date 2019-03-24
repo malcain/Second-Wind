@@ -54843,7 +54843,7 @@ class CfgMagazines {
 		picture = "\breakingpoint_weapons\icons\m_22lr_ca.paa";
 		count = 5;
 		ammo = "BP_22LR_Ball";
-		initSpeed = 520;
+		initSpeed = 300;
 		descriptionShort = "Small caliber high velocity rimfire cartridge.";
 		mass = 2;
 	};
@@ -54855,7 +54855,7 @@ class CfgMagazines {
 		picture = "\breakingpoint_weapons\icons\m_22lr_ca.paa";
 		count = 25;
 		ammo = "BP_22LR_Ball";
-		initSpeed = 520;
+		initSpeed = 300;
 		descriptionShort = "Small caliber high velocity rimfire cartridge.";
 		mass = 7;
 	};
@@ -58807,7 +58807,7 @@ class CfgAmmo {
 		cost = 1.200000;
 		airLock = 1;
 		typicalSpeed = 828;
-		caliber = 1.6;
+		caliber = 1.65;
 		legFracture = true;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
 		tracerScale = 0.600000;
@@ -58859,7 +58859,7 @@ class CfgAmmo {
 		cost = 1.200000;
 		airLock = 1;
 		typicalSpeed = 865;//faster, lighter bullet
-		caliber = 1.6;
+		caliber = 1.65;
 		legFracture = true;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
 		tracerScale = 0.600000;
@@ -60136,12 +60136,12 @@ class CfgAmmo {
 	class BP_22LR_Ball: B_9x21_Ball
 	{
 	    hit = 9.65;
-		typicalSpeed = 520;
+		typicalSpeed = 300; //old - 520, changed to 300 to make them subsonic.
 		caliber = 0.200000;
 		simulationStep = 0.09;
 		audibleFire = 2;
 		visibleFire = 10;
-		airFriction = -0.001832;
+		airFriction = -0.001058; //old: "airFriction = -0.001832", changed to compensate "typicalspeed" decrease.
 		supersonicCrackNear[] = {};
 		supersonicCrackFar[] = {};
 		class Medical
@@ -60830,7 +60830,7 @@ class CfgAmmo {
 		cartridge = "FxCartridge_Small";
 		typicalSpeed = 600;
 		airFriction = -0.0011;
-		caliber = 1.200000;
+		caliber = 1.950000;
 		audibleFire = 35.00000;
 		visibleFire = 10;
 		legFracture = true;
@@ -60879,7 +60879,7 @@ class CfgAmmo {
 		indirectHit = 0;
 		indirectHitRange = 0.000000;
 		airFriction = -0.001900;
-		caliber = 0.620000;
+		caliber = 1.640000;
 		simulationStep = 0.09;
 		visibleFire = 18.00000;
 		audibleFire = 35.00000;
@@ -60937,7 +60937,7 @@ class CfgAmmo {
 		visibleFire = 10;
 		audibleFire = 27;
 		airFriction = -0.00215;
-		caliber = 1.0;
+		caliber = 1.4;
 		deflecting = 30;
 		simulation = "shotShell";
 		model = "";

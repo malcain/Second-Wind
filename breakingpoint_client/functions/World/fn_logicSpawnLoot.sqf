@@ -90,9 +90,9 @@ for "_i" from 1 to _lootRnd do
 		};
 
 		if (count _itemType > 2) then {
-			[_itemType select 0, _itemType select 1, _itemType select 2, _iPos] call BP_fnc_spawnLoot;
+			[_itemType select 0, _itemType select 1, _itemType select 2, _iPos] call BP_fnc_spawnLootDynamic;
 		} else {
-			[_itemType select 0, _itemType select 1, "Default", _iPos] call BP_fnc_spawnLoot;
+			[_itemType select 0, _itemType select 1, "Default", _iPos] call BP_fnc_spawnLootDynamic;
 		};
 	} else {
 		//["building_spawnLoot: Error: Building Type: %1 with Position %2 Not Found in BP-CBLBase.",_buildingType,_x] call BP_fnc_debugConsoleFormat;

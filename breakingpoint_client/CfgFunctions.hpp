@@ -217,6 +217,7 @@ class CfgFunctions
 			class checkStealthAudio {};
 			class damageActions {};
 			class spawnLoot {};
+			class spawnLootDynamic {};
 			class spawnLootBox {};
 			class spawnLootHeliCrash {};
 			class selfActions {};

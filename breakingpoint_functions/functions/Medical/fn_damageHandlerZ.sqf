@@ -9,33 +9,34 @@
 
 params ["_zed","_selection","_damage","_source","_projectile"];
 
-//if (_damage == 0) then {
-//exitwith {}; };
+
 //Handle Damage being Applied
-//_hitpoint = "HitBody";
-//_caliber = getNumber (configFile >> "CfgAmmo" >> _projectile >> "caliber");
-if !(_projectile == "") then {
-	if (_selection == "head_hit" or {_selection == "neck_hit"}) then {	//_hitpoint = "HitHead";
-	_headdmg = 0.9 + (random 0.4);
-	_zed setDamage _headdmg;
-		if (_headdmg >= 1) then {
-		_zed setFace "SAN_HeadgoreNoFace_base";
-		//_zed setVariable ["noHead",true,true];
-		//_zed remoteExecCall ["BPServer_fnc_headGore"];
-		[netID _zed] remoteExecCall ["BPServer_fnc_headGore",2];
-		[_zed, "SAN_HeadgoreNoFace_base"] remoteExecCall ["setFace"];
+if (_projectile != "") then {
+	if (_selection == "head_hit") then {	//_hitpoint = "HitHead";
+		//_caliber = getNumber (configFile >> "CfgAmmo" >> _projectile >> "caliber");
+		//_simulation = getNumber (configFile >> "CfgAmmo" >> _projectile >> "simulation");
+		//_critical = _caliber > 1.2 or _simulation == "shotSpread";
+		//if (_critical) then { //Gore
+			_headdmg = 1;
+			_zed setFace "SAN_HeadgoreNoFace_base";
+			//_zed setVariable ["noHead",true,true];
+			[netID _zed] remoteExecCall ["BPServer_fnc_headGore",2];
+			[_zed, "SAN_HeadgoreNoFace_base"] remoteExecCall ["setFace"];
 
-		removeHeadgear _zed;
-		removeGoggles _zed;
+			removeHeadgear _zed;
+			removeGoggles _zed;
 
-		_hmd = (hmd _zed);
-		_zed unassignItem _hmd;
-		_zed removeItem _hmd;
+			_hmd = (hmd _zed);
+			_zed unassignItem _hmd;
+			_zed removeItem _hmd;
 
-		_HeadExplodeArray = ["san_headgore\sounds\HeadExplode1.ogg", "san_headgore\sounds\HeadExplode2.ogg", "san_headgore\sounds\HeadExplode3.ogg"];
-		_HeadExplode = selectRandom _HeadExplodeArray;
-		playsound3d [format ["%1",_HeadExplode], _zed,false, getPosASL _zed, 7, 1, 25];
-		};
+			_HeadExplodeArray = ["breakingpoint_sfx\gore\HeadExplode1.ogg", "breakingpoint_sfx\gore\HeadExplode2.ogg", "breakingpoint_sfx\gore\HeadExplode3.ogg"];
+			_HeadExplode = selectRandom _HeadExplodeArray;
+			playsound3d [format ["%1",_HeadExplode], _zed,false, getPosASL _zed, 7, 1, 25];
+		//} else {
+			//_headdmg = 0.9 + (random 0.4);
+		//};
+		_zed setDamage _headdmg;
 	};
 };
 
