@@ -43,9 +43,9 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	
 	_nearbyAnimals = [_playerPos,100] call BP_fnc_nearbyAnimals;
 	if (random 100 < 70) then {
-	if (player distance _Pos < BP_AnimalDistance and NOT surfaceIsWater _Pos) then 
+	if (player distance _Pos < BP_AnimalDistance and (NOT surfaceIsWater _Pos)) then 
 	{
-		_item = createVehicle ["groundWeaponHolder", _Pos, [], RADIUS, "CAN_COLLIDE"];
+		_item = createVehicle ["WeaponHolderSimulated_Scripted", _Pos, [], RADIUS, "CAN_COLLIDE"];
 		_item addMagazineCargoGlobal ["FoodMushroom",1];
 		_item setPos _Pos;
 	};

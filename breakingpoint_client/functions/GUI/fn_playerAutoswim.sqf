@@ -13,7 +13,7 @@ if (BP_isUndead) exitWith {};
 	
 if (_isHostage) exitWith {};
 
-_animspeedcoef = getAnimSpeedCoef player;
+//_animspeedcoef = getAnimSpeedCoef player;
 
 if (time - BP_lastCheckBit > 1) then
 {
@@ -22,6 +22,7 @@ if (time - BP_lastCheckBit > 1) then
 	r_action_rest = false;
 		
 	if ((getPosASL player select 2) > -1) exitWith {};
+	if ((getterrainheightASL position player) > -1.5) exitWith {};
 	
 	if (!BP_AutoRun && {!r_fracture_legs} && {!(r_hit_legs > 0)}) then 
 	{
@@ -35,19 +36,18 @@ if (time - BP_lastCheckBit > 1) then
 		
 		//Autoswim speed depends on player's carrying weight.
 		_weight = loadAbs player;
-		if (_weight < 620) then {
+		if (_weight < 670) then {
 			player setanimspeedcoef 1.5;
 		} else {
-			if (_weight >= 800) then {
+			if (_weight >= 780) then {
 				player setanimspeedcoef 1;
 			} else {
-				player setanimspeedcoef 1.3;
+				player setanimspeedcoef 1.25;
 			};
 		};
 		
 		BP_AutoRunThread = [] spawn 
 		{
-			sleep 0.05;
 			r_interrupt = false;
 
 			waitUntil
@@ -62,15 +62,15 @@ if (time - BP_lastCheckBit > 1) then
 				if (r_player_unconscious) exitWith {true};
 				
 				player playActionNow "FastF";
-
+				
 				//Delay
-				sleep 0.1;
-			
+				sleep 0.05;
+				
 				//Condition Checks
-				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASL player select 2) > -1});
+				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getterrainheightASL getPosATL player) > -1.5});
 			};
 			
-			player setanimspeedcoef _animspeedcoef;
+			player setanimspeedcoef 1;
 			BP_AutoRun = false;
 		};
 		[BP_AutoRunThread] call BP_fnc_addThreadHandle;

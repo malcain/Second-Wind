@@ -96,7 +96,7 @@ execvm "initserver.sqf";
 if (hasInterface) then {
 [] execVm "nighttime.sqf";
 [] execVM "rain_drop.sqf";
-
+};
 	//run on all player clients incl. player host
 /*execVM "AL_radiation\al_ini_fnc.sqf";
 
@@ -123,7 +123,7 @@ if (glowindark) then
 		} else {sleep 60};
 	};
 };*/
-};
+//};
 
 if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 
@@ -208,7 +208,7 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 // Breaking Point - Player Client Integration
 initialized = true;
 
-setViewDistance 2500;
+setViewDistance 2400;
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 
 waitUntil {time > 0};

@@ -634,8 +634,8 @@ class CfgWorlds
 						{0.090000004,0.13699999,0.22},
 						0
 					};
-					apertureMin=5;
-					apertureStandard=5;
+					apertureMin=4.5;
+					apertureStandard=4.5;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -710,8 +710,8 @@ class CfgWorlds
 						{0.093999997,0.141,0.23100001},
 						0
 					};
-					apertureMin=5;
-					apertureStandard=5;
+					apertureMin=4;
+					apertureStandard=4;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -778,8 +778,8 @@ class CfgWorlds
 						{0.093999997,0.141,0.23100001},
 						0
 					};
-					apertureMin=4.5;
-					apertureStandard=5.5;
+					apertureMin=4;
+					apertureStandard=5;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -1642,8 +1642,8 @@ class CfgWorlds
 						{0.090000004,0.13699999,0.22},
 						0
 					};
-					apertureMin=5.5;
-					apertureStandard=5.5;
+					apertureMin=4.5;
+					apertureStandard=4.5;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -1718,8 +1718,8 @@ class CfgWorlds
 						{0.093999997,0.141,0.23100001},
 						0.010
 					};
-					apertureMin=5;
-					apertureStandard=5;
+					apertureMin=4.5;
+					apertureStandard=4.5;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -1786,8 +1786,8 @@ class CfgWorlds
 						{0.093999997,0.141,0.23100001},
 						0.025
 					};
-					apertureMin=4.5;
-					apertureStandard=5.5;
+					apertureMin=4;
+					apertureStandard=5;
 					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -1858,8 +1858,8 @@ class CfgWorlds
 						{0.093999997,0.141,0.23100001},
 						0.015
 					};
-					apertureMin=4.5;
-					apertureStandard=5.5;
+					apertureMin=4;
+					apertureStandard=5;
 					apertureMax=10;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -2646,7 +2646,7 @@ class CfgWorlds
 					sky[]={0.23100001,0.31400001,0.46700001};
 					skyAroundSun[]={0.2,0.25,0.44999999};
 					fogColor[]={0.090000004,0.13699999,0.22};
-					apertureMin=3;
+					apertureMin=2.4;
 					apertureStandard=4;
 					apertureMax=8;
 					standardAvgLum=4;
@@ -2718,7 +2718,7 @@ class CfgWorlds
 					};
 					skyAroundSun[]={0.2,0.25,0.44999999};
 					fogColor[]={0.122,0.169,0.255};
-					apertureMin=3.5;
+					apertureMin=3;
 					apertureStandard=4;
 					apertureMax=8;
 					standardAvgLum=4;
@@ -2782,7 +2782,7 @@ class CfgWorlds
 					};
 					skyAroundSun[]={0.2,0.25,0.44999999};
 					fogColor[]={0.122,0.169,0.255};
-					apertureMin=3.7;
+					apertureMin=3.5;
 					apertureStandard=4;
 					apertureMax=8;
 					standardAvgLum=4;
@@ -3486,7 +3486,7 @@ class CfgWorlds
 						{0.36899999,0.447,0.565},
 						10.2
 					};
-					apertureMin=95;
+					apertureMin=75;
 					apertureStandard=100;
 					apertureMax=120;
 					standardAvgLum=8000;
@@ -3562,7 +3562,7 @@ class CfgWorlds
 						{0.40000001,0.47999999,0.60000002},
 						10.5
 					};
-					apertureMin=100;
+					apertureMin=85;
 					apertureStandard=110;
 					apertureMax=120;
 					standardAvgLum=8000;
@@ -4287,11 +4287,11 @@ class CfgWorlds
 				{
 					overcast=0.5;
 					cloudiness=0.42;
-					extinction=10;
+					extinction=9;
 					diffusivity=0.001;
 					cloudBaseKm=1.8;
 					cloudHeightKm=13.5;
-					indirectLight=0.1;
+					indirectLight=0.3;
 					seqFileKeyframe=4;
 				};
 				class Weather5: DefaultKeyframe

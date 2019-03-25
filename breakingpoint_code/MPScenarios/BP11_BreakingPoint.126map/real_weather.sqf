@@ -29,9 +29,9 @@
 	saveProfileNamespace;
 	
 	if (!_timeState) then {
-	_startingdate = [2035, 12, 10, 07, 40];
+	_startingdate = [2035, 10, 10, 08, 00];
 	} else {
-	_startingdate = [2035, 12, 10, 17, 00];
+	_startingdate = [2035, 10, 10, 16, 00];
 	}; 
 	
 	// Mission starting weather "CLEAR|CLOUDY|RAIN";
@@ -44,85 +44,54 @@
 	if(_mintime > _maxtime) exitwith {hint format["Real weather: Max time: %1 can no be higher than Min time: %2", _maxtime, _mintime];};
 	_timeforecast = _mintime;
 
-	// Returns array of dates for given year when moon is at its fullest
-/*fnc_fullMoonDates = 
-{
-	private _year = param [0, 2035];
-	private ["_date", "_phase", "_fullMoonDate"];
-	private _fullMoonPhase = 1;
-	private _waxing = false;
-	private _fullMoonDates = [];
-	for "_i" from dateToNumber [_year, 1, 1, 0, 0] to dateToNumber [_year, 12, 31, 23, 59] step 1 / 365 do
-	{
-		_date = numberToDate [_year, _i];
-		_phase = moonPhase _date;
-		call
-		{
-			if (_phase > _fullMoonPhase) exitWith
-			{
-				_waxing = true;
-				_fullMoonDate = _date;
-			};
-			if (_waxing) exitWith 
-			{
-				_waxing = false;
-				_fullMoonDates pushBack _fullMoonDate;
-			};
-		};
-		_fullMoonPhase = _phase;
-	};
-	_fullMoonDates
-};
-//set random full moon date in year 2035
-setDate selectRandom (2035 call fnc_fullMoonDates);*/
 	setdate _startingdate;
 	
 	switch(toUpper(_startingweather)) do {
 	_wind = random 3;
 	_wind2 = random 3;
 		case "CLEAR": {
-			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			wcweather = [0, 0, 0.25, [_wind, _wind2, true], date];
 		};
 		
 		case "CLOUDY": {
-			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			wcweather = [0, 0, 0.47, [_wind, _wind2, true], date];
 		};
 		
 		case "RAIN": {
-			syncweather = [0, 0, 0.7, [_wind, _wind2, true], date];
+			wcweather = [0, 0, 0.87, [_wind, _wind2, true], date];
 		};
 
 		default {
-			// clear
-			syncweather = [0, 0, 0.55, [_wind, _wind2, true], date];
+			// Cloudy
+			wcweather = [0, 0, 0.47, [_wind, _wind2, true], date];
 			diag_log "Real weather: wrong starting weather";
 		};
 	};
 
 	// add handler
 	if (hasInterface) then {
-		syncweatherstart = true;
-		"syncweather" addPublicVariableEventHandler {
+		wcweatherstart = true;
+		"wcweather" addPublicVariableEventHandler {
 			// first JIP synchronization
-			if(syncweatherstart) then {
-				syncweatherstart = false;
+			if(wcweatherstart) then {
+				wcweatherstart = false;
 				skipTime -24;
-				86400 setRain (syncweather select 0);
-				86400 setfog (syncweather select 1);
-				86400 setOvercast (syncweather select 2);
+				86400 setRain (wcweather select 0);
+				86400 setfog (wcweather select 1);
+				86400 setOvercast (wcweather select 2);
 				skipTime 24;
 				simulweatherSync;
-				setwind (syncweather select 3);
-				setdate (syncweather select 4);
+				setwind (wcweather select 3);
+				setdate (wcweather select 4);
 			}else{
-				syncweather = _this select 1;
-				60 setRain (syncweather select 0);
-				60 setfog (syncweather select 1);
-				60 setOvercast (syncweather select 2);
+				wcweather = _this select 1;
+				60 setRain (wcweather select 0);
+				60 setfog (wcweather select 1);
+				60 setOvercast (wcweather select 2);
 				if (!_monsoon) then {
-				setwind (syncweather select 3);
+				setwind (wcweather select 3);
 				};
-				setdate (syncweather select 4);
+				setdate (wcweather select 4);
 			};
 		};
 	};
@@ -133,13 +102,13 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 
 	// apply weather
 	skipTime -24;
-	86400 setRain (syncweather select 0);
-	86400 setfog (syncweather select 1);
-	86400 setOvercast (syncweather select 2);
+	86400 setRain (wcweather select 0);
+	86400 setfog (wcweather select 1);
+	86400 setOvercast (wcweather select 2);
 	skipTime 24;
 	simulweatherSync;
-	setwind (syncweather select 3);
-	setdate (syncweather select 4);
+	setwind (wcweather select 3);
+	setdate (wcweather select 4);
 
 	// sync server & client weather & time
 	[_timesync, _daytimeratio, _nighttimeratio] spawn {
@@ -150,20 +119,21 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 		_nighttimeratio =  _this select 2;
 
 		while { true } do {
-			syncweather set [4, date];
-			publicvariable "syncweather";
-			if(sunOrMoon == 0) then {
+			wcweather set [4, date];
+			publicvariable "wcweather";
+			if(sunOrMoon < 0.5) then {
 				setTimeMultiplier _nighttimeratio;
 			} else {
 				if(sunOrMoon == 1) then {
 				setTimeMultiplier _daytimeratio;
 				} else {
-					setTimeMultiplier 1; //Morning or Evening
+					setTimeMultiplier 3; //Morning or Evening
 				};
-			sleep _timesync;
 			};
+			
+			sleep _timesync;
 		};
-
+	};
 	_rain = 0;
 	_overcast = 0.50;
 	_lastovercast = 0.55;
@@ -175,14 +145,14 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 		if (_sunOrMoon == 1) then { //Daytime!
 			_overcast = random 1;
 			//Rain forecast:
-			if(_overcast > 0.80) then {
-			_rain = 0.4 + (random 0.6);
+			if(_overcast >= 0.80) then {
+			_rain = 0.75 + (random 0.25);
 			} else {
 				if(_overcast >= 0.67) then {
-				_rain = 0.25 + (random 0.35);
+				_rain = 0.4 + (random 0.6);
 				} else {
 					if((_overcast >= 0.54) and (random 100 < 45)) then {
-					_rain = 0.1 + (random 0.25);
+					_rain = 0.1 + (random 0.3);
 					} else { 
 					_rain = 0;
 					};
@@ -207,17 +177,40 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 				};
 			};
 			//Fog:
-			if(_sunOrMoon < 1) then {
-				_fog = [0.9, 0.17, random 10]; //Morning or Evening fog
+			//"Rain Fog":
+			if(((abs _wind >= 3) or (abs _wind2 >= 3)) and (_rain < 0.1)) then {
+				_fog = [0,0.01,0];
+			} else {
+				if (_rain >= 0.1) then {
+					if (_overcast >= 0.8) then {
+						_fog = [(_rain*0.75), 0.01, 0];
+					} else {
+						if (_overcast > 0.67) then {
+							_fog = [(_rain*0.5), 0.01, 0];
+						} else {
+							_fog = [(_rain*0.25) , 0.02, 0];
+						};
+					};
+				} else { //Fog:
+					if(_sunOrMoon < 1) then {
+					_fog = [0.9, 0.17, random 10]; //Evening valley fog
+					} else {
+						if ((_lastovercast >= 0.78) and (_overcast >= 0.54)) then {
+							_fog = [0.4 + (random 0.5), 0.12, 0];
+						} else {
+							_fog = [0, 0.01, 0];
+						};
+					};
+				};
 			};
 		} else { //The Night is Dark and full of Horrors
 			_overcast = random 1;
 			//Rain forecast:
-			if(_overcast >= 0.9) then {
-				_rain = 0.4 + (random 0.6);
+			if(_overcast >= 0.87) then {
+				_rain = 0.6 + (random 0.4);
 			} else {
-				if(_overcast >= 0.78) then {
-					_rain = 0.15 + (random 0.45);
+				if(_overcast >= 0.77) then {
+					_rain = 0.3 + (random 0.5);
 				} else {
 					if((_overcast >= 0.67) and (random 100 < 65)) then {
 						_rain = 0.1 + (random 0.2);
@@ -244,22 +237,26 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 					};
 				};
 			};
-			//Fog:
-			if(((abs _wind >= 2.5) or (abs _wind2 >= 2.5)) and (_rain < 0.4)) then {
+			//"Rain Fog":
+			if(((abs _wind >= 3) or (abs _wind2 >= 3)) and (_rain < 0.1)) then {
 				_fog = [0,0.01,0];
 			} else {
-				if (_rain > 0.35) then {
-					if (_rain > 0.65) then {
-						_fog = [0.6 + (random 0.4), 0.01, 0];
+				if (_rain >= 0.1) then {
+					if (_rain > 0.8) then {
+						_fog = [_rain, 0.01, 0];
 					} else {
-						_fog = [0.3 + (random 0.4), 0.01, 0];
+						if (_rain > 0.5) then {
+							_fog = [(_rain*0.8), 0.01, 0];
+						} else {
+							_fog = [(_rain*0.6), 0.01, 0];
+						};
 					};
-				} else {
+				} else { //Fog:
 					if(_sunOrMoon > 0) then {
-					_fog = [0.9, 0.17, random 10]; //Morning or Evening fog
+					_fog = [0.9, 0.17, random 10]; //Morning valley fog
 					} else {
 						if ((_lastovercast < 0.4) and (_overcast < 0.4)) then {
-							_fog = [(random 0.6), 0.02, 0];
+							_fog = [0.3 + (random 0.7), 0.02, 0];
 						} else {
 							_fog = [0, 0.01, 0];
 						};
@@ -267,16 +264,23 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 				};
 			};
 		};
-		syncweather = [_rain, _fog, _overcast, [_wind, _wind2, true], date];
-		180 setfog (syncweather select 1);
-		2 setOvercast (syncweather select 2);
-		setwind (syncweather select 3);
+		wcweather = [_rain, _fog, _overcast, [_wind, _wind2, true], date];
+		//Fog
+		if ((_rain < 0.1) or (_lastovercast >= 67)) then {
+		180 setfog (wcweather select 1);
+		};
+		2 setOvercast (wcweather select 2);
+		setwind (wcweather select 3);
 		if (_firstrun) then {
 			_firstrun = false;
 		} else {
 			sleep 750;
 		};
-		180 setRain (syncweather select 0);
+		180 setRain (wcweather select 0);
+		//"Rain Fog"
+		if (_rain >= 0.1) then {
+		180 setfog (wcweather select 1);
+		};
 		
 		if (((abs _wind >= 5) or (abs _wind2 >= 5))  and (_overcast >= 0.7)) then { //Monsoon integration
 			//if ((!isServer) && (player != player)) then { waitUntil {player == player}; };
@@ -286,7 +290,8 @@ setDate selectRandom (2035 call fnc_fullMoonDates);*/
 
 		_lastovercast = _overcast;
 		
-		_timeforecast = _mintime + (random (_maxtime - _mintime));
+		_timeforecast = _mintime;
+		//_timeforecast = _mintime + (random (_maxtime - _mintime));
 		
 		sleep _timeforecast;
 		_monsoon = false;

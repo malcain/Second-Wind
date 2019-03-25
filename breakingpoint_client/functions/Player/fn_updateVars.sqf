@@ -5,7 +5,7 @@
 	Author: Deathlyrage
 */
 
-#define RADIUS 350
+#define RADIUS 360
 
 if (isNil "r_player_dead") exitWith {};
 

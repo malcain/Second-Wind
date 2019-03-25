@@ -21,18 +21,35 @@ waitUntil
 		_lastSpawnCheck = diag_tickTime;
 		_lastPos = _camPos;
 		
+		//Update Zombie/Loot Counts
+		call BP_fnc_updateVars;
+		
+		sleep 1;
+		
 		//Loot / Zombies
 		call BP_fnc_spawnCheck;
 		
 		//Animals
 		call BP_fnc_animalCheck;
+		
+		//Update hunter's speed
+		_class = player getVariable ["class",0];
+		if (_class == 3) then {
+			_factionLevel = player call BP_fnc_getFactionLevel;
+			_speedcoef = getAnimSpeedCoef player;
+			if (_factionLevel > 2 && _speedcoef <= 1) then {
+				if (_factionLevel > 3) then {
+					player setAnimSpeedCoef 1.07;
+				} else {
+					player setAnimSpeedCoef 1.04; 
+				};
+			};
+		};
 	};
 
 	//Update Group Members
 	BP_Group = call BP_fnc_groupGetMembers;
 	
-	//Update Zombie Counts
-	call BP_fnc_updateVars;
 	
 	//Update Havens
 	call BP_fnc_buildingUpdate;
@@ -45,17 +62,6 @@ waitUntil
 	{ player reveal _x } forEach entities "Car";
 	{ player reveal _x } forEach entities "Helicopter";
 	
-	//Update hunter's speed
-	_class = player getVariable ["class",0];
-	if (_class == 3) then {
-	_factionLevel = player call BP_fnc_getFactionLevel;
-	_speedcoef = getAnimSpeedCoef player;
-	if (_factionLevel > 2 && _speedcoef <= 1) then {
-		if (_factionLevel > 3) then {
-		player setAnimSpeedCoef 1.07;}
-		else {player setAnimSpeedCoef 1.04; };
-		};
-	};
 	//Inside Buildings
 	//_building = nearestObject [player, "HouseBase"];
 	//_buildingLogic = nearestObject [player,"BP_Haven"];

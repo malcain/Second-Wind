@@ -16,7 +16,7 @@ _spawnZombies = true;
 _spawnLoot = true;
 
 //Limit Zombie Spawning to 20 Local Zombies Per Player / Limit Zombie Spawning to 30 per 300m Bubble
-if (BP_LocalZeds > 20 || {BP_NearbyZombies > 30}) then { _spawnZombies = false; };
+if (BP_LocalZeds > 22 || {BP_NearbyZombies > 30}) then { _spawnZombies = false; };
 if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
 {
 	_type = typeOf _x;
@@ -49,7 +49,7 @@ if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
 			};
 
 			//Zombies
-			if ((_dis < 110) && {_dis > 25} && {_spawnZombies}) then {
+			if ((_dis < 130) && {_dis > 50} && {_spawnZombies}) then {
 				[_x] call BP_fnc_buildingSpawnZombies;
 				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
 				//[_handle] call BP_fnc_addThreadHandle;

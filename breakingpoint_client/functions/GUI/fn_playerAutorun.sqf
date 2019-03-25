@@ -33,7 +33,6 @@ if (time - BP_lastCheckBit > 1) then
 		
 		BP_AutoRunThread = [] spawn 
 		{
-			sleep 0.05;
 			r_interrupt = false;
 
 			waitUntil
@@ -49,10 +48,10 @@ if (time - BP_lastCheckBit > 1) then
 				
 				//Autorun speed depends on terrain gradient
 				_gradient = player call BP_fnc_getTerrainGradient;
-				if (_gradient <= 16 && _gradient >= -16) then {
+				if (_gradient <= 17 && _gradient >= -22) then {
 					player playActionNow "FastF";
 				} else {
-					if (_gradient >= 30 || _gradient <= -30) then {
+					if (_gradient >= 30 || _gradient <= -31) then {
 						player playActionNow "WalkF";
 					} else {
 						player playActionNow "SlowF";
@@ -60,7 +59,7 @@ if (time - BP_lastCheckBit > 1) then
 				};
 
 				//Delay
-				sleep 0.01;
+				sleep 0.015;
 			
 				//Condition Checks
 				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASL player select 2) < 0});
