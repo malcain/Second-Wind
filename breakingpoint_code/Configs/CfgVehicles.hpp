@@ -4656,9 +4656,9 @@ class CfgVehicles
 		side = 3;
 		crew = "";
 		typicalCargo[] = {};
-		textures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
-		hiddenSelectionsTextures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
-		class TextureSources {};
+		//textures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
+		//hiddenSelectionsTextures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
+		//class TextureSources {};
 		class TransportItems {};
 		class TransportMagazines{};
 		class TransportWeapons{};
@@ -5779,7 +5779,7 @@ class CfgVehicles
 		
 		class HitPoints {
 			class HitGlass1 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass1";
 				visual = "glass1";
@@ -5787,7 +5787,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass2 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass2";
 				visual = "glass2";
@@ -5877,7 +5877,7 @@ class CfgVehicles
 		
 		class HitPoints {
 			class HitGlass1 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass1";
 				visual = "glass1";
@@ -5885,7 +5885,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass2 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass2";
 				visual = "glass2";
@@ -5986,7 +5986,7 @@ class CfgVehicles
 		
 		class HitPoints {
 			class HitGlass1 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass1";
 				visual = "glass1";
@@ -5994,7 +5994,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass2 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass2";
 				visual = "glass2";
@@ -6081,6 +6081,7 @@ class CfgVehicles
 		transportMaxMagazines = 15;
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 1;
+		maxSpeed = 80;
 	
 		class HitPoints  {
 			class HitEngine {
@@ -6104,28 +6105,28 @@ class CfgVehicles
 				passThrough = 0;
 			};
 			class HitLFWheel {
-				armor = 1;
+				armor = 0.8;
 				material = -1;
 				name = "wheel_1_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRFWheel {
-				armor = 1;
+				armor = 0.8;
 				material = -1;
 				name = "wheel_2_1_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitRF2Wheel {
-				armor = 1;
+				armor = 0.8;
 				material = -1;
 				name = "wheel_2_2_steering";
 				visual = "";
 				passThrough = 0;
 			};
 			class HitLF2Wheel {
-				armor = 1;
+				armor = 0.8;
 				material = -1;
 				name = "wheel_1_2_steering";
 				visual = "";
@@ -6156,6 +6157,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 1;
+		maxSpeed = 80;
 		
 		class HitPoints  {
 			class HitEngine {
@@ -6266,7 +6268,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass5 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass5";
 				visual = "glass5";
@@ -6388,7 +6390,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass5 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass5";
 				visual = "glass5";
@@ -7079,7 +7081,7 @@ class CfgVehicles
 		
 		class HitPoints {
 			class HitGlass1 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass1";
 				visual = "glass1";
@@ -7087,7 +7089,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass2 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass2";
 				visual = "glass2";
@@ -7095,7 +7097,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass3 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass3";
 				visual = "glass3";
@@ -7103,7 +7105,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass4 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass4";
 				visual = "glass4";
@@ -7209,7 +7211,7 @@ class CfgVehicles
 		
 		class HitPoints {
 			class HitGlass1 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass1";
 				visual = "glass1";
@@ -7217,7 +7219,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass2 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass2";
 				visual = "glass2";
@@ -7225,7 +7227,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass3 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass3";
 				visual = "glass3";
@@ -7233,7 +7235,7 @@ class CfgVehicles
 			};
 			
 			class HitGlass4 {
-				armor = 0;
+				armor = 0.1;
 				material = -1;
 				name = "glass4";
 				visual = "glass4";
@@ -7511,7 +7513,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
-		maxSpeed = 75;
+		maxSpeed = 85;
 		
 		class HitPoints {
 			class HitEngine {
@@ -7556,7 +7558,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
-		maxSpeed = 37;
+		maxSpeed = 38;
 		
 		class HitPoints {
 			class HitBody {

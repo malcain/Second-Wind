@@ -26,13 +26,25 @@ OnLoadIntro = "Welcome to Arma 3 Breaking Point!";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
+skipLobby = 1;
 disableChannels[]=
 {
 	{1,true,true},	// Side
 	{2,true,true},	// Command
-	{3,true,true}	// Group
+	{3,true,true},	// Group
+	{4,false,false},	// Vehicle
+	{5,false,false},	// Direct
+	{7,false,true},	// Custom
+	{8,false,true},	// Custom
+	{9,false,true},	// Custom
+	{10,false,true},	// Custom
+	{11,false,true},	// Custom
+	{12,false,true},	// Custom
+	{13,false,true},	// Custom
+	{14,false,true},	// Custom
+	{15,false,true}	// Custom
 };
-enableItemsDropping = 0;
+enableItemsDropping = 1;
 showUAVFeed = 0;
 corpseLimit = 9999;
 onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";

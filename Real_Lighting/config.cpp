@@ -18,6 +18,7 @@ class CfgWorlds
 		{
 			class Overcast;
 			class RainConfig;
+			class WindConfig;
 		};
 		class WaterExPars;
 		class EnvSounds;
@@ -39,6 +40,24 @@ class CfgWorlds
 			class Lighting;
 			class RainConfig: RainConfig
 			{
+			};
+			class WindConfig: WindConfig
+			{
+				windChange=5;
+				minForce=0;
+				maxForce=15;
+				minForceScatter=2;
+				maxForceScatter=5;
+				minGustCount=0;
+				maxGustCount=10;
+				gustTimeScatter=120;
+				minGustScatter=10;
+				maxGustScatter=20;
+				gustInfluenceMin=0.1;
+				gustInfluenceMax=0.40000001;
+				speedOfWindChange=2;
+				minGustValue=0;
+				maxGustValue=0.69999999;
 			};
 			class LightningsConfig;
 			class RainbowConfig;
@@ -184,7 +203,7 @@ class CfgWorlds
 					quadratic=1;
 				};
 			};
-			starEmissivity=50;
+			starEmissivity=55;
 		};
 		class DayLightingBrightAlmost: DayLightingBrightAlmost
 		{
@@ -943,7 +962,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						11.016
+						12.416
 					};
 					swBrightness=1;
 				};
@@ -1023,7 +1042,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						11.016
+						12.716
 					};
 					swBrightness=1;
 				};
@@ -1103,7 +1122,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						11.016
+						11.716
 					};
 					swBrightness=1;
 				};
@@ -1183,7 +1202,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						11.016
+						11.416
 					};
 					swBrightness=1;
 				};
@@ -1263,7 +1282,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						11.016
+						11.416
 					};
 					swBrightness=1;
 				};
@@ -1343,7 +1362,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						12.5
+						12.7
 					};
 					swBrightness=1;
 				};
@@ -3183,7 +3202,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						6
+						7.5
 					};
 					swBrightness=1;
 				};
@@ -3263,7 +3282,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						7
+						9
 					};
 					swBrightness=1;
 				};
@@ -3343,7 +3362,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						7
+						10
 					};
 					swBrightness=1;
 				};
@@ -3423,7 +3442,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						12.3
+						13.3
 					};
 					swBrightness=1;
 				};
@@ -3499,7 +3518,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						13.5
+						14.5
 					};
 					swBrightness=1;
 				};
@@ -3575,7 +3594,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						14
+						15
 					};
 					swBrightness=1;
 				};
@@ -4086,32 +4105,32 @@ class CfgWorlds
 				{
 					sky="126map\data\OldSky\sky_veryclear_sky.paa";
 					skyR="126map\data\OldSky\sky_veryclear_lco.paa";
-					horizon="126map\data\OldSky\sky_clean_horizont_sky.paa";
-					overcast=0.15000001;
-					alpha=0.5;
-					size=0.2;
-					height=0.94999999;
-					bright=0.5;
-					speed=0.1;
-					through=0.42;
+					horizon="126map\data\OldSky\sky_veryclear_horizont_sky.paa";
+					overcast=0.22000001;
+					alpha=0.6;
+					size=0.25;
+					height=0.92;
+					bright=0.47;
+					speed=0.22;
+					through=0.4;
 					diffuse=1;
 					cloudDiffuse=0.94999999;
 					waves=0.2;
-					lightingOvercast=0;
+					lightingOvercast=0.1;
 				};
 				class Weather2: Weather2
 				{
 					sky="126map\data\OldSky\sky_almostclear_sky.paa";
 					skyR="126map\data\OldSky\sky_almostclear_lco.paa";
-					horizon="126map\data\OldSky\sky_veryclear_horizont_sky.paa";
-					overcast=0.25;
-					alpha=0.60000002;
-					size=0.30000001;
+					horizon="126map\data\OldSky\sky_clean_horizont_sky.paa";
+					overcast=0.35;
+					alpha=0.75000002;
+					size=0.42000001;
 					height=0.89999998;
 					bright=0.44999999;
 					speed=0.25;
 					through=0.37;
-					lightingOvercast=0.2;
+					lightingOvercast=0.3;
 					diffuse=1;
 					waves=0.22;
 				};
@@ -4119,15 +4138,15 @@ class CfgWorlds
 				{
 					sky="126map\data\OldSky\sky_semicloudy_sky.paa";
 					skyR="126map\data\OldSky\sky_semicloudy_lco.paa";
-					horizon="126map\data\OldSky\sky_clean_horizont_sky.paa";
-					overcast=0.40000001;
-					alpha=0.80000001;
+					horizon="126map\data\OldSky\sky_veryclear_horizont_sky.paa";
+					overcast=0.48000001;
+					alpha=0.87000001;
 					size=0.5;
 					height=0.80000001;
-					bright=0.40000001;
-					speed=0.44999999;
+					bright=0.35000001;
+					speed=0.42;
 					through=0.36;
-					lightingOvercast=0.4;
+					lightingOvercast=0.47;
 					diffuse=1;
 					waves=0.32;
 				};
@@ -4136,14 +4155,14 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_almostclear_sky.paa";
 					skyR="126map\data\OldSky\sky_almostclear_lco.paa";
 					horizon="126map\data\OldSky\sky_almostclear_horizont_sky.paa";
-					overcast=0.60000002;
+					overcast=0.67000002;
 					alpha=0.99000001;
 					size=0.64999998;
 					height=0.75;
 					bright=0.1;
-					speed=0.55000001;
-					through=0.35;
-					lightingOvercast=0.7;
+					speed=0.60000001;
+					through=0.31;
+					lightingOvercast=0.85;
 					diffuse=0;
 					waves=0.40000001;
 				};
@@ -4152,14 +4171,14 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_mostlycloudy_sky.paa";
 					skyR="126map\data\OldSky\sky_mostlycloudy_lco.paa";
 					horizon="126map\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
-					overcast=0.87;
+					overcast=0.84;
 					alpha=1;
 					size=0.80000001;
 					height=0.69999999;
 					bright=0.1;
 					speed=0.75;
-					through=0.3;
-					lightingOvercast=1; //Earlier and smoother transition to dark overcast&fog
+					through=0.25;
+					lightingOvercast=0.95; //Earlier and smoother transition to dark overcast&fog
 					diffuse=0;
 					waves=0.90000002;
 				};
@@ -4168,13 +4187,13 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_mostlycloudy_sky.paa";
 					skyR="126map\data\OldSky\sky_mostlycloudy_lco.paa";
 					horizon="126map\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
-					overcast=1;
+					overcast=0.95;
 					alpha=1;
 					bright=0;
 					size=1;
 					height=0.60000002;
 					speed=0.94999999;
-					through=0.1;
+					through=0.15;
 					lightingOvercast=1;
 					diffuse=0;
 					waves=0.60000001;
@@ -4182,12 +4201,12 @@ class CfgWorlds
 			};
 			class LightningsConfig: LightningsConfig
 			{
-				minCloudiness=0.8;
+				minCloudiness=0.7;
 				minProbability=0;
-				maxProbability=0.25;
-				minCount=3;
+				maxProbability=1;
+				minCount=0;
 				maxCount=6;
-				scatter=120;
+				scatter=20;
 			};
 		};
 		humidityUpCoef=0.1;
@@ -4196,7 +4215,7 @@ class CfgWorlds
 		{
 			noiseTexture="a3\data_f\noise_raw.paa";
 			numKeyframesPerDay=48;
-			windSpeedCoef="12.0f";
+			windSpeedCoef="8.0f";
 			moonIrradianceCoef="25.0f";
 			fadeMaxDistanceKm=1000;
 			fadeMaxAltitudeKm=15;
@@ -4267,9 +4286,9 @@ class CfgWorlds
 				class Weather2: DefaultKeyframe
 				{
 					overcast=0.2;
-					cloudiness=0.25;
-					cloudBaseKm=2.3;
-					cloudHeightKm=8;
+					cloudiness=0.18;
+					cloudBaseKm=2.4;
+					cloudHeightKm=7;
 					diffusivity=0.001;
 					seqFileKeyframe=0;
 				};
@@ -4278,42 +4297,55 @@ class CfgWorlds
 					overcast=0.40000001;
 					cloudiness=0.37;
 					extinction=7.5;
-					cloudBaseKm=2.3;
+					cloudBaseKm=2.4;
 					cloudHeightKm=11.5;
 					diffusivity=0.001;
+					indirectLight=0.9;
 					seqFileKeyframe=3;
 				};
 				class Weather4: DefaultKeyframe
 				{
-					overcast=0.5;
-					cloudiness=0.42;
-					extinction=9;
+					overcast=0.52;
+					cloudiness=0.45;
+					extinction=9.2;
 					diffusivity=0.001;
-					cloudBaseKm=1.8;
-					cloudHeightKm=13.5;
-					indirectLight=0.3;
+					cloudBaseKm=2.1;
+					cloudHeightKm=14.5;
+					indirectLight=0.15;
 					seqFileKeyframe=4;
 				};
 				class Weather5: DefaultKeyframe
 				{
-					overcast=0.75;
-					cloudiness=0.70;
+					overcast=0.72;
+					cloudiness=0.66;
 					diffusivity=0.001;
 					extinction=10;
-					cloudBaseKm=2.0999999;
+					cloudBaseKm=2.2;
 					cloudHeightKm=18;
+					indirectLight=0.12;
+					seqFileKeyframe=4;
+				};
+				class Weather7: DefaultKeyframe
+				{
+					overcast=0.85;
+					cloudiness=0.78;
+					diffusivity=0.001;
+					extinction=9;
+					cloudBaseKm=2.3;
+					cloudHeightKm=19;
 					indirectLight=0.15;
+					directLight=0.8;
 					seqFileKeyframe=4;
 				};
 				class Weather6: DefaultKeyframe
 				{
-					overcast=1;
+					overcast=0.95;
 					cloudiness=1;
 					diffusivity=0.001;
-					extinction=8;
-					cloudBaseKm=1.6;
+					extinction=1.9;
+					cloudBaseKm=1.7;
 					cloudHeightKm=20;
-					indirectLight=0.2;
+					indirectLight=0.3;
 					directLight=0.6;
 					seqFileKeyframe=4;
 				};
@@ -4344,6 +4376,1636 @@ class CfgWorlds
 		midDetailTexture="A3\Map_Tanoabuka\Data\L_middle_mco.paa";
 	};
 };
+
+class CfgsoundSets
+{
+	class ForestMorning_SoundSet
+	{
+		soundShaders[]=
+		{
+			"ForestMorning_SoundShader"
+		};
+		volumeFactor=0.5;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestDay_3DProcessingType";
+	};
+	class ForestAfternoon_SoundSet
+	{
+		soundShaders[]=
+		{
+			"ForestAfternoon_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestDay_3DProcessingType";
+	};
+	class ForestNight_SoundSet
+	{
+		soundShaders[]=
+		{
+			"ForestNight_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestNight_3DProcessingType";
+	};
+	class HousesDay_SoundSet
+	{
+		soundShaders[]=
+		{
+			"HousesDay_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=0;
+		loop=1;
+	};
+	class HousesNight_SoundSet
+	{
+		soundShaders[]=
+		{
+			"HousesNight_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=0;
+		loop=1;
+	};
+	class MeadowsDay_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MeadowsDay_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=0;
+		loop=1;
+	};
+	class MeadowsNight_SoundSet
+	{
+		soundShaders[]=
+		{
+			"MeadowsNight_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=0;
+		loop=1;
+	};
+	class WindForest_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindForest_High_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestWind_3DProcessingType";
+	};
+	class WindForest_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindForest_Low_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestWind_3DProcessingType";
+	};
+	class WindMeadows_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindMeadows_High_SoundShader"
+		};
+		volumeFactor=0.1;
+		spatial=0;
+		loop=1;
+	};
+	class WindMeadows_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindMeadows_Low_SoundShader"
+		};
+		volumeFactor=0.1;
+		spatial=0;
+		loop=1;
+	};
+	class WindHouses_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindHouses_High_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=0;
+		loop=1;
+	};
+	class WindHouses_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"WindHouses_Low_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=0;
+		loop=1;
+	};
+	class RainForest_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainForest_Low_SoundShader"
+		};
+		volumeFactor="0.7*0.4";
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestRain_3DProcessingType";
+	};
+	class RainForest_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainForest_Medium_SoundShader"
+		};
+		volumeFactor="0.7*0.4";
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestRain_3DProcessingType";
+	};
+	class RainForest_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainForest_High_SoundShader"
+		};
+		volumeFactor="0.8*0.4";
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="ForestRain_3DProcessingType";
+	};
+	class RainMeadows_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainMeadows_Low_SoundShader"
+		};
+		volumeFactor="0.6*0.4";
+		spatial=0;
+		loop=1;
+	};
+	class RainMeadows_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainMeadows_Medium_SoundShader"
+		};
+		volumeFactor="0.5*0.4";
+		spatial=0;
+		loop=1;
+	};
+	class RainMeadows_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainMeadows_High_SoundShader"
+		};
+		volumeFactor="0.5*0.4";
+		spatial=0;
+		loop=1;
+	};
+	class RainHouses_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"RainHouses_High_SoundShader"
+		};
+		volumeFactor="1*0.4";
+		spatial=0;
+		loop=1;
+	};
+	class Sea_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Sea_SoundShader"
+		};
+		volumeFactor=0.18000001;
+		spatial=0;
+		loop=1;
+	};
+	class Coast_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Coast_SoundShader"
+		};
+		volumeFactor=0.3;
+		spatial=0;
+		loop=1;
+		sound3DProcessingType="Coast3DProcessingType";
+	};
+	class Wind_Generic_Low_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_Generic_Low_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=0;
+		loop=1;
+	};
+	class Wind_Generic_High_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_Generic_High_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=0;
+		loop=1;
+	};
+	class Insect_Day_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Insect_Day_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"defaultAmpAttenuationCurve"
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Insect_Night_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Insect_Night_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"defaultAmpAttenuationCurve"
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Birds_All_Day_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Birds_All_Day_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=6;
+		delayRandomizer=1;
+		volumeCurve[]=
+		{
+			{0,0},
+			{1,0},
+			{3,0.5},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{7,0.5},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Birds_All_Night_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Birds_All_Night_SoundShader"
+		};
+		volumeFactor=0.2;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=20;
+		delayRandomizer=10;
+		volumeCurve[]=
+		{
+			{0,0},
+			{2,0},
+			{3,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{7,0.5},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Meadows_Birds_All_Day_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Meadows_Birds_All_Day_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=2;
+		delayRandomizer=1;
+		volumeCurve[]=
+		{
+			"defaultAmpAttenuationCurve"
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Birds_Temp_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Birds_Temp_SoundShader"
+		};
+		volumeFactor=3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=60;
+		delayRandomizer=30;
+		volumeCurve[]=
+		{
+			"defaultAmpAttenuationCurve"
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog01_Close_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog01_Close_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,1},
+			{1,0.89999998},
+			{2,0.80000001},
+			{2.9990001,0.69999999},
+			{3,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog02_Close_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog02_Close_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,1},
+			{1,0.89999998},
+			{2,0.80000001},
+			{2.9990001,0.69999999},
+			{3,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog03_Close_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog03_Close_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,1},
+			{1,0.89999998},
+			{2,0.80000001},
+			{2.9990001,0.69999999},
+			{3,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog04_Close_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog04_Close_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,1},
+			{1,0.89999998},
+			{2,0.80000001},
+			{2.9990001,0.69999999},
+			{3,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog05_Close_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog05_Close_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,1},
+			{1,0.89999998},
+			{2,0.80000001},
+			{2.9990001,0.69999999},
+			{3,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog01_Mid_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog01_Mid_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{3,0},
+			{3.0009999,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{6.9990001,0.30000001},
+			{7,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog02_Mid_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog02_Mid_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{3,0},
+			{3.0009999,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{6.9990001,0.30000001},
+			{7,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog03_Mid_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog03_Mid_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{3,0},
+			{3.0009999,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{6.9990001,0.30000001},
+			{7,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog04_Mid_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog04_Mid_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{3,0},
+			{3.0009999,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{6.9990001,0.30000001},
+			{7,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog05_Mid_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog05_Mid_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{3,0},
+			{3.0009999,0.69999999},
+			{4,0.60000002},
+			{5,0.5},
+			{6,0.40000001},
+			{6.9990001,0.30000001},
+			{7,0},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog01_Dist_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog01_Dist_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{7,0},
+			{7.0009999,0.30000001},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog02_Dist_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog02_Dist_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{7,0},
+			{7.0009999,0.30000001},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog03_Dist_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog03_Dist_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{7,0},
+			{7.0009999,0.30000001},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog04_Dist_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog04_Dist_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{7,0},
+			{7.0009999,0.30000001},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Forest_Frog05_Dist_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Forest_Frog05_Dist_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		delay=16;
+		delayRandomizer=5;
+		volumeCurve[]=
+		{
+			{0,0},
+			{7,0},
+			{7.0009999,0.30000001},
+			{8,0.2},
+			{9,0.1},
+			{10,0}
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Rain_PlantA_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantA_Light_SoundShader"
+		};
+		volumeFactor=1;
+		frequencyFactor=0.80000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantA_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantA_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		frequencyFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantA_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantA_Heavy_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		frequencyFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantB_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantB_Light_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantB_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantB_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantB_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantB_Heavy_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantC_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantC_Light_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantC_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantC_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_PlantC_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlantC_Heavy_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_Tree_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Light_SoundShader"
+		};
+		volumeFactor=0.5;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="Tree3DProcessingType";
+	};
+	class Rain_Tree_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Medium_SoundShader"
+		};
+		volumeFactor=0.69999999;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="Tree3DProcessingType";
+	};
+	class Rain_Tree_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="Tree3DProcessingType";
+	};
+	class Rain_WideTree_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Light_SoundShader"
+		};
+		volumeFactor=0.5;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeWide3DProcessingType";
+	};
+	class Rain_WideTree_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Medium_SoundShader"
+		};
+		volumeFactor=0.69999999;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeWide3DProcessingType";
+	};
+	class Rain_WideTree_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeWide3DProcessingType";
+	};
+	class Rain_SmallTree_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Light_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1.3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeNarrow3DProcessingType";
+	};
+	class Rain_SmallTree_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Medium_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1.3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeNarrow3DProcessingType";
+	};
+	class Rain_SmallTree_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_Tree_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1.3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeNarrow3DProcessingType";
+	};
+	class Rain_MetalT_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalT_Light_SoundShader"
+		};
+		volumeFactor=0.69999999;
+		frequencyFactor=1.5;
+		frequencyRandomizer=3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_MetalT_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalT_Medium_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		frequencyFactor=1.5;
+		frequencyRandomizer=3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_MetalT_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalT_Heavy_SoundShader"
+		};
+		volumeFactor=0.60000002;
+		frequencyFactor=1.5;
+		frequencyRandomizer=3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="PLant3DProcessingType";
+	};
+	class Rain_MetalA_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalA_Light_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=2;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalA_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalA_Medium_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=2;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalA_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalA_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1;
+		frequencyRandomizer=2;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalAn_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalAn_Light_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalAn_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalAn_Medium_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalAn_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalAn_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_MetalB_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalB_Light_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalB_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalB_Medium_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalB_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalB_Heavy_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalBn_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalBn_Light_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalBn_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalBn_Medium_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalBn_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalBn_Heavy_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_MetalC_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalC_Light_SoundShader"
+		};
+		volumeFactor=0.2;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_MetalC_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalC_Medium_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_MetalC_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalC_Heavy_SoundShader"
+		};
+		volumeFactor=0.2;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_MetalCn_Light_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalCn_Light_SoundShader"
+		};
+		volumeFactor=0.2;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_MetalCn_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalCn_Medium_SoundShader"
+		};
+		volumeFactor=0.30000001;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_MetalCn_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_MetalCn_Heavy_SoundShader"
+		};
+		volumeFactor=0.2;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_PlateA_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateA_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_PlateA_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateA_Heavy_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofSmall3DProcessingType";
+	};
+	class Rain_PlateBn_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateBn_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		frequencyFactor=1.3;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_PlateBn_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateBn_Heavy_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1.3;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofMedium3DProcessingType";
+	};
+	class Rain_PlateB_Medium_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateB_Medium_SoundShader"
+		};
+		volumeFactor=1;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Rain_PlateB_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Rain_PlateB_Heavy_SoundShader"
+		};
+		volumeFactor=0.5;
+		frequencyFactor=1;
+		frequencyRandomizer=6;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="RainRoofLarge3DProcessingType";
+	};
+	class Water_Gutter_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Water_Gutter_SoundShader"
+		};
+		volumeFactor=0.80000001;
+		frequencyFactor=1;
+		frequencyRandomizer=3;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"Smooth1Curve"
+		};
+		sound3DProcessingType="default3DProcessingType";
+	};
+	class Wind_LeavesA_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_LeavesA_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="Tree3DProcessingType";
+	};
+	class Wind_LeavesA_Narrow_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_LeavesA_Narrow_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeNarrow3DProcessingType";
+	};
+	class Wind_LeavesB_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_LeavesB_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="Tree3DProcessingType";
+	};
+	class Wind_LeavesC_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Wind_LeavesC_SoundShader"
+		};
+		volumeFactor=0.40000001;
+		spatial=1;
+		doppler=0;
+		loop=1;
+		volumeCurve[]=
+		{
+			"InverseSquare1Curve"
+		};
+		sound3DProcessingType="TreeWide3DProcessingType";
+	};
+	class Thunder_Norm_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Thunder_Norm_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=0;
+		volumeCurve[]=
+		{
+			"Constant1Curve"
+		};
+		sound3DProcessingType="Thunder3DProcessingType";
+	};
+	class Thunder_Heavy_SoundSet
+	{
+		soundShaders[]=
+		{
+			"Thunder_Heavy_SoundShader"
+		};
+		volumeFactor=1;
+		spatial=1;
+		doppler=0;
+		loop=0;
+		volumeCurve[]=
+		{
+			"Constant1Curve"
+		};
+		sound3DProcessingType="Thunder3DProcessingType";
+	};
+};
+
 class cfgMods
 {
 	author="Malcain";

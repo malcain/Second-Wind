@@ -354,8 +354,8 @@ _cfgSettings = (missionConfigFile >> "BreakingPoint" >> "CfgSettings");
 BP_DebugMarker = getText (_cfgSettings >> "Debug" >> "marker");
 BP_DebugRadius = getNumber (_cfgSettings >> "Debug" >> "radius");
 
-BP_dawn = getNumber (_cfgSettings >> "Time" >> "dawn");
-BP_dusk = getNumber (_cfgSettings >> "Time" >> "dusk");
+//BP_dawn = getNumber (_cfgSettings >> "Time" >> "dawn");
+//BP_dusk = getNumber (_cfgSettings >> "Time" >> "dusk");
 
 BP_MaxAnimals = getNumber (_cfgSettings >> "Animals" >> "max");
 BP_AnimalDistance = getNumber (_cfgSettings >> "Animals" >> "distance");

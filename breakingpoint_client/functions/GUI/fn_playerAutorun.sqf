@@ -48,7 +48,7 @@ if (time - BP_lastCheckBit > 1) then
 				
 				//Autorun speed depends on terrain gradient
 				_gradient = player call BP_fnc_getTerrainGradient;
-				if (_gradient <= 17 && _gradient >= -22) then {
+				if (_gradient <= 17 && _gradient >= -25) then {
 					player playActionNow "FastF";
 				} else {
 					if (_gradient >= 30 || _gradient <= -31) then {

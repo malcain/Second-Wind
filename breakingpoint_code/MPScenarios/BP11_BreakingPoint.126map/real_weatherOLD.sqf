@@ -6,7 +6,7 @@
 	"Dynamic Weather System" for Multiplayer
 	*/
 
-	private ["_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_lastovercast", "_startingdate", "_startingweather", "_timeforecast", "_daytimeratio", "_nighttimeratio", "_timesync","_firstrun","_monsoon","_lightnings","_windstr","_winddir"];
+	private ["_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_lastovercast", "_startingdate", "_startingweather", "_timeforecast", "_daytimeratio", "_nighttimeratio", "_timesync", "_wind", "_wind2","_firstrun","_monsoon","_lightnings","_windstr","_winddir"];
 
 	// Min time seconds (real time) before a new weather forecast
 	_mintime = 570;
@@ -47,22 +47,23 @@
 	setdate _startingdate;
 	
 	switch(toUpper(_startingweather)) do {
-	_windstr = random 0.3;
+	_wind = random 3;
+	_wind2 = random 3;
 		case "CLEAR": {
-			wcweather = [0, 0, 0.25, 0, date,0.1];
+			wcweather = [0, 0, 0.25, [_wind, _wind2, true], date, 0,0.05,45];
 		};
 		
 		case "CLOUDY": {
-			wcweather = [0, 0, 0.47, 0, date,0.1];
+			wcweather = [0, 0, 0.47, [_wind, _wind2, true], date, 0,0.25,45];
 		};
 		
 		case "RAIN": {
-			wcweather = [0, 0, 0.87, 0.1, date,0.1];
+			wcweather = [0, 0, 0.87, [_wind, _wind2, true], date, 0,0.2,45];
 		};
 
 		default {
 			// Cloudy
-			wcweather = [0, 0, 0.47, 0, date,0.1];
+			wcweather = [0, 0, 0.47, [_wind, _wind2, true], date, 0,0.25,45];
 			diag_log "Real weather: wrong starting weather";
 		};
 	};
@@ -78,19 +79,25 @@
 				86400 setRain (wcweather select 0);
 				86400 setfog (wcweather select 1);
 				86400 setOvercast (wcweather select 2);
-				86400 setLightnings (wcweather select 3);
+				86400 setLightnings (wcweather select 5);
+				//86400 setWindStr (wcweather select 6);
+				//86400 setWindDir (wcweather select 7);
 				skipTime 24;
 				simulweatherSync;
+				//setwind (wcweather select 3);
 				setdate (wcweather select 4);
-				0 setWindForce (wcweather select 5);
 			}else{
 				wcweather = _this select 1;
 				180 setRain (wcweather select 0);
 				180 setFog (wcweather select 1);
 				2 setOvercast (wcweather select 2);
-				150 setLightnings (wcweather select 3);
+				180 setLightnings (wcweather select 5);
+				if (!_monsoon) then {
+				//180 setWindStr (wcweather select 6);
+				//180 setWindDir (wcweather select 7);
+				//setwind (wcweather select 3);
+				};
 				setdate (wcweather select 4);
-				0 setWindForce (wcweather select 5);
 			};
 		};
 	};
@@ -104,11 +111,13 @@
 	86400 setRain (wcweather select 0);
 	86400 setfog (wcweather select 1);
 	86400 setOvercast (wcweather select 2);
-	86400 setLightnings (wcweather select 3);
+	86400 setLightnings (wcweather select 5);
+	//86400 setWindStr (wcweather select 6);
+	//86400 setWindDir (wcweather select 7);
 	skipTime 24;
 	simulweatherSync;
+	//setwind (wcweather select 3);
 	setdate (wcweather select 4);
-	0 setWindForce (wcweather select 5);
 
 	// sync server & client weather & time
 	[_timesync, _daytimeratio, _nighttimeratio] spawn {
@@ -137,14 +146,18 @@
 	_rain = 0;
 	_overcast = 0.50;
 	_lastovercast = 0.55;
+	_wind = 2.5;
 	_firstrun = true;
 	_lightnings = 0;
-	_windstr = 0.1;
+	_windstr = 0.05;
 	_winddir = 115;
 	
 	while {true} do {
 	_sunOrMoon = sunOrMoon;
 		if (_sunOrMoon == 1) then { //Daytime!
+			_windstr = random 1;
+			_winddir = random 360;
+			diag_log text format ["[Winddr]: %1 [Windst]: %2 Day started.",_winddir,_windstr];
 			_overcast = random 1;
 			//Rain forecast:
 			if(_overcast >= 0.80) then {
@@ -161,25 +174,26 @@
 				};
 			};
 			//Wind:
-			_winddir = random 360;
 			if ((_lastovercast < 0.50) and (_overcast >= 0.67)) then {
-				_windstr = random 0.8;
+				_wind = (random 16) - 8; 
+				_wind2 = (random 16) - 8;
 			} else {
 				if((_overcast >= 0.60) and (_overcast < 0.78)) then {
-					_windstr = random 0.5;
+					_wind = (random 10) - 5;
+					_wind2 = (random 10) - 5;
 				} else {
 					if((_overcast > 0.50) or (_lastovercast - _overcast > 0.38)) then {
-						_windstr = random 0.3;
+						_wind = (random 6) - 3;
+						_wind2 = (random 6) - 3 ;
 					} else {
-						_windstr = random 0.2;
+						_wind = (random 4) - 2;
+						_wind2 = (random 4) - 2;
 					};
 				};
 			};
-			_windstr = 1;
-			diag_log text format ["[Winddr]: %1 [Windst]: %2 Day started.",_winddir,_windstr];
 			//Fog:
 			//"Rain Fog":
-			if((_windstr >= 0.3) and (_rain < 0.1)) then {
+			if(((abs _wind >= 3) or (abs _wind2 >= 3)) and (_rain < 0.1)) then {
 				_fog = [0,0.01,0];
 			} else {
 				if (_rain >= 0.1) then {
@@ -211,6 +225,9 @@
 			_lightnings = 0;
 			};
 		} else { //The Night is Dark and full of Horrors
+			_windstr = random 1;
+			_winddir = random 360;
+			diag_log text format ["[Winddr]: %1 [Windst]: %2 Night started.",_winddir,_windstr];
 			_overcast = random 1;
 			//Rain forecast:
 			if(_overcast >= 0.87) then {
@@ -227,23 +244,25 @@
 				};
 			};
 			//Wind:
-			_winddir = random 360;
 			if ((_lastovercast < 0.50) and (_overcast >= 0.65)) then {
-				_windstr = random 0.8; 
+				_wind = (random 16) - 8; 
+				_wind2 = (random 16) - 8;
 			} else {
 				if((_overcast >= 0.6) and (_overcast < 0.78)) then {
-					_windstr = random 0.4;
+					_wind = (random 8) - 4;
+					_wind2 = (random 8) - 4;
 				} else {
 					if(_lastovercast - _overcast > 0.38) then {
-						_windstr = random 0.25;
+						_wind = (random 5) - 2.5;
+						_wind2 = (random 5) - 2.5;
 					} else {
-						_windstr = random 0.2;
+						_wind = (random 4) - 2;
+						_wind2 = (random 4) - 2;
 					};
 				};
 			};
-			diag_log text format ["[Winddr]: %1 [Windst]: %2 Night started.",_winddir,_windstr];
 			//"Rain Fog":
-			if((_windstr >= 0.3) and (_rain < 0.1)) then {
+			if(((abs _wind >= 3) or (abs _wind2 >= 3)) and (_rain < 0.1)) then {
 				_fog = [0,0.01,0];
 			} else {
 				if (_rain >= 0.1) then {
@@ -269,18 +288,17 @@
 				};
 			};
 		};
-		_windforce = _windstr;
-		wcweather = [_rain, _fog, _overcast, _lightnings, date,_windforce];
+		wcweather = [_rain, _fog, _overcast, [_wind, _wind2, true], date, _lightnings];
 		2 setOvercast (wcweather select 2);
-		30 setWindDir _winddir;
+		120 setWindStr _windstr;
 		sleep 1;
-		0 setWindStr _windstr;
-		sleep 2;
+		120 setWindDir _winddir;
+		//setwind (wcweather select 3);
 		if ((_rain < 0.1) or (_lastovercast >= 67)) then {
 		180 setfog (wcweather select 1); //Fog
 		};
 		if (_lightnings < 0.01) then {
-		150 setLightnings (wcweather select 3);
+		180 setLightnings (wcweather select 5);
 		};
 		
 		if (_firstrun) then {
@@ -290,19 +308,19 @@
 		};
 		_windst = windstr;
 		_winddr = winddir;
-		diag_log text format ["[Winddr]: %1 [Windstr]: %2 Delay expired.",_winddr,_windst];
+		diag_log text format ["[Winddr]: %1 [Windstr]: %2 Delay going.",_winddr,_windst];
 		180 setRain (wcweather select 0);
 		if (_lightnings > 0) then {
-		150 setLightnings (wcweather select 3);
+		180 setLightnings (wcweather select 5);
 		};
 		if (_rain >= 0.1) then { //"Rain Fog"
 		180 setfog (wcweather select 1);
 		};
 		
-		if ((_windstr >= 0.5)  and (_overcast >= 0.7)) then { //Monsoon integration
+		if (((abs _wind >= 5) or (abs _wind2 >= 5))  and (_overcast >= 0.7)) then { //Monsoon integration
 			//if ((!isServer) && (player != player)) then { waitUntil {player == player}; };
-			null = [random (360),580,true,true,false,false,false,1] execvm "AL_monsoon\al_monsoon.sqf";
-			_monsoon = true;
+			//null = [random (360),580,true,true,false,false,false,1] execvm "AL_monsoon\al_monsoon.sqf";
+			//_monsoon = true;
 		};
 
 		_lastovercast = _overcast;
@@ -310,9 +328,8 @@
 		_timeforecast = _mintime + (random (_maxtime - _mintime));
 		
 		sleep _timeforecast;
-		
 		_windst = windstr;
 		_winddr = winddir;
-		diag_log text format ["[Winddr]: %1 [Windstr]: %2 Timeforecast expired.",_winddr,_windst];
+		diag_log text format ["[Winddr]: %1 [Windstr]: %2 Timeforecast going.",_winddr,_windst];
 		_monsoon = false;
 	};
