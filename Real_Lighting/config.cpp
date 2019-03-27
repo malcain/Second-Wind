@@ -4215,7 +4215,7 @@ class CfgWorlds
 		{
 			noiseTexture="a3\data_f\noise_raw.paa";
 			numKeyframesPerDay=48;
-			windSpeedCoef="8.0f";
+			windSpeedCoef="7.0f";
 			moonIrradianceCoef="25.0f";
 			fadeMaxDistanceKm=1000;
 			fadeMaxAltitudeKm=15;

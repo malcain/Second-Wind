@@ -90,7 +90,9 @@
 				2 setOvercast (wcweather select 2);
 				150 setLightnings (wcweather select 3);
 				setdate (wcweather select 4);
+				if (_monsoon == false) then {
 				0 setWindForce (wcweather select 5);
+				};
 			};
 		};
 	};
@@ -162,20 +164,19 @@
 			};
 			//Wind:
 			_winddir = random 360;
-			if ((_lastovercast < 0.50) and (_overcast >= 0.67)) then {
-				_windstr = random 0.8;
+			if ((_overcast - _lastovercast > 0.3) and (_overcast >= 0.67)) then {
+				_windstr = random 1;
 			} else {
 				if((_overcast >= 0.60) and (_overcast < 0.78)) then {
 					_windstr = random 0.5;
 				} else {
-					if((_overcast > 0.50) or (_lastovercast - _overcast > 0.38)) then {
-						_windstr = random 0.3;
+					if((abs(_lastovercast - _overcast) > 0.38)) then {
+						_windstr = random 0.25;
 					} else {
-						_windstr = random 0.2;
+						_windstr = random 0.17;
 					};
 				};
 			};
-			_windstr = 1;
 			diag_log text format ["[Winddr]: %1 [Windst]: %2 Day started.",_winddir,_windstr];
 			//Fog:
 			//"Rain Fog":
@@ -228,16 +229,16 @@
 			};
 			//Wind:
 			_winddir = random 360;
-			if ((_lastovercast < 0.50) and (_overcast >= 0.65)) then {
-				_windstr = random 0.8; 
+			if ((_overcast - _lastovercast > 0.3) and (_overcast >= 0.65)) then {
+				_windstr = random 1; 
 			} else {
 				if((_overcast >= 0.6) and (_overcast < 0.78)) then {
 					_windstr = random 0.4;
 				} else {
-					if(_lastovercast - _overcast > 0.38) then {
-						_windstr = random 0.25;
+					if (abs(_lastovercast - _overcast) > 0.38) then {
+						_windstr = random 0.3;
 					} else {
-						_windstr = random 0.2;
+						_windstr = random 0.17;
 					};
 				};
 			};
@@ -270,6 +271,7 @@
 			};
 		};
 		_windforce = _windstr;
+		
 		wcweather = [_rain, _fog, _overcast, _lightnings, date,_windforce];
 		2 setOvercast (wcweather select 2);
 		30 setWindDir _winddir;
@@ -288,20 +290,23 @@
 		} else {
 			sleep 750; //Cloud density synchronization delay
 		};
+		
 		_windst = windstr;
 		_winddr = winddir;
 		diag_log text format ["[Winddr]: %1 [Windstr]: %2 Delay expired.",_winddr,_windst];
+		
+		//Set Rain+Lightnings+Rainfog
 		180 setRain (wcweather select 0);
 		if (_lightnings > 0) then {
 		150 setLightnings (wcweather select 3);
 		};
-		if (_rain >= 0.1) then { //"Rain Fog"
+		if (_rain >= 0.1) then {
 		180 setfog (wcweather select 1);
 		};
 		
 		if ((_windstr >= 0.5)  and (_overcast >= 0.7)) then { //Monsoon integration
 			//if ((!isServer) && (player != player)) then { waitUntil {player == player}; };
-			null = [random (360),580,true,true,false,false,false,1] execvm "AL_monsoon\al_monsoon.sqf";
+			null = [_winddir,580,true,true,false,false,false,1] execvm "AL_monsoon\al_monsoon.sqf";
 			_monsoon = true;
 		};
 

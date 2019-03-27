@@ -42,6 +42,7 @@ _position = getPosATL player;
 BP_LocalZeds = _localZeds;
 BP_NearbyZombies = {alive _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
 BP_NearbyLootBox = {alive _x} count (_position nearEntities ["BP_LootBox",RADIUS]);
+BP_NearbyLootBox = BP_NearbyLootBox + count nearestObjects [_position, ["WeaponHolder","WeaponHolderSimulated"],270];
 BP_GlobalZeds = _aliveZeds;
 BP_SpawnZombies = {alive _x AND local _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
 BP_RemoteZeds = _remoteZeds;

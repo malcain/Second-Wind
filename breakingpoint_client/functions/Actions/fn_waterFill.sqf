@@ -16,7 +16,6 @@ _isPond = 		false;
 _isWell = 		false;
 _pondPos = 		[];
 _objectsWell = 	[];
-_isWater = ((getPosASL player select 2) < -0.5);
 
 if (_canFill_1) then {
 	_canFill = true;
@@ -32,9 +31,60 @@ _text = getText (_config >> "displayName");
 
 if (!_hasbottleitem) exitWith {};
 
-if !((getPosASL player select 2) < -0.5) then {
-	player playActionNow "PutDown";
+if ((getPosASL player select 2) < -1) exitwith {
+	cutText ["Can't reach from here.", "PLAIN"];
 };
+
+//Check specific water sources. If there are water left in it? If player's position is appropriate to fill bottle?
+_objectsWell = 	nearestObjects [_playerPos, [], 4];
+{
+    if (str _x find ": waterbarrel" > -1) then {
+		if (damage _x >= 0.75) then {
+		exitwith {cutText ["No water left here.", "PLAIN"];};
+		} else {
+			if (random 100 < 75) then {
+				_x setdamage 0.75;
+				exitwith {cutText ["No water left here.", "PLAIN"];};
+			} else {
+				_canFill = true;
+			};
+		};
+    };
+	
+	if (str _x find ": watertower" > -1) then {
+		if (_playerPos select 2 < 2) exitwith {
+			cutText ["Can't reach from here.", "PLAIN"];
+		};
+    };
+	
+	if (str _x find ": watertank" > -1) then {
+		if (damage _x >= 0.75) then {
+		exitwith {cutText ["No water left here.", "PLAIN"];};
+		} else {
+			if (random 100 < 75) then {
+				_x setdamage 0.75;
+				exitwith {cutText ["No water left here.", "PLAIN"];};
+			} else {
+				_canFill = true;
+			};
+		};
+    };
+	
+	if (str _x find ": stallwater" > -1) then {
+		if (damage _x >= 0.75) then {
+		exitwith {cutText ["No water left here.", "PLAIN"];};
+		} else {
+			if (random 100 < 85) then {
+				_x setdamage 0.75;
+				exitwith {cutText ["No water left here.", "PLAIN"];};
+			} else {
+				_canFill = true;
+			};
+		};
+    };
+	
+} forEach _objectsWell;
+
 
 if (!_canFill) then {
 	_objectsWell = 	nearestObjects [_playerPos, [], 4];

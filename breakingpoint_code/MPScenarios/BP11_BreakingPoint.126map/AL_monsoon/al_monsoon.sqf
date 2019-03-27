@@ -22,22 +22,21 @@ publicVariable "thunder_far_alias";
 
 // - memoreaza parametri actuali
 
-al_foglevel		= fog;
+//al_foglevel		= fog;
 al_rainlevel	= rain;
 //al_thundlevel	= lightnings;
-//al_windlevel	= wind;
-publicVariable "al_foglevel";
+al_windlevel	= wind;
+//publicVariable "al_foglevel";
 publicVariable "al_rainlevel";
 //publicVariable "al_thundlevel";
-//publicVariable "al_windlevel";
+publicVariable "al_windlevel";
 
 sleep 0.1;
 
 [_duration_monsoon] spawn {
 	x_duration_monsoon = _this select 0;
 	sleep x_duration_monsoon;
-	10 setWindStr 0.01;
-	sleep 5;
+	30 setlightnings 0;
 	al_monsoon_om = false;
 	publicVariable "al_monsoon_om";
 
@@ -45,8 +44,7 @@ sleep 0.1;
 	//60 setFog al_foglevel;
 	//300 setRain al_rainlevel;
 	//60 setLightnings al_thundlevel;
-	//setWind [al_windlevel select 0, al_windlevel select 1, true];
-	10 setWindStr 1;
+	setWind [al_windlevel select 0, al_windlevel select 1, true];
 };
 
 [] spawn {
@@ -105,15 +103,15 @@ incr = true;
 incrx = false;
 incry = false;
 
-/*while {incr} do {
+while {incr} do {
 	sleep 0.01;
 	if (inx < abs vx) then {inx = inx+0.1;} else {incrx = true};
 	if (iny < abs vy) then {iny = iny+0.1} else {incry = true};
 	if (incrx and incry) then {incr=false};
-	winx = floor ((inx*fctx)/3);
-	winy = floor ((iny*fcty)/3);
+	winx = floor ((inx*fctx)/2.5);
+	winy = floor ((iny*fcty)/2.5);
 	setWind [winx,winy,true];
-};*/
+};
 
 [[_debris_branches,_rain_fog],"AL_monsoon\alias_monsoon_effect.sqf"] remoteExec ["execVM",0,true];
 if(_rain_drop) then {[[],"AL_monsoon\rain_drop.sqf"] remoteExec ["execVM",0,true]};
@@ -150,7 +148,7 @@ if (_effect_on_objects) then {
 		al_nearobjects = nearestObjects [hunt_alias,[],50];
 		ar_obj_eligibl = [];
 		
-		{if((_x isKindOf "LandVehicle") or (_x isKindOf "Man") or (_x isKindOf "CAManBase") or (_x isKindOf "Air") or (_x isKindOf "Wreck")) then 
+		{if((_x isKindOf "LandVehicle") or (_x isKindOf "Man") or (_x isKindOf "Air") or (_x isKindOf "Wreck")) then 
 			{ar_obj_eligibl pushBack _x;};
 		} foreach al_nearobjects;
 		

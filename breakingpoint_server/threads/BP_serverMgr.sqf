@@ -158,16 +158,32 @@ waitUntil
 								};
 							};
 						} else {
-							_processedDeath = _x getVariable ["processedDeath",0];
-							if (_processedDeath == 0) then {
-								_x setVariable ["processedDeath",diag_tickTime];
+							if (_x isKindOf "GroundWeaponHolder_scripted") then
+							{
+								_processedDeath = _x getVariable ["processedDeath",0];
+								if (_processedDeath == 0) then {
+									_x setVariable ["processedDeath",diag_tickTime];
+								} else {
+									if ((diag_tickTime - _processedDeath) > CLEANUP_SIMWPNHOLDER_TIME) then {
+										_nearby = [(getPosATL _x),180] call BP_fnc_nearbyPlayers;
+										if (!_nearby) then {
+											//["cleanupDead: Cleaning Up ScriptWeapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
+											deleteVehicle _x;
+										};
+									};
+								};
 							} else {
-								if ((diag_tickTime - _processedDeath) > CLEANUP_WPNHOLDER_TIME) then 
-								{
-									_nearby = [(getPosATL _x),10] call BP_fnc_nearbyPlayers;
-									if (!_nearby) then {
-										["cleanupDead: Cleaning Up Weapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
-										deleteVehicle _x;
+								_processedDeath = _x getVariable ["processedDeath",0];
+								if (_processedDeath == 0) then {
+									_x setVariable ["processedDeath",diag_tickTime];
+								} else {
+									if ((diag_tickTime - _processedDeath) > CLEANUP_WPNHOLDER_TIME) then 
+									{
+										_nearby = [(getPosATL _x),10] call BP_fnc_nearbyPlayers;
+										if (!_nearby) then {
+											["cleanupDead: Cleaning Up Weapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
+											deleteVehicle _x;
+										};
 									};
 								};
 							};
@@ -203,7 +219,7 @@ waitUntil
 									{
 										_nearby = [(getPosATL _x),5] call BP_fnc_nearbyPlayers;
 										if (!_nearby) then {
-											["cleanupDead: Cleaning Up Weapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
+											["cleanupDead: Cleaning Up SimWeapon Holder %1",_x] call BP_fnc_debugConsoleFormat;
 											deleteVehicle _x;
 										};
 									};
