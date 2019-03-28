@@ -2582,16 +2582,10 @@ class CfgWorlds
 					};
 					bidirect[]={0.025,0.024,0.017999999};
 					bidirectCloud[]={0.025,0.024,0.017999999};
-					sky[]=
-					{
-						{1,1,1},
-						16.200001
-					};
-					skyAroundSun[]=
-					{
-						{0.023529399,0.0039215698,1},
-						12
-					};
+					/*sky[]={{1,1,1},16.200001};
+					skyAroundSun[] = {{0.023529399,0.0039215698,1},12};*/
+					sky[] = {{0.478431,0.52549,1},16.7};
+					skyAroundSun[] = {{0.694118,0.513726,1},17.5};
 					fogColor[]=
 					{
 						{0.30000001,0.44,0.74900001},
@@ -4123,14 +4117,14 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_almostclear_sky.paa";
 					skyR="126map\data\OldSky\sky_almostclear_lco.paa";
 					horizon="126map\data\OldSky\sky_clean_horizont_sky.paa";
-					overcast=0.35;
-					alpha=0.75000002;
-					size=0.42000001;
+					overcast=0.40;
+					alpha=0.80000002;
+					size=0.45000001;
 					height=0.89999998;
-					bright=0.44999999;
-					speed=0.25;
-					through=0.37;
-					lightingOvercast=0.3;
+					bright=0.39;
+					speed=0.29;
+					through=0.36;
+					lightingOvercast=0.38;
 					diffuse=1;
 					waves=0.22;
 				};
@@ -4139,14 +4133,14 @@ class CfgWorlds
 					sky="126map\data\OldSky\sky_semicloudy_sky.paa";
 					skyR="126map\data\OldSky\sky_semicloudy_lco.paa";
 					horizon="126map\data\OldSky\sky_veryclear_horizont_sky.paa";
-					overcast=0.48000001;
-					alpha=0.87000001;
-					size=0.5;
+					overcast=0.58000001;
+					alpha=0.94000001;
+					size=0.55;
 					height=0.80000001;
-					bright=0.35000001;
-					speed=0.42;
-					through=0.36;
-					lightingOvercast=0.47;
+					bright=0.25000001;
+					speed=0.47;
+					through=0.35;
+					lightingOvercast=0.61;
 					diffuse=1;
 					waves=0.32;
 				};
@@ -4162,7 +4156,7 @@ class CfgWorlds
 					bright=0.1;
 					speed=0.60000001;
 					through=0.31;
-					lightingOvercast=0.85;
+					lightingOvercast=0.81;
 					diffuse=0;
 					waves=0.40000001;
 				};

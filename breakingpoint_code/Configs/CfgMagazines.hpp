@@ -1305,7 +1305,7 @@ class CfgMagazines
 	class FoodPlayerCooked : FoodMeatCooked {
 		displayName = "Strange Meat (Cooked)";
 		descriptionShort = "";
-		bloodRegen = 1250;
+		bloodRegen = 750;
 		mass = 10;
 	};
 
@@ -1339,7 +1339,7 @@ class CfgMagazines
 	class FoodRabbitCooked : FoodMeatCooked {
 		displayName = "Rabbit (Cooked)";
 		descriptionShort = "";
-		bloodRegen = 1600;
+		bloodRegen = 1200;
 		mass = 10;
 	};
 	class FoodBeefCooked : FoodMeatCooked {

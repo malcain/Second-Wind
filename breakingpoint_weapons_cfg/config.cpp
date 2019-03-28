@@ -32001,7 +32001,7 @@ class CfgWeapons
 		picture = "\A3\Weapons_F\Data\UI\gear_binoculars_CA.paa";
 		value = 5;
 		type = 4096;
-		displayName = "Hunting Binocular 6x-14X";
+		displayName = "Hunting Binocular 6x-14x";
 		nameSound = "binoculars";
 		descriptionUse = "Hunting Binocular";
 		reloadTime = 0;
@@ -32024,9 +32024,9 @@ class CfgWeapons
 		magazines[] = {};
 		class Library
 		{
-				libTextDesc = "Hunter's Binocular 6-14X";
+				libTextDesc = "Hunter's Binocular 6-14x";
 		};
-		descriptionShort = "Hunting Binocular 6-14X";
+		descriptionShort = "Hunting Binocular 6-14x";
 		class WeaponSlotsInfo
 		{
 				mass = 10;

@@ -24,13 +24,9 @@ BP_FastBoot = (paramsArray select 11) == 1;
 
 //if (isServer) then 
 //{
-//[] execVM "126map.sqf";
 //execVM "VD_init.sqf";
 //};
 [] execVm "real_weather.sqf";
-/*execvm "initplayerlocal.sqf";
-execvm "initserver.sqf";
-*/
 
 		[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s2,true] execvm "AL_Leaks\cave_leak.sqf";
@@ -208,7 +204,7 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 // Breaking Point - Player Client Integration
 initialized = true;
 
-setViewDistance 2400;
+setViewDistance 2300;
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 
 waitUntil {time > 0};

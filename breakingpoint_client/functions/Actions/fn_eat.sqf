@@ -47,6 +47,19 @@ if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
 	 call BP_fnc_hallucination;
 };
 
+//Cooked human meat effect on Hunters
+if (_itemorignal == "FoodPlayerCooked")
+_class = player getVariable ["class",0];
+if (_class == 3) then {
+_regen = _regen+700
+_speedcoef = getAnimSpeedCoef player;
+	if (_speedcoef < 1.12 && !{_speedcoef > 1.15}) then {
+		player setAnimSpeedCoef 1.12;
+		sleep 10;
+		player setAnimSpeedCoef _speedcoef;
+	};
+};
+
 if (_itemorignal in meatzombie) then {
     r_player_infected = true;
 } else {
