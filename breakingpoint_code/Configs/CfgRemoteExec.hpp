@@ -18,6 +18,12 @@ class CfgRemoteExec
 		// Ability to send jip messages: 0-disabled, 1-enabled (default)
 		jip = 0;
 		
+		//BIS
+		class BIS_fnc_effectKilledAirDestruction {allowedTargets=2;};
+		class BIS_fnc_effectKilledSecondaries {allowedTargets=2;};
+		class BIS_fnc_objectVar {allowedTargets=2;};
+		class BIS_fnc_debugConsoleExec {allowedTargets=2;};
+		
 		// Global Things
 		class BP_fnc_fireDelete { allowedTargets=0; };
 		

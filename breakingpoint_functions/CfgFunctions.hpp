@@ -95,6 +95,12 @@ class CfgFunctions
 			class objVehicleKilled {};
 			class objCheck {};
 		};
+		
+		class Objects {
+			file = "\breakingpoint_functions\functions\Objects";
+			class replaceBuilding {};
+		};
+		
 		class World {
 			file = "\breakingpoint_functions\functions\World";
 			class getBuildingID {};

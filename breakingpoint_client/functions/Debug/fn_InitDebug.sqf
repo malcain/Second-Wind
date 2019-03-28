@@ -9,7 +9,7 @@
 
 private ["_debugThread"];
 
-_admins = ["76561198034785754","76561198062516199"];
+_admins = ["76561198047226492"];
 _playerID = getPlayerUID player;
 if (_playerID in _admins) then 
 {

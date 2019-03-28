@@ -75,7 +75,7 @@ class CfgBuildingLoot
 			{"ItemKnife","magazine"},
 			{"BP_Kitbag_cbr","backpack"},
 			{"Binocular","weaponNA"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
@@ -142,7 +142,7 @@ class CfgBuildingLoot
 			0.02,	//Sportbag
 			0.02,	//Binocular
 			0.02,	//Woodpile
-			0.01,	//WATERBOTTLE
+			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
 			0.02,	//DUCTTAPE
 			0.01,	//WATERTAPE
@@ -228,7 +228,7 @@ class CfgBuildingLoot
 			{"BP_M1903K","weaponA"},
 			{"BP_Kitbag_cbr","backpack"},
 			{"Binocular","weaponNA"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
@@ -306,7 +306,7 @@ class CfgBuildingLoot
 			0.02,	//Sportbag
 			0.02,	//Binocular
 			0.02,	//Woodpile
-			0.01,	//WATERBOTTLE
+			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
 			0.02,	//DUCTTAPE
 			0.01,	//WATERTAPE
@@ -439,7 +439,7 @@ class CfgBuildingLoot
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemElectronics","magazine"},
@@ -1853,8 +1853,8 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"BP_P90TR_black","weaponA"},
-			{"BP_P90CTR_black","weaponA"},
+			{"WaterbotEmpty","magazine"},
+			{"BP_Binocular_Hunter","weaponNA"},
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
@@ -1862,9 +1862,9 @@ class CfgBuildingLoot
 			0.01,    //Chestrig_blk
 			0.01,    //R7Sup
 			0.01,    //CZSup
-			0.65,    //MeatPlayerCooked
-			0.25,    //MeatRabbitCooked
-			0.15    //Mushroom
+			0.55,    //MeatPlayerCooked
+			0.30,    //MeatRabbitCooked
+			0.10    //Mushroom
 		};
 	};
 	

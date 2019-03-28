@@ -99,9 +99,11 @@ waitUntil {missionNameSpace getVariable ["bis_fnc_init",false]};
 //	};
 //};
 
+//if (isServer) then {
 //Spawn In Map Specific Objects
-["Spawning in Map Specific Objects for %1",worldName] call BP_fnc_debugConsoleFormat;
-call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\%1.sqf",worldName];
+//["Spawning in Map Specific Objects for %1",worldName] call BP_fnc_debugConsoleFormat;
+//call compile preprocessFileLineNumbers format ["\breakingpoint_server\maps\%1.sqf",worldName];
+//};
 
 //Spawn In Loot 3.0 Coords
 _customLootSetting = getNumber(configFile >> "CfgBreakingPointServerSettings" >> "CustomLoot" >> "customLootSetting");

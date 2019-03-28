@@ -22,17 +22,17 @@ BP_LootServer = (paramsArray select 9) == 1;
 BP_LegionOnly = (paramsArray select 10) == 1;
 BP_FastBoot = (paramsArray select 11) == 1;
 
-/*if (isServer) then 
-{
-//[] execVM "Tembelan.sqf";
+//if (isServer) then 
+//{
+//[] execVM "126map.sqf";
 //execVM "VD_init.sqf";
-};*/
+//};
 [] execVm "real_weather.sqf";
 /*execvm "initplayerlocal.sqf";
 execvm "initserver.sqf";
 */
 
-		/*[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
+		[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s2,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s3,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s4,true] execvm "AL_Leaks\cave_leak.sqf";
@@ -91,7 +91,7 @@ execvm "initserver.sqf";
 		[rainleak47] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak48] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak49] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak50] execvm "AL_Leaks\water_leak.sqf";*/
+		[rainleak50] execvm "AL_Leaks\water_leak.sqf";
 		
 if (hasInterface) then {
 [] execVm "nighttime.sqf";

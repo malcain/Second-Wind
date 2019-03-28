@@ -2,9 +2,10 @@
 {_x setFuelCargo 0;} foreach (nearestTerrainObjects [[3369.46,3744.21,0],["FUELSTATION","Land_FuelStation_01_pump_F","Land_FuelStation_01_pump_malevil_F"],10]);
 //Houses
 {_x setHitIndex [0, 1];_x setHitIndex [1, 1];} foreach (nearestTerrainObjects [[2307.99,1669.74,0.649002],["house"],8,false]);
-{_x setHitIndex [0, 1];} foreach (nearestTerrainObjects [[3334.44,1300.31,0],["house"],8,false]);
-{_x setHitIndex [0, 1];_x setHitIndex [1, 1];_x setHitIndex [2, 1];_x setHitIndex [3, 1];_x setHitIndex [4, 1];_x setHitIndex [5, 1];_x setHitIndex [6, 1];_x setHitIndex [7, 1];_x setHitIndex [8, 1];_x setHitIndex [9, 1];_x setHitIndex [10, 1];_x setHitIndex [11, 1];_x setHitIndex [12, 1];_x setHitIndex [13, 1];_x setHitIndex [14, 1];_x setHitIndex [15, 1];} foreach (nearestTerrainObjects [[203.732,5928.09,3.13272],["house","building","hospital"],20,false]);
-
+{_x hideobjectglobal true;} foreach (nearestTerrainObjects [[2307.99,1669.74,0.649002],["house"],8,false]);
+{_x setHitIndex [0, 1];} foreach (nearestTerrainObjects [[3334.44,1300.31,0],["house"],8]);
+//{_x setHitIndex [0, 1];_x setHitIndex [1, 1];_x setHitIndex [2, 1];_x setHitIndex [3, 1];_x setHitIndex [4, 1];_x setHitIndex [5, 1];_x setHitIndex [6, 1];_x setHitIndex [7, 1];_x setHitIndex [8, 1];_x setHitIndex [9, 1];_x setHitIndex [10, 1];_x setHitIndex [11, 1];_x setHitIndex [12, 1];_x setHitIndex [13, 1];_x setHitIndex [14, 1];_x setHitIndex [15, 1]; _x hideObjectGlobal true];} foreach (nearestTerrainObjects [[203.732,5928.09,3.13272],["house","building","hospital"],20,false]);
+{_x hideObjectGlobal true;} foreach (nearestTerrainObjects [[203.732,5928.09,3.13272],["house","building","hospital"],20,false]);
 
 //Replacements
 call{params ["_pos", "_typs", "_distance"];

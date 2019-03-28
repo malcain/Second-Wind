@@ -164,7 +164,7 @@
 			};
 			//Wind:
 			_winddir = random 360;
-			if ((_overcast - _lastovercast > 0.3) and (_overcast >= 0.67)) then {
+			if ((_overcast - _lastovercast > 0.38) and (_overcast >= 0.67)) then {
 				_windstr = random 1;
 			} else {
 				if((_overcast >= 0.60) and (_overcast < 0.78)) then {
@@ -229,7 +229,7 @@
 			};
 			//Wind:
 			_winddir = random 360;
-			if ((_overcast - _lastovercast > 0.3) and (_overcast >= 0.65)) then {
+			if ((_overcast - _lastovercast > 0.38) and (_overcast >= 0.65)) then {
 				_windstr = random 1; 
 			} else {
 				if((_overcast >= 0.6) and (_overcast < 0.78)) then {

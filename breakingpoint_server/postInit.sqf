@@ -133,4 +133,6 @@ west setFriend [east,0];
 
 // Spawn Vehicles
 _serverStartup = [] execVM "\breakingpoint_server\monitor.sqf";
+//["Spawning in Map Specific Objects for %1",worldName] call BP_fnc_debugConsoleFormat;
+//[] execVM "\breakingpoint_server\maps\126map.sqf";
 [_serverStartup] call BP_fnc_addThreadHandle;

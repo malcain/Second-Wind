@@ -18,6 +18,8 @@ BP_ClientFuncs = [];
 //PVEHs
 BP_SetPosATL = [];
 
+[] execVM "\breakingpoint_server\maps\126map.sqf";
+
 //Determine If Dev Mission File is in Place
 BP_Dev = (getNumber (missionConfigFile >> "enableDebugConsole") == 2);
 
@@ -95,6 +97,7 @@ BP_applyBandage = [];
 BP_applyPainkiller = [];
 BP_applySurgery = [];
 BP_applyMorphine = [];
+
 
 //Preload Code
 call compile preprocessFileLineNumbers "\breakingpoint_server\publicEH.sqf";
