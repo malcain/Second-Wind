@@ -229,6 +229,7 @@ class CfgFunctions
 			class vehicleInteract {};
 			class vehicleKilled {};
 			class vehicleEngine {};
+			class vehicleViewLock {};
 		};
 		class Debug {
 			file = "\breakingpoint_client\functions\Debug";

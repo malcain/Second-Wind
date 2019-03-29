@@ -111,11 +111,6 @@ class BP_ApexMilBox2 : BP_LootBox {
 	model = "\A3\Supplies_F_Exp\Ammoboxes\Equipment_Box_F.p3d";
 };
 
-class BP_ExplosiveBox : BP_LootBox {
-    displayName = "Explosive Box";
-	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicWeaponBox.p3d";
-};
-
 class BP_MarksmanWeaponBox : BP_LootBox {
     displayName = "Explosive Box";
 	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
@@ -139,9 +134,9 @@ class BP_WeaponCratePacific : BP_LootBox {
 	
 /* Military Boxes Very Small (Small Magazine Supply Boxes)*/	
 
-class BP_AmmoBoxNew : BP_LootBox {
+class BP_AmmoBoxNew : BP_LootBox { //"Explosives"
     displayName = "Small Ammo Box";
-	model = "\A3\structures_f_epb\Items\Military\Ammobox_rounds_F.p3d";
+	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicWeaponBox.p3d";
 };	
 class BP_AmmoBoxOld : BP_LootBox {
     displayName = "Small Old Ammo Box";
@@ -216,9 +211,11 @@ class BP_CardboardBox_4: BP_CardboardBox_1 {
 /* Trashcan */
 class BP_Trashcan : BP_LootBox { model = "\breakingpoint\models\bp_trashcan.p3d"; };
 
+
 /* Bag */
 class BP_Bag1 : BP_LootBox { model = "\breakingpoint\models\bp_bag1.p3d"; };
 class BP_Bag2 : BP_LootBox { model = "\breakingpoint\models\bp_bag2.p3d"; };
+class BP_Sack : BP_LootBox { model = "\plp_containers\plp_ct_Sack.p3d"; };
 class BP_LuggageBags : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; };	
 
 class BP_Packs : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
@@ -234,7 +231,17 @@ class BP_Dumpster2 : BP_Dumpster1 { hiddenSelectionsTextures[] = {"breakingpoint
 class BP_Dumpster3 : BP_Dumpster1 { hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\dumpster3_co.paa"}; };
 class BP_Dumpster4 : BP_Dumpster1 { hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\dumpster4_co.paa"}; };
 class BP_Dumpster5 : BP_Dumpster1 { hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\dumpster5_co.paa"}; };
-
+class BP_Dumpster6 : BP_Dumpster1 {
+	model="\plp_containers\plp_ct_TrashContColoredClosed.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\plp_containers\StcTrashcans\plp_ct_TrashContColGlass.paa"
+	};
+};
 /* Skip */
 class BP_Skip1 : BP_LootBox {
 	model = "\breakingpoint\models\bp_skip.p3d";

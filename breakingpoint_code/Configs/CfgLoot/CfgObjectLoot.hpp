@@ -2437,6 +2437,7 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"BP_8Rnd_45gov","magazine"},
 			{"Rangefinder","weaponNA"},
+			{"BP_Binocular_Hunter","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
 			{"ItemCompass","toolbelt"},
@@ -2460,6 +2461,7 @@ class CfgObjectLoot {
 		itemChance[] =	{
 			0.04,   //45GOV
 			0.01,   //RANGEFINDER
+			0.02,   //Hunting Binocular
 			0.16,   //KNIFE
 			0.14,   //MATCHBOX
 			0.13,   //COMPASS

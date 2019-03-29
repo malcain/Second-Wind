@@ -623,7 +623,8 @@ if (_recompile == 3) then
 			call BP_fnc_initLoot;
 			call BP_fnc_initPublicEH;
 			call BP_fnc_InitDebug;
-			[] spawn { call BP_fnc_initDVS; };
+			call BP_fnc_initDVS;
+			call BP_fnc_vehicleViewLock;
 			
 			//Removed because onPlayerRespawn will end the loading screen when the login fsm is ready
 			cutText ["","BLACK OUT"];

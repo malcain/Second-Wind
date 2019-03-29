@@ -1206,7 +1206,7 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_ExplosiveBox","object","HotelAcc"},
+			{"BP_AmmoBoxNew","object","HotelAcc"},
             {"BP_AmmoCrateNew","object","HotelAcc"},
 			{"BP_WeaponCrateNew","object","HotelWpn"},
 			{"BP_MarksmanWeaponBox","object","MilitaryTower"},
@@ -1231,7 +1231,7 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_ExplosiveBox","object","HotelAcc"},
+			{"BP_AmmoBoxNew","object","HotelAcc"},
             {"BP_AmmoCrateNew","object","HotelAcc"},
 			{"BP_WeaponCrateNew","object","HotelWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},

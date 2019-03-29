@@ -910,21 +910,21 @@ class CfgMagazines
 	class BlueprintWaterBarrel : ItemBlueprint {
 		displayName = "Blueprint Haven Water Barrel";
 		descriptionUse = "Blueprint Haven Water Barrel";
-		descriptionShort = "Allows for the creation of a water barrel for use in havens.<br/>Requires- Hammer, 1x Box of Nails, 1x Fiberglass, 2x Fuel Hose Kits, 2x Waterproof Tape.";
+		descriptionShort = "Allows for the creation of a water barrel for use in havens.<br/>Requires- Hammer, 3x Palette, 2x Box of Nails, 2x Waterproof Tape.";
 		class Construction {
 			Object = "BP_BarrelWater";
 			Tools[] = {"ItemHammer"};
-			Materials[] = {"ItemNails","PartFiberGlass","ItemFuelhoseKit","ItemFuelhoseKit","ItemWaterTape","ItemWaterTape"};
+			Materials[] = {"PartPalette","PartPalette","PartPalette","ItemNails","ItemNails","ItemWaterTape","ItemWaterTape"};
 		};
 	};
 	
 	class BlueprintFuelBarrel : ItemBlueprint {
 		displayName = "Blueprint Haven Fuel Barrel";
 		descriptionUse = "Blueprint Haven Fuel Barrel";
-		descriptionShort = "Allows for the creation of a fuel barrel for use in havens.<br/>Requires- Hammer, 1x Box of Nails, 1x Fiberglass, 2x Fuel Hose Kits, 2x Waterproof Tape.";
+		descriptionShort = "Allows for the creation of a fuel barrel for use in havens.<br/>Requires- Blowtorch, 1x Box of Nails, 1x Fiberglass, 2x Fuel Hose Kits, 2x Waterproof Tape.";
 		class Construction {
 			Object = "BP_BarrelFuel";
-			Tools[] = {"ItemHammer"};
+			Tools[] = {"ItemBlowtorch"};
 			Materials[] = {"ItemNails","PartFiberGlass","ItemFuelhoseKit","ItemFuelhoseKit","ItemWaterTape","ItemWaterTape"};
 		};
 	};

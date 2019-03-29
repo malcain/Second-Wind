@@ -51,7 +51,7 @@ if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
 if (_itemorignal == "FoodPlayerCooked")
 _class = player getVariable ["class",0];
 if (_class == 3) then {
-_regen = _regen+700
+_regen = _regen+700;
 _speedcoef = getAnimSpeedCoef player;
 	if (_speedcoef < 1.12 && !{_speedcoef > 1.15}) then {
 		player setAnimSpeedCoef 1.12;

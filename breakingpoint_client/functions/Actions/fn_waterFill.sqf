@@ -96,7 +96,7 @@ _objectsWell = 	nearestObjects [_playerPos, [], 4];
 			cutText ["No water left here.", "PLAIN DOWN"];
 			_invalid = true;
 		};
-		if (random 1 < (0.92 - _rain*2)) then {
+		if (random 1 < (0.65 - _rain*1.5)) then {
 			_x setdamage 0.75;
 			cutText ["No water left here.", "PLAIN DOWN"];
 			_invalid = true;

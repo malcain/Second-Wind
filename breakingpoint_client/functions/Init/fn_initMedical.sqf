@@ -154,6 +154,10 @@ waitUntil
 		//Can't Rest Inside Vehicle
 		if ((vehicle player) != player) then { r_action_rest = false; };
 		
+		_animState = animationState player;
+		_healArray = ["amovpercmstpsnonwnondnon_amovpsitmstpsnonwnondnon_ground","amovpsitmstpsnonwnondnon_ground"];
+		if !(_animState in _healArray) then { r_action_rest = false; };
+		
 		//Process Resting
 		//private ["_isNomad","_isNomadTraitor"];
 		_isNomad = (_factionName == "Nomad");

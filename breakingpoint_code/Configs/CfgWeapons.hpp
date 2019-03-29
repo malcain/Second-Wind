@@ -2936,7 +2936,7 @@ class CfgWeapons
 		descriptionUse = "Portable Surgery Kit";
 		model = "\breakingpoint\models\bp_surgerykit.p3d";
 		picture = "\breakingpoint\textures\icons\bp_surgerykit_ca.paa";
-		descriptionShort = "Full treatment operation. Saves lifes in safe hands, deadly otherwise.<br/>Requires- 1x Morphine, 1x Military Field Dressing for operation to pass without consequences.";
+		descriptionShort = "Full treatment operation. Saves lifes in safe hands.<br/>For operation to pass without consequences Requires- 1x Morphine, 1x Military Field Dressing.";
 		simulation = "ItemRadio";
 		
 		class ItemInfo {

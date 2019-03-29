@@ -684,6 +684,7 @@ BP_ObjectPreload =
 	"BP_Dumpster3",
 	"BP_Dumpster4",
 	"BP_Dumpster5",
+	"BP_Dumpster6",
 	"BP_Skip1",
 	"BP_Skip2",
 	"BP_Skip3",
