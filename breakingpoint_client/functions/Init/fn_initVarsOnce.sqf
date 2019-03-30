@@ -27,7 +27,8 @@ BP_TrapBuildables =
 [
 	"BP_TripMine_Mag",
 	"BP_ATMine_Mag",
-	"BP_BearTrap_Mag"
+	"BP_HumanTrap_Mag"
+//	"BP_BearTrap_Mag"
 ];
 
 BP_NormalClothing =
@@ -179,6 +180,7 @@ BP_TurretAmmo =
 BP_FuelFull =
 [
 	"ItemFuelcan",
+	"ItemFuelcanMedium",
 	"ItemFuelcanLarge"
 ];
 
@@ -665,7 +667,7 @@ BP_ObjectPreload =
 	"BP_WeaponCrateOld",
 	"BP_WeaponCrate_WWII",
 	"BP_HeavyWeaponCrate",
-	"BP_VehicleAmmoCrate",
+	//"BP_VehicleAmmoCrate",
 	"BP_AirDropCrate",
 	"BP_AmmoPallet1",
 	"BP_AmmoPallet2",
@@ -689,7 +691,43 @@ BP_ObjectPreload =
 	"BP_Skip2",
 	"BP_Skip3",
 	"BP_Skip4",
-	"BP_Skip5"
+	"BP_Skip5",
+	"BP_WreckedBox",
+	"BP_FoodBoxIDAP",
+	"BP_CartonBox",
+	"BP_CartonBoxSmall",
+	"BP_GhostBoxBlk",
+	"BP_GhostBoxGrn",
+	"BP_GhostBoxBrn",
+	"BP_WeathCrateSmallWRN",
+	"BP_WeathCrateSmallBRN",
+	"BP_WeathCrateWRN",
+	"BP_WeathCrateBRN",
+	"BP_WeathCrateGRN",
+	"BP_WeathCrateBigBRN",
+	"BP_WeathCrateBigGRN",
+	"BP_WeathCrateBigWRN",
+	"BP_WoodboxSmall",
+	"BP_ContrabandBox",
+	"BP_ContrabandBoxEmpty",
+	"BP_MedicalMultibox",
+	"BP_Sack",
+	"BP_TrashcanHouse",
+	"BP_TrashBinGR",
+	"BP_DustbinBlk",
+	"BP_DustbinGR",
+	"BP_WeaponCrateNewBLK",
+	"BP_MilCrateMediumOLV",
+	"BP_MilCrateMediumBLK",
+	"BP_MilCrateTallOLV",
+	"BP_MilCrateTallBLK",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
+	"BP_DustbinGR",
 ];
 
 

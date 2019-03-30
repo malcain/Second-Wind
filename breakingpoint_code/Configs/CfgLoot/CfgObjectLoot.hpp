@@ -59,7 +59,7 @@ class CfgObjectLoot {
 			{"ItemFieldDressing","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"ItemSurgeryKit","toolbelt"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
@@ -110,7 +110,7 @@ class CfgObjectLoot {
 			0.01,	//FIELDDRESSING
 			0.05,	//ANTIBIOTIC
 			0.01,	//SURGERYKIT
-			0.15,	//WATERBOTTLE
+			0.15,	//WaterbotEmptyTLE
 			0.10,	//TENNISBALL			
 			0.05,	//DUCTTAPE
 			0.05,	//WATERTAPE
@@ -161,34 +161,6 @@ class CfgObjectLoot {
 			{"BP_srifle_DMR_07_ghex_F","weapon"},  //CMR-76 Green Hex
 			{"BP_srifle_DMR_07_hex_F","weapon"},  //CMR-76 Hex 
 			{"BP_SMG_05_F","weapon"},  //Protector
-			{"BP_JungleGhillie_Uniform","uniform"},  //Full Ghillie (Jungle)
-			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
-			{"BP_Paramilitary_Shorts_Uniform","uniform"},  //Paramilitary Garb (Shorts)
-			{"BP_Paramilitary_Tee_Uniform","uniform"}, //Paramilitary Garb (Tee)
-			{"V_PlateCarrierGL_tna_BP","vest"},  //Carrier GL Rig (Tropic)
-			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
-			{"V_HarnessO_gry_BP","vest"},   //LBV Harness (Grey)
-			{"V_HarnessO_ghex_BP","vest"},   //LBV Harness (Green Hex)
-			{"V_BandollierB_ghex_BP","vest"},   //Slash Bandolier (Green Hex)
-			{"V_TacChestrig_grn_BP","vest"},    //Tactical Chest Rig (Green)
-			{"V_TacChestrig_cbr_BP","vest"},  //Tactical Chest Rig (Coyote)
-			{"optic_Aco","toolbelt"},
-			{"optic_Hamr","toolbelt"},
-			{"BP_Bergen_blk","backpack"},
-			{"BP_Carryall_oucamo","backpack"},
-			{"BP_Carryall_blk","backpack"},		
-			{"BP_Bergen_mcamo","backpack"},
-			{"BP_Bergen_sgg","backpack"},
-			{"BP_Bergen_rgr","backpack"},	
-			{"BP_optic_ACOG","toolbelt"},
-			{"BP_CPad","toolbelt"},
-			{"BP_AFG","toolbelt"},
-			{"BP_M3A2","toolbelt"},
-			{"BP_5Rnd_762m80a1_Mag","magazine"},
-			{"HandGrenade","magazine"},
-			{"BP_1Rnd_HE_shell","magazine"},
-			{"BP_UGL_FlareGreen","magazine"},
-			{"BP_100Rnd_127x99_box","magazine"},
 			{"BP_30Rnd_545x39_Mag_F","magazine"},
 			{"BP_30Rnd_545x39_Mag_Green_F","magazine"},
 			{"BP_30Rnd_545x39_Mag_Tracer_F","magazine"},
@@ -242,34 +214,6 @@ class CfgObjectLoot {
 			0.01,	//CMR-76 Green Hex
 			0.01,   //CMR-76 Hex
 			0.02,   //Protector
-			0.01,	//Full Ghillie (Jungle)
-			0.01,	//Paramilitary Garb (Jacket)
-			0.02,	//Paramilitary Garb (Shorts)
-			0.02,	//Paramilitary Garb (Tee)
-			0.01,	//Carrier GL Rig (Tropic)
-			0.01,	//Gendarmerie Vest
-			0.02,	//LBV Harness (Grey)
-			0.02,   //LBV Harness (Green Hex)
-			0.05,   //Slash Bandolier (Green Hex)
-			0.01,   //Tactical Chest Rig (Green)
-			0.01,	//Tactical Chest Rig (Coyote)
-			0.05,	//OPTIC ACO
-			0.03,	//HAMR OPTIC
-            0.02,   //BERGEN BLACK
-			0.02, 	//CARRYALL URBAN
-            0.02,   //CARRYALL BLACK	
-			0.02,   //BERGEN 
-			0.02,   //BERGEN 
-			0.02,   //BERGEN
-			0.02,	//ACOG
-			0.02,	//CHEEKPIECE
-			0.03,	//AFG
-			0.02,	//M3A2
-			0.02,	//5RND 762M80A1
-			0.02,	//HAND GRENADE
-			0.02,	//HE GRENADE M203
-			0.05,	//Flare green
-			0.01,	//100Rnd_127x99_box
 			0.07,	//BP_30Rnd_545x39_Mag_F
 			0.07,	//BP_30Rnd_545x39_Mag_Green_F
 			0.05,	//BP_30Rnd_545x39_Mag_Tracer_F
@@ -301,10 +245,6 @@ class CfgObjectLoot {
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_JungleGhillie_Uniform","uniform"},  //Full Ghillie (Jungle)
-			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
-			{"BP_Paramilitary_Shorts_Uniform","uniform"},  //Paramilitary Garb (Shorts)
-			{"BP_Paramilitary_Tee_Uniform","uniform"}, //Paramilitary Garb (Tee)
 			{"V_PlateCarrierGL_tna_BP","vest"},  //Carrier GL Rig (Tropic)
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"V_HarnessO_gry_BP","vest"},   //LBV Harness (Grey)
@@ -331,10 +271,6 @@ class CfgObjectLoot {
 			{"BP_100Rnd_127x99_box","magazine"}
 		};
 		itemChance[] =	{
-			0.01,	//Full Ghillie (Jungle)
-			0.02,	//Paramilitary Garb (Jacket)
-			0.02,	//Paramilitary Garb (Shorts)
-			0.02,	//Paramilitary Garb (Tee)
 			0.01,	//Carrier GL Rig (Tropic)
 			0.01,	//Gendarmerie Vest
 			0.02,	//LBV Harness (Grey)
@@ -448,7 +384,7 @@ class CfgObjectLoot {
 		};
 	};
 	
-	class ApexMilBox3: Default {
+	/*class ApexMilBox3: Default {
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{
@@ -503,7 +439,7 @@ class CfgObjectLoot {
 			0.01,	//10Rnd_50BW_Mag_F
 			0.02	//BP_20Rnd_650x39_Cased_Mag_F
 		};
-	};
+	};*/
 	
 	class AmmoPalletTroll: Default 
 	{
@@ -758,7 +694,7 @@ class CfgObjectLoot {
 			{"BP_5Rnd_22_Mag","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemBandage","magazine"},
 			{"Meleehatchet","weaponNA"},
@@ -955,7 +891,7 @@ class CfgObjectLoot {
 			{"ItemStove","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
@@ -1141,7 +1077,7 @@ class CfgObjectLoot {
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemElectronics","magazine"},
@@ -1439,7 +1375,7 @@ class CfgObjectLoot {
 			{"BP_Kitbag_sgg","backpack"},
 			{"BP_Kitbag_cbr","backpack"},
 			{"BP_Kitbag_mcamo","backpack"}, 
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
 			{"ItemSoda3","magazine"},
@@ -1484,7 +1420,7 @@ class CfgObjectLoot {
 			0.03, 	//KIT SAGE
 			0.02, 	//KIT CBR
 			0.01,   //KIT CAMO
-			0.02,	//WATERBOTTLE
+			0.02,	//WaterbotEmptyTLE
 			0.02,	//SODA
 			0.02,	//SODA
 			0.02,	//SODA
@@ -1515,8 +1451,43 @@ class CfgObjectLoot {
 		lootChance = 0.95;
 		lootPos[] = {};
 		itemType[] =	{
-			{"ItemBrick1","magazine"},
-			{"ItemBrick2","magazine"},
+			{"ItemDuctTape","magazine"},
+			{"ItemWaterTape","magazine"},
+			{"ItemBandage","magazine"},
+			{"ItemPainkiller","magazine"},
+			{"ItemMorphine","magazine"},
+			{"ItemFieldDressing","magazine"},
+			{"ItemAntibiotic","magazine"},
+			//{"ItemSurgeryKit","toolbelt"},
+			{"ItemAdrenaline","magazine"},
+			{"ItemKnife","magazine"},
+			{"ItemMatchbox","magazine"},
+			{"WaterbotEmpty","magazine"}
+		};
+		itemChance[] =	{
+			0.06,	//DUCT TAPE
+			0.06,	//WATER TAPE
+			0.20,	//BANDAGE
+			0.20,	//PAINKILLER
+			0.14,	//MORPHINE
+			0.14,	//FIELD DRESSING
+			0.10,	//ANTIBIOTIC
+			//0.05,     //SURGERY KIT
+			0.04,     //Adrenaline
+			0.02,	//KNIFE
+			0.05,	//MATCHES
+			0.04	//WaterbotEmpty
+		};
+	};
+	
+	class Research: Default {
+		lootChance = 0.95;
+		lootPos[] = {};
+		itemType[] =	{
+			{"ItemBook1","magazine"},
+			{"ItemDuctTape","magazine"},
+			{"ItemWaterTape","magazine"},
+			{"ItemGlue","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemMorphine","magazine"},
@@ -1525,20 +1496,26 @@ class CfgObjectLoot {
 			{"ItemSurgeryKit","toolbelt"},
 			{"ItemAdrenaline","magazine"},
 			{"ItemKnife","magazine"},
-			{"ItemMatchbox","magazine"}
+			{"ItemMatchbox","magazine"},
+			{"WaterbotBoiled","magazine"},
+			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
-			0.05,	//BRICK
-			0.05,	//BRICK
-			0.25,	//BANDAGE
-			0.25,	//PAINKILLER
-			0.22,	//MORPHINE
-			0.22,	//FIELD DRESSING
-			0.25,	//ANTIBIOTIC
-			0.05,     //SURGERY KIT
-			0.05,     //Adrenaline
-			0.02,	//KNIFE
-			0.05	//MATCHES
+			0.06,	//Instructional Book
+			0.06,	//DUCT TAPE
+			0.06,	//WATER TAPE
+			0.06,	//Glue
+			0.11,	//BANDAGE
+			0.11,	//PAINKILLER
+			0.14,	//MORPHINE
+			0.14,	//FIELD DRESSING
+			0.14,	//ANTIBIOTIC
+			0.05,    //SURGERY KIT
+			0.05,    //Adrenaline
+			0.03,	//KNIFE
+			0.07,	//MATCHES
+			0.02,	//WaterbotBoiled 
+			0.06	//Mushroom
 		};
 	};
 	
@@ -1802,7 +1779,7 @@ class CfgObjectLoot {
 			{"BP_762x54_SVD","magazine"},
 			{"BP_30Rnd_65x39","magazine"},
 			{"BP_5Rnd_300_Mag","magazine"},
-			//{"BP_10Rnd_338Lapua_Mag","magazine"},
+			{"BP_10Rnd_338Lapua_Mag","magazine"},
 			{"BP_5Rnd_762mk316_Mag","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
 			{"BP_5Rnd_3006m_Mag","magazine"},
@@ -1817,7 +1794,7 @@ class CfgObjectLoot {
             0.06,   //SVD
 			0.16,   //GRENDEL
             0.01,   //300 WINMAG
-			//0.01,   //338
+			0.01,   //338
             0.02,   //5RND 762MK316
 			0.22,   //3006
 			0.07,   //3006M
@@ -2124,7 +2101,7 @@ class CfgObjectLoot {
 			{"BP_10Rnd_65x39","magazine"},
 			{"ItemKnife","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"BP_Arrow_Mag","magazine"},
 			{"BP_Arrow_Rambo","magazine"},
 			{"BP_Arrow_Fire","magazine"},
@@ -3015,7 +2992,7 @@ class CfgObjectLoot {
 			{"ItemKnife","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
 			{"BP_gemtech9","toolbelt"},			
-			{"Waterbot","magazine"},
+			{"WaterbotEmpty","magazine"},
 			{"V_BandollierB_blk_BP","vest"}
 		};
 		itemChance[] =	{

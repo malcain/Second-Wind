@@ -65,7 +65,7 @@ class CfgBuildingLoot
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Generic"},
-            {"BP_Trashcan","object","Trash"},
+            {"BP_TrashcanHouse","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Trash"},
 			{"BP_LuggageBags","object","Residential"},
@@ -207,7 +207,7 @@ class CfgBuildingLoot
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Generic"},
-            {"BP_Trashcan","object","Trash"},
+            {"BP_TrashcanHouse","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_WeaponCrateOld","object","Residential2"},
 			{"BP_LuggageBags","object","Residential"},
@@ -370,7 +370,8 @@ class CfgBuildingLoot
 			{"BP_CardboardBox_1","object","Office"},
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Supermarket"},
-            {"BP_Trashcan","object","Trash"},
+            {"BP_DustbinBlk","object","Trash"},
+			{"BP_DustbinGR","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Trash"},
 			{"BP_LuggageBags","object","Residential"},
@@ -380,7 +381,8 @@ class CfgBuildingLoot
 			0.15,	//BP_CardBoardBox1
 			0.30,	//BP_CardBoardBox2
 			0.10,	//BP_CardBoardBox3
-			0.10,	//BP_Trashcan
+			0.05,	//BP_DustbinBlk
+			0.05,	//BP_DustbinGR
 			0.10,   //BP_Bag1
 			0.05,   //BP_Bag2
 			0.05,    //BP_LuggageBags
@@ -397,7 +399,8 @@ class CfgBuildingLoot
 			{"BP_CardboardBox_1","object","Office"},
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Generic"},
-            {"BP_Trashcan","object","Trash"},
+            {"BP_DustbinBlk","object","Trash"},
+			{"BP_DustbinGR","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Trash"},
 			{"BP_LuggageBags","object","Office2"},
@@ -451,7 +454,8 @@ class CfgBuildingLoot
 			0.15,	//BP_CardBoardBox1
 			0.01,	//BP_CardBoardBox2
 			0.04,	//BP_CardBoardBox3
-			0.07,	//BP_Trashcan
+			0.03,	//BP_DustbinBLK
+			0.04,	//BP_DustbinGR
 			0.07,   //BP_Bag1
 			0.07,   //BP_Bag2
 			0.07,    //BP_LuggageBags
@@ -560,6 +564,67 @@ class CfgBuildingLoot
 			0.02	//DUCT TAPE
 		};		
 	};
+	
+	class Research: Default {
+		zombieChance = 0.4;
+		minRoaming = 0;
+		maxRoaming = 2;
+		zombieClass[] = {"BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"};
+		lootChance = 0.20;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_MedicalBox","object","Hospital"},
+			{"BP_MedicalMultibox","object","Research"},
+			{"BP_WeaponCrateOld","object","Residential2"},
+			{"BP_Bag2","object","Trash"},
+			{"ItemBandage","magazine"},
+			{"ItemPainkiller","magazine"},
+			{"ItemMorphine","magazine"},
+			{"ItemFieldDressing","magazine"},
+			{"ItemAntibiotic","magazine"},
+			{"ItemSurgeryKit","toolbelt"},
+			{"ItemAdrenaline","magazine"},
+			{"ItemKnife","magazine"},
+			{"ItemMatchbox","magazine"},
+			{"ItemBook1","magazine"},
+			{"ItemBook2","magazine"},
+			{"ItemBook3","magazine"},
+			{"ItemMug","magazine"},
+			{"ItemPottery","magazine"},
+			{"ItemVideoTape","magazine"},
+			{"ItemZipDisk","magazine"},
+			{"ItemToiletPaper","magazine"},
+			{"ItemGlue","magazine"},
+			{"ItemDuctTape","magazine"}
+		};
+		itemChance[] =	{
+			0.10,	//BP_MedicalBox
+			0.15,	//BP_MedicalMultibox
+			0.04,   //BP_Bag1
+			0.02,   //Weapons
+			0.04,   //BP_Bag2
+			0.05,	//BANDAGE
+			0.05,	//PAINKILLER
+			0.05,	//MORPHINE
+			0.05,	//FIELD DRESSING
+			0.05,	//ANTIBIOTIC
+			0.03,   //SURGERY KIT
+			0.03,   //Adrenaline
+			0.03,	//KNIFE
+			0.03,	//MATCHES
+			0.01,	//BOOK
+			0.01,	//BOOK
+			0.01,	//BOOK
+			0.02,	//MUG
+			0.01,	//POTTERY
+			0.01, 	//VIDEO TAPE
+			0.01, 	//ZIPDISK
+			0.02,	//TOILET PAPER
+			0.03,	//GLUE
+			0.02	//DUCT TAPE
+		};		
+	};
+
 	class Windmill: Default {
 		zombieChance = 0.5;
 		minRoaming = 1;
@@ -568,18 +633,20 @@ class CfgBuildingLoot
 		lootChance = 0.25;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_Trashcan","object","Trash"},
+			{"BP_WreckedBox","object","Trash"},
 			{"BP_Bag1","object","Generic"},
-			{"BP_Bag2","object","Supermarket"},
-			{"BP_WeaponCrateOld","object","WindmillWpn"},
+			{"BP_Sack","object","Supermarket"},
+			{"BP_WeathCrateBigWRN","object","WindmillWpn"},
+			{"BP_WeathCrateWRN","object","WindmillWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_AmmoBoxOld","object","WindmillAcc"}
+			{"BP_WeathCrateSmallWRN","object","WindmillAcc"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_Trashcan
+			0.10,	//BP_WreckedBox
 			0.10,   //BP_Bag1
-			0.10,   //BP_Bag2
-			0.15,   //WINDMILL WPN
+			0.10,   //BP_Sack
+			0.07,   //WINDMILL WPN
+			0.08,   //WINDMILL WPN
 			0.01,   //SURPLUS WPN
 			0.30    //WINDMILL ACC 
 		};		
@@ -593,10 +660,12 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_Bag1","object","Generic"},
-			{"BP_Bag2","object","Generic"},
-			{"BP_AmmoBoxOld","object","WindmillAcc"},
+			{"BP_Sack","object","Generic"},
+			{"BP_WreckedBox","object","Trash"},
+			{"BP_WeathCrateSmallBRN","object","WindmillAcc"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_CardboardBox_4","object","Farm"},
+			{"BP_WreckedBox","object","Farm"},
+			{"BP_CartonBox","object","Farm"},
 			{"ItemFuelcanEmpty","magazine"},
 			{"ItemWaterTape","magazine"},
 			{"ItemBandage","magazine"},
@@ -640,10 +709,12 @@ class CfgBuildingLoot
 		};
 		itemChance[] =	{
 			0.05,   //BP_Bag1
-			0.05,   //BP_Bag2
+			0.05,   //BP_Sack
+			0.05,   //BP_WreckedBox Trash
 			0.08,   //BP_WindmillAcc
 			0.01,   //SURPLUS WPN
-			0.20,    //BP_Farm
+			0.05,    //BP_WreckedBox Farm
+			0.15,    //BP_Farm
 			0.01,	//JERRY CAN
 			0.01,	//WATER TAPE
 			0.01,	//BANDAGE
@@ -686,6 +757,112 @@ class CfgBuildingLoot
 			0.01,   //30-06 MAG
 		};		
 	};
+	
+	class Construction: Default {
+		zombieChance = 0.2;
+		minRoaming = 0;
+		maxRoaming = 1;
+		zombieClass[] = {"BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"};
+		lootChance = 0.10;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_WreckedBox","object","Generic"},
+			{"BP_Bag2","object","Generic"},
+			{"BP_WoodboxSmall","object","WindmillAcc"},
+			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
+			{"BP_CardboardBox_4","object","Farm"},
+			{"BP_CartonBox","object","Farm"},
+			{"ItemFuelcanEmpty","magazine"},
+			{"ItemWaterTape","magazine"},
+			{"ItemBandage","magazine"},
+			{"ItemNails","magazine"},
+			{"V_Rangemaster_belt_BP","vest"},
+			{"BP_6Rnd_45_Mag","magazine"},
+			{"BP_6Rnd_44Mag","magazine"},
+			{"BP_sw45","weapon"},
+			{"BP_sw44","weaponA"},
+			{"BP_5Rnd_Mauser_Mag","magazine"},
+			{"BP_Rem870","weapon"},
+			{"BP_Ruger","weapon"},
+			{"BP_1886S","weaponA"},
+			{"BP_25Rnd_22_Mag","magazine"},
+			{"BP_5Rnd_500Mag","magazine"},
+			{"BP_Rhino","weapon"},
+			{"BP_8Rnd_Slug","magazine"},
+			{"PartPalette","magazine"},
+			{"PartWheel","magazine"},
+			{"ItemCanvasMaterial","magazine"},
+			{"ItemNettingMaterial","magazine"},
+			{"ItemLubricant","magazine"},
+			{"ItemElectronics","magazine"},
+			{"ItemElectricalWire","magazine"},
+			{"ItemHydraulicCylinder","magazine"},
+			{"ItemEngineCoolant","magazine"},
+			{"ItemFuelhoseKit","magazine"},
+			{"MeleePickaxe","weaponNA"},
+			{"MeleeHammer","weaponNA"},
+			{"MeleeHammer2","weaponNA"},
+			{"BlueprintStove","magazine"},
+			{"MeleeShovel","weaponNA"},
+			{"MeleeCrowbar","weaponNA"},
+			{"MeleeClub","weaponNA"},
+			{"ItemStove","magazine"},
+			{"ItemToolbox","toolbelt"},
+			{"BP_8Rnd_45gov","magazine"},
+			{"BP_Unertl32x","toolbelt"},
+			{"BP_15Rnd_9x19OVP","magazine"},
+			{"BP_5Rnd_3006_Mag","magazine"},
+		};
+		itemChance[] =	{
+			0.05,   //BP_WreckedBox
+			0.05,   //BP_Bag2
+			0.08,   //BP_WindmillAcc
+			0.01,   //SURPLUS WPN
+			0.10,    //BP_Farm
+			0.10,   //BP_CartonBox Farm
+			0.01,	//JERRY CAN
+			0.01,	//WATER TAPE
+			0.01,	//BANDAGE
+			0.01,   //NAILS
+			0.01,	//BANDOLIER	
+			0.01,	//45 MAG ROUNDS
+			0.01,	//44 MAG ROUNDS
+			0.01,	//SW45
+			0.01,	//SW.500 Scoped
+			0.01,	//MAUSER 7.92
+			0.01,	//REMINGTON 870
+			0.01,	//RUGER 10/22
+			0.01,	//1886S
+			0.01,	//25RND .22LR
+			0.01,	//.500SW
+			0.01,	//RHINO
+			0.01,	//BENELLI SLUGS
+			0.02,   //PALETTE
+			0.03,	//WHEEL
+			0.02,   //CANVAS MATERIAL
+			0.02,   //NETTING MATERIAL
+			0.02,   //HYDRAULIC FLUID
+			0.02,   //ELECTRONICS
+			0.02,   //WIRE
+			0.02,   //HYDRAULIC CYLINDER
+			0.02,   //ENGINE COOLANT
+			0.02,   //FUEL HOSE KIT
+			0.01,   //PICKAXE
+			0.01,   //HAMMER
+			0.01,   //HAMMER2
+			0.01,    //SHOVEL
+			0.01,    //BAT
+			0.01,    //CROWBAR
+			0.01,   //Stove BLUEPRINT
+			0.01,   //Stove
+			0.02,	//TOOLBOX
+			0.01,   //45GOV
+			0.01,   //UNERTL 32X
+			0.01,   //9MM OVP
+			0.01,   //30-06 MAG
+		};		
+	};
+	
 	class Industrial: Default {
 		zombieChance = 0.2;
 		zombieClass[] = {"BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"};
@@ -826,7 +1003,7 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-            {"BP_AmmoBoxOld","object","MilitaryGeneralAcc"},
+            {"BP_AmmoBoxNew","object","MilitaryGeneralAcc"},
 			{"BP_AmmoCrateOld","object","MilitaryGeneralAcc"},
 		    {"BP_WeaponCrateOld","object","MilitaryGeneralWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
@@ -887,7 +1064,7 @@ class CfgBuildingLoot
 			{"BP_8Rnd_MagBuckshot","vest"}
 		};
 		itemChance[] =	{
-			0.06,	//BP_AmmoBoxOld
+			0.06,	//BP_AmmoBoxNew
 			0.10,   //BP_AmmoCrateOld
 			0.15,   //BP_WeaponCrateOld
 			0.04,   //BP_WeaponCrateOld
@@ -955,7 +1132,7 @@ class CfgBuildingLoot
 		lootChance = 0.05; 
 		lootPos[] = {};
 		itemType[] =	{
-            {"BP_AmmoBoxOld","object","MilitarySpecialAcc"},
+            {"BP_AmmoBoxNew","object","MilitarySpecialAcc"},
 			{"BP_AmmoCrateOld","object","MilitarySpecialAcc"},
 		    {"BP_WeaponCrateOld","object","MilitarySpecialWpn"},
 			{"BP_WeaponCrateOld","object","MilitaryGeneralWpn"},
@@ -1022,7 +1199,7 @@ class CfgBuildingLoot
 			{"V_BanditBandolier_BP","vest"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_AmmoBoxOld
+			0.10,	//BP_AmmoBoxNew
 			0.10,   //BP_AmmoCrateOld
 			0.15,   //BP_WeaponCrateOld
 			0.15,   //BP_WeaponCrateOld
@@ -1097,30 +1274,28 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-            {"BP_AmmoBoxNew","object","MilitaryAirfieldSpc"},
+            {"BP_MilCrateTallBLK","object","MilitaryAirfieldSpc"},
 			{"BP_AmmoCrateOld","object","MilitarySpecialAcc"},
-            {"BP_AmmoCrateNew","object","MilitaryAirfieldAcc"},
-			{"BP_WeaponCrateNew","object","MilitaryAirfieldWpn"},
-		    {"BP_WeaponCrateOld","object","MilitarySpecialWpn"},
+            {"BP_MilCrateTallBLK","object","MilitaryAirfieldAcc"},
+			{"BP_WeaponCrateNewBLK","object","MilitaryAirfieldWpn"},
+		    {"BP_MilCrateMediumBLK","object","MilitarySpecialWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_Trashcan","object","Trash"},
-			{"BP_Bag1","object","Generic"},
-			{"BP_CardboardBox_3","object","Generic"},
-			{"BP_MedicalBox","object","Hospital"},
-			{"BP_MarksmanWeaponBox","object","MilitaryTower"}
+			{"BP_TrashBinGR","object","Trash"},
+			{"BP_CartonBoxSmall","object","Generic"},
+			{"BP_FoodBoxIDAP","object","Supermarket"},
+			{"BP_MedicalBox","object","Hospital"}
 		};
 		itemChance[] =	{
-			0.03,	//BP_AmmoBoxNew
-			0.10,	//BP_AmmoBoxOld
-			0.10,	//BP_AmmoCrateNew
-			0.15,   //BP_WeaponCrateNew
-			0.15,   //BP_WeaponCrateOld
+			0.03,	//MilitaryAirfieldSpc
+			0.10,	//BP_AmmoCrateOld
+			0.10,	//BP_MilCrateTallBLK
+			0.17,   //BP_WeaponCrateNewBLK
+			0.17,   //BP_MilCrateMediumBLK
 			0.02,   //BP_WeaponSurplus
 			0.10,   //TRASH
 			0.10,   //GENERIC
-			0.08,   //CARDBOARD
-			0.01,	//BP_MedicalBox
-			0.15    //MilitaryTower
+			0.06,   //CARDBOARD
+			0.01	//BP_MedicalBox
 		};		
 	};
 	class MilitaryTower: Default {
@@ -1131,10 +1306,10 @@ class CfgBuildingLoot
 		lootChance = 0.15;
 		lootPos[] = {};
 		itemType[] =	{
-            {"BP_MarksmanWeaponBox","object","MilitaryTower"},
-			{"BP_Bag1","object","Generic"},
+            {"BP_WeathCrateBigGRN","object","MilitaryTower"},
+			{"BP_CartonBoxSmall","object","Generic"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_CardboardBox_1","object","Office"},
+			{"BP_PlasticBox","object","Office"},
 			{"BP_SVD","weaponA"},
 			{"BP_AR10","weaponA"},
 			{"BP_SA582","weaponA"},
@@ -1152,7 +1327,7 @@ class CfgBuildingLoot
 			{"BP_762x54_7N13_10rnd","magazine"}
 		};
 		itemChance[] =	{
-			0.03,	//BP_MarksmanWeaponBox
+			0.03,	//BP_WeathCrateBigGRN
 			0.07,   //GENERIC
 			0.03,   //SURPLUS
 			0.07,	//Office
@@ -1182,15 +1357,15 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_AmmoBoxNew","object","MilitaryRangerAcc"},
-            {"BP_AmmoCrateNew","object","MilitaryRangerAcc"},
+            {"BP_MilCrateTallOLV","object","MilitaryRangerAcc"},
 			{"BP_WeaponCrateNew","object","MilitaryRangerWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_CardboardBox_3","object","Generic"},
+			{"BP_Bag1","object","Generic"},
 			{"BP_MedicalBox","object","Hospital"}
 		};
 		itemChance[] =	{
-			0.12,	//BP_AmmoBoxNew
-			0.12,	//BP_AmmoCrateNew
+			0.12,	//BP_AmmoBoxNew "Explosives"
+			0.12,	//BP_MilCrateTallOLV
 			0.30,   //BP_WeaponCrateNew
 			0.04,   //WWII
 			0.15,   //GENERIC
@@ -1206,19 +1381,21 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_AmmoBoxNew","object","HotelAcc"},
-            {"BP_AmmoCrateNew","object","HotelAcc"},
-			{"BP_WeaponCrateNew","object","HotelWpn"},
-			{"BP_MarksmanWeaponBox","object","MilitaryTower"},
+			{"BP_GhostBoxBlk","object","HotelAcc"},
+            {"BP_GhostBoxGrn","object","HotelAcc"},
+			{"BP_GhostBoxBrn","object","HotelAcc"},
+			{"BP_WeathCrateBigBRN","object","HotelWpn"},
+			{"BP_WeathCrateBigGRN","object","MilitaryTower"},
 			{"BP_Bag2","object","Generic"},
 			{"BP_MedicalBox","object","Hospital"}
 		};
 		itemChance[] =	{
-			0.25,	//BP_AmmoBoxNew
-			0.25,	//BP_AmmoCrateNew
-			0.05,   //BP_WeaponCrateNew
-			0.05,   //BP_MarksmanWeaponBox
-			0.25,   //GENERIC
+			0.15,	//BP_GhostBoxBlk
+			0.15,	//BP_GhostBoxGrn
+			0.15,	//BP_GhostBoxBrn
+			0.11,   //HotelWpn
+			0.05,   //MilitaryTower
+			0.22,   //GENERIC
 			0.02    //BP_MedicalBox
 		};		
 	};
@@ -1231,20 +1408,22 @@ class CfgBuildingLoot
 		lootChance = 0.05;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_AmmoBoxNew","object","HotelAcc"},
-            {"BP_AmmoCrateNew","object","HotelAcc"},
-			{"BP_WeaponCrateNew","object","HotelWpn"},
+			{"BP_GhostBoxBlk","object","HotelAcc"},
+            {"BP_GhostBoxGrn","object","HotelAcc"},
+			{"BP_GhostBoxBrn","object","HotelAcc"},
+			{"BP_WeathCrateBigBRN","object","HotelWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
 			{"BP_Bag1","object","Generic"},
-			{"BP_MarksmanWeaponBox","object","MilitaryTower"}
+			{"BP_WeathCrateBigGRN","object","MilitaryTower"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_AmmoBoxNew
-			0.10,	//BP_AmmoCrateNew
-			0.20,   //BP_WeaponCrateNew
+			0.08,	//BP_GhostBoxBlk
+			0.08,	//BP_GhostBoxGrn
+			0.08,	//BP_GhostBoxBrn
+			0.26,   //HotelWpn
 			0.05,   //BP_WeaponSurplus
-			0.15,   //GENERIC
-			0.20    //BP_MarksmanWeaponBox
+			0.22,   //GENERIC
+			0.11    //MilitaryTower
 		};		
 	};
 	
@@ -1648,7 +1827,7 @@ class CfgBuildingLoot
 			{"BP_ApexMilBox1","object","ApexMilBox1"},
 			{"BP_ApexMilBox2","object","ApexMilBox2"},
 			{"BP_AmmoCrateNew","object","HotelAcc"},
-			{"BP_WeaponCrateNew","object","HotelWpn"},
+			{"BP_WeathCrateBigBRN","object","HotelWpn"},
 			{"BP_AmmoCrateNew","object","MilitaryRangerAcc"},
 			{"BP_WeaponCrateNew","object","MilitaryRangerWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
@@ -1781,7 +1960,7 @@ class CfgBuildingLoot
 		lootChance = 0.85;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"BP_AmmoPallet4","object","SuicideCrate"},
+			{"BP_HeavyWeaponCrate","object","SuicideCrate"},
 			{"BP_AWSM","weapon"},
 			{"BP_SVDK_WDL","weaponA"},
 			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
@@ -1912,7 +2091,7 @@ class CfgBuildingLoot
 			{"BP_CardboardBox_1","object","Office"},
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Supermarket"},
-            {"BP_Trashcan","object","Trash"},
+            {"BP_DustbinBlk","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Generic"},
 			{"BP_Packs","object","Residential"}
@@ -2174,7 +2353,7 @@ class CfgBuildingLoot
             {"BP_AmmoBoxNew","object","MilitaryAirfieldSpc"},
 			{"BP_AmmoCrateOld","object","MilitarySpecialAcc"},
             {"BP_AmmoCrateNew","object","MilitaryAirfieldAcc"},
-			{"BP_WeaponCrateNew","object","MilitaryAirfieldWpn"},
+			{"BP_WeaponCrateNewBLK","object","MilitaryAirfieldWpn"},
 		    {"BP_WeaponCrateOld","object","MilitarySpecialWpn"},
 			{"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
@@ -2185,7 +2364,7 @@ class CfgBuildingLoot
 			0.05,	//BP_AmmoBoxNew
 			0.10,	//BP_AmmoBoxOld
 			0.10,	//BP_AmmoCrateNew
-			0.20,   //BP_WeaponCrateNew
+			0.20,   //BP_WeaponCrateNewBLK
 			0.20,   //BP_WeaponCrateOld
 			0.10,   //BP_Trashcan
 			0.10,   //BP_Bag1
@@ -2209,7 +2388,7 @@ class CfgBuildingLoot
 			0.10,	//BP_AmmoBoxNew
 			0.10,   //BP_Bag1
 			0.10	//BP_AmmoBoxOld
-		};		
+		};	
 	};
 	class A2MilitaryPlaneWreck: Default {
 		zombieChance = 0.5;

@@ -16,7 +16,7 @@ if (time - BP_lastCheckBit > 5) then
 {
 	BP_lastCheckBit = time;
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 		
 	if (surfaceIsWater (getPosATL player)) exitWith {};
 

@@ -19,7 +19,7 @@ if (time - BP_lastCheckBit > 1) then
 {
 	BP_lastCheckBit = time;
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 		
 	if ((getPosASL player select 2) > -1) exitWith {};
 	if ((getterrainheightASL position player) > -1.5) exitWith {};
@@ -53,7 +53,7 @@ if (time - BP_lastCheckBit > 1) then
 			waitUntil
 			{
 				//No Resting While Autorunning
-				if (r_action_rest) then { r_action_rest = false; };
+				//if (r_action_rest) then { r_action_rest = false; };
 				
 				//No Autorun While Hostage
 				if (player getVariable ["med_hostage",false]) exitWith {true};

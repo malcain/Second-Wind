@@ -27,11 +27,19 @@ class BP_LootBox : Thing
 	};
 };
 	
+/* Medic Boxes*/
 class BP_Medicalbox: BP_LootBox
 {
 	scope = public;
 	displayName = "Medical Box";
 	model = "\breakingpoint\models\bp_medicalbox.p3d";
+};
+
+class BP_MedicalMultibox: BP_LootBox
+{
+	scope = public;
+	displayName = "Medical Box";
+	model = "plp_containers\StcMultiboxes\plp_cts_MultiboxSmallWhite.p3d";
 };
 
 class BP_MedicalboxHelicrash: BP_LootBox
@@ -87,7 +95,7 @@ class BP_MedicalboxHelicrash: BP_LootBox
 	};
 };
 
-/* Contraband Crates*/
+/* 3.0 Crates*/
 
 class BP_ContrabandBox : BP_LootBox {
     displayName = "Contraband Crate";
@@ -103,16 +111,32 @@ class BP_ContrabandBoxEmpty : BP_LootBox {
 
 class BP_ApexMilBox1 : BP_LootBox {
     displayName = "Apex Gun Crate";
-	model = "\A3\Props_F_Exp\Commercial\Market\WoodenCrate_01_F.p3d";
+	model="\plp_containers\plp_ct_WoodBoxLong.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\plp_containers\StcWoodBoxes\plp_ct_WoodBoxDarkLong.paa"
+	};
 };	
 
 class BP_ApexMilBox2 : BP_LootBox {
     displayName = "Apex Gear Crate";
-	model = "\A3\Supplies_F_Exp\Ammoboxes\Equipment_Box_F.p3d";
+	model="\plp_containers\plp_ct_WoodBoxSmall.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\plp_containers\StcWoodBoxes\plp_ct_WoodBoxDarkSmall.paa"
+	};
 };
 
-class BP_MarksmanWeaponBox : BP_LootBox {
-    displayName = "Explosive Box";
+class BP_OldDMRWeaponBox : BP_LootBox {
+    displayName = "Old Dmr Crate";
 	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
 };
 
@@ -135,7 +159,7 @@ class BP_WeaponCratePacific : BP_LootBox {
 /* Military Boxes Very Small (Small Magazine Supply Boxes)*/	
 
 class BP_AmmoBoxNew : BP_LootBox { //"Explosives"
-    displayName = "Small Ammo Box";
+    displayName = "Explosive Box";
 	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsBasicWeaponBox.p3d";
 };	
 class BP_AmmoBoxOld : BP_LootBox {
@@ -155,9 +179,90 @@ class BP_AmmoCrateOld : BP_LootBox {
 
 /* Military Boxes Medium (Universal Weapons Boxes)*/ 
 class BP_WeaponCrateNew : BP_LootBox {
-    displayName = "Weapon Crate";
-	model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F.p3d";
+    model="\a3\weapons_f\ammoboxes\WpnsBox_large_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticOlive.paa"
+	};
 };
+class BP_WeaponCrateNewBLK : BP_LootBox {
+    model="\a3\weapons_f\ammoboxes\WpnsBox_large_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticBlack.paa"
+	};
+};
+
+class BP_MilCrateMediumBLK: BP_LootBox {
+	displayName="Military Box (Medium, Black)";
+	model="\a3\weapons_f\ammoboxes\WpnsBox_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticBlack.paa"
+	};
+};
+class BP_MilCrateMediumOLV: BP_LootBox {
+	displayName="Military Box (Medium, Olive)";
+	model="\a3\weapons_f\ammoboxes\WpnsBox_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticOlive.paa"
+	};
+};
+
+class BP_MilCrateTallOLV: BP_LootBox {
+	displayName="Military Box (Medium, Olive)";
+	model="\a3\weapons_f\ammoboxes\AmmoBox_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticOlive.paa"
+	};
+};
+class BP_MilCrateTallBLK: BP_LootBox {
+	displayName="Military Box (Medium, Olive)";
+	model="\a3\weapons_f\ammoboxes\AmmoBox_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo_Signs",
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\data\empty.paa",
+		"plp_containers\data\plasticBlack.paa"
+	};
+};
+
 class BP_WeaponCrateOld : BP_LootBox {
     displayName = "Old Weapon Crate";
 	model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo.p3d";
@@ -190,12 +295,107 @@ class BP_AmmoPallet4 : BP_LootBox {
     model = "\A3\structures_f_epa\Mil\Scrapyard\Pallet_MilBoxes_F.p3d";
 };	
 
+/* Woodboxes & Woodcrates */
+
+class BP_WoodboxSmall : BP_LootBox {
+    model="plp_containers\StcWoodBoxes\plp_cts_WoodBoxDarkTiny.p3d";
+};
+
+class BP_WeathCrateBigBRN : BP_LootBox {
+	model="\plp_containers\plp_ct_WeathCrateBig.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateBrown.paa"
+	};
+};
+class BP_WeathCrateBigGRN : BP_LootBox {
+	model="\plp_containers\plp_ct_WeathCrateBig.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateGreen.paa"
+	};
+};
+class BP_WeathCrateBigWRN : BP_LootBox {
+	model="\plp_containers\plp_ct_WeathCrateBig.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateWorn.paa"
+	};
+};
+
+
+class BP_WeathCrateWRN : BP_LootBox {
+	model = "\plp_containers\plp_ct_WeathCrateMedium.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateWorn.paa"
+	};
+};
+class BP_WeathCrateBRN : BP_LootBox {
+	
+	model = "\plp_containers\plp_ct_WeathCrateMedium.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateWorn.paa"
+	};
+};
+class BP_WeathCrateGRN : BP_LootBox {
+	model = "\plp_containers\plp_ct_WeathCrateMedium.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateGreen.paa"
+	};
+};
+
+class BP_WeathCrateSmallWRN : BP_LootBox {
+	model="plp_containers\StcWeatheredCrates\plp_cts_WeathCrateSmallWorn.p3d";
+};
+class BP_WeathCrateSmallBRN : BP_LootBox {
+	model="plp_containers\StcWeatheredCrates\plp_cts_WeathCrateSmallBrown.p3d";
+};
+
+/* Ghost Hotel */
+
+class BP_GhostBoxBlk : BP_LootBox {
+    model = "plp_containers\StcCaskets\plp_cts_CasketLeatherGreen.p3d";
+};
+class BP_GhostBoxGrn : BP_LootBox {
+    model = "plp_containers\StcCaskets\plp_cts_CasketLeatherBlack.p3d";
+};
+class BP_GhostBoxBrn : BP_LootBox {
+    model = "plp_containers\StcCaskets\plp_cts_CasketLeatherBrown.p3d";
+};
+
 /* Cardboard Boxes */
 class BP_CardboardBox_1: BP_LootBox {
-	hiddenSelections[] = {"base"};
-	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box1_co.paa"};
 	model = "\breakingpoint\models\bp_box1.p3d";
 	displayName = "Cardboard Box";
+	hiddenSelections[] = {"base"};
+	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box1_co.paa"};
 };
 class BP_CardboardBox_2: BP_CardboardBox_1 {
 	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box2_co.paa"};
@@ -208,18 +408,81 @@ class BP_CardboardBox_4: BP_CardboardBox_1 {
 	hiddenSelectionsTextures[] = {"breakingpoint\textures\items\box4_co.paa"};
 };
 
-/* Trashcan */
-class BP_Trashcan : BP_LootBox { model = "\breakingpoint\models\bp_trashcan.p3d"; };
+class BP_CartonBoxSmall: BP_LootBox {
+	model = "plp_containers\StcCartons\plp_cts_CartonRottenSmall.p3d";
+};
+
+class BP_CartonBox: BP_LootBox {
+	model = "plp_containers\StcCartons\plp_cts_CartonRottenMedium.p3d";
+};
+
+class BP_FoodBoxIDAP: BP_LootBox {
+	model="\A3\Props_F_Orange\Humanitarian\Supplies\PaperBox_01_small_closed_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\A3\Props_F_Orange\Humanitarian\Supplies\Data\PaperBox_01_small_brown_food_CO.paa"
+	};
+};
+
+class BP_WreckedBox: BP_LootBox {
+	model = "\A3\Props_F_Orange\Humanitarian\Supplies\PaperBox_01_small_destroyed_F.p3d";
+	hiddenSelections[]=
+	{
+		"Camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\A3\Props_F_Orange\Humanitarian\Supplies\Data\PaperBox_01_small_brown_destroyed_CO.paa"
+	};
+	waterLeakiness=0.1;
+};
+
+class BP_PlasticBox: BP_LootBox {
+	model = "\plp_containers\plp_ct_PlasticBox.p3d";
+	hiddenSelections[]=
+	{
+		"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\plp_containers\StcPlasticBoxes\plp_ct_PlasticBoxBlack_co.paa"
+	};
+};
+/* Trashcans */
+class BP_Trashcan : BP_LootBox 
+{
+	model = "\breakingpoint\models\bp_trashcan.p3d"; 
+};
+class BP_TrashcanHouse : BP_LootBox 
+{
+	model = "plp_containers\StcTrashcans\plp_cts_TrashcanHouseGenericOpen.p3d";
+};
+class BP_TrashBinGR : BP_LootBox 
+{
+	model = "plp_containers\StcTrashcans\plp_cts_PlasticBinGrey.p3d";
+};
+class BP_DustbinBlk : BP_LootBox 
+{
+	model = "plp_containers\StcTrashcans\plp_cts_DustbinBlack.p3d";
+};
+class BP_DustbinGR : BP_LootBox 
+{
+	model="plp_containers\StcTrashcans\plp_cts_DustbinGrey.p3d";
+};
 
 
-/* Bag */
+/* Farm */
 class BP_Bag1 : BP_LootBox { model = "\breakingpoint\models\bp_bag1.p3d"; };
 class BP_Bag2 : BP_LootBox { model = "\breakingpoint\models\bp_bag2.p3d"; };
 class BP_Sack : BP_LootBox { model = "\plp_containers\plp_ct_Sack.p3d"; };
-class BP_LuggageBags : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; };	
 
+/* Civilian Luggage */
+class BP_LuggageBags : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; };	
 class BP_Packs : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
-class BP_MilPallet : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
 
 /* Dumpster */
 class BP_Dumpster1 : BP_LootBox {

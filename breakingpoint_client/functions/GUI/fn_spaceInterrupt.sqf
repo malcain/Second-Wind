@@ -152,7 +152,7 @@ if (_dikCode == 2) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -172,7 +172,7 @@ if (_dikCode == 3) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -203,7 +203,7 @@ if (_dikCode == 4) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -224,7 +224,7 @@ if (_dikCode == 5) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		if ((vehicle player) == player) then {
 			if (!r_player_unconscious and !_isHostage) then {
 				_hasRange = ("Rangefinder" in weapons player);
@@ -252,7 +252,7 @@ if (_dikCode == 6) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -300,7 +300,7 @@ if (_dikCode == 6) then {
 // Movement Keys
 if (_dikCode in actionKeys "TurnLeft") then { 
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -308,7 +308,7 @@ if (_dikCode in actionKeys "TurnLeft") then {
 
 if (_dikCode in actionKeys "TurnRight") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -316,7 +316,7 @@ if (_dikCode in actionKeys "TurnRight") then {
 
 if (_dikCode in actionKeys "MoveForward") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -324,7 +324,7 @@ if (_dikCode in actionKeys "MoveForward") then {
 
 if (_dikCode in actionKeys "MoveBack") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -332,7 +332,7 @@ if (_dikCode in actionKeys "MoveBack") then {
 
 if (_dikCode in actionKeys "MoveUp") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -340,7 +340,7 @@ if (_dikCode in actionKeys "MoveUp") then {
 
 if (_dikCode in actionKeys "MoveDown") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -348,7 +348,7 @@ if (_dikCode in actionKeys "MoveDown") then {
 
 if (_dikCode in actionKeys "Fire") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	
 	if (r_player_unconscious and !_isHostage) exitWith { _handled = true; };
 	
@@ -377,7 +377,7 @@ if (_dikCode in actionKeys "Fire") then {
 
 if (_dikCode in actionKeys "reloadMagazine") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	
 	if (BP_isUndead) then
 	{
@@ -391,8 +391,8 @@ if (_dikCode in actionKeys "reloadMagazine") then {
 			player setVariable ["lastHorde",diag_tickTime];
 			//Horde Perk Distance
 			_factionLevel = player call BP_fnc_getFactionLevel;
-			_distance = 50;
-			if (_factionLevel == 2) then { _distance = 100; };
+			_distance = 125;
+			if (_factionLevel == 2) then { _distance = 175; };
 			if (_factionlevel == 3) then { _distance = 250; };
 			[player,_distance,false,(getPosATL player)] spawn BP_fnc_zombieAlert;
 			cutText ["Zombie Horde Perk Activated","PLAIN DOWN"];
@@ -410,7 +410,7 @@ if (_dikCode in actionKeys "reloadMagazine") then {
 
 if (_dikCode in actionKeys "switchWeapon") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious and !_isHostage) then {
 		_handled = true;
 	};
@@ -418,7 +418,7 @@ if (_dikCode in actionKeys "switchWeapon") then {
 
 if (_dikCode in actionKeys "nextWeapon") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious and !_isHostage) then {
 		_handled = true;
 	};
@@ -426,7 +426,7 @@ if (_dikCode in actionKeys "nextWeapon") then {
 
 if (_dikCode in actionKeys "prevWeapon") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious and !_isHostage) then {
 		_handled = true;
 	};
@@ -434,7 +434,7 @@ if (_dikCode in actionKeys "prevWeapon") then {
 
 if (_dikCode in actionKeys "Throw") then {
 	r_interrupt = true;
-	r_action_rest = false;
+	//r_action_rest = false;
 	if (r_player_unconscious and !_isHostage) exitWith { _handled = true; };
 };
 
@@ -494,8 +494,8 @@ if (_dikCode in actionKeys "Chat") then {};
 			{
 				[] spawn
 				{
-					r_action_restTime = 0;
-					r_action_rest = true;
+					//r_action_restTime = 0;
+					//r_action_rest = true;
 					
 					player action ["SwitchWeapon", player, player, 100];
 					player switchcamera cameraView;
@@ -529,7 +529,7 @@ if (_dikCode in actionKeys "User2") then {
 		BP_lastCheckBit = time;
 		private ["_onLadder","_canDo","_max_height","_height","_vel","_dir","_speed"];
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		_onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 		_canDo = (!r_action_refuel and !r_action_gut and !r_action_siphon and !r_action_repair and !r_player_unconscious and !_isHostage and !_onLadder);
 
@@ -667,7 +667,7 @@ if (_dikCode in actionKeys "User9") then
 	{
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		
 		if (surfaceIsWater (getPosATL player)) exitWith {};
 
@@ -689,7 +689,7 @@ if (_dikCode in actionKeys "User9") then
 				waitUntil
 				{
 					//No Resting While Autorunning
-					if (r_action_rest) then { r_action_rest = false; };
+					if (//r_action_rest) then { //r_action_rest = false; };
 					
 					//No Autorun While Hostage
 					if (player getVariable ["med_hostage",false]) exitWith {true};
@@ -732,7 +732,7 @@ if (_dikCode in actionKeys "User9") then
 //	{
 //		BP_lastCheckBit = time;
 //		r_interrupt = true;
-//		r_action_rest = false;
+//		//r_action_rest = false;
 //		
 //		if (surfaceIsWater (getPosATL player)) exitWith {};
 //

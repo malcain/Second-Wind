@@ -33,7 +33,7 @@
 		zombiePos[] = {{3.15051, -1.60205, -3.24152}};
 	};
 
-	class Land_Shop_Town_04_F : Residential {
+	class Land_Shop_Town_04_F : Hospital {
 		lootMin = 0;
 		lootMax = 1;
 		lootPos[] = {};
@@ -89,7 +89,7 @@
 		zombiePos[] = {{3.1842, 2.63037, -0.648015}};
 	};
 
-	class Land_Shop_Town_01_F : Hospital {
+	class Land_Shop_Town_01_F : Residential2 {
 		lootMin = 0;
 		lootMax = 2;
 		lootPos[] = {{2.50009, -5.72656, -3.24367},{-3.41431, 0.320068, -3.24367}};

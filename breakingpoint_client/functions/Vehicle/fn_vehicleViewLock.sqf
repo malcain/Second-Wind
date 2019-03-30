@@ -1,3 +1,12 @@
+/*
+	BP: Second Wind
+
+	Released under Arma Public Share Like Licence (APL-SA)
+	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
+
+	by Malcain
+*/
+
 if (!hasInterface) exitwith {};
 
 if (missionDifficulty > 2) exitwith {};

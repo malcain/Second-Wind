@@ -58289,7 +58289,7 @@ class CfgAmmo {
 	class BP_50BW_Ball_F : BulletBase { //["BulletCore","Default"]
 		airFriction = -0.0012;
 		caliber = 3.8;
-		hit = 22.85;
+		hit = 23.85;
 		legFracture = true;
 		class CamShakeHit
 		{
@@ -58325,8 +58325,8 @@ class CfgAmmo {
 			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0 -> 100
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 85; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

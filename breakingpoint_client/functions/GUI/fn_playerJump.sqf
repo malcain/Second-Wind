@@ -16,7 +16,7 @@ if (time - BP_lastCheckBit > 1) then
 		BP_lastCheckBit = time;
 		private ["_onLadder","_canDo","_max_height","_min_height","_height","_vel","_dir","_speed"];
 		r_interrupt = true;
-		r_action_rest = false;
+		//r_action_rest = false;
 		_onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 		_canDo = (!r_action_refuel and !r_action_gut and !r_action_siphon and !r_action_repair and !r_player_unconscious and !_isHostage and !_onLadder);
 
