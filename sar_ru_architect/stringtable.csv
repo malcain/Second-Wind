@@ -1,0 +1,125 @@
+﻿Language, English, Russian,
+
+STR_SAR_CLASS_NAME, SARMAT: Russian architecture, САРМАТ: Русская архитектура и обьекты,
+
+STR_SAR_RUINS_NAME, Ruins, Руины
+
+STR_SAR_NAME_OBJECT_001, Road obstacle, Один бетонный блок
+STR_SAR_NAME_OBJECT_002, Road obstacle fortress, Заграждение из блоков
+STR_SAR_NAME_OBJECT_003, Field kitchen, Котел на перекладине
+STR_SAR_NAME_OBJECT_004, Small Field kitchen, Маленькие котелки на перекладине
+STR_SAR_NAME_OBJECT_005, Mangal, Мангал
+STR_SAR_NAME_OBJECT_006, Samogon device, Самогонный аппарат
+STR_SAR_NAME_OBJECT_007, Table With meal, Стол водка закуска
+STR_SAR_NAME_OBJECT_008, Table with a map, Стол с картой
+STR_SAR_NAME_OBJECT_009, Map, Карта
+STR_SAR_NAME_OBJECT_010, Big barn with a fence, Деревянный сарай с забором и обьектами
+STR_SAR_NAME_OBJECT_011, Machinegun position with sandbags, Пулеметная точка с навесом и мешками
+STR_SAR_NAME_OBJECT_012, Old russian church, Русская старая церковь
+STR_SAR_NAME_OBJECT_013, Church-yard, Двор к русской церкви с кладбищем
+STR_SAR_NAME_OBJECT_014, Church-objects, Кровать матрасы колесо костер
+STR_SAR_NAME_OBJECT_015, Van-house, Строительный вагончик
+STR_SAR_NAME_OBJECT_016, Portable radio transmitter, Рация
+STR_SAR_NAME_OBJECT_017, Small barn, Небольшой сарайчик
+STR_SAR_NAME_OBJECT_018, House for farting, Туалет типа сартир
+STR_SAR_NAME_OBJECT_019, Wood house with a fence, Бревенчатый дом с забором
+STR_SAR_NAME_OBJECT_020, Big wood barn, Большой деревянный сарай
+STR_SAR_NAME_OBJECT_021, Well boxes and objects, Колодец ящики обькты
+STR_SAR_NAME_OBJECT_022, Hrushiovka with a VG position on roof, Хрущевка с ДШК позицией на крыше
+STR_SAR_NAME_OBJECT_023, Soviet supermarket, Гастроном
+STR_SAR_NAME_OBJECT_024, Crashed ZAZ-968M, Разбитый заз968
+STR_SAR_NAME_OBJECT_025, Brick house, Кирпичный полуразрушенный дом
+STR_SAR_NAME_OBJECT_026, Brick house wiyh a fence, Кирпичный дом с забором
+STR_SAR_NAME_OBJECT_027, Destroyed brick house with a fence, Кирпичный развалившийся дом с забором
+STR_SAR_NAME_OBJECT_028, Wood house with a radio station, Дом из бревен с радиостанцией
+STR_SAR_NAME_OBJECT_029, Brick house with objects, Кирпичный дом забор обьекты
+STR_SAR_NAME_OBJECT_030, Damadged house with objects, Кирпичный сильно разрушенный с обьектами
+STR_SAR_NAME_OBJECT_031, Memorial, Памятник неизвестному солдату
+STR_SAR_NAME_OBJECT_032, Wood boat station, Деревянный лодочный сарай
+STR_SAR_NAME_OBJECT_033, Crashed KamAZ, Разбитый КАМАЗ
+STR_SAR_NAME_OBJECT_034, Crashed small car, Разбитый запорожец
+STR_SAR_NAME_OBJECT_035, Hrushevka, Хрущевка
+STR_SAR_NAME_OBJECT_036, Fence with 6 sections HW2, Забор из 6 секций_1
+STR_SAR_NAME_OBJECT_037, Fence with 7 sections HW2, Забор из 7 секций_1
+STR_SAR_NAME_OBJECT_038, Fence with 1 section HW2, Забор из 1 секции_1
+STR_SAR_NAME_OBJECT_039, Column electric, Электрический столб
+STR_SAR_NAME_OBJECT_040, Small wood column , Деревянный столб маленький
+STR_SAR_NAME_OBJECT_041, Fence with 7 sections HW3, Забор из 7 секций_2
+STR_SAR_NAME_OBJECT_042, Fence with 4 sections HW3, Забор из 4 секций_2
+STR_SAR_NAME_OBJECT_043, Fence with 1 section HW3, Забор из 1 секции_2
+STR_SAR_NAME_OBJECT_044, Fence with 10 sections HW4, Забор из 10 секций_3
+STR_SAR_NAME_OBJECT_045, Fence with 5 sections HW4, Забор из 5 секций_3
+STR_SAR_NAME_OBJECT_046, car part1, Задний мост машины
+STR_SAR_NAME_OBJECT_047, Small log, Небольшое бревно
+STR_SAR_NAME_OBJECT_048, Log, Бревно для колки дров
+STR_SAR_NAME_OBJECT_049, Fire in a barrol, Костер в бочке
+STR_SAR_NAME_OBJECT_050, Fence with 1 section HW4, Забор из 1 секции_3
+STR_SAR_NAME_OBJECT_051, Column electric 2, Столб электрический_2
+STR_SAR_NAME_OBJECT_052, Wood fence, Заборчик из бревен
+STR_SAR_NAME_OBJECT_053, Stump, Пень дерева
+STR_SAR_NAME_OBJECT_054, Broken ladder, Сломанная железная лестница
+STR_SAR_NAME_OBJECT_055, Wood boxes, 5 деревянных продуктовых ящиков
+STR_SAR_NAME_OBJECT_056, small barricade, Небольшая барикада
+STR_SAR_NAME_OBJECT_057, Fallen wood fence, Сломанный деревянный забор
+STR_SAR_NAME_OBJECT_058, Four tractor tyres, 4 ската от трактора
+STR_SAR_NAME_OBJECT_059, Small cart, Строительная тележка
+STR_SAR_NAME_OBJECT_060, Old wood fence, Старый забор из деревьев
+STR_SAR_NAME_OBJECT_061, Another old wood trees, Старый забор из деревьев_2
+STR_SAR_NAME_OBJECT_062, Shower, Душевая кабина уличная
+STR_SAR_NAME_OBJECT_063, Stand for wood sawing, Подставка для пилки дров
+STR_SAR_NAME_OBJECT_064, Small broken car, Разбитая инвалидка
+STR_SAR_NAME_OBJECT_065, Stack of firewoods, Штабель дров
+STR_SAR_NAME_OBJECT_066, Pay phone, Телефонная будка
+STR_SAR_NAME_OBJECT_067, Fire and dust, Место для костра и мусор
+STR_SAR_NAME_OBJECT_068, Sandbags, Укрепление из мешков с песком
+STR_SAR_NAME_OBJECT_069, Broken wood fence, Сломанный деревянный заборчик
+STR_SAR_NAME_OBJECT_070, Boxes, Склад ящиков
+STR_SAR_NAME_OBJECT_071, Russian gravestone Red star, Надгробие звезда
+STR_SAR_NAME_OBJECT_072, Russian grave Red star, Могила звезда
+STR_SAR_NAME_OBJECT_073, Old wood table, Кладбищенский столик
+STR_SAR_NAME_OBJECT_074, Stack of logs, Штабель бревен
+STR_SAR_NAME_OBJECT_075, Field camp, Полевой лагерь костер окурки матрасы
+STR_SAR_NAME_OBJECT_076, Army bed, Двухярусная кровать
+STR_SAR_NAME_OBJECT_077, Wood house, Деревянный дом
+STR_SAR_NAME_OBJECT_078, 1_Brick house without objects, Кирпичный дом без обьектов_1
+STR_SAR_NAME_OBJECT_079, 2_Brick house without objects, Кирпичный дом без обьектов_2
+STR_SAR_NAME_OBJECT_080, 3_Brick house without objects, Кирпичный дом без обьектов_3
+STR_SAR_NAME_OBJECT_081, 4_Brick house without objects, Кирпичный дом без обьектов_4
+STR_SAR_NAME_OBJECT_082, 5_Brick house without objects, Кирпичный дом без обьектов_5
+STR_SAR_NAME_OBJECT_083, 6_Brick house without objects, Кирпичный дом без обьектов_6
+STR_SAR_NAME_OBJECT_084, 7_Brick house without objects, Кирпичный дом без обьектов_7
+STR_SAR_NAME_OBJECT_085, Wood well, Деревянный колодец
+STR_SAR_NAME_OBJECT_086, Burned BMP, Сгоревший БМП
+STR_SAR_NAME_OBJECT_087, Container with radioactive materials, Контейнер радиоактивные материалы
+STR_SAR_NAME_OBJECT_088, Small wood church, Маленькая деревянная церквушка
+STR_SAR_NAME_OBJECT_089, AK47 on tomb, Калашников воткнутый в землю штыком
+STR_SAR_NAME_OBJECT_090, Old wood well, Старый колодец
+STR_SAR_NAME_OBJECT_091, Big factory building with a fence and gates, Большое здание предприятия забор бетонный и ворота
+STR_SAR_NAME_OBJECT_092, big factory building without fence, Большое здание предприятия без забора
+STR_SAR_NAME_OBJECT_093, Two sections of new fence, 2 секции забора нового
+STR_SAR_NAME_OBJECT_094, Farm house with fence, Коровник с обьектами
+STR_SAR_NAME_OBJECT_095, farm house without objects, Коровник без обьектов
+STR_SAR_NAME_OBJECT_096, Radiotower, Радиовышка
+STR_SAR_NAME_OBJECT_097, Water-tower with a fence, Водонапорная башня с забором
+STR_SAR_NAME_OBJECT_098, Water-tower without fence, Водонапорная башня без забора
+STR_SAR_NAME_OBJECT_099, Destroyed brick fence, Развалины кирпичного забора
+STR_SAR_NAME_OBJECT_100, Fire departament building, Здание пожарной части
+STR_SAR_NAME_OBJECT_101, Office house, Офисное здание
+STR_SAR_NAME_OBJECT_102, Watchtower, Сторожевая вышка
+STR_SAR_NAME_OBJECT_104, 2 tanks, 2 Цистерны
+STR_SAR_NAME_OBJECT_105, Large crane, Строительный кран
+STR_SAR_NAME_OBJECT_106, Builded building, Строящееся большое здание
+STR_SAR_NAME_OBJECT_107, Pack of pipes, Стопка больших труб
+STR_SAR_NAME_OBJECT_108, Concrete slabs, Стопка бетонных плит
+STR_SAR_NAME_OBJECT_109, Building dust, Металлоконструкция
+STR_SAR_NAME_OBJECT_110, Damaged helicopter, Поврежденный вертолет
+STR_SAR_NAME_OBJECT_111, KamAZ with a tent, КАМАЗ с кунгом
+STR_SAR_NAME_OBJECT_112, Firetruck, Пожарная машина ЗИЛ
+STR_SAR_NAME_OBJECT_113, Devil wood, Дьявольский лес
+STR_SAR_NAME_OBJECT_114, Zil 130, ЗИЛ-130 бортовой
+STR_SAR_NAME_OBJECT_115, Police post, Пост ГАИ шлагбаум
+STR_SAR_NAME_OBJECT_116, Bus, Автобус ЛАЗ
+STR_SAR_NAME_OBJECT_117, Zil 130 dump-truck, ЗИЛ самосвал
+STR_SAR_NAME_OBJECT_118, Crashed Uaz, Разбитый УАЗ
+STR_SAR_NAME_OBJECT_119, Garage, Железный гараж
+STR_SAR_NAME_OBJECT_120, Excavator,Экскаватор 
