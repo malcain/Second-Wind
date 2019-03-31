@@ -331,7 +331,22 @@ class CfgMovesBasic
 			BP_Act_Man_Eat_Erc_x3_Gesture[] = {"BP_Eat_Erc_x3_Gesture", "Gesture"};
 		};
 
-		class RifleBaseLowStandActions
+
+		class RifleStandActions
+		{
+			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+		};
+		class RifleCrouchActions
+		{
+			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+		};
+		class RifleKneelActions
 		{
 			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
@@ -351,75 +366,6 @@ class CfgMovesBasic
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump = "";
-		};
-		class RifleBaseStandActions
-		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleLowStandActionsNoAdjust
-		{
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleStandActions
-		{
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleCrouchActions
-		{
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleKneelLowActions
-		{
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleKneelActions
-		{
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleProneActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-			BP_Weap_Jump = "";
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleAdjustProneBaseActions
-		{
-			BP_Weap_Jump = "";
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
-		};
-		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-		class RifleAdjustLProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-		class RifleAdjustFProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
 		};
 
 		//Pistol
@@ -500,23 +446,23 @@ class CfgMovesBasic
 		class CivilStandActions
 		{
 			BP_Weap_Jump = "";
+			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class CivilKneelActions
 		{
 			BP_Weap_Jump = "";
+			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class CivilProneActions
 		{
 			BP_Weap_Jump = "";
+			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class CivilStandSurrenderActions
 		{
@@ -580,14 +526,14 @@ class CfgMovesBasic
 		};
 		class BinocStandRflActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class BinocKneelRflActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
@@ -603,7 +549,7 @@ class CfgMovesBasic
 		{
 			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
@@ -611,7 +557,7 @@ class CfgMovesBasic
 		{
 			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
@@ -626,7 +572,7 @@ class CfgMovesBasic
 		class BinocStandLnrActions
 		{
 			BP_Weap_Jump = "";
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
+			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
@@ -634,7 +580,7 @@ class CfgMovesBasic
 		class BinocKneelLnrActions
 		{
 			BP_Weap_Jump = "";
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
+			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
@@ -667,6 +613,40 @@ class CfgMovesBasic
 			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump = "";
+		};
+		class RifleBaseStandActions
+		{
+			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+		};
+		class RifleProneActions: RifleBaseStandActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+		};
+		class RifleAdjustProneBaseActions
+		{
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+		};
+		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+		class RifleAdjustLProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+		class RifleAdjustFProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
 		};
 
 	};
