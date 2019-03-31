@@ -37,7 +37,7 @@ if (time - BP_lastCheckBit > 1) then
 
 			_binocs = binocular player;
 			_curweap = currentWeapon player;
-
+			
 			if (_curweap == "" || _curweap == _binocs) then {
 				player playActionNow "BP_HolsterWeap_Jump";
 			} else {
