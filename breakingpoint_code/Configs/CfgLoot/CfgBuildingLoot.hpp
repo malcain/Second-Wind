@@ -637,7 +637,7 @@ class CfgBuildingLoot
 			{"BP_Bag1","object","Generic"},
 			{"BP_Sack","object","Supermarket"},
 			{"BP_WeathCrateBigWRN","object","WindmillWpn"},
-			{"BP_WeathCrateWRN","object","WindmillWpn"},
+			{"BP_WeathCrateWRN","object","Castle"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
 			{"BP_WeathCrateSmallWRN","object","WindmillAcc"}
 		};
@@ -645,8 +645,8 @@ class CfgBuildingLoot
 			0.10,	//BP_WreckedBox
 			0.10,   //BP_Bag1
 			0.10,   //BP_Sack
-			0.07,   //WINDMILL WPN
 			0.08,   //WINDMILL WPN
+			0.07,   //Castle
 			0.01,   //SURPLUS WPN
 			0.30    //WINDMILL ACC 
 		};		
@@ -1614,7 +1614,7 @@ class CfgBuildingLoot
 			{"BP_Minimi_762","weapon"},
 			{"BP_Minimi_HG","weapon"},
 			{"BP_R700","weaponA"},
-			{"BP_SR25","weaponA"},
+			{"BP_SR25","weapon"},
 			{"BP_1Rnd_HE_shell","magazine"},
 			{"BP_m40a3G","weapon"},
 			{"BP_MedicalboxHelicrash","object"},
@@ -1625,7 +1625,6 @@ class CfgBuildingLoot
 			//{"AmmoBoxSmall_556","object"},
 			//{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_khk_BP","vest"},
-			{"BP_GrassGhillie","uniform"},
 			//{"BP_p226Tac","weaponA"},
 			{"V_RebreatherB","vest"},
 			{"BP_Mk12mod1Spec","weapon"},
@@ -1636,8 +1635,7 @@ class CfgBuildingLoot
 			{"BP_150Rnd_762x51_Box","magazine"},
 			//{"BP_G18Tac","weaponA"},
 			//{"BP_deagles","weapon"},
-			{"ItemSurgeryKit","toolbelt"},
-			{"BP_Ghillie_Lush","uniform"}
+			{"ItemSurgeryKit","toolbelt"}
 		};
 		itemChance[] =	{
 			0.12,   //SA58
@@ -1649,7 +1647,7 @@ class CfgBuildingLoot
 			0.12,   //R700
 			0.02,	//SR25
 			0.04,	//HE SHELL
-			0.08,   //M40A3 GHILLIE
+			0.05,   //M40A3 GHILLIE
 			0.02,	//MED BOX
 			0.12,	//Morphine
 			0.12,	//FieldDressing
@@ -1658,7 +1656,6 @@ class CfgBuildingLoot
 			//0.1,	//AmmoBoxSmall_556
 			//0.1,	//AmmoBoxSmall_762
 			0.10,	//TACTICAL VEST
-			0.02,	//GRASS GHILLIE
 			//0.02,	//P226 TACTICAL
 			0.03,	//REBREATHER
 			0.05,	//MK12MOD1
@@ -1669,8 +1666,7 @@ class CfgBuildingLoot
 			0.03,   //150RND 762.51MM BOX
 			//0.03,   //G18 TACTICAL
 			//0.01,   //DEAGLE GOLD
-			0.06,   //SURGERY KIT
-			0.01	//Marksmen Ghillie
+			0.06   //SURGERY KIT
 			
 		};
 	};
@@ -2033,7 +2029,7 @@ class CfgBuildingLoot
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
 			{"WaterbotEmpty","magazine"},
-			{"BP_Binocular_Hunter","weaponNA"},
+			{"BP_PPK","weapon"},
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
