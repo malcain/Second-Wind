@@ -403,14 +403,14 @@ class CfgMovesBasic
 			// BP_Pst_Jump = "";
 			// BP_HolsterWeap_Jump = "";
 		};
-/* 		class RifleAdjustProneBaseActions
+		class RifleAdjustProneBaseActions
 		{
-			BP_Weap_Jump = "";
-			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump = "";
-			BP_HolsterWeap_Jump = "";
+			// BP_Weap_Jump = "";
+			// BP_MeleeWeap_Jump = "";
+			// BP_Pst_Jump = "";
+			// BP_HolsterWeap_Jump = "";
 		};
- */
+
 		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
 		{
 			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
