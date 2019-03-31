@@ -329,9 +329,9 @@ class CfgGesturesMale
 			duty = 10.0;
 			file = "breakingpoint_anim\player\jumps\BP_HolsterWeap_Jump.rtm";
 			speed = 1.25849;
-			showItemInHand = 0;
-			showItemInRightHand = 0;
-			disableWeapons = 1;//false;
+			showItemInHand = 1;
+			showItemInRightHand = 1;
+			disableWeapons = 0;//false;
 			enableBinocular = 1;
 			mask = "BodyFullReal";
 			//actions = "RifleStandActionsRunF";
