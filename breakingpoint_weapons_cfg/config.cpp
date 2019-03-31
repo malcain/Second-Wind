@@ -1589,7 +1589,7 @@ class CfgGesturesMale
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
-			enableOptics = 1;
+			enableOptics = 0;
 			looped = 0;//false;
 			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
 			relSpeedMin = 1;
@@ -1606,10 +1606,10 @@ class CfgGesturesMale
 			showItemInHand = 0;
 			showItemInRightHand = 0;
 			disableWeapons = 0;//false;
-			enableBinocular = 1;
+			enableBinocular = 0;
 			mask = "BodyFullReal";
 			//actions = "RifleStandActionsRunF";
-			//adjstance = "m";
+			adjstance = "m";
 			soundOverride = "adjust_stand_side";
 			soundEnabled = 1;//true;
 			soundEdge[] = {0.01};
