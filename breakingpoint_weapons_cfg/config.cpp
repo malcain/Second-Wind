@@ -2997,7 +2997,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 			class MuzzleSlot : SlotInfo
 			{
-				compatibleItems[] = {"BP_muzzle_snds_H"};
+				compatibleItems[] = {"BP_muzzle_snds_H","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconPosition[] = {0,0.45};
 				iconScale = 0.2;
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -3932,7 +3932,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols", 0.300000, 1, 50};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.100000;
-		linkedAttach[] = {"BP_Mk12Ssup"};
+		linkedAttach[] = {"BP_Mk12Ssup","BP_PLight"};
 		modes[] = {"Single", "FullAuto"};
 		class Single : Mode_SemiAuto
 		{
@@ -5679,7 +5679,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"BP_muzzle_snds_H"};
+				compatibleItems[] = {"BP_muzzle_snds_H","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconScale = 0.1;
 			};
 			class CowsSlot : SlotInfo
@@ -5811,7 +5811,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"BP_muzzle_snds_H"};
+				compatibleItems[] = {"BP_muzzle_snds_H","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconScale = 0.1;
 			};
 			class CowsSlot : SlotInfo
@@ -5957,7 +5957,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"BP_muzzle_snds_H"};
+				compatibleItems[] = {"BP_muzzle_snds_H","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconScale = 0.1;
 			};
 			class CowsSlot : SlotInfo
@@ -6082,7 +6082,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"BP_muzzle_snds_h"};
+				compatibleItems[] = {"BP_muzzle_snds_h","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconScale = 0.1;
 			};
 			class CowsSlot : SlotInfo
@@ -13388,7 +13388,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class MuzzleSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {"BP_muzzle_snds_H"};
+				compatibleItems[] = {"BP_muzzle_snds_H","BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_ghex_F"};
 				iconScale = 0.1;
 			};
 			class CowsSlot : SlotInfo
@@ -19126,24 +19126,24 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Sound Suppressor (7.62 mm, Sand)";
 	};
 
-	class BP_muzzle_snds_65_TI_blk_F : muzzle_snds_H { //Stealth Sound Suppressor (6.5 mm, Black)
+	class BP_muzzle_snds_65_TI_blk_F : muzzle_snds_H { //Specialized Sound Suppressor (6.5 mm, Black)
 		_generalMacro = "muzzle_snds_65_TI_blk_F";
 		author = "Bohemia Interactive";
-		displayName = "Stealth Sound Suppressor (6.5 mm, Black)";
+		displayName = "Specialized Sound Suppressor (6.5 mm, Black)";
 		model = "\A3\Weapons_F_Exp\Acc\acca_snds_65_TI_blk_F.p3d";
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_65_TI_blk_F_ca.paa";
 	};
-	class BP_muzzle_snds_65_TI_ghex_F : BP_muzzle_snds_65_TI_blk_F { //Stealth Sound Suppressor (6.5 mm, Green Hex)
+	class BP_muzzle_snds_65_TI_ghex_F : BP_muzzle_snds_65_TI_blk_F { //Specialized Sound Suppressor (6.5 mm, Green Hex)
 		_generalMacro = "muzzle_snds_65_TI_ghex_F";
 		author = "Bohemia Interactive";
-		displayName = "Stealth Sound Suppressor (6.5 mm, Green Hex)";
+		displayName = "Specialized Sound Suppressor (6.5 mm, Green Hex)";
 		model = "\A3\Weapons_F_Exp\Acc\acca_snds_65_TI_ghex_F.p3d";
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_65_TI_ghex_F_ca.paa";
 	};
-	class BP_muzzle_snds_65_TI_hex_F : BP_muzzle_snds_65_TI_blk_F { //Stealth Sound Suppressor (6.5 mm, Hex)
+	class BP_muzzle_snds_65_TI_hex_F : BP_muzzle_snds_65_TI_blk_F { //Specialized Sound Suppressor (6.5 mm, Hex)
 		_generalMacro = "muzzle_snds_65_TI_hex_F";
 		author = "Bohemia Interactive";
-		displayName = "Stealth Sound Suppressor (6.5 mm, Hex)";
+		displayName = "Specialized Sound Suppressor (6.5 mm, Hex)";
 		model = "\A3\Weapons_F_Exp\Acc\acca_snds_65_TI_hex_F.p3d";
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_65_TI_hex_F_ca.paa";
 	};
@@ -19171,7 +19171,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		displayName = "C-More Collimated optic";
-		//picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
+		picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
 		model = "\A3\weapons_f\acc\acco_aco_OP_smg_F.p3d";
 		descriptionShort = "";
 		weaponInfoType = "RscWeaponZeroing";
@@ -20870,7 +20870,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
     class BP_gemtech9 : BP_muzzle_snds_L
 	{
 		scope = 2;
-		displayName = "9mm Suppressor";
+		displayName = "Old 9mm Suppressor";
 		inertia = 0.100000;
 		class ItemInfo: InventoryMuzzleItem_Base_F
 		{
@@ -20882,20 +20882,20 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			};
  			class AmmoCoef
 			{
- 				hit = 1.0000;
- 				visibleFire = 0.3;
- 				audibleFire = 0.1;
+ 				hit = 0.9600;
+ 				visibleFire = 0.4;
+ 				audibleFire = 0.15;
  				visibleFireTime = 0.5;
  				audibleFireTime = 1.0;
  				cost = 1.0;
- 				typicalSpeed = 1.0;
+ 				typicalSpeed = 0.98;
  				airFriction = 1.0;
  			};
  			muzzleEnd = "zaslehPoint"; // memory point in muzzle supressor's model
  			alternativeFire = "Zasleh2";  // class in cfgWeapons with model of muzzle flash
  			class MuzzleCoef
 			{
- 				dispersionCoef = 1.0f;
+ 				dispersionCoef = 1.1f;
  				artilleryDispersionCoef = 1.0f;
  				fireLightCoef = 0.3f;
  				recoilCoef = 1.0f;

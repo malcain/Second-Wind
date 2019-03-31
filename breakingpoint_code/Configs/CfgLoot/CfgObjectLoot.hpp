@@ -500,12 +500,6 @@ class CfgObjectLoot {
 			{"BP_StoneGhillie","uniform"},
 			{"BP_TreeGhillie","uniform"},
 			{"BP_DirtGhillie","uniform"},
-			{"BP_Wetsuit","uniform"},
-			{"BP_Guarilla_Faded","uniform"},
-			{"BP_Guarilla_Khaki","uniform"},
-			{"BP_Guarilla_Leader","uniform"},
-			{"BP_Guarilla_Camo","uniform"},
-			{"BP_Ghillie_Lush","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_200Rnd_556x45_MINIMI","magazine"},
 			{"BP_100Rnd_762x51_MINIMI","magazine"},
@@ -593,12 +587,6 @@ class CfgObjectLoot {
 			0.05,	//STONE GHILLIE
 			0.05,	//TREE GHILLIE
 			0.05,	//DIRT GHILLIE
-			0.05,	//WETSUIT CLOTHING
-			0.07,	//Guerilla Faded
-			0.07,	//Guerilla Shit Green Sweater
-			0.05,	//Guerilla Leader
-			0.07,	//Guerilla Khaki Camo
-			0.01,	//Marksman Ghillie
 			0.03,   //REBREATHER
 			0.05,   //200Rnd_556
 			0.05,   //100Rnd_762
@@ -1312,7 +1300,8 @@ class CfgObjectLoot {
 			{"MeleeCrowbar","weaponNA"},
 			{"MeleeClub","weaponNA"},
 			{"ItemStove","magazine"},
-			{"ItemToolbox","toolbelt"}	
+			{"ItemToolbox","toolbelt"},
+			{"BP_M8","toolbelt"}
 		};
 		itemChance[] =	{
 			0.06,	//JERRY CAN
@@ -1323,11 +1312,11 @@ class CfgObjectLoot {
 			0.05,	//45 MAG ROUNDS
 			0.03,	//44 MAG ROUNDS
 			0.03,	//SW45
-			0.01,	//SW.500
+			0.02,	//SW.500
 			0.01,	//MAUSER 7.92
 			0.06,	//REMINGTON 870
 			0.03,	//RUGER 10/22
-			0.09,	//LUPARA
+			0.08,	//LUPARA
 			0.01,	//1886S
 			0.02,	//25RND .22LR
 			0.01,	//.500SW
@@ -1351,7 +1340,8 @@ class CfgObjectLoot {
 			0.02,    //CROWBAR
 			0.02,   //Stove BLUEPRINT
 			0.02,   //Stove
-			0.09	//TOOLBOX
+			0.09,	//TOOLBOX
+			0.01	//SW.500 Optic
 		};
 	};
 	class Supermarket: Default {
@@ -2433,7 +2423,7 @@ class CfgObjectLoot {
 			{"BP_10Rnd_65x39","magazine"},
 			{"BP_10Rnd_303_Mag","magazine"},
 			{"V_BandollierB_oli_BP","vest"},
-			{"BP_M8","toolbelt"}
+			{"BP_Binocular_Hunter","weaponNA"},
 		};
 		itemChance[] =	{
 			0.04,   //45GOV
@@ -2457,7 +2447,7 @@ class CfgObjectLoot {
 			0.02,   //10RND GRENDEL
 			0.10,    //10RND 303 BRIT
 			0.07,	//Bandolier Mid
-			0.02   //S&W500 Scope
+			0.02,   //BP_Binocular_Hunter
 		};
 	};
 	
@@ -2507,7 +2497,139 @@ class CfgObjectLoot {
 		};
 	};
 
+	
 	class Castle: Default {
+		lootChance = 0.50;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_Crossbow","weapon"},
+			{"BP_Crossbow_DigitCamo","weapon"},
+			{"BP_SA61","weapon"},
+			{"BP_SW45","weapon"},
+			{"BP_SUD_AK74M","weapon"},
+			{"BP_Rhino","weapon"},
+			{"BP_Ruger","weaponA"},
+			{"BP_1886S","weaponA"},
+			{"BP_1866C","weapon"},
+			{"BP_MC550","weapon"},
+			{"BP_WinCoy2","weapon"},
+			{"BP_Rem6","weaponA"},
+			{"BP_Win70","weaponA"},
+			{"BP_Win70F","weaponA"},
+			{"BP_CZ550_old","weapon"},
+			{"BP_Binocular_Hunter","weaponNA"},
+			{"BP_SOS","toolbelt"},
+			{"BP_20Rnd_765x17","magazine"},
+			{"WaterbotEmpty","magazine"},
+			{"ItemKnife","magazine"},
+			{"ItemMatchbox","magazine"},
+			{"ItemCompass","toolbelt"},
+			{"ItemMap","toolbelt"},
+			{"BP_CZst_br","toolbelt"},
+			{"BP_CZmod_br","toolbelt"},
+			{"BP_R7P","toolbelt"},
+			{"BP_R7Sup","toolbelt"},
+			{"BP_Unertl8x","toolbelt"},
+			{"BP_Unertl32x","toolbelt"},
+			{"BP_VX2","toolbelt"},
+			{"BP_VX3","toolbelt"},
+			{"BP_5Rnd_250_Mag","magazine"},
+			{"BP_5Rnd_300_Mag","magazine"},
+			{"BP_15Rnd_9x19OVP","magazine"},
+			{"BP_5Rnd_3006_Mag","magazine"},
+
+		};
+		itemChance[] =	{
+			0.04,   //BP_Crossbow
+			0.03,   //BP_Crossbow_DigitCamo
+			0.02,   //Scorpion
+			0.13,   //SW45
+			0.08,   //AK74M
+			0.02,   //RHINO
+			0.09,   //RUGER
+			0.01,   //1886S
+			0.02,   //1886C
+			0.02,   //MC550
+			0.02,   //REM7 CDL
+			0.02,   //REM6
+			0.02,   //WINCHESTER MODEL 70
+			0.01,   //WINCHESTER MODEL 70 SUPER GRADE
+			0.05,   //CZ550 OLD
+			0.02,   //BP_Binocular_Hunter
+			0.05,   //Clearsky hunting optic
+			0.03,   //BP_20Rnd_765x17
+			0.02,   //WaterbotEmpty
+			0.04,   //KNIFE
+			0.04,   //MATCHBOX
+			0.03,   //COMPASS
+			0.03,   //MAP
+			0.06,   //CZ STANDARD BARREL
+			0.02,   //CZ PRECISION BARREL
+			0.02,   //REM7 PRECISION BARREL
+			0.01,   //REM7 PRECISION BARREL W/Suppressor
+			0.02,   //UNERTL 18X
+			0.02,   //UNERTL 32X
+			0.03,   //VX2
+			0.02,   //VX3
+			0.04,   //.22-250
+			0.01,   //300 WINMAG
+			0.07,   //9MM OVP
+			0.08,   //30-06 MAG
+		};
+	};
+	class WindmillAcc: Default {
+		lootChance = 0.50;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_8Rnd_45gov","magazine"},
+			{"Rangefinder","weaponNA"},
+			{"BP_Binocular_Hunter","weaponNA"},
+			{"ItemKnife","magazine"},
+			{"ItemMatchbox","magazine"},
+			{"ItemCompass","toolbelt"},
+			{"ItemMap","toolbelt"},
+			{"BP_CZst_br","toolbelt"},
+			{"BP_CZmod_br","toolbelt"},
+			{"BP_R7P","toolbelt"},
+			{"BP_Unertl32x","toolbelt"},
+			{"BP_VX3","toolbelt"},
+			{"BP_5Rnd_250_Mag","magazine"},
+			{"BP_5Rnd_300_Mag","magazine"},
+			{"BP_15Rnd_9x19OVP","magazine"},
+			{"BP_5Rnd_3006_Mag","magazine"},
+			{"BP_5Rnd_762x51_Mag","magazine"},
+			{"BP_5Rnd_Mauser_Mag","magazine"},
+			{"BP_10Rnd_65x39","magazine"},
+			{"BP_10Rnd_303_Mag","magazine"},
+			{"V_BandollierB_oli_BP","vest"},
+			{"BP_Binocular_Hunter","weaponNA"},
+		};
+		itemChance[] =	{
+			0.04,   //45GOV
+			0.01,   //RANGEFINDER
+			0.02,   //Hunting Binocular
+			0.16,   //KNIFE
+			0.14,   //MATCHBOX
+			0.13,   //COMPASS
+			0.13,   //MAP
+			0.07,   //CZ STANDARD BARREL
+			0.02,   //CZ PRECISION BARREL
+			0.02,   //REM7 PRECISION BARREL
+			0.01,   //UNERTL 32X
+			0.01,   //VX3
+			0.04,   //.22-250
+			0.01,   //300 WINMAG
+			0.07,   //9MM OVP
+			0.08,   //30-06 MAG
+			0.02,   //5RND 762
+			0.01,   //5RND 762
+			0.02,   //10RND GRENDEL
+			0.10,    //10RND 303 BRIT
+			0.07,	//Bandolier Mid
+			0.02,   //BP_Binocular_Hunter
+		};
+	};
+	/*class Castle: Default {
 		lootChance = 0.75;
 		lootPos[] = {};
 		itemType[] =	{		
@@ -2541,18 +2663,17 @@ class CfgObjectLoot {
 			0.03,   //BRITISH BACKPACK
 			0.01	//CZECH BACKPACK
 		};
-	};
+	};*/
 	
 	class SurvivorCrate: Default {
 		lootChance = 0.75;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"BP_M84_Flash","magazine"},
 			{"BP_m21","weapon"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
-			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
 			{"BP_TripMine_Mag","magazine"},
+			{"BP_HumanTrap_Mag","magazine"},
 			{"HandGrenade","magazine"},
 			{"V_TacVest_camo","vest"},
 			{"V_Chestrig_blk_BP","vest"},
@@ -2565,6 +2686,8 @@ class CfgObjectLoot {
 			{"optic_Aco","toolbelt"}, 
 			{"BP_AK_ACO","toolbelt"}, 
 			{"BP_VX3","toolbelt"},
+			{"BP_GhillieWL","toolbelt"},
+			{"BP_GhillieDes","toolbelt"},
 			{"MeleePickaxe","weaponNA"},
 			{"ItemMorphine","magazine"},
 			{"ItemFieldDressing","magazine"},
@@ -2592,15 +2715,15 @@ class CfgObjectLoot {
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"BP_5Rnd_Mauser_Mag","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
-			{"BP_762x54_7N1_10rnd","magazine"}
+			{"BP_762x54_7N1_10rnd","magazine"},
+			{"BP_M84_Flash","magazine"},
 		};
 		itemChance[] =	{
-			0.81,	//M21
-			0.21,	//M21
+			0.01,	//M21
 			0.02,	//Kar98 Scoped
 			0.02,   //ENFIELD SCOPED
-			0.01,   //Paramilitary Garb (Jacket)
-			0.11,	//Tripmine
+			0.04,	//Tripmine
+			0.04,	//BearTrap
 			0.01,	//HandGrenade
 			0.01,	//CAMO vest
 			0.01,	//V_Chestrig_blk_BP
@@ -2613,6 +2736,8 @@ class CfgObjectLoot {
 			0.03, 	//Aco
 			0.03, 	//AK_ACO
 			0.03, 	//VX3
+			0.01, 	//Rifle Woodland camo
+			0.01, 	//Rifle Desert camo
 			0.03, 	//Axe
 			0.05,   //Morphine
 			0.05,	//FIELD DRESSING
@@ -2641,6 +2766,7 @@ class CfgObjectLoot {
 			0.05,	//Mauser_Mag
 			0.04,	//762x54_7N13
 			0.04,	//762x54_7N1
+			0.04,	//BP_M84_Flash
 		};
 	};
 	
@@ -2705,7 +2831,7 @@ class CfgObjectLoot {
 			0.01,   //RANGEFINDER
 			0.02,	//338Lapua AMMO
 			0.03,	//300_Mag AMMO
-			0.03,	//SVDK AMMO
+			0.03,	//93x64 SVDK AMMO
 			0.02,   //10Rnd_762mk316_Mag
 			0.04,   //5Rnd_762m80a1_Mag
 			0.03,	//STANAG M855A1
