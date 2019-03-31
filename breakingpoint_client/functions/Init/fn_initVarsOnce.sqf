@@ -721,13 +721,7 @@ BP_ObjectPreload =
 	"BP_MilCrateMediumBLK",
 	"BP_MilCrateTallOLV",
 	"BP_MilCrateTallBLK",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
-	"BP_DustbinGR",
+	"BP_DustbinGR"
 ];
 
 
