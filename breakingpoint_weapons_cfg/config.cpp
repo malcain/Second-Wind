@@ -1243,12 +1243,10 @@ class CfgGesturesMale
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
+			enableOptics = 1;
 			looped = 0;//false;
 			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
-<<<<<<< HEAD
 			//collisionShape = "empty";
-=======
->>>>>>> parent of 774dd25... binoc test + collision jump test
 			relSpeedMin = 1;
 			relSpeedMax = 1;
 			limitGunMovement = 1.0;
@@ -1272,6 +1270,7 @@ class CfgGesturesMale
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
+			enableOptics = 1;
 			looped = 0;//false;
 			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
 			relSpeedMin = 1;
@@ -1297,6 +1296,7 @@ class CfgGesturesMale
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
+			enableOptics = 1;
 			looped = 0;//false;
 			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
 			relSpeedMin = 1;
@@ -1322,6 +1322,7 @@ class CfgGesturesMale
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
+			enableOptics = 1;
 			looped = 0;//false;
 			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
 			relSpeedMin = 1;
