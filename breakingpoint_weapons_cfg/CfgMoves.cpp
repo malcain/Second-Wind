@@ -557,17 +557,17 @@ class CfgMovesBasic
 
 		class BinocStandActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
 		class BinocKneelActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
@@ -582,15 +582,17 @@ class CfgMovesBasic
 		{
 			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class BinocKneelRflActions
 		{
 			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
 			BP_MeleeWeap_Jump = "";
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_Pst_Jump = "";
+			BP_HolsterWeap_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class BinocProneRflActions
 		{
@@ -601,18 +603,20 @@ class CfgMovesBasic
 		};
 		class BinocStandPstActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_HolsterWeap_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
 		class BinocKneelPstActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
 			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_HolsterWeap_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
 		class BinocPronePstActions
@@ -625,18 +629,18 @@ class CfgMovesBasic
 		};
 		class BinocStandLnrActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_Pst_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
 		class BinocKneelLnrActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
 			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
+			BP_Pst_Jump = "";
+			//BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 		};
 		class BinocProneLnrActions
@@ -649,16 +653,16 @@ class CfgMovesBasic
 		};
 		class BinocStandCivilActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class BinocKneelCivilActions
 		{
-			BP_Weap_Jump[] = {"BP_Pst_Jump", "Gesture"};
-			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
-			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
+			BP_Weap_Jump = "";
+			BP_MeleeWeap_Jump = "";
+			BP_Pst_Jump = "";
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 		};
 		class BinocProneCivilActions
