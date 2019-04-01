@@ -2537,7 +2537,7 @@ class CfgObjectLoot {
 			{"BP_5Rnd_300_Mag","magazine"},
 			{"BP_15Rnd_9x19OVP","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
-
+			{"BP_10Rnd_65x39","magazine"}
 		};
 		itemChance[] =	{
 			0.04,   //BP_Crossbow
@@ -2575,95 +2575,9 @@ class CfgObjectLoot {
 			0.01,   //300 WINMAG
 			0.07,   //9MM OVP
 			0.08,   //30-06 MAG
+			0.02   //10RND GRENDEL
 		};
 	};
-	class WindmillAcc: Default {
-		lootChance = 0.50;
-		lootPos[] = {};
-		itemType[] =	{
-			{"BP_8Rnd_45gov","magazine"},
-			{"Rangefinder","weaponNA"},
-			{"BP_Binocular_Hunter","weaponNA"},
-			{"ItemKnife","magazine"},
-			{"ItemMatchbox","magazine"},
-			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
-			{"BP_CZst_br","toolbelt"},
-			{"BP_CZmod_br","toolbelt"},
-			{"BP_R7P","toolbelt"},
-			{"BP_Unertl32x","toolbelt"},
-			{"BP_VX3","toolbelt"},
-			{"BP_5Rnd_250_Mag","magazine"},
-			{"BP_5Rnd_300_Mag","magazine"},
-			{"BP_15Rnd_9x19OVP","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
-			{"BP_5Rnd_762x51_Mag","magazine"},
-			{"BP_5Rnd_Mauser_Mag","magazine"},
-			{"BP_10Rnd_65x39","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"V_BandollierB_oli_BP","vest"},
-			{"BP_Binocular_Hunter","weaponNA"},
-		};
-		itemChance[] =	{
-			0.04,   //45GOV
-			0.01,   //RANGEFINDER
-			0.02,   //Hunting Binocular
-			0.16,   //KNIFE
-			0.14,   //MATCHBOX
-			0.13,   //COMPASS
-			0.13,   //MAP
-			0.07,   //CZ STANDARD BARREL
-			0.02,   //CZ PRECISION BARREL
-			0.02,   //REM7 PRECISION BARREL
-			0.01,   //UNERTL 32X
-			0.01,   //VX3
-			0.04,   //.22-250
-			0.01,   //300 WINMAG
-			0.07,   //9MM OVP
-			0.08,   //30-06 MAG
-			0.02,   //5RND 762
-			0.01,   //5RND 762
-			0.02,   //10RND GRENDEL
-			0.10,    //10RND 303 BRIT
-			0.07,	//Bandolier Mid
-			0.02,   //BP_Binocular_Hunter
-		};
-	};
-	/*class Castle: Default {
-		lootChance = 0.75;
-		lootPos[] = {};
-		itemType[] =	{		
-			{"","military"},
-			{"BP_Medicalbox","object"},
-			{"AmmoBoxSmall_762","object"},
-			{"V_TacVest_camo","vest"},
-			{"Rangefinder","weaponNA"},
-			{"BP_G18","weapon"},
-			{"","specialammorifle"},
-			{"","survival"},
-			{"","vehicle"},
-			{"BP_Bergen_rgr","backpack"}, 
-			{"BP_Kitbag_sgg","backpack"}, 
-			{"BP_Bergen_rgr","backpack"}, 
-			{"BP_FieldPack_ocamo","backpack"}
-			
-		};
-		itemChance[] =	{
-			0.15,	//MILITAR
-			0.03,	//CAJA MEDICA
-			0.03,	//AMMO BOX 7.62
-			0.02,	//CAMO CLOTHING
-			0.01,	//Telemetro
-			0.01,	//G18
-			0.06,   //SPECIAL AMMO
-			0.15,   //SURVIVAL LOOT
-			0.09,	//VEHICLE LOOT
-			0.04, 	//ALICE PACK
-			0.04, 	//ASSAULT PACK
-			0.03,   //BRITISH BACKPACK
-			0.01	//CZECH BACKPACK
-		};
-	};*/
 	
 	class SurvivorCrate: Default {
 		lootChance = 0.75;

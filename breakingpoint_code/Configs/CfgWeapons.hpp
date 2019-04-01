@@ -2920,9 +2920,25 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Toolbox";
 		descriptionUse = "Toolbox";
-		model = "\breakingpoint\models\bp_toolbox.p3d";
 		picture = "\breakingpoint\textures\icons\bp_toolbox_ca.paa";
 		descriptionShort = "All purpose toolkit used for basic to major mechanical repair";
+		model = "\breakingpoint\models\bp_toolbox.p3d";
+		/*model="\plp_containers\plp_ct_Toolbox.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camoB"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"plp_containers\StcToolboxes\plp_ct_ToolboxBlackDirty.paa",
+			"plp_containers\StcToolboxes\plp_ct_ToolboxBlackDirty.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"plp_containers\StcToolboxes\plp_ct_ToolboxDirty.rvmat",
+			"plp_containers\StcToolboxes\plp_ct_ToolboxDirty_Metal.rvmat"
+		};*/
 		simulation = "ItemRadio";
 		
 		class ItemInfo {

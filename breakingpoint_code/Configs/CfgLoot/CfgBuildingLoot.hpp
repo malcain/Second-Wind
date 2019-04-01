@@ -68,8 +68,10 @@ class CfgBuildingLoot
             {"BP_TrashcanHouse","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Trash"},
-			{"BP_LuggageBags","object","Residential"},
-			{"BP_Packs","object","Residential"},
+			{"BP_LuggageCaseBG","object","Residential"},
+			{"BP_LuggageCaseRED","object","Residential"},
+			{"BP_BriefbagOrangeSide","object","Residential"},
+			{"BP_BriefbagPink","object","Residential"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
 			{"ItemKnife","magazine"},
@@ -134,8 +136,10 @@ class CfgBuildingLoot
 			0.10,	//BP_Trashcan
 			0.10,   //BP_Bag1
 			0.10,   //BP_Bag2
-			0.20,   //BP_LuggageBags
-			0.10,   //BP_Packs
+			0.10,   //BP_LuggageCaseBG
+			0.10,   //BP_LuggageCaseRED
+			0.05,   //BP_Briefbags
+			0.05,   //BP_Briefbags
 			0.02,	//Compass
 			0.02,	//Map
 			0.02,	//Knife
@@ -210,8 +214,11 @@ class CfgBuildingLoot
             {"BP_TrashcanHouse","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_WeaponCrateOld","object","Residential2"},
-			{"BP_LuggageBags","object","Residential"},
-			{"BP_Packs","object","Residential"},
+			{"BP_LuggageCaseGR","object","Residential2"},
+			{"BP_LuggageCaseGR","object","Residential"},
+			{"BP_LuggageCaseBG","object","Residential"},
+			{"BP_BriefbagOrange","object","Residential"},
+			{"BP_BriefbagPinkSide","object","Residential"},
 			{"ItemDuctTape","magazine"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
@@ -287,8 +294,11 @@ class CfgBuildingLoot
 			0.08,	//BP_Trashcan
 			0.08,   //BP_Bag1
 			0.01,   //BP_WeaponCrateOld
-			0.20,   //BP_LuggageBags
-			0.12,  //BP_Packs
+			0.01,   //BP_LuggageCaseGR
+			0.10,   //BP_LuggageCaseGR
+			0.10,   //BP_LuggageCaseBG
+			0.06,   //BP_Briefbags
+			0.06,   //BP_Briefbags
 			0.01,	//Duct_Tape
 			0.01,	//Compass
 			0.01,	//Map
@@ -374,8 +384,10 @@ class CfgBuildingLoot
 			{"BP_DustbinGR","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_Bag2","object","Trash"},
-			{"BP_LuggageBags","object","Residential"},
-			{"BP_Packs","object","Residential"}	
+			{"BP_LuggageCaseRED","object","Residential"},
+			{"BP_LuggageCaseBG","object","Residential"},
+			{"BP_BriefbagPink","object","Residential"},
+			{"BP_BriefbagOrangeSide","object","Residential"}
 		};
 		itemChance[] =	{
 			0.15,	//BP_CardBoardBox1
@@ -385,8 +397,10 @@ class CfgBuildingLoot
 			0.05,	//BP_DustbinGR
 			0.10,   //BP_Bag1
 			0.05,   //BP_Bag2
-			0.05,    //BP_LuggageBags
-			0.05    //BP_Packs
+			0.03,    //BP_LuggageBags
+			0.02,    //BP_LuggageBags
+			0.03,    //BP_Packs
+			0.02    //BP_Packs
 		};		
 	};	
 	class Office: Default {
@@ -398,13 +412,13 @@ class CfgBuildingLoot
 		itemType[] =	{
 			{"BP_CardboardBox_1","object","Office"},
             {"BP_CardboardBox_2","object","Supermarket"},
-            {"BP_CardboardBox_3","object","Generic"},
+            {"BP_DustbinBlkSide","object","Generic"},
             {"BP_DustbinBlk","object","Trash"},
 			{"BP_DustbinGR","object","Trash"},
 			{"BP_Bag1","object","Generic"},
-			{"BP_Bag2","object","Trash"},
-			{"BP_LuggageBags","object","Office2"},
-			{"BP_Packs","object","Residential"},
+			{"BP_DustbinGRSide","object","Trash"},
+			{"BP_LuggageCaseGR","object","Office2"},
+			{"BP_BriefbagOrange","object","Residential"},
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
 			{"ItemWatch","toolbelt"},
@@ -515,9 +529,9 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_MedicalBox","object","Hospital"},
-			{"BP_Bag1","object","Generic"},
+			{"BP_FoodBoxIDAP","object","Supermarket"},
 			{"BP_WeaponCrateOld","object","Residential2"},
-			{"BP_Bag2","object","Trash"},
+			{"BP_TrashBinGR","object","Trash"},
 			{"ItemBandage","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemMorphine","magazine"},
@@ -575,8 +589,8 @@ class CfgBuildingLoot
 		itemType[] =	{
 			{"BP_MedicalBox","object","Hospital"},
 			{"BP_MedicalMultibox","object","Research"},
-			{"BP_WeaponCrateOld","object","Residential2"},
-			{"BP_Bag2","object","Trash"},
+			{"BP_PlasticBox","object","Trash"},
+			{"BP_PlasticBox","object","MilitaryAirfieldAcc"},
 			{"ItemBandage","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemMorphine","magazine"},
@@ -600,9 +614,8 @@ class CfgBuildingLoot
 		itemChance[] =	{
 			0.10,	//BP_MedicalBox
 			0.15,	//BP_MedicalMultibox
-			0.04,   //BP_Bag1
-			0.02,   //Weapons
-			0.04,   //BP_Bag2
+			0.12,   //BP_PlasticBox
+			0.01,   //BP_PlasticBox MilitaryAirfieldAcc
 			0.05,	//BANDAGE
 			0.05,	//PAINKILLER
 			0.05,	//MORPHINE
@@ -1007,6 +1020,8 @@ class CfgBuildingLoot
 			{"BP_AmmoCrateOld","object","MilitaryGeneralAcc"},
 		    {"BP_WeaponCrateOld","object","MilitaryGeneralWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
+			{"BP_ApexMilBox1","object","ApexMilBox1"},
+			{"BP_ApexMilBox2","object","ApexMilBox2"},
 			{"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"optic_Aco","toolbelt"},
@@ -1064,11 +1079,13 @@ class CfgBuildingLoot
 			{"BP_8Rnd_MagBuckshot","vest"}
 		};
 		itemChance[] =	{
-			0.06,	//BP_AmmoBoxNew
-			0.10,   //BP_AmmoCrateOld
-			0.15,   //BP_WeaponCrateOld
-			0.04,   //BP_WeaponCrateOld
-			0.01,   //TRASH
+			0.07,	//BP_AmmoBoxNew
+			0.11,   //BP_AmmoCrateOld
+			0.14,   //BP_WeaponCrateOld
+			0.03,   //BP_WeaponCrate_WWII
+			0.01,   //BP_ApexMilBox1
+			0.01,   //BP_ApexMilBox2
+			0.05,   //TRASH
 			0.02,   //GENERIC
 			0.01,	//ACO OPTIC
 			0.01,	//HAMR OPTIC
@@ -1121,7 +1138,7 @@ class CfgBuildingLoot
 			0.01,	//{"SmokeShell","magazine"},
 			0.01,	//{"BP_30Rnd_9x21_Mag","magazine"},
 			0.01,	//{"BP_556old_Stanag","magazine"},
-			0.01,	//{"BP_8Rnd_MagBuckshot","vest"}
+			0.01	//{"BP_8Rnd_MagBuckshot","vest"}
 		};		
 	};
 	class MilitarySpecial: Default {
@@ -1386,8 +1403,9 @@ class CfgBuildingLoot
 			{"BP_GhostBoxBrn","object","HotelAcc"},
 			{"BP_WeathCrateBigBRN","object","HotelWpn"},
 			{"BP_WeathCrateBigGRN","object","MilitaryTower"},
-			{"BP_Bag2","object","Generic"},
-			{"BP_MedicalBox","object","Hospital"}
+			{"BP_LuggageCaseGR","object","Office"},
+			{"BP_LuggageCaseGR","object","Generic"},
+			{"BP_LuggageCaseGR","object","Hospital"}
 		};
 		itemChance[] =	{
 			0.15,	//BP_GhostBoxBlk
@@ -1395,7 +1413,8 @@ class CfgBuildingLoot
 			0.15,	//BP_GhostBoxBrn
 			0.11,   //HotelWpn
 			0.05,   //MilitaryTower
-			0.22,   //GENERIC
+			0.08,   //GENERIC
+			0.14,   //GENERIC
 			0.02    //BP_MedicalBox
 		};		
 	};
@@ -1725,7 +1744,7 @@ class CfgBuildingLoot
 		lootChance = 0.50;
 		lootPos[] = {};
 		itemType[] =	{		
-			{"BP_ApexMilBox2","object","ApexMilBox1"},
+			{"BP_ApexMilBox1","object","ApexMilBox1"},
 			{"BP_JungleGhillie_Uniform","uniform"},  //Full Ghillie (Jungle)
 			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
 			{"BP_Paramilitary_Shorts_Uniform","uniform"},  //Paramilitary Garb (Shorts)

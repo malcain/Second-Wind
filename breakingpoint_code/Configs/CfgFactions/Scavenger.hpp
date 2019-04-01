@@ -10,6 +10,7 @@
 	class Scavenger : BP_BaseFaction
 	{
 	    name = "Scavenger";
+		icon = "\breakingpoint_ui\icons\ScavengerIcon.paa";
 		
 		class Levels : Levels {
 			class Level_Base : Level_Base {

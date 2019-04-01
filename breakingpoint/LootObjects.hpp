@@ -249,7 +249,7 @@ class BP_MilCrateTallOLV: BP_LootBox {
 	};
 };
 class BP_MilCrateTallBLK: BP_LootBox {
-	displayName="Military Box (Medium, Olive)";
+	displayName="Military Box (Medium, Black)";
 	model="\a3\weapons_f\ammoboxes\AmmoBox_F.p3d";
 	hiddenSelections[]=
 	{
@@ -356,7 +356,7 @@ class BP_WeathCrateBRN : BP_LootBox {
 	};
 	hiddenSelectionsTextures[]=
 	{
-		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateWorn.paa"
+		"plp_containers\StcWeatheredCrates\plp_ct_WeathCrateBrown.paa"
 	};
 };
 class BP_WeathCrateGRN : BP_LootBox {
@@ -380,10 +380,10 @@ class BP_WeathCrateSmallBRN : BP_LootBox {
 
 /* Ghost Hotel */
 
-class BP_GhostBoxBlk : BP_LootBox {
+class BP_GhostBoxGrn : BP_LootBox {
     model = "plp_containers\StcCaskets\plp_cts_CasketLeatherGreen.p3d";
 };
-class BP_GhostBoxGrn : BP_LootBox {
+class BP_GhostBoxBlk : BP_LootBox {
     model = "plp_containers\StcCaskets\plp_cts_CasketLeatherBlack.p3d";
 };
 class BP_GhostBoxBrn : BP_LootBox {
@@ -473,16 +473,57 @@ class BP_DustbinGR : BP_LootBox
 {
 	model="plp_containers\StcTrashcans\plp_cts_DustbinGrey.p3d";
 };
-
-
+class BP_DustbinGRSide : BP_LootBox 
+{
+model="plp_containers\StcTrashcans\plp_cts_DustbinGreySide.p3d";
+};
+class BP_DustbinBlkSide : BP_LootBox 
+{
+model="plp_containers\StcTrashcans\plp_cts_DustbinBlackSide.p3d";
+};
 /* Farm */
 class BP_Bag1 : BP_LootBox { model = "\breakingpoint\models\bp_bag1.p3d"; };
 class BP_Bag2 : BP_LootBox { model = "\breakingpoint\models\bp_bag2.p3d"; };
 class BP_Sack : BP_LootBox { model = "\plp_containers\plp_ct_Sack.p3d"; };
 
 /* Civilian Luggage */
-class BP_LuggageBags : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; };	
-class BP_Packs : BP_LootBox { model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; };
+class BP_LuggageBags : BP_LootBox { 
+model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_01_F.p3d"; 
+};
+class BP_LuggageCaseGR : BP_LootBox {
+	model="plp_containers\StcSuitcases\plp_cts_SuitcaseFabricGreenSide.p3d";
+};
+class BP_LuggageCaseRED : BP_LootBox {
+	model="plp_containers\StcSuitcases\plp_cts_SuitcaseFabricRedSide.p3d";
+};
+class BP_LuggageCaseBG : BP_LootBox {
+	model="\plp_containers\plp_ct_SuitcaseFabricSide.p3d";
+	hiddenSelections[]=
+	{
+	"camo"
+	};
+	hiddenSelectionsTextures[]=
+	{
+		"\plp_containers\StcSuitcases\plp_ct_SuitcaseFabricBeige.paa"
+	};
+};
+
+class BP_Packs : BP_LootBox { 
+model = "\A3\structures_f_epb\Items\Luggage\LuggageHeap_02_F.p3d"; 
+};
+
+class BP_BriefbagOrange : BP_LootBox { 
+model="plp_beachobjects\plp_bo_BeachBagBackOrange.p3d";
+};
+class BP_BriefbagOrangeSide : BP_LootBox { 
+model="plp_beachobjects\plp_bo_BeachBagBackOrangeSide.p3d";
+};
+class BP_BriefbagPink : BP_LootBox { 
+model="plp_beachobjects\plp_bo_BeachBagBackPink.p3d";
+};
+class BP_BriefbagPinkSide : BP_LootBox { 
+model="plp_beachobjects\plp_bo_BeachBagBackPinkSide.p3d";
+};
 
 /* Dumpster */
 class BP_Dumpster1 : BP_LootBox {
