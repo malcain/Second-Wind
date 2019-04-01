@@ -301,8 +301,26 @@ class CfgMovesBasic
 		SecondaryWeapon = "";
 		Binoculars = "";
  		crossbow_reload = "crossbow_reload";
+		/////
+		BP_Jump = " ";
+		BP_Zomb_Act_Attack1 = " ";
+		BP_Zomb_Act_Attack2 = " ";
+		BP_Act_Man_Drink_Erc_x3_Gesture = "";
+		BP_Act_Man_Eat_Erc_x3_Gesture = "";
 
-		BP_Weap_Jump = "";
+		MOCAP_Man_Act_Idle_Stay_CombatPace_Rfl_Push_Kick_LeftLeg = "";
+
+		MOCAP_Man_Act_Idle_Stay_CombatPace_Pstl_Push_Kick_LeftLeg = "";
+
+		MOCAP_Man_Act_Idle_Stay_CombatPace_Lnr_Push_Kick_LeftLeg = "";
+		
+		MOCAP_Man_Act_Non_CivPace_Non_Punch_Hand_Right_Direct = "";
+		MOCAP_Man_Act_Non_CivPace_Non_Punch_Hand_Left_Direct = "";
+
+		MOCAP_Man_Act_Idle_Stay_CivPace_Non_Push_Kick_LeftLeg = "";
+		/////
+
+		/*BP_Weap_Jump = "";
 		BP_MeleeWeap_Jump = "";
 		BP_Pst_Jump = "";
 		BP_HolsterWeap_Jump = "";
@@ -311,7 +329,7 @@ class CfgMovesBasic
 		BP_Zomb_Act_Attack1 = " ";
 		BP_Zomb_Act_Attack2 = " ";
 		BP_Act_Man_Drink_Erc_x3_Gesture = "";
-		BP_Act_Man_Eat_Erc_x3_Gesture = "";
+		BP_Act_Man_Eat_Erc_x3_Gesture = "";*/
 
 	};
 
@@ -379,11 +397,15 @@ class CfgMovesBasic
 			grabCarried = "AinjPfalMstpSnonWrflDnon_carried_Up";
 			crossbow_reload[] = {"crossbow_reload", "Gesture"};
 
-			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
+			/*BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
 			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
+			BP_Jump[] = {"BP_Jump", "Gesture"};
+			BP_Zomb_Act_Attack1[] = {"BP_Zomb_Attack1","Gesture"};
+			BP_Zomb_Act_Attack2[] = {"BP_Zomb_Attack2","Gesture"};*/
+			
 			BP_Jump[] = {"BP_Jump", "Gesture"};
 			BP_Zomb_Act_Attack1[] = {"BP_Zomb_Attack1","Gesture"};
 			BP_Zomb_Act_Attack2[] = {"BP_Zomb_Attack2","Gesture"};
@@ -986,10 +1008,153 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			limitGunMovement = 1;//allow body bending for aim up\down
 		};
 
+		//MOCAP Melee anims
+        class MOCAP_Idle_Stay_CombatPace_Rfl_Push_Kick_LeftLeg : AmovPercMstpSrasWrflDnon {
+            file = "\breakingpoint_anim\player\Strikes\MOCAP_Idle_Stay_CombatPace_Rfl_Push_Kick_LeftLeg.rtm";
+            looped = 0;
+            speed = 0.7;
+			duty = 0.7;
+            mask = "BodyFull";
+            leftHandIKBeg = true;
+            leftHandIKCurve[] = {1};
+            leftHandIKEnd = true;
+            rightHandIKBeg = true;
+            rightHandIKCurve[] = {1};
+            rightHandIKEnd = true;
+            weaponIK = 1;
+            enableOptics = false;
+            showWeaponAim = false;
+            disableWeapons = false;
+            disableWeaponsLong = false;
+			leaning = "empty";
+			aimingBody = "empty";
+			aiming = "empty";
+            forceAim = 1;
+            limitGunMovement = 0.2;
+            headBobMode = 0;
+            headBobStrength = 0;
+			canPullTrigger = 1;
+			enableDirectControl = 0;
+			weaponLowered = 0;
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			ConnectFrom[] = {"AmovPercMstpSrasWrflDnon", 9.020000, "AmovPercMstpSlowWrflDnon", 9.020000, "aadjpercmstpsraswrflddown_amovpercmstpsraswrfldnon", 9.020000, "aadjpercmstpsraswrfldup_amovpercmstpsraswrfldnon", 9.020000, "aadjpercmstpsraswrfldright_amovpercmstpsraswrfldnon", 9.020000,"aadjpercmstpsraswrfldleft_amovpercmstpsraswrfldnon", 9.020000};
+			ConnectTo[] = {"AmovPercMstpSrasWrflDnon", 0.020000};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			soundOverride = "rifle_to_handgun";
+			soundEnabled = 1;
+			showHandGun = 0;
+			showItemInRightHand = 0;
+		};
+        class MOCAP_Idle_Stay_CombatPace_Pstl_Push_Kick_LeftLeg : AmovPercMstpSrasWpstDnon {
+            file = "\breakingpoint_anim\player\Strikes\MOCAP_Idle_Stay_CombatPace_Pstl_Push_Kick_LeftLeg.rtm";
+            looped = 0;
+            speed = 0.8;
+			duty = 0.7;
+            mask = "BodyFull";
+            leftHandIKBeg = true;
+            leftHandIKCurve[] = {1};
+            leftHandIKEnd = true;
+            rightHandIKBeg = true;
+            rightHandIKCurve[] = {1};
+            rightHandIKEnd = true;
+            weaponIK = 0;
+            enableOptics = false;
+            showWeaponAim = false;
+            disableWeapons = false;
+            disableWeaponsLong = false;
+			leaning = "empty";
+			aimingBody = "empty";
+			aiming = "empty";
+            forceAim = 1;
+            limitGunMovement = 0.2;
+            headBobMode = 0;
+            headBobStrength = 0;
+			canPullTrigger = 1;
+			enableDirectControl = 0;
+			weaponLowered = 0;
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			ConnectFrom[] = {"AmovPercMstpSrasWpstDnon", 9.020000, "AmovPercMstpSlowWpstDnon", 9.020000, "aadjpercmstpsraswpstddown_amovpercmstpsraswpstdnon", 9.020000, "aadjpercmstpsraswpstdup_amovpercmstpsraswpstdnon", 9.020000, "aadjpercmstpsraswpstdright_amovpercmstpsraswpstdnon", 9.020000,"aadjpercmstpsraswpstdleft_amovpercmstpsraswpstdnon", 9.020000};
+			ConnectTo[] = {"AmovPercMstpSrasWpstDnon",0.020000};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			soundOverride = "rifle_to_handgun";
+			soundEnabled = 1;
+		};
+        class MOCAP_Idle_Stay_CombatPace_Lnr_Push_Kick_LeftLeg : AmovPercMstpSrasWlnrDnon {
+            file = "\breakingpoint_anim\player\Strikes\MOCAP_Idle_Stay_CombatPace_Lnr_Push_Kick_LeftLeg.rtm";
+			looped = 0;
+            speed = 0.8;
+			duty = 0.7;
+            mask = "BodyFull";
+			leftHandIKBeg = true;
+			leftHandIKCurve[] = {1};
+			leftHandIKEnd = true;
+			rightHandIKBeg = true;
+			rightHandIKCurve[] = {1};
+			rightHandIKEnd = true;
+            weaponIK = 4;
+            enableOptics = false;
+            showWeaponAim = false;
+            disableWeapons = false;
+            disableWeaponsLong = false;
+			leaning = "empty";
+			aimingBody = "empty";
+			aiming = "empty";
+            forceAim = 1;
+            limitGunMovement = 0.2;
+            headBobMode = 0;
+            headBobStrength = 0;
+			canPullTrigger = 0;
+			enableDirectControl = 0;
+			weaponLowered = 0;
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			ConnectFrom[] = {"AmovPercMstpSrasWlnrDnon", 9.020000, "AmovPercMstpSlowWlnrDnon", 9.020000 /*"aadjpercmstpsraswpstddown_amovpercmstpsraswpstdnon", 9.020000, "aadjpercmstpsraswpstdup_amovpercmstpsraswpstdnon", 9.020000, "aadjpercmstpsraswpstdright_amovpercmstpsraswpstdnon", 9.020000,"aadjpercmstpsraswpstdleft_amovpercmstpsraswpstdnon", 9.020000*/};
+			ConnectTo[] = {"AmovPercMstpSrasWlnrDnon",0.020000, "AmovPercMstpSlowWlnrDnon", 0.020000};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			soundOverride = "rifle_to_handgun";
+			soundEnabled = 1;
+		};
+        class MOCAP_Idle_Stay_CivPace_Non_Push_Kick_LeftLeg : AmovPercMstpSnonWnonDnon {
+            file = "\breakingpoint_anim\player\Strikes\MOCAP_Idle_Stay_CivPace_Non_Push_Kick_LeftLeg.rtm";
+			looped = 0;
+            speed = 0.7;
+			duty = 0.7;
+            mask = "BodyFull";
+			leftHandIKBeg = false;
+			leftHandIKCurve[] = {1};
+			leftHandIKEnd = false;
+			rightHandIKBeg = false;
+			rightHandIKCurve[] = {1};
+			rightHandIKEnd = false;
+            weaponIK = 0;
+            enableOptics = false;
+            showWeaponAim = false;
+            disableWeapons = false;
+            disableWeaponsLong = false;
+			leaning = "empty";
+			aimingBody = "empty";
+			aiming = "empty";
+            forceAim = 1;
+            limitGunMovement = 0.3;
+            headBobMode = 0;
+            headBobStrength = 0;
+			canPullTrigger = 0;
+			enableDirectControl = 0;
+			weaponLowered = 0;
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			ConnectFrom[] = {"AmovPercMstpSnonWnonDnon", 9.020000};
+			ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.020000};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			soundOverride = "rifle_to_handgun";
+			soundEnabled = 1;
+		};
 	};
 };
 
-class CfgMovesMaleSdrHunt3 : CfgMovesMaleSdr
+/*class CfgMovesMaleSdrHunt3 : CfgMovesMaleSdr
 {
 	class States
 	{
@@ -1003,7 +1168,7 @@ class CfgMovesMaleSdrHunt3 : CfgMovesMaleSdr
 		};
 
 	};
-};
+};*/
 
 class CfgGesturesMale
 {
@@ -1239,7 +1404,63 @@ class CfgGesturesMale
 			interpolateFrom[] = {};
 			soundOverride = "";
 		};
-		class BP_Weap_Jump : Default {
+		
+		//MOCAP Melee Gestures
+		class MOCAP_Gesture_CivPace_Non_Punch_Hand_Left_Direct : Default {
+			file = "breakingpoint_anim\player\Gestures\Non\MOCAP_Gesture_CivPace_Non_Punch_Hand_Left_Direct.rtm";
+			looped = 0;
+			speed = 0.75;
+			duty = 1.0;
+			aimingBody = "aimingUpDefault";
+			mask = "handsWeapon";
+			leftHandIKBeg = false;
+			leftHandIKCurve[] = {1};
+			leftHandIKEnd = false;
+			rightHandIKBeg = false;
+			rightHandIKCurve[] = {1};
+			rightHandIKEnd = false;
+			weaponIK = 0;
+			enableOptics = false;
+			showWeaponAim = false;
+			disableWeapons = true;
+			disableWeaponsLong = true;
+			canPullTrigger = 0;
+			//ConnectFrom[] ={"MOCAP_Gesture_CivPace_Non_Idle_Combat_Pose",9.3};
+			//ConnectTo[] = {"AmovPercMstpSrasWrflDnon", 0.020000};
+			//ConnectTo[] = {"MOCAP_Gesture_CivPace_Non_Idle_Combat_Pose",9.3};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			InterpolateTo[] = {};
+			interpolateFrom[] = {};
+			soundOverride = "rifle_to_handgun";
+		};
+		class MOCAP_Gesture_CivPace_Non_Punch_Hand_Right_Direct : Default {
+			file = "breakingpoint_anim\player\Gestures\Non\MOCAP_Gesture_CivPace_Non_Punch_Hand_Right_Direct.rtm";
+			looped = 0;
+			speed = 0.7;
+			duty = 1.0;
+			aimingBody = "aimingUpDefault";
+			mask = "handsWeapon";
+			leftHandIKBeg = false;
+			leftHandIKCurve[] = {1};
+			leftHandIKEnd = false;
+			rightHandIKBeg = false;
+			rightHandIKCurve[] = {1};
+			rightHandIKEnd = false;
+			weaponIK = 0;
+			enableOptics = false;
+			showWeaponAim = false;
+			disableWeapons = true;
+			disableWeaponsLong = true;
+			canPullTrigger = 0;
+			//ConnectFrom[] ={"MOCAP_Gesture_CivPace_Non_Idle_Combat_Pose",9.3};
+			//ConnectTo[] = {"AmovPercMstpSrasWrflDnon", 0.020000};
+			//ConnectTo[] = {"MOCAP_Gesture_CivPace_Non_Idle_Combat_Pose",9.3};
+			//InterpolateTo[] = {"Unconscious",0.01};
+			//InterpolateTo[] = {};
+			//interpolateFrom[] = {};
+			soundOverride = "rifle_to_handgun";
+		};
+		/*class BP_Weap_Jump : Default {
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
@@ -1338,7 +1559,7 @@ class CfgGesturesMale
 			soundOverride = "adjust_stand_side";
 			soundEnabled = 1;//true;
 			soundEdge[] = {0.01};
-		};
+		};*/
 
 	};
 
