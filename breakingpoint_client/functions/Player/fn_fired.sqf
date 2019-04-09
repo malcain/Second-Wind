@@ -27,6 +27,7 @@ _handgun = (handgunWeapon player);
 
 _isPrimary = (_weapon == _primary);
 _isHandgun = (_weapon == _handgun);
+//_isAxe = (_weapon == );
 
 _isSilencer = false;
 _Silencer = "";
@@ -97,6 +98,16 @@ if (_ammo isKindOf "Melee"  || {_ammo isKindOf "BP_Bayonet"} || {_ammo isKindOf 
 			};
 		};
 	} forEach _entities;
+	
+	if (_ammo == "BP_Hatchet_Swing_Ammo") then {
+		_object = cursorobject;
+		if ((_unit distance2D _object) > 4.5) exitwith {};
+		_isTree = ["t_",str(_object),false] call BP_fnc_inString;
+		_isBush = ["b_",str(_object),false] call BP_fnc_inString;
+		if (_isTree or _isBush) then {
+			[_object] call BP_fnc_chopWood;
+		};
+	};
 };
 
 _zombieCheck = [_ammo,_distance,_audible,_unit,_unitPos] spawn BP_fnc_zombieFired;

@@ -119,7 +119,7 @@ class House_Small_F : House_F
 	mapSize = 8.86;
 	_generalMacro = "House_Small_F";
 	cost = 35000;
-	class DestructionEffects : DestructionEffects
+	/*class DestructionEffects : DestructionEffects
 	{
 		class Smoke1 : Smoke1 { type="HouseDestructionSmoke3Small"; };
 		class Smoke2 : Smoke2 { type="HouseDestructionSmoke4Small"; };
@@ -130,7 +130,8 @@ class House_Small_F : House_F
 		class Smoke1Low : Smoke1Low { type="HouseDestructionSmoke3Small"; };
 		class Smoke2Low : Smoke2Low { type="HouseDestructionSmoke4Small"; };
 		class Smoke3Low : Smoke3Low { type="HouseDestrSmokeLongSmall"; };
-	};
+	};*/
+	class DestructionEffects;
 };
 
 class Land_House_Logic : House_F

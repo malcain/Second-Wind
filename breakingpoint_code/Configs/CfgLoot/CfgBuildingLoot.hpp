@@ -145,7 +145,6 @@ class CfgBuildingLoot
 			0.02,	//Knife
 			0.02,	//Sportbag
 			0.02,	//Binocular
-			0.02,	//Woodpile
 			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
 			0.02,	//DUCTTAPE
@@ -315,7 +314,6 @@ class CfgBuildingLoot
 			0.01,	//M1903K
 			0.02,	//Sportbag
 			0.02,	//Binocular
-			0.02,	//Woodpile
 			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
 			0.02,	//DUCTTAPE

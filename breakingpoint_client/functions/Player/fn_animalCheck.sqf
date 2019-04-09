@@ -42,24 +42,21 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	_Pos = _PosSelect select 0;
 	
 	_nearbyAnimals = [_playerPos,100] call BP_fnc_nearbyAnimals;
-	if (random 100 < 70) then {
-	if (player distance _Pos < BP_AnimalDistance and (NOT surfaceIsWater _Pos)) then 
-	{
-		_item = createVehicle ["GroundWeaponHolder_Scripted", _Pos, [], RADIUS, "CAN_COLLIDE"];
-		_item addMagazineCargoGlobal ["FoodMushroom",1];
-		//_item setPos _Pos;
-	};
+	if (random 100 < 65) then {
+		if (player distance _Pos < BP_AnimalDistance and (NOT surfaceIsWater _Pos)) then 
+		{
+			["FoodMushroom", "magazine", "Default", _Pos] call BP_fnc_spawnLoot;
+		};
 	} else {
-	if (player distance _Pos < BP_AnimalDistance and NOT surfaceIsWater _Pos and (_nearbyAnimals <= 1)) then 
-	{
-		_spawnType = "FORM";
-		if (_type in DOGS) then { _spawnType = "NONE"; };
-		_agent = createAgent [_type, _Pos, [], 0, _spawnType];
-		_agent setPos _Pos;
-		//_fsmid = [_pos,_agent] execFSM "\breakingpoint_code\system\animal_agent.fsm";
-		//_fsmid setFSMVariable ["_handle", _fsmid];
-		//_agent setVariable ["fsm_handle", _fsmid];
-	};
+		if (player distance _Pos < BP_AnimalDistance and NOT surfaceIsWater _Pos and (_nearbyAnimals <= 1)) then {
+			_spawnType = "FORM";
+			if (_type in DOGS) then { _spawnType = "NONE"; };
+			_agent = createAgent [_type, _Pos, [], 0, _spawnType];
+			_agent setPos _Pos;
+			//_fsmid = [_pos,_agent] execFSM "\breakingpoint_code\system\animal_agent.fsm";
+			//_fsmid setFSMVariable ["_handle", _fsmid];
+			//_agent setVariable ["fsm_handle", _fsmid];
+		};
 	};
 };
 

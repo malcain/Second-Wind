@@ -67,6 +67,10 @@ class CfgFunctions
 			file = "\breakingpoint_functions\functions\Code";
 			class compileFinal {};
 		};
+		class Environment {
+			file = "\breakingpoint_functions\functions\Environment";
+			class chopWood {};
+		};
 		class Faction {
 			file = "\breakingpoint_functions\functions\Faction";
 			class getFactionName {};

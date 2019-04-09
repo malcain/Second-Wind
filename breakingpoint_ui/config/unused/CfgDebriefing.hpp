@@ -9,7 +9,7 @@ class CfgDebriefing {
 		subtitle = "$STR_A3_CfgDebriefing_endDefault_1";
 		description = "";
 		picture = "\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa";
-		pictureBackground = "";
+		pictureBackground = "\a3\Ui_f\data\GUI\Cfg\Debriefing\endDefault_ca.paa";
 	};
 	
 	class loser {

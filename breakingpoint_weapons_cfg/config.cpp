@@ -57154,7 +57154,7 @@ class CfgAmmo {
 	{
 		hit = 10;
 		typicalSpeed = 85;
-		timeToLive = 0.020;
+		timeToLive = 0.018;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};

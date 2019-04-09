@@ -251,6 +251,15 @@ class CfgVehicles
 		hiddenSelectionsTextures[]={"breakingpoint_ui\signs\sign_survivalist.paa"};
 	};
 	
+	class BP_Sign_Scavenger : Land_Billboard_F
+	{
+		scope = public;
+		displayName="Sign (Scavenger)";
+		model="\A3\Structures_F\Civ\InfoBoards\Billboard_F.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"breakingpoint_ui\signs\sign_scavenger.paa"};
+	};
+	
 	class ReammoBox;
 	class BP_Bag_Base : ReammoBox
 	{

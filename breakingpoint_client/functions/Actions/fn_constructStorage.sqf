@@ -217,10 +217,10 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 
 	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
-	if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
+	/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
 	{
 		_config = missionConfigFile >> "CfgBuildingLoot" >> _type;
-	};
+	};*/
 
 	_lockable = (_type in BP_Houses);
 	_locked = (_building getVariable ['bis_disabled_Door',0] == 1);
