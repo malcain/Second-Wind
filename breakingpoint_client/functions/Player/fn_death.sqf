@@ -22,7 +22,7 @@ deathHandled = true;
 closeDialog 0;
 
 // Handle Players Dying Inside Vehicles
-_isInVehicle = (vehicle player != player);
+_isInVehicle = (!isNull objectParent player);
 if (_isInVehicle) then {
 	_playerObj action ["getOut", vehicle player]; // _playerObj action ["eject", vehicle _playerObj];
 };

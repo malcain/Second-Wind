@@ -18,7 +18,6 @@ class CfgWorlds
 		{
 			class Overcast;
 			class RainConfig;
-			class WindConfig;
 		};
 		class WaterExPars;
 		class EnvSounds;
@@ -40,24 +39,6 @@ class CfgWorlds
 			class Lighting;
 			class RainConfig: RainConfig
 			{
-			};
-			class WindConfig: WindConfig
-			{
-				windChange=5;
-				minForce=0;
-				maxForce=15;
-				minForceScatter=2;
-				maxForceScatter=5;
-				minGustCount=0;
-				maxGustCount=10;
-				gustTimeScatter=120;
-				minGustScatter=10;
-				maxGustScatter=20;
-				gustInfluenceMin=0.1;
-				gustInfluenceMax=0.40000001;
-				speedOfWindChange=2;
-				minGustValue=0;
-				maxGustValue=0.69999999;
 			};
 			class LightningsConfig;
 			class RainbowConfig;
@@ -4371,7 +4352,7 @@ class CfgWorlds
 	};
 };
 
-class CfgsoundSets
+/*class CfgsoundSets
 {
 	class ForestMorning_SoundSet
 	{
@@ -5998,7 +5979,7 @@ class CfgsoundSets
 		};
 		sound3DProcessingType="Thunder3DProcessingType";
 	};
-};
+};*/
 
 class cfgMods
 {

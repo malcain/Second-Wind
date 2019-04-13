@@ -41,15 +41,26 @@ while {_numItems > 0} do
 		case "magazine": {
 			_object addMagazineCargoGlobal [_lootClass,1];
 		};
+		case "ammo": {
+		//Item is one magazine with random ammo count
+		_amount = 1 + round random parsenumber (_iItem select [3,2]);
+		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item enableDynamicSimulation true;
+		_item addMagazineAmmoCargo [_iItem,1,_amount];
+		};
 		case "weapon": {
 			//Add Weapon
 			_object addWeaponCargoGlobal [_lootClass,1];
 
-			//Add Random Mags ( Random 0 or 1 )
+			//Add Random Mags ( Random 0 to 2 )
 			_mags = [] + getArray (configFile >> "cfgWeapons" >> _lootClass >> "magazines");
 			if ((count _mags) > 0) then {
+				_ammoClass = _mags select 0;
 				_magRndCount = round(random 2);
-				_object addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+				for "_i" from 1 to _magRndCount do {
+					_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+					_object addMagazineAmmoCargo [_ammoClass,1,_amount];
+				};
 			};
 		};
 		case "weaponA": {
@@ -65,9 +76,11 @@ while {_numItems > 0} do
 			//Add Random Mags ( Random 0 or 1 )
 			_mags = [] + getArray (configFile >> "cfgWeapons" >> _lootClass >> "magazines");
 			if ((count _mags) > 0) then {
+				_ammoClass = _mags select 0;
 				_magRndCount = round(random 2);
-				if (_magRndCount > 0) then {
-					_object addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+				for "_i" from 1 to _magRndCount do {
+					_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+					_object addMagazineAmmoCargo [_ammoClass,1,_amount];
 				};
 			};
 		};

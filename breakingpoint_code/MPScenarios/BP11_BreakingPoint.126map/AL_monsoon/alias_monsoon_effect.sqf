@@ -16,7 +16,7 @@ while {al_monsoon_om} do {
 
 	if (_debris_branches) then {
 	_leaves_p  = "#particlesource" createVehicleLocal (getposasl vehicle player);
-	if (vehicle player != player) then {_leaves_p attachto [vehicle player];} else {_leaves_p attachto [player];};
+	if (!isNull objectParent player) then {_leaves_p attachto [vehicle player];} else {_leaves_p attachto [player];};
 	_leaves_p setParticleCircle [100,[0,0,0]];
 	_leaves_p setParticleRandom [25,[50,50,10],[4,4,0],2,1,[0,0,0,0.5],1,0];
 	_leaves_p setParticleParams [["\A3\data_f\ParticleEffects\Hit_Leaves\Sticks_Green", 1, 1, 1], "", "SpaceObject", 1,30,[0,0,0],[50,50,0],2,10,1,0.1,[0.1+random 3],[[0.68,0.68,0.68,1]],[1.5,1],1,0,"","",vehicle player,0,true,1,[[0,0,0,0]]];
@@ -24,7 +24,7 @@ while {al_monsoon_om} do {
 	
 	if (_rain_fog) then {
 	_alias_local_fog = "#particlesource" createVehicleLocal (getposasl vehicle player); 
-	if (vehicle player != player) then {_alias_local_fog attachto [vehicle player];} else {_alias_local_fog attachto [player];};
+	if (!isNull objectParent player) then {_alias_local_fog attachto [vehicle player];} else {_alias_local_fog attachto [player];};
 	_alias_local_fog setParticleCircle [50, [3, 3, 0]];
 	_alias_local_fog setParticleRandom [5,[20,20,0],[1,1,0],1,1,[0,0,0,0.1],1,0];
 	_alias_local_fog setParticleParams [["\A3\data_f\cl_basic", 1, 0, 1], "", "Billboard", 1,10,[0,0,0],[-1,-1,0],3,10,7.9,0.1,[10,20,50],[[1,1,1,0],[1,1,1,0.03],[1,1,1,0]],[0.08],1, 0, "", "", vehicle player];

@@ -14,17 +14,26 @@ if (isNull _vehicle) exitWith {};
 
 ["vehicleKilled: Vehicle: %1 | Killer: %2",_vehicle,_killer] call BP_fnc_debugConsoleFormat;
 
-//_nearbyPlayers = [(getPosATL _vehicle),3] call BP_fnc_nearbyPlayersList;
-_nearbyPlayers = crew _vehicle;
-{
-spawn {
-_x action ["Eject",vehicle _x];
+
+/*{
+//_x action ["Eject",vehicle _x]; 
+_veh = vehicle _x;
+[["Eject",_veh] remoteExec ["action",_x];
 _x setVariable ["fire",_x,true];
-sleep 0.1;
-[_x,2] call BP_fnc_medicalKnockDown;
+//sleep 0.1;
+//[_x,2] remoteExecCall ["BP_fnc_medicalKnockDown",2];
 [(netID _x),(netID _x),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+} forEach crew _vehicle;*/
+
+{ 
+_x spawn {
+_this action ["Eject",vehicle _this]; 
+sleep 2;
+//[_this,2] call BP_fnc_medicalKnockDown;
+_this setVariable ["fire",_this,true];
+[(netID _this),(netID _this),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 };
-} forEach _nearbyPlayers;
+} forEach crew _vehicle;
 
 if (local _vehicle) then {
 	//Don't Use NetID Here to allow for both vehicles / event handlers to use the same code

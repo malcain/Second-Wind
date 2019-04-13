@@ -9,7 +9,7 @@
 
 private ["_onLadder","_hasdrinkitem","_hasoutput","_config","_text","_sfx","_dis"];
 
-_inVehicle = (vehicle player != player);
+_inVehicle = !isNull objectParent player;
 _onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {};
 

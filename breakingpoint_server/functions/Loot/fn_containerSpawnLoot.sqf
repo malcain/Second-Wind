@@ -46,6 +46,11 @@ for "_i" from 1 to _lootMinItems do
 	call
 	{
 		if (_lootType == "magazine") exitWith { _container addMagazineCargoGlobal [_lootClass,1]; };
+		if (_lootType == "ammo") exitWith 
+		{
+		_amount = 1 + round random parsenumber (_lootClass select [3,2]);
+		_container addMagazineAmmoCargo [_lootClass,1,_amount]; 
+		};
 		if (_lootType == "weaponNA") exitWith { _container addWeaponCargoGlobal [_lootClass,1]; };
 		if (_lootType == "vest") exitWith { _container addItemCargoGlobal [_lootClass,1]; };
 		if (_lootType == "uniform") exitWith { _container addItemCargoGlobal [_lootClass,1]; };
@@ -57,12 +62,16 @@ for "_i" from 1 to _lootMinItems do
 			//Add Weapon
 			_container addWeaponCargoGlobal [_lootClass,1];
 			
-			//Add Random Mags ( Random 0-2 )
+			//Add Random Mags ( Random 0-3 )
 			_mags = getArray (_cfgWeapons >> _lootClass >> "magazines");
 			if !(_mags isEqualTo []) then {
 				_magRndCount = round(random 3);
 				if (_magRndCount > 0) then {
-					_container addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+					_ammoClass = _mags select 0;
+					for "_i" from 1 to _magRndCount do {
+						_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+						_container addMagazineAmmoCargo [_ammoClass,1,_amount];
+					};
 				};
 			};
 		};
@@ -75,12 +84,16 @@ for "_i" from 1 to _lootMinItems do
 			_attach = getArray (configFile >> "cfgWeapons" >> _lootClass >> "linkedAttach");
 			{ _container addItemCargoGlobal [_x, 1]; } forEach _attach;
 
-			//Add Random Mags ( Random 0-1 )
+			//Add Random Mags ( Random 0-2 )
 			_mags = getArray (_cfgWeapons >> _lootClass >> "magazines");
 			if !(_mags isEqualTo []) then {
 				_magRndCount = round(random 2);
 				if (_magRndCount > 0) then {
-					_container addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+					_ammoClass = _mags select 0;
+					for "_i" from 1 to _magRndCount do {
+						_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+						_container addMagazineAmmoCargo [_ammoClass,1,_amount];
+					};
 				};
 			};
 			

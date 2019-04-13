@@ -320,12 +320,12 @@ class CfgMovesBasic
 		MOCAP_Man_Act_Idle_Stay_CivPace_Non_Push_Kick_LeftLeg = "";
 		/////
 
-		/*BP_Weap_Jump = "";
+		BP_Weap_Jump = "";
 		BP_MeleeWeap_Jump = "";
 		BP_Pst_Jump = "";
 		BP_HolsterWeap_Jump = "";
 
-		BP_Jump = " ";
+		/*BP_Jump = " ";
 		BP_Zomb_Act_Attack1 = " ";
 		BP_Zomb_Act_Attack2 = " ";
 		BP_Act_Man_Drink_Erc_x3_Gesture = "";
@@ -397,19 +397,15 @@ class CfgMovesBasic
 			grabCarried = "AinjPfalMstpSnonWrflDnon_carried_Up";
 			crossbow_reload[] = {"crossbow_reload", "Gesture"};
 
-			/*BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
+			BP_Weap_Jump[] = {"BP_Weap_Jump", "Gesture"};
 			BP_MeleeWeap_Jump[] = {"BP_MeleeWeap_Jump", "Gesture"};
 			BP_Pst_Jump[] = {"BP_Pst_Jump", "Gesture"};
 			BP_HolsterWeap_Jump[] = {"BP_HolsterWeap_Jump", "Gesture"};
 
 			BP_Jump[] = {"BP_Jump", "Gesture"};
 			BP_Zomb_Act_Attack1[] = {"BP_Zomb_Attack1","Gesture"};
-			BP_Zomb_Act_Attack2[] = {"BP_Zomb_Attack2","Gesture"};*/
-			
-			BP_Jump[] = {"BP_Jump", "Gesture"};
-			BP_Zomb_Act_Attack1[] = {"BP_Zomb_Attack1","Gesture"};
 			BP_Zomb_Act_Attack2[] = {"BP_Zomb_Attack2","Gesture"};
-
+			
 			BP_Act_Man_Drink_Erc_x3_Gesture[] = {"BP_Drink_Erc_x3_Gesture", "Gesture"};
 			BP_Act_Man_Eat_Erc_x3_Gesture[] = {"BP_Eat_Erc_x3_Gesture", "Gesture"};
 		};
@@ -1460,7 +1456,32 @@ class CfgGesturesMale
 			//interpolateFrom[] = {};
 			soundOverride = "rifle_to_handgun";
 		};
-		/*class BP_Weap_Jump : Default {
+		/*class BP_Jump : Default	{
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			canBlendStep = 0;
+			looped = false;
+			collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
+			relSpeedMin = 1;
+			relSpeedMax = 1;
+			limitGunMovement = 1.0;
+			headBobStrength = 0.23;
+			interpolationspeed = 10.0;
+			interpolationrestart = true;
+			forceAim = 1;
+			minPlayTime = 0.9;
+			duty = 10.0;
+			file = "\A3\anims_f\Data\Anim\Sdr\ovr\erc\stp\ras\rfl\AovrPercMrunSrasWrflDf";
+			speed = 1.25849;
+			disableWeapons = false;
+			mask = "BodyFullReal";
+			//actions = "RifleStandActionsRunF";
+			adjstance = "m";
+			soundOverride = "adjust_stand_side";
+			soundEnabled = true;
+			soundEdge[] = {0.01};
+		};*/
+		class BP_Weap_Jump : Default {
 			variantsPlayer[] = {};
 			variantsAI[] = {};
 			canBlendStep = 0;
@@ -1559,7 +1580,7 @@ class CfgGesturesMale
 			soundOverride = "adjust_stand_side";
 			soundEnabled = 1;//true;
 			soundEdge[] = {0.01};
-		};*/
+		};
 
 	};
 
@@ -32398,6 +32419,71 @@ class CfgWeapons
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"breakingpoint_weapons\textures\Hatchet\hatchet_urb_co.paa"};
 	};
+	
+	/*class MeleeAxe : MeleeWeapon
+	{
+		autoreload = 1;
+		scope = 2;
+		type = 4;
+		primary = 0;
+		weaponReloadtime = 0.25;
+		model = "\Horror_props\Axe.p3d";
+		picture = "\breakingpoint_weapons\icons\gear_hatchet_x_CA.paa";
+		displayName = "Bloody Axe";
+		descriptionUse = "Bloody Axe";
+		reloadAction = "ReloadRPG";
+		magazines[] = {"Hatchet_Swing"};
+		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
+		descriptionShort = "$STR_EQUIP_DESC_41";
+		modes[] = {"Single"};
+		class Single : Mode_SemiAuto
+		{
+			sounds[] = {StandardSound};
+			class BaseSoundModeType
+ 			{
+ 				weaponSoundEffect  = "DefaultRifle";
+ 				closure1[] = {"", 0.00006, 1, 10};
+ 				closure2[] = {"", 0.00006, 1, 10};
+ 				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
+ 			};
+ 			class StandardSound: BaseSoundModeType
+ 			{
+				begin1[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10};
+				begin2[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10};
+				begin3[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10};
+				begin4[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.80, 10};
+				soundBegin[] = {"begin1", 0.25, "begin2", 0.25, "begin3", 0.25, "begin4", 0.25};
+ 			};
+			dispersion = 0.0092;
+			soundContinuous = 0;
+			reloadTime = 0.6;
+			recoil = "recoil_single_primary_prone_1outof10";
+			recoilProne = "";
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 35;
+			allowedSlots[] = {901, 801, 701};
+			class MuzzleSlot : SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class CowsSlot : SlotInfo
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+			class PointerSlot : PointerSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[] = {};
+				iconScale = 0.1;
+			};
+		};
+	};*/
 
 	class MeleeKatana : MeleeWeapon
 	{
@@ -32650,7 +32736,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"breakingpoint_weapons\textures\Hatchet\sledge_urb_co.paa"};
 	};
 
-	class MeleeHammer2 : MeleeWeapon
+	class MeleeHammer2 : MeleeHammer
 	{
 		autoreload = 1;
 		scope = 2;
@@ -32820,7 +32906,7 @@ class CfgWeapons
 		scope = 2;
 		type = 4;
 		primary = 0;
-		weaponReloadtime = 0.25;
+		weaponReloadtime = 0.35;
 		model = "\breakingpoint_weapons\models\hatchet\bp_crowbar.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_crowbar_rifle_x_ca.paa";
 		displayName = "Crowbar";
@@ -32903,7 +32989,7 @@ class CfgWeapons
 		scope = 2;
 		type = 4;
 		primary = 0;
-		weaponReloadtime = 0.25;
+		weaponReloadtime = 0.35;
 		model = "\breakingpoint_weapons\models\hatchet\bp_club.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_club_rifle_x_ca.paa";
 		displayName = "Barbed Club";

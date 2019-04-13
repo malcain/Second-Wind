@@ -56,7 +56,7 @@ while {!isNull _display} do {
 			_btnAbort ctrlEnable false;
 			cutText ["Cannot Abort while inside a building.", "PLAIN DOWN"];
 		};
-		case (vehicle player != player) : {
+		case (!isNull objectParent player) : {
 			_btnAbort ctrlEnable false;
 			cutText ["Cannot Abort while inside a vehicle.", "PLAIN DOWN"];
 		};

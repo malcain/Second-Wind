@@ -17,7 +17,8 @@
 private ["_onLadder","_isWater","_ToolsNum","_displayMsg","_amountHas","_itemConsumeCount","_tempCount","_tempSelect","_tempConsume","_countTempConsume","_blueprint","_ObjClass","_ObjName","_Tools","_Materials","_ToolsCount","_amountNeed","_hasItems","_playerPos","_dir","_location","_dis","_sfx","_storage"];
 
 _onLadder =	(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
-_isWater = (surfaceIsWater (getPosATL player));
+_isWater = ((getPosASL player select 2) < 0);
+//_isWater = (surfaceIsWater (getPosATL player));
 
 if (_onLadder) exitWith { cutText ["You can't build while on a ladder.","PLAIN DOWN"]; };
 if (_isWater) exitWith { cutText ["You can't build while in water.","PLAIN DOWN"]; };
@@ -297,7 +298,7 @@ player setVariable ["constructionBlueprint",_blueprint];
 
 while {!isNull (player getVariable "constructionObject")} do
 {
-	if (vehicle player != player) then {
+	if (!isNull objectParent player) then {
 		player action ["eject", vehicle player];
 	};
 

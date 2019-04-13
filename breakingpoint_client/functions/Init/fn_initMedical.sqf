@@ -94,9 +94,9 @@ waitUntil
 			
 			//Check Backpack / Vest
 			_backpack = backpackContainer player;
-			_vest = vestContainer player;
+			//_vest = vestContainer player;
 			
-			_isClear = (isNull _backpack and isNull _vest);
+			//_isClear = isNull _backpack;
 
 			//Check If Player Is Rolling
 			if ((animationState player) in ROLLANIMS) then
@@ -105,13 +105,14 @@ waitUntil
 				_fireTime = _fireTime - 1;
 				
 				//Lower Fire Time Extra If Clear
-				if (_isClear) then { _fireTime = _fireTime - 1; };
+				if (isNull _backpack) then { _fireTime = _fireTime - 1; };
 				
 				//Delete Fire If Expired
 				if (_fireTime < 1) then
 				{
 					_fireTime = 0;
 					[player,_fire] remoteExecCall ["BP_fnc_fireDelete",0];
+					sleep 1; // delay to make sure fire is deleted before new checks run.
 				};
 			};
 			

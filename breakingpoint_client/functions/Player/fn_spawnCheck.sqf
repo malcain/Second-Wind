@@ -8,8 +8,8 @@
 */
 
 private ["_isAir","_inVehicle","_spawnZombies"];
-_isAir = vehicle player isKindOf "Air";
-_inVehicle = (vehicle player != player);
+//_isAir = vehicle player isKindOf "Air";
+_inVehicle = !isNull objectParent player;
 
 _nearbyBuildings = (getPos player) nearObjects ["building",400];
 _spawnZombies = true;

@@ -90,7 +90,7 @@
 				2 setOvercast (wcweather select 2);
 				150 setLightnings (wcweather select 3);
 				setdate (wcweather select 4);
-				if (_monsoon == false) then {
+				if (!_monsoon) then {
 				0 setWindForce (wcweather select 5);
 				};
 			};

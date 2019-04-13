@@ -61,9 +61,13 @@ switch (_iClass) do {
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
 		if ((count _mags) > 0) then {
+			_ammoClass = _mags select 0;
 			_magRndCount = round(random 2) + 1;
 			if (_magRndCount > 0) then {
-				_item addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+				for "_i" from 1 to _magRndCount do {
+					_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+					_item addMagazineAmmoCargo [_ammoClass,1,_amount];
+				};
 			};
 		};
 	};
@@ -78,9 +82,12 @@ switch (_iClass) do {
 			_item addItemCargoGlobal [_x, 1];
 		} count _attach;
 		if ((count _mags) > 0) then {
+			_ammoClass = _mags select 0;
 			_magRndCount = round(random 1) + 1;
-			if (_magRndCount < 1) then { _magRndCount = 1; };
-			_item addMagazineCargoGlobal [(_mags select 0), (_magRndCount)];
+			for "_i" from 1 to _magRndCount do {
+				_amount = 1 + round random parsenumber (_ammoClass select [3,2]);
+				_item addMagazineAmmoCargo [_ammoClass,1,_amount];
+			};
 		};
 	};
 	case "weaponNA": {
@@ -90,10 +97,20 @@ switch (_iClass) do {
 		_item addWeaponCargoGlobal [_iItem,1];
 	};
 	case "magazine": {
-		//Item is one magazine
+		//Item is one object or full magazine
 		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		_item addMagazineCargoGlobal [_iItem,1];
+	};
+	case "ammo": {
+		//Item is one magazine with random ammo count
+		_magRndCount = round(random 1) + 1;
+		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item enableDynamicSimulation true;
+		for "_i" from 1 to _magRndCount do {
+			_amount = 1 + round random parsenumber (_iItem select [3,2]);
+			_item addMagazineAmmoCargo [_iItem,1,_amount];
+		};
 	};
 	case "object": {
 		//Item is one magazine

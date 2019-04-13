@@ -677,9 +677,9 @@ class CfgObjectLoot {
 			{"BP_Benelli","weapon"},
 			{"BP_Lupara","weapon"},
 			{"BP_Rem870","weapon"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_22_Mag","ammo"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"WaterbotEmpty","magazine"},
@@ -687,7 +687,9 @@ class CfgObjectLoot {
 			{"ItemBandage","magazine"},
 			{"Meleehatchet","weaponNA"},
 			{"MeleeShovel","weaponNA"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
+			{"MeleeCrowbar","weaponNA"},
+            {"MeleeClub","weaponNA"},
+			{"BP_15Rnd_9x21_Rubber","ammo"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
 			{"BlueprintWaterBarrel","magazine"},
@@ -710,28 +712,28 @@ class CfgObjectLoot {
 			0.02,	//RUGER 10/22
 			0.03,   //CZ STD BARREL
 			0.01,   //CZ STD BARREL
-			0.15,	//MAKAROV
+			0.09,	//MAKAROV
 			0.06,	//G17
 			0.02,	//M1911
-			0.02,	//ENFIELD
+			0.01,	//ENFIELD
 			0.01,	//ENFIELD SCOPED
-			0.02,   //ENFIELD BAYONET
-			0.05,	//ENFIELD OLD
+			0.01,   //ENFIELD BAYONET
+			0.02,	//ENFIELD OLD
 			0.08, 	//KIT SAGE
 			0.08, 	//KIT CBR
 			0.08,   //KIT CAMO
 			0.05,	//BINOCULARS
 			0.01,	//CZ550 Old
-			0.09,	//CZ455
-			0.06,	//REM7
-			0.09,	//1866
+			0.04,	//CZ455
+			0.03,	//REM7
+			0.05,	//1866
 			0.01,	//R300
-			0.09,	//BANDOLIER OLIVE
+			0.08,	//BANDOLIER OLIVE
 			0.01,	//AR15 OLD
 			0.01,	//KATANA
-			0.04,   //BENELLI
-			0.09,   //LUPARA
-			0.09,   //REM870
+			0.02,   //BENELLI
+			0.05,   //LUPARA
+			0.05,   //REM870
 			0.01,	//45ACP
 			0.01,	//303B
 			0.15,	//22LR
@@ -741,7 +743,9 @@ class CfgObjectLoot {
 			0.12,	//DUCT TAPE
 			0.08,	//BANDAGE
 			0.05,	//HATCHET
-			0.05,   //HATCHET
+			0.05,   //Shovel
+			0.05,	//Crowbar
+			0.05,   //Club
 			0.01,	//9MM RUBBER
 			0.07,    //HavenReinforcement BLUEPRINT
 			0.07,    //Stove BLUEPRINT
@@ -749,10 +753,10 @@ class CfgObjectLoot {
 			0.07,    //barrel Fuel BLUEPRINT
 			0.07,    //television BLUEPRINT
 			0.07,    //CRATE BLUEPRINT
-			0.05,	//Crossbow
-			0.03,	//Crossbow
+			0.04,	//Crossbow
+			0.02,	//Crossbow
 			0.10,	//Crossbow Arrow
-			0.03,	//1886 collector
+			0.02,	//1886 collector
 			0.05	//Crossbow Arrow poisen
 		};		
 	};
@@ -788,11 +792,11 @@ class CfgObjectLoot {
 			{"BP_Benelli","weapon"},
 			{"BP_Lupara","weapon"},
 			{"BP_Kar98","weaponA"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_5Rnd_223_Mag","magazine"},
-			{"BP_8Rnd_45gov","magazine"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_5Rnd_223_Mag","ammo"},
+			{"BP_8Rnd_45gov","ammo"},
 			{"MeleeKatana","weaponNA"},
-			{"BP_10Rnd_303_Mag","magazine"},
+			{"BP_10Rnd_303_Mag","ammo"},
 			{"BP_Crossbow","weapon"},
 			{"BP_Crossbow_DigitCamo","weaponA"},
 			{"BP_Arrow_Mag","magazine"},
@@ -854,7 +858,6 @@ class CfgObjectLoot {
 			{"BP_Kitbag_cbr","backpack"},
 			{"BP_Kitbag_mcamo","backpack"},
 			{"Binocular","weaponNA"},
-			{"PartWoodPile","magazine"},
 			{"ChemG","magazine"},
 			{"ChemY","magazine"},
 			{"ChemR","magazine"},
@@ -862,14 +865,14 @@ class CfgObjectLoot {
 			{"ItemSoda5","magazine"},
 			{"ItemCereal6","magazine"},
 			{"ItemCan5","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_223_Mag","magazine"},
-			{"BP_5Rnd_223BTHP_Mag","magazine"},
-			{"BP_2Rnd_Buckshot","magazine"},
-			{"BP_2Rnd_MagBuckshot","magazine"},
-			{"BP_2Rnd_Slug","magazine"},
-			{"BP_8Rnd_MagBuckshot","magazine"},
+			{"BP_5Rnd_22_Mag","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_223_Mag","ammo"},
+			{"BP_5Rnd_223BTHP_Mag","ammo"},
+			{"BP_2Rnd_Buckshot","ammo"},
+			{"BP_2Rnd_MagBuckshot","ammo"},
+			{"BP_2Rnd_Slug","ammo"},
+			{"BP_8Rnd_MagBuckshot","ammo"},
 			{"BlueprintHaven","magazine"},
 			{"BlueprintChest","magazine"},
 			{"BlueprintIceBox","magazine"},
@@ -905,7 +908,6 @@ class CfgObjectLoot {
 			0.02, 	//KIT CBR
 			0.01,   //KIT CAMO
 			0.05,	//BINOCULARS
-			0.16,	//WOOD
 			0.05,	//CHEM
 			0.05,	//CHEM
 			0.05,	//CHEM
@@ -924,13 +926,13 @@ class CfgObjectLoot {
 			0.01,   //HAVEN LOCK
 			0.02,   //CHEST
 			0.02,   //REFRIGERATOR
-			0.02,   //GUN CABINET
+			0.01,   //GUN CABINET
 			0.02,   //HavenReinforcement BLUEPRINT
 			0.02,   //Stove BLUEPRINT
 			0.02,   //Stove
 			0.07,	//PAINKILLER
 			0.01,	//ANTIBIOTIC
-			0.00,	//WATER BOTTLE
+			0.01,	//WATER BOTTLE
 			0.10,	//TENNIS BALL
 			0.10,	//DUCT TAPE
 			0.05,	//WATER TAPE
@@ -942,7 +944,6 @@ class CfgObjectLoot {
 			0.08,   //HAMMER
 			0.07,   //CRATE BLUEPRINT
 			0.05	//AlarmClock
-			
 		};		
 	};
 	
@@ -965,9 +966,9 @@ class CfgObjectLoot {
 			{"ItemGlue","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemWaterTape","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_16Rnd_9x21_Mag","magazine"},
+			{"BP_5Rnd_22_Mag","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_16Rnd_9x21_Mag","ammo"},
 			{"BP_2Rnd_Buckshot","magazine"},
 			{"BlueprintHaven","magazine"},
 			{"BlueprintChest","magazine"},
@@ -1011,7 +1012,7 @@ class CfgObjectLoot {
 			0.02,   //HAVEN LOCK
 			0.02,   //CHEST
 			0.02,   //REFRIGERATOR
-			0.02,   //GUN CABINET
+			0.01,   //GUN CABINET
 			0.02,   //Stove BLUEPRINT
             0.01,	//FOOD
 			0.01,	//FOOD
@@ -1022,7 +1023,7 @@ class CfgObjectLoot {
 			0.05,	//CHEM
 			0.05,	//CHEM
 			0.05,	//CHEM			
-			0.02,   //TENT BLUEPRINT
+			0.02,   //Crate BLUEPRINT
 			0.05	//AlarmClock
 		};		
 	};
@@ -1058,11 +1059,11 @@ class CfgObjectLoot {
 			{"ItemGPS","toolbelt"},
 			{"BlueprintHaven", "magazine"},
 			{"BP_5Rnd_762x51_Mag","magazine"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
-			{"BP_10Rnd_303_JSP_Mag","magazine"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_22_Mag","ammo"},
+			{"BP_5Rnd_500Mag","ammo"},
+			{"BP_10Rnd_303_JSP_Mag","ammo"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"WaterbotEmpty","magazine"},
@@ -1101,7 +1102,7 @@ class CfgObjectLoot {
 			0.07,	//LUPARA
 			0.01,	//GPS
 			0.02,	//HAVEN LOCK
-			0.01,   //M24 CLIP
+			0.01,   //7.62 CLIP
 			0.01,	//45ACP
 			0.02,	//303B
 			0.15,	//22LR
@@ -1141,7 +1142,7 @@ class CfgObjectLoot {
 			{"PartGlass","magazine"},
 			{"ItemFuelcanEmpty","magazine"},
 			{"ItemFuelcanLargeEmpty","magazine"},
-			{"MeleeMachete","weaponNA"},
+			//{"MeleeMachete","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemLiquidResin","magazine"},
 			{"ItemPunctureKit","magazine"},
@@ -1167,7 +1168,7 @@ class CfgObjectLoot {
 			0.10,	//DUCT TAPE
 			0.05,	//WATER TAPE
 			0.14,	//JERRY CAN
-			//0.18,	//HACHET
+			0.04,	//HACHET
 			0.09,   //NAILS
 			0.08,   //HAMMER
 			0.03,   //BLOWTORCH
@@ -1180,8 +1181,8 @@ class CfgObjectLoot {
 			0.05,	//ENGINE
 			0.13,	//CRISTAL
 			0.14,	//JERRY CAN
-			0.03,	//JERRY CAN
-			//0.01,	//HACHET
+			0.03,	//FuelcanLarge
+			//0.01,	//Machete
 			0.07,	//KNIFE
 			0.15,   //LIQUID RESIN
 			0.11,   //PUNCTURE KIT
@@ -1215,7 +1216,7 @@ class CfgObjectLoot {
 			{"PartEngine","magazine"},
 			{"PartGlass","magazine"},
 			{"ItemFuelcanEmpty","magazine"},
-			{"MeleeMachete","weaponNA"},
+			//{"MeleeMachete","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemLiquidResin","magazine"},
 			{"ItemPunctureKit","magazine"},
@@ -1278,10 +1279,10 @@ class CfgObjectLoot {
 			{"BP_Ruger","weapon"},
 			{"BP_Lupara","weapon"},
 			{"BP_1886S","weaponA"},
-			{"BP_25Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
+			{"BP_25Rnd_22_Mag","ammo"},
+			{"BP_5Rnd_500Mag","ammo"},
 			{"BP_Rhino","weapon"},
-			{"BP_8Rnd_Slug","magazine"},
+			{"BP_8Rnd_Slug","ammo"},
 			{"PartPalette","magazine"},
 			{"PartWheel","magazine"},
 			{"ItemCanvasMaterial","magazine"},
@@ -1386,7 +1387,6 @@ class CfgObjectLoot {
 			{"BP_2Rnd_Buckshot","magazine"},
 			{"BP_2Rnd_MagBuckshot","magazine"},
 			{"BP_2Rnd_Slug","magazine"},
-			{"PartWoodPile","magazine"},
 			{"BlueprintCrate1","magazine"},
 			{"BP_Mak_Old","weapon"},
 			{"BP_AlarmClock_Black","magazine"}			
@@ -1431,7 +1431,6 @@ class CfgObjectLoot {
 			0.05,	//2RND BUCKSHOT
 			0.03,	//2RND MAGBUCKSHOT
 			0.02,	//2RND SLUG
-			0.12,	//WOOD
 			0.05,	//TENT BLUEPRINT
 			0.15,	//MAKAROV
 			0.02	//AlarmClock
@@ -2254,29 +2253,29 @@ class CfgObjectLoot {
 			{"V_TacVest_oli_BP","vest"},
 			{"Rangefinder","weaponNA"},
 			{"BP_M3A2","toolbelt"},
-			{"BP_20Rnd_765x17","magazine"},
-			{"BP_5Rnd_762mk316_Mag","magazine"},
+			{"BP_20Rnd_765x17","ammo"},
+			{"BP_5Rnd_762mk316_Mag","ammo"},
 			{"HandGrenade","magazine"},
 			{"BP_1Rnd_HE_shell","magazine"},
-			{"BP_93x64_SVDK","magazine"},
-			{"BP_5Rnd_300M_Mag","magazine"},
-			{"BP_33Rnd_9x19OVP","magazine"},
+			{"BP_93x64_SVDK","ammo"},
+			{"BP_5Rnd_300M_Mag","ammo"},
+			{"BP_33Rnd_9x19OVP","ammo"},
 			{"ItemKnife","magazine"},
-			{"BP_5Rnd_3006M_Mag","magazine"},
-			{"BP_5Rnd_223BTHP_Mag","magazine"},
-			{"BP_545x39_HP_30rnd","magazine"},
-			{"BP_545x39_30rnd_Ball_T","magazine"},
-			{"BP_20Rnd_65x47_Lapua","magazine"},
-			{"BP_10Rnd_65x47_Lapua","magazine"},
-			{"BP_10Rnd_65x39","magazine"},			
-			{"BP_545x39_7N22","magazine"},
-			{"BP_10Rnd_303_JSP_Mag","magazine"},
-			{"BP_762x54_7N1_10rnd","magazine"},
-			{"BP_762x54_7N13_10rnd","magazine"},
-			{"BP_556x45_StanagM855A1","magazine"},
-			{"BP_556x45_StanagMK262","magazine"},
-			{"BP_556x45_StanagSD","magazine"},
-			{"BP_556x45_Stanag_Tracer","magazine"},
+			{"BP_5Rnd_3006M_Mag","ammo"},
+			{"BP_5Rnd_223BTHP_Mag","ammo"},
+			{"BP_545x39_HP_30rnd","ammo"},
+			{"BP_545x39_30rnd_Ball_T","ammo"},
+			{"BP_20Rnd_65x47_Lapua","ammo"},
+			{"BP_10Rnd_65x47_Lapua","ammo"},
+			{"BP_10Rnd_65x39","ammo"},			
+			{"BP_545x39_7N22","ammo"},
+			{"BP_10Rnd_303_JSP_Mag","ammo"},
+			{"BP_762x54_7N1_10rnd","ammo"},
+			{"BP_762x54_7N13_10rnd","ammo"},
+			{"BP_556x45_StanagM855A1","ammo"},
+			{"BP_556x45_StanagMK262","ammo"},
+			{"BP_556x45_StanagSD","ammo"},
+			{"BP_556x45_Stanag_Tracer","ammo"},
 			{"V_BandollierB_rgr_BP","vest"},
 			{"BP_Arrow_Mag","magazine"},
 			{"BP_Arrow_Rambo","magazine"},
@@ -2414,14 +2413,14 @@ class CfgObjectLoot {
 			{"BP_R7P","toolbelt"},
 			{"BP_Unertl32x","toolbelt"},
 			{"BP_VX3","toolbelt"},
-			{"BP_5Rnd_250_Mag","magazine"},
-			{"BP_5Rnd_300_Mag","magazine"},
-			{"BP_15Rnd_9x19OVP","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
-			{"BP_5Rnd_762x51_Mag","magazine"},
-			{"BP_5Rnd_Mauser_Mag","magazine"},
-			{"BP_10Rnd_65x39","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
+			{"BP_5Rnd_250_Mag","ammo"},
+			{"BP_5Rnd_300_Mag","ammo"},
+			{"BP_15Rnd_9x19OVP","ammo"},
+			{"BP_5Rnd_3006_Mag","ammo"},
+			{"BP_5Rnd_762x51_Mag","ammo"},
+			{"BP_5Rnd_Mauser_Mag","ammo"},
+			{"BP_10Rnd_65x39","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
 			{"V_BandollierB_oli_BP","vest"},
 			{"BP_Binocular_Hunter","weaponNA"},
 		};

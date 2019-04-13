@@ -45,5 +45,5 @@ player setVariable ["constructionObject",_object];
 player setVariable ["constructionClassname",_ammo];
 player setVariable ["constructionBlueprint",_magazine];
 
-while {!isNull (player getVariable "constructionObject")} do { if (vehicle player != player) then { player action ["eject", vehicle player]; }; };
+while {!isNull (player getVariable "constructionObject")} do { if (!isNull objectParent player) then { player action ["eject", vehicle player]; }; };
 

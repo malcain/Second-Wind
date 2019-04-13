@@ -16,7 +16,7 @@ if (isNull player) exitWith {};
 if (r_player_dead) exitWith {};
 if (r_player_handler1) exitWith {};
 
-_inVehicle = (vehicle player != player);
+_inVehicle = (!isNull objectParent player);
 _onLadder =	(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {
 	player playActionNow "stop";

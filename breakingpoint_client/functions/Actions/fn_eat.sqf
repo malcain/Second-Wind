@@ -9,7 +9,7 @@
 
 private ["_onLadder","_hasfooditem","_config","_text","_regen","_dis","_sfx"];
 
-_inVehicle = (vehicle player != player);
+_inVehicle = !isNull objectParent player;
 _onLadder = (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {};
 
@@ -48,15 +48,16 @@ if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
 };
 
 //Cooked human meat effect on Hunters
-if (_itemorignal == "FoodPlayerCooked")
-_class = player getVariable ["class",0];
-if (_class == 3) then {
-_regen = _regen+700;
-_speedcoef = getAnimSpeedCoef player;
-	if (_speedcoef < 1.12 && !{_speedcoef > 1.15}) then {
-		player setAnimSpeedCoef 1.12;
-		sleep 10;
-		player setAnimSpeedCoef _speedcoef;
+if (_itemorignal == "FoodPlayerCooked") then {
+	_class = player getVariable ["class",0];
+	if (_class == 3) then {
+		_regen = _regen+700;
+		_speedcoef = getAnimSpeedCoef player;
+		if (_speedcoef < 1.12 && !{_speedcoef > 1.15}) then {
+			player setAnimSpeedCoef 1.12;
+			sleep 10;
+			player setAnimSpeedCoef _speedcoef;
+		};
 	};
 };
 

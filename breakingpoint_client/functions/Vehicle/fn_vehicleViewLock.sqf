@@ -7,27 +7,21 @@
 	by Malcain
 */
 
-if (!hasInterface) exitwith {};
+params ["_unit","_role","_vehicle"];
 
 if (missionDifficulty > 2) exitwith {};
 
+if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) exitwith {};
+
 [] spawn
 {
-
-//waitUntil {!isNull (findDisplay 46); sleep 1;};
-
-	while {true} do
-	{
-
-		waitUntil {sleep 0.5; !(isNull objectParent player);};//Wait for player to get into vehicle
-
-		waitUntil {
-			sleep 0.1; 
-			if (cameraView isEqualTo "EXTERNAL") then
-			{
-			player switchCamera "INTERNAL";
-			};
-			isNull objectParent player;
+	waitUntil {
+		sleep 0.2; 
+		if (cameraView isEqualTo "EXTERNAL") then
+		{
+		player switchCamera "INTERNAL";
 		};
+		
+		isNull objectParent player;
 	};
 };

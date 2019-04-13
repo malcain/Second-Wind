@@ -18,7 +18,7 @@ while {true} do {
 		if (rain > 0.02) then {
 		_pos_rd = [getPosASLVisual (vehicle player) select 0,getPosASLVisual (vehicle player) select 1,0.01];
 		_alias_drop_r = "#particlesource" createVehiclelocal _pos_rd;
-		if (vehicle player != player) then {_alias_drop_r attachto [vehicle player,[0,0,0]]} else {_alias_drop_r attachto [player]};
+		if (!isNull objectParent player) then {_alias_drop_r attachto [vehicle player,[0,0,0]]} else {_alias_drop_r attachto [player]};
 		_alias_drop_r setParticleCircle [10, [0, 0, 0]];
 		_alias_drop_r setParticleRandom [0.1, [20, 20, 0], [0.175, 0.175, 0], 13, 0.15, [0, 0, 0, 0.1], 0, 0];
 		_alias_drop_r setParticleParams [["\A3\data_f\kouleSvetlo", 1, 0, 1], "", "Billboard", 1, 0.2, [0, 0, 0], [0, 0, 0.15], 11, 12, 7.9, 0.075, [0.3, 0.5, 1], [[0.2, 0.2, 0.2, 0.3], [2, 2, 2, 0.1], [0.25, 0.25, 0.25, 0]], [0.08], 1, 0, "", "", vehicle player,0,true];
@@ -27,7 +27,7 @@ while {true} do {
 		
 		
 		_alias_drop_sec = "#particlesource" createVehiclelocal _pos_rd;
-		if (vehicle player != player) then {_alias_drop_sec attachto [vehicle player,[0,0,0]]} else {_alias_drop_sec attachto [player]};
+		if (!isNull objectParent player) then {_alias_drop_sec attachto [vehicle player,[0,0,0]]} else {_alias_drop_sec attachto [player]};
 		_alias_drop_sec setParticleCircle [10, [0, 0, 0]];
 		_alias_drop_sec setParticleRandom [0.1, [20, 20, 0], [0.175, 0.175, 0], 3, 0.15, [0, 0, 0, 0.1], 0, 0];
 		_alias_drop_sec setParticleParams [["\A3\data_f\RainDrop",1, 0, 1], "", "SpaceObject", 1, 0.2, [0, 0, 0], [0, 0, 1], 0, 15, 7.9, 0.075, [0.5,0.5,0.1], [[0.2, 0.2, 0.2, 0.3], [2, 2, 2, 0.1], [0.25, 0.25, 0.25, 0]], [0.08], 1, 0, "", "", vehicle player,0,true];
@@ -110,7 +110,7 @@ while {true} do {
 	_alias_drop_fog_factor = 0.03+random 0.1;
 	//_alias_drop_fog_factor=linearConversion [0,1,rain,10,0.02,true];
 	_alias_local_fog = "#particlesource" createVehicleLocal (getpos player); 
-	if (vehicle player != player) then {_alias_local_fog attachto [vehicle player,[0,0,0]]} else {_alias_local_fog attachto [player]};
+	if (!isNull objectParent player) then {_alias_local_fog attachto [vehicle player,[0,0,0]]} else {_alias_local_fog attachto [player]};
 	_alias_local_fog attachto [player];
 	_alias_local_fog setParticleCircle [10, [3, 3, 0]];
 	_alias_local_fog setParticleRandom [10, [0.25, 0.25, 0], [1, 1, 0], 1, 1, [0, 0, 0, 0.1], 0, 0];

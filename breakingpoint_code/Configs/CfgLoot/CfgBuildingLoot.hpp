@@ -105,19 +105,19 @@ class CfgBuildingLoot
 			{"BP_1866","weapon"},
 			{"BP_R300","weaponA"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"MeleeKatana","weaponNA"},
 			{"BP_Benelli","weapon"},
 			{"BP_Rem870","weapon"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_22_Mag","ammo"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemBandage","magazine"},
+			{"MeleeKatana","weaponNA"},
 			{"Meleehatchet","weaponNA"},
 			{"MeleeShovel","weaponNA"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
+			{"BP_15Rnd_9x21_Rubber","ammo"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
 			{"BlueprintWaterBarrel","magazine"},
@@ -167,15 +167,14 @@ class CfgBuildingLoot
 			0.01,	//BlueprintCrate
 			0.03,	//Makarov
 			0.02,	//AlarmClock
-			0.02,	//CZ550 Old
-			0.02,	//CZ455
-			0.02,	//REM7
-			0.02,	//1866
-			0.02,	//R300
+			0.01,	//CZ550 Old
+			0.01,	//CZ455
+			0.01,	//REM7
+			0.01,	//1866
+			0.01,	//R300
 			0.02,	//BANDOLIER OLIVE
-			0.02,	//KATANA
-			0.02,   //BENELLI
-			0.02,   //REM870
+			0.01,   //BENELLI
+			0.01,   //REM870
 			0.02,	//45ACP
 			0.02,	//303B
 			0.02,	//22LR
@@ -183,8 +182,11 @@ class CfgBuildingLoot
 			0.01,	//ANTIBIOTIC
 			0.02,	//DUCT TAPE
 			0.02,	//BANDAGE
+			0.01,	//KATANA
 			0.01,	//HATCHET
-			0.01,   //Showel
+			0.01,   //Shovel
+			0.01,	//Crowbar
+			0.01,   //Club
 			0.01,	//9MM RUBBER
 			0.01,    //HavenReinforcement BLUEPRINT
 			0.01,    //Stove BLUEPRINT
@@ -265,16 +267,16 @@ class CfgBuildingLoot
 			{"MeleeKatana","weaponNA"},
 			{"BP_Benelli","weapon"},
 			{"BP_Rem870","weapon"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_22_Mag","ammo"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemBandage","magazine"},
 			{"Meleehatchet","weaponNA"},
 			{"MeleeShovel","weaponNA"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
+			{"BP_15Rnd_9x21_Rubber","ammo"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
 			{"BlueprintWaterBarrel","magazine"},
@@ -446,12 +448,12 @@ class CfgBuildingLoot
 			{"BP_Lupara","weapon"},
 			{"ItemGPS","toolbelt"},
 			{"BlueprintHaven", "magazine"},
-			{"BP_5Rnd_762x51_Mag","magazine"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
-			{"BP_10Rnd_303_JSP_Mag","magazine"},
+			{"BP_5Rnd_762x51_Mag","ammo"},
+			{"BP_7Rnd_45acp","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_5Rnd_22_Mag","ammo"},
+			{"BP_5Rnd_500Mag","ammo"},
+			{"BP_10Rnd_303_JSP_Mag","ammo"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"WaterbotEmpty","magazine"},
@@ -560,7 +562,7 @@ class CfgBuildingLoot
 			0.05,	//MORPHINE
 			0.05,	//FIELD DRESSING
 			0.05,	//ANTIBIOTIC
-			0.03,   //SURGERY KIT
+			0.02,   //SURGERY KIT
 			0.03,   //Adrenaline
 			0.03,	//KNIFE
 			0.03,	//MATCHES
@@ -610,8 +612,8 @@ class CfgBuildingLoot
 			{"ItemDuctTape","magazine"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_MedicalBox
-			0.15,	//BP_MedicalMultibox
+			0.08,	//BP_MedicalBox
+			0.17,	//BP_MedicalMultibox
 			0.12,   //BP_PlasticBox
 			0.01,   //BP_PlasticBox MilitaryAirfieldAcc
 			0.05,	//BANDAGE
@@ -682,16 +684,16 @@ class CfgBuildingLoot
 			{"ItemBandage","magazine"},
 			{"ItemNails","magazine"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_6Rnd_45_Mag","magazine"},
-			{"BP_6Rnd_44Mag","magazine"},
+			{"BP_6Rnd_45_Mag","ammo"},
+			{"BP_6Rnd_44Mag","ammo"},
 			{"BP_sw45","weapon"},
 			{"BP_sw44","weaponA"},
 			{"BP_5Rnd_Mauser_Mag","magazine"},
 			{"BP_Rem870","weapon"},
 			{"BP_Ruger","weapon"},
 			{"BP_1886S","weaponA"},
-			{"BP_25Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
+			{"BP_25Rnd_22_Mag","ammo"},
+			{"BP_5Rnd_500Mag","ammo"},
 			{"BP_Rhino","weapon"},
 			{"BP_8Rnd_Slug","magazine"},
 			{"PartPalette","magazine"},
@@ -713,10 +715,10 @@ class CfgBuildingLoot
 			{"MeleeClub","weaponNA"},
 			{"ItemStove","magazine"},
 			{"ItemToolbox","toolbelt"},
-			{"BP_8Rnd_45gov","magazine"},
+			{"BP_8Rnd_45gov","ammo"},
 			{"BP_Unertl32x","toolbelt"},
-			{"BP_15Rnd_9x19OVP","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
+			{"BP_15Rnd_9x19OVP","ammo"},
+			{"BP_5Rnd_3006_Mag","ammo"}
 		};
 		itemChance[] =	{
 			0.05,   //BP_Bag1
@@ -765,7 +767,7 @@ class CfgBuildingLoot
 			0.01,   //45GOV
 			0.01,   //UNERTL 32X
 			0.01,   //9MM OVP
-			0.01,   //30-06 MAG
+			0.01   //30-06 MAG
 		};		
 	};
 	
@@ -788,16 +790,16 @@ class CfgBuildingLoot
 			{"ItemBandage","magazine"},
 			{"ItemNails","magazine"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_6Rnd_45_Mag","magazine"},
-			{"BP_6Rnd_44Mag","magazine"},
+			{"BP_6Rnd_45_Mag","ammo"},
+			{"BP_6Rnd_44Mag","ammo"},
 			{"BP_sw45","weapon"},
 			{"BP_sw44","weaponA"},
-			{"BP_5Rnd_Mauser_Mag","magazine"},
+			{"BP_5Rnd_Mauser_Mag","ammo"},
 			{"BP_Rem870","weapon"},
 			{"BP_Ruger","weapon"},
 			{"BP_1886S","weaponA"},
-			{"BP_25Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
+			{"BP_25Rnd_22_Mag","ammo"},
+			{"BP_5Rnd_500Mag","ammo"},
 			{"BP_Rhino","weapon"},
 			{"BP_8Rnd_Slug","magazine"},
 			{"PartPalette","magazine"},
@@ -819,10 +821,10 @@ class CfgBuildingLoot
 			{"MeleeClub","weaponNA"},
 			{"ItemStove","magazine"},
 			{"ItemToolbox","toolbelt"},
-			{"BP_8Rnd_45gov","magazine"},
+			{"BP_8Rnd_45gov","ammo"},
 			{"BP_Unertl32x","toolbelt"},
-			{"BP_15Rnd_9x19OVP","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
+			{"BP_15Rnd_9x19OVP","ammo"},
+			{"BP_5Rnd_3006_Mag","ammo"}
 		};
 		itemChance[] =	{
 			0.05,   //BP_WreckedBox
@@ -870,7 +872,7 @@ class CfgBuildingLoot
 			0.01,   //45GOV
 			0.01,   //UNERTL 32X
 			0.01,   //9MM OVP
-			0.01,   //30-06 MAG
+			0.01   //30-06 MAG
 		};		
 	};
 	
@@ -1065,16 +1067,16 @@ class CfgBuildingLoot
 			{"BP_Crossbow","weapon"},
 			{"BP_Crossbow_DigitCamo","weaponA"},
 			{"BP_MP5","weapon"},
-			{"BP_5Rnd_300AAC_Mag","magazine"},
-			{"BP_8Rnd_Slug","magazine"},
-			{"BP_16Rnd_9x21_Mag","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_7Rnd_45acp","magazine"},
+			{"BP_5Rnd_300AAC_Mag","ammo"},
+			{"BP_8Rnd_Slug","ammo"},
+			{"BP_16Rnd_9x21_Mag","ammo"},
+			{"BP_5Rnd_3006_Mag","ammo"},
+			{"BP_10Rnd_303_Mag","ammo"},
+			{"BP_7Rnd_45acp","ammo"},
 			{"SmokeShell","magazine"},
-			{"BP_30Rnd_9x21_Mag","magazine"},
-			{"BP_556old_Stanag","magazine"},
-			{"BP_8Rnd_MagBuckshot","vest"}
+			{"BP_30Rnd_9x21_Mag","ammo"},
+			{"BP_556old_Stanag","ammo"},
+			{"BP_8Rnd_MagBuckshot","ammo"}
 		};
 		itemChance[] =	{
 			0.07,	//BP_AmmoBoxNew
@@ -1331,13 +1333,13 @@ class CfgBuildingLoot
 			{"BP_M16OLD","weaponA"},
 			{"BP_R700","weaponA"},
 			{"BP_M24Des","weaponA"},
-			{"BP_5Rnd_762mk316_Mag","magazine"},
-			{"BP_10Rnd_762x51_Mag","magazine"},
+			{"BP_5Rnd_762mk316_Mag","ammo"},
+			{"BP_10Rnd_762x51_Mag","ammo"},
 			{"BP_762x54_SVD","magazine"},
-			{"BP_5Rnd_Mauser_Mag","magazine"},
-			{"BP_545x39_HP_30rnd","magazine"},
-			{"BP_545x39_7N22","magazine"},
-			{"BP_10Rnd_303_JSP_Mag","magazine"},
+			{"BP_5Rnd_Mauser_Mag","ammo"},
+			{"BP_545x39_HP_30rnd","ammo"},
+			{"BP_545x39_7N22","ammo"},
+			{"BP_10Rnd_303_JSP_Mag","ammo"},
 			{"BP_762x54_7N1_10rnd","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"}
 		};
