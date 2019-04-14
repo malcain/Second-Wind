@@ -30,24 +30,25 @@ if (_onLadder) exitWith {
 // Drop Primary Weapon
 if (r_player_unconsciousWeapon) then 
 {
-	private ["_currentWeapon","_primaryWeapon","_primaryWeaponMag","_primaryWeaponAmmo","_primaryWeaponItems","_handgunWeapon","_handgunWeaponMag","_handgunWeaponAmmo","_handgunWeaponItems","_launcherWeapon","_launcherWeaponMag","_launcherWeaponAmmo","_launcherWeaponItems"];
-	_currentWeapon = currentWeapon player;
+	//private ["_currentWeapon","_primaryWeapon","_primaryWeaponMag","_primaryWeaponAmmo","_primaryWeaponItems","_handgunWeapon","_handgunWeaponMag","_handgunWeaponAmmo","_handgunWeaponItems","_launcherWeapon","_launcherWeaponMag","_launcherWeaponAmmo","_launcherWeaponItems"];
+	//_currentWeapon = currentWeapon player;
+	private ["_primaryWeapon","_primaryWeaponMag","_primaryWeaponAmmo","_primaryWeaponItems","_handgunWeapon","_handgunWeaponMag","_handgunWeaponAmmo","_handgunWeaponItems","_launcherWeapon","_launcherWeaponItems"];
 	_primaryWeapon = primaryWeapon player;
-	_primaryWeaponMag = primaryWeaponMagazine player;
+	_primaryWeaponMag = primaryWeaponMagazine player select 0;
 	_primaryWeaponAmmo = player ammo _primaryWeapon;
 	_primaryWeaponItems = primaryWeaponItems player;
 	_handgunWeapon = handgunWeapon player;
-	_handgunWeaponMag = handgunMagazine player;
+	_handgunWeaponMag = handgunMagazine player select 0;
 	_handgunWeaponAmmo = player ammo _handgunWeapon;
 	_handgunWeaponItems = handgunItems player;
 	_launcherWeapon = secondaryWeapon player;
-	_launcherWeaponMag = secondaryWeaponMagazine player;
-	_launcherWeaponAmmo = player ammo _launcherWeapon;
+	//_launcherWeaponMag = secondaryWeaponMagazine player select 0;
+	//_launcherWeaponAmmo = player ammo _launcherWeapon;
 	_launcherWeaponItems = secondaryWeaponItems player;
 	
 	//Add Weapon Holder with Items
 	private "_container";
-	_container = createVehicle ["groundWeaponHolder", (getPosATL player), [], 4, "CAN_COLLIDE"];
+	_container = createVehicle ["GroundWeaponHolder", (getPosATL player), [], 4, "CAN_COLLIDE"];
 	_container setVariable ["permaLoot",true,true];
 	_container enableDynamicSimulation true;
 	
@@ -83,7 +84,7 @@ if (r_player_unconsciousWeapon) then
 		
 		//Add Weapon Cargo
 		_container addWeaponCargoGlobal [_launcherWeapon,1];
-		_container addMagazineAmmoCargo [_launcherWeaponMag,1,_launcherWeaponAmmo];
+		//_container addMagazineAmmoCargo [_launcherWeaponMag,1,_launcherWeaponAmmo];
 		{ if (_x != "") then { _container addItemCargoGlobal [_x,1]; }; } count _launcherWeaponItems;
 	};
 
