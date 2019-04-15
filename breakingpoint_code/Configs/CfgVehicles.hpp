@@ -4611,21 +4611,13 @@ class CfgVehicles
 	
 	//External Class References
 	class B_Heli_Light_01_F
-	{	
-		class UserActions;
-	};
+	{};
 	class B_Heli_Transport_01_F
-	{	
-		class UserActions;
-	};
+	{};
 	class O_Heli_Light_02_unarmed_F
-	{	
-		class UserActions;
-	};
+	{};
 	class I_Heli_Transport_02_F
-	{	
-		class UserActions;
-	};
+	{};
 	class B_MRAP_01_F;
 	class B_MRAP_01_gmg_F;
 	class B_MRAP_01_hmg_F;
@@ -5541,7 +5533,7 @@ class CfgVehicles
 			};
 		};
 		
-		class UserActions : UserActions
+		/*class UserActions : UserActions
 		{
 			class DoorL1_Open
 			{
@@ -5572,7 +5564,7 @@ class CfgVehicles
 				condition = __EVAL("((this doorPhase 'door_R') > 0) AND Alive(this) AND"+COND_SIDE);
 				statement = "this animateDoor ['door_R', 0]";
 			};
-		};
+		};*/
 	
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
@@ -5807,7 +5799,7 @@ class CfgVehicles
 			};
 		};
 		
-		class UserActions : UserActions
+		/*class UserActions : UserActions
 		{
 			class DoorL1_Open
 			{
@@ -5907,7 +5899,7 @@ class CfgVehicles
 				condition = __EVAL("(this doorPhase 'CargoRamp_Open' < 0.5) AND (Alive this) AND !(Player In this) AND"+COND_SIDE);
 				statement = "this animateDoor ['CargoRamp_Open', 1]";
 			};
-		};
+		};*/
 		
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};

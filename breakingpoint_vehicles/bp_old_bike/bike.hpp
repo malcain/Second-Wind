@@ -59,7 +59,7 @@ class NoDust {};
 
 class CfgVehicles
 {
-	class EventHandlers
+	/*class EventHandlers
 		{
 			init = "";
 			local = "";
@@ -86,7 +86,7 @@ class CfgVehicles
 		handledamage = "_this call BP_fnc_damageHandlerVehicle;";
 		getin = "_this call BP_fnc_vehicleInteract;";
 		getout = "_this call BP_fnc_vehicleInteract;";
-	};
+	};*/
 	
 	class Bicycle;
 	class Bicycle_F: Bicycle
@@ -287,6 +287,6 @@ class CfgVehicles
 			};
 		};
 		
-		class EventHandlers : BP_VehicleEventHandlers {};
+		//class EventHandlers : BP_VehicleEventHandlers {};
 	};
 };
