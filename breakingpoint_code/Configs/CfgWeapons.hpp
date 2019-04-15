@@ -13,6 +13,7 @@ class CfgWeapons
 	class Default;	// External class reference
 
 	//Breaking Point - Uniform
+	class ItemCore;
 	class U_B_CombatUniform_mcam_worn;
 	class U_B_GhillieSuit;
 	class U_Competitor;
@@ -21,30 +22,81 @@ class CfgWeapons
 	class U_O_OfficerUniform_ocamo;
 	class U_Rangemaster;
 	class U_B_Wetsuit;
-	class Vest_NoCamo_Base;
-	class Vest_Camo_Base;
-	class VestItem;
-	class Bag_Base;
-	class InventoryItem_Base_F;
-	class U_B_HeliPilotCoveralls;
-	class HeadgearItem;
-	class U_B_CombatUniform_mcam_vest;
-	class Vest_Base;
-	class B_Soldier_base_F;
-	class U_B_CombatUniform_mcam;
-	class UniformItem;
-	class Uniform_Base;
-	class H_MilCap_ocamo;
-	class ItemCore;
+	class Vest_NoCamo_Base: ItemCore 
+	{
 	class ItemInfo;
-	class H_Cap_red;
-	class U_B_FullGhillie_lsh;
-	class U_BG_leader;
+	};
+	class Vest_Camo_Base: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class VestItem: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class Bag_Base: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class InventoryItem_Base_F: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class U_B_HeliPilotCoveralls: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class HeadgearItem: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class U_B_CombatUniform_mcam_vest: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class Vest_Base: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class B_Soldier_base_F: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class U_B_CombatUniform_mcam: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class UniformItem: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class Uniform_Base: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class H_MilCap_ocamo: ItemCore 
+	{
+	class ItemInfo;
+	};
+	//class ItemInfo;
+	class H_Cap_red: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class U_B_FullGhillie_lsh: ItemCore 
+	{
+	class ItemInfo;
+	};
+	class U_BG_leader: ItemCore 
+	{
+	class ItemInfo;
+	};
 	class U_BG_Guerilla1_1;
 	class U_BG_Guerilla3_2;
 	class U_BG_Guerilla3_1;
-	class H_HelmetB: ItemCore {
-		/*extern*/ class ItemInfo;
+	class H_HelmetB: ItemCore 
+	{
+	class ItemInfo;
 	};
 
 	class U_BasicBody;
