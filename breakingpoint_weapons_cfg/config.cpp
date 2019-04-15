@@ -32911,7 +32911,7 @@ class CfgWeapons
 		picture = "\breakingpoint_weapons\icons\gear_crowbar_rifle_x_ca.paa";
 		displayName = "Crowbar";
 		descriptionUse = "Crowbar";
-		magazines[] = {"Shovel_Swing"};
+		magazines[] = {"Crowbar_Swing"};
 		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
 		descriptionShort = "A tool consisting of a metal bar with a single curved end and flattened points, often with a small fissure on one or both ends for removing nails.";
 		modes[] = {"Single"};
@@ -32935,7 +32935,7 @@ class CfgWeapons
 			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 0.8;
+			reloadTime = 1.1;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -32994,7 +32994,7 @@ class CfgWeapons
 		picture = "\breakingpoint_weapons\icons\gear_club_rifle_x_ca.paa";
 		displayName = "Barbed Club";
 		descriptionUse = "Barbed Club";
-		magazines[] = {"Shovel_Swing"};
+		magazines[] = {"Club_Swing"};
 		handAnim[] = {"OFP2_ManSkeleton","\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
 		descriptionShort = "";
 		modes[] = {"Single"};
@@ -33018,7 +33018,7 @@ class CfgWeapons
 			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 0.8;
+			reloadTime = 1.1;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -51288,11 +51288,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_58_wdm_F_ca.paa";
 	};
 
-	class Zasleh2: ItemCore
+	/*class Zasleh2: ItemCore
 	{
 		scope = 2;
 		model = "A3\weapons_f\data\zaslehsdl_proxy.p3d";
-	};
+	};*/
 
 	class BP_AK_ACO: ItemCore
 	{
@@ -53999,6 +53999,22 @@ class CfgMagazines {
 		displayNameMagazine = "Shovel Swing";
 		shortNameMagazine = "Shovel Swing";
 		ammo = "BP_Shovel_Swing_Ammo";
+	};
+	
+	class Club_Swing: Hatchet_Swing
+	{
+		displayName = "Club Swing";
+		displayNameMagazine = "Club Swing";
+		shortNameMagazine = "Club Swing";
+		ammo = "BP_Club_Swing_Ammo";
+	};
+	
+	class Crowbar_Swing : Hatchet_Swing
+	{
+		displayName = "Crowbar Swing";
+		displayNameMagazine = "Crowbar Swing";
+		shortNameMagazine = "Crowbar Swing";
+		ammo = "BP_Crowbar_Swing_Ammo";
 	};
 
 	class BP_Bayonet_Stab : Hatchet_Swing
@@ -57408,7 +57424,7 @@ class CfgAmmo {
 
 	class BP_Hammer_Swing_Ammo : Melee
 	{
-		hit = 10;
+		hit = 13;
 		typicalSpeed = 85;
 		//explosive = 1;
 		//explosionTime = 0.1;
@@ -57464,6 +57480,65 @@ class CfgAmmo {
 			scale = 0;
 		};
 	};
+	
+	class BP_Crowbar_Swing_Ammo : Melee
+	{
+		hit = 11;
+		typicalSpeed = 85;
+		//explosive = 1;
+		//explosionTime = 0.1;
+		timeToLive = 0.020;
+		airFriction = -0.000001;
+		soundFly[] = {"", 0, 1};
+		soundEngine[] = {"", 0, 1};
+		visibleFire = 0.1;	// how much is visible when this weapon is fired
+		audibleFire = 0.02;
+		caliber = 1.42000;
+		legFracture = false;
+		explosionEffects = "";
+		craterEffects = "";
+		model = "\A3\Weapons_F\empty.p3d";
+		class Melee
+		{
+			damageHit = 0.75; // Hit Damage (Zombies)
+			damageBlood = 3600; // Blood Damage (Players)
+			anim = "GestureSwing2";
+			radius = 2.4; //Radius In Meters Of Targets
+			angle = 50; //Angle Of Hit Detection
+			sounds[] =
+			{
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
+			};
+		};
+		class Medical
+		{
+			//Instant Bleeding (Bullet will always make you bleed on impact)
+			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
+
+			//Medical State Level (Bullet Hit will always put you in this state)
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
+			MedicalState = 1;
+			MedicalChance = 95;
+
+			// Bleeding Level (Rate of blood loss)
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 1;
+			BleedingChance = 50;
+
+			// Infection (Bullet Wound Chance Of Infection)
+			Infection = 0; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 0; //Between 0 -> 100
+
+			// Knockout (Bullet Wound Chance Of Knockout)
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 75; //Between 0 -> 100
+
+			//Blood Damage Scale
+			scale = 0;
+		};
+	};
 
 	class BP_Shovel_Swing_Ammo: Melee
 	{
@@ -57484,7 +57559,7 @@ class CfgAmmo {
 		class Melee
 		{
 			damageHit = 0.8;
-			damageBlood = 2850;
+			damageBlood = 3750;
 			anim = "GestureSwing2";
 			radius = 2.5;
 			angle = 70;
@@ -57517,6 +57592,61 @@ class CfgAmmo {
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
 			KnockoutChance = 45; //Between 0 -> 100
+
+			//Blood Damage Scale
+			scale = 0;
+		};
+	};
+	
+	class BP_Club_Swing_Ammo: Melee
+	{
+		hit = 11;
+		typicalSpeed = 85;
+		timeToLive = 0.018;
+		airFriction = -0.000001;
+		soundFly[] = {"", 0, 1};
+		soundEngine[] = {"", 0, 1};
+		visibleFire = 0.1;	// how much is visible when this weapon is fired
+		audibleFire = 0.01;
+		caliber = 1.00000;
+		deflecting = 0;
+		model = "\A3\Weapons_F\empty.p3d";
+		class Melee
+		{
+			damageHit = 0.35; // Hit Damage (Zombies)
+			damageBlood = 4200; // Blood Damage (Players)
+			anim = "GestureSwing";
+			radius = 2.3; //Radius In Meters Of Targets
+			angle = 50; //Angle Of Hit Detection
+			sounds[] =
+			{
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
+				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
+			};
+		};
+		class Medical
+		{
+			//Instant Bleeding (Bullet will always make you bleed on impact)
+			InstantBleeding = 1; // 0 - Disabled / 1 - Enabled
+
+			//Medical State Level (Bullet Hit will always put you in this state)
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
+			MedicalState = 3;
+			MedicalChance = 100;
+
+			// Bleeding Level (Rate of blood loss)
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 3;
+			BleedingChance = 100;
+
+			// Infection (Bullet Wound Chance Of Infection)
+			Infection = 0; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 0; //Between 0 -> 100
+
+			// Knockout (Bullet Wound Chance Of Knockout)
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 35; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

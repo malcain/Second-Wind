@@ -47,7 +47,7 @@
 					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeHatchet"};
+					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {};
@@ -75,7 +75,7 @@
 					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeHatchet"};
+					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {"BP_AssaultPack_khk"};
@@ -109,7 +109,7 @@
 					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeHatchet"};
+					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_2"};
 					backpack[] = {"BP_AssaultPack_sgg"};
@@ -144,7 +144,7 @@
 					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeHatchet"};
+					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_3"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
@@ -178,7 +178,7 @@
 					toolbelt[] = {"BP_Shemag_bandit"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeHatchet"};
+					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_4"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
