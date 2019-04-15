@@ -32181,13 +32181,13 @@ class CfgWeapons
 	class acc_flashlight;	// External class reference
 	class PistolCore;	// External class reference
 	class Pistol;       // External class reference
-    class Rifle;        // External class reference
+    class Rifle;			// External class reference
     class RifleCore;    // External class reference
 	class Pistol_Base_F;
 	class Rifle_Base_F;
 	class Rifle_Long_Base_F;
-	class WeaponSlotsInfo;
-	class ItemInfo;
+	//class WeaponSlotsInfo;
+	//class ItemInfo;
 	class CowsSlot;
 	class PointerSlot;
 	class MuzzleSlot;
@@ -32307,6 +32307,7 @@ class CfgWeapons
 			weaponInfoType = "RscWeaponZeroing";
 			flash = "";
 			flashSize = 0;
+			class WeaponSlotsInfo;
 			class GunParticles: GunParticles
 			{
 				class FirstEffect
@@ -32335,6 +32336,9 @@ class CfgWeapons
 		cursorAim = "throw";
 		cursorSize = 1;
 		weaponInfoType = "RscWeaponEmpty";
+		class WeaponSlotsInfo;
+		class Single;
+		
 	};
 
 	class MeleeHatchet : MeleeWeapon
@@ -32377,7 +32381,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_1outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901, 801, 701};
@@ -32419,71 +32423,6 @@ class CfgWeapons
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"breakingpoint_weapons\textures\Hatchet\hatchet_urb_co.paa"};
 	};
-	
-	/*class MeleeAxe : MeleeWeapon
-	{
-		autoreload = 1;
-		scope = 2;
-		type = 4;
-		primary = 0;
-		weaponReloadtime = 0.25;
-		model = "\Horror_props\Axe.p3d";
-		picture = "\breakingpoint_weapons\icons\gear_hatchet_x_CA.paa";
-		displayName = "Bloody Axe";
-		descriptionUse = "Bloody Axe";
-		reloadAction = "ReloadRPG";
-		magazines[] = {"Hatchet_Swing"};
-		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
-		descriptionShort = "$STR_EQUIP_DESC_41";
-		modes[] = {"Single"};
-		class Single : Mode_SemiAuto
-		{
-			sounds[] = {StandardSound};
-			class BaseSoundModeType
- 			{
- 				weaponSoundEffect  = "DefaultRifle";
- 				closure1[] = {"", 0.00006, 1, 10};
- 				closure2[] = {"", 0.00006, 1, 10};
- 				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
- 			};
- 			class StandardSound: BaseSoundModeType
- 			{
-				begin1[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10};
-				begin2[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10};
-				begin3[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10};
-				begin4[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.80, 10};
-				soundBegin[] = {"begin1", 0.25, "begin2", 0.25, "begin3", 0.25, "begin4", 0.25};
- 			};
-			dispersion = 0.0092;
-			soundContinuous = 0;
-			reloadTime = 0.6;
-			recoil = "recoil_single_primary_prone_1outof10";
-			recoilProne = "";
-		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 35;
-			allowedSlots[] = {901, 801, 701};
-			class MuzzleSlot : SlotInfo
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-				compatibleItems[] = {};
-				iconScale = 0.1;
-			};
-			class CowsSlot : SlotInfo
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[] = {};
-				iconScale = 0.1;
-			};
-			class PointerSlot : PointerSlot
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[] = {};
-				iconScale = 0.1;
-			};
-		};
-	};*/
 
 	class MeleeKatana : MeleeWeapon
 	{
@@ -32526,7 +32465,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_1outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901, 801, 701};
@@ -32609,7 +32548,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901, 801, 701};
@@ -32693,7 +32632,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901, 801, 701};
@@ -32774,7 +32713,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901, 801, 701};
@@ -32857,7 +32796,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901,801,701};
@@ -32940,7 +32879,7 @@ class CfgWeapons
 			recoilProne = "";
 		};
 
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901,801,701};
@@ -33022,7 +32961,7 @@ class CfgWeapons
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 35;
 			allowedSlots[] = {901,801,701};
@@ -33078,7 +33017,7 @@ class CfgWeapons
 		magazines[] = {"Crowbar_Swing"};
 		descriptionShort = "An agricultural tool turned into a weapon, the Machete may be less versatile than the common hatchet, but it packs a punch.";
 
-		class WeaponSlotsInfo: WeaponSlotsInfo {
+		 class WeaponSlotsInfo {
 			mass = 35;
 			allowedSlots[] = {901};
 
@@ -33110,7 +33049,7 @@ class CfgWeapons
 		magazines[] = {"Crowbar_Swing"};
 		descriptionShort = "Heavy duty steel repair tool. Can be used for replacing vehicle wheels and as an improvised weapon.";
 
-		class WeaponSlotsInfo: WeaponSlotsInfo {
+		 class WeaponSlotsInfo {
 			mass = 35;
 			allowedSlots[] = {901};
 
@@ -33142,7 +33081,7 @@ class CfgWeapons
 		magazines[] = {"Crowbar_Swing"};
 		descriptionShort = "Classic American wooden baseball bat, effective weapon in close quarters.";
 
-		class WeaponSlotsInfo: WeaponSlotsInfo {
+		 class WeaponSlotsInfo {
 			mass = 45;
 			allowedSlots[] = {901};
 
@@ -33174,7 +33113,7 @@ class CfgWeapons
 		magazines[] = {"Machete_Swing"};
 		descriptionShort = "Classic American wooden baseball bat wrapped with barbed wire. Extremely effective melee weapon.";
 
-		class WeaponSlotsInfo: WeaponSlotsInfo {
+		 class WeaponSlotsInfo {
 			mass = 55;
 			allowedSlots[] = {901};
 
@@ -33229,7 +33168,7 @@ class CfgWeapons
 				effectName = "";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 70;
 			allowedSlots[] = {901};
@@ -33846,7 +33785,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"AK12_Shot_SoundSet","AK12_Tail_SoundSet","AK12_InteriorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 140;
 			class CowsSlot : SlotInfo {
@@ -33898,7 +33837,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		muzzles[] = {"this","EGLM"};
 		scope = 0;
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa";
-		class WeaponSlotsInfo : WeaponSlotsInfo { //["WeaponSlotsInfo"]
+		class WeaponSlotsInfo{ //["WeaponSlotsInfo"]
 			mass = 160;
 			class UnderBarrelSlot : SlotInfo { //["UnderBarrelSlot","SlotInfo"]
 				compatibleItems[] = {};
@@ -33968,7 +33907,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		class Library {
 			libTextDesc = "The light infantry machine gun 85 is an iteration of a special purpose weapon. Combining a high fire-rate and relatively easy maintenance with high reliability, it was adopted by several armies around the world. It features standard accessory rails and 200-round box 5.56x45 mm magazines. Its weight is 7.1 kilograms which is less than its predecessors.";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 260;
 			class CowsSlot : SlotInfo
@@ -34138,7 +34077,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo { //["WeaponSlotsInfo"]
+		class WeaponSlotsInfo{ //["WeaponSlotsInfo"]
 			mass = 20;
 			class CowsSlot {};
 			class MuzzleSlot : SlotInfo { //["SlotInfo"]
@@ -34213,7 +34152,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"SPAR01_Shot_SoundSet","SPAR01_Tail_SoundSet","SPAR01_InteriorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo {
 			mass = 120;
 			class CowsSlot : SlotInfo
 			{
@@ -34295,7 +34234,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			useExternalOptic = 0;
 			useModelOptics = 0;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo { //["WeaponSlotsInfo"]
+		class WeaponSlotsInfo{ //["WeaponSlotsInfo"]
 			mass = 120;
 			class UnderBarrelSlot : SlotInfo { //["UnderBarrelSlot","SlotInfo"]
 				compatibleItems[] = {};
@@ -34390,7 +34329,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"SPAR02_Shot_SoundSet","SPAR02_Tail_SoundSet","SPAR02_InteriorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo{
 			mass = 140;
 			class CowsSlot : SlotInfo
 			{
@@ -34514,7 +34453,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"SPAR_17_Shot_SoundSet","SPAR_17_Tail_SoundSet","SPAR_17_interiorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo {
 			mass = 200;
 			class CowsSlot : SlotInfo
 			{
@@ -34636,7 +34575,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"CAR_95_Shot_SoundSet","CAR_95_Tail_SoundSet","CAR_95_interiorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo {
 			mass = 80;
 			class CowsSlot : SlotInfo
 			{
@@ -34709,7 +34648,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			useExternalOptic = 0;
 			useModelOptics = 0;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo { //["WeaponSlotsInfo"]
+		class WeaponSlotsInfo { //["WeaponSlotsInfo"]
 			mass = 100;
 		};
 	};
@@ -34800,7 +34739,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"CAR_95_Shot_SoundSet","CAR_95_Tail_SoundSet","CAR_95_interiorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo{
 			mass = 100;
 			class CowsSlot : SlotInfo
 			{
@@ -34976,7 +34915,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"Type115_Shot_SoundSet","Type115_Tail_SoundSet","Type115_interiorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 120;
 			class CowsSlot : SlotInfo
@@ -35113,7 +35052,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"DMR07_Shot_SoundSet","DMR07_Tail_SoundSet","DMR07_InteriorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo { //["WeaponSlotsInfo"]
+		class WeaponSlotsInfo{ //["WeaponSlotsInfo"]
 			mass = 120;
 			class CowsSlot : SlotInfo
 			{
@@ -35222,7 +35161,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"Rogue9_Shot_SoundSet","Rogue9_Tail_SoundSet","Rogue9_InteriorTail_SoundSet"};
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo {
 			mass = 35;
 			allowedSlots[] = {901};
 			class MuzzleSlot : SlotInfo
@@ -35341,7 +35280,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_single_ebr";
 			//recoilProne = "recoil_single_prone_ebr";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75; //Masschange Made lighter
 			allowedSlots[] = {901};
@@ -35396,7 +35335,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.210000; //Inertiachange, increaced.
 		descriptionUse = "Old Remington 870";
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M24.rtm"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -35523,7 +35462,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_single_gm6";
 			//recoilProne = "recoil_single_gm6";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 65;
 			allowedSlots[] = {901};
@@ -35626,7 +35565,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.100000;
 			dispersion = 0.007500;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30; //Masschanged, reduced.
 			allowedSlots[] = {901};
@@ -35705,7 +35644,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.100000;
 			dispersion = 0.007000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 20;
 			allowedSlots[] = {901};
@@ -35793,7 +35732,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_prone_pistol_light";
 			dispersion = 0.002450;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 25; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -35913,7 +35852,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_smg_01";
 			//recoilProne = "recoil_auto_prone_smg_01";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 27; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -36001,7 +35940,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			dispersion = 0.003450;
 		};
 
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 27; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -36118,7 +36057,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_smg_01";
 			//recoilProne = "recoil_auto_prone_smg_01";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -36200,7 +36139,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_prone_pistol_heavy";
 			dispersion = 0.003450;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -36276,7 +36215,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_prone_pistol_heavy";
 			dispersion = 0.003250;//dispersionChange
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -36340,7 +36279,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_gm6";
 			dispersion = 0.001450;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 35; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -36469,7 +36408,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 30; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -36553,7 +36492,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.09;//reloadtimeChange
 			dispersion = 0.002300;//dispersionChange
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -36660,7 +36599,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_pdw";
 			//recoilProne = "recoil_auto_prone_pdw";
 		};
-        class WeaponSlotsInfo : WeaponSlotsInfo
+        class WeaponSlotsInfo
 		{
 		    mass = 35; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -36763,7 +36702,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_pdw";
 			//recoilProne = "recoil_auto_prone_pdw";
 		};
-        class WeaponSlotsInfo : WeaponSlotsInfo
+        class WeaponSlotsInfo
 		{
 		    mass = 35; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -36839,7 +36778,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.1;
 			dispersion = 0.003450;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 30;
 			allowedSlots[] = {901};
@@ -36926,7 +36865,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.045000;
 			dispersion = 0.002500;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 			mass = 27; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -37209,7 +37148,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.0;
 			aiRateOfFireDistance = 1600;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75; //Masscahnge, Reduced.
 			allowedSlots[] = {901};
@@ -37581,7 +37520,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.0;
 			aiRateOfFireDistance = 1600;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -37799,7 +37738,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_mx";
 			dispersion = 0.000620;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80; //Masschange, reduced
 			allowedSlots[] = {901};
@@ -37931,7 +37870,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_mx";
 			//recoilProne = "recoil_auto_prone_mx";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -38077,7 +38016,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75"};
 			discreteDistanceInitIndex = 1;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -38202,7 +38141,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_mx";
 			//recoilProne = "recoil_auto_prone_mx";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -38397,7 +38336,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_mk20";
 			//recoilProne = "recoil_auto_prone_mk20";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75;
 			allowedSlots[] = {901};
@@ -38537,7 +38476,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75", "OP_eye_100"};
 			discreteDistanceInitIndex = 1;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -38692,7 +38631,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_mk20";
 			//recoilProne = "recoil_auto_prone_mk20";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 70;
 			allowedSlots[] = {901};
@@ -38820,7 +38759,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_auto_mk20";
 			//recoilProne = "recoil_auto_prone_mk20";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75;
 			allowedSlots[] = {901};
@@ -39081,7 +39020,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			dispersion = 0.001370;
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 		    mass = 85; //Masschange, increased.
 			allowedSlots[] = {901};
@@ -39203,7 +39142,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			dispersion = 0.000823;
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 		    mass = 85; //Masschange, increased.
 			allowedSlots[] = {901};
@@ -39261,7 +39200,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		dispersion = 0.003640;
 		initSpeed = -0.89;
 		muzzles[] = {"this"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 		    mass = 85; //Masschange, increased.
 			allowedSlots[] = {901};
@@ -39418,7 +39357,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_m320";
 			dispersion = 0.001152;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 85;
 			allowedSlots[] = {901};
@@ -39546,7 +39485,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 1000;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
             mass = 80; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -39783,7 +39722,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		model = "breakingpoint_weapons\models\SA58\BP_SA58_2.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_akmris_rifle_x_ca.paa";
 		modes[] = {"Single", "FullAuto"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -39837,7 +39776,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		scope = 2;
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 		model = "breakingpoint_weapons\models\SA58\BP_SA58_2.p3d";
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -39950,7 +39889,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_auto_prone_trg";
 			dispersion = 0.001525;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 70; //Masscahnge, reduced.
 			allowedSlots[] = {901};
@@ -40061,7 +40000,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75;
 			allowedSlots[] = {901};
@@ -40224,7 +40163,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 700;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -40446,7 +40385,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90; //Masschange, increased.
 			allowedSlots[] = {901};
@@ -40544,7 +40483,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 105; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -40604,7 +40543,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		magazines[] = {"BP_556x45_Stanag", "BP_556x45_Stanag_Tracer", "BP_556x45_StanagSD", "BP_556x45_StanagM855A1", "BP_556x45_StanagMK262", "BP_556old_Stanag", "BP_5Rnd_223_Mag", "BP_5Rnd_223BTHP_mag", "BP_556x45_Rubber"};
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 		initSpeed = -0.94;
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			class PointerSlot: SlotInfo
 			{
@@ -40688,7 +40627,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			recoilProne = "recoil_single_prone_trg";
 			dispersion = 0.001307;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 75;
 			allowedSlots[] = {901};
@@ -40801,7 +40740,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_burst_prone_sdar";
 			dispersion = 0.001100;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -41006,7 +40945,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 700;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 90;
 			allowedSlots[] = {901};
@@ -41298,7 +41237,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			recoilProne = "recoil_auto_prone_sdar";
 			dispersion = 0.001400;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass = 100;
 			allowedSlots[] = {901};
@@ -41429,7 +41368,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_auto_prone_trg";
 			dispersion = 0.002200;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 70; //Masschange, reduced.
 			allowedSlots[] = {901};
@@ -41524,7 +41463,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_sdar";
 			dispersion = 0.000805;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
             mass = 95;
 			allowedSlots[] = {901};
@@ -41637,7 +41576,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_mk20";
 			dispersion = 0.000689;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
             mass = 95;
 			allowedSlots[] = {901};
@@ -41805,7 +41744,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_auto_prone_pdw";
 			dispersion = 0.002730;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 60;
 			allowedSlots[] = {901};
@@ -41917,7 +41856,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 105;
 			allowedSlots[] = {901};
@@ -42186,7 +42125,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90;
 			allowedSlots[] = {901};
@@ -42343,7 +42282,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 95;
 			allowedSlots[] = {901};
@@ -42586,7 +42525,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -42689,7 +42628,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_sdar";
 			dispersion = 0.001113;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 85;
 			allowedSlots[] = {901};
@@ -42784,7 +42723,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_sdar";
 			dispersion = 0.000767;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90;
 			allowedSlots[] = {901};
@@ -42878,7 +42817,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_sdar";
 			dispersion = 0.001600;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -42973,7 +42912,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_auto_prone_sdar";
 			dispersion = 0.000525;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90;
 			allowedSlots[] = {901};
@@ -43041,7 +42980,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.440000;
 		handAnim[] = {"OFP2_ManSkeleton", "breakingpoint_weapons\anim\LeeEnfield.rtm"};
 		muzzles[] = {"this", "Bayonet"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 95;
 			allowedSlots[] = {901};
@@ -43270,7 +43209,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.0;
 			aiRateOfFireDistance = 1600;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 105;
 			class MuzzleSlot : SlotInfo
@@ -43454,7 +43393,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 1200;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 140;
 			class MuzzleSlot : SlotInfo
@@ -43696,7 +43635,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 1000;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 110;
 			class MuzzleSlot : SlotInfo
@@ -43904,7 +43843,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 1000;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 145;
 			class MuzzleSlot : SlotInfo
@@ -44116,7 +44055,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxRange = 1000;
 			maxRangeProbab = 1.000000;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 175;
 			class MuzzleSlot : SlotInfo
@@ -44240,7 +44179,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 2.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 205;
 			allowedSlots[] = {};
@@ -44404,7 +44343,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 2.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 205;
 			allowedSlots[] = {901};
@@ -44559,7 +44498,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 2.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 225;
 			allowedSlots[] = {};
@@ -44744,7 +44683,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 2.5;
 			aiRateOfFireDistance = 1700;
 		};
-        class WeaponSlotsInfo : WeaponSlotsInfo
+        class WeaponSlotsInfo
 		{
 		    mass = 185;
 			allowedSlots[] = {};
@@ -44942,7 +44881,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 175;
 			allowedSlots[] = {901};
@@ -45079,7 +45018,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -45245,7 +45184,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 135;
 			allowedSlots[] = {901};
@@ -45386,7 +45325,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_ebr";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -45508,7 +45447,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 		};
 
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 115;
 			allowedSlots[] = {901};
@@ -45700,7 +45639,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 165;
 			allowedSlots[] = {901};
@@ -45917,7 +45856,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -46038,7 +45977,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			recoilProne = "recoil_single_primary_prone_4outof10";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 60;
 			allowedSlots[] = {901};
@@ -46163,7 +46102,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		};
 
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 65;
 			allowedSlots[] = {901};
@@ -46275,7 +46214,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_primary_prone_4outof10";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 65;
 			allowedSlots[] = {901};
@@ -46372,7 +46311,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 90;
 			allowedSlots[] = {901};
@@ -46548,7 +46487,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 100;
 			allowedSlots[] = {901};
@@ -46663,7 +46602,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			recoilProne = "recoil_single_prone_gm6";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 70;
 			allowedSlots[] = {901};
@@ -46770,7 +46709,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_mk20";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 60;
 			allowedSlots[] = {901};
@@ -46985,7 +46924,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFireDistance = 1700;
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 125;
 			allowedSlots[] = {901};
@@ -47180,7 +47119,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_gm6";
 		};
 		muzzles[] = {"this", "Butt"};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 120;
 			allowedSlots[] = {901};
@@ -47339,7 +47278,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 130;
 			allowedSlots[] = {901};
@@ -47693,7 +47632,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 140;
 			allowedSlots[] = {901};
@@ -47847,7 +47786,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -48196,7 +48135,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 160;
 			allowedSlots[] = {901};
@@ -48525,7 +48464,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -48823,7 +48762,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -49121,7 +49060,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -49207,7 +49146,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -49465,7 +49404,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 165;
 			allowedSlots[] = {901};
@@ -49640,7 +49579,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName="Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			mass=165;
 			allowedSlots[]={901};
@@ -49981,7 +49920,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -50110,7 +50049,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				directionName = "Konec hlavne";
 			};
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 150;
 			allowedSlots[] = {901};
@@ -50347,7 +50286,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
             mass = 160;
 			allowedSlots[] = {901};
@@ -50613,7 +50552,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
             mass = 190;
 			allowedSlots[] = {901};
@@ -50769,7 +50708,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_ebr";
 			dispersion = 0.000777;
 		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
+		class WeaponSlotsInfo
 		{
 		    mass = 80;
 			allowedSlots[] = {901};
@@ -50985,7 +50924,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "$STR_A3_CfgWeapons_SMG_03C_TR_black0";
 		model = "\A3\Weapons_F_Mod\SMGs\SMG_03\SMG_03C_TR.p3d";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_c_tr_black_ca.paa";
-		class WeaponSlotsInfo: WeaponSlotsInfo
+		 class WeaponSlotsInfo
 		{
 			class CowsSlot: CowsSlot{};
 			class PointerSlot: PointerSlot{};
