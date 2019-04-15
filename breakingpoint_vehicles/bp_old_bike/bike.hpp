@@ -58,40 +58,20 @@ class CfgWeapons
 class NoDust {};
 
 class CfgVehicles
-{
-	/*class EventHandlers
-		{
-			init = "";
-			local = "";
-		};
-		
-	class BP_DefaultEventHandlers
-	{
-		scope = protected;
-		init = "";
-		killed = "";
-		handledamage = "";
-		getin = "";
-		getout = "";
-		fired = "";
-		take = "";
-		put = "";
-	};
-	
-	class BP_VehicleEventHandlers : BP_DefaultEventHandlers
-	{
-		scope = protected;
-		init = "_this call BP_fnc_vehicleInit;";
-		killed = "_this call BP_fnc_vehicleKilled;";
-		handledamage = "_this call BP_fnc_damageHandlerVehicle;";
-		getin = "_this call BP_fnc_vehicleInteract;";
-		getout = "_this call BP_fnc_vehicleInteract;";
-	};*/
-	
+{	
 	class Bicycle;
 	class Bicycle_F: Bicycle
 	{
-		class HitPoints{};	
+		class HitPoints{};
+		class EventHandlers
+        {
+			scope = protected;
+			init = "_this call BP_fnc_vehicleInit;";
+			killed = "_this call BP_fnc_vehicleKilled;";
+			handledamage = "_this call BP_fnc_damageHandlerVehicle;";
+			getin = "_this call BP_fnc_vehicleInteract;";
+			getout = "_this call BP_fnc_vehicleInteract;";
+        };
 	};
 	class BP_Old_Bicycle: Bicycle_F
 	{
@@ -286,7 +266,5 @@ class CfgVehicles
 				brightness = 0.1;
 			};
 		};
-		
-		//class EventHandlers : BP_VehicleEventHandlers {};
 	};
 };
