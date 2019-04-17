@@ -32338,7 +32338,13 @@ class CfgWeapons
 		weaponInfoType = "RscWeaponEmpty";
 		class WeaponSlotsInfo;
 		class Single;
-		
+		class ItemInfo: InventoryMuzzleItem_Base_F
+		{
+			class MagazineCoef;
+			class AmmoCoef;
+			muzzleEnd = "";
+			alternativeFire = "";
+		};
 	};
 
 	class MeleeHatchet : MeleeWeapon
