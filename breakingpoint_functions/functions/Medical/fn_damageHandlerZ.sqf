@@ -18,10 +18,10 @@ if (_projectile != "") then {
 		//_critical = _caliber > 1.2 or _simulation == "shotSpread";
 		//if (_critical) then { //Gore
 			_headdmg = 1;
-			_zed setFace "SAN_HeadgoreNoFace_base";
+			_zed setFace "Bloody_Neck";
 			//_zed setVariable ["noHead",true,true];
 			[netID _zed] remoteExecCall ["BPServer_fnc_headGore",2];
-			[_zed, "SAN_HeadgoreNoFace_base"] remoteExecCall ["setFace"];
+			[_zed, "Bloody_Neck"] remoteExecCall ["setFace"];
 
 			removeHeadgear _zed;
 			removeGoggles _zed;
