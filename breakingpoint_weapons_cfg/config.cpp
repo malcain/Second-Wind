@@ -51227,11 +51227,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_58_wdm_F_ca.paa";
 	};
 
-	/*class Zasleh2: ItemCore
+	class Zasleh2: ItemCore
 	{
 		scope = 2;
 		model = "A3\weapons_f\data\zaslehsdl_proxy.p3d";
-	};*/
+	};
 
 	class BP_AK_ACO: ItemCore
 	{
