@@ -32162,7 +32162,7 @@ class cfgsoundshaders
 class CfgWeapons
 {
 	class SlotInfo;
-    class LinkedItems;
+    //class LinkedItems;
     class Default;	// External class reference
 	class ItemCore;	// External class reference
 	class InventoryMuzzleItem_Base_F;	   // External class reference
@@ -32170,7 +32170,7 @@ class CfgWeapons
     class InventoryFlashLightItem_Base_F;  // External class reference
 	class InventoryUnderItem_Base_F;       // External class reference
 	class Snip;	            // External class reference
-	class GunParticles;     // External class reference
+	//class GunParticles;     // External class reference
 	class muzzle_snds_L;    // External class reference
 	class muzzle_snds_H_MG;	// External class reference
 	class muzzle_snds_H;    // External class reference
@@ -32308,7 +32308,7 @@ class CfgWeapons
 			flash = "";
 			flashSize = 0;
 			class WeaponSlotsInfo;
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -33156,7 +33156,7 @@ class CfgWeapons
 		maxRecoilSway = 0.0125;
 		swayDecaySpeed = 0.75;
 		canShootInWater = 1;
-		class GunParticles : GunParticles
+		class GunParticles
 		{
 			class SecondEffect
 			{
@@ -34840,7 +34840,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				soundSetShot[] = {"Type115_Shot_SoundSet","Type115_Tail_SoundSet","Type115_interiorTail_SoundSet"};
 			};
 		};
-		class GunParticles : GunParticles {
+		class GunParticles {
 			class SecondEffect {
 				directionName = "Nabojniceend";
 				effectName = "CaselessAmmoCloud";
@@ -34870,7 +34870,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadAction = "GestureReloadARX2";
 			reloadMagazineSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Type115\50cal_Type115_reload",1,1,10};
 			soundContinuous = 0;
-			class GunParticles : GunParticles {
+			class GunParticles {
 				class SecondEffect {
 					directionName = "Nabojniceend2";
 					effectName = "CaselessAmmoCloud";
@@ -39511,7 +39511,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				iconScale = 0.1;
 			};
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class SecondEffect
 			{
@@ -39651,7 +39651,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -39961,7 +39961,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -40346,7 +40346,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -41847,7 +41847,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_ebr";
 			dispersion = 0.000600;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -41939,7 +41939,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -42116,7 +42116,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_gm6";
 			dispersion = 0.000900;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -42234,7 +42234,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -42273,7 +42273,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -42516,7 +42516,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_ebr";
 			dispersion = 0.000936;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -43016,7 +43016,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -44712,7 +44712,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				iconScale = 0.1;
 			};
         };
-		class GunParticles : GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -44872,7 +44872,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_gm6";
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -45009,7 +45009,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			recoilProne = "recoil_single_prone_gm6";
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -45175,7 +45175,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_gm6";
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -45437,7 +45437,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			dispersion = 0.000497;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -45630,7 +45630,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFireDistance = 1700;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -45847,7 +45847,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 2.350000;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -46302,7 +46302,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 2.350000;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -46478,7 +46478,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFireDistance = 1700;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -47239,7 +47239,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -47623,7 +47623,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -47777,7 +47777,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.5;
 			aiRateOfFireDistance = 1700;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -48126,7 +48126,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_single_gm6";
 			//recoilProne = "recoil_single_prone_gm6";
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -48213,7 +48213,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -48455,7 +48455,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFire = 1.0;
 			aiRateOfFireDistance = 1600;
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -48753,7 +48753,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFireDistance = 1600;
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -49051,7 +49051,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoil = "recoil_single_mx";
 			//recoilProne = "recoil_single_prone_mx";
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -49137,7 +49137,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		recoil = "recoil_ebr";
 		modes[] = {"Single"};
 
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -49395,7 +49395,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			aiRateOfFireDistance = 1700;
 		};
 
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -49570,7 +49570,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			"\breakingpoint_weapons\anim\M24.rtm"
 		};
 		inertia=0.46000001;
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -49650,7 +49650,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing=5;
 			discreteDistanceInitIndex=0;
 			discreteDistance[]={5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -49911,7 +49911,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			//recoilProne = "recoil_single_prone_mx";
 		};
 		muzzles[] = {"this", "Butt"};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{
@@ -50001,7 +50001,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			maxZeroing = 5;
 			discreteDistanceInitIndex = 0;
 			discreteDistance[] = {5};
-			class GunParticles: GunParticles
+			class GunParticles
 			{
 				class FirstEffect
 				{
@@ -50040,7 +50040,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			opticsZoomInit = 0.750000;
 			weaponInfoType = "RscWeaponZeroing";
 		};
-		class GunParticles: GunParticles
+		class GunParticles
 		{
 			class FirstEffect
 			{

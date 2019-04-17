@@ -37,7 +37,7 @@ waitUntil
 		if (_class == 3) then {
 			_factionLevel = player call BP_fnc_getFactionLevel;
 			_speedcoef = getAnimSpeedCoef player;
-			if (_factionLevel > 2 && {_speedcoef <= 1} && !{_speedcoef > 1.08}) then {
+			if (_factionLevel > 2 && {_speedcoef <= 1}) then {
 				if (_factionLevel > 3) then {
 					player setAnimSpeedCoef 1.065;
 				} else {

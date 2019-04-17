@@ -29,7 +29,7 @@ sleep 1;
 //Adjust shadowdistance when zooming/unzooming
 while {true} do {
 	_zoom = round (call BP_fnc_trueZoom * 10) / 10;
-	_zoom_factor = linearConversion [2,10,_zoom,350,1350,true]; //min to max conversion.
+	_zoom_factor = linearConversion [2,10,_zoom,350,1450,true]; //min to max conversion.
 	
 	
 	if (_zoom >= 2) then { //minimum zoom to enforce dvs
@@ -39,9 +39,17 @@ while {true} do {
 	};
 
 // Set shadowdistance if it has changed since last check
-	if (_svdist != _oldvdist or getShadowDistance != _svdist) then 
-	{
+	if (_svdist != _oldvdist) then {
 		setShadowDistance _svdist;
+	} else {
+		if (getShadowDistance != _svdist) then {
+			if (_zoom >= 2) then {
+				setShadowDistance _svdist; //prevent abuse of changing settings when zoomed
+			} else {
+				_dvs_vpref = getShadowDistance; //player changed his preferred shadow settings
+				_svdist = _dvs_vpref; //player changed his preferred shadow settings
+			};
+		};
 	};
 
 	_oldvdist = _svdist;

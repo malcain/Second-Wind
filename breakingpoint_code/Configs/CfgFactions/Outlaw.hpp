@@ -150,7 +150,7 @@
 					uniform[] = {"BP_Rebel_3"};
 					headgear[]={""};
 					nvg[]={""};
-					facewear[]={""};
+					facewear[]={""}; //"CUP_FR_NeckScarf5", "CUP_FR_NeckScarf2"
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -184,7 +184,7 @@
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_Agenda","BP_Rebel_4_Orange","BP_Rebel_4_ChocChip","BP_Rebel_4_Classic"};
 					headgear[]={"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4","G_MM_bandana_worn_co"};
+					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
