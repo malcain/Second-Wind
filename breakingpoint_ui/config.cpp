@@ -188,7 +188,7 @@ class RscGearTemplates {
 #include "config\RscDisplayDebriefing.hpp"
 #include "config\RscDisplayFactionSystem.hpp"
 #include "config\RscTitles.hpp"
-//#include "config\RscDisplayMain.hpp"
+#include "config\RscDisplayMain.hpp"
 #include "config\RscDisplayMultiplayer.hpp"
 
 //#include "config\RscDisplayConfigure.hpp"

@@ -699,7 +699,7 @@ class RscDisplayInventory
 			colorActive[] = {255, 255, 255, 1};
 		};
 		
-		class GroundTab : BaseGroundTab {
+		/*class GroundTab : BaseGroundTab {
 			idc = 6321;
 			style = 48;
 			x = 0.146281 * safezoneW + safezoneX;
@@ -711,10 +711,27 @@ class RscDisplayInventory
 			color[] = {0, 0, 0, 0};
 			colorBackground[] = {0, 0, 0, 0};
 			onMouseButtonClick = "";
+		};*/
+		class GroundTab: RscActiveText
+		{
+			idc=6321;
+			colorBackgroundSelected[]={1,1,1,1};
+			colorFocused[]={1,1,1,0};
+			soundDoubleClick[]=
+			{
+				"",
+				0.1,
+				1
+			};
+			color[]={1,1,1,1};
+			colorBackground[]={0,0,0,1};
+			x = 0.146281 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
-		
-		class SoldierTab : BaseGroundTab {
+		/*class SoldierTab : BaseGroundTab {
 			idc = 6401;
 			style = 48;
 			x = 0.214347 * safezoneW + safezoneX;
@@ -726,6 +743,14 @@ class RscDisplayInventory
 			color[] = {0, 0, 0, 0};
 			colorBackground[] = {0, 0, 0, 0};
 			onMouseButtonClick = "";
+		};*/
+		class SoldierTab: GroundTab
+		{
+			idc=6401;
+			x = 0.214347 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 		
 		/*
