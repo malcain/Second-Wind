@@ -109,7 +109,7 @@
 					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
-					launcher[] = {"MeleeClub"};
+					launcher[] = {"MeleeHatchet"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_2"};
 					backpack[] = {"BP_AssaultPack_sgg"};
@@ -131,7 +131,7 @@
 				class Backpack : BP_BaseGear 
 				{
 					//Array Of Weapons Inside Backpack
-					weapons[] = {};
+					weapons[] = {"MeleeHatchet"};
 					//Array Of Magazines Inside Backpack
 					magazines[] = {"ItemPainkiller","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
