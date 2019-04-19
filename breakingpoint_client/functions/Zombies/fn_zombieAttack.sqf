@@ -67,7 +67,7 @@ if (_vehicle != player) then
 			_wound = (BP_woundHit_ok select 0) select _index; 
 		};
 		_damage = 0.1;
-		[player, _wound, _damage, _unit,"zombie"] call BP_fnc_damageHandler;
+		[player, _wound, _damage, _unit,"zombie","1","zombie",_wound] call BP_fnc_damageHandler;
 		[_unit,"hit",2,false] call BP_fnc_objSpeak;	
 	} else {
 		if (local _vehicle) then {
@@ -95,7 +95,7 @@ if (_vehicle != player) then
 				_wound = (BP_woundHit_ok select 0) select _index;
 				
 				_damage = 0.45 + random (1.2);
-				[player, _wound, _damage, _unit,"zombie"] call BP_fnc_damageHandler;
+				[player, _wound, _damage, _unit,"zombie","1","zombie",_wound] call BP_fnc_damageHandler;
 				[_unit,"hit",2,false] call BP_fnc_objSpeak;
 			};
 		};

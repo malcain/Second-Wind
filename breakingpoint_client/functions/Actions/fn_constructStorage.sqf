@@ -289,7 +289,7 @@ _object = _ObjClass createVehicleLocal _location;
 _object hideObject true;
 _boundingBox = boundingBox _object;
 _maxPoint = ((_boundingBox select 1) select 0) max ((_boundingBox select 1) select 1);
-_object attachTo [player, [0, _maxPoint + 1, ((_boundingBox select 1) select 2)]];
+_object attachTo [player, [0, _maxPoint + 0.7, ((_boundingBox select 1) select 2)]];
 _object hideObject false;
 
 player setVariable ["constructionObject",_object];

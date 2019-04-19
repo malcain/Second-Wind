@@ -16,6 +16,7 @@ BP_fnc_addFlagAction =
 			_x setFlagTexture selectRandom _factionFlagArray;
 			[_x, (flagAnimationPhase _x) + 0.1, 1800] call BIS_fnc_animateFlag;
 			} forEach _flagArray;
+			
 			_flagArray select 0 setFlagTexture _factionFlagArray select 0;
 			_this select 0 removeAction (_this select 2);
 		}, 

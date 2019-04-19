@@ -8,7 +8,7 @@
 */
 
 private ["_location","_dir"];
-_location = player modelToWorld [0,0.5,0];
+_location = player modelToWorld [0,0.7,0];
 if ((_location select 2) < 0) then { _location set [2,0]; };
 
 if !("PartWoodPile" in magazines player) exitWith { cutText ["You need wood to build a small camp fire.", "PLAIN DOWN"]; };

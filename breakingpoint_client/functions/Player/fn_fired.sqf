@@ -90,7 +90,7 @@ if (_ammo isKindOf "Melee"  || {_ammo isKindOf "BP_Bayonet"} || {_ammo isKindOf 
 			if (_isInView && {_x != _unit}) then 
 			{
 				//Damage
-				[_x,"body",_damageHit,_damageBlood,_unit,_ammo] remoteExecCall ["BP_fnc_damageEvent",2];
+				[_x,"body",_damageHit,_damageBlood,_unit,_ammo,"7",_unit,"hitbody"] remoteExecCall ["BP_fnc_damageEvent",2];
 
 				//Sound
 				_sound = selectRandom _sounds;

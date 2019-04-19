@@ -1,10 +1,10 @@
 /*
-	Breaking Point Mod for Arma 3
+	BreakingPoint: Second Wind
 
-	Released under Arma Public Share Like Licence (APL-SA)
-	https://www.bistudio.com/community/licenses/arma-public-license-share-alike
+	Released under Arma Public License No Derivatives (APL-ND)
+	https://www.bistudio.com/community/licenses/arma-public-license-nd
 
-	Alderon Games Pty Ltd
+	by Malcain
 */
 
 private ["_object","_valid","_list","_isRock","_xStr","_location"];
@@ -24,10 +24,10 @@ _onRoad = isOnRoad _objectPos;
 _isInsideObject = [_object] call BP_fnc_isInsideBuilding;
 _isInsidePlayer = [player] call BP_fnc_isInsideBuilding;
 
-_location = player modelToWorld [0,0.3,0];
+_location = player modelToWorld [0,0.7,0];
 //if ((_location select 2) < 0) then { _location set [2,0]; };
 
-_badStrings =
+/*_badStrings =
 [
 	"stone",
 	"rock",
@@ -42,7 +42,6 @@ _badStrings =
 	"misc_concrete_high"
 ];
 
-//Make sure the Object Isn't Near Rocks and the object is not a house Object
 if (!_houseObject && {!_houseStorage}) then 
 {
 	_list = nearestObjects [_location, [],8];
@@ -55,6 +54,12 @@ if (!_houseObject && {!_houseStorage}) then
 			if (_contains) then { _valid = false; };
 		} forEach _badStrings;
 	} forEach _list;
+};*/
+
+_objView = [_object, "VIEW"] checkVisibility [eyePos player, getPosASL _object];
+
+if (_objView == 0) then {
+_valid = false;
 };
 
 //Make sure the object surface isn't in water

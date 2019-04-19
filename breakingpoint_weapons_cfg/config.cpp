@@ -57553,7 +57553,7 @@ class CfgAmmo {
 		{
 			damageHit = 0.35; // Hit Damage (Zombies)
 			damageBlood = 4200; // Blood Damage (Players)
-			anim = "GestureSwing";
+			anim = "GestureSwing2";
 			radius = 2.3; //Radius In Meters Of Targets
 			angle = 50; //Angle Of Hit Detection
 			sounds[] =

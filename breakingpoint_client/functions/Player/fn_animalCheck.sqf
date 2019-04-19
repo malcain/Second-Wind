@@ -18,6 +18,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//Variable Init
 	_PosList = [];
 	_PosSelect = [];
+	_mushroom = false;
 
 	//Find where animal likes
 	_type = selectRandom ANIMALS;
@@ -28,7 +29,13 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//http://forums.bistudio.com/showthread.php?93897-selectBestPlaces-%28do-it-yourself-documentation%29
 	//http://community.bistudio.com/wiki/selectBestPlaces
 	//http://resources.bisimulations.com/wiki/selectBestPlaces
+	
 	_favouritezones = "meadow + forest + trees";
+	
+	if (random 100 < 65) then {
+	_mushroom = true;
+	_favouritezones = "forest";
+	};
 	
 	_PosList = selectBestPlaces [_playerPos,BP_AnimalDistance,_favouritezones,10,5];
 	
@@ -39,16 +46,18 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	
 	if (_PosSelect isEqualTo []) exitWith {};
 	
-	_Pos = _PosSelect select 0;
+	_Pos = _PosSelect select 0 findEmptyPosition [0,10];
 	
-	_nearbyAnimals = [_playerPos,100] call BP_fnc_nearbyAnimals;
-	if (random 100 < 65) then {
+	if (_Pos isEqualTo []) exitWith {};
+	
+	if (_mushroom) then {
 		if (player distance _Pos < BP_AnimalDistance and (NOT surfaceIsWater _Pos)) then 
 		{
 			["FoodMushroom", "magazine", "Default", _Pos] call BP_fnc_spawnLoot;
 		};
 	} else {
-		if (player distance _Pos < BP_AnimalDistance and NOT surfaceIsWater _Pos and (_nearbyAnimals <= 1)) then {
+		_nearbyAnimals = [_playerPos,150] call BP_fnc_nearbyAnimals;
+		if (player distance _Pos < BP_AnimalDistance and NOT surfaceIsWater _Pos and (_nearbyAnimals < 1)) then {
 			_spawnType = "FORM";
 			if (_type in DOGS) then { _spawnType = "NONE"; };
 			_agent = createAgent [_type, _Pos, [], 0, _spawnType];

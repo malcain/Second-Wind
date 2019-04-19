@@ -1,5 +1,5 @@
 /*
-	BP: Second Wind
+	BreakingPoint: Second Wind
 
 	Released under Arma Public License No Derivatives (APL-ND)
 	https://www.bistudio.com/community/licenses/arma-public-license-nd
