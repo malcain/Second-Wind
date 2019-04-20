@@ -16,6 +16,11 @@ BP_StorageClasses = [];
 
 bis_disabled_Door = nil;
 
+if (isNil "cntStrongholds") then
+{
+cntStrongholds = [0,0];
+};
+
 BP_SprayCans =
 [
 	"BP_SprayCan_WDL",
@@ -27,7 +32,8 @@ BP_TrapBuildables =
 [
 	"BP_TripMine_Mag",
 	"BP_ATMine_Mag",
-	"BP_HumanTrap_Mag"
+	"BP_HumanTrap_Mag",
+	"BP_IED1_Mag"
 //	"BP_BearTrap_Mag"
 ];
 

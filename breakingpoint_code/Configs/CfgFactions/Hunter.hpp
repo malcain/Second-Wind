@@ -223,7 +223,7 @@
 					dressing = 0;
 					morphine = 0;
 					surgery = 0;
-					gut = 250;
+					gut = 200;
 				};
 				class Ranger {
 					food = 0;
@@ -232,7 +232,7 @@
 					dressing = -15;
 					morphine = -15;
 					surgery = -25;
-					gut = 500;
+					gut = 300;
 				};
 				class Nomad {
 					food = 0;
@@ -241,7 +241,7 @@
 					dressing = -15;
 					morphine = -15;
 					surgery = -25;
-					gut = 250;
+					gut = 200;
 				};
 				class Survivalist {
 					food = 0;
@@ -250,7 +250,7 @@
 					dressing = -15;
 					morphine = -15;
 					surgery = -50;
-					gut = 250;
+					gut = 300;
 				};
 				class Outlaw {
 					food = 0;
@@ -259,7 +259,7 @@
 					dressing = 0;
 					morphine = 0;
 					surgery = 0;
-					gut = 250;
+					gut = 200;
 				};
 				class Hunter {
 					food = 0;
@@ -268,7 +268,7 @@
 					dressing = 0;
 					morphine = 0;
 					surgery = 0;
-					gut = 250;
+					gut = 200;
 				};
 			};
 			class Destroy {

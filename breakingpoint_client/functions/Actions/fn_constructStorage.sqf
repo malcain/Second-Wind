@@ -22,7 +22,7 @@ _isWater = ((getPosASL player select 2) < 0);
 
 if (_onLadder) exitWith { cutText ["You can't build while on a ladder.","PLAIN DOWN"]; };
 if (_isWater) exitWith { cutText ["You can't build while in water.","PLAIN DOWN"]; };
-if ((vehicle player) != player) exitWith { cutText ["You can't build while in a vehicle.", "PLAIN DOWN"]; };
+if (!isNull objectParent player) exitWith { cutText ["You can't build while in a vehicle.", "PLAIN DOWN"]; };
 
 _blueprint = _this select 0;
 

@@ -15,7 +15,7 @@ _onLadder =	(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animatio
 _isWater = (surfaceIsWater (getPosATL player));
 if (_onLadder) exitWith { cutText ["You can't build while on a ladder.","PLAIN DOWN"]; };
 if (_isWater) exitWith { cutText ["You can't build while in water.","PLAIN DOWN"]; };
-if ((vehicle player) != player) exitWith { cutText ["You can't build while in a vehicle.", "PLAIN DOWN"]; };
+if (!isNull objectParent player) exitWith { cutText ["You can't build while in a vehicle.", "PLAIN DOWN"]; };
 
 //Start Build Process
 _magazine = _this select 0;

@@ -38,6 +38,8 @@ _mainFlag = _flagArray select 0;
 		{
 			[_this select 0, "FlagAnimationDone"] call BIS_fnc_removeAllScriptedEventHandlers;
 			_controlPoint call BP_fnc_addFlagAction;
+			cntStrongholds = [(cntStrongholds select 0) + 1,(cntStrongholds select 1) - 1];
+			publicVariable "cntStrongholds";
 		};
 		[_flagArray] spawn BP_fnc_extendCapture;
 	}

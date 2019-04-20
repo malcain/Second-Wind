@@ -52,12 +52,7 @@ if (_itemorignal == "FoodPlayerCooked") then {
 	_class = player getVariable ["class",0];
 	if (_class == 3) then {
 		_regen = _regen+700;
-		_speedcoef = getAnimSpeedCoef player;
-		if (_speedcoef < 1.12 && !{_speedcoef > 1.15}) then {
-			player setAnimSpeedCoef 1.12;
-			sleep 10;
-			player setAnimSpeedCoef _speedcoef;
-		};
+		[player,1.2] call BP_fnc_tempSpeedBoost;
 	};
 };
 

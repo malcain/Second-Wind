@@ -304,6 +304,9 @@ switch (_event) do {
 					_pointsChange = [_unit,_medic] call BP_fnc_getFactionKillPoints;
 				} else {
 					_pointsChange = getNumber (configFile >> "CfgFactions" >> _medicFaction >> "Points" >> "Aid" >> _unitFaction >> "gut");
+					if (_medicFaction == "Hunter") then {
+						_pointsChange = _pointsChange * (0.5 + _level * 0.25);
+					};
 				};
 				
 				//Mission Config Custom Points Division

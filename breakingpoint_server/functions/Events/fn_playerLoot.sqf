@@ -86,17 +86,20 @@ _remins enableDynamicSimulation true;
 
 //Scavenger points gain
 if (_playerFactionName == "Scavenger") then {
-// Fresh Spawn Check
-if (_freshSpawn) then {["playerDeath: Player: %1 was killed by %2. Stats Skipped. Fresh Spawn was killed.~0001",(_bodyName),(_playername)] call BP_fnc_debugConsoleFormat;
+	// Fresh Spawn Check
+	if (_freshSpawn) then {
+		["playerDeath: Player: %1 was killed by %2. Stats Skipped. Fresh Spawn was killed.~0001",(_bodyName),(_playername)] call BP_fnc_debugConsoleFormat;
 		BP_GameError = 6;
 		(owner _player) publicVariableClient "BP_GameError";
 	} else {
-//Check player's remains are not his own
-if (_bodyName == _playername) then { [_player,0] call BPServer_fnc_addFactionPoints; 
-	} else {
-	[_player,150] call BPServer_fnc_addFactionPoints;
+		//Check player's remains are not his own
+		if (_bodyName == _playername) then { 
+			[_player,0] call BPServer_fnc_addFactionPoints; 
+		} else {
+			_pointsChange = 200 * (0.5 + 0.25 * (cntStrongholds select 1));
+			[_player,_pointsChange] call BPServer_fnc_addFactionPoints;
+		};
 	};
-};
 };
 
 //Load Remains Gear

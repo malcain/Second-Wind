@@ -171,10 +171,23 @@ if (!isNull _killer) then
 		if (!_isHostageKill && _pointsChange < 0) then { _pointsChange = 0; };
 	};
 	
+	_theOrder = [1,4,5];
+	_anarchists = [2,6];
+	_outsiders = [3,7];
+	
+	//Adjust point rate for rival factions accordingly to the amount of strongholds captured.
+	if (_pointsChange > 0 and !{_killerClass in _outsiders}) then {
+		if (_killerClass in _theOrder) then {
+			_pointsChange = _pointsChange * (0.5 + 0.25 * (cntStrongholds select 0)); 
+		} else {
+			_pointsChange = _pointsChange * (0.5 + 0.25 * (cntStrongholds select 1));
+		};
+	};
+	
 	//Mission Config Custom Points Division
 	_pointsChange = _pointsChange * BP_Factions_PointsRatio;
 	
-			//Check if mixed group points off for gutting
+			//Check if mixed group points off for killing
 		_disableMixedGroupPointsGain = getNumber (configFile >> "CfgBreakingPointServerSettings" >> "MixedGroupPointsGain" >> "disableMixedGroupPointsGain");
 		_pointsOff = false;
 		if(_disableMixedGroupPointsGain == 1 && _pointsChange > 0 && !_playerTraitorFlag) then
@@ -193,11 +206,11 @@ if (!isNull _killer) then
 				} count allPlayers;		
 				if (count _groupMembers > 1) then
 				{
-					_friendlyClass = [1,4,5];
-					_hostileClass = [2,6];
+					//_theOrder = [1,4,5];
+					//_anarchists = [2,6];
 					for [{_i=0}, {_i < (count _groupMembers) && !_pointsOff}, {_i = _i + 1}] do {
 						_groupMemberClass = (_groupMembers select _i) getVariable ["class",0];
-						if(((_groupMemberClass in _friendlyClass) && (_playerClass in _friendlyClass)) || ((_groupMemberClass in _hostileClass) && (_playerClass in _hostileClass))) then {
+						if(((_groupMemberClass in _theOrder) && (_playerClass in _theOrder)) || ((_groupMemberClass in _anarchists) && (_playerClass in _anarchists))) then {
 							_pointsOff = true;
 						} else {
 							_pointsOff = false;
@@ -238,7 +251,7 @@ if (!isNull _killer) then
 	["playerDeath: Player: %1 (%2) killed himself.~0001",_playerName,_playerID] call BP_fnc_debugConsoleFormat;
 };
 
-// Process Survivalist + Hunter + scavenger Point Loss On Death
+// Process Survivalist + Hunter + Scavenger Point Loss On Death
 _playerPointLoss = 0;
 
 // Log Death Message
@@ -277,21 +290,21 @@ if (_playerFactionName == "Survivalist") then
 		_playerPointLoss = _playerPointLoss * BP_Factions_PointsRatio;
 		_player setVariable ["hunter",(_hunter - _playerPointLoss)];
 	} else {
-	// Lose scavenger Points on Death
-	if (_playerFactionName == "Scavenger" and _playerKill) then
-	{
-	_scavenger = _player getVariable ["scavenger",0];
-	call {
-		//Level 3 and 4
-		if (_playerFactionLevel >= 3) exitWith { _playerPointLoss = 350 };
-		//Level 2
-		if (_playerFactionLevel == 2) exitWith { _playerPointLoss = 225 };
-		//Level 1
-		if (_scavenger < 100) then {_playerPointLoss = 0} else {_playerPointLoss = 100 };
-	};
-	_playerPointLoss = _playerPointLoss * BP_Factions_PointsRatio;
-	_player setVariable ["scavenger",(_scavenger - _playerPointLoss)];
-	};
+		// Lose scavenger Points on Death
+		if (_playerFactionName == "Scavenger" and _playerKill) then
+		{
+			_scavenger = _player getVariable ["scavenger",0];
+			call {
+				//Level 3 and 4
+				if (_playerFactionLevel >= 3) exitWith { _playerPointLoss = 350 };
+				//Level 2
+				if (_playerFactionLevel == 2) exitWith { _playerPointLoss = 225 };
+				//Level 1
+				if (_scavenger < 100) then {_playerPointLoss = 0} else {_playerPointLoss = 100 };
+			};
+			_playerPointLoss = _playerPointLoss * BP_Factions_PointsRatio;
+			_player setVariable ["scavenger",(_scavenger - _playerPointLoss)];
+		};
 	};
 };
 

@@ -221,6 +221,7 @@ class CfgFunctions
 			class spawnLootBox {};
 			class spawnLootHeliCrash {};
 			class selfActions {};
+			class tempSpeedBoost {};
 		};
 		class Vehicle {
 			file = "\breakingpoint_client\functions\Vehicle";
