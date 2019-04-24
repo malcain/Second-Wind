@@ -1,1 +1,0 @@
-call compile preprocessFileLineNumbers "\breakingpoint_server\maps\thirsk.sqf";

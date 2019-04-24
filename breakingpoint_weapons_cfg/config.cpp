@@ -6234,7 +6234,7 @@ class cfgsoundsets
 			"jsrs_ScarH_interior_shot_soundshader",
 			"jsrs_ScarH_distance_0m_to_5m_shot_soundshader",
 		};
-		volumefactor=1.8;
+		volumefactor=1.75;
 		volumecurve="jsrs_wpn_rifle762_vl_sin";
 		sound3dprocessingtype="jsrs_wpn_medium_prc";
 		spatial=1;
@@ -6244,7 +6244,7 @@ class cfgsoundsets
 		occlusionfactor=0.25;
 		obstructionfactor=0.25;
 		frequencyfactor=0.95;
-		frequencyrandomizer=3.275;
+		frequencyrandomizer=1.775;
 	};
 	class jsrs_ScarH_shot2_soundset
 	{
@@ -6267,7 +6267,7 @@ class cfgsoundsets
 		distancefilter="jsrs_wpn_rifle_lp_dia";
 		occlusionfactor=0.25;
 		obstructionfactor=0.25;
-		frequencyrandomizer=3.275;
+		frequencyrandomizer=1.775;
 	};
 	class jsrs_ScarH_shell_soundset
 	{
@@ -6318,7 +6318,7 @@ class cfgsoundsets
 			"jsrs_fnfal_interior_shot_soundshader",
 			"jsrs_fnfal_distance_0m_to_5m_shot_soundshader",
 		};
-		volumefactor=1.8;
+		volumefactor=1.5;
 		volumecurve="jsrs_wpn_rifle762_vl_sin";
 		sound3dprocessingtype="jsrs_wpn_medium_prc";
 		spatial=1;
@@ -6341,7 +6341,7 @@ class cfgsoundsets
 			"jsrs_fnfal_distance_600m_to_900m_shot_soundshader",
 			"jsrs_fnfal_distance_900m_to_1300m_shot_soundshader"
 		};
-		volumefactor=2.8;
+		volumefactor=2.7;
 		volumecurve="jsrs_wpn_rifle762_vl_sin";
 		sound3dprocessingtype="jsrs_wpn_medium_prc";
 		spatial=1;
@@ -29882,13 +29882,13 @@ class cfgsoundshaders
 			}
 		};
 		volume="0.62*interior";
-		range=1300;
+		range=1000;
 		rangecurve[]=
 		{
 			{0,1},
 			{15,0.75},
-			{300,0.6},
-			{1300,0}
+			{300,0.55},
+			{1000,0}
 		};
 	};
 
@@ -29933,13 +29933,13 @@ class cfgsoundshaders
 			}
 		};
 		volume="0.6175*(1-interior/1.4)";
-		range=1400;
+		range=1100;
 		rangecurve[]=
 		{
 			{0,1},
 			{15,0.8},
-			{300,0.65},
-			{1400,0}
+			{300,0.6},
+			{1100,0}
 		};
 	};
 	class jsrs_ScarH_distance_5m_to_100m_shot_soundshader
@@ -29971,7 +29971,7 @@ class cfgsoundshaders
 				1
 			}
 		};
-		volume=2.385;
+		volume=2.525;
 		range=700;
 		rangecurve[]=
 		{
@@ -29992,13 +29992,13 @@ class cfgsoundshaders
 			}
 		};
 		volume=2.475;
-		range=1100;
+		range=1000;
 		rangecurve[]=
 		{
 			{0,0},
 			{300,0},
 			{700,1},
-			{1100,0}
+			{1000,0}
 		};
 	};
 	class jsrs_ScarH_distance_600m_to_900m_shot_soundshader
@@ -30011,14 +30011,14 @@ class cfgsoundshaders
 				1
 			}
 		};
-		volume=2.525;
+		volume=2.475;
 		range=1400;
 		rangecurve[]=
 		{
 			{0,0},
 			{700,0},
-			{1100,1},
-			{1400,0}
+			{1000,1},
+			{1350,0}
 		};
 	};
 	class jsrs_ScarH_distance_900m_to_1300m_shot_soundshader
@@ -30031,13 +30031,13 @@ class cfgsoundshaders
 				1
 			}
 		};
-		volume=2.625;
+		volume=2.475;
 		range=1600;
 		rangecurve[]=
 		{
 			{0,0},
-			{1100,0},
-			{1400,1},
+			{1000,0},
+			{1350,1},
 			{1700,0}
 		};
 	};
@@ -30076,13 +30076,13 @@ class cfgsoundshaders
 			}
 		};
 		volume="0.62*interior";
-		range=1300;
+		range=1000;
 		rangecurve[]=
 		{
 			{0,1},
 			{15,0.75},
-			{300,0.6},
-			{1300,0}
+			{300,0.55},
+			{1000,0}
 		};
 	};
 	class jsrs_fnfal_interior_shot_2_soundshader
@@ -30125,13 +30125,13 @@ class cfgsoundshaders
 			}
 		};
 		volume="0.6175*(1-interior/1.4)";
-		range=1400;
+		range=1100;
 		rangecurve[]=
 		{
 			{0,1},
 			{15,0.8},
-			{300,0.65},
-			{1400,0}
+			{300,0.6},
+			{1100,0}
 		};
 	};
 	class jsrs_fnfal_distance_5m_to_100m_shot_soundshader
@@ -30183,14 +30183,14 @@ class cfgsoundshaders
 				1
 			}
 		};
-		volume=2.475;
-		range=1100;
+		volume=2.435;
+		range=1000;
 		rangecurve[]=
 		{
 			{0,0},
 			{300,0},
 			{700,1},
-			{1100,0}
+			{1000,0}
 		};
 	};
 	class jsrs_fnfal_distance_600m_to_900m_shot_soundshader
@@ -30203,14 +30203,14 @@ class cfgsoundshaders
 				1
 			}
 		};
-		volume=2.525;
-		range=1400;
+		volume=2.475;
+		range=1350;
 		rangecurve[]=
 		{
 			{0,0},
 			{700,0},
-			{1100,1},
-			{1400,0}
+			{1000,1},
+			{1350,0}
 		};
 	};
 	class jsrs_fnfal_distance_900m_to_1300m_shot_soundshader
@@ -30229,7 +30229,7 @@ class cfgsoundshaders
 		{
 			{0,0},
 			{1100,0},
-			{1400,1},
+			{1350,1},
 			{1700,0}
 		};
 	};
@@ -48077,7 +48077,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				{
 					"jsrs_FNFAL_shot_silenced_soundset",
 					"jsrs_FNFAL_shell_soundset",
-					//"jsrs_7x62mm_reflector_1"
 					"jsrs_7x62mm_SD_reflector_1"
 				};
  			};

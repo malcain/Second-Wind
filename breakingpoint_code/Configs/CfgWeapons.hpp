@@ -708,13 +708,13 @@ class CfgWeapons
 	class BP_Guardian_4: Uniform_base
 	{
 		scope = 2;
-		displayName = "Ranger level 4 (Grunge Jacket)";
+		displayName = "Ranger level 4";
 		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="FRITH_RUIN_coffdpm";
+			uniformClass="BP_Guardian4_F";
 			allowedSlots[] = {};
 			containerClass="Supply60";
 			mass=40;
@@ -783,7 +783,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Rebel_1: Uniform_Base {
+	/*class BP_Rebel_1: Uniform_Base {
 		scope = 2;
 		displayName = "Outlaw level 1";
 		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
@@ -804,6 +804,44 @@ class CfgWeapons
 		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "BP_Rebel1_Z";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 40;
+		};
+	};*/
+	
+	class BP_Rebel_1: Uniform_Base {
+		scope = 2;
+		displayName = "Outlaw level 1";
+		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\breakingpoint_classes\textures\outlaw\BP_Outlaw1_shirt.paa",
+			"\breakingpoint_classes\textures\outlaw\BP_Outlaw1_pants.paa"
+		};
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "BP_Rebel1_F";
+			allowedSlots[] = {};
+			containerClass = "Supply20";
+			mass = 40;
+		};
+	};
+	
+	class BP_Rebel_1_Z: Uniform_Base { //ZOMBIE
+		scope = 2;
+		displayName = "Fallen Outlaw";
+		picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Rebel1_Z";
@@ -872,13 +910,15 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
-	
+ 
 	class BP_Rebel_4: Uniform_Base
 	{
 		scope=2;
-		displayName="Outlaw level 4 (anarchy t-shirt)";
+		displayName="Outlaw level 4";
 		picture="\breakingpoint_ui\icons\OutlawIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\outlaw\BP_Outlaw4_co.paa","breakingpoint_classes\textures\outlaw\BP_Outlaw4_scarf.paa"};
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
@@ -886,6 +926,7 @@ class CfgWeapons
 			allowedSlots[]={};
 			containerClass="Supply50";
 			mass=40;
+			hiddenSelections[] = {"camo"};
 		};
 	};
 	

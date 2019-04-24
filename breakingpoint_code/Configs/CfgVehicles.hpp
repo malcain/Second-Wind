@@ -3419,7 +3419,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Guardian 2";
 		uniformClass = "BP_Guardian_2";
-		model = "\breakingpoint_classes\models\BP_Guardian4.p3d";
+		model = "\breakingpoint_classes\models\BP_Guardian2.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		side = 3;
 		backpack = "";
@@ -3451,7 +3451,7 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Guardian 2";
 		uniformClass = "BP_Guardian_2_Z";
-		model = "\breakingpoint_classes\models\BP_Guardian4.p3d";
+		model = "\breakingpoint_classes\models\BP_Guardian2.p3d";
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
 	};
@@ -3497,12 +3497,11 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 		
-	/*class BP_Guardian4_F: BP_Man {
+	class BP_Guardian4_F: BP_Man {
 		scope = 2;
 		displayName = "Guardian 4";
 		uniformClass = "BP_Guardian_4";
-		nakedUniform = "usm_skivies_green";
-		model="\us_military_uniforms\usm_bdu_bnu.p3d";
+		model = "\breakingpoint_classes\models\BP_Guardian4.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		side = 3;
 		backpack = "";
@@ -3526,34 +3525,9 @@ class CfgVehicles
 		textSingular = "";
 		textPlural = "";
 		nameSound = "";
-		hiddenSelections[]=
-		{
-			"nametapes",
-			"clan",
-			"camo",
-			"camo1"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"",
-			"",
-			"us_military_uniforms\textures\uniform_bdu_wdl_m_co.paa",
-			"us_military_uniforms\textures\underwear_grn_co.paa"
-		};
-		class Wounds
-		{
-			tex[]={};
-			mat[]=
-			{
-				"us_military_uniforms\textures\underwear.rvmat",
-				"us_military_uniforms\textures\underwear_w.rvmat",
-				"us_military_uniforms\textures\underwear_w.rvmat",
-				"us_military_uniforms\textures\uniform_bdu.rvmat",
-				"us_military_uniforms\textures\uniform_bdu_w.rvmat",
-				"us_military_uniforms\textures\uniform_bdu_w.rvmat"
-			};
-		};
-	};*/
+		//hiddenSelections[] = {"Camo"};
+		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
+	};
 	
 	class BP_RebelF_F: BP_Man {
 		scope = 2;
@@ -3596,7 +3570,7 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
-	class BP_Rebel1_F: BP_Man {
+	/*class BP_Rebel1_F: BP_Man {
 		scope = 2;
 		displayName = "Rebel 1";
 		uniformClass = "BP_Rebel_1";
@@ -3633,6 +3607,55 @@ class CfgVehicles
 		displayName = "Rebel 1";
 		uniformClass = "BP_Rebel_1_Z";
 		model = "\breakingpoint_classes\models\BP_Rebel1.p3d";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};*/
+	
+	class BP_Rebel1_F: BP_Man {
+		scope = 2;
+		displayName = "Rebel 1";
+		uniformClass = "BP_Rebel_1";
+		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla1_1.p3d";
+		//moves = "CfgMovesPlayerSdr";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants {
+
+			class Default {
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\breakingpoint_classes\textures\outlaw\BP_Outlaw1_shirt.paa",
+			"\breakingpoint_classes\textures\outlaw\BP_Outlaw1_pants.paa"
+		};
+	};
+	
+	class BP_Rebel1_Z: BP_Rebel1_F {
+		scope = 2;
+		displayName = "Rebel 1";
+		uniformClass = "BP_Rebel_1_Z";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
 	};
@@ -3718,7 +3741,40 @@ class CfgVehicles
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
 	};
-	class FRITH_RUIN_SDR_Tshirt_wht_fpk: BP_Man
+ 
+	class BP_Rebel4_F: BP_Man {
+		scope = 2;
+		displayName = "Rebel 4";
+		uniformClass = "BP_Rebel_4";
+		model = "\A3\characters_F_gamma\Guerrilla\ig_leader.p3d";
+		//moves = "CfgMovesPlayerSdr";
+		side = 3;
+		backpack = "";
+		weapons[] = {"Throw","Put"};
+		magazines[] = {};
+		respawnWeapons[] = {"Throw","Put"};
+		respawnMagazines[] = {};
+		Items[] = {};
+		respawnItems[] = {};
+		linkedItems[] = {};
+		respawnlinkedItems[] = {};
+		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies = 0;
+		class SpeechVariants {
+
+			class Default {
+				speechSingular[] = {""};
+				speechPlural[] = {""};
+			};
+		};
+		textSingular = "";
+		textPlural = "";
+		nameSound = "";
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\outlaw\BP_Outlaw4_co.paa","breakingpoint_classes\textures\outlaw\BP_Outlaw4_scarf.paa"};
+	};
+ 
+ /*class FRITH_RUIN_SDR_Tshirt_wht_fpk: BP_Man
 	{};
 	class BP_Rebel4_F: FRITH_RUIN_SDR_Tshirt_wht_fpk
 	{
@@ -3764,13 +3820,16 @@ class CfgVehicles
 		textPlural="";
 		nameSound="";
 	};
-	
-	class BP_Scavenger2_F: BP_Man
+ 
+ 
+	class FRITH_RUIN_SDR_Tshirt_wht_fpk: BP_Man
+	{};
+	class BP_Rebel4_F: FRITH_RUIN_SDR_Tshirt_wht_fpk
 	{
 		scope=2;
-		displayName="Scavenger 2";
-		uniformClass="BP_Scavenger_2";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		displayName="Rebel 4";
+		uniformClass="BP_Rebel_4";
+		model="\A3\characters_F_gamma\guerrilla\ig_guerrilla1_1.p3d";
 		side=3;
 		backpack="";
 		weapons[]=
@@ -3808,8 +3867,6 @@ class CfgVehicles
 		textSingular="";
 		textPlural="";
 		nameSound="";
-		hiddenSelections[] = {"Camo","Insignia"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
 	
 	class FRITH_RUIN_SDR_Tshirt_wht_zap: BP_Man
@@ -3951,7 +4008,7 @@ class CfgVehicles
 		textSingular="";
 		textPlural="";
 		nameSound="";
-	};
+	};*/
 	
 	/*class B_ZARA_TAKI_T3_F: BP_Man
 	{};
@@ -3999,6 +4056,53 @@ class CfgVehicles
 		textPlural="";
 		nameSound="";
 	};*/
+	
+	class BP_Scavenger2_F: BP_Man
+	{
+		scope=2;
+		displayName="Scavenger 2";
+		uniformClass="BP_Scavenger_2";
+		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		side=3;
+		backpack="";
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]={};
+		respawnWeapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnMagazines[]={};
+		Items[]={};
+		respawnItems[]={};
+		linkedItems[]={};
+		respawnlinkedItems[]={};
+		weaponSlots="1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
+		canHideBodies=0;
+		class SpeechVariants
+		{
+			class Default
+			{
+				speechSingular[]=
+				{
+					""
+				};
+				speechPlural[]=
+				{
+					""
+				};
+			};
+		};
+		textSingular="";
+		textPlural="";
+		nameSound="";
+		hiddenSelections[] = {"Camo","Insignia"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
+	};
 	
 	class BP_Hunter1_F: BP_Man {
 		scope = 2;
