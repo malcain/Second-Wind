@@ -1,0 +1,62 @@
+Offroad
+Driver - driver_offroad01
+PassFR - passenger_low01
+
+Hatchback
+Driver - driver_offroad01
+PassFR - passenger_low01
+PassBR - passenger_generic01_leanleft
+PassBL - passenger_generic01_foldhands"
+
+SUV
+Driver - driver_low01
+PassFR - passenger_low01
+PassBR - passenger_generic01_leanleft
+PassBL - passenger_generic01_leanright
+
+Strider
+Driver - driver_mrap_03
+PassBС - passenger_generic01_foldhands
+PassBL - passenger_mrap_03exgunner
+Comndr - commander_mrap_03
+
+Ifrit
+Driver - driver_mantis
+PassRL - passenger_mrap_03exgunner
+PassBL - passenger_mantisrear
+PassRR - passenger_generic01_foldhands
+PassBR - passenger_mantisrear
+
+Hunter
+Driver - driver_offroad01
+PassFR - passenger_mrap_01_front
+PassBR - passenger_mrap_01_back
+PassBL - passenger_generic01_foldhands
+
+Van
+Driver - driver_van_01
+PassFR - passenger_van_codriver01
+PassFC - passenger_van_codriver02
+
+Cater
+Drivr - driver_mid01
+PassL - passenger_low01
+PassR - passenger_low01
+
+Boat/Zodiac
+Drivr - zodiac_driver
+PassF - passenger_boat_1_idle
+PassL - passenger_boat_1_idle
+PassR - passenger_boat_1_idle
+
+HEMTT
+Driver - driver_hemtt
+PassFL - passenger_generic01_foldhands
+
+ZAMAK
+Driver - driver_truck_02
+PassFL - passenger_apc_narrow_generic01
+
+Temptest
+Driver - driver_hemtt
+PassFL - passenger_low01
