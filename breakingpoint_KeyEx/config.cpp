@@ -62,6 +62,15 @@ class CfgKeybindsEx {
 			code = "call BP_fnc_playerJump;"; //Code to run when this keybind is pressed
 		};
 	};
+	class breakingpoint_Parkour {
+		displayName = "Parkour"; //Tab Display Name
+		class Parkour { //Unique Identifier for this Keybind
+			displayName = "Parkour"; //Display name of this keybinding
+			tooltip = "Climb on/over the walls and other obstacles."; //Tooltip
+			defaultKeys[] = {{0x21,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			code = "[player] call BP_fnc_Parkour;"; //Code to run when this keybind is pressed
+		};
+	};
 	class breakingpoint_Eat  {
 		displayName = "Eat "; //Tab Display Name
 		class Eat { //Unique Identifier for this Keybind

@@ -694,6 +694,7 @@ BP_ObjectPreload =
 	"BP_Trashcan",
 	"BP_Bag1",
 	"BP_Bag2",
+	"BP_Bag3",
 	"BP_LuggageBags",
 	"BP_Dumpster1",
 	"BP_Dumpster2",
