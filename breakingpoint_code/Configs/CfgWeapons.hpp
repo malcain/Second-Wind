@@ -1875,7 +1875,6 @@ class CfgWeapons
 	class V_OutlawVest_BP: Vest_Camo_Base {
 		picture="\breakingpoint\textures\vest\icon_outlaw_vest.paa";
 		scope=2;
-		author="Credits: VanSchmoozin - Specter";
 		displayName="Outlaw Explosive Vest";
 		model="\breakingpoint\models\outlawvest.p3d";
 		descriptionShort="Medium Capacity, Light Armor";
@@ -1891,13 +1890,13 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\breakingpoint\textures\vest\VSM_battlebelt_Multicam.paa",
-			"\breakingpoint\textures\vest\VSM_dropholster.paa",
-			"\breakingpoint\textures\vest\serpa.paa",
-			"\breakingpoint\textures\vest\VSM_Multicam_gear_co.paa",
-			"\breakingpoint\textures\vest\radio_pouch_green.paa",
-			"\breakingpoint\textures\vest\VSM_Multicam_plate.paa",
-			"\breakingpoint\textures\vest\VSM_pouches_Multicam.paa"
+			"\breakingpoint\textures\vests\VSM_battlebelt_Multicam.paa",
+			"\breakingpoint\textures\vests\VSM_dropholster.paa",
+			"\breakingpoint\textures\vests\serpa.paa",
+			"\breakingpoint\textures\vests\VSM_Multicam_gear_co.paa",
+			"\breakingpoint\textures\vests\radio_pouch_green.paa",
+			"\breakingpoint\textures\vests\VSM_Multicam_plate.paa",
+			"\breakingpoint\textures\vests\VSM_pouches_Multicam.paa"
 		};
 		class ItemInfo: VestItem
 		{

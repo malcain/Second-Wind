@@ -118,6 +118,24 @@ class CfgVehicles
 		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
 	};
 	
+	class BP_SkeletonRemains1 : BP_DeadBody 
+	{
+		scope = protected;
+		model = "\breakingpoint_sw\breakingpoint_sw_box\bp_Skeleton_1.p3d";
+	};
+	
+	class BP_SkeletonRemains2 : BP_DeadBody 
+	{
+		scope = protected;
+		model = "\breakingpoint_sw\breakingpoint_sw_box\bp_Skeleton_2.p3d";
+	};
+	
+	class BP_SkeletonRemains3 : BP_DeadBody 
+	{
+		scope = protected;
+		model = "\breakingpoint_sw\breakingpoint_sw_box\bp_Skeleton_3.p3d";
+	};
+	
 	class BP_GraveForest : BP_DeadBody 
 	{
 		scope = protected;
@@ -142,6 +160,7 @@ class CfgVehicles
 		model = "\A3\Structures_F_EPB\Civ\Dead\Grave_dirt_F.p3d";
 	};
 	
+	//Chinook
 	class B_supplyCrate_F;
 	class BP_CarePkg : B_supplyCrate_F
 	{
@@ -317,8 +336,8 @@ class CfgVehicles
 		scope = 2;
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_small_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 165;
-		mass = 150;
+		maximumLoad = 170;
+		mass = 140;
 	};
 	
 	class BP_Carryall_Base: BP_Bag_Base {
@@ -327,7 +346,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_tortila_khk_co.paa"};
 		allowedSlots[] = {};
 		maximumLoad = 230;
-		mass = 200;
+		mass = 180;
 	};
 	
 	class BP_Coyote_Base: BP_Bag_Base {
@@ -336,7 +355,27 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
 		maximumLoad = 300;
-		mass = 270;
+		mass = 260;
+	};
+	
+	class BP_CampPack: BP_Bag_Base {
+		scope = 2;
+		picture = "\breakingpoint_sw\breakingpoint_sw_clothes\UI\BP_Bag_2.paa";
+		model = "\breakingpoint_sw\breakingpoint_sw_clothes\BP_Bag_2.p3d";
+		allowedSlots[] = {};
+		maximumLoad = 140;
+		mass = 110;
+		displayName = "Camping Pack";
+	};
+	
+	class BP_HCampPack: BP_Bag_Base {
+		scope = 2;
+		picture = "\breakingpoint_sw\breakingpoint_sw_clothes\UI\BP_Bag_1.paa";
+		model = "\breakingpoint_sw\breakingpoint_sw_clothes\BP_Bag_1.p3d";
+		allowedSlots[] = {};
+		maximumLoad = 200;
+		mass = 170;
+		displayName = "Heavy Camping Pack";
 	};
 	
 	class BP_HPack: BP_Bag_Base {
@@ -369,7 +408,7 @@ class CfgVehicles
 		displayName = "Czech Survival Pack";
 	};
 	
-	class BP_EPack: BP_Bag_Base {
+	/*class BP_EPack: BP_Bag_Base {
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_EPack.p3d";
 		hiddenSelections[] = {"camo"};
@@ -378,14 +417,14 @@ class CfgVehicles
 		maximumLoad = 300;
 		mass = 300;
 		displayName = "Engineer Utility Pack";
-	};
+	};*/
 	
 	class BP_RPack: BP_Bag_Base {
 		scope = 2;
 		model = "\breakingpoint_classes\models\BP_RPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 160;
+		maximumLoad = 150;
 		mass = 90;
 		displayName = "Outlaw Equipment Pack";
 	};
@@ -395,8 +434,8 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_RPack2.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 200;
-		mass = 100;
+		maximumLoad = 180;
+		mass = 120;
 		displayName = "Outlaw Heavy Pack";
 	};
 	

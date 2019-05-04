@@ -184,7 +184,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_TranQRifle"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular", "BP_SOS"};
 				};
@@ -192,7 +192,7 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"ItemMap","Binocular"};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {};
@@ -226,9 +226,9 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_TranQRifle","BP_TranQPistol"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"BP_SOS"};
+					items[] = {"Binocular", "BP_SOS"};
 				};
 			};
 		};

@@ -70,8 +70,7 @@ class CfgBuildingLoot
 			{"BP_Bag2","object","Trash"},
 			{"BP_LuggageCaseBG","object","Residential"},
 			{"BP_LuggageCaseRED","object","Residential"},
-			{"BP_BriefbagOrangeSide","object","Residential"},
-			{"BP_BriefbagPink","object","Residential"},
+			{"BP_Bag3","object","Residential"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
 			{"ItemKnife","magazine"},
@@ -140,8 +139,7 @@ class CfgBuildingLoot
 			0.10,   //BP_Bag2
 			0.10,   //BP_LuggageCaseBG
 			0.10,   //BP_LuggageCaseRED
-			0.05,   //BP_Briefbags
-			0.05,   //BP_Briefbags
+			0.10,   //BP_Bag3
 			0.02,	//Compass
 			0.02,	//Map
 			0.02,	//Knife
@@ -216,12 +214,11 @@ class CfgBuildingLoot
             {"BP_CardboardBox_3","object","Generic"},
             {"BP_TrashcanHouse","object","Trash"},
 			{"BP_Bag1","object","Generic"},
-			{"BP_WeaponCrateOld","object","Residential2"},
+			{"BP_Bag3","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential"},
 			{"BP_LuggageCaseBG","object","Residential"},
-			{"BP_BriefbagOrange","object","Residential"},
-			{"BP_BriefbagPinkSide","object","Residential"},
+			{"BP_Bag3","object","Residential"},
 			{"ItemDuctTape","magazine"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
@@ -296,12 +293,11 @@ class CfgBuildingLoot
 			0.08,	//BP_CardBoardBox3
 			0.08,	//BP_Trashcan
 			0.08,   //BP_Bag1
-			0.01,   //BP_WeaponCrateOld
+			0.01,   //BP_Bag3
 			0.01,   //BP_LuggageCaseGR
 			0.10,   //BP_LuggageCaseGR
 			0.10,   //BP_LuggageCaseBG
-			0.06,   //BP_Briefbags
-			0.06,   //BP_Briefbags
+			0.12,   //BP_Bag3
 			0.01,	//Duct_Tape
 			0.01,	//Compass
 			0.01,	//Map
@@ -388,7 +384,7 @@ class CfgBuildingLoot
 			{"BP_Bag2","object","Trash"},
 			{"BP_LuggageCaseRED","object","Residential"},
 			{"BP_LuggageCaseBG","object","Residential"},
-			{"BP_BriefbagPink","object","Residential"},
+			{"BP_BriefbagPinkSide","object","Residential"},
 			{"BP_BriefbagOrangeSide","object","Residential"}
 		};
 		itemChance[] =	{
@@ -420,7 +416,8 @@ class CfgBuildingLoot
 			{"BP_Bag1","object","Generic"},
 			{"BP_DustbinGRSide","object","Trash"},
 			{"BP_LuggageCaseGR","object","Office2"},
-			{"BP_BriefbagOrange","object","Residential"},
+			{"BP_Bag3","object","Office2"},
+			{"BP_BriefbagOrangeSide","object","Residential"},
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
 			{"ItemWatch","toolbelt"},
@@ -473,9 +470,10 @@ class CfgBuildingLoot
 			0.03,	//BP_DustbinBLK
 			0.04,	//BP_DustbinGR
 			0.07,   //BP_Bag1
-			0.07,   //BP_Bag2
-			0.07,    //BP_LuggageBags
-			0.07,    //BP_Packs
+			0.07,   //BP_DustbinGRSide
+			0.04,   //BP_LuggageBags
+			0.03,   //BP_Bag3
+			0.07,   //BP_BriefbagOrangeSide
 			0.01,	//Mountain DEW
 			0.01,	//Soda
 			0.02,	//WATCH

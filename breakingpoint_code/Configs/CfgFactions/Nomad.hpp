@@ -118,7 +118,7 @@
 					launcher[] = {"MeleeHatchet"};
 					handgun[] = {};
 					clothing[] = {"BP_Refugee_2"};
-					backpack[] = {"BP_Kitbag_sgg"};
+					backpack[] = {"BP_CampPack"};
 					vest[] = {};
 					uniform[] = {"BP_Refugee_2"};
 					headgear[]={""};
@@ -174,7 +174,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_CZ455"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular"};
 				};
@@ -192,9 +192,9 @@
 					backpack[] = {"BP_Hpack"};
 					vest[] = {};
 					uniform[] = {"BP_Refugee_4", "BP_Refugee_4_brown"};
-					headgear[] = {"CUP_H_C_Beanie_04", "BP_BeanieHat_Green", "H_MM_Helmet_02", "CUP_H_C_Ushanka_04"};
+					headgear[] = {"BP_BeanieHat_Green", "CUP_H_C_Beanie_04", "H_MM_Helmet_02", "CUP_H_C_Ushanka_04"};
 					nvg[] = {"TRYK_HRPIGEAR_NV"};
-					facewear[] = {"NeckTight_OD", "CFP_Scarfbeard_grey", "CFP_Scarfbeardshades_grey", "CFP_Scarfshades_grey",  "NeckTight_RED", "NeckTight_TanO", "SP_Goggles_green", "CUP_FR_NeckScarf"};
+					facewear[] = {"NeckTight_OD", "NeckTight_RED", "NeckTight_TanO", "SP_Goggles_green"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -210,7 +210,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_CZ455"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};

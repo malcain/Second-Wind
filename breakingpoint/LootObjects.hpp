@@ -38,7 +38,7 @@ class BP_Medicalbox: BP_LootBox
 class BP_MedicalMultibox: BP_LootBox
 {
 	scope = public;
-	displayName = "Medical Box";
+	displayName = "Medical Research Box";
 	model = "plp_containers\StcMultiboxes\plp_cts_MultiboxSmallWhite.p3d";
 };
 
@@ -47,52 +47,6 @@ class BP_MedicalboxHelicrash: BP_LootBox
 	scope = public;
 	displayName = "Medical Box (Helicrash)";
 	model = "\breakingpoint\models\bp_medicalbox.p3d";
-	class transportmagazines {
-		class _xx_ItemBandage {
-			magazine = "ItemBandage";
-			count = 10;
-		};
-
-		class _xx_ItemFieldDressing {
-			magazine = "ItemFieldDressing";
-			count = 3;
-		};
-
-		class _xx_ItemMorphine {
-			magazine = "ItemMorphine";
-			count = 3;
-		};
-		
-		class _xx_ItemPainkiller {
-			magazine = "ItemPainkiller";
-			count = 3;
-		};
-		
-		class _xx_ItemAntibiotic {
-			magazine = "ItemAntibiotic";
-			count = 1;
-		};
-		
-		class _xx_ItemAdrenaline {
-			magazine = "ItemAdrenaline";
-			count = 1;
-		};
-		
-		class _xx_ItemKnife {
-			magazine = "ItemKnife";
-			count = 1;
-		};
-		
-		class _xx_ItemMatchbox {
-			magazine = "ItemMatchbox";
-			count = 1;
-		};
-		
-		class _xx_ItemBrick1 {
-			magazine = "ItemBrick1";
-			count = 1;
-		};
-	};
 };
 
 /* 3.0 Crates*/
@@ -506,6 +460,10 @@ class BP_LuggageCaseBG : BP_LootBox {
 	{
 		"\plp_containers\StcSuitcases\plp_ct_SuitcaseFabricBeige.paa"
 	};
+};
+
+class BP_Bag3 : BP_LootBox { 
+model = "\breakingpoint_sw\breakingpoint_sw_box\bp_bag3.p3d"; 
 };
 
 class BP_Packs : BP_LootBox { 
