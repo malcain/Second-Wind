@@ -10,39 +10,7 @@ class CfgPatches
 		version = 0.1;
 	};
 };
-class CfgMods
-{
-	class Mod_Base;
-	class hidden_ghillie: Mod_Base
-	{
-		name="Hidden Ghillies";
-		author="r0dx864";
-		logoSmall="\hidden_ghillie\logo.paa";
-		logo="\hidden_ghillie\logo.paa";
-		tooltipOwned="Hidden Ghillies";
-		overview="More textures for your ghillie suit and uniform";
-		hideName=0;
-		hidePicture=0;
-	};
-};
-class CfgWorlds
-{
-	class CAWorld;
-	class Altis: CAWorld
-	{
-		cutscenes[] = {"Altis_Idle_Snipers"};
-	};
-};
-class CfgMissions
-{
-	class Cutscenes
-	{
-		class Altis_Idle_Snipers
-		{
-			directory = "hidden_ghillie\Idle_Snipers.Altis";
-		};
-	};
-};
+
 class cfgWeapons
 {
 	class InventoryItem_Base_F;
@@ -2167,7 +2135,7 @@ class CfgVehicles
 		};
 	};
 };
-class Cfg3DEN
+/*class Cfg3DEN
 {
 	class Object
 	{
@@ -2217,4 +2185,4 @@ class Cfg3DEN
 			};
 		};
 	};
-};
+};*/

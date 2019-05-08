@@ -2014,7 +2014,8 @@ class CfgBuildingLoot
 			{"BP_arifle_AKM_FL_F"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
-			{"HandGrenade","magazine"},
+			{"BP_CampPack","backpack"},
+			{"BP_HCampPack","backpack"},
 			{"V_TacVest_camo","vest"},
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
@@ -2023,14 +2024,15 @@ class CfgBuildingLoot
 		itemChance[] =	{
 			0.70,	//SurvivorCrate
 			0.20,	//Empty SurvivorCrate
-			0.01,    //SVD_DES
-			0.01,    //AKM_FL_F
-			0.01,    //Kar98 Scoped
-			0.01,    //LeeEnfieldK Scoped
-			0.01,    //Grenade
-			0.01,    //TacVest_camo
-			0.01,    //Chestrig_blk
-			0.01,    //R7Sup
+			0.01,   //SVD_DES
+			0.01,   //AKM_FL_F
+			0.01,   //Kar98 Scoped
+			0.01,   //LeeEnfieldK Scoped
+			0.01,	//Camping Pack
+			0.01,	//Heavy Camping Pack
+			0.01,   //TacVest_camo
+			0.01,   //Chestrig_blk
+			0.01,   //R7Sup
 			0.01    //CZSup
 		};
 	};

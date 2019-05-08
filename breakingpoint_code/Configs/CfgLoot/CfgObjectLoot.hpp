@@ -2587,7 +2587,8 @@ class CfgObjectLoot {
 			{"BP_LeeEnfieldK","weaponA"},
 			{"BP_TripMine_Mag","magazine"},
 			{"BP_HumanTrap_Mag","magazine"},
-			{"HandGrenade","magazine"},
+			{"BP_CampPack","backpack"},
+			{"BP_HCampPack","backpack"},
 			{"V_TacVest_camo","vest"},
 			{"V_Chestrig_blk_BP","vest"},
 			{"Rangefinder","weaponNA"},
@@ -2629,7 +2630,8 @@ class CfgObjectLoot {
 			{"BP_5Rnd_Mauser_Mag","magazine"},
 			{"BP_762x54_7N13_10rnd","magazine"},
 			{"BP_762x54_7N1_10rnd","magazine"},
-			{"BP_M84_Flash","magazine"},
+			{"HandGrenade","magazine"},
+			{"BP_M84_Flash","magazine"}
 		};
 		itemChance[] =	{
 			0.01,	//M21
@@ -2637,7 +2639,8 @@ class CfgObjectLoot {
 			0.02,   //ENFIELD SCOPED
 			0.04,	//Tripmine
 			0.04,	//BearTrap
-			0.01,	//HandGrenade
+			0.04,	//Camping Pack
+			0.01,	//Heavy Camping Pack
 			0.01,	//CAMO vest
 			0.01,	//V_Chestrig_blk_BP
 			0.01,	//Rangefinder
@@ -2679,7 +2682,8 @@ class CfgObjectLoot {
 			0.05,	//Mauser_Mag
 			0.04,	//762x54_7N13
 			0.04,	//762x54_7N1
-			0.04,	//BP_M84_Flash
+			0.01,	//HandGrenade
+			0.04	//BP_M84_Flash
 		};
 	};
 	
