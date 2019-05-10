@@ -189,6 +189,7 @@ class CfgFunctions
 			class strongholdGetLogic {};
 			class strongholdGetLogicNearby {};
 			class posNearStronghold {};
+			class animateflag {};
 		};
 	};
 };

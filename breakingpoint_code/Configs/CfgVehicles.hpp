@@ -89,6 +89,16 @@ class CfgVehicles
 		cost = 0;
 	};
 	
+	//Container supply custom
+	
+	class ContainerSupply;
+	class Supply65: ContainerSupply
+	{
+		author="Malcain";
+		_generalMacro="Supply65";
+		maximumLoad=65;
+	};
+	
 	//Dead Bodies
 	//class Dead_base_F;
 	class GroundWeaponHolder;
@@ -2870,6 +2880,7 @@ class CfgVehicles
 		model = "\A3\Characters_F_Mark\BLUFOR\b_fullghillie_f.p3d";
 		weapons[] = {"Throw","Put"};
 		respawnWeapons[] = {"Throw","Put"};
+		hideProxySelections[] = {""};
 		magazines[] = {};
 		uniformAccessories[] = {};
 		respawnMagazines[] = {};
@@ -2961,6 +2972,7 @@ class CfgVehicles
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 0;
 		uniformClass = "BP_Ghillie_Lush";
+		hideProxySelections[] = {""};
 		identityTypes[] = {};
 		class EventHandlers : BP_PlayerEventHandlers {};
 	};

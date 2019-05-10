@@ -2,11 +2,24 @@
 This is the release note accompanying BreakingPoint: Second Wind 
 
 
-# Documentation and Credits 
+# Credits 
 
+- Breaking Point team for their amazing work.
 - LordJarhead for permission to use and build custom soundshaders upon his legacy JSRS framework.
-- dame2010 for permission and providing source models and assets from his Horror mod: https://steamcommunity.com/workshop/filedetails/?id=1556296528
+- dame2010 for providing source models and assets from his Horror mod: https://steamcommunity.com/workshop/filedetails/?id=1556296528
 - IN005 for permission to use and build upon his facewear/headgear assets from MadArma mod: https://steamcommunity.com/sharedfiles/filedetails/?id=815962700
+- Lythium team for permission to work with custom skybox.
+
+Thank you guys, you will never be forgotten.
+
+Some A3 community heroes who cannot stay unmentioned:
+- KillzoneKid for his helpful tutorials and all the knowledge he shared with community.
+- Dwarden for his continuous work on Arma.
+- Every wiki and forum scripting contributor.
+
+Some A3 community bad actors who cannot stay unmentioned:
+- FallujahMedic -FM- who exceeds moderator's instructions, censors and permabans good people from A3 Discord&Forum for their opinions on various topics.
+- players and thieves who think non-BIS work on a mod/game shall always be free for them to get.
 
 # Disclaimer and License
 

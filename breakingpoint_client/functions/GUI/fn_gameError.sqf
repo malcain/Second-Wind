@@ -64,6 +64,10 @@ if (typeName _msgID == "STRING") then {
 		case 13: {
 			_msg = "Failed To Reinforce a Haven. No water barrels nearby.";
 		};
+		//Stronghold already captured.
+		case 14: {
+			_msg = "This Stronghold is already captured by your faction.";
+		};
 	};
 
 	cutText [_msg, "PLAIN DOWN"];
