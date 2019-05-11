@@ -325,6 +325,7 @@ class CfgMovesBasic
 		BP_Pst_Jump = "";
 		BP_HolsterWeap_Jump = "";
 		BP_Act_CutBody = "";
+		BP_Act_OvenCooking = "";
 
 		/*
 		BP_Jump = " ";
@@ -407,6 +408,7 @@ class CfgMovesBasic
 
 			BP_Act_Man_Drink_Erc_x3_Gesture[] = {"BP_Drink_Erc_x3_Gesture", "Gesture"};
 			BP_Act_Man_Eat_Erc_x3_Gesture[] = {"BP_Eat_Erc_x3_Gesture", "Gesture"};
+			BP_Act_OvenCooking = "BP_OvenCooking";
 		};
 
 /*
@@ -531,9 +533,45 @@ class CfgMovesMaleSdr: CfgMovesBasic
 
 		class DeadState;
 
+		class BP_OvenCooking : AmovPercMstpSnonWnonDnon {
+			file = "\bp_sw_anims\Interacts\BPOvenCooking.rtm";
+			looped = 0;
+			speed = 0.0517241379310345;
+			mask = "BodyFullReal";
+			headBobStrength = 1.0;
+			headBobMode = 4;
+			disableWeapons = 1;
+            disableWeaponsLong = 1;
+			leftHandIKBeg = false;
+			leftHandIKCurve[] = {};
+			leftHandIKEnd = false;
+			rightHandIKBeg = false;
+			rightHandIKCurve[] = {};
+			rightHandIKEnd = false;
+			showItemInRightHand = 1;
+			showHandGun = 0;
+			weaponLowered = 0;
+			canPullTrigger = 0;
+			enableOptics = false;
+            showWeaponAim = false;
+            weaponIK = 0; //1
+			leaning = "empty";
+			aimingBody = "empty";
+			aiming = "empty";
+            forceAim = 1;
+            limitGunMovement = 1.0;
+			enableDirectControl = 0;
+			variantsPlayer[] = {};
+			variantsAI[] = {};
+			ConnectFrom[] = {"AmovPercMstpSnonWnonDnon", 9.020000, "AmovPknlMstpSnonWnonDnon", 9.020000};
+			ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.020000};
+			InterpolateTo[] = {"DeadState",0.01};
+			soundOverride = "";
+			soundEnabled = 1;
+		};
 
 		class BP_CutBody : AmovPercMstpSnonWnonDnon {
-			file = "\breakingpoint_anim\player\BPCutBody.rtm";
+			file = "\bp_sw_anims\Interacts\BPCutBody.rtm";
 			looped = 0;
 			speed = 0.085;
 			mask = "BodyFullReal";
