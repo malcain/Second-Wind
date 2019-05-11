@@ -51,6 +51,9 @@ class CfgRemoteExec
 		class BPServer_fnc_updateObject { allowedTargets=2; };		//BP_ObjectSync
 		class BPServer_fnc_updateObjectForce { allowedTargets=2; };	//BP_ObjectSyncForce
 		
+		//Strongholds
+		class BPServer_fnc_captureStart { allowedTargets=2; };		//Stronghold capture
+		
 		// Havens
 		class BPServer_fnc_lockHouse { allowedTargets=2; };			//BP_LockHouse
 		class BPServer_fnc_unlockHouse { allowedTargets=2; };		//BP_UnlockHouse

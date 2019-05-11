@@ -235,6 +235,16 @@ class CfgVehicles
 	};
 	
 	class Land_Billboard_F;
+	//class Land_Billboard_04_blank_F;
+	
+	class BP_Sign : Land_Billboard_F
+	{
+		scope = public;
+		displayName="Sign (Empty)";
+		model="\A3\Structures_F\Civ\InfoBoards\Billboard_F.p3d";
+		hiddenSelections[]={"camo"};
+		hiddenSelectionsTextures[]={"breakingpoint_ui\signs\sign.paa"};
+	};
 	
 	class BP_Sign_Ranger : Land_Billboard_F
 	{

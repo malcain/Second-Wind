@@ -88,6 +88,8 @@ class CfgFunctions
 			class strongholdCheck {};
 			class strongholdEnter {};
 			class strongholdLeave {};
+			class addCPAction {};
+			class flagAction {};
 		};
 		class Dog {
 			file = "\breakingpoint_client\functions\Dog";
