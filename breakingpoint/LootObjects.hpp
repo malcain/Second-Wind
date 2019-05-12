@@ -223,8 +223,12 @@ class BP_WeaponCrateOld : BP_LootBox {
 };
 class BP_WeaponCrate_WWII : BP_LootBox {
 	displayName = "Surplus Weapon Crate";
-	model = "\breakingpoint\models\bp_crate1b.p3d";
+	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
 };
+/*class BP_WeaponCrate_WWII : BP_LootBox {
+	displayName = "Surplus Weapon Crate";
+	model = "\breakingpoint\models\bp_crate1b.p3d";
+};*/
 	
 /* Military Boxes Large (Helicrash/Underwater)*/	
 class BP_HeavyWeaponCrate : BP_LootBox {
@@ -330,6 +334,9 @@ class BP_WeathCrateSmallWRN : BP_LootBox {
 };
 class BP_WeathCrateSmallBRN : BP_LootBox {
 	model="plp_containers\StcWeatheredCrates\plp_cts_WeathCrateSmallBrown.p3d";
+};
+class BP_WeathCrateSmallGRN : BP_LootBox {
+	model="plp_containers\StcWeatheredCrates\plp_cts_WeathCrateSmallGreen.p3d";
 };
 
 /* Ghost Hotel */
