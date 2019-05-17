@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class BP_enhancedVideo
+	class BP_SW_UI
 	{
 		units[]={};
 		weapons[]={};
@@ -75,12 +75,12 @@ class CfgVideoOptions
 		delete Normal;
 		class High
 		{
-			text="$STR_A3_OPTIONS_HIGH";
+			text="$STR_A3_OPTIONS_VERYHIGH";
 			value=96;
 		};
 		class VeryHigh
 		{
-			text="$STR_A3_OPTIONS_VERYHIGH";
+			text="$STR_A3_OPTIONS_ULTRA";
 			value=128;
 		};
 	};

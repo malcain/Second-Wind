@@ -529,6 +529,7 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_MedicalBox","object","Hospital"},
+			{"BP_Medicalbag","object","Hospital"},
 			{"BP_FoodBoxIDAP","object","Supermarket"},
 			{"BP_WeaponCrateOld","object","Residential2"},
 			{"BP_TrashBinGR","object","Trash"},
@@ -553,7 +554,8 @@ class CfgBuildingLoot
 			{"ItemDuctTape","magazine"}
 		};
 		itemChance[] =	{
-			0.30,	//BP_MedicalBox
+			0.15,	//BP_MedicalBox
+			0.15,	//BP_MedicalBag
 			0.04,   //BP_Bag1
 			0.02,   //Weapons
 			0.04,   //BP_Bag2
@@ -587,8 +589,8 @@ class CfgBuildingLoot
 		lootChance = 0.20;
 		lootPos[] = {};
 		itemType[] =	{
-			{"BP_MedicalBox","object","Hospital"},
-			{"BP_MedicalMultibox","object","Research"},
+			{"BP_Medicalbag","object","Hospital"},
+			{"BP_Researcherbox","object","Research"},
 			{"BP_PlasticBox","object","Trash"},
 			{"BP_PlasticBox","object","MilitaryAirfieldAcc"},
 			{"ItemBandage","magazine"},
@@ -612,8 +614,8 @@ class CfgBuildingLoot
 			{"ItemDuctTape","magazine"}
 		};
 		itemChance[] =	{
-			0.08,	//BP_MedicalBox
-			0.17,	//BP_MedicalMultibox
+			0.10,	//BP_MedicalBag
+			0.15,	//BP_Researcherbox
 			0.12,   //BP_PlasticBox
 			0.01,   //BP_PlasticBox MilitaryAirfieldAcc
 			0.05,	//BANDAGE

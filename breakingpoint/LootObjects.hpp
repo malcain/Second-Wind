@@ -28,18 +28,32 @@ class BP_LootBox : Thing
 };
 	
 /* Medic Boxes*/
-class BP_Medicalbox: BP_LootBox
+class BP_MedicalBox: BP_LootBox
 {
 	scope = public;
 	displayName = "Medical Box";
 	model = "\breakingpoint\models\bp_medicalbox.p3d";
 };
 
-class BP_MedicalMultibox: BP_LootBox
+class BP_ResearcherBox: BP_LootBox
 {
 	scope = public;
 	displayName = "Medical Research Box";
 	model = "plp_containers\StcMultiboxes\plp_cts_MultiboxSmallWhite.p3d";
+};
+
+class BP_MedicalBag: BP_LootBox
+{
+	scope = public;
+	displayName = "Medical Bag";
+	model = "\A3\Props_F_Orange\Humanitarian\Camps\FirstAidKit_01_closed_F.p3d";
+};
+
+class BP_MedicalbagOpen: BP_LootBox
+{
+	scope = public;
+	displayName = "Medical Bag (Open)";
+	model = "\A3\Props_F_Orange\Humanitarian\Camps\FirstAidKit_01_open_F.p3d";
 };
 
 class BP_MedicalboxHelicrash: BP_LootBox

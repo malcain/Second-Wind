@@ -1872,100 +1872,6 @@ class CfgWeapons
 		};
 	};
 	
-	class V_OutlawVest_BP: Vest_Camo_Base {
-		picture="\breakingpoint\textures\vest\icon_outlaw_vest.paa";
-		scope=2;
-		displayName="Outlaw Explosive Vest";
-		model="\breakingpoint\models\outlawvest.p3d";
-		descriptionShort="Medium Capacity, Light Armor";
-		hiddenSelections[]=
-		{
-			"_battleBelt",
-			"_DropHolster",
-			"_Serpa",
-			"_SOTGGear",
-			"_SOTGRadio",
-			"_vestBase",
-			"_VSMPouches"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"\breakingpoint\textures\vests\VSM_battlebelt_Multicam.paa",
-			"\breakingpoint\textures\vests\VSM_dropholster.paa",
-			"\breakingpoint\textures\vests\serpa.paa",
-			"\breakingpoint\textures\vests\VSM_Multicam_gear_co.paa",
-			"\breakingpoint\textures\vests\radio_pouch_green.paa",
-			"\breakingpoint\textures\vests\VSM_Multicam_plate.paa",
-			"\breakingpoint\textures\vests\VSM_pouches_Multicam.paa"
-		};
-		class ItemInfo: VestItem
-		{
-			uniformModel="\breakingpoint\models\outlawvest.p3d";
-			containerClass="Supply80";
-			mass=50;
-			passThrough=1;
-			hiddenSelections[]=
-			{
-				"_battleBelt",
-				"_DropHolster",
-				"_Serpa",
-				"_SOTGGear",
-				"_SOTGRadio",
-				"_vestBase",
-				"_VSMPouches"
-			};
-			class HitpointsProtectionInfo
-			{
-				class Chest
-				{
-					HitpointName="HitChest";
-					armor=2;
-					PassThrough=0.85000001;
-				};
-				class Diaphragm
-				{
-					HitpointName="HitDiaphragm";
-					armor=2;
-					PassThrough=0.85000001;
-				};
-				class Abdomen
-				{
-					hitpointName="HitAbdomen";
-					armor=2;
-					passThrough=0.85000001;
-				};
-				class Body
-				{
-					hitpointName="HitBody";
-					passThrough=0.85000001;
-				};
-			};
-		};
-	};
-	
-	class V_Smersh_Tan: Vest_Camo_Base {
-		picture = "\breakingpoint\textures\vest\icon_smersh_tan.paa";
-		scope = 2;
-		displayName = "Hunter Smersh Vest";
-		model = "\breakingpoint\models\huntervest.p3d";
-		hiddenSelectionsTextures[] = {
-		"\breakingpoint\textures\vest\partizan_tan.paa",
-		"\breakingpoint\textures\vest\equip_tan.paa",
-		};
-		hiddenSelections[] = {"camo1","camo2"};
-		author = "Credits: AuburnAlumni";
-
-		class ItemInfo: VestItem
-		{
-			uniformModel = "\breakingpoint\models\huntervest.p3d";
-			containerClass = "Supply60";
-			hiddenSelections[] = {"camo1","camo2"};
-			mass = 40;
-			armor = "0";
-			passThrough = 0.950000;
-		};
-	};
-	
 	class BP_MilCap_Hero3: H_MilCap_ocamo {
 		displayName = "Hero Medic Cap";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroCap3_co.paa"};
@@ -1995,27 +1901,6 @@ class CfgWeapons
 			modelSides[] = {6};
 			armor = "0";
 			passThrough = 1.000000;
-		};
-	};
-	
-	class BP_BeanieHat_Green: ItemCore
-	{
-		picture = "\breakingpoint_ui\icons\beaniehat_green.paa";
-		scope = 2;
-		displayName = "Nomad Beanie Hat (Green)";
-		model = "\breakingpoint\models\BeanieHat.p3d";
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BeanieGreen.paa"};
-		hiddenSelections[] = {"Camo"};
-		author = "SP Craig";
-		class ItemInfo: HeadgearItem
-		{
-			mass=10;
-			uniformmodel = "\breakingpoint\models\BeanieHat.p3d";
-			modelSides[]={6};
-			armor = "0";
-			passThrough = 1.000000;
-			hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BeanieGreen.paa"};
-			hiddenSelections[] = {"Camo"};
 		};
 	};
 	
