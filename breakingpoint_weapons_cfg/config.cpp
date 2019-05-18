@@ -53597,7 +53597,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;
 	    displayName = "Light Bipod";
 		descriptionShort = "Bipod for intermediate Rifle use";
-	    picture = "\A3\Weapons_F_Mark\Data\UI\gear_accu_bipod_01_snd_CA.paa";
+	    picture = "\A3\Weapons_F_Mark\Data\UI\icon_bipod_02_F_blk_ca.paa";
 	    model = "\breakingpoint_weapons\models\Harris\BP_Harris.p3d";
 
 	    class ItemInfo: InventoryUnderItem_Base_F
@@ -53616,7 +53616,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;
 	    displayName = "Heavy Bipod";
 		descriptionShort = "Bipod for LMG and Sniper applications";
-	    picture = "\A3\Weapons_F_Mark\Data\UI\gear_accu_bipod_01_snd_CA.paa";
+	    picture = "\A3\Weapons_F_Mark\Data\UI\icon_bipod_03_F_blk_ca.paa";
 	    model = "\breakingpoint_weapons\models\Harris\BP_Harris2.p3d";
 
 	    class ItemInfo: InventoryUnderItem_Base_F

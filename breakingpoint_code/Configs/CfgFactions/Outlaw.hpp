@@ -179,10 +179,10 @@
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Rebel_4"};
-					backpack[] = {"BP_Coyote_Bandit"};
-					vest[]={"V_OutlawVest_BP"};
+					backpack[] = {"BP_Rpack2"};
+					vest[]={};
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_Agenda","BP_Rebel_4_Orange","BP_Rebel_4_ChocChip","BP_Rebel_4_Classic"};
-					headgear[]={"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
+					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4"};
 				};
