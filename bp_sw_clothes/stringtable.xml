@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="breakingpoint_sw">
+  <Package name="breakingpoint_sw_clothes">
+    <Container name="Vsechno">
+
+	  <Key ID="STR_BP_Bag_1">
+        <Original>BP Bag #1</Original>
+        <English>BP Bag #1</English>
+        <Russian>BP Сумка #1</Russian>
+      </Key>
+      <Key ID="STR_BP_Bag_2">
+        <Original>BP Bag #2</Original>
+        <English>BP Bag #2</English>
+        <Russian>BP Сумка #2</Russian>
+      </Key>	  
+  
+    </Container>
+  </Package>
+</Project>
