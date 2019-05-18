@@ -247,6 +247,11 @@ class CfgFunctions
 			class logicSpawnLoot {};
 			class thirskSnow {};
 		};
+		class Interaction {
+			file = "\breakingpoint_client\functions\Interaction";
+			class detectMove {};
+			class parkour {};
+		};
 		class Init {
 			file = "\breakingpoint_client\functions\Init";
 			class initPublicEH {};

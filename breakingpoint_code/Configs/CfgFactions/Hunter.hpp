@@ -175,18 +175,18 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"BP_Shemag_bandit"};
+					toolbelt[] = {};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
 					handgun[] = {};
 					clothing[] = {"BP_Hunter_4"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
-					vest[] = {"V_Smersh_Tan"};
+					vest[] = {};
 					uniform[] = {"BP_Hunter_4","BP_Hunter_4_Green"};
-					headgear[] = {"","BP_Shemag_bandit","H_Shemag_olive"};
+					headgear[] = {"BP_Shemag_bandit","H_Shemag_olive"};
 					nvg[] = {"TRYK_Shemagh_G_NV"};
-					facewear[] = {"rvg_balaclava_4", "rvg_balaclavaLow_4", "rvg_balaclavaLow_1"};
+					facewear[] = {""};//{"rvg_balaclava_4", "rvg_balaclavaLow_4", "rvg_balaclavaLow_1"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -203,7 +203,7 @@
 					//Array Of Magazines Inside Backpack
 					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"H_Shemag_olive"};
+					items[] = {};
 				};
 			};
 		};

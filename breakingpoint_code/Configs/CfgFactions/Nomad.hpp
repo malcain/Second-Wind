@@ -191,10 +191,10 @@
 					clothing[] = {"BP_Refugee_4"};
 					backpack[] = {"BP_Hpack"};
 					vest[] = {};
-					uniform[] = {"BP_Refugee_4", "BP_Refugee_4_brown"};
-					headgear[] = {"BP_BeanieHat_Green", "CUP_H_C_Beanie_04", "H_MM_Helmet_02", "CUP_H_C_Ushanka_04"};
-					nvg[] = {"TRYK_HRPIGEAR_NV"};
-					facewear[] = {"NeckTight_OD", "NeckTight_RED", "NeckTight_TanO", "SP_Goggles_green"};
+					uniform[] = {"BP_Refugee_4"};
+					headgear[] = {"","H_MM_Helmet_02"};//{"CUP_H_C_Beanie_04", "H_MM_Helmet_02", "CUP_H_C_Ushanka_04"};
+					nvg[] = {""};//{"TRYK_HRPIGEAR_NV"};
+					facewear[] = {""};//{"NeckTight_OD", "NeckTight_RED", "NeckTight_TanO", "SP_Goggles_green"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform

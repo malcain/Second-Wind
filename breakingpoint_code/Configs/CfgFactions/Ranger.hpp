@@ -183,13 +183,13 @@ class Ranger : BP_BaseFaction
 				primary[] = {};
 				launcher[] = {};
 				handgun[] = {"BP_1911"};
-				clothing[] = {"BP_Guardian_4_Lizard"};
-				backpack[] = {"BP_Bergen_Hero"};
-				vest[] = {"CUP_V_C_Police_Holster"};
-				uniform[] = {"BP_Guardian_4_Lizard","BP_Guardian_4","BP_Guardian_4_Camo"};
-				headgear[] = {"CUP_H_NAPA_Fedora", "CUP_H_C_Policecap_01"};
+				clothing[] = {"BP_Guardian_3"};
+				backpack[] = {"BP_Mpack"};
+				vest[] = {};
+				uniform[] = {"BP_Guardian_3"};
+				headgear[] = {""};
 				nvg[] = {"", "TRYK_G_Shades_Blue_NV"};
-				facewear[] = {"CFP_Neck_Plain3", "CFP_Scarfbeard_grey", "CFP_Scarfbeardshades_grey", "CFP_Scarfshades_grey", "LOG_Shemagh_Gry", "L_Shemagh_Red"};
+				facewear[] = {""};
 			};
 			class Uniform : BP_BaseGear  {
 				//Array Of Weapons Inside Uniform

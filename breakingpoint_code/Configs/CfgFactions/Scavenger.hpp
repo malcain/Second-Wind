@@ -161,7 +161,7 @@
 					uniform[] = {"BP_Scavenger_3"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","SP_Balaclava_Venom","NeckTight_RED","NeckTight_TanO"};
+					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -203,7 +203,7 @@
 					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","SP_Balaclava_Venom","NeckTight_RED","NeckTight_TanO"};
+					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
