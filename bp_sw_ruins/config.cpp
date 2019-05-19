@@ -108,7 +108,7 @@ class Land_Church_03_F: Church_F
 		class Ruin1
 		{
 			simulation="ruin";
-			type="\A3\Structures_F_Exp\Cultural\Church_02\Church_03_ruins_F.p3d";
+			type="\A3\Structures_F_Exp\Cultural\Church_03\Church_03_ruins_F.p3d";
 			position="";
 			intensity=1;
 			interval=1;

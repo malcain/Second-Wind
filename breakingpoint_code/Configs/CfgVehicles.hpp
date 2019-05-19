@@ -3557,36 +3557,12 @@ class CfgVehicles
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
 	};
-	
-	class BP_Guardian3_DES: BP_Guardian3_F {
-		scope = 2;
-		displayName = "Guardian 3 Desert";
-		uniformClass = "BP_Guardian3_DES";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\prizrak_des_co.paa"};
-	};
-	
-	class BP_Guardian3_URB: BP_Guardian3_F {
-		scope = 2;
-		displayName = "Guardian 3 Urban";
-		uniformClass = "BP_Guardian3_URB";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\prizrak_urb_co.paa","\breakingpoint_classes\textures\prizrak_urb_co.paa"};
-	};
-	
-	class BP_Guardian3_WDL: BP_Guardian3_F {
-		scope = 2;
-		displayName = "Guardian 3 Woodland";
-		uniformClass = "BP_Guardian3_WDL";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\prizrak_wdl_co.paa"};
-	};
 		
 	class BP_Guardian4_F: BP_Man {
 		scope = 2;
 		displayName = "Guardian 4";
 		uniformClass = "BP_Guardian_4";
-		model = "\breakingpoint_classes\models\BP_Guardian4.p3d";
+		model = "\breakingpoint_classes\models\BP_Guardian3.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		side = 3;
 		backpack = "";

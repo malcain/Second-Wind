@@ -30,7 +30,7 @@ class CfgPatches
 {
 	class bp_sw_coverInCars
 	{
-		units[] = {};
+		units[] = {""};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {};
@@ -114,7 +114,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 
 		class CiC_Driver_Cover_Down : Crew
 		{
-            file = "\bp_sw_coverInCars\anim\CiC_Driver_Cover_Down.rtm";
+            file = "\bp_sw\bp_sw_coverInCars\anim\CiC_Driver_Cover_Down.rtm";
             looped = 0;
             speed = 0.7;
 			duty = 0.2;
@@ -152,7 +152,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class CiC_Driver_Cover_Idle : Crew
 		{
-            file = "\bp_sw_coverInCars\anim\CiC_Driver_Cover_Idle.rtm";
+            file = "\bp_sw\bp_sw_coverInCars\anim\CiC_Driver_Cover_Idle.rtm";
             looped = 0;
             speed = 0.7;
 			duty = 0.2;
@@ -190,7 +190,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class CiC_Driver_Cover_Up : Crew //BasicDriver? Crew!
 		{
-            file = "\bp_sw_coverInCars\anim\CiC_Driver_Cover_Up.rtm";
+            file = "\bp_sw\bp_sw_coverInCars\anim\CiC_Driver_Cover_Up.rtm";
             looped = 0;
             speed = 0.7;
 			duty = 0.2;

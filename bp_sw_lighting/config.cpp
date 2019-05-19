@@ -113,17 +113,17 @@ class CfgWorlds
 		{
 			class EnvMap1
 			{
-				texture="bp_sw_lighting\data\sky1\env_land_clearsky_ca.paa";
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_clearsky_ca.paa";
 				overcast=0;
 			};
 			class EnvMap2
 			{
-				texture="bp_sw_lighting\data\sky1\env_land_overcastsky_ca.paa";
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_overcastsky_ca.paa";
 				overcast=0.30000001;
 			};
 			class EnvMap3
 			{
-				texture="bp_sw_lighting\data\sky1\env_land_semicloudysky_ca.paa";
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_semicloudysky_ca.paa";
 				overcast=0.60000002;
 			};
 		};
@@ -4061,9 +4061,9 @@ class CfgWorlds
 			{
 				class Weather1: Weather1
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_clear_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_clear_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_clear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_clear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
 					overcast=0;
 					alpha=0.5;
 					size=0.1;
@@ -4078,9 +4078,9 @@ class CfgWorlds
 				};
 				class Weather7: Weather1
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_veryclear_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_veryclear_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_veryclear_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_horizont_sky.paa";
 					overcast=0.22000001;
 					alpha=0.6;
 					size=0.25;
@@ -4095,9 +4095,9 @@ class CfgWorlds
 				};
 				class Weather2: Weather2
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
 					overcast=0.40;
 					alpha=0.80000002;
 					size=0.45000001;
@@ -4111,9 +4111,9 @@ class CfgWorlds
 				};
 				class Weather3: Weather3
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_veryclear_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_horizont_sky.paa";
 					overcast=0.58000001;
 					alpha=0.94000001;
 					size=0.55;
@@ -4127,9 +4127,9 @@ class CfgWorlds
 				};
 				class Weather4: Weather4
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_almostclear_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_horizont_sky.paa";
 					overcast=0.67000002;
 					alpha=0.99000001;
 					size=0.64999998;
@@ -4143,9 +4143,9 @@ class CfgWorlds
 				};
 				class Weather5: Weather5
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
 					overcast=0.84;
 					alpha=1;
 					size=0.80000001;
@@ -4159,9 +4159,9 @@ class CfgWorlds
 				};
 				class Weather6: Weather5
 				{
-					sky="bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
-					skyR="bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
-					horizon="bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
 					overcast=0.95;
 					alpha=1;
 					bright=0;
@@ -4332,14 +4332,14 @@ class CfgWorlds
 		soundMapSizeCoef=4;
 		satelliteNormalBlendStart=10;
 		satelliteNormalBlendEnd=100;
-		skyObject="bp_sw_lighting\data\OldSky\obloha.p3d";
-		horizontObject="bp_sw_lighting\data\OldSky\horizont.p3d";
+		skyObject="bp_sw\bp_sw_lighting\data\OldSky\obloha.p3d";
+		horizontObject="bp_sw\bp_sw_lighting\data\OldSky\horizont.p3d";
 		//horizontObject="A3\Map_Tanoabuka\data\horizon.p3d"; //They have cleared the skybox texture, but fucked up model setup. TODO: make an own one?
-		skyTexture="bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
-		skyTextureR="bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
+		skyTexture="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
+		skyTextureR="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
 		//skyTexture="A3\Map_Tanoabuka\data\sky_semicloudy_sky.paa";
 		//skyTextureR="A3\Map_Tanoabuka\data\sky_semicloudy_lco.paa";
-		haloObject="bp_sw_lighting\data\OldSky\sunhalo.p3d";
+		haloObject="bp_sw\bp_sw_lighting\data\OldSky\sunhalo.p3d";
 		terrainBlendMaxDarkenCoef=1;
 		terrainBlendMaxBrightenCoef=0;
 		clutterGrid=0.80000001;

@@ -705,53 +705,6 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Guardian_3_DES: BP_Guardian_3 {
-		scope = 2;
-		displayName = "Ranger level 3 (desert)";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\prizrak_des_co.paa"};
-		
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Guardian3_DES";
-			allowedSlots[] = {};
-			containerClass = "Supply60";
-			hiddenSelections[] = {"Camo"};
-			mass = 40;
-		};
-	};
-	
-	class BP_Guardian_3_URB: BP_Guardian_3 {
-		scope = 2;
-		displayName = "Ranger level 3 (urban)";
-		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\prizrak_urb_co.paa"};
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Guardian3_URB";
-			allowedSlots[] = {};
-			containerClass = "Supply60";
-			hiddenSelections[] = {"Camo"};
-			mass = 40;
-		};
-	};
-	
-	class BP_Guardian_3_WDL: BP_Guardian_3 {
-		scope = 2;
-		displayName = "Ranger level 3 (woodland)";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Guardian3_WDL";
-			allowedSlots[] = {};
-			containerClass = "Supply60";
-			hiddenSelections[] = {"Camo"};
-			mass = 40;
-		};
-	};
-	
 	class BP_Guardian_4: Uniform_base
 	{
 		scope = 2;
@@ -766,39 +719,7 @@ class CfgWeapons
 			containerClass="Supply60";
 			mass=40;
 		};
-	};
-	
-	class BP_Guardian_4_Lizard: Uniform_base
-	{
-		scope = 2;
-		displayName = "Ranger level 4 (Lizard)";
-		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="usm_bdu_portliz";
-			allowedSlots[] = {};
-			containerClass="Supply60";
-			mass=40;
-		};
-	};
-	
-	class BP_Guardian_4_Camo: Uniform_base
-	{
-		scope = 2;
-		displayName = "Ranger level 4 (Camo)";
-		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="usm_bdu_ERDL";
-			allowedSlots[] = {};
-			containerClass="Supply60";
-			mass=40;
-		};
-	};
+	};	
 	
 	class BP_Rebel_F: Uniform_Base {
 		scope = 2;
@@ -1793,25 +1714,6 @@ class CfgWeapons
 			passThrough = 1;
 			hitpointName = "HitLegs";
 			//hiddenSelections[] = {"camo"};
-		};
-	};
-	
-	class V_HVest_BP: Vest_NoCamo_Base {
-		scope = 2;
-		displayName = "Heavy Equipment Vest";
-		picture = "\A3\characters_f\Data\UI\icon_V_TacVestIR_blk_CA.paa";
-		model = "\breakingpoint_classes\models\BP_HVest.p3d";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_HeroVest_co.paa"};
-
-		class ItemInfo: VestItem {
-			allowedSlots[] = {};
-			containerClass = "Supply110";
-			uniformModel = "\breakingpoint_classes\models\BP_HVest.p3d";
-			mass = 95;
-			armor = "0";
-			passThrough = 1;
-			hiddenSelections[] = {"camo"};
 		};
 	};
 	

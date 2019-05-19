@@ -1,15 +1,14 @@
-
-ambient[]={0.52700001,0.52700001,0.52700001,1};
-diffuse[]={0.52700001,0.52700001,0.52700001,1};
+ambient[]={1,1,1,1};
+diffuse[]={1,1,1,1};
 forcedDiffuse[]={0,0,0,0};
 emmisive[]={0,0,0,1};
-specular[]={0.079999998,0.079999998,0.079999998,1};
-specularPower=87.599998;
+specular[]={0.40900001,0.40900001,0.40900001,1};
+specularPower=28.299999;
 PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="breakingpoint\textures\clothing\Soldier_NOHQ.paa";
+	texture="breakingpoint_classes\textures\woodland_NOHQ.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -21,7 +20,7 @@ class Stage1
 };
 class Stage2
 {
-	texture="#(argb,8,8,3)color(1.0,1.0,1.0,1.0,DT)";
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -33,7 +32,7 @@ class Stage2
 };
 class Stage3
 {
-	texture="#(argb,8,8,3)color(0,0,0,0.1,MC)";
+	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
 	uvSource="tex1";
 	class uvTransform
 	{
@@ -45,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="breakingpoint\textures\clothing\soldier_at_as.paa";
+	texture="breakingpoint_classes\textures\soldier2_as.paa";
 	uvSource="tex1";
 	class uvTransform
 	{
@@ -57,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="breakingpoint\textures\clothing\Soldier_SMDI.paa";
+	texture="breakingpoint_classes\textures\woodland_SMDI.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -69,7 +68,7 @@ class Stage5
 };
 class Stage6
 {
-	texture="#(ai,32,128,1)fresnel(0.71,1.33)";
+	texture="#(ai,64,64,1)fresnel(1,0.7)";
 	uvSource="tex";
 	class uvTransform
 	{
