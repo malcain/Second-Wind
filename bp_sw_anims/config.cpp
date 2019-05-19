@@ -1,4 +1,5 @@
 #define private     0
+#define private     0
 #define protected   1
 #define public      2
 
@@ -6,12 +7,12 @@
 #define false 0
 
 class CfgPatches {
-    class BP_SW_Anims {
-		units[] = {};
+    class bp_sw_anims {
+		units[] = {""};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Anims_F"};
-        version = 0.01;
+        version = 0.1;
     };
 };
 
@@ -226,137 +227,137 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class climbOverHigh_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOverH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverH.rtm";
 			speed = 0.2;  //0.1657
 		};
 		class climbOverHigh_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOverH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverH.rtm";
 			speed = 0.2;  //0.1657
 		};
 		class climbOverHigh_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOverH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverH.rtm";
 			speed = 0.2;  //0.1657
 		};
 		class climbOverMedium_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOverM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverM.rtm";
 			speed = 0.3529; //0.3529
 		};
 		class climbOverMedium_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOverM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverM.rtm";
 			speed = 0.3529; //0.3529
 		};
 		class climbOverMedium_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOverM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverM.rtm";
 			speed = 0.3529; //0.3529
 		};
 		class climbOverLow_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOverL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverL.rtm";
 			speed = 0.65000002;
 		};
 		class climbOverLow_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOverL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverL.rtm";
 			speed = 0.65000002;
 		};
 		class climbOverLow_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOverL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOverL.rtm";
 			speed = 0.65000002;
 		};
 		class climbOnHigh_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOnH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnH.rtm";
 			speed = 0.3; //0.2654 - base
 		};
 		class climbOnHigh_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOnH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnH.rtm";
 			speed = 0.3; //0.2654 - base
 		};
 		class climbOnHigh_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOnH.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnH.rtm";
 			speed = 0.3; //0.2654 - base
 		};
 		class climbOnMedium_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOnM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnM.rtm";
 			speed = 0.54;
 		};
 		class climbOnMedium_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOnM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnM.rtm";
 			speed = 0.54;
 		};
 		class climbOnMedium_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOnM.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnM.rtm";
 			speed = 0.54;
 		};
 		class climbOnLow_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\climbOnL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnL.rtm";
 			speed = 0.65; //speed 0.3448
 		};
 		class climbOnLow_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\climbOnL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnL.rtm";
 			speed = 0.65; //speed 0.3448
 		};
 		class climbOnLow_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\climbOnL.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\climbOnL.rtm";
 			speed = 0.65; //speed 0.3448
 		};
 		class stepOn_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\stepOn.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\stepOn.rtm";
 			speed = 1.1;
 		};
 		class stepOn_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\stepOn.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\stepOn.rtm";
 			speed = 1.1;
 		};
 		class stepOn_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\stepOn.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\stepOn.rtm";
 			speed = 1.1;
 		};
 		class vaultOver_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\vaultOver.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\vaultOver.rtm";
 			speed = 0.75;
 		};
 		class vaultOver_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\vaultOver.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\vaultOver.rtm";
 			speed = 0.75;
 		};
 		class vaultOver_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\vaultOver.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\vaultOver.rtm";
 			speed = 0.75;
 		};
 		class jumpDown_hlr: prkr_animBase_hlr
 		{
-			file="\bp_sw_anims\Moves\jumpDown.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\jumpDown.rtm";
 			speed = 0.84;
 		};
 		class jumpDown_rfl: prkr_animBase_rfl
 		{
-			file="\bp_sw_anims\Moves\jumpDown.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\jumpDown.rtm";
 			speed = 0.84;
 		};
 		class jumpDown_pst: prkr_animBase_pst
 		{
-			file="\bp_sw_anims\Moves\jumpDown.rtm";
+			file="\bp_sw\bp_sw_anims\Moves\jumpDown.rtm";
 			speed = 0.84;
 		};
 	};
