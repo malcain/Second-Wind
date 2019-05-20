@@ -254,7 +254,7 @@ class CfgSounds
 
 	class breath_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\breath_1",0.1,1,100};
+		sound[] = {"breakingpoint_sfx\player_effects\BP_Thirst_0.ogg",0.1,1,100};
 		titles[] = {};
 	};
 	class z_chopwood_0 {
@@ -294,17 +294,17 @@ class CfgSounds
 	};
 	class gore_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_1",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\gore\HeadExplode1.ogg",0.1,1,140};
 		titles[] = {};
 	};
 	class gore_2 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_2",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\gore\HeadExplode2.ogg",0.1,1,140};
 		titles[] = {};
 	};
 	class gore_3 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\gore_3",0.1,1,140};
+		sound[] = {"breakingpoint_sfx\gore\HeadExplode3.ogg",0.1,1,140};
 		titles[] = {};
 	};
 	class panic_0 {
@@ -556,7 +556,7 @@ class CfgSounds
 	class z_hit_6 : z_hit_0 {
 		sound[] = {"breakingpoint_sfx\action\z_hit_6.ogg",0.1,1,30};
 	};
-	class z_hit_7 : z_hit_0 {
+	/*class z_hit_7 : z_hit_0 {
 		sound[] = {"breakingpoint_sfx\action\z_hit_7.ogg",0.1,1,30};
 	};
 	class z_hit_8 : z_hit_0 {
@@ -570,7 +570,7 @@ class CfgSounds
 	};
 	class z_hit_11 : z_hit_0 {
 		sound[] = {"breakingpoint_sfx\action\z_hit_11.ogg",0.1,1,30};
-	};
+	};*/
 
 	class z_fracture_0 : gore_1 {
 		sound[] = {"breakingpoint_sfx\gore\fracture_0.ogg",1,1,80};
