@@ -55,7 +55,7 @@ addons[]=
 	"A3_Structures_F_EPB_Civ_Garbage",
 	"A3_Data_F_ParticleEffects",
 	"A3_Structures_F_Research",
-	"breakingpoint_ruins",
+	"bp_sw_ruins",
 	"A3_Structures_F_EPC_Civ_Garbage",
 	"A3_Soft_F_Orange_Van_02",
 	"Horror_Props_pat",
