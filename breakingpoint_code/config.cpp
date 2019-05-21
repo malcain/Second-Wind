@@ -55,12 +55,12 @@ class CfgMods
 	class BreakingPoint
 	{
 		dir = "@BreakingPoint";
-		picture = "\breakingpoint_code\gui\BreakingPoint_Logo.paa";
+		//picture = "\breakingpoint_code\gui\BreakingPoint_Logo.paa";
 		name = "Breaking Point";
-		author = "Deathlyrage";
+		author = "Malcain, Deathlyrage";
 		hidePicture = 1;
 		hideName = 1;
-		version = "0.1732";
+		version = "0.7";
 	};
 };
 

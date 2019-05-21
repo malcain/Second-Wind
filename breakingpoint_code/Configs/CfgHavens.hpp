@@ -141,7 +141,7 @@ class Land_House_Logic : House_F
 	model="\A3\Weapons_f\dummyweapon.p3d";
 };
 
-class Land_Shed_Ind02 : House_F
+/*class Land_Shed_Ind02 : House_F
 {
 	scope=1;
 	armor=400;
@@ -347,7 +347,7 @@ class Land_Shed_Ind02 : House_F
 	actionEnd2="OpenDoors2";
 	replaceDamaged="Land_Shed_Ind02_dam";
 	replaceDamagedHitpoints[]={"Hit1","Hit2","Hit3","Hit4","Hit5","Hit6"};
-};
+};*/
 
 
 class Land_Hospital_F : House_F
@@ -515,7 +515,7 @@ class Land_fs_feed_F : House_Small_F
 	};
 };
 
-class Land_A_FuelStation_Feed : Strategic
+/*class Land_A_FuelStation_Feed : Strategic
 {
     model = "\ca\structures\House\A_FuelStation\A_FuelStation_Feed";
     transportFuel = 0;
@@ -666,7 +666,7 @@ class Land_A_FuelStation_Feed : Strategic
                         };
 
                 };
-
+*/
 class Land_i_Shed_Ind_F : House_F
 {
 	mapSize=32.94;

@@ -135,8 +135,8 @@ class CfgWeapons
 		displayName = "Civ Zombie Clothing";
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian1.paa"};
+		//hiddenSelections[] = {"camo"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian1.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -153,8 +153,8 @@ class CfgWeapons
 		displayName = "Civ Zombie Clothing";
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian2.paa"};
+		//hiddenSelections[] = {"camo"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Civilian2.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -171,8 +171,8 @@ class CfgWeapons
 		displayName = "Military Zombie Clothing";
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		hiddenSelections[] = {"Camo1", "Camo2"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes2.paa", "\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
+		//hiddenSelections[] = {"Camo1", "Camo2"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes2.paa", "\A3\Characters_F\OPFOR\Data\tech_CO.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -189,8 +189,8 @@ class CfgWeapons
 		displayName = "RangeMaster Zombie Clothing";
 		picture = "\A3\characters_f\data\ui\icon_U_Citizen_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes1.paa"};
+		//hiddenSelections[] = {"camo"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint\textures\clothing\BP_Zombie_Clothes1.paa"};
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
@@ -1287,96 +1287,6 @@ class CfgWeapons
 			uniformClass = "BP_SurvivalistF_Z";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_1: Uniform_Base {
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer1_F";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_1_Z: Uniform_Base { //ZOMBIE
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer1_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply20";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_2: Uniform_Base {
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer2_F";
-			allowedSlots[] = {};
-			containerClass = "Supply40";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_2_Z: Uniform_Base { //ZOMBIE
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer2_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply40";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_3: Uniform_Base {
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer3_F";
-			allowedSlots[] = {};
-			containerClass = "Supply60";
-			mass = 40;
-		};
-	};
-	
-	class BP_Engineer_3_Z: Uniform_Base { //ZOMBIE
-		scope = 2;
-		displayName = "";
-		picture = "breakingpoint_weaponsiconsicon_f_b_combatuniform_ocam_ca.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "BP_Engineer3_Z";
-			allowedSlots[] = {};
-			containerClass = "Supply60";
 			mass = 40;
 		};
 	};
@@ -2796,7 +2706,7 @@ class CfgWeapons
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillies\ghillie1_ca.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
 		
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
@@ -2814,7 +2724,7 @@ class CfgWeapons
 		picture = "\breakingpoint_ui\icons\NoneIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\Ghillies\ghillie1_ca.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
 		
 		class ItemInfo: UniformItem {
 			uniformModel = "-";

@@ -761,7 +761,7 @@ class CfgMagazines
 		displayName = "Sheeps Wool";
 		descriptionUse = "Sheeps Wool";
 		model = "\breakingpoint\models\bp_wool.p3d";
-		picture = "\breakingpoint\textures\icons\wool_ca.paa";
+		picture = "\breakingpoint\textures\icons\bp_wool_ca.paa";
 		descriptionShort = "Sheeps wool used for Beds.";
 		mass = 20;
 	};

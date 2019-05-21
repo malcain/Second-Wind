@@ -86,9 +86,9 @@ class CfgAmmo
 			angle = 65; //Angle Of Hit Detection
 			sounds[] = 
 			{
-				{"breakingpoint_sfx\zombie\attack_0.wav", 1.384893, 1, 70},
-				{"breakingpoint_sfx\zombie\attack_2.wav", 1.184893, 0.7, 70},
-				{"breakingpoint_sfx\zombie\chase_0.wav", 1.284893, 1.1, 70}
+				{"breakingpoint_sfx\zombie\attack_0.ogg", 1.384893, 1, 70},
+				{"breakingpoint_sfx\zombie\attack_2.ogg", 1.184893, 0.7, 70},
+				{"breakingpoint_sfx\zombie\chase_0.ogg", 1.284893, 1.1, 70}
 			};
 		};
 		
