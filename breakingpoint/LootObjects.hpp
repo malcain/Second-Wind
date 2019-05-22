@@ -484,7 +484,7 @@ class BP_LuggageCaseBG : BP_LootBox {
 };
 
 class BP_Bag3 : BP_LootBox { 
-model = "\breakingpoint_sw\breakingpoint_sw_box\bp_bag3.p3d"; 
+model = "\bp_sw\bp_sw_box\bp_bag3.p3d"; 
 };
 
 class BP_Packs : BP_LootBox { 
