@@ -24,7 +24,11 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.02;
-		requiredAddons[] = {};
+		requiredAddons[] = {
+			"breakingpoint_functions",
+			"breakingpoint",
+			"A3_Characters_F"
+		};
 	};
 };
 
