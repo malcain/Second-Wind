@@ -536,7 +536,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class DeadState;
 
 		class BP_OvenCooking : AmovPercMstpSnonWnonDnon {
-			file = "\bp_sw_anims\Interacts\BPOvenCooking.rtm";
+			file = "\bp_sw\bp_sw_anims\Interacts\BPOvenCooking.rtm";
 			looped = 0;
 			speed = 0.0517241379310345;
 			mask = "BodyFullReal";
@@ -573,7 +573,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 
 		class BP_CutBody : AmovPercMstpSnonWnonDnon {
-			file = "\bp_sw_anims\Interacts\BPCutBody.rtm";
+			file = "\bp_sw\bp_sw_anims\Interacts\BPCutBody.rtm";
 			looped = 0;
 			speed = 0.085;
 			mask = "BodyFullReal";
@@ -12417,658 +12417,6 @@ class cfgsoundshaders
 		};
 		limitation=1;
 	};
-	class jsrs_warhead_reflector_1_interior
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\interior reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 0.75 * interior";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_forest
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_forest_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_forest reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_trees
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" ( 1-interior/1.4 ) * trees / 3 ";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_houses
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\houses reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_houses_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_houses reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_meadow
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\meadow reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_1_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\distance_reflectors\warhead\reflector_1.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_interior
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\interior reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 0.75 * interior";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_forest
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_forest_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_forest reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_trees
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" ( 1-interior/1.4 ) * trees / 3 ";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_houses
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\houses reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_houses_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_houses reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_meadow
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\meadow reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_2_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\distance_reflectors\warhead\reflector_2.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_interior
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\interior reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 0.75 * interior";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_forest
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_forest_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_forest reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_trees
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" ( 1-interior/1.4 ) * trees / 3 ";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_houses
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\houses reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_houses_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_houses reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_meadow
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\meadow reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_3_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\distance_reflectors\warhead\reflector_3.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_interior
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\interior reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 0.75 * interior";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_forest
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_forest_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_forest reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1.20 * (forest max trees) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_trees
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\forest reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" ( 1-interior/1.4 ) * trees / 3 ";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_houses
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\houses reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_houses_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\dist_houses reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1 * houses * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_meadow
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\meadow reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=60;
-		rangecurve[]=
-		{
-			{0,1},
-			{20,0.40000001},
-			{60,0}
-		};
-		limitation=1;
-	};
-	class jsrs_warhead_reflector_4_distance
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\reflectors\distance_reflectors\warhead\reflector_4.ogg",
-				1
-			}
-		};
-		volume=" 1.00 * (meadows max sea) * (1-interior/1.4)";
-		range=700;
-		rangecurve[]=
-		{
-			{0,0},
-			{50,0.25},
-			{100,1},
-			{300,0}
-		};
-		limitation=1;
-	};
 	class jsrs_9mm_sd_reflector_1_interior
 	{
 		samples[]=
@@ -24720,199 +24068,6 @@ class cfgsoundshaders
 			{2500,0}
 		};
 	};
-	class jsrs_m107_closure_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\closure\sniper_1.ogg",
-				1
-			}
-		};
-		volume=1;
-		range=2;
-		rangecurve="jsrs_basic_vl_sin";
-	};
-	class jsrs_m107_interior_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\m107\close_interior_1.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\m107\close_interior_2.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\m107\close_interior_3.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\m107\close_interior_4.ogg",
-				1
-			}
-		};
-		volume="2.20*interior";
-		range=5;
-	};
-	class jsrs_m107_interior_shot_2_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\m107\close_distance_interior_1.ogg",
-				1
-			}
-		};
-		volume="2.05*interior";
-		range=100;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,1},
-			{100,0}
-		};
-	};
-	class jsrs_m107_distance_0m_to_5m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\close_1.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\close_2.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\close_3.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\close_4.ogg",
-				1
-			}
-		};
-		volume="2.0175*(1-interior/1.4)";
-		range=5;
-		rangecurve[]=
-		{
-			{0,1},
-			{5,0}
-		};
-	};
-	class jsrs_m107_distance_5m_to_100m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\close_distance_1.ogg",
-				1
-			}
-		};
-		volume="1.550*(1-interior/1.4)";
-		range=100;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,1},
-			{100,0}
-		};
-	};
-	class jsrs_m107_distance_100m_to_400m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\medium_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.375;
-		range=400;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,0},
-			{100,1},
-			{400,0}
-		};
-	};
-	class jsrs_m107_distance_400m_to_800m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\far_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=800;
-		rangecurve[]=
-		{
-			{0,0},
-			{100,0},
-			{400,1},
-			{800,0}
-		};
-	};
-	class jsrs_m107_distance_800m_to_1500m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\very_far_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=1500;
-		rangecurve[]=
-		{
-			{0,0},
-			{500,0},
-			{800,1},
-			{1500,0}
-		};
-	};
-	class jsrs_m107_distance_1500m_to_2500m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\m107\last_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=2500;
-		rangecurve[]=
-		{
-			{0,0},
-			{800,0},
-			{1500,1},
-			{2500,0}
-		};
-	};
 
 	class jsrs_m4_closure_soundshader
 	{
@@ -27627,199 +26782,6 @@ class cfgsoundshaders
 
 			{
 				"breakingpoint_jsrs\sounds\shot\ak12\last_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=2500;
-		rangecurve[]=
-		{
-			{0,0},
-			{800,0},
-			{1500,1},
-			{2500,0}
-		};
-	};
-	class jsrs_pp2000_closure_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\closure\smg_4.ogg",
-				1
-			}
-		};
-		volume=1;
-		range=2;
-		rangecurve="jsrs_basic_vl_sin";
-	};
-	class jsrs_pp2000_interior_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\pp2000\close_interior_1.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\pp2000\close_interior_2.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\pp2000\close_interior_3.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\pp2000\close_interior_4.ogg",
-				1
-			}
-		};
-		volume="2.20*interior";
-		range=5;
-	};
-	class jsrs_pp2000_interior_shot_2_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\interior\pp2000\close_distance_interior_1.ogg",
-				1
-			}
-		};
-		volume="2.05*interior";
-		range=100;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,1},
-			{100,0}
-		};
-	};
-	class jsrs_pp2000_distance_0m_to_5m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\close_1.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\close_2.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\close_3.ogg",
-				1
-			},
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\close_4.ogg",
-				1
-			}
-		};
-		volume="2.0175*(1-interior/1.4)";
-		range=5;
-		rangecurve[]=
-		{
-			{0,1},
-			{5,0}
-		};
-	};
-	class jsrs_pp2000_distance_5m_to_100m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\close_distance_1.ogg",
-				1
-			}
-		};
-		volume="1.550*(1-interior/1.4)";
-		range=100;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,1},
-			{100,0}
-		};
-	};
-	class jsrs_pp2000_distance_100m_to_400m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\medium_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.375;
-		range=400;
-		rangecurve[]=
-		{
-			{0,0},
-			{5,0},
-			{100,1},
-			{400,0}
-		};
-	};
-	class jsrs_pp2000_distance_400m_to_800m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\far_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=800;
-		rangecurve[]=
-		{
-			{0,0},
-			{100,0},
-			{400,1},
-			{800,0}
-		};
-	};
-	class jsrs_pp2000_distance_800m_to_1500m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\very_far_distance_1.ogg",
-				1
-			}
-		};
-		volume=1.125;
-		range=1500;
-		rangecurve[]=
-		{
-			{0,0},
-			{500,0},
-			{800,1},
-			{1500,0}
-		};
-	};
-	class jsrs_pp2000_distance_1500m_to_2500m_shot_soundshader
-	{
-		samples[]=
-		{
-
-			{
-				"breakingpoint_jsrs\sounds\shot\pp2000\last_distance_1.ogg",
 				1
 			}
 		};
@@ -33896,7 +32858,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_AK12_F";
 		displayName = "AK-12 7.62 mm";
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\AK12\Data\arifle_AK12_F_co.paa"};
+		//hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\AK12\Data\arifle_AK12_F_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
 		scope = 2;
 	};
@@ -33938,7 +32900,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "Light Machine Gun<br />Caliber: 5.56x45 mm";
 		dexterity = 1.3;
 		displayName = "";
-		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Syndikat\Syndikat_Dry",0.562341,1,10};
+		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Machineguns\SyndikatLMG\SyndikatLMG_dry",0.562341,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Machineguns\LMG_03\Data\Anim\LIM.rtm"};
 		hiddenSelections[] = {"Camo_1","Camo_2"};
 		htMax = 920;
@@ -34678,7 +33640,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_CTAR_blk_F";
 		displayName = "CAR-95 5.8 mm (Black)";
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\CTAR\Data\arifle_CTAR_blk_F_co.paa"};
+		//hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\CTAR\Data\arifle_CTAR_blk_F_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\CTAR\Data\UI\icon_arifle_CTAR_blk_F_X_CA.paa";
 		scope = 2;
 	};
@@ -34843,7 +33805,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_CTARS_blk_F";
 		displayName = "CAR-95-1 5.8mm (Black)";
-		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\CTARS\Data\arifle_CTARS_blk_F_co.paa"};
+		//hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\CTARS\Data\arifle_CTARS_blk_F_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\CTARS\Data\UI\icon_arifle_CTARS_blk_F_X_CA.paa";
 		scope = 2;
 	};
@@ -40009,7 +38971,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4_URB : BP_M4
 	{
         hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\M4A3_old\m4_urb_co.paa"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\M4A3_old\m4_urb_co.paa"};
 	};
 
 	class BP_M4K : BP_M4
@@ -40120,7 +39082,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4K_URB : BP_M4K
 	{
         hiddenSelections[] = {"camo1", "camo2"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\M4A3_old\m4_urb_co.paa", "\breakingpoint\textures\items\knife_urb_co.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\M4A3_old\m4_des_co.paa", "\breakingpoint\textures\items\knife_urb_co.paa"};
 	};
 
 	class BP_M4_300 : BP_M4K
@@ -41358,7 +40320,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4B2_URB: BP_M4B2
 	{
         hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\m4a3_old\m4_pmag2_urb_co.paa", "breakingpoint_weapons\textures\m4a3_old\m4_300_urb_co.paa", "breakingpoint_weapons\textures\m4a3_old\flip_urb_co.paa", "\breakingpoint_weapons\textures\M4A3_old\m4_urb_co.paa"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\m4a3_old\m4_pmag2_urb_co.paa", "breakingpoint_weapons\textures\m4a3_old\m4_300_urb_co.paa", "breakingpoint_weapons\textures\m4a3_old\flip_urb_co.paa", "\breakingpoint_weapons\textures\M4A3_old\m4_des_co.paa"};
 	};
 
 	class BP_G36C : Rifle_Base_F_BP
@@ -50434,84 +49396,84 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		modes[] = {"Single", "far_optic1", "far_optic2"};
 		bullet1[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Metal_1.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_1.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet2[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Metal_2.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_2.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet3[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Metal_3.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_3.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet4[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Metal_4.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_4.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet5[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Dirt_1.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_1.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet6[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Dirt_2.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_2.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet7[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Dirt_3.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_3.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet8[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Dirt_4.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_4.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet9[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Grass_1.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_1.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet10[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Grass_2.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_2.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet11[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Grass_3.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_3.ogg",
 			2.0099001,
 			1,
 			10
 		};
 		bullet12[]=
 		{
-			"JSRS_Soundmod_Snd_Weapons\Sounds\Shells\big\Grass_4.ogg",
+			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_4.ogg",
 			2.0099001,
 			1,
 			10
@@ -51216,53 +50178,26 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "muzzle_snds_H_khk_F";
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (6.5 mm, Khaki)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_h_khk_F.p3d";
+		model = "\A3\Weapons_F_Exp\Acc\acca_snds_65_TI_ghex_F.p3d";
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_H_khk_F_ca.paa";
 	};
 	class BP_muzzle_snds_H_snd_F : muzzle_snds_H { //Sound Suppressor (6.5 mm, Sand)
 		_generalMacro = "muzzle_snds_H_snd_F";
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (6.5 mm, Sand)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_h_snd_F.p3d";
+		model = "\A3\Weapons_F_Exp\Acc\acca_snds_65_TI_hex_F.p3d";
 		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_H_snd_F_ca.paa";
 	};
-	class BP_muzzle_snds_H_MG_blk_F : muzzle_snds_H_MG { //Sound Suppressor LMG (6.5 mm, Black)
-		_generalMacro = "muzzle_snds_H_MG_blk_F";
-		author = "Bohemia Interactive";
-		displayName = "Sound Suppressor LMG (6.5 mm, Black)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_lmg_blk_F.p3d";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_acca_snds_lmg_blk_F_ca.paa";
-	};
-	class BP_muzzle_snds_H_MG_khk_F : muzzle_snds_H_MG { //Sound Suppressor LMG (6.5 mm, Khaki)
-		_generalMacro = "muzzle_snds_H_MG_khk_F";
-		author = "Bohemia Interactive";
-		displayName = "Sound Suppressor LMG (6.5 mm, Khaki)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_lmg_khk_F.p3d";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_acca_snds_lmg_khk_F_ca.paa";
-	};
-
 	class BP_muzzle_snds_m_khk_F : BP_muzzle_snds_H_khk_F { //Sound Suppressor (5.56 mm, Khaki)
 		_generalMacro = "muzzle_snds_m_khk_F";
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (5.56 mm, Khaki)";
-	};
-	class BP_muzzle_snds_m_snd_F : muzzle_snds_M { //Sound Suppressor (5.56 mm, Sand)
-		_generalMacro = "muzzle_snds_m_snd_F";
-		author = "Bohemia Interactive";
-		displayName = "Sound Suppressor (5.56 mm, Sand)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_m_snd_F.p3d";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_h_snd_F_ca.paa";
 	};
 
 	class BP_muzzle_snds_B_khk_F : BP_muzzle_snds_m_khk_F { //Sound Suppressor (7.62 mm, Khaki)
 		_generalMacro = "muzzle_snds_B_khk_F";
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (7.62 mm, Khaki)";
-	};
-	class BP_muzzle_snds_B_snd_F : BP_muzzle_snds_m_snd_F { //Sound Suppressor (7.62 mm, Sand)
-		_generalMacro = "muzzle_snds_B_snd_F";
-		author = "Bohemia Interactive";
-		displayName = "Sound Suppressor (7.62 mm, Sand)";
 	};
 
 	class BP_muzzle_snds_65_TI_blk_F : muzzle_snds_H { //Specialized Sound Suppressor (6.5 mm, Black)
@@ -51291,13 +50226,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "muzzle_snds_58_blk_F";
 		author = "Bohemia Interactive";
 		displayName = "Sound Suppressor (5.8 mm, Black)";
-	};
-	class BP_muzzle_snds_58_wdm_F : BP_muzzle_snds_58_blk_F { //Sound Suppressor (5.8 mm, Green Hex)
-		_generalMacro = "muzzle_snds_58_wdm_F";
-		author = "Bohemia Interactive";
-		displayName = "Sound Suppressor (5.8 mm, Green Hex)";
-		model = "\A3\Weapons_F_Exp\Acc\acca_snds_58_wdm_F.p3d";
-		picture = "\A3\Weapons_F_Exp\Acc\Data\UI\icon_muzzle_snds_58_wdm_F_ca.paa";
 	};
 
 	class Zasleh2: ItemCore
@@ -51671,7 +50599,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		scope = 2;
 		displayName = "Old Red Dot Sight";
 		picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
-		model = "\breakingpoint_weapons\models\OldComp\BP_OldComp.p3d";
+		model = "\breakingpoint_weapons\models\OldComp\OldComp.p3d";
 		descriptionShort = "An old Aimpoint sight with low battery";
 		weaponInfoType = "RscWeaponZeroing";
 		inertia = 0.010000;
@@ -53644,7 +52572,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		scope = 2;
 		displayName = "Harris Bipod";
 		descriptionshort = "Stabilizing rifle attachment </br> Drastically reduced recoil when prone and increased overall weapon stability";
-		picture = "\breakingpoint_weapons\icons\HarrisBipod_co.paa";
+		picture = "\A3\Weapons_F_Mark\Data\UI\icon_bipod_02_F_blk_ca.paa";
 		model = "\breakingpoint_weapons\models\Harris\BP_Harris.p3d";
 		inertia = -0.200000;
 		class ItemInfo: InventoryMuzzleItem_Base_F
@@ -53866,7 +52794,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Winter Ghillie Camo";
 		descriptionUse = "Winter Ghillie Camo";
 		model = "\breakingpoint_weapons\models\GhillieWint\BP_GhillieWint.p3d";
-		picture = "\breakingpoint\textures\icons\gear_ghilliesnw_ca.paa";
+		picture = "\breakingpoint_weapons\icons\gear_ghilliesnw_ca.paa";
 		descriptionShort = "Rifle Ghillie camo";
 		inertia = 0.050000;
 		class ItemInfo: InventoryFlashLightItem_Base_F
@@ -54146,7 +53074,7 @@ class CfgMagazines {
 		ammo = "BP_AlarmClock_Ammo";
 		type = 256;
 		mass = 2;
-		scope = 3;
+		scope = 2;
 		value = 1;
 		maxLeadSpeed = 7;
 		initSpeed = 18;
