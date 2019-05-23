@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class breakingpoint_sw_box
+	class bp_sw_box
 	{
 		units[]={""};
 		weapons[]={};
