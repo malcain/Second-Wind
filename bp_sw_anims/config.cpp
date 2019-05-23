@@ -7,11 +7,11 @@
 
 class CfgPatches {
     class BP_SW_Anims {
-		units[] = {};
+		units[] = {""};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Anims_F"};
-        version = 0.01;
+        version = 0.1;
     };
 };
 
