@@ -187,6 +187,6 @@ _moveVar = _climber getvariable "moveVar";
 _moveVar set [0, true];
 _climber setVariable ["moveVar", _moveVar];
 
-[((name _climber) + "EH_em"), {animationState (_condpars select 0) == (_condpars select 1)}, [_climber, _anim], "babe_em_fnc_pkour_setpos", [_pos, _over, _climber], true, "babe_em_fnc_finish_em", [_climbOnpos, _over, _climber], 0] call babe_core_fnc_addEH;
+[((name _climber) + "EH_prkr"), {animationState (_condpars select 0) == (_condpars select 1)}, [_climber, _anim], "BP_fnc_prkr_setpos", [_pos, _over, _climber], true, "BP_fnc_finish_prkr", [_climbOnpos, _over, _climber], 0] call BP_fnc_addEH;
 
 _climber playMove _anim;

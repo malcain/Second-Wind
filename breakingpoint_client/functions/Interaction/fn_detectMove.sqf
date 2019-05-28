@@ -67,7 +67,7 @@ if (_cos > 0.8) exitwith
 				_moveVar set [0, true];
 				_climber setVariable ["moveVar", _moveVar];
 
-				[((name _climber) + "EH_em_drop"), {animationState (_condpars select 0) == (_condpars select 1)}, [_climber, _anm], "babe_em_fnc_exec_drop", [_dpos, _climber], true, "babe_em_fnc_finish_drop", [_climber], 0] call babe_core_fnc_addEH;
+				[((name _climber) + "EH_jumpoff"), {animationState (_condpars select 0) == (_condpars select 1)}, [_climber, _anm], "BP_fnc_jumpOff", [_dpos, _climber], true, "BP_fnc_jumpOff_fin", [_climber], 0] call BP_fnc_addEH;
 
 				_climber playMove _anm;
 			};

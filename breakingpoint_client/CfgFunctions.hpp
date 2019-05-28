@@ -249,8 +249,16 @@ class CfgFunctions
 		};
 		class Interaction {
 			file = "\breakingpoint_client\functions\Interaction";
+			class addEH {};
 			class detectMove {};
+			class finish_prkr {};
+			class handleEHs {};
+			class jumpOff {};
+			class jumpOff_fin {};
 			class parkour {};
+			class prkr_setpos {};
+			class removeEH {};
+			class walkableObjs {};
 		};
 		class Init {
 			file = "\breakingpoint_client\functions\Init";

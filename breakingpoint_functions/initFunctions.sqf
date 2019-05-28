@@ -584,6 +584,8 @@ if (_recompile == 3) then
 				
 				//Add Mission Event Handler
 				addMissionEventHandler ["Draw3D",{_this call BP_fnc_onDraw3D}];
+				addMissionEventHandler ["EachFrame", {call BP_fnc_handleEHs}];
+				call BP_fnc_initParkour;
 			};
 			
 			//Mark Preload as Completed

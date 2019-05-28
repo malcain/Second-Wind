@@ -151,4 +151,31 @@ class cfgVehicles
 		class TransportWeapons{};
 		class TransportItems{};
 	};
+	
+	class All
+	{
+	};
+	class Static: All
+	{
+	};
+	class Building: Static
+	{
+	};
+	class NonStrategic: Building
+	{
+	};
+	class platform_wlk: NonStrategic
+	{
+		model="\bp_sw\bp_sw_box\bp_platform.p3d";
+		armor=20000;
+		scope=2;
+		displayName="platform wlk";
+		icon="iconObject";
+		mapSize=0.7;
+		accuracy=0.2;
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+	};
 };

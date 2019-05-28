@@ -16,6 +16,8 @@ BP_StorageClasses = [];
 
 bis_disabled_Door = nil;
 
+eh_parkour = [];
+
 if (isNil "cntStrongholds") then
 {
 cntStrongholds = [0,0];
