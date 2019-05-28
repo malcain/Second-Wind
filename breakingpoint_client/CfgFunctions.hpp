@@ -267,6 +267,7 @@ class CfgFunctions
 			class initVarsOnce {};
 			class initLoot {};
 			class initMedical {};
+			class initParkour {};
 			class initDVS {};
 		};
 		class _Medical {
