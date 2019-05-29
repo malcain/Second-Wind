@@ -94,7 +94,7 @@ if (hasInterface) then {
 [] execVM "rain_drop.sqf";
 };
 	//run on all player clients incl. player host
-/*execVM "AL_radiation\al_ini_fnc.sqf";
+execVM "AL_radiation\al_ini_fnc.sqf";
 
 waitUntil {!isNil "glowindark"};
 
@@ -118,7 +118,7 @@ if (glowindark) then
 			(backpackContainer player) setObjectMaterialglobal [0,"\a3\data_f\default.rvmat"];
 		} else {sleep 60};
 	};
-};*/
+};
 //};
 
 if ((!isServer) && (player != player)) then {waitUntil {player == player};};
@@ -153,7 +153,7 @@ if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 [fire_up7,5,0.2] execvm "AL_Leaks\fire_leak.sqf";
 [fire_up8,4,0.27] execvm "AL_Leaks\fire_leak.sqf";
 [fire_up9,4,0.27] execvm "AL_Leaks\fire_leak.sqf";
-
+*/
 // making an object radioactive
 null1 = [rad1,20,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null2 = [rad2,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
@@ -168,26 +168,20 @@ null10 = [rad10,50,200,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] exec
 null11 = [rad11,35,120,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null12 = [rad12,35,120,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null13 = [rad13,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null14 = [rad14,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null15 = [rad15,15,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null16 = [rad16,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null11 = [rad17,35,240,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] execvm "AL_radiation\radioactive_object.sqf"; 
-*/
+
 //Strigoi
-/*["strigoi_1",250,true,950,50] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_2",250,true,920,65] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_3",280,true,970,50] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_4",250,true,920,60] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_5",300,true,980,45] execvm "AL_strigoi\strigoi.sqf";
-//["strigoi_6",250,true,870,50] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_1",250,false,950,40] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_2",250,false,920,55] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_3",280,false,970,40] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_4",250,false,920,50] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_5",300,false,980,35] execvm "AL_strigoi\strigoi.sqf";
+["strigoi_6",250,false,870,40] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_7",230,false,750,35] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_8",230,false,850,40] execvm "AL_strigoi\strigoi.sqf";
-//["strigoi_1",500,false,0.1,50] execvm "AL_strigoi\strigoi.sqf";
-//["strigoi_1",500,true,0.1,50] execvm "AL_strigoi\strigoi.sqf";
 
 //Smuggler
 //null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
-null22 = ["strigoi_6",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F","BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
+null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F","BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
 */
 //Client Init Only
 if (isServer) exitWith {};
@@ -205,6 +199,7 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 initialized = true;
 
 setViewDistance 2300;
+setObjectViewDistance 1450;
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 
 waitUntil {time > 0};
