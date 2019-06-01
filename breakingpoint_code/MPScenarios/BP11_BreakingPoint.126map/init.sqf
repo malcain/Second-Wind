@@ -22,10 +22,6 @@ BP_LootServer = (paramsArray select 9) == 1;
 BP_LegionOnly = (paramsArray select 10) == 1;
 BP_FastBoot = (paramsArray select 11) == 1;
 
-//if (isServer) then 
-//{
-//execVM "VD_init.sqf";
-//};
 [] execVm "real_weather.sqf";
 
 		[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
@@ -171,8 +167,8 @@ null13 = [rad13,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] exec
 
 //Strigoi
 ["strigoi_1",250,false,950,40] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_2",250,false,920,55] execvm "AL_strigoi\strigoi.sqf";
-["strigoi_3",280,false,970,40] execvm "AL_strigoi\strigoi.sqf";
+//["strigoi_2",250,false,920,55] execvm "AL_strigoi\strigoi.sqf";
+//["strigoi_3",280,false,970,40] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_4",250,false,920,50] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_5",300,false,980,35] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_6",250,false,870,40] execvm "AL_strigoi\strigoi.sqf";

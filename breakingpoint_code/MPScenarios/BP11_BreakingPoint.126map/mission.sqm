@@ -8,7 +8,7 @@ class EditorData
 	toggles=522;
 	class ItemIDProvider
 	{
-		nextID=5053;
+		nextID=5129;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=339;
+		nextID=346;
 	};
 	class Camera
 	{
-		pos[]={159.94067,508.16675,3867.0415};
-		dir[]={-0.50365376,-0.66772437,0.54838353};
-		up[]={-0.45176148,0.7439605,0.49187401};
-		aside[]={0.73651963,-7.7332079e-006,0.67644745};
+		pos[]={5092.104,305.4903,1274.1471};
+		dir[]={0.37466112,-0.36364743,0.85301304};
+		up[]={0.1462635,0.93133044,0.3331686};
+		aside[]={0.91566771,5.5355067e-005,-0.40213948};
 	};
 };
 binarizationWanted=0;
@@ -283,7 +283,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=355;
+		items=356;
 		class Item0
 		{
 			dataType="Object";
@@ -8430,7 +8430,7 @@ class Mission
 			};
 			id=3623;
 			type="Land_HelipadEmpty_F";
-			atlOffset=3.2923737;
+			atlOffset=3.2923813;
 		};
 		class Item56
 		{
@@ -8484,7 +8484,7 @@ class Mission
 			};
 			id=3632;
 			type="Land_HelipadEmpty_F";
-			atlOffset=3.1001053;
+			atlOffset=3.1000977;
 		};
 		class Item59
 		{
@@ -11453,7 +11453,7 @@ class Mission
 			flags=1;
 			id=4376;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.4332275e-005;
+			atlOffset=6.2942505e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13551,7 +13551,7 @@ class Mission
 			flags=1;
 			id=4551;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.6175556;
+			atlOffset=3.6173286;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14000,7 +14000,7 @@ class Mission
 			flags=1;
 			id=4596;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.7096481;
+			atlOffset=3.7095566;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15068,7 +15068,7 @@ class Mission
 			flags=1;
 			id=4674;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.24104309;
+			atlOffset=0.24118042;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15124,7 +15124,7 @@ class Mission
 			flags=1;
 			id=4676;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.27832317;
+			atlOffset=0.27838612;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15348,7 +15348,7 @@ class Mission
 			flags=1;
 			id=4680;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.013153076;
+			atlOffset=0.013244629;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15459,7 +15459,7 @@ class Mission
 			flags=1;
 			id=4683;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.00030517578;
+			atlOffset=0.00021362305;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15626,7 +15626,7 @@ class Mission
 			flags=1;
 			id=4689;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.13042068;
+			atlOffset=0.13078308;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16003,7 +16003,7 @@ class Mission
 			flags=1;
 			id=4733;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.23187256;
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17380,7 +17380,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={823.99182,233.51266,3886.5056};
-				angles[]={0,3.037133,-0};
+				angles[]={0,3.037133,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17397,7 +17397,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3580.4236,17.282795,2385.051};
-				angles[]={0,0.0069709998,-0};
+				angles[]={0,0.0069709998,0};
 			};
 			side="Empty";
 			class Attributes
@@ -17493,7 +17493,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={714.01532,54.495674,991.29327};
-				angles[]={0,2.3445783,-0};
+				angles[]={0,2.3445783,0};
 			};
 			side="Empty";
 			class Attributes
@@ -17586,7 +17586,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1232.1997,12.343562,1538.4043};
-				angles[]={0,1.919952,-0};
+				angles[]={0,1.919952,0};
 			};
 			side="Empty";
 			class Attributes
@@ -17640,7 +17640,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6294.6699,263.46155,864.47412};
-				angles[]={0,5.5023494,-0};
+				angles[]={0,5.5023494,0};
 			};
 			side="Empty";
 			flags=4;
@@ -17716,7 +17716,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6294.6514,263.9086,864.68567};
-				angles[]={0,3.8303525,-0};
+				angles[]={0,3.8303525,0};
 			};
 			side="Empty";
 			class Attributes
@@ -17734,7 +17734,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6294.3696,264.04739,864.57123};
-				angles[]={0,5.6329532,-0};
+				angles[]={0,5.6329532,0};
 			};
 			side="Empty";
 			class Attributes
@@ -17784,6 +17784,62 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item355
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5449.6699,33.420406,310.91299};
+			};
+			init="call{params [""_pos"", ""_typs"", ""_distance""];" \n "_pos = [5449.67,310.913,1.46354];" \n "_typs = [""house""];" \n "_distance = 15; " \n "_housesArray = nearestTerrainObjects [_pos, _typs, _distance, false, true];" \n " " \n "_replaceBuilding = { " \n "params [""_oldBuilding"", ""_replacer""]; " \n "_pos = getPos _oldBuilding; " \n "_dir = getDir _oldBuilding;" \n "_oldBuilding setdamage 0.8; " \n "_oldBuilding hideObjectGlobal true;  " \n "_newBuilding = _replacer createVehicle _pos; " \n "_newBuilding setDir _dir; " \n "_newBuilding setPos _pos;" \n "_newBuilding setdamage 0.8;" \n "_newBuilding sethitindex [0,1];}; " \n " " \n "" \n "{ " \n " diag_log format [""Found: %1, Type: %2"", _x, typeOf _x]; " \n " switch (typeOf _x) do { " \n " case ""Land_Barracks_01_camo_F"" : {[_x, ""Land_i_Barracks_V1_F""] call _replaceBuilding;}; " \n " }; " \n "}forEach _housesArray;" \n "}";
+			areaSize[]={14,0,14};
+			flags=1;
+			id=5066;
+			type="ModuleHideTerrainObjects_F";
+			atlOffset=1.1355095;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="#filter";
+					expression="_this setVariable [""#filter"",_value]";
+					class Value
+					{
+						class data
+						{
+							nil=1;
+							class type
+							{
+								type[]=
+								{
+									"ANY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="#hideLocally";
+					expression="_this setVariable [""#hideLocally"",_value]";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};

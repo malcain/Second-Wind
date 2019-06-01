@@ -39,4 +39,24 @@ class cfgWeapons {
 			};
         };
     };
+	
+	//NVG slots
+	class NVGoggles;
+	class Outlaw_BandanaRED: NVGoggles
+	{
+		displayName = "Red Bandana";
+		descriptionShort = "Outlaw";
+		picture="\bp_sw\bp_sw_clothes\Facewear\UI\icon_Bandana_clean.paa";
+		model = "bp_sw\bp_sw_clothes\Facewear\Shemagh_faceRed.p3d";
+		modelOptics = "-";
+		visionMode[] = {"Normal"};
+		class ItemInfo
+		{
+			type = 616;
+			hmdType = 16;
+			uniformModel = "bp_sw\bp_sw_clothes\Facewear\Shemagh_faceRed.p3d";
+			modelOff = "bp_sw\bp_sw_clothes\Facewear\Shemagh_faceRed.p3d";
+			mass = 1;
+		};
+	};
 };

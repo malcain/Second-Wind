@@ -80,7 +80,7 @@
 					vest[] = {};
 					uniform[] = {"BP_Rebel_1"};
 					headgear[]={""};
-					nvg[]={""};
+					nvg[]={"Outlaw_BandanaRED"};
 					facewear[]={""};
 				};
 				class Uniform : BP_BaseGear  {

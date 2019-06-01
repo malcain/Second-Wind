@@ -310,7 +310,6 @@ class CfgObjectLoot {
 		itemType[] =
 		{	
 			{"BP_AWSM","weapon"},
-			{"BP_Guarilla_Leader","uniform"},
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_30Rnd_762x51_M80A1","magazine"},
 			{"BP_20Rnd_762x51_Mk316Mod0","magazine"},
@@ -347,7 +346,6 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{	
 			0.01,	//BP_AWSM
-			0.01,	//Guerilla Leader
 			0.02,   //20Rnd_Lapua
 			0.01,   //30Rnd_M80A1
 			0.01,   //20Rnd_Mk316Mod0
@@ -2063,17 +2061,11 @@ class CfgObjectLoot {
 			{"BP_StoneGhillie","uniform"},
 			{"BP_TreeGhillie","uniform"},
 			{"BP_DirtGhillie","uniform"},
-			{"U_B_Wetsuit_BP","uniform"},
-			{"U_BG_Guerilla3_1_BP","uniform"},
-			{"U_BG_Guerilla3_2_BP","uniform"},
-			{"U_BG_leader_BP","uniform"},
-			{"U_BG_Guerilla1_1_BP","uniform"},			
 			{"V_PlateCarrierIA1_dgtl_BP","vest"},
 			{"BP_optic_ACOG","toolbelt"},
 			{"BP_CPad","toolbelt"},
 			{"BP_AFG","toolbelt"},
 			{"V_TacVest_oli_BP","vest"},
-			{"U_B_Wetsuit_BP","uniform"},
 			{"Rangefinder","weaponNA"},
 			{"BP_M3A2","toolbelt"},
 			{"BP_556x45_StanagM855A1","magazine"},
@@ -2121,17 +2113,11 @@ class CfgObjectLoot {
 			0.03,	//STONE GHILLIE
 			0.03,	//TREE GHILLIE
 			0.03,	//DIRT GHILLIE
-			0.03,	//WETSUIT CLOTHING
-			0.03,	//Guerilla Faded
-			0.03,	//Guerilla Shit Green Sweater
-			0.03,	//Guerilla Leader
-			0.03,	//Guerilla Khaki Camo	
 			0.01,	//PLATE CARRIER
 			0.05,	//ACOG
 			0.02,	//CHEEKPIECE
 			0.03,	//AFG
 			0.03,	//TAC VEST
-			0.01,	//WETSUIT
 			0.01,	//RANGEFINDER
 			0.02,	//M3A2
 			0.05,	//STANAG M855A1
@@ -2240,11 +2226,6 @@ class CfgObjectLoot {
 			{"BP_StoneGhillie","uniform"},
 			{"BP_TreeGhillie","uniform"},
 			{"BP_DirtGhillie","uniform"},
-			{"U_B_Wetsuit_BP","uniform"},
-			{"U_BG_Guerilla3_1_BP","uniform"},
-			{"U_BG_Guerilla3_2_BP","uniform"},
-			{"U_BG_leader_BP","uniform"},
-			{"U_BG_Guerilla1_1_BP","uniform"},
 			{"BP_Carryall_mcamo","backpack"},
 			{"BP_Carryall_blk","backpack"},					
 			{"BP_optic_ACOG","toolbelt"},
@@ -2300,11 +2281,6 @@ class CfgObjectLoot {
 			0.01,	//STONE GHILLIE
 			0.01,	//TREE GHILLIE
 			0.01,	//DIRT GHILLIE
-			0.01,	//WESTSUIT CLOTHING
-			0.01,	//Guerilla Faded
-			0.01,	//Guerilla Shit Green Sweater
-			0.01,	//Guerilla Leader
-			0.01,	//Guerilla Khaki Camo		
 			0.02, 	//CARRYALL URBAN
             0.02,   //CARRYALL BLACK
 			0.08,	//ACOG
@@ -2696,7 +2672,6 @@ class CfgObjectLoot {
 			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
 			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
 			{"BP_SMG_05_F","weapon"},  //Protector
-			{"BP_Guarilla_Leader","uniform"},
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"BP_762Muzzle","toolbelt"},
 			{"optic_Hamr","toolbelt"},
@@ -2734,7 +2709,6 @@ class CfgObjectLoot {
 			0.01,	//Type 115 Green Hex
 			0.01,	//Type 115 Hex
 			0.01,	//Protector
-			0.01,	//Guerilla Leader
 			0.01,	//Gendarmerie Vest
 			0.01,	//7.62 Muzzle
 			0.03,   //optic_Hamr

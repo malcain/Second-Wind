@@ -1465,7 +1465,6 @@ class CfgBuildingLoot
 			{"ItemAntibiotic","magazine"},
 			{"ItemAdrenaline","magazine"},
 			{"V_TacVest_brn_BP","vest"},
-			{"BP_TreeGhillie","uniform"},
 			{"BP_m9tac","weaponA"},
 			{"BP_ScarH","weaponA"},
 			{"BP_MX_SW","weapon"},
@@ -1474,7 +1473,6 @@ class CfgBuildingLoot
 			{"V_RebreatherB","vest"},
 			{"BP_MK20_GL","weapon"},
 			{"BP_StoneGhillie","uniform"},
-			{"BP_Wetsuit","uniform"},
 			{"BP_MXM_black","weaponA"},
 			{"BP_MXM","weapon"},
 			{"BP_MXC","weapon"},
@@ -1497,7 +1495,6 @@ class CfgBuildingLoot
 			0.12,	//Antibiotic
 			0.06,	//Adrenaline
 			0.15,	//V_TacVest_camo
-			0.12,	//TREE GHILLIE
 			0.12,	//M9TAC
 			0.02,	//SCARH
 			0.13,	//MX SW
@@ -1506,7 +1503,6 @@ class CfgBuildingLoot
 			0.12,	//REBREATHER
 			0.11,	//MK20 GL
 			0.10,	//STONE GHILLIE
-			0.17,	//WETSUIT
 			0.01,   //MXM SpecOps
 			0.03,	//MXM
 			0.13,	//MXC
@@ -1564,7 +1560,6 @@ class CfgBuildingLoot
 			{"BP_M14RIS","weapon"},
 			{"BP_SW44","weaponA"},
 			{"BP_M4_300MK","weaponA"},
-			{"BP_Ghillie_Lush","uniform"},
 			//{"BP_HK417M_DES","weapon"},	
 			//{"BP_EBR_MRCO","weapon"},
 			//{"BP_p226Tac","weaponA"},
@@ -1610,7 +1605,6 @@ class CfgBuildingLoot
 			0.03,    //M14 RIS
 			0.07,    //BP_SW44
 			0.15,    //BP_M4_300MK
-			0.02,	//Marksmen Ghillie
 			//0.50,	//HK417M 16
 			//0.50,	//MK18 ADR MRCO
 			//0.09,	//P226 TACTICAL
@@ -1747,10 +1741,6 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{		
 			{"BP_ApexMilBox1","object","ApexMilBox1"},
-			{"BP_JungleGhillie_Uniform","uniform"},  //Full Ghillie (Jungle)
-			{"BP_Paramilitary_Jacket_Uniform","uniform"},  //Paramilitary Garb (Jacket)
-			{"BP_Paramilitary_Shorts_Uniform","uniform"},  //Paramilitary Garb (Shorts)
-			{"BP_Paramilitary_Tee_Uniform","uniform"}, //Paramilitary Garb (Tee)
 			{"V_PlateCarrierGL_tna_BP","vest"},  //Carrier GL Rig (Tropic)
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"V_HarnessO_gry_BP","vest"},   //LBV Harness (Grey)
@@ -1790,10 +1780,6 @@ class CfgBuildingLoot
 		};
 		itemChance[] =	{
 			0.60,	//ApexMilBox1
-			0.01,	//Full Ghillie (Jungle)
-			0.01,	//Paramilitary Garb (Jacket)
-			0.01,	//Paramilitary Garb (Shorts)
-			0.01,	//Paramilitary Garb (Tee)
 			0.01,	//Carrier GL Rig (Tropic)
 			0.01,	//Gendarmerie Vest
 			0.01,	//LBV Harness (Grey)
@@ -1905,11 +1891,6 @@ class CfgBuildingLoot
 			{"BP_Bergen_rgr","backpack"}, 
 			{"BP_FieldPack_ocamo","backpack"},
 			{"V_Chestrig_blk_BP","vest"},
-			//{"U_B_CombatUniform_mcam_worn_BP","uniform"},
-			//{"U_Competitor_BP","uniform"},
-			//{"U_I_CombatUniform_BP","uniform"},
-			//{"U_O_OfficerUniform_ocamo_BP","uniform"},
-			{"BP_Wetsuit","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_Garand","weapon"},
 			{"BP_GarandK","weapon"},
@@ -1943,12 +1924,7 @@ class CfgBuildingLoot
 			0.15,	//GPS
 			0.03,	//British Backpack
 			0.02,	//Czech Backpack
-			//0.01,	//TERRORIST CLOTHING
-			//0.02,	//URBAN SOLDIER CLOTHING
-			//0.02,	//URBAN SPEC-OPS CLOTHING
-			//0.02,	//SPEC-OPS CLOTHING
-			0.02,	//RUSSIAN CLOTHING
-			0.02,	//FRENCH CLOTHING
+			0.02,	//Chestrig_blk
 			0.02,   //REBREATHER
 			0.04,	//GARAND
 			0.02,	//GARAND K
@@ -1982,8 +1958,6 @@ class CfgBuildingLoot
 			{"BP_SVDK_WDL","weaponA"},
 			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
 			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
-			{"BP_Guarilla_Leader","uniform"},
-			{"BP_JungleGhillie_Uniform","uniform"},
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"BP_762Muzzle","toolbelt"},
 			{"ItemToiletPaper","magazine"}
@@ -1994,8 +1968,6 @@ class CfgBuildingLoot
 			0.01,   //BP_SVDK_WDL
 			0.01,	//Type 115 Green Hex
 			0.01,	//Type 115 Hex
-			0.01,	//Guerilla Leader
-			0.01,	//JungleGhillie
 			0.01,	//Gendarmerie Vest
 			0.01,	//7.62 Muzzle
 			0.02	//ToiletPaper
@@ -2046,23 +2018,23 @@ class CfgBuildingLoot
 		zombieClass[] = {"z_soldier_pilot"};
 		lootChance = 0.85;
 		lootPos[] = {};
-		itemType[] =	{		
+		itemType[] =	{
+			{"BP_SkeletonRemains","object","Residential2"},
 			{"V_TacVest_camo","vest"},
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
 			{"WaterbotEmpty","magazine"},
-			{"BP_PPK","weapon"},
-			{"FoodMushroom","magazine"}
+			{"BP_PPK","weapon"}
 		};
 		itemChance[] =	{
+			0.10,    //SkeletonRemains
 			0.01,    //TacVest_camo
 			0.01,    //Chestrig_blk
 			0.01,    //R7Sup
 			0.01,    //CZSup
 			0.55,    //MeatPlayerCooked
-			0.30,    //MeatRabbitCooked
-			0.10    //Mushroom
+			0.30     //MeatRabbitCooked
 		};
 	};
 	
