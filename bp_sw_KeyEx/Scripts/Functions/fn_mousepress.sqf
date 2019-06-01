@@ -1,8 +1,12 @@
 private["_response"];
+
+_disp = _this select 0;
 _key = _this select 1;
-_shift = _this select 2;
-_ctrl = _this select 3;
-_alt = _this select 4;
+_shift = _this select 4;
+_ctrl = _this select 5;
+_alt = _this select 6;
+
+if ((currentWeapon player) != "") exitWith {false};
 
 _value = false;
 
@@ -18,11 +22,11 @@ _value = false;
 		_entry = _x select 1;
 		if(_key == _dik) then {
 			_continue = false;
-			if(_entry == 0 && !_shift && !_alt && !_ctrl) then {_continue = true;};
-			if(_entry == 1 && _shift && !_alt && !_ctrl) then {_continue = true;};
-			if(_entry == 2 && _ctrl && !_alt && !_shift) then {_continue = true;};
-			if(_entry == 3 && _alt && !_shift && !_ctrl) then {_continue = true;};
-			if(_entry == 4 && _ctrl && _shift && !_alt) then {_continue = true;};
+			if(_entry == 0) then {_continue = true;};
+			if(_entry == 1 && _shift) then {_continue = true;};
+			if(_entry == 2 && _ctrl) then {_continue = true;};
+			if(_entry == 3 && _alt) then {_continue = true;};
+			if(_entry == 4 && _ctrl && _shift) then {_continue = true;};
 			if(_continue) then {
 				_response = call compile _code;
 				if(isNil {_response}) then {
@@ -35,7 +39,7 @@ _value = false;
 					};
 				};
 			};
-		};
+        };
 	} forEach _keyData;
 	
 } forEach (uiNamespace getVariable["KEYBIND_DATA",[]]);
