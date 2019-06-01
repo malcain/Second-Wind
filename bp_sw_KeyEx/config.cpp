@@ -164,6 +164,7 @@ class RscControlsGroup;
 class RscDisplayMission
 {
 	onKeyDown = "_this call (uiNamespace getVariable 'KEX_fnc_Keypress');";
+	onMouseButtonDown = "_this call (uiNamespace getVariable 'KEX_fnc_mousepress');";
 };
 class RscDisplayConfigure { //Keybindings
 	onLoad = "[_this,'RscDisplayConfigure','onload'] call (uiNamespace getVariable 'KEX_fnc_initDisplay')";
