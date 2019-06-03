@@ -125,32 +125,48 @@ class CfgVehicles
 		};
 		
 		//Hit Points / Damage
+		armor = 300;
+		armorStructural = 0.4;
+		explosionShielding = 0.04;
+		minTotalDamageThreshold = 0.001;
+		impactDamageMultiplier = 0.5;
 		class HitPoints {
-			class HitHead {
-				armor = 0.3;
-				material = -1;
-				name = "head_hit";
-				passThrough = true;
-				memoryPoint = "pilot";
+			class HitHead
+			{
+				armor=3.3;
+				material=-1;
+				minimalHit=0.001;
+				passThrough=0.0099999998;
+				radius=0.0099999998;
+				name="head_hit";
+				memoryPoint="pilot";
 			};
-			
-			class HitBody : HitHead {
-				armor = 2;
-				name = "body";
-				memoryPoint = "aimPoint";
+			class HitBody: HitHead
+			{
+				armor=50;
+				minimalHit=10;
+				passThrough=0.001;
+				radius=0.0099999998;
+				name="body";
+				memoryPoint="aimPoint";
 			};
-			
-			class HitSpine : HitHead {
-				armor = 2;
-				name = "Spine2";
-				memoryPoint = "aimPoint";
+			class HitSpine: HitHead
+			{
+				armor=50;
+				minimalHit=10;
+				passThrough=0.001;
+				radius=0.0099999998;
+				name="Spine2";
+				memoryPoint="aimPoint";
 			};
-			
-			class HitHands : HitHead {
-				armor = 0.5;
-				material = -1;
-				name = "hands";
-				passThrough = true;
+			class HitHands: HitHead
+			{
+				armor=50.5;
+				minimalHit=25;
+				passThrough=0.001;
+				radius=0.0099999998;
+				material=-1;
+				name="hands";
 			};
 			
 			class HitLArm : HitHands {
@@ -211,12 +227,12 @@ class CfgVehicles
 	};
 	class zZombie_Imp: zZombie_Base
 	{
-		armor=360;
-		armorStructural=0.40000001;
-		explosionShielding=0.039999999;
-		minTotalDamageThreshold=0.001;
-		impactDamageMultiplier=0.5;
-		moves="CfgMovesBPZombieImp1";
+		armor = 360;
+		armorStructural = 0.4;
+		explosionShielding = 0.04;
+		minTotalDamageThreshold = 0.001;
+		impactDamageMultiplier = 0.5;
+		moves = "CfgMovesBPZombieImp1";
 		class HitPoints
 		{
 			class HitHead

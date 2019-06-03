@@ -212,6 +212,73 @@ class RscGearTemplates {
 
 #include "CfgLoadingScreens.hpp"
 
+class CfgMarkers
+{
+	class Uncontrolled
+	{
+		name="Uncontrolled";
+		icon="\breakingpoint_ui\icons\NoneIcon.paa";
+		color[]={1,1,1,1};
+		size=24;
+		shadow=1;
+		scope=0;
+	};
+	class Hunter
+	{
+		name="Hunter";
+		icon="\breakingpoint_ui\icons\HunterIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+	class Nomad
+	{
+		name="Nomad";
+		icon="\breakingpoint_ui\icons\NomadIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+	class Outlaw
+	{
+		name="Outlaw";
+		icon="\breakingpoint_ui\icons\OutlawIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+	class Ranger
+	{
+		name="Ranger";
+		icon="\breakingpoint_ui\icons\RangerIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+	class Scavenger
+	{
+		name="Scavenger";
+		icon="\breakingpoint_ui\icons\ScavengerIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+	class Survivalist
+	{
+		name="Survivalist";
+		icon="\breakingpoint_ui\icons\SurvivalistIcon.paa";
+		color[]={1,1,1,1};
+		size=32;
+		shadow=0;
+		scope=0;
+	};
+};
+
 class RscDisplayLoadingBlack {
 	idd = -1;
 	enableSimulation = 0;

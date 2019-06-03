@@ -6,7 +6,7 @@ class CfgPatches
 		units[]={};
 		weapons[]={};
 		requiredVersion=0;
-		requiredAddons[]={};
+		requiredAddons[]={"A3_Characters_F"};
 		version="1.0";
 		author="";
 	};

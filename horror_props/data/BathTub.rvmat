@@ -8,7 +8,7 @@ PixelShaderID="NormalMapSpecularDIMap";
 VertexShaderID="NormalMap";
 class Stage0
 {
-	texture="Horror_props\data\Bath.paa";
+	texture="Horror_props\data\Bath_CO.paa";
 	uvSource="tex";
 	Filter="Trilinear";
 };

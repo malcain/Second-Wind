@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=522;
+	toggles=1546;
 	class ItemIDProvider
 	{
 		nextID=5129;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=346;
+		nextID=381;
 	};
 	class Camera
 	{
-		pos[]={5092.104,305.4903,1274.1471};
-		dir[]={0.37466112,-0.36364743,0.85301304};
-		up[]={0.1462635,0.93133044,0.3331686};
-		aside[]={0.91566771,5.5355067e-005,-0.40213948};
+		pos[]={3816.9983,129.02489,3672.0959};
+		dir[]={-0.95904964,-0.27612826,-0.063104317};
+		up[]={-0.27553368,0.96112013,-0.018127333};
+		aside[]={-0.065656811,-2.3202592e-006,0.99784535};
 	};
 };
 binarizationWanted=0;
@@ -11341,7 +11341,7 @@ class Mission
 			flags=1;
 			id=4370;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=2.6702881e-005;
+			atlOffset=3.0629997;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11453,7 +11453,7 @@ class Mission
 			flags=1;
 			id=4376;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=6.2942505e-005;
+			atlOffset=6.5239983;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11619,7 +11619,7 @@ class Mission
 			flags=1;
 			id=4379;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.15783691;
+			atlOffset=0.15791321;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -13551,7 +13551,7 @@ class Mission
 			flags=1;
 			id=4551;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.6173286;
+			atlOffset=3.6173153;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14000,7 +14000,7 @@ class Mission
 			flags=1;
 			id=4596;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.7095566;
+			atlOffset=3.7096329;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -14111,6 +14111,7 @@ class Mission
 			flags=1;
 			id=4601;
 			type="ModuleHideTerrainObjects_F";
+			atlOffset=3.6600037;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15068,7 +15069,7 @@ class Mission
 			flags=1;
 			id=4674;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.24118042;
+			atlOffset=4.2799988;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15124,7 +15125,7 @@ class Mission
 			flags=1;
 			id=4676;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.27838612;
+			atlOffset=0.27838707;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15180,7 +15181,7 @@ class Mission
 			flags=1;
 			id=4677;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=9.5367432e-007;
+			atlOffset=0.062999964;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15348,7 +15349,7 @@ class Mission
 			flags=1;
 			id=4680;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.013244629;
+			atlOffset=4.0550003;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15459,7 +15460,7 @@ class Mission
 			flags=1;
 			id=4683;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.00021362305;
+			atlOffset=0.0002822876;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15626,7 +15627,7 @@ class Mission
 			flags=1;
 			id=4689;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.13078308;
+			atlOffset=0.13080215;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16003,7 +16004,7 @@ class Mission
 			flags=1;
 			id=4733;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=6.1035156e-005;
+			atlOffset=0.23173523;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16178,7 +16179,7 @@ class Mission
 			};
 			id=4783;
 			type="Land_PipeFence_02_s_4m_F";
-			atlOffset=0.36719894;
+			atlOffset=1.074585;
 		};
 		class Item284
 		{
@@ -16212,7 +16213,7 @@ class Mission
 			};
 			id=4788;
 			type="no_skin_body";
-			atlOffset=0.27447128;
+			atlOffset=0.9818573;
 		};
 		class Item286
 		{
@@ -16295,7 +16296,7 @@ class Mission
 			};
 			id=4795;
 			type="BloodSpray_01_New_F";
-			atlOffset=0.54533768;
+			atlOffset=1.2527237;
 		};
 		class Item291
 		{
@@ -16537,7 +16538,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr1 = createMarker [""Fortress"", this];" \n """Fortress"" setMarkerType ""Uncontrolled"";" \n """Fortress"" setMarkerAlpha 0.7;" \n "[this, ""Fortress""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=4894;
 			type="Land_Laptop_device_F";
@@ -16880,7 +16881,7 @@ class Mission
 			flags=1;
 			id=4927;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=3.201828;
+			atlOffset=3.2809906;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17326,7 +17327,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr2 = createMarker [""Fort"", this];" \n """Fort"" setMarkerType ""Uncontrolled"";" \n """Fort"" setMarkerAlpha 0.7;" \n "[this, ""Fort""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=4984;
 			type="Land_Laptop_device_F";
@@ -17379,34 +17380,35 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={823.99182,233.51266,3886.5056};
-				angles[]={0,3.037133,0};
+				position[]={823.992,233.51306,3886.5061};
+				angles[]={0,3.0371346,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr3 = createMarker [""CentralElectric"", this];" \n """CentralElectric"" setMarkerType ""Uncontrolled"";" \n """CentralElectric"" setMarkerAlpha 0.7;" \n "[this, ""CentralElectric""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=4993;
 			type="Land_Laptop_device_F";
+			atlOffset=0.00039672852;
 		};
 		class Item336
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3580.4236,17.282795,2385.051};
-				angles[]={0,0.0069709998,0};
+				position[]={3580.4241,17.283072,2385.051};
+				angles[]={0,0.0069638635,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr4 = createMarker [""OilStation"", this];" \n """OilStation"" setMarkerType ""Uncontrolled"";" \n """OilStation"" setMarkerAlpha 0.7;" \n "[this, ""OilStation""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=4997;
 			type="Land_Laptop_device_F";
-			atlOffset=0.76770592;
+			atlOffset=0.76798248;
 		};
 		class Item337
 		{
@@ -17492,17 +17494,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={714.01532,54.495674,991.29327};
-				angles[]={0,2.3445783,0};
+				position[]={714.01501,54.496067,991.29303};
+				angles[]={0,2.3445706,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr5 = createMarker [""BaseMilitaire"", this];" \n """BaseMilitaire"" setMarkerType ""Uncontrolled"";" \n """BaseMilitaire"" setMarkerAlpha 0.7;" \n "[this, ""BaseMilitaire""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=5007;
 			type="Land_Laptop_device_F";
-			atlOffset=0.85769272;
+			atlOffset=0.85808563;
 		};
 		class Item343
 		{
@@ -17585,13 +17587,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={1232.1997,12.343562,1538.4043};
-				angles[]={0,1.919952,0};
+				position[]={1232.1899,12.343562,1538.4351};
+				angles[]={0,1.8171843,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr7 = createMarker [""Submarine"", this];" \n """Submarine"" setMarkerType ""Uncontrolled"";" \n """Submarine"" setMarkerAlpha 0.7;" \n "[this, ""Submarine""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=5020;
 			type="Land_Laptop_02_unfolded_F";
@@ -17733,17 +17735,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6294.3696,264.04739,864.57123};
-				angles[]={0,5.6329532,0};
+				position[]={6294.3701,264.04706,864.57098};
+				angles[]={0,5.6329451,0};
 			};
 			side="Empty";
 			class Attributes
 			{
-				init="this call BP_fnc_addCPAction;";
+				init="mrkr6 = createMarker [""Factory"", this];" \n """Factory"" setMarkerType ""Uncontrolled"";" \n """Factory"" setMarkerAlpha 0.7;" \n "[this, ""Factory""] call BP_fnc_addCPAction;" \n "";
 			};
 			id=5046;
 			type="Land_Laptop_unfolded_F";
-			atlOffset=0.87359619;
+			atlOffset=0.8732605;
 		};
 		class Item354
 		{

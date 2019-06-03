@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class Horror_Props_pat
 	{
-		requiredAddons[] = {};
+		requiredAddons[] = {"A3_Characters_F"};
 		requiredVersion = 0.1; 
 		units[] =
 		{"BathTub_Bloody","Axe_prop_horror","Human_face_mask_Ground","Peg_Prop","coffin_With_Cross","wege_board","Bloody_chains","Coffin_closed","HELLRAISER_BOX","Horror_Book"  
