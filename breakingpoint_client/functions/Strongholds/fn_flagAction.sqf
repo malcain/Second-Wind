@@ -19,7 +19,7 @@ if (_callerClass in _nonFaction) exitwith {};
 _caller playAction "PutDown";
 [(netID _target),(netID _caller),_actionId,_callerClass,_arguments] remoteExecCall ["BPServer_fnc_captureStart",2];
 
-diag_log text format ["target %1, caller %2, actionID %3, callerClass %4",_target,_caller,_actionId,_callerClass];
+//diag_log text format ["target %1, caller %2, actionID %3, callerClass %4, arguments %5",_target,_caller,_actionId,_callerClass,_arguments];
 
 /*if (_finished) then 
 {	
