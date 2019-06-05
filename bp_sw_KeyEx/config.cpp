@@ -16,13 +16,13 @@ class CfgFunctions {
 	class UI {
 		tag = "KEX";
 		class ui {
-			file = "\BP_SW_KeyEx\Scripts\UI";
+			file = "\bp_sw\BP_SW_KeyEx\Scripts\UI";
 			class initDisplay {};
 			class dikToHuman {};
 		};
 		class functions
 		{
-			file = "\BP_SW_KeyEx\Scripts\Functions";
+			file = "\bp_sw\BP_SW_KeyEx\Scripts\Functions";
 			class preinit {
 				preinit = 1;
 				preStart = 1; //that way keybind definitions can be modified at main menu
