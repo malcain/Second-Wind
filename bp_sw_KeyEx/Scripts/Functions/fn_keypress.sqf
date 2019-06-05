@@ -18,11 +18,21 @@ _value = false;
 		_entry = _x select 1;
 		if(_key == _dik) then {
 			_continue = false;
-			if(_entry == 0 && !_shift && !_alt && !_ctrl) then {_continue = true;};
+			/*if(_entry == 0) then {_continue = true;};
+			if(_entry == 1 && _shift) then {_continue = true;};
+			if(_entry == 2 && _ctrl) then {_continue = true;};
+			if(_entry == 3 && _alt) then {_continue = true;};
+			if(_entry == 4 && _ctrl && _shift) then {_continue = true;};*/
+			if(_entry == 0 && !_alt && !_ctrl) then {_continue = true;};
+			if(_entry == 1 && !_alt && !_ctrl) then {_continue = true;};
+			if(_entry == 2 && _ctrl && !_alt) then {_continue = true;};
+			if(_entry == 3 && _alt  && !_ctrl) then {_continue = true;};
+			if(_entry == 4 && _ctrl && !_alt) then {_continue = true;};
+			/*if(_entry == 0 && !_shift && !_alt && !_ctrl) then {_continue = true;};
 			if(_entry == 1 && _shift && !_alt && !_ctrl) then {_continue = true;};
 			if(_entry == 2 && _ctrl && !_alt && !_shift) then {_continue = true;};
 			if(_entry == 3 && _alt && !_shift && !_ctrl) then {_continue = true;};
-			if(_entry == 4 && _ctrl && _shift && !_alt) then {_continue = true;};
+			if(_entry == 4 && _ctrl && _shift && !_alt) then {_continue = true;};*/
 			if(_continue) then {
 				_response = call compile _code;
 				if(isNil {_response}) then {

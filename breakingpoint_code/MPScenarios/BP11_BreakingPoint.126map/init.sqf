@@ -88,6 +88,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 if (hasInterface) then {
 [] execVm "nighttime.sqf";
 [] execVM "rain_drop.sqf";
+[] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 };
 	//run on all player clients incl. player host
 execVM "AL_radiation\al_ini_fnc.sqf";
@@ -198,9 +199,5 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 // Breaking Point - Player Client Integration
 initialized = true;
 
-[] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
-
 waitUntil {time > 0};
 enableEnvironment [true,true];
-
-
