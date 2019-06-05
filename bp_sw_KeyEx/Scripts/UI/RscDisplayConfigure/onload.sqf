@@ -39,7 +39,7 @@ _cancel buttonSetAction "uiNamespace setVariable ['VARS_TO_UPDATE',[]];";
 	
 	//--- update combo box with KeybindsEx Controls group
 	_combo = _display displayCtrl 108;
-	_combo lbAdd "BreakingPoint Controls";
+	_combo lbAdd "BP:SecondWind Controls";
 	
 	//TODO: Rework this so we can have multiple dropdown segments
 	
@@ -50,7 +50,7 @@ _cancel buttonSetAction "uiNamespace setVariable ['VARS_TO_UPDATE',[]];";
 		_display = ctrlParent _ctrl;
 		_list = _display displayCtrl 102;
 		_dsc = _display displayCtrl 202;
-		if((_ctrl lbText _index) == "BreakingPoint Controls") then {
+		if((_ctrl lbText _index) == "BP:SecondWind Controls") then {
 			//Opening KeybindsEx controls, hide default list and show the lnbList
 			_list ctrlShow false;
 			_dsc ctrlShow true;

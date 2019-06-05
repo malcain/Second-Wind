@@ -179,6 +179,10 @@ null13 = [rad13,30,220,"H_PilotHelmetFighter_B","ItemWatch",false,10,false] exec
 //null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
 //null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F","BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
 */
+
+setViewDistance 2300;
+setObjectViewDistance 1450;
+
 //Client Init Only
 if (isServer) exitWith {};
 if (!hasInterface) exitWith {};
@@ -194,8 +198,6 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 // Breaking Point - Player Client Integration
 initialized = true;
 
-setViewDistance 2300;
-setObjectViewDistance 1450;
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 
 waitUntil {time > 0};

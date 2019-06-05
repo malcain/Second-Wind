@@ -9,7 +9,7 @@ if !(_data isEqualType []) then {
 	_params = [_data];
 };
 
-_folder = "\breakingpoint_KeyEx\Scripts\UI\" + _class + "\";
+_folder = "\bp_sw\bp_sw_KeyEx\Scripts\UI\" + _class + "\";
 _file = _folder + _type + ".sqf";
 
 _params call compile preprocessfilelinenumbers _file;
