@@ -12,7 +12,7 @@
 showGroupIndicator = 0;
 disableRandomization[] = {"All"};
 joinUnassigned = 0;
-enableDebugConsole = 2;
+enableDebugConsole = 1;
 allowFunctionsLog = 0;
 author = "Malcain";
 dev = "Malcain";
@@ -22,7 +22,7 @@ respawnTemplates[] = {"BP_Base","Counter"};
 respawndelay = 40;
 respawnDialog = 0;
 onLoadMission= "";
-OnLoadIntro = "Welcome to Arma 3 Breaking Point!";
+OnLoadIntro = "Welcome to BP:SecondWind!";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;

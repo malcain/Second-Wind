@@ -10,7 +10,7 @@ This is the release note accompanying BreakingPoint: Second Wind
 - IN005 for permission to use and build upon his facewear/headgear assets from MadArma mod: https://steamcommunity.com/sharedfiles/filedetails/?id=815962700
 - Lythium team for permission to work with custom skybox.
 
-Thank you guys, you will never be forgotten.
+Thank you!! you won't be forgotten.
 
 Some A3 community heroes who cannot stay unmentioned:
 - KillzoneKid for his helpful tutorials and all the knowledge he shared with community.
@@ -19,7 +19,7 @@ Some A3 community heroes who cannot stay unmentioned:
 
 Some A3 community bad actors who cannot stay unmentioned:
 - FallujahMedic -FM- who exceeds moderator's instructions, censors and permabans good people from A3 Discord&Forum for their opinions on various topics.
-- players and thieves who think non-BIS work on a mod/game shall always be free for them to get.
+- thieves who think non-BIS work on a mod/game shall always be free for them to get.
 
 # Disclaimer and License
 
@@ -74,13 +74,6 @@ The following archives are licensed under APL-SA:
 - breakingpoint_ui
 - breakingpoint_vehicles
 - breakingpoint_weapons
-- BornholmObjects
-- CST_Industrial
-- CST_Infrastructure
-- CST_Residential
-- sar_ru_architect
-- mil.pbo
-- A_stationhouse.pbo
 
 The following archives are Licensed under Creative Commons: By Attribution 3.0 License
 http://creativecommons.org/licenses/by/3.0/

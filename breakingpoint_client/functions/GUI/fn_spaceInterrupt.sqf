@@ -178,10 +178,10 @@ if (_dikCode == 3) then {
 			if (!r_player_unconscious and !_isHostage) then 
 			{
 				if (_stance == "CROUCH" and {_currentWeapon == ""}) then {
-					[] spawn { 
+					_handgun spawn {
 					player switchmove "AmovPknlMstpSrasWpstDnon_AmovPknlMstpSrasWrflDnon";
 					sleep 0.01;  
-					player selectWeapon _handgun;
+					player selectWeapon _this;
 					sleep 0.01;
 					player action ["handGunOn", player];
 					};
@@ -259,18 +259,19 @@ if (_dikCode == 6) then {
 			{
 				if (_currentWeapon == _rifle and {_stance != "STAND"}) then {
 					if (_stance == "PRONE") then { //WORKAROUND for PRONE RIFLE HOLSTER animation bug...
-					[] spawn { 
-					player switchaction "HandGunOn"; 
-					sleep 0.0001;
-					player selectWeapon _handgun;
-					sleep 0.001;
-					player action ["SWITCHWEAPON", vehicle player, vehicle player, 100]; };
+						_handgun spawn {
+						player switchaction "HandGunOn"; 
+						sleep 0.0001;
+						player selectWeapon _this;
+						sleep 0.001;
+						player action ["SWITCHWEAPON", vehicle player, vehicle player, 100]; 
+						};
 					} else { 
 						if (animationstate player isEqualTo "amovpknlmrunsraswrfldf") then {//WORKAROUND for CROUCH WALK RIFLE HOLSTER animation bug...
 						[] spawn {
 						player playmove "amovpknlmstpsraswrfldnon";
 						sleep 0.01;
-						player action ["SwitchWeapon", player, player, 100];};
+						player action ["SwitchWeapon", player, player, 100]; };
 						} else {
 							player action ["SwitchWeapon", player, player, 100];
 							player switchcamera cameraView;
