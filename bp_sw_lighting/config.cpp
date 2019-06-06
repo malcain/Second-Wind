@@ -4332,7 +4332,7 @@ class CfgWorlds
 		soundMapSizeCoef=4;
 		satelliteNormalBlendStart=10;
 		satelliteNormalBlendEnd=100;
-		skyObject="bp_sw\bp_sw_lighting\data\OldSky\obloha.p3d";
+		//skyObject="bp_sw\bp_sw_lighting\data\OldSky\obloha.p3d";
 		horizontObject="bp_sw\bp_sw_lighting\data\OldSky\horizont.p3d";
 		//horizontObject="A3\Map_Tanoabuka\data\horizon.p3d"; //They have cleared the skybox texture, but fucked up model setup. TODO: make an own one?
 		skyTexture="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
