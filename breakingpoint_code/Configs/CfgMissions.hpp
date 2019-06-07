@@ -11,6 +11,12 @@ class CfgMissions
 {
 	class MPMissions 
 	{
+		// St.George
+		class BP_SecondWind {
+			briefingName = "Second Wind";
+			directory = "breakingpoint_code\MPScenarios\BP_SecondWind.126map";
+		};
+		
 		// Altis
 		class BP1_BreakingPoint {
 			briefingName = "Breaking Point";
@@ -97,12 +103,6 @@ class CfgMissions
 		class BP10_BreakingPoint {
 			briefingName = "Breaking Point";
 			directory = "breakingpoint_code\MPScenarios\BP10_BreakingPoint.Bornholm";
-		};
-		
-		// St.George
-		class BP11_BreakingPoint {
-			briefingName = "Breaking Point";
-			directory = "breakingpoint_code\MPScenarios\BP11_BreakingPoint.126map";
 		};
 	};
 };

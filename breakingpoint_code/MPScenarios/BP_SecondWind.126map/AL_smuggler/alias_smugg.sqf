@@ -6,7 +6,7 @@ _marker_sursa_smugg = _this select 0;
 _mobile_anomaly 	= _this select 1;
 _device_detector	= _this select 2;
 _spawn_classname	= _this select 3;
-_delay_between_spawn= _this select 4;
+//_delay_between_spawn= _this select 4;
 _teleport_protect	= _this select 5;
 
 _sursa_smugg = createVehicle ["Land_HelipadEmpty_F", [getmarkerpos _marker_sursa_smugg select 0,getmarkerpos _marker_sursa_smugg select 1,2], [], 0, "CAN_COLLIDE"];
@@ -19,7 +19,7 @@ detect_smug = _device_detector; publicVariable "detect_smug";
 //if (_device_detector !="") then {null= [_sursa_smugg] execvm "AL_smuggler\ai_avoid_smugg.sqf"}else{null= [_sursa_smugg] execvm "AL_smuggler\ai_avoid_smugg_visible.sqf"};
 [[_sursa_smugg,_sursa_smugg_core],"AL_smuggler\alias_smugg_sfx.sqf"] remoteExec ["execVM",0,true];
 [[_sursa_smugg,_sursa_smugg_core],"AL_smuggler\teleport_smugg.sqf"] remoteExec ["execVM",0,true];
-if (count _spawn_classname >0) then { if(_delay_between_spawn <=0) exitwith {hint "The delay between spawns must be bigger than 0"}; spawn_delay_smugg=_delay_between_spawn; publicVariable"spawn_delay_smugg"; null=[_spawn_classname,_sursa_smugg_core] execvm "AL_smuggler\smuggler_spawn.sqf"};
+if (count _spawn_classname >0) then { null=[_spawn_classname,_sursa_smugg_core] execvm "AL_smuggler\smuggler_spawn.sqf"};
 
 if (_mobile_anomaly) then 
 {

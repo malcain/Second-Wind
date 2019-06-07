@@ -1248,7 +1248,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.133,0.204,0.35699999},
-						9.9400002
+						9.8
 					};
 					apertureMin=8;
 					apertureStandard=16;
@@ -1328,7 +1328,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.145,0.22400001,0.396},
-						11.4
+						11.2
 					};
 					apertureMin=20;
 					apertureStandard=25;
@@ -1408,7 +1408,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.15899999,0.25099999,0.48800001},
-						14.245
+						14.145
 					};
 					apertureMin=45;
 					apertureStandard=60;
@@ -2336,7 +2336,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.145,0.22400001,0.396},
-						9.6999998
+						9.6
 					};
 					apertureMin=20;
 					apertureStandard=25;
@@ -2416,7 +2416,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.15899999,0.25099999,0.48800001},
-						12.85
+						12.75
 					};
 					apertureMin=45;
 					apertureStandard=60;

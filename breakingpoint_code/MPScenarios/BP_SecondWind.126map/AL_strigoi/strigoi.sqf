@@ -115,10 +115,14 @@ fnc_attk_strigoi = {
 	_strigoi		= _this select 0;
 	_tgt_casp		= _this select 1;
 	_damage_strig	= _this select 2;
+	
 	[[_strigoi,_tgt_casp],"AL_strigoi\atk_viz.sqf"] remoteExec ["execVM"];
-	if (_tgt_casp in allPlayers_on) then 
-	{[[_damage_strig],"AL_strigoi\tgt_attk.sqf"] remoteExec ["execVM",_tgt_casp]}
-	else {_tgt_casp setdamage ((getdammage _tgt_casp) + 0.1)};
+	
+	if (_tgt_casp in allPlayers_on) then {
+		[[_damage_strig],"AL_strigoi\tgt_attk.sqf"] remoteExec ["execVM",_tgt_casp]
+	} else {
+		_tgt_casp setdamage ((getdammage _tgt_casp) + 0.1)
+	};
 	//else {_tgt_casp setdamage ((getdammage _tgt_casp) + _damage_strig)};
 	sleep 1;
 };

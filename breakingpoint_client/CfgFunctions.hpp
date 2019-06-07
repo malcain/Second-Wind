@@ -78,6 +78,11 @@ class CfgFunctions
 			class flash {};
 			class flash_effect {};
 		};
+		class Anomalies {
+			file = "\breakingpoint_client\functions\Anomalies";
+			class anomTeleport {};
+			class teleportHandle {};
+		};
 		class Safe {
 			file = "\breakingpoint_client\functions\Safe";
 			class safeKeypad {};
@@ -138,6 +143,7 @@ class CfgFunctions
 		class Effects {
 			file = "\breakingpoint_client\functions\Effects";
 			class hallucination {};
+			class teleportEffect {};
 		};
 		class Group {
 			file = "\breakingpoint_client\functions\Group";
