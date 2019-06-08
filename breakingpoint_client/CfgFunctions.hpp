@@ -82,6 +82,7 @@ class CfgFunctions
 			file = "\breakingpoint_client\functions\Anomalies";
 			class anomTeleport {};
 			class teleportHandle {};
+			class teleportDetect {};
 		};
 		class Safe {
 			file = "\breakingpoint_client\functions\Safe";
@@ -144,6 +145,7 @@ class CfgFunctions
 			file = "\breakingpoint_client\functions\Effects";
 			class hallucination {};
 			class teleportEffect {};
+			class smugglerSFX {};
 		};
 		class Group {
 			file = "\breakingpoint_client\functions\Group";
