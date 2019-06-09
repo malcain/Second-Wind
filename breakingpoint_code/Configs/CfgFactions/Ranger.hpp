@@ -330,8 +330,8 @@ class Ranger : BP_BaseFaction
 		};
 		class Kill {
 			class scavenger {
-				Level_0 = 25;
-				Level_1 = 25;
+				Level_0 = 50;
+				Level_1 = 50;
 				Level_2 = 75;
 				Level_3 = 150;
 				Level_4 = 150;

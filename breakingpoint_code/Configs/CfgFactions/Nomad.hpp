@@ -348,17 +348,17 @@
 					Level_4 = -3000;
 				};
 				class Outlaw {
-					Level_0 = 25;
-					Level_1 = 25;
-					Level_2 = 50;
-					Level_3 = 75;
-					Level_4 = 100;
+					Level_0 = 50;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 100;
+					Level_4 = 125;
 				};
 				class Hunter {
-					Level_0 = 25;
-					Level_1 = 25;
-					Level_2 = 50;
-					Level_3 = 100;
+					Level_0 = 50;
+					Level_1 = 50;
+					Level_2 = 75;
+					Level_3 = 125;
 					Level_4 = 150;
 				};
 				class Nomad {
