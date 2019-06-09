@@ -166,7 +166,7 @@ null11 = [rad11,35,120,"H_PilotHelmetFighter_B","Binocular",false,10,false] exec
 null12 = [rad12,35,120,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null13 = [rad13,30,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 
-//Strigoi
+/*//Strigoi
 ["strigoi_1",250,true,950,40] execvm "AL_strigoi\strigoi.sqf";
 //["strigoi_2",250,false,920,55] execvm "AL_strigoi\strigoi.sqf";
 //["strigoi_3",280,false,970,40] execvm "AL_strigoi\strigoi.sqf";
@@ -175,7 +175,7 @@ null13 = [rad13,30,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] exec
 ["strigoi_6",250,true,870,40] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_7",230,true,750,35] execvm "AL_strigoi\strigoi.sqf";
 ["strigoi_8",230,true,850,40] execvm "AL_strigoi\strigoi.sqf";
-
+*/
 //Smuggler
 //null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F","BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
 //null22 = ["smugg1",true,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] execVM "AL_smuggler\alias_smugg.sqf";

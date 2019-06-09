@@ -188,8 +188,8 @@ if (_damage > 0.01) then
 			
 			_infection = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "Infection");
 			_infectionChance = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "InfectionChance");
-			_knockout = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "Knockout");
-			_knockoutChance = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "KnockoutChance");
+			//_knockout = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "Knockout");
+			//_knockoutChance = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "KnockoutChance");
 			_ammoScale = getNumber(configFile >> "CfgAmmo" >> _ammo >> "Medical" >> "scale");
 			
 			if (_instantBleeding == 1) then { _instantBleeding = true; } else { _instantBleeding = false; };
@@ -216,7 +216,7 @@ if (_damage > 0.01) then
 				_hitInfection = (_rndInfection < _infectionChance);
 			};
 
-			if (_knockout) then {
+			/*if (_knockout) then {
 				_rndKnockout = (random 100);
 				_hitKnockout = (_rndKnockout < _knockoutChance);
 					//bolt-action rifle check.
@@ -229,7 +229,7 @@ if (_damage > 0.01) then
 				if (_hitKnockout) then {
 				[player,1] spawn BP_fnc_medicalKnockDown;
 				};
-			};
+			};*/
 			
 			if (_medicalState > 0) then {
 				_rndMedicalChance = (random 100);

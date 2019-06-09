@@ -49,7 +49,7 @@ class CfgKeybindsEx {
 		class Heal { //Unique Identifier for this Keybind
 			displayName = "Heal"; //Display name of this keybinding
 			tooltip = "Sit to Heal"; //Tooltip
-			defaultKeys[] = {{0x23,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x15,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerHeal;"; //Code to run when this keybind is pressed
 		};
 	};
@@ -67,7 +67,7 @@ class CfgKeybindsEx {
 		class Parkour { //Unique Identifier for this Keybind
 			displayName = "Parkour"; //Display name of this keybinding
 			tooltip = "Climb on/over the walls and other obstacles."; //Tooltip
-			defaultKeys[] = {{0x21,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x4D,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "[player] call BP_fnc_detectMove;"; //Code to run when this keybind is pressed
 		};
 	};
@@ -112,7 +112,7 @@ class CfgKeybindsEx {
 		class Autoswim { //Unique Identifier for this Keybind
 			displayName = "Autoswim"; //Display name of this keybinding
 			tooltip = "Automatic swimming with mouse steering. Cancelled with any action."; //Tooltip
-			defaultKeys[] = {{0x4C,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x48,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerAutoswim;"; //Code to run when this keybind is pressed
 		};
 	};

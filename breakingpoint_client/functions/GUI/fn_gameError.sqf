@@ -68,6 +68,14 @@ if (typeName _msgID == "STRING") then {
 		case 14: {
 			_msg = "This Stronghold is already captured by your faction.";
 		};
+		//Capture process has already started, wait for it to finish.
+		case 15: {
+			_msg = "Capture process has already been started, wait for it to finish.";
+		};
+		//Start capture.
+		case 16: {
+			_msg = "Code requests for schemes sent. Capturing started.";
+		};
 	};
 
 	cutText [_msg, "PLAIN DOWN"];
