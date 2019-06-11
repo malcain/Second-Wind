@@ -56738,7 +56738,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 15; //Between 0 -> 100
+			KnockoutChance = 40; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

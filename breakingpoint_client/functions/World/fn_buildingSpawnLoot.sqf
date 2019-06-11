@@ -96,7 +96,7 @@ for "_i" from 1 to (count _positions) do {
 	_iPos = _building modelToWorld _x;
 	_height = getTerrainHeightASL getPos _building;
 	if (_height < -0.1) then {
-	if (_height < -2) exitwith {};
+	if (_height < -1.5) exitwith {};
 	_iPos = [(_buildingPos select 0) + (_x select 0), (_buildingPos select 1) + (_x select 1),(_buildingPos select 2) + (_x select 2)];
 	};
 	//Check If Any Loot Boxes are in that world position

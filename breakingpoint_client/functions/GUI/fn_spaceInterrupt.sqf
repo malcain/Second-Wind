@@ -152,7 +152,6 @@ if (_dikCode == 2) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -172,12 +171,11 @@ if (_dikCode == 3) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{
-				if (_stance == "CROUCH" and {_currentWeapon == ""}) then {
+				if (_stance == "CROUCH" and {_currentWeapon == ""}) then { //WORKAROUND-fix arma cinfig anim bugs
 					_handgun spawn {
 					player switchmove "AmovPknlMstpSrasWpstDnon_AmovPknlMstpSrasWrflDnon";
 					sleep 0.01;  
@@ -194,7 +192,7 @@ if (_dikCode == 3) then {
 	_handled = true;
 };
 
-// 3 - Launcher
+// 3 - Melee Weapon (Launcher)
 if (_dikCode == 4) then 
 {
 	if (time - BP_lastCheckBit > 1) then
@@ -203,7 +201,6 @@ if (_dikCode == 4) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -224,7 +221,6 @@ if (_dikCode == 5) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		//r_action_rest = false;
 		if ((vehicle player) == player) then {
 			if (!r_player_unconscious and !_isHostage) then {
 				_hasRange = ("Rangefinder" in weapons player);
@@ -252,7 +248,6 @@ if (_dikCode == 6) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		//r_action_rest = false;
 		if ((vehicle player) == player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
@@ -278,8 +273,22 @@ if (_dikCode == 6) then {
 						};
 					};
 				} else {
+					//yet another fucking workaround-fixes
+					private _animstate = animationstate player;
+					if (_animstate isEqualTo "amovpknlmevaslowwlnrdf") then {
+						[] spawn {
+						player playmove "amovpknlmrunsraswlnrdf";
+						sleep 0.01;
+						player action ["SwitchWeapon", player, player, 100]; };
+					} else {
+						if (_animstate isEqualTo "amovpercmrunsraswlnrdf" or {_animstate isEqualTo "amovpercmevaslowwlnrdf"}) then {
+							[] spawn {
+							player switchmove "amovpercmstpsraswlnrdnon";
+							player action ["SwitchWeapon", player, player, 100]; };
+						};
+					};
 					player action ["SwitchWeapon", player, player, 100];
-					player switchcamera cameraView;
+					player switchcamera cameraView; 
 				};
 			};
 		};

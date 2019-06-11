@@ -126,7 +126,7 @@ if (
 			//--- Load last values of watch fields
 			{
 				_input = _display displayctrl _x;
-				_input ctrlsettext (profilenamespace getvariable ["RscDebugConsole_watch" + str(_foreachindex + 1),""]);
+				//_input ctrlsettext (profilenamespace getvariable ["RscDebugConsole_watch" + str(_foreachindex + 1),""]);
 			} foreach [
 				IDC_RSCDEBUGCONSOLE_WATCHINPUT1,
 				IDC_RSCDEBUGCONSOLE_WATCHINPUT2,
