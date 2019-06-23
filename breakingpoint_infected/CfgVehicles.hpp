@@ -227,7 +227,7 @@ class CfgVehicles
 	};
 	class zZombie_Imp: zZombie_Base
 	{
-		armor = 360;
+		armor = 300;
 		armorStructural = 0.4;
 		explosionShielding = 0.04;
 		minTotalDamageThreshold = 0.001;

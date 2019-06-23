@@ -235,14 +235,14 @@ class BP_WeaponCrateOld : BP_LootBox {
     displayName = "Old Weapon Crate";
 	model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo.p3d";
 };
-class BP_WeaponCrate_WWII : BP_LootBox {
-	displayName = "Surplus Weapon Crate";
-	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
-};
 /*class BP_WeaponCrate_WWII : BP_LootBox {
 	displayName = "Surplus Weapon Crate";
-	model = "\breakingpoint\models\bp_crate1b.p3d";
+	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
 };*/
+class BP_WeaponCrate_WWII : BP_LootBox {
+	displayName = "Surplus Weapon Crate";
+	model = "\breakingpoint\models\bp_crate1b.p3d";
+};
 	
 /* Military Boxes Large (Helicrash/Underwater)*/	
 class BP_HeavyWeaponCrate : BP_LootBox {

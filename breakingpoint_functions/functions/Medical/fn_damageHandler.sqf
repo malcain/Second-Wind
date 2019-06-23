@@ -27,7 +27,7 @@ _isMinor = (_hitpoint in med_MinorWounds);
 _isHeadHit = (_hit == "head" or {_hitPoint == "hitneck"});
 //_isHeartHit = (_hit == "spine3");
 _isPlayer = (isPlayer _source);
-_inVehicle = ((vehicle _unit) != _unit);
+_inVehicle = !isNull objectParent _unit;
 _inVehicleSource = ((vehicle _source) != _source);
 _isMelee = _ammo isKindOf "Melee";
 _selfDamage = (_unit == _source);
@@ -115,18 +115,18 @@ if (_ammo == "zombie") then {
 
 /// Player Damage
 if (_ammo != "zombie") then {
-	_scale = _scale + 50; //50
+	_scale = _scale + 50; //250
 	if (_damage > 0.01) then {
 		//Headshot
-		if (_isHeadHit) then { _scale = _scale + 750; };
+		if (_isHeadHit) then { _scale = _scale + 750; }; //1000
 		//Damage Was Caused By Another Player who isn't you.
 		if (isPlayer _source && {!(player == _source)}) then 
 		{
-			_scale = _scale + 5; //5
+			_scale = _scale + 5; //255
 			if (_isHeadHit) then { _scale = _scale + 500; };
 			switch (_type) do {
-				case 1: { _scale = _scale + 200 };
-				case 2: { _scale = _scale + 200 };
+				case 1: { _scale = _scale + 200 }; //455
+				case 2: { _scale = _scale + 200 }; //455
 			};
 
 		};

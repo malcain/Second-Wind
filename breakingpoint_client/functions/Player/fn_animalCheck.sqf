@@ -23,7 +23,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//Find where animal likes
 	_type = selectRandom ANIMALS;
 	if (_type == "BP_Dog") then { _type = selectRandom DOGS; };
-	_root = configFile >> "CfgVehicles" >> _type;
+	//_root = configFile >> "CfgVehicles" >> _type;
 	
 	//_favouritezones = getText ( _root >> "favouritezones");
 	//http://forums.bistudio.com/showthread.php?93897-selectBestPlaces-%28do-it-yourself-documentation%29
@@ -32,10 +32,10 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	
 	_favouritezones = "meadow + forest + trees";
 	
-	if (random 100 < 65) then {
+	/*if (random 100 < 65) then {
 	_mushroom = true;
 	_favouritezones = "forest";
-	};
+	};*/
 	
 	_PosList = selectBestPlaces [_playerPos,BP_AnimalDistance,_favouritezones,10,5];
 	

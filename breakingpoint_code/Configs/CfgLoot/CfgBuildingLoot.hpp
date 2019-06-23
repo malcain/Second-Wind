@@ -118,11 +118,9 @@ class CfgBuildingLoot
 			{"MeleeShovel","weaponNA"},
 			{"MeleeCrowbar","weaponNA"},
 			{"MeleeClub","weaponNA"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
 			{"BlueprintHavenReinforce","magazine"},
 			{"BlueprintStove","magazine"},
 			{"BlueprintWaterBarrel","magazine"},
-			{"BlueprintFuelBarrel","magazine"},
 			{"BlueprintTele","magazine"},
 			{"BlueprintCrate1","magazine"},
 			{"BP_Crossbow","weapon"},
@@ -187,11 +185,9 @@ class CfgBuildingLoot
 			0.01,   //Shovel
 			0.01,	//Crowbar
 			0.01,   //Club
-			0.01,	//9MM RUBBER
 			0.01,    //HavenReinforcement BLUEPRINT
 			0.01,    //Stove BLUEPRINT
 			0.01,    //Barrel Water BLUEPRINT
-			0.01,    //barrel Fuel BLUEPRINT
 			0.01,    //television BLUEPRINT
 			0.01,    //CRATE BLUEPRINT
 			0.02,	//Crossbow
@@ -213,12 +209,15 @@ class CfgBuildingLoot
             {"BP_CardboardBox_2","object","Supermarket"},
             {"BP_CardboardBox_3","object","Generic"},
             {"BP_TrashcanHouse","object","Trash"},
+			{"BP_MedicalBox","object","Hospital"},
 			{"BP_Bag1","object","Generic"},
+			{"BP_Bag3","object","Residential"},
 			{"BP_Bag3","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential"},
 			{"BP_LuggageCaseBG","object","Residential"},
-			{"BP_Bag3","object","Residential"},
+			{"ItemMorphine","magazine"},
+			{"ItemFieldDressing","magazine"},
 			{"ItemDuctTape","magazine"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
@@ -233,7 +232,6 @@ class CfgBuildingLoot
 			{"BP_SVT40","weaponA"},
 			{"BP_M1903","weaponA"},
 			{"BP_M1903K","weaponA"},
-			{"BP_Kitbag_cbr","backpack"},
 			{"Binocular","weaponNA"},
 			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
@@ -254,7 +252,6 @@ class CfgBuildingLoot
 			{"ItemSoda2","magazine"},
 			{"ItemCan1","magazine"},
 			{"ItemCan2","magazine"},
-			{"BlueprintCrate1","magazine"},
 			{"BP_Mak_Old","weapon"},
 			{"BP_AlarmClock_Black","magazine"},
 			{"BP_CZ550_old","weaponA"},
@@ -275,13 +272,7 @@ class CfgBuildingLoot
 			{"ItemBandage","magazine"},
 			{"Meleehatchet","weaponNA"},
 			{"MeleeShovel","weaponNA"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
-			{"BlueprintHavenReinforce","magazine"},
-			{"BlueprintStove","magazine"},
-			{"BlueprintWaterBarrel","magazine"},
 			{"BlueprintFuelBarrel","magazine"},
-			{"BlueprintTele","magazine"},
-			{"BlueprintCrate1","magazine"},
 			{"BP_Crossbow","weapon"},
 			{"BP_Crossbow_DigitCamo","weaponA"},
 			{"BP_Arrow_Mag","magazine"},
@@ -291,13 +282,16 @@ class CfgBuildingLoot
 			0.01,	//BP_Surplus
 			0.01,	//BP_CardBoardBox2
 			0.08,	//BP_CardBoardBox3
-			0.08,	//BP_Trashcan
+			0.05,	//BP_Trashcan
+			0.08,	//MedicalBox
 			0.08,   //BP_Bag1
-			0.01,   //BP_Bag3
+			0.08,   //BP_Bag3 Residential
+			0.01,   //BP_Bag3 Residential2
 			0.01,   //BP_LuggageCaseGR
 			0.10,   //BP_LuggageCaseGR
 			0.10,   //BP_LuggageCaseBG
-			0.12,   //BP_Bag3
+			0.03,	//Morphine
+			0.03,	//FieldDressing
 			0.01,	//Duct_Tape
 			0.01,	//Compass
 			0.01,	//Map
@@ -312,17 +306,16 @@ class CfgBuildingLoot
 			0.01,	//SVT40A
 			0.01,	//M1903
 			0.01,	//M1903K
-			0.02,	//Sportbag
-			0.02,	//Binocular
+			0.01,	//Binocular
 			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
-			0.02,	//DUCTTAPE
+			0.01,	//DUCTTAPE
 			0.01,	//WATERTAPE
-			0.02,	//BACKPACK
-			0.02,	//BACKPACK
-			0.02,	//BACKPACK
-			0.02,	//TRASH
-			0.02,	//TRASH
+			0.01,	//BACKPACK
+			0.01,	//BACKPACK
+			0.01,	//BACKPACK
+			0.01,	//TRASH
+			0.01,	//TRASH
 			0.01,	//TRASH
 			0.01,	//TRASH
 			0.01,	//TRASH
@@ -333,37 +326,30 @@ class CfgBuildingLoot
 			0.01,	//SODA
 			0.01,	//FOOD
 			0.01,	//FOOD
-			0.01,	//BlueprintCrate
-			0.03,	//Makarov
-			0.02,	//AlarmClock
-			0.02,	//CZ550 Old
-			0.02,	//CZ455
-			0.02,	//REM7
-			0.02,	//1866
-			0.02,	//R300
-			0.02,	//BANDOLIER OLIVE
-			0.02,	//KATANA
-			0.02,   //BENELLI
-			0.02,   //REM870
-			0.02,	//45ACP
-			0.02,	//303B
-			0.02,	//22LR
+			0.02,	//Makarov
+			0.01,	//AlarmClock
+			0.01,	//CZ550 Old
+			0.01,	//CZ455
+			0.01,	//REM7
+			0.01,	//1866
+			0.01,	//R300
+			0.01,	//BANDOLIER OLIVE
+			0.01,	//KATANA
+			0.01,   //BENELLI
+			0.01,   //REM870
+			0.01,	//45ACP
+			0.01,	//303B
+			0.01,	//22LR
 			0.02,	//PAINKILLER
 			0.01,	//ANTIBIOTIC
-			0.02,	//DUCT TAPE
-			0.02,	//BANDAGE
+			0.01,	//DUCT TAPE
+			0.01,	//BANDAGE
 			0.01,	//HATCHET
-			0.01,   //Showel
-			0.01,	//9MM RUBBER
-			0.01,    //HavenReinforcement BLUEPRINT
-			0.01,    //Stove BLUEPRINT
-			0.01,    //Barrel Water BLUEPRINT
+			0.01,   //Shovel
 			0.01,    //barrel Fuel BLUEPRINT
-			0.01,    //television BLUEPRINT
-			0.01,    //CRATE BLUEPRINT
 			0.02,	//Crossbow
 			0.01,	//Crossbow
-			0.02,	//Crossbow Arrow
+			0.01,	//Crossbow Arrow
 			0.01,	//1886 collector
 		};		
 	};
@@ -720,6 +706,7 @@ class CfgBuildingLoot
 			{"BP_8Rnd_45gov","magazine"},
 			{"BP_Unertl32x","toolbelt"},
 			{"BP_15Rnd_9x19OVP","magazine"},
+			{"BP_15Rnd_9x21_Rubber","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"}
 		};
 		itemChance[] =	{
@@ -769,6 +756,7 @@ class CfgBuildingLoot
 			0.01,   //45GOV
 			0.01,   //UNERTL 32X
 			0.01,   //9MM OVP
+			0.01,   //9x21 15Rnd Rubber
 			0.01   //30-06 MAG
 		};		
 	};

@@ -1,7 +1,7 @@
 scriptName "Functions\geometry\fn_inAngleSector.sqf";
 
 //------------------
-// Authors: Peter Morrison (snYpir) & Philipp Pilhofer (raedor)
+// Authors: Peter Morrison (snYpir) & Philipp Pilhofer (raedor), optimised by Killzone_Kid
 // Purpose: Checks if a position lies within an angle sector
 // Arguments: [<center position>,<center angle of sector>,<sector width>,<position>]
 // Return: boolean
@@ -14,28 +14,9 @@ scriptName "Functions\geometry\fn_inAngleSector.sqf";
 	[position player,getdir player,30,position enemy_tank] call BIS_fnc_inAngleSector
 	will return true if the vehicle named enemy_tank is within 30 degrees of where the player is pointing.
 */
-// Revision History:
-// 09/01/08 0.1 - First cut VBS2
-//------------------
+//Example: [ position player, getDir player, 30, position _helipad] call BP_fnc_inAngleCheck;
 
+params ["_center", "_dir", "_sector", "_pos"];
 
-private["_dir1","_dir2","_dir3","_small","_large","_x","_y","_r"];
-
-_r = false;
-
-_small = (_this select 1) - ((_this select 2) / 2);
-_large = (_this select 1) + ((_this select 2) / 2);
-
-_x = ((_this select 3) select 0) - ((_this select 0) select 0);
-_y = ((_this select 3) select 1) - ((_this select 0) select 1);
-
-_dir1 = _x atan2 _y;
-
-if (_dir1 < 0) then {_dir1 = _dir1 + 360};
-
-_dir2 = _dir1 - 360;
-_dir3 = _dir1 + 360;
-
-if ((_dir1 >= _small && _dir1 <= _large) || (_dir2 >= _small && _dir2 <= _large) || (_dir3 >= _small && _dir3 <= _large)) then {_r = true};
-
-_r
+private _dirTo = _center getDir _pos;
+acos ([sin _dir, cos _dir, 0] vectorCos [sin _dirTo, cos _dirTo, 0]) <= _sector/2

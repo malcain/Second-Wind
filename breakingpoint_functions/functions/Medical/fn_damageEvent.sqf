@@ -19,7 +19,7 @@ if (isServer) then
 		BP_DamageEvent = _this;
 		(owner _unit) publicVariableClient "BP_DamageEvent";
 	} else {
-		if !(_unit isKindOf "BP_Stronghold_AI") then {
+		if (_unit isKindOf "zZombie_Base") then {
 			_unit setDamage ((damage _unit) + _damageHit);
 		};
 	};

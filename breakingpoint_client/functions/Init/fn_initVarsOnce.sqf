@@ -16,6 +16,9 @@ BP_StorageClasses = [];
 
 bis_disabled_Door = nil;
 
+//variable for JIP check, deleted after first object spawn check.
+1stRun = true;
+
 if (isNil "cntStrongholds") then
 {
 cntStrongholds = [0,0];

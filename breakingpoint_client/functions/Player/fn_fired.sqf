@@ -58,7 +58,7 @@ if (_isSilencer) then {
 _distance = round(_audible * 10 * _caliber);
 
 if (_isSubsonic and _isSilencer) then {
-	_distance = 0;
+	_distance = round (_distance * 0.75);
 };
 
 //BP_disAudial = _distance;
@@ -101,11 +101,18 @@ if (_ammo isKindOf "Melee"  || {_ammo isKindOf "BP_Bayonet"} || {_ammo isKindOf 
 	
 	if (_ammo == "BP_Hatchet_Swing_Ammo") then {
 		_object = cursorobject;
+		if !(typeof _object isEqualTo "") exitwith {};
 		if ((_unit distance2D _object) > 4.5) exitwith {};
-		_isTree = ["t_",str(_object),false] call BP_fnc_inString;
-		_isBush = ["b_",str(_object),false] call BP_fnc_inString;
-		if (_isTree or _isBush) then {
-			[_object] call BP_fnc_chopWood;
+		_woodType = str _object;
+		_isWoodPile = false;
+		_vegetation = [["t_","d_","b_"],_woodType] call BP_fnc_inStringArray;
+		if (_vegetation) then {
+			[_object,_isWoodPile] call BP_fnc_chopWood;
+		} else {
+			_isWoodPile = [["woodpile","woodenlog","timber","woodenplanks","polewall"],_woodType] call BP_fnc_inStringArray;
+			if (_isWoodPile) then {
+				[_object,_isWoodPile] call BP_fnc_chopWood;
+			};
 		};
 	};
 };

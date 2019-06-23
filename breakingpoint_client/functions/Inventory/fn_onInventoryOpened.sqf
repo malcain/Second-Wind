@@ -58,25 +58,6 @@ if !(isNull _container) then
 		cutText ["You need to use Loot Remains Action to access the inventory of this body.","PLAIN DOWN"];
 	};
 
-	//Check if AI Grave or Not
-	//if (_container isKindOf "BP_DeadBodyAI") then
-	//{
-	//	if (BP_FactionStronghold > 0) then
-	//	{
-	//		//Check if Player is Friendly with AI not Not.
-	//		if (side player == civilian) then {
-	//			//FLag Player as Traitor
-	//			player setVariable ["traitorFlag",true,true];
-	//			
-	//			//Check Strongholds
-	//			call BP_fnc_strongholdCheck;
-	//			
-	//			//Check Faction Specific Clothing
-	//			call BP_fnc_checkFactionClothing;
-	//		};
-	//	};
-	//};
-	
 	//Check If Backpack in a Stronghold or Not
 	//if (BP_FactionStronghold > 0) then
 	//{
@@ -163,7 +144,7 @@ if (_isMan && {!_isZombie} && {!_isAlive}) then { _return = false; };
 if (!_return) then 
 {
 	//Inform the Server of Container Opening
-	[(netID _container)] remoteExecCall ["BPServer_fnc_containerOpened",2];
+	//[(netID _container)] remoteExecCall ["BPServer_fnc_containerOpened",2];
 	
 	//BP_ContainerOpened = [(netID _container),(netID _unit)];
 	//
@@ -231,15 +212,22 @@ if (!_return) then
 	};
 	
 	//Add Inventory Event Handlers
-	BP_InventoryThread = [_restrictedInventory] spawn 
+	BP_InventoryThread = [_restrictedInventory,_container] spawn 
 	{
 		disableSerialization;
 		private ["_controlUniform","_controlVest","_controlBackpack", "_controlHealthHuman", "_controlHealthDog", "_healthCurrentMath", "_dogObject", "_dogHealthCurrent", "_dogObjectID", "_dogHealthFull"];
 		while {isNull (findDisplay 602)} do {};
-		
 		_restrictedInventory = _this select 0;
+		_container = _this select 1;
 		_inventoryWindow = (findDisplay 602);
-		
+		if (_container isKindOf "BP_LootBox") then
+		{
+			_lootSpawned = _container getVariable ["lootSpawned",false];
+			if !(_lootSpawned) then {
+				[(netID _container)] remoteExecCall ["BPServer_fnc_containerOpened",2];
+				_container setVariable ["lootSpawned",true];
+			};
+		};
 		if (_restrictedInventory) then
 		{
 			_hideCtrls = [1001,1239,6320,6400,6321,6307,632,6401,640];

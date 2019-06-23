@@ -1,0 +1,2943 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=274;
+	};
+	class MarkerIDProvider
+	{
+		nextID=8;
+	};
+	class Camera
+	{
+		pos[]={12426.733,119.54666,61.296986};
+		dir[]={0.59456897,-0.14262307,0.79145139};
+		up[]={0.085755005,0.98973972,0.11414936};
+		aside[]={0.7996158,1.5012993e-006,-0.60069633};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"breakingpoint_code",
+	"A3_Characters_F",
+	"A3_Ui_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=3;
+		class Item0
+		{
+			className="breakingpoint_code";
+			name="breakingpoint_code";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=16526153;
+class ScenarioData
+{
+	author="Malcain";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=10;
+		minute=0;
+		startFogBase=250;
+		forecastFogBase=250;
+		startFogDecay=0.017999999;
+		forecastFogDecay=0.017999999;
+	};
+	class Groups
+	{
+		items=2;
+		class Item0
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=128;
+				class Item0
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=0;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					leader=1;
+					rank="SERGEANT";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item1
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=1;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item2
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=2;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item3
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=3;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item4
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=4;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item5
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=5;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item6
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083937;
+					id=6;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item7
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=7;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item8
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=8;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item9
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=9;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item10
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=10;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item11
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=11;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item12
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=12;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item13
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=13;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item14
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=14;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item15
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=15;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item16
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=16;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item17
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=17;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item18
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=18;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item19
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=19;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item20
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=20;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item21
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=21;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item22
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=22;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item23
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=23;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item24
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=24;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item25
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=25;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item26
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=26;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item27
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=27;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item28
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=28;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item29
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=29;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item30
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083937;
+					id=30;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item31
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=31;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item32
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=32;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item33
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=33;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item34
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=34;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item35
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=35;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item36
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=36;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item37
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=37;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item38
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=38;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item39
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=39;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item40
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=40;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item41
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=41;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item42
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=42;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item43
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=43;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item44
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=44;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item45
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=45;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item46
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=46;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item47
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=47;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item48
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=48;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item49
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.083944;
+					id=49;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item50
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=50;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item51
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=51;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item52
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=52;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item53
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=53;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item54
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=54;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item55
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=55;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item56
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=56;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item57
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=57;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item58
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=58;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item59
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=59;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item60
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=60;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item61
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=61;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item62
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=62;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item63
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=63;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item64
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=64;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item65
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=65;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item66
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=66;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item67
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=67;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item68
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=68;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item69
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=69;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item70
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=70;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item71
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=71;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item72
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=72;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item73
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=73;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item74
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=74;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item75
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=75;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item76
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=76;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item77
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=77;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item78
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=78;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item79
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=79;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item80
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=80;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item81
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=81;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item82
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=82;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item83
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=83;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item84
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=84;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item85
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=85;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item86
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=86;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item87
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=87;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item88
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=88;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item89
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=89;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item90
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=90;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item91
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=91;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item92
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=92;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item93
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=93;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item94
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=94;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item95
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=95;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item96
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=96;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item97
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=97;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item98
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=98;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item99
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=99;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item100
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=100;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item101
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=101;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item102
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=102;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item103
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=103;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item104
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=104;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item105
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=105;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item106
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=106;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item107
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=107;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item108
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=108;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item109
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=109;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item110
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=110;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item111
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=111;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item112
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=112;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item113
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=113;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item114
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=114;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item115
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=115;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item116
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=116;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item117
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=117;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item118
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=118;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item119
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=119;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item120
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=120;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item121
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=121;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item122
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=122;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item123
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=123;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item124
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=124;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item125
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=125;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item126
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=126;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item127
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=127;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item128
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=128;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item129
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=129;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item130
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=130;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item131
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=131;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item132
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=132;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item133
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=133;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item134
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=134;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item135
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=135;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item136
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=136;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item137
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=137;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item138
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=138;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item139
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=139;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item140
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=140;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item141
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=141;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item142
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=142;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item143
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=143;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item144
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=144;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item145
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=145;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item146
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=146;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item147
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=147;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item148
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=148;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item149
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=149;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item150
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=150;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item151
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=151;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item152
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=152;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};				
+				class Item153
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=153;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item154
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=154;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item155
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=155;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item156
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=156;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item157
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=157;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item158
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=158;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item159
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=159;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item160
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=160;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item161
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=161;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item162
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=162;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item163
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=163;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item164
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=164;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item165
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=165;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item166
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=166;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item167
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=167;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item168
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=168;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item169
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=169;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+				class Item170
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=170;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};	
+				class Item171
+				{
+					position[]={14515.091,3.6332471,5824.292};
+					azimut=-17.0839;
+					id=171;
+					side="CIV";
+					vehicle="BP_PlayerLogic";
+					player="PLAY CDG";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={300.61057,2,10140.505};
+					id=100;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="hc";
+				};
+			};
+		};
+	};
+	class Markers
+	{
+		items=5;
+		class Item0
+		{
+			position[]={4004.2815,179.50168,4709.6709};
+			name="centre";
+			type="Empty";
+		};
+		class Item1
+		{
+			position[]={14515.091,3.6332471,5824.292};
+			name="respawn_west";
+			type="Empty";
+		};
+		class Item2
+		{
+			position[]={14515.091,3.6332471,5824.292};
+			name="respawn_civilian";
+			type="Empty";
+		};
+		class Item3
+		{
+			position[]={14515.091,3.6332471,5824.292};
+			name="respawn_east";
+			type="Empty";
+		};
+		class Item4
+		{
+			position[]={14499.759,9.7838764,5851.6646};
+			name="debug";
+			text="Debug Zone! Do Not Enter.";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=120;
+			b=120;
+		};
+	};
+	class Entities
+	{
+		items=106;
+		class Item0
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=165;
+			type="BP_PlayerLogic";
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=166;
+			type="BP_PlayerLogic";
+		};
+		class Item2
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=167;
+			type="BP_PlayerLogic";
+		};
+		class Item3
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=168;
+			type="BP_PlayerLogic";
+		};
+		class Item4
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=169;
+			type="BP_PlayerLogic";
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=170;
+			type="BP_PlayerLogic";
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=171;
+			type="BP_PlayerLogic";
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=172;
+			type="BP_PlayerLogic";
+		};
+		class Item8
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=173;
+			type="BP_PlayerLogic";
+		};
+		class Item9
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=174;
+			type="BP_PlayerLogic";
+		};
+		class Item10
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=175;
+			type="BP_PlayerLogic";
+		};
+		class Item11
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=176;
+			type="BP_PlayerLogic";
+		};
+		class Item12
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=177;
+			type="BP_PlayerLogic";
+		};
+		class Item13
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=178;
+			type="BP_PlayerLogic";
+		};
+		class Item14
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=179;
+			type="BP_PlayerLogic";
+		};
+		class Item15
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=180;
+			type="BP_PlayerLogic";
+		};
+		class Item16
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=181;
+			type="BP_PlayerLogic";
+		};
+		class Item17
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=182;
+			type="BP_PlayerLogic";
+		};
+		class Item18
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=183;
+			type="BP_PlayerLogic";
+		};
+		class Item19
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=184;
+			type="BP_PlayerLogic";
+		};
+		class Item20
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=185;
+			type="BP_PlayerLogic";
+		};
+		class Item21
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=186;
+			type="BP_PlayerLogic";
+		};
+		class Item22
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=187;
+			type="BP_PlayerLogic";
+		};
+		class Item23
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=188;
+			type="BP_PlayerLogic";
+		};
+		class Item24
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=189;
+			type="BP_PlayerLogic";
+		};
+		class Item25
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=190;
+			type="BP_PlayerLogic";
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=191;
+			type="BP_PlayerLogic";
+		};
+		class Item27
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=192;
+			type="BP_PlayerLogic";
+		};
+		class Item28
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=193;
+			type="BP_PlayerLogic";
+		};
+		class Item29
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=194;
+			type="BP_PlayerLogic";
+		};
+		class Item30
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=195;
+			type="BP_PlayerLogic";
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=196;
+			type="BP_PlayerLogic";
+		};
+		class Item32
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=197;
+			type="BP_PlayerLogic";
+		};
+		class Item33
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=198;
+			type="BP_PlayerLogic";
+		};
+		class Item34
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=199;
+			type="BP_PlayerLogic";
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=200;
+			type="BP_PlayerLogic";
+		};
+		class Item36
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=201;
+			type="BP_PlayerLogic";
+		};
+		class Item37
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=202;
+			type="BP_PlayerLogic";
+		};
+		class Item38
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=203;
+			type="BP_PlayerLogic";
+		};
+		class Item39
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=204;
+			type="BP_PlayerLogic";
+		};
+		class Item40
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=205;
+			type="BP_PlayerLogic";
+		};
+		class Item41
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=206;
+			type="BP_PlayerLogic";
+		};
+		class Item42
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=207;
+			type="BP_PlayerLogic";
+		};
+		class Item43
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=208;
+			type="BP_PlayerLogic";
+		};
+		class Item44
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=209;
+			type="BP_PlayerLogic";
+		};
+		class Item45
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=210;
+			type="BP_PlayerLogic";
+		};
+		class Item46
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=211;
+			type="BP_PlayerLogic";
+		};
+		class Item47
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=212;
+			type="BP_PlayerLogic";
+		};
+		class Item48
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=213;
+			type="BP_PlayerLogic";
+		};
+		class Item49
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=214;
+			type="BP_PlayerLogic";
+		};
+		class Item50
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=215;
+			type="BP_PlayerLogic";
+		};
+		class Item51
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=216;
+			type="BP_PlayerLogic";
+		};
+		class Item52
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=217;
+			type="BP_PlayerLogic";
+		};
+		class Item53
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=218;
+			type="BP_PlayerLogic";
+		};
+		class Item54
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=219;
+			type="BP_PlayerLogic";
+		};
+		class Item55
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=220;
+			type="BP_PlayerLogic";
+		};
+		class Item56
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=221;
+			type="BP_PlayerLogic";
+		};
+		class Item57
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=222;
+			type="BP_PlayerLogic";
+		};
+		class Item58
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=223;
+			type="BP_PlayerLogic";
+		};
+		class Item59
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=224;
+			type="BP_PlayerLogic";
+		};
+		class Item60
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=225;
+			type="BP_PlayerLogic";
+		};
+		class Item61
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=226;
+			type="BP_PlayerLogic";
+		};
+		class Item62
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=227;
+			type="BP_PlayerLogic";
+		};
+		class Item63
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=228;
+			type="BP_PlayerLogic";
+		};
+		class Item64
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=229;
+			type="BP_PlayerLogic";
+		};
+		class Item65
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=230;
+			type="BP_PlayerLogic";
+		};
+		class Item66
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=231;
+			type="BP_PlayerLogic";
+		};
+		class Item67
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=232;
+			type="BP_PlayerLogic";
+		};
+		class Item68
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=233;
+			type="BP_PlayerLogic";
+		};
+		class Item69
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=234;
+			type="BP_PlayerLogic";
+		};
+		class Item70
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=235;
+			type="BP_PlayerLogic";
+		};
+		class Item71
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=236;
+			type="BP_PlayerLogic";
+		};
+		class Item72
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=237;
+			type="BP_PlayerLogic";
+		};
+		class Item73
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=238;
+			type="BP_PlayerLogic";
+		};
+		class Item74
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=239;
+			type="BP_PlayerLogic";
+		};
+		class Item75
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=240;
+			type="BP_PlayerLogic";
+		};
+		class Item76
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=241;
+			type="BP_PlayerLogic";
+		};
+		class Item77
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=242;
+			type="BP_PlayerLogic";
+		};
+		class Item78
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=243;
+			type="BP_PlayerLogic";
+		};
+		class Item79
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=244;
+			type="BP_PlayerLogic";
+		};
+		class Item80
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=245;
+			type="BP_PlayerLogic";
+		};
+		class Item81
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=246;
+			type="BP_PlayerLogic";
+		};
+		class Item82
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=247;
+			type="BP_PlayerLogic";
+		};
+		class Item83
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=248;
+			type="BP_PlayerLogic";
+		};
+		class Item84
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=249;
+			type="BP_PlayerLogic";
+		};
+		class Item85
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=250;
+			type="BP_PlayerLogic";
+		};
+		class Item86
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=251;
+			type="BP_PlayerLogic";
+		};
+		class Item87
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=252;
+			type="BP_PlayerLogic";
+		};
+		class Item88
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=253;
+			type="BP_PlayerLogic";
+		};
+		class Item89
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=254;
+			type="BP_PlayerLogic";
+		};
+		class Item90
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=255;
+			type="BP_PlayerLogic";
+		};
+		class Item91
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=256;
+			type="BP_PlayerLogic";
+		};
+		class Item92
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=257;
+			type="BP_PlayerLogic";
+		};
+		class Item93
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=258;
+			type="BP_PlayerLogic";
+		};
+		class Item94
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=259;
+			type="BP_PlayerLogic";
+		};
+		class Item95
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=260;
+			type="BP_PlayerLogic";
+		};
+		class Item96
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=261;
+			type="BP_PlayerLogic";
+		};
+		class Item97
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=262;
+			type="BP_PlayerLogic";
+		};
+		class Item98
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=263;
+			type="BP_PlayerLogic";
+		};
+		class Item99
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12780.759,150.297,11.84272};
+			};
+			id=264;
+			type="BP_PlayerLogic";
+		};
+		class Item100
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={12444.09,111.89912,71.424301};
+				angles[]={0.004796607,0,0.035185181};
+			};
+			name="hc";
+			isPlayable=1;
+			id=265;
+			type="HeadlessClient_F";
+		};
+		class Item101
+		{
+			dataType="Marker";
+			position[]={12782.87,150.59656,14.744089};
+			name="respawn_civilian";
+			type="Empty";
+			id=266;
+		};
+		class Item102
+		{
+			dataType="Marker";
+			position[]={12783.946,150.66516,14.955031};
+			name="respawn_east";
+			type="Empty";
+			id=267;
+		};
+		class Item103
+		{
+			dataType="Marker";
+			position[]={12783.637,150.56,13.557};
+			name="respawn_west";
+			type="Empty";
+			id=268;
+			atlOffset=0.00016784668;
+		};
+		class Item104
+		{
+			dataType="Marker";
+			position[]={6334.6084,114.51904,6301.1401};
+			name="centre";
+			type="Empty";
+			id=269;
+			atlOffset=-5.2553558;
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={12779.062,150.29816,13.433765};
+			name="debug";
+			text="Debug Zone! Do Not Enter.";
+			markerType="ELLIPSE";
+			type="ellipse";
+			colorName="ColorRed";
+			fillName="DiagGrid";
+			a=100;
+			b=100;
+			id=273;
+		};
+	};
+};

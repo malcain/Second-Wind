@@ -1214,7 +1214,6 @@ class CfgObjectLoot {
 			{"PartEngine","magazine"},
 			{"PartGlass","magazine"},
 			{"ItemFuelcanEmpty","magazine"},
-			//{"MeleeMachete","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemLiquidResin","magazine"},
 			{"ItemPunctureKit","magazine"},
@@ -1239,7 +1238,6 @@ class CfgObjectLoot {
 			0.05,	//ENGINE
 			0.13,	//CRISTAL
 			0.14,	//JERRY CAN
-			//0.01,	//HACHET
 			0.07,	//KNIFE
 			0.15,   //LIQUID RESIN
 			0.11,   //PUNCTURE KIT
@@ -1291,13 +1289,14 @@ class CfgObjectLoot {
 			{"ItemHydraulicCylinder","magazine"},
 			{"ItemEngineCoolant","magazine"},
 			{"ItemFuelhoseKit","magazine"},
+			{"MeleeHatchet","weaponNA"},
 			{"MeleePickaxe","weaponNA"},
 			{"MeleeHammer","weaponNA"},
 			{"MeleeHammer2","weaponNA"},
-			{"BlueprintStove","magazine"},
 			{"MeleeShovel","weaponNA"},
 			{"MeleeCrowbar","weaponNA"},
 			{"MeleeClub","weaponNA"},
+			{"BlueprintStove","magazine"},
 			{"ItemStove","magazine"},
 			{"ItemToolbox","toolbelt"},
 			{"BP_M8","toolbelt"}
@@ -1331,11 +1330,12 @@ class CfgObjectLoot {
 			0.02,   //HYDRAULIC CYLINDER
 			0.14,   //ENGINE COOLANT
 			0.09,   //FUEL HOSE KIT
+			0.04,   //Hatchet
 			0.04,   //PICKAXE
 			0.02,   //HAMMER
 			0.01,   //HAMMER2
-			0.02,    //SHOVEL
-			0.02,    //BAT
+			0.01,    //SHOVEL
+			0.01,    //BAT
 			0.02,    //CROWBAR
 			0.02,   //Stove BLUEPRINT
 			0.02,   //Stove

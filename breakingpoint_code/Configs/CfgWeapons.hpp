@@ -719,7 +719,30 @@ class CfgWeapons
 			containerClass="Supply60";
 			mass=40;
 		};
-	};	
+	};
+
+	class BP_Guardian_I_4: Uniform_base
+	{
+		scope = 2;
+		displayName = "Ranger level 4 (Indiana)";
+		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
+		//picture = "\a3\Characters_F_Enoch\Uniforms\data\ui\icon_U_I_E_Uniform_01_tanktop_F_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_TankTop_CO.paa"};
+		//DLC = "Contact";
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "I_E_Uniform_01_tanktop_F";
+			containerClass = "Supply40";
+			mass = 40;
+			type = 801;
+			scope = 0;
+			//allowedSlots[] = {};
+		};
+		allowedSlots[] = {901};
+	};
 	
 	class BP_Rebel_F: Uniform_Base {
 		scope = 2;

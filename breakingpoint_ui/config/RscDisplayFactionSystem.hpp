@@ -52,8 +52,8 @@ class RscDisplayFactionSystem
 			idc = 1202;
 			style = 48;
 			text = "\breakingpoint_ui\factions\buttons\hunter.jpg";
-			x = 0.546406 * safezoneW + safezoneX;
-			y = 0.1304 * safezoneH + safezoneY;
+			x = 0.758844 * safezoneW + safezoneX;
+			y = 0.1326 * safezoneH + safezoneY;
 			w = 0.193875 * safezoneW;
 			h = 0.3938 * safezoneH;
 			color[] = { 1, 1, 1, 1 };
@@ -68,8 +68,8 @@ class RscDisplayFactionSystem
 			idc = 1201;
 			style = 48;
 			text = "\breakingpoint_ui\factions\buttons\outlaw.jpg";
-			x = 0.758844 * safezoneW + safezoneX;
-			y = 0.1326 * safezoneH + safezoneY;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.1304 * safezoneH + safezoneY;
 			w = 0.193875 * safezoneW;
 			h = 0.3938 * safezoneH;
 			color[] = { 1, 1, 1, 1 };
@@ -83,8 +83,8 @@ class RscDisplayFactionSystem
 		{
 			idc = 1204;
 			style = 48;
-			text = "\breakingpoint_ui\factions\buttons\undead.jpg";
-			x = 0.546406 * safezoneW + safezoneX;
+			text = "\breakingpoint_ui\factions\buttons\undead_soon.jpg";
+			x = 0.757813 * safezoneW + safezoneX;
 			y = 0.555 * safezoneH + safezoneY;
 			w = 0.193875 * safezoneW;
 			h = 0.3938 * safezoneH;
@@ -99,7 +99,7 @@ class RscDisplayFactionSystem
 			idc = 1205;
 			style = 48;
 			text = "\breakingpoint_ui\factions\buttons\scavenger.jpg";
-			x = 0.757813 * safezoneW + safezoneX;
+			x = 0.546406 * safezoneW + safezoneX;
 			y = 0.555 * safezoneH + safezoneY;
 			w = 0.193875 * safezoneW;
 			h = 0.3938 * safezoneH;
@@ -128,7 +128,7 @@ class RscDisplayFactionSystem
 		{
 			idc = 1204;
 			style = 48;
-			text = "\breakingpoint_ui\factions\buttons\engineer_soon.jpg";
+			text = "\breakingpoint_ui\factions\buttons\engineer_soon_hover.jpg";
 			x = 0.258687 * safezoneW + safezoneX;
 			y = 0.5572 * safezoneH + safezoneY;
 			w = 0.193875 * safezoneW;
@@ -137,7 +137,7 @@ class RscDisplayFactionSystem
 			colorActive[] = { 1, 1, 1, 1 };
 			//action = "closeDialog 0;createDialog 'RscDisplayFactionEngineer';";
 			onMouseEnter = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\engineer_soon_hover.jpg'";
-			onMouseExit = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\engineer_soon.jpg'";
+			onMouseExit = "ctrlSetFocus (_this select 0); (_this select 0) ctrlSetText '\breakingpoint_ui\factions\buttons\engineer_soon_hover.jpg'";
 		};
 	};
 };
@@ -394,7 +394,7 @@ class RscDisplayFactionEngineer
 	class controlsBackground {
 		class Mainback : RscPicture {
 			idc = 4080;
-			text = "\breakingpoint_ui\factions\engineer.jpg";
+			text = "\breakingpoint_ui\factions\engineer_soon_hover.jpg";
 			x = 0 * safezoneW + safezoneX;
 			y = 0 * safezoneH + safezoneY;
 			w = 1 * safezoneW;
@@ -443,7 +443,7 @@ class RscDisplayFactionUndead
 	class controlsBackground {
 		class Mainback : RscPicture {
 			idc = 4080;
-			text = "\breakingpoint_ui\factions\undead.jpg";
+			text = "\breakingpoint_ui\factions\undead_soon.jpg";
 			x = 0 * safezoneW + safezoneX;
 			y = 0 * safezoneH + safezoneY;
 			w = 1 * safezoneW;

@@ -9,19 +9,24 @@
 
 params ["_zed","_selection","_damage","_source","_projectile"];
 
+//_caliber = getNumber (configFile >> "CfgAmmo" >> _projectile >> "caliber");
+
+["damageHandlerZ: Zed: %1 | Selection: %2 | Damage: %3 | Source: %4 | Projectile: %5",_zed,_selection,_damage,_source,_projectile] call BP_fnc_debugConsoleFormat;
 
 //Handle Damage being Applied
-if (_projectile != "") then {
+if !(_projectile isEqualTo "") then {
 	if (_selection == "head_hit") then {	//_hitpoint = "HitHead";
-		//_caliber = getNumber (configFile >> "CfgAmmo" >> _projectile >> "caliber");
-		//_simulation = getNumber (configFile >> "CfgAmmo" >> _projectile >> "simulation");
-		//_critical = _caliber > 1.2 or _simulation == "shotSpread";
-		//if (_critical) then { //Gore
+		_simulation = "";
+		_caliber = 1;
+		_caliber = getNumber (configFile >> "CfgAmmo" >> _projectile >> "caliber");
+		_simulation = getText (configFile >> "CfgAmmo" >> _projectile >> "simulation");
+		_critical = _caliber > 1.2 or _simulation == "shotSpread";
+		if (_critical) then { //Gore
 			_headdmg = 1;
 			_zed setFace "Bloody_Neck";
 			//_zed setVariable ["noHead",true,true];
 			[netID _zed] remoteExecCall ["BPServer_fnc_headGore",2];
-			[_zed, "Bloody_Neck"] remoteExecCall ["setFace"];
+			//[_zed, "Bloody_Neck"] remoteExecCall ["setFace"];
 
 			removeHeadgear _zed;
 			removeGoggles _zed;
@@ -33,14 +38,12 @@ if (_projectile != "") then {
 			_HeadExplodeArray = ["breakingpoint_sfx\gore\HeadExplode1.ogg", "breakingpoint_sfx\gore\HeadExplode2.ogg", "breakingpoint_sfx\gore\HeadExplode3.ogg"];
 			_HeadExplode = selectRandom _HeadExplodeArray;
 			playsound3d [format ["%1",_HeadExplode], _zed,false, getPosASL _zed, 7, 1, 25];
-		//} else {
-			//_headdmg = 0.9 + (random 0.4);
-		//};
+		} else {
+			_headdmg = 0.9 + (random 0.4);
+		};
 		_zed setDamage _headdmg;
 	};
 };
-
-["damageHandlerZ: Zed: %1 | Selection: %2 | Damage: %3 | Source: %4 | Projectile: %5",_zed,_selection,_damage,_source,_projectile] call BP_fnc_debugConsoleFormat;
 
 /*
 if (local _zed) then {

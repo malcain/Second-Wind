@@ -14,11 +14,12 @@ params ["_iItem","_iClass","_iLootType","_iPos"];
 //if (BP_LootGlobal >= BP_LootMax && {!isServer}) exitWith {};
 //if (surfaceIsWater _iPos) exitWith {};
 
-if (isNil "_iClass") then
+if (isNil "_iClass") exitwith {};
+/*if (isNil "_iClass") then
 {
-	["Spawn_Loot: Loot Class Is Undefined: iItem: %1 | iClass: %2 | iPos: %3 #1000",_iItem,_iClass,_iPos] call BP_fnc_debugConsoleFormat;
 	_iClass = "default";
-};
+	//["Spawn_Loot: Loot Class Is Undefined: iItem: %1 | iClass: %2 | iPos: %3 #1000",_iItem,_iClass,_iPos] call BP_fnc_debugConsoleFormat;
+};*/
 
 _item = objNull;
 
@@ -38,6 +39,7 @@ switch (_iClass) do {
 		_item enableDynamicSimulation true;
 		_itemTypes = [] + ((getArray (configFile >> "cfgLoot" >> _iClass)) select 0);
 		_index = BP_CLBase find _iClass;
+		if (isNil "_index") exitwith {};
 		_weights = BP_CLChances select _index;
 		_cntWeights = count _weights;
 		_qty = 0;

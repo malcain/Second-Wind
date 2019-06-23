@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-params [["_building",objNull,[objNull]]];
+params ["_building"];
 
 //Check Building Isn't Null
 if (isNull _building) exitWith {};
@@ -27,7 +27,7 @@ if !(isClass _config) exitWith {};
 if ((netID _building) in BP_Buildings) exitWith {};
 
 //Get Size and Pos
-_buildingSize = (sizeOf _type);
+_buildingSize = ((sizeOf _type)+5);
 _buildingPos = getPosATL _building;
 
 //if (!BP_Zeds) exitWith {};
@@ -41,16 +41,23 @@ _buildingPos = getPosATL _building;
 //_nearStrongholdRadius = _buildingPos call BP_fnc_strongholdNearbyRadius;
 //if (_nearStrongholdRadius < 100) exitWith {};
 
-//Zombies Don't Spawn Nearby Players && Only Spawn in Cleared Buildings with no other zombies
-_noPlayerNear = (count (_buildingPos nearEntities ["CAManBase",_buildingSize])) == 0;
-if (!_noPlayerNear) exitWith {};
+_min = getNumber (_config >> "minRoaming");
+_max = getNumber (_config >> "maxRoaming");
+
+//Zedz Don't Spawn in busy positions && no more than _max Zedz for each house
+_zedsNearby = count (_buildingPos nearEntities ["CAManBase",_buildingSize]);
+_noZedNearby = _zedsNearby < _max;
+_posFree = ((count (_buildingPos nearEntities ["CAManBase",2])) == 0);
+if (!_noZedNearby && !_posFree) exitWith {};
+
+//Check if zedz have already spawned here earlier
+_nearByObj = count (nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize]);
+if (_nearByObj > 0 && (_zedsNearby > _min)) exitWith {};
 
 //Zombies Only Spawn in Cleared Buildings with no other zombies
 //_clean = {alive _x} count (_buildingPos nearEntities ["zZombie_Base",_buildingSize]) == 0;
 //if (!_clean) exitWith {};
 
-//_min = getNumber (_config >> "minRoaming");
-//_max = getNumber (_config >> "maxRoaming");
 //_zombieChance = getNumber (_config >> "zombieChance");
 
 _positions = getArray (_config >> "zombiePos");
@@ -58,9 +65,24 @@ _positions = getArray (_config >> "zombiePos");
 if (_positions isEqualTo []) exitWith {};
 
 _chanceRnd = (floor random 100);
-if (_chanceRnd > 75) then
-{
-	_unitTypes = getArray (_config >> "zombieClass");
+
+if (_chanceRnd < 65 && {_nearByObj > 0}) exitwith {};
+
+_unitTypes = getArray (_config >> "zombieClass");
+//Spawn inside or outside.
+if (_chanceRnd > 85 or {_chanceRnd < 30}) then {
+	_nearestRoad = selectRandom ((position _building) nearRoads 15);
+	if !(isNil "_nearestRoad") then {
+		_position = [_nearestRoad, 1, 3, 1, 0] call BIS_fnc_findSafePos;
+		if (_position isEqualTo []) exitwith {};
+		[_position,_unitTypes,false] call BP_fnc_zombieGenerate;
+	} else {
+		_position = [_buildingPos, 1, 20, 3, 0] call BIS_fnc_findSafePos;
+		if (_position isEqualTo []) exitwith {};
+		[_position,_unitTypes,false] call BP_fnc_zombieGenerate;
+	};
+} else {
 	_position = selectRandom _positions;
 	[(_building modelToWorld _position),_unitTypes,false] call BP_fnc_zombieGenerate;
 };
+

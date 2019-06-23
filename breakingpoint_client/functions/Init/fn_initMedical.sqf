@@ -153,7 +153,7 @@ waitUntil
 	if (r_action_rest) then 
 	{
 		//Can't Rest Inside Vehicle
-		if ((vehicle player) != player) then { r_action_rest = false; };
+		if !(isNull objectParent player) then { r_action_rest = false; };
 		
 		_animState = animationState player;
 		_healArray = ["amovpercmstpsnonwnondnon_amovpsitmstpsnonwnondnon_ground","amovpsitmstpsnonwnondnon_ground"];
@@ -167,7 +167,7 @@ waitUntil
 		if (r_player_blood == 12000) exitWith { cutText ["Full health reached.", "PLAIN DOWN"]; };
 		
 		if ((r_player_blood > 9000) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
-		if ((r_action_restTime > 15) or (_isNomad)) then {
+		if ((r_action_restTime > 7) or (_isNomad)) then {
 			r_player_blood = r_player_blood + _regenRateSitting;
 			titleRsc ["Default","PLAIN",0];
 			titleRsc ["BP_Resting","PLAIN",0];

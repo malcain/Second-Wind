@@ -751,7 +751,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_wood.p3d";
 		picture = "\breakingpoint\textures\icons\bp_wood_ca.paa";
 		descriptionShort = "Small pile of wood, good for starting fires.";
-		mass = 20;
+		mass = 30;
 	};
 	
 	class PartWool : BP_Magazine {

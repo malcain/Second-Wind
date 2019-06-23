@@ -50,6 +50,7 @@ class CfgFunctions
 		class Strings {
 			file = "\breakingpoint_functions\functions\Strings";
 			class inString {};
+			class inStringArray {};
 			class checkName {};
 			class addPrepd {};
 			class floatToString {};
@@ -162,6 +163,10 @@ class CfgFunctions
 			class onLootLocal {};
 			class onAnimalInit {};
 			class onAnimalLocal {};
+		};
+		class Variables {
+			file = "\breakingpoint_functions\functions\Variables";
+			class clearLocalVarDelay {};
 		};
 		class Vehicle {
 			file = "\breakingpoint_functions\functions\Vehicle";

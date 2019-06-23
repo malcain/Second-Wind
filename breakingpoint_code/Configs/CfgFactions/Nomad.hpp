@@ -183,7 +183,7 @@
 				regenRateSitting = 30;
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"ItemMap","Binocular"};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeHatchet"};
@@ -212,7 +212,7 @@
 					//Array Of Magazines Inside Backpack
 					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {};
+					items[] = {"Binocular"};
 				};
 			};
 		};

@@ -11,10 +11,16 @@ class CfgMissions
 {
 	class MPMissions 
 	{
-		// St.George
+		// Enoch
 		class BP_SecondWind {
 			briefingName = "Second Wind";
-			directory = "breakingpoint_code\MPScenarios\BP_SecondWind.126map";
+			directory = "breakingpoint_code\MPScenarios\BP_SecondWind.enoch";
+		};
+		
+		// St.George
+		class BP4_SecondWind {
+			briefingName = "Second Wind";
+			directory = "breakingpoint_code\MPScenarios\BP11_SecondWind.126map";
 		};
 		
 		// Altis
@@ -103,6 +109,24 @@ class CfgMissions
 		class BP10_BreakingPoint {
 			briefingName = "Breaking Point";
 			directory = "breakingpoint_code\MPScenarios\BP10_BreakingPoint.Bornholm";
+		};
+		
+		// St.George
+		class BP11_BreakingPoint {
+			briefingName = "Breaking Point";
+			directory = "breakingpoint_code\MPScenarios\BP11_BreakingPoint.126map";
+		};
+		
+		// Bornholm
+		class BP12_BreakingPoint {
+			briefingName = "Breaking Point";
+			directory = "breakingpoint_code\MPScenarios\BP12_BreakingPoint.enoch";
+		};
+		
+		// Enoch
+		class BP13_BreakingPoint {
+			briefingName = "Breaking Point";
+			directory = "breakingpoint_code\MPScenarios\BP13_BreakingPoint.Enoch";
 		};
 	};
 };

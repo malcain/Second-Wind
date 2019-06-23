@@ -146,6 +146,8 @@ class CfgFunctions
 			class hallucination {};
 			class teleportEffect {};
 			class smugglerSFX {};
+			class monsoonEffect {};
+			class monsoonCamShake {};
 		};
 		class Group {
 			file = "\breakingpoint_client\functions\Group";
@@ -253,6 +255,7 @@ class CfgFunctions
 			class buildingSpawnLoot {};
 			class buildingSpawnZombies {};
 			class logicSpawnLoot {};
+			class mapOpened {};
 			class thirskSnow {};
 		};
 		class Interaction {

@@ -8,16 +8,16 @@
 */
 
 private ["_isAir","_inVehicle","_spawnZombies"];
-//_isAir = vehicle player isKindOf "Air";
-_inVehicle = !isNull objectParent player;
+_isAir = objectparent player iskindof "air";
+_inMovingVehicle = speed player > 85;
 
 _nearbyBuildings = (getPos player) nearObjects ["building",400];
 _spawnZombies = true;
 _spawnLoot = true;
 
 //Limit Zombie Spawning to 20 Local Zombies Per Player / Limit Zombie Spawning to 30 per 300m Bubble
-if (BP_LocalZeds > 22 || {BP_NearbyZombies > 30}) then { _spawnZombies = false; };
-if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
+if (BP_LocalZeds > 22 || {BP_NearbyZombies > 28}) then { _spawnZombies = false; };
+if (BP_NearbyLootBox > 40) then { _spawnLoot = false; };
 {
 	_type = typeOf _x;
 	_config = configFile >> "CfgBuildingLoot" >> _type;
@@ -37,23 +37,30 @@ if (BP_NearbyLootBox > 30) then { _spawnLoot = false; };
 	} else {
 		if (_canLoot && {damage _x < 0.8}) then
 		{
+			// spawn loot & zeds at close range for JIP
+			if !(isNil "1stRun") then {
+				_dis = 100;
+				1stRun = nil;
+			};
+			
+			//Zombies
+			if ((_dis < 325) && {_dis > 55} && {_spawnZombies}) then {
+				[_x] call BP_fnc_buildingSpawnZombies;
+				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
+				//[_handle] call BP_fnc_addThreadHandle;
+				//waitUntil {scriptDone _handle};
+			};
+			
+			
 			//Loot
 			if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
 			{
-				if (_dis < 375 && {_dis > 25} && {!_inVehicle} && {_spawnLoot}) then {
+				if (_dis < 375 && {_dis > 30} && {!_isAir} && {_spawnLoot}) then {
 					[_x] call BP_fnc_buildingSpawnLoot;
 					//_handle = [_x] spawn BP_fnc_buildingSpawnLoot;
 					//[_handle] call BP_fnc_addThreadHandle;
 					//waitUntil {scriptDone _handle};
 				};
-			};
-
-			//Zombies
-			if ((_dis < 130) && {_dis > 50} && {_spawnZombies}) then {
-				[_x] call BP_fnc_buildingSpawnZombies;
-				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
-				//[_handle] call BP_fnc_addThreadHandle;
-				//waitUntil {scriptDone _handle};
 			};
 		};
 	};

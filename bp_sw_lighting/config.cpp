@@ -4190,7 +4190,7 @@ class CfgWorlds
 		{
 			noiseTexture="a3\data_f\noise_raw.paa";
 			numKeyframesPerDay=48;
-			windSpeedCoef="7.0f";
+			windSpeedCoef="8.0f";
 			moonIrradianceCoef="25.0f";
 			fadeMaxDistanceKm=1000;
 			fadeMaxAltitudeKm=15;
@@ -4246,7 +4246,7 @@ class CfgWorlds
 				noisePersistence=0.53500003;
 				fractalAmplitude=2.3;
 				fractalWavelength=240;
-				extinction=4.6999998;
+				extinction=4.7;
 				diffusivity=0.001;
 			};
 			class Overcast

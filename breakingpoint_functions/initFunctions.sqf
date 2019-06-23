@@ -584,6 +584,7 @@ if (_recompile == 3) then
 				
 				//Add Mission Event Handler
 				addMissionEventHandler ["Draw3D",{_this call BP_fnc_onDraw3D}];
+				addMissionEventHandler ["Map", {params ["_isOpened","_isForced"]; [_isOpened,_isForced] call BP_fnc_mapOpened}];
 				eh_parkour = [];
 				addMissionEventHandler ["EachFrame", {call BP_fnc_handleEHs}];
 				call BP_fnc_initParkour;
@@ -632,8 +633,8 @@ if (_recompile == 3) then
 			cutText ["","BLACK OUT"];
 			closeDialog 0;
 			0 fadeSound 0;
-			BP_loadScreenMsg = "Requesting Authentication";
-			0 cutText ["Requesting Authentication", "BLACK FADED",60];
+			BP_loadScreenMsg = "Requesting Authentication1";
+			0 cutText ["Requesting Authentication12", "BLACK FADED",60];
 			endLoadingScreen;
 		};
 

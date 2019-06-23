@@ -56207,7 +56207,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.35; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 3500; // Blood Damage (Players)
 			anim = "GestureSwing";
 			radius = 2.5; //Radius In Meters Of Targets
@@ -56263,7 +56263,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.7; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4700; // Blood Damage (Players)
 			anim = "GestureSwing3";
 			radius = 2.2; //Radius In Meters Of Targets
@@ -56322,7 +56322,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.5; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4500; // Blood Damage (Players)
 			anim = "GestureSwing2";
 			radius = 2.4; //Radius In Meters Of Targets
@@ -56381,7 +56381,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.8; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4000; // Blood Damage (Players)
 			anim = "GestureSwing2";
 			radius = 2.7; //Radius In Meters Of Targets
@@ -56440,7 +56440,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.75; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 3600; // Blood Damage (Players)
 			anim = "GestureSwing2";
 			radius = 2.4; //Radius In Meters Of Targets
@@ -56498,11 +56498,11 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.8;
-			damageBlood = 3750;
+			damageHit = 1; // Hit Damage (Zombies)
+			damageBlood = 3750; // Blood Damage (Players)
 			anim = "GestureSwing2";
-			radius = 2.5;
-			angle = 70;
+			radius = 2.5; //Radius In Meters Of Targets
+			angle = 70; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
@@ -56553,7 +56553,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_F\empty.p3d";
 		class Melee
 		{
-			damageHit = 0.35; // Hit Damage (Zombies)
+			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4200; // Blood Damage (Players)
 			anim = "GestureSwing2";
 			radius = 2.3; //Radius In Meters Of Targets
@@ -56658,7 +56658,7 @@ class CfgAmmo {
 		timeToLive = 0.015;
 		class Melee
 		{
-			damageHit = 0.5; // Hit Damage (Zombies)
+			damageHit = 0.45; // Hit Damage (Zombies)
 			damageBlood = 1000; // Blood Damage (Players)
 			anim = "GestureMelee";
 			radius = 2.2; //Radius In Meters Of Targets
@@ -56683,7 +56683,7 @@ class CfgAmmo {
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 1;
-			BleedingChance = 30;
+			BleedingChance = 25;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
@@ -56691,7 +56691,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 12; //Between 0 -> 100
+			KnockoutChance = 40; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56705,7 +56705,7 @@ class CfgAmmo {
 		timeToLive = 0.015;
 		class Melee
 		{
-			damageHit = 0.6; // Hit Damage (Zombies)
+			damageHit = 0.5; // Hit Damage (Zombies)
 			damageBlood = 2000; // Blood Damage (Players)
 			anim = "GestureStab";
 			radius = 2.2; //Radius In Meters Of Targets
@@ -56738,7 +56738,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 40; //Between 0 -> 100
+			KnockoutChance = 35; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

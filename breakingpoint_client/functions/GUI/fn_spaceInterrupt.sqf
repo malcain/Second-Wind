@@ -19,10 +19,16 @@ private ["_dikCode", "_handled"];
 _dikCode = 	_this select 1;
 _handled = false;
 
-_inVehicle = ((vehicle player) != player);
+_inVehicle = (!isNull objectParent player);
 _isHostage = player getVariable ["med_hostage", false];
 _isWater = (surfaceIsWater (getPosATL player));
 
+if (_inVehicle) then {
+	if (inputAction 'personView' > 0 || {inputAction 'optics'}) then {
+		player switchCamera 'INTERNAL';
+		_handled = true;
+	};
+};
 //Haven - Television Camera
 _television = player getVariable ["television",objNull];
 if (!isNull _television) then
@@ -152,7 +158,7 @@ if (_dikCode == 2) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		if ((vehicle player) == player) then 
+		if (isNull objectParent player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{
@@ -171,7 +177,7 @@ if (_dikCode == 3) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		if ((vehicle player) == player) then 
+		if (isNull objectParent player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{
@@ -201,7 +207,7 @@ if (_dikCode == 4) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		if ((vehicle player) == player) then 
+		if (isNull objectParent player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{
@@ -221,7 +227,7 @@ if (_dikCode == 5) then
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		if ((vehicle player) == player) then {
+		if (isNull objectParent player) then {
 			if (!r_player_unconscious and !_isHostage) then {
 				_hasRange = ("Rangefinder" in weapons player);
 				_hasBino = ("Binocular" in weapons player);
@@ -248,7 +254,7 @@ if (_dikCode == 6) then {
 		if (r_doLoop) exitWith {};
 		BP_lastCheckBit = time;
 		r_interrupt = true;
-		if ((vehicle player) == player) then 
+		if (isNull objectParent player) then 
 		{
 			if (!r_player_unconscious and !_isHostage) then 
 			{

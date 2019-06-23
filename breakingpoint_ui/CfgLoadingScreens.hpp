@@ -45,6 +45,24 @@ class CfgLoadingScreens
 			"\breakingpoint_ui\loading\loading_14.jpg"
 		};
 		
+		Enoch[] =
+		{
+			"\breakingpoint_ui\loading\Enoch\loading_1.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_2.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_3.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_4.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_5.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_6.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_7.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_8.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_9.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_10.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_11.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_12.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_13.jpg",
+			"\breakingpoint_ui\loading\Enoch\loading_14.jpg"
+		};
+		
 		126map[] =
 		{
 			"\breakingpoint_ui\loading\ST-George\loading_1.jpg",

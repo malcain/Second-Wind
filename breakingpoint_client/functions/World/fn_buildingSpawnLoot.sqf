@@ -30,6 +30,10 @@ if (BP_LootGlobal > BP_LootMax) exitWith {};
 _locked = (_building getVariable ['bis_disabled_Door',0] == 1);
 if (_locked) exitWith {};
 
+//Positions are broken if building is on water, so don't spawn in
+_height = getTerrainHeightASL getPos _building;
+if (_height < -1.5) exitwith {};
+
 //Check If Building Is A Haven
 if ((netID _building) in BP_Buildings) exitWith {};
 
@@ -52,9 +56,9 @@ if (!_lootMaxOk) exitWith {};// ["building_spawnLoot: %1 (%2) is missing lootMax
 //-----------------Get Building Config Data--------------
 _positions =	[] + getArray (_config >> "lootPos");
 _itemTypes =	[] + getArray (_config >> "itemType");
-_lootChance = getNumber (_config >> "lootChance");
 _lootMin =	getNumber (_config >> "lootMin");
 _lootMax =	getNumber (_config >> "lootMax");
+_lootChance = getNumber (_config >> "lootChance");
 
 //-------------------Process Building ------------------
 
@@ -79,12 +83,12 @@ if (_nearby) exitWith {};
 
 //Check if loot exists already
 _nearByObj = nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize];
-if (count _nearByObj >= _lootMax) exitWith {};
+if (count _nearByObj > _lootMin) exitWith {};
 
 //Shuffle Building Loot Positions
-_positionsShuffle = [];
+_posShuffle = [];
 for "_i" from 1 to (count _positions) do {
-	_positionsShuffle pushBack (_positions deleteAt (floor (random (count _positions))));
+	_posShuffle pushBack (_positions deleteAt (floor (random (count _positions))));
 };
 
 //Loop Through Each Position and Calculate the spawn.
@@ -94,9 +98,7 @@ for "_i" from 1 to (count _positions) do {
 
 	//Calculate Item Position in World Space
 	_iPos = _building modelToWorld _x;
-	_height = getTerrainHeightASL getPos _building;
 	if (_height < -0.1) then {
-	if (_height < -1.5) exitwith {};
 	_iPos = [(_buildingPos select 0) + (_x select 0), (_buildingPos select 1) + (_x select 1),(_buildingPos select 2) + (_x select 2)];
 	};
 	//Check If Any Loot Boxes are in that world position
@@ -131,4 +133,18 @@ for "_i" from 1 to (count _positions) do {
 	};
 
 	true
-} count _positionsShuffle;
+} count _posShuffle;
+
+//Loop Through Each Special Position if there is one
+_haveSpecialType = isClass (_config >> "specialLootPos");
+if (!_haveSpecialType) exitWith {};
+_rnd = random 1;
+if (_rnd < _lootChance) then {
+	_spcPositions =	[] + getArray (_config >> "specialLootPos");
+	_spcItemTypes =	[] + getArray (_config >> "specialItemType");
+
+	_posShuffle = [];
+	for "_i" from 1 to (count _spcPositions) do {
+		_posShuffle pushBack (_spcPositions deleteAt (floor (random (count _spcPositions))));
+	};
+};
