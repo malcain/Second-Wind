@@ -63,6 +63,10 @@ class CfgMovesBasic
 {
 	class ManActions
 	{
+		AxeStrike = "";
+		BatStrike = "";
+		KatanaStrike = "";
+		PickaxeStrike = "";
 		GestureSwing = " ";
 		GestureSwing2 = " ";
 		GestureSwing3 = " ";
@@ -341,6 +345,10 @@ class CfgMovesBasic
 	{
 		class NoActions : ManActions
 		{
+			AxeStrike[] = {"AxeStrike", "Gesture"};
+			BatStrike[] = {"BatStrike", "Gesture"};
+			KatanaStrike[] = {"KatanaStrike", "Gesture"};
+			PickaxeStrike[] = {"PickaxeStrike", "Gesture"};
 			GestureSwing[] = {"GestureSwing", "Gesture"};
 			GestureSwing2[] = {"GestureSwing2", "Gesture"};
 			GestureSwing3[] = {"GestureSwing3", "Gesture"};
@@ -1304,7 +1312,74 @@ class CfgGesturesMale
 
 	class States
 	{
-
+		class AxeStrike: Default
+		{
+			file = "\breakingpoint_weapons\anim\Melee\KatanaStrike.rtm";
+			looped = 0;
+			speed = 0.87;
+			mask = "handsWeapon2";
+			headBobStrength = 1;
+			headBobMode = 2;
+			disableWeapons = 0;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
+			leftHandIKCurve[] = {1};
+			rightHandIKCurve[] = {1};
+			weaponIK = 0;
+		};
+		class BatStrike: Default
+		{
+			file = "\breakingpoint_weapons\anim\Melee\BatStrike.rtm";
+			looped = 0;
+			speed = 0.7555;
+			mask = "handsWeapon2";
+			headBobStrength = 1;
+			headBobMode = 2;
+			disableWeapons = 0;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
+			leftHandIKCurve[] = {1};
+			rightHandIKCurve[] = {1};
+			weaponIK = 0;
+		};
+		class KatanaStrike: Default
+		{
+			file = "\breakingpoint_weapons\anim\Melee\KatanaStrike.rtm";
+			looped = 0;
+			speed = 1;
+			mask = "handsWeapon2";
+			headBobStrength = 1;
+			headBobMode = 2;
+			disableWeapons = 0;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
+			leftHandIKCurve[] = {1};
+			rightHandIKCurve[] = {1};
+			weaponIK = 0;
+		};
+		class PickaxeStrike: Default
+		{
+			file = "\breakingpoint_weapons\anim\Melee\PickaxeStrike.rtm";
+			looped = 0;
+			speed = 0.5896;
+			mask = "handsWeapon3";
+			headBobStrength = 1;
+			headBobMode = 2;
+			disableWeapons = 0;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
+			leftHandIKCurve[] = {1};
+			rightHandIKCurve[] = {1};
+			weaponIK = 0;
+		};
 		class GestureSwing: Default
 		{
 			file = "\breakingpoint_weapons\anim\hatchet_swing.rtm";
@@ -1663,6 +1738,7 @@ class CfgGesturesMale
 	{
 		handsWeapon1[] = {"head",1,"neck1",1,"neck",1,"weapon",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1};
 		handsWeapon2[] = {"head",1,"neck1",1,"neck",1,"launcher",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1};
+		handsWeapon3[] = {"head",1,"neck1",1,"neck",1,"launcher",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",0,"Spine1",1,"Spine2",1,"Spine3",1,"Pelvis",0};
 		wholeBody[] = {"Pelvis",1,"Spine",1,"Spine1",1,"Spine2",1,"Spine3",1,"Camera",1,"weapon",1,"launcher",1,"neck",1,"neck1",1,"head",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"LeftUpLeg",1,"LeftUpLegRoll",1,"LeftLeg",1,"LeftLegRoll",1,"LeftFoot",1,"LeftToeBase",1,"RightUpLeg",1,"RightUpLegRoll",1,"RightLeg",1,"RightLegRoll",1,"RightFoot",1,"RightToeBase",1};
 		aimingDefault[] = {"head",0.6,"neck1",0.6,"neck",0.6,"weapon",1,"launcher",1,"LeftShoulder",0.8,"LeftArm",0.8,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",0.8,"RightArm",0.8,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",0.3,"Spine1",0.4,"Spine2",0.5,"Spine3",0.6};
 		aimingPistol[] = {"head",0.6,"neck1",0.6,"neck",0.6,"LeftShoulder",1,"launcher",1,"weapon",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",0.3,"Spine1",0.4,"Spine2",0.5,"Spine3",0.6};
@@ -54766,7 +54842,7 @@ class CfgMagazines {
 		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
 		displayName = "Human Trap";
 		model = "\breakingpoint\models\bp_beartrap.p3d";
-		descriptionShort = "it will break ur legs, and head maybe...";
+		descriptionShort = "Looks old and dirty, but sharp enough to do it's job";
 		class Library
 		{
 			libTextDesc = "Traps";
@@ -56209,9 +56285,9 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 3500; // Blood Damage (Players)
-			anim = "GestureSwing";
+			anim = "AxeStrike";
 			radius = 2.5; //Radius In Meters Of Targets
-			angle = 50; //Angle Of Hit Detection
+			angle = 75; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
@@ -56265,9 +56341,9 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4700; // Blood Damage (Players)
-			anim = "GestureSwing3";
-			radius = 2.2; //Radius In Meters Of Targets
-			angle = 82; //Angle Of Hit Detection
+			anim = "KatanaStrike";
+			radius = 2.55; //Radius In Meters Of Targets
+			angle = 75; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.284893, 1, 10},
@@ -56324,8 +56400,8 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4500; // Blood Damage (Players)
-			anim = "GestureSwing2";
-			radius = 2.4; //Radius In Meters Of Targets
+			anim = "PickaxeStrike";
+			radius = 2.7; //Radius In Meters Of Targets
 			angle = 50; //Angle Of Hit Detection
 			sounds[] =
 			{
@@ -56355,7 +56431,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 30; //Between 0 -> 100
+			KnockoutChance = 80; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -56383,8 +56459,8 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4000; // Blood Damage (Players)
-			anim = "GestureSwing2";
-			radius = 2.7; //Radius In Meters Of Targets
+			anim = "PickaxeStrike";
+			radius = 2.9; //Radius In Meters Of Targets
 			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
@@ -56500,9 +56576,9 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 3750; // Blood Damage (Players)
-			anim = "GestureSwing2";
-			radius = 2.5; //Radius In Meters Of Targets
-			angle = 70; //Angle Of Hit Detection
+			anim = "PickaxeStrike";
+			radius = 2.8; //Radius In Meters Of Targets
+			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
@@ -56555,9 +56631,9 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 4200; // Blood Damage (Players)
-			anim = "GestureSwing2";
+			anim = "BatStrike";
 			radius = 2.3; //Radius In Meters Of Targets
-			angle = 50; //Angle Of Hit Detection
+			angle = 90; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
@@ -56612,9 +56688,9 @@ class CfgAmmo {
 		{
 			damageHit = 1; // Hit Damage (Zombies)
 			damageBlood = 5000; // Blood Damage (Players)
-			anim = "GestureSwing2";
-			radius = 2.7; //Radius In Meters Of Targets
-			angle = 65; //Angle Of Hit Detection
+			anim = "PickaxeStrike";
+			radius = 2.9; //Radius In Meters Of Targets
+			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
@@ -60591,13 +60667,14 @@ class CfgAmmo {
 		mineModelDisabled = "\breakingpoint\models\bp_beartrap.p3d";
 		icon = "iconExplosiveAP";
 		defaultMagazine = "Human_Trap_Mag";
-		soundHit1[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,1500};
-		soundHit2[] = {"A3\Sounds_F\arsenal\explosives\mines\AP_mines_explosion_02",3.1622777,1,2000};
+		soundHit1[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,15};
+		soundHit2[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,15};
 		multiSoundHit[] = {"soundHit1",0.5,"soundHit2",0.5};
 		soundTrigger[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",0.56234133,1,30};
 		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
 		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
-		explosionEffects = "simplefbExplosion"; //MineExplosion
+		//explosionEffects = "simplefbExplosion"; //MineExplosion
+		explosionEffects = "";
 		CraterEffects = "";
 		whistleDist = 0;
 		cost = 200;

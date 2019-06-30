@@ -516,8 +516,8 @@ class CfgSounds
 	};
 	
 	class z_attack_0 {
-		name = "";
-		sound[] = {"breakingpoint_sfx\zombie\attack_0.ogg",0.5,1,80};
+		name = "z_attack";
+		sound[] = {"breakingpoint_sfx\zombie\attack_0.ogg",1,0.9,80};
 		titles[] = {0, ""};
 	};
 	class z_attack_1 : z_attack_0 {

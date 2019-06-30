@@ -24,7 +24,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 
 [] execVm "real_weather.sqf";
 
-		[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
+		/*[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s2,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s3,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s4,true] execvm "AL_Leaks\cave_leak.sqf";
@@ -83,7 +83,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 		[rainleak47] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak48] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak49] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak50] execvm "AL_Leaks\water_leak.sqf";
+		[rainleak50] execvm "AL_Leaks\water_leak.sqf";*/
 		
 if (hasInterface) then {
 [] execVm "nighttime.sqf";
@@ -161,10 +161,6 @@ null6 = [rad6,35,140,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm
 null7 = [rad7,25,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null8 = [rad8,52,100,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null9 = [rad9,30,300,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null10 = [rad10,50,200,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null11 = [rad11,35,120,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null12 = [rad12,35,120,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null13 = [rad13,30,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 
 /*//Strigoi
 ["strigoi_1",250,true,950,40] execvm "AL_strigoi\strigoi.sqf";
@@ -187,9 +183,10 @@ if (isNil "globViewDist") then
 };
 setViewDistance globViewDist;
 setObjectViewDistance 1450;
+if (worldname == "Enoch") then {
 dvdArray = [dvd1,dvd2];
 dvdArray call BP_fnc_dvdCheck;
-
+};
 //Client Init Only
 if (isServer) exitWith {};
 if (!hasInterface) exitWith {};

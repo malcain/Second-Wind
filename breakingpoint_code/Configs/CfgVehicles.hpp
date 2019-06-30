@@ -413,7 +413,7 @@ class CfgVehicles
 		model = "\breakingpoint_classes\models\BP_MPack.p3d";
 		//hiddenSelectionsTextures[] = {"\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\data\UAV_backpack_rgr_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 130;
+		maximumLoad = 120;
 		mass = 120;
 		displayName = "Ranger Medic Pack";
 	};
@@ -1158,59 +1158,59 @@ class CfgVehicles
 		class HitPoints 
 		{
 			class HitPelvis {
-				armor = 6;
+				armor = 1;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.100000;
 				radius = 0.200000;
 				explosionShielding = 2;
 				visual = "injury_body";
-				minimalHit = 0.010000;
+				minimalHit = 0.01;
 				depends="0";
 			};
 
 			class HitAbdomen: HitPelvis {
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "spine1";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 1;
 				visual = "injury_body";
-				minimalHit = 0.010000;
+				minimalHit = 0.1;
 			};
 
 			class HitDiaphragm: HitAbdomen {
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "spine2";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.010000;
+				minimalHit = 0.1;
 			};
 
 			class HitChest: HitDiaphragm {
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "spine3";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.050000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.01;
+				minimalHit = 0.1;
 			};
 
 			class HitBody: HitChest {
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "body";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.150000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.010000;
+				minimalHit = 0.1;
 				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 
@@ -1232,7 +1232,7 @@ class CfgVehicles
 		class HitPoints 
 		{
 			class HitPelvis {
-				armor = 6;
+				armor = 1;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.100000;
@@ -1244,47 +1244,47 @@ class CfgVehicles
 			};
 
 			class HitAbdomen: HitPelvis {
-				armor = 3;
+				armor = 2;
 				material = -1;
 				name = "spine1";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 1;
 				visual = "injury_body";
-				minimalHit = 0.05;
+				minimalHit = 0.1;
 			};
 
 			class HitDiaphragm: HitAbdomen {
-				armor = 3;
+				armor = 2;
 				material = -1;
 				name = "spine2";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.05;
+				minimalHit = 0.1;
 			};
 
 			class HitChest: HitDiaphragm {
-				armor = 3;
+				armor = 2;
 				material = -1;
 				name = "spine3";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.050000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.01;
+				minimalHit = 0.1;
 			};
 
 			class HitBody: HitChest {
-				armor = 3;
+				armor = 2;
 				material = -1;
 				name = "body";
-				passThrough = 0.100000;
+				passThrough = 0.10000;
 				radius = 0.150000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.05;
+				minimalHit = 0.1;
 				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
 			};
 
@@ -1306,7 +1306,7 @@ class CfgVehicles
 		class HitPoints 
 		{
 			class HitPelvis {
-				armor = 6;
+				armor = 1;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.100000;
@@ -1318,10 +1318,10 @@ class CfgVehicles
 			};
 
 			class HitAbdomen: HitPelvis {
-				armor = 4;
+				armor = 2;
 				material = -1;
 				name = "spine1";
-				passThrough = 0.080000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 1;
 				visual = "injury_body";
@@ -1329,10 +1329,10 @@ class CfgVehicles
 			};
 
 			class HitDiaphragm: HitAbdomen {
-				armor = 4;
+				armor = 2;
 				material = -1;
 				name = "spine2";
-				passThrough = 0.080000;
+				passThrough = 0.10000;
 				radius = 0.0250000;
 				explosionShielding = 6;
 				visual = "injury_body";
@@ -1340,10 +1340,10 @@ class CfgVehicles
 			};
 
 			class HitChest: HitDiaphragm {
-				armor = 4;
+				armor = 2;
 				material = -1;
 				name = "spine3";
-				passThrough = 0.080000;
+				passThrough = 0.10000;
 				radius = 0.050000;
 				explosionShielding = 6;
 				visual = "injury_body";
@@ -1351,10 +1351,10 @@ class CfgVehicles
 			};
 
 			class HitBody: HitChest {
-				armor = 4;
+				armor = 2;
 				material = -1;
 				name = "body";
-				passThrough = 0.080000;
+				passThrough = 0.10000;
 				radius = 0.150000;
 				explosionShielding = 6;
 				visual = "injury_body";
@@ -1380,7 +1380,7 @@ class CfgVehicles
 		class HitPoints 
 		{
 			class HitPelvis {
-				armor = 6;
+				armor = 2;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.080000;
@@ -1392,7 +1392,7 @@ class CfgVehicles
 			};
 
 			class HitAbdomen: HitPelvis {
-				armor = 4;
+				armor = 3;
 				material = -1;
 				name = "spine1";
 				passThrough = 0.080000;
@@ -1403,7 +1403,7 @@ class CfgVehicles
 			};
 
 			class HitDiaphragm: HitAbdomen {
-				armor = 4;
+				armor = 3;
 				material = -1;
 				name = "spine2";
 				passThrough = 0.080000;
@@ -1414,7 +1414,7 @@ class CfgVehicles
 			};
 
 			class HitChest: HitDiaphragm {
-				armor = 4;
+				armor = 3;
 				material = -1;
 				name = "spine3";
 				passThrough = 0.080000;
@@ -1425,7 +1425,7 @@ class CfgVehicles
 			};
 
 			class HitBody: HitChest {
-				armor = 4;
+				armor = 3;
 				material = -1;
 				name = "body";
 				passThrough = 0.080000;
@@ -2974,6 +2974,7 @@ class CfgVehicles
 		displayName = "Jungle Ghillie";
 		model = "\A3\Characters_F_Mark\BLUFOR\b_fullghillie_f.p3d";
 		hideProxySelections[] = {""};
+		canCarryBackPack = 0;
 		uniformClass = "BP_JungleGhillie_Uniform";
 		side = 37;
 		hiddenSelections[] = {"camo","camo3","camo4"};
@@ -3022,6 +3023,7 @@ class CfgVehicles
 		side = 37;
 		uniformClass = "BP_Ghillie_Lush";
 		hideProxySelections[] = {""};
+		canCarryBackPack = 0;
 		identityTypes[] = {};
 		class EventHandlers : BP_PlayerEventHandlers {};
 	};
@@ -3207,7 +3209,7 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
-	class BP_Refugee2_F: BP_Player {
+	/*class BP_Refugee2_F: BP_Player {
 		scope = 2;
 		displayName = "Refugee 2";
 		uniformClass = "BP_Refugee_2";
@@ -3216,6 +3218,25 @@ class CfgVehicles
 		side = 12;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};	
+	};*/
+	
+	class BP_Refugee2_F: BP_Player {
+		scope = 2;
+		displayName = "Refugee 2";
+		uniformClass = "BP_Refugee_2";
+		model="breakingpoint_classes\models\nomad\hoodie_sp";
+		//moves = "CfgMovesPlayerSdr";
+		side = 12;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"breakingpoint_classes\textures\nomad\baker_tan_co.paa",
+			"breakingpoint_classes\textures\nomad\trousers_tan_co.paa",
+		};
 	};
 	
 	class BP_Refugee2_Z: BP_Refugee2_F {
@@ -3253,7 +3274,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_F";
 		model = "\breakingpoint_classes\models\BP_GuardianF.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 14;
+		side = 18;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3273,7 +3294,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_1";
 		model = "\breakingpoint_classes\models\BP_Guardian1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 15;
+		side = 18;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3292,7 +3313,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_2";
 		model = "\breakingpoint_classes\models\BP_Guardian2.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 16;
+		side = 18;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3312,7 +3333,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_3";
 		model = "\breakingpoint_classes\models\BP_Guardian3.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 17;
+		side = 18;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3325,18 +3346,81 @@ class CfgVehicles
 		moves = "CfgMovesZombieSdr";
 		canHideBodies = 0;
 	};
+	
+	/*class I_E_Uniform_01_shortsleeve_F
+{
+	author = "Bohemia Interactive";
+	_generalMacro = "I_E_Uniform_01_shortsleeve_F";
+	scope = 1;
+	model = "\a3\Characters_F_Enoch\Uniforms\I_E_Soldier_01_ShortSleeve_F.p3d";
+	hiddenSelections[] = {"camo1","camo2","insignia"};
+	hiddenSelectionsTextures[] = {"a3\characters_f_enoch\uniforms\data\i_e_soldier_01_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_pants_co.paa"};
+	class Wounds
+	{
+		tex[] = {};
+		mat[] = {"a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","A3\Characters_F\Common\Data\basicbody.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"};
+	};
+	identityTypes[] = {"LanguageGRE_F","Head_Greek","G_HAF_default"};
+	faceType = "Man_A3";
+	side = 2;
+
+	modelSides[] = {2,3};
+	nakedUniform = "U_BasicBody";
+	oxygenCapacity = 80;
+	canCarryBackPack = 1;
+	grenadeThrowDir[] = {0,0.2,1};
+	class PulsationSound
+	{
+		sample0[] = {[[["A3\sounds_f\characters\human-sfx\other\heart_3",0.0562341,1],1]]};
+		sample1[] = {[[["A3\sounds_f\characters\human-sfx\other\heart_3",0.0562341,1],1]]};
+		sample2[] = {[[["A3\sounds_f\characters\human-sfx\other\heart_3",0.0562341,1],1]]};
+		sample3[] = {[[["A3\sounds_f\characters\human-sfx\other\heart_3",0.0562341,1],1]]};
+	};
+	class FreefallSound
+	{
+		sound[] = {"A3\Sounds_F\characters\parachute\freefall2",1,1,40};
+	};
+	class Wounds
+	{
+		tex[] = {};
+		mat[] = {"a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","A3\Characters_F\Common\Data\basicbody.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"};
+	};
+	memoryPointPilot = "pilot";
+	memoryPointHandGrenade = "granat";
+	selectionPersonality = "osobnost";
+	selectionPersonalityHL = "hl";
+	selectionGlasses = "brejle";
+};*/
 
 	class BP_Guardian4_F: BP_Ranger4 {
 		scope = 2;
 		displayName = "Guardian 4";
 		uniformClass = "BP_Guardian_4";
-		model = "\breakingpoint_classes\models\BP_Guardian3.p3d";
+		model = "\a3\Characters_F_Enoch\Uniforms\I_E_Soldier_01_ShortSleeve_F.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		side = 18;
-		//hiddenSelections[] = {"Camo"};
-		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
+		hiddenSelections[] = {"camo1","camo2","insignia"};
+		hiddenSelectionsTextures[] = {"a3\characters_f_enoch\uniforms\data\i_e_soldier_01_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_pants_co.paa"};
 	};
 	
+	class BP_Guardian4_Ind_F: BP_Ranger4 {
+		scope = 2;
+		displayName = "Guardian 4";
+		uniformClass = "BP_Guardian_Ind_4";
+		model = "\a3\Characters_F_Enoch\Uniforms\I_E_Soldier_01_TankTop_F.p3d";
+		//moves = "CfgMovesPlayerSdr";
+		side = 18;
+		class Wounds
+		{
+			tex[] = {};
+			mat[] = {"a3\characters_f_exp\syndikat\data\u_i_c_soldier_bandit_5_f_1.rvmat","A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Bandit_5_F_1_injury.rvmat","A3\Characters_F_Exp\Syndikat\Data\U_I_C_Soldier_Bandit_5_F_1_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_Pants_injury.rvmat","A3\Characters_F\Common\Data\basicbody.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Common\Data\basicbody_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_black_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_hairy_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_white_old_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat","A3\Characters_F\Heads\Data\hl_asian_bald_muscular_injury.rvmat"};
+		};
+		hiddenSelections[] = {"camo1","camo2","camo3","insignia"};
+		hiddenSelectionsTextures[] = {"a3\characters_f_enoch\uniforms\data\i_e_soldier_01_tanktop_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_pants_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_gloves_camo_co.paa"};
+		impactEffectsBlood = "ImpactEffectsBlood";
+		impactEffectsNoBlood = "ImpactPlastic";
+	};
+
 	class BP_RebelF_F: BP_Player {
 		scope = 2;
 		displayName = "Fallen Rebel";

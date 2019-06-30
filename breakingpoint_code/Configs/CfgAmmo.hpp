@@ -83,12 +83,15 @@ class CfgAmmo
 			damageBlood = 1225; // Blood Damage (Players)
 			anim = "BP_Zomb_Act_Attack2";
 			radius = 3.5; //Radius In Meters Of Targets
-			angle = 65; //Angle Of Hit Detection
+			angle = 85; //Angle Of Hit Detection
 			sounds[] = 
 			{
-				{"breakingpoint_sfx\zombie\attack_0.ogg", 1.384893, 1, 70},
-				{"breakingpoint_sfx\zombie\attack_2.ogg", 1.184893, 0.7, 70},
-				{"breakingpoint_sfx\zombie\chase_0.ogg", 1.284893, 1.1, 70}
+				{"z_attack_0", 5, 0.9, 70},
+				{"z_attack_2", 5, 0.9, 70},
+				{"z_chase_0", 5, 0.9, 70}
+				//{"breakingpoint_sfx\zombie\attack_0.ogg", 5, 0.9, 70},
+				//{"breakingpoint_sfx\zombie\attack_2.ogg", 1.184893, 0.7, 70},
+				//{"breakingpoint_sfx\zombie\chase_0.ogg", 1.284893, 1.1, 70}
 			};
 		};
 		

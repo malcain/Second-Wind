@@ -183,12 +183,12 @@ class Ranger : BP_BaseFaction
 				primary[] = {};
 				launcher[] = {};
 				handgun[] = {"BP_1911"};
-				clothing[] = {"BP_Guardian_3"};
+				clothing[] = {"BP_Guardian_4"};
 				backpack[] = {"BP_Mpack"};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_3"};
+				uniform[] = {"BP_Guardian_4","BP_Guardian_Ind_4"};
 				headgear[] = {""};
-				nvg[] = {"", "TRYK_G_Shades_Blue_NV"};
+				nvg[] = {""};
 				facewear[] = {""};
 			};
 			class Uniform : BP_BaseGear  {

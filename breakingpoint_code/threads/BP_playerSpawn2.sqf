@@ -24,7 +24,7 @@ waitUntil
 	_saveTimeMed = 60; // 1 Minutes
 	
 	//Reset Aim Coeff
-	player setCustomAimCoef 0.1;
+	player setCustomAimCoef 0.15;
 	
 	//Check Player In Debug
 	if (player call BP_fnc_isInDebug) exitWith {

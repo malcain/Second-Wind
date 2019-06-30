@@ -123,7 +123,7 @@ class CfgWeapons
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
-			uniformClass = "C_man_polo_1_BP";
+			uniformClass = "C_man_polo_BP";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 60;
@@ -480,14 +480,15 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Refugee_2: Uniform_Base {
+	class BP_Refugee_2: Uniform_Base
+	{
 		scope = 2;
 		displayName = "Nomad level 2";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
 			uniformClass = "BP_Refugee2_F";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
@@ -709,8 +710,11 @@ class CfgWeapons
 	{
 		scope = 2;
 		displayName = "Ranger level 4";
+		//picture = "\a3\Characters_F_Enoch\Uniforms\data\ui\icon_U_I_E_Uniform_01_shortsleeve_F_ca.paa";
 		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_CO.paa"};
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
@@ -721,12 +725,12 @@ class CfgWeapons
 		};
 	};
 
-	class BP_Guardian_I_4: Uniform_base
+	class BP_Guardian_Ind_4: Uniform_base
 	{
 		scope = 2;
-		displayName = "Ranger level 4 (Indiana)";
-		picture = "\breakingpoint_ui\icons\RangerIcon.paa";
-		//picture = "\a3\Characters_F_Enoch\Uniforms\data\ui\icon_U_I_E_Uniform_01_tanktop_F_ca.paa";
+		displayName = "Ranger level 4 (Indiana suit)";
+		//picture = "\breakingpoint_ui\icons\RangerIcon.paa";
+		picture = "\a3\Characters_F_Enoch\Uniforms\data\ui\icon_U_I_E_Uniform_01_tanktop_F_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\I_E_Soldier_01_TankTop_CO.paa"};
@@ -734,14 +738,16 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "I_E_Uniform_01_tanktop_F";
+			uniformClass = "BP_Guardian4_Ind_F";
 			containerClass = "Supply40";
-			mass = 40;
-			type = 801;
-			scope = 0;
-			//allowedSlots[] = {};
+			mass = 30;
+			//type = 801;
+			//scope = 0;
+			allowedSlots[] = {};
+			//model = "\A3\weapons_F\ammo\mag_univ.p3d";
+			//picture = "\A3\Weapons_F\Data\clear_empty.paa";
 		};
-		allowedSlots[] = {901};
+		//allowedSlots[] = {901};
 	};
 	
 	class BP_Rebel_F: Uniform_Base {
@@ -1997,7 +2003,36 @@ class CfgWeapons
 			uniformModel = "-";
 		};
 	};
-	
+
+	class V_SmershVest_01_F;
+	class V_RangerVest_BP : V_SmershVest_01_F
+	{
+		author = "Bohemia Interactive";
+		scope = 2;
+		displayName = "Ranger Medic Vest";
+		picture = "\A3\Characters_F_Enoch\Vests\Data\UI\icon_V_SmershVest_01_F_ca.paa";
+		hiddenSelectionsTextures[] = {"a3\Characters_F_Enoch\Vests\Data\smersh_co.paa","a3\Characters_F_Enoch\Vests\Data\Smersh_miscellaneous_CO.paa"};
+		model = "\A3\Characters_F_Enoch\Vests\V_SmershVest_01_F.p3d";
+		hiddenSelections[] = {"Camo","Camo2","Radio1_hide"};
+		//DLC = "Enoch";
+		descriptionShort = "No Armor, Advanced medical treatment";
+		class ItemInfo : VestItem 
+		{
+			uniformModel = "\A3\Characters_F_Enoch\Vests\V_SmershVest_01_F.p3d";
+			hiddenSelections[] = {"Camo","Camo2","Radio1_hide"};
+			containerClass = "Supply140";
+			mass = 30;
+			class HitpointsProtectionInfo
+			{
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 1;
+				};
+			};
+		};
+	};
+
 	class V_PlateCarrierGL_rgr;
 	
 	class V_PlateCarrierGL_tna_BP : V_PlateCarrierGL_rgr { //Carrier GL Rig (Tropic)
@@ -2230,6 +2265,32 @@ class CfgWeapons
 			hiddenSelections[] = {"Camo1","Camo2"};
 			mass = 40;
 			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest01";
+		};
+	};
+	
+	class V_HarnessOGL_gry_BP: Vest_NoCamo_Base {
+		scope = 2;
+		displayName = "Equipment Harness";
+		descriptionShort = "Medium capacity, light armor";
+		picture = "\A3\characters_f\Data\UI\icon_V_HarnessOUGL_gry_CA.paa";
+		model = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa","\A3\Characters_F\OPFOR\Data\tech_oucamo_co"};
+		class ItemInfo: VestItem {
+			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
+			allowedSlots[] = {};
+			containerClass = "Supply90";
+			mass = 25;
+			hiddenSelections[] = {"Camo1","Camo2"};
+			class HitpointsProtectionInfo
+			{
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 0;
+					passThrough = 0.92;
+				};
+			};
 		};
 	};
 

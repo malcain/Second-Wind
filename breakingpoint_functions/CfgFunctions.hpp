@@ -124,6 +124,7 @@ class CfgFunctions
 			class databasePos {};
 			class getTerrainGradient {};
 			class isOutOfBounds {};
+			class dvd {};
 		};
 		class Debug {
 			file = "\breakingpoint_functions\functions\Debug";

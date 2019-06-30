@@ -62,7 +62,7 @@ player setVariable ["parachute",false];
 //Open Parachute
 player action ["openParachute",player];
 
-//people abused this to land from very low high without damage/dying
+//enable collision/damage
 player allowdamage true;
 
 //Wait Until Landing

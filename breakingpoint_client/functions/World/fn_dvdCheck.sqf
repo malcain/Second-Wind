@@ -9,7 +9,7 @@
 
 _checkArray = _this;
 
-[_checkArray] spawn {
+_checkArray spawn {
 
 	_checkArray = _this;
 	_dvdActive = false;
@@ -25,7 +25,7 @@ _checkArray = _this;
 		//if dvd is active, exit the loop
 		if (_dvdActive) exitwith {};
 		
-		sleep 30;
+		sleep 15;
 	};
 	
 };

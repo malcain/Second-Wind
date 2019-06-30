@@ -257,6 +257,7 @@ class CfgFunctions
 			class logicSpawnLoot {};
 			class mapOpened {};
 			class thirskSnow {};
+			class dvdCheck {};
 		};
 		class Interaction {
 			file = "\breakingpoint_client\functions\Interaction";

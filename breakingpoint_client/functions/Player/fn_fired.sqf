@@ -91,13 +91,25 @@ if (_ammo isKindOf "Melee"  || {_ammo isKindOf "BP_Bayonet"} || {_ammo isKindOf 
 			{
 				//Damage
 				[_x,"body",_damageHit,_damageBlood,_unit,_ammo,"7",_unit,"hitbody"] remoteExecCall ["BP_fnc_damageEvent",2];
-
-				//Sound
-				_sound = selectRandom _sounds;
-				playSound3D [(_sound select 0),_unit, false, getPosASL _unit, (_sound select 1), (_sound select 2), (_sound select 3)];
 			};
 		};
 	} forEach _entities;
+	
+	//Sound
+		_soundSet = selectRandom _sounds;
+		_sound = _soundSet select 0;
+		_pitch = _soundSet select 2;
+		_soundRadius = _soundSet select 3;
+		_isClass = isClass (configFile >> "cfgSounds" >> _sound);
+		if (_isClass) then {
+			_nearbyPlayers = [(getPosATL _unit),_soundRadius] call BP_fnc_nearbyPlayersList;
+			{
+				[_unit, [_sound, _soundRadius, _pitch, false]] remoteExec ["say3d", _x];
+				_//unit say3D [_sound, _soundRadius, _pitch,false];
+			} forEach _nearbyPlayers;
+		} else {
+			playSound3D [_sound,_unit, false, getPosASL _unit, (_soundSet select 1), _pitch, _soundRadius];
+		};
 	
 	if (_ammo == "BP_Hatchet_Swing_Ammo") then {
 		_object = cursorobject;
