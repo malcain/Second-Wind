@@ -16,7 +16,7 @@ class CfgVideoOptions
 {
 	class ShadowsVisibility
 	{
-		minValue=30;
+		minValue=25;
 		maxValue=1500;
 	};
 	class Particles
@@ -90,8 +90,8 @@ class CfgVideoOptions
 	};
 	class ShadowQuality
 	{
-		delete Disabled;
-		delete VeryLow;
+		//delete Disabled;
+		//delete VeryLow;
 		class Low
 		{
 			text="$STR_A3_OPTIONS_STANDARD";
