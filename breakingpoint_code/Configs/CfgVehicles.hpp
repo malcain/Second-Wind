@@ -236,6 +236,24 @@ class CfgVehicles
 	
 	class Land_Billboard_F;
 	//class Land_Billboard_04_blank_F;
+	//class FlagCarrier;
+	class FlagPole_F;
+	class BP_FlagPole: FlagPole_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\FlagPole_F.jpg";
+		scope=2;
+		scopeCurator=2;
+		displayName="BP_FlagPole";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Structures_F\Mil\Flags\Data\Mast_mil_CO.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\A3\Structures_F\Mil\Flags\Data\Mast_mil.rvmat"
+		};
+	};
 	
 	class BP_Sign : Land_Billboard_F
 	{
@@ -2279,6 +2297,7 @@ class CfgVehicles
 	
 	//class Animal; // External class reference
 	class Animal_Base_F; // External class reference
+	class BP_Animal_Hunt : Animal_Base_F {};
 	//class Dog_Base_F; // External class reference
 
 	class BP_Dog : BP_Animal_Base //Man
@@ -2290,6 +2309,8 @@ class CfgVehicles
 		
 		agentTasks[] = {};
 		extCameraPosition[] = {0,0.5,-2.5};
+		
+		side = 1;
 		
 		/*
 		class VariablesScalar {
@@ -2379,7 +2400,7 @@ class CfgVehicles
 		{
 			init = "_this call BP_fnc_dogInit;";
 			local = "_this call BP_fnc_dogLocal;";
-			handledamage = "_this call BP_fnc_dogHandleDamage;";
+			//handledamage = "_this call BP_fnc_dogHandleDamage;";
 			killed = "_this call BP_fnc_dogKilled;";
 		};
 		
@@ -2690,6 +2711,52 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\animals_f_beta\Chicken\data\white_rooster_CO.paa"};
 	};
 
+	class BP_Rabbit: Animal_Base_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Rabbit_F.jpg";
+		_generalMacro="Rabbit_F";
+		scope=2;
+		displayName="$STR_A3_CfgVehicles_Rabbit_F0";
+		model="\A3\Animals_F\rabbit\rabbit_F.p3d";
+		side=3;
+		moves="CfgMovesRabbit_F";
+		fsmFormation="";
+		fsmDanger="";
+		maxTurnAngularVelocity=30;
+		costTurnCoef=9.9999997e-006;
+		canBleed=0;
+		boneHead="head";
+		bonePrimaryWeapon="head";
+		weaponBone="head";
+		triggerAnim="";
+		class VariablesScalar
+		{
+			_threatMaxRadius=20;
+			_runDistanceMax=50;
+			_movePrefer=0.69999999;
+			_formationPrefer=0.2;
+			_scareLimit=0.2;
+			_dangerLimit=1;
+			_walkSpeed=0.89999998;
+		};
+		class VariablesString
+		{
+			_expSafe="(0.5 * meadow) * (0.5 *  trees) * (1 - forest) * (1 - houses) * (1 - sea)";
+			_expDanger="(trees) * (forest) * (1 - meadow) * (1 - houses) * (1 - sea)";
+		};
+		class Wounds
+		{
+			tex[]={};
+			mat[]=
+			{
+				"A3\Animals_F\Rabbit\data\Rabbit.rvmat",
+				"A3\Animals_F\Rabbit\data\W1_Rabbit.rvmat",
+				"A3\Animals_F\Rabbit\data\W2_Rabbit.rvmat"
+			};
+		};
+	};
+	
 	class BP_Sheep : Animal_Base_F {
 		scope = 2;
 		displayName = "Sheep";
@@ -3189,17 +3256,35 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
-	class BP_Refugee1_F: BP_Player {
+	/*class BP_Refugee1_F: BP_Player {
 		scope = 2;
 		displayName = "Refugee 1";
 		uniformClass = "BP_Refugee_1";
 		model = "\breakingpoint_classes\models\BP_Refugee1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 11;
+		side = 10;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
-	};
+	};*/
 	
+	class BP_Refugee1_F: BP_Player {
+		scope=2;
+		displayName = "Refugee 1";
+		uniformClass = "BP_Refugee_1";
+		model = "\A3\characters_F\Civil\c_citizen3.p3d";
+		//moves = "CfgMovesPlayerSdr";
+		side = 10;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\breakingpoint_classes\textures\nomad\nomad1_under.paa",
+			"\breakingpoint_classes\textures\nomad\nomad1.paa"
+		};
+	};
 	class BP_Refugee1_Z: BP_Refugee1_F {
 		scope = 2;
 		displayName = "Refugee 1";
@@ -3226,7 +3311,7 @@ class CfgVehicles
 		uniformClass = "BP_Refugee_2";
 		model="breakingpoint_classes\models\nomad\hoodie_sp";
 		//moves = "CfgMovesPlayerSdr";
-		side = 12;
+		side = 10;
 		hiddenSelections[]=
 		{
 			"camo",
@@ -3254,7 +3339,7 @@ class CfgVehicles
 		uniformClass = "BP_Refugee_3";
 		model = "\breakingpoint_classes\models\BP_Refugee3.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 13;
+		side = 10;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3268,13 +3353,32 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
+	class BP_Refugee4_F: BP_Player {
+		scope = 2;
+		displayName = "Refugee 4";
+		uniformClass = "BP_Refugee_4";
+		model = "\a3\Characters_F_Enoch\Uniforms\Gorka_01_F.p3d";
+		hiddenSelections[] = {"camo_1","camo_2","insignia"};
+		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Khaki_CO.paa"};
+		//moves = "CfgMovesPlayerSdr";
+		side = 10;
+	};
+	
+	class BP_Refugee4_Z: BP_Refugee4_F {
+		scope = 2;
+		displayName = "Refugee 4";
+		uniformClass = "BP_Refugee_4_Z";
+		moves = "CfgMovesZombieSdr";
+		canHideBodies = 0;
+	};
+	
 	class BP_GuardianF_F: BP_Player {
 		scope = 2;
 		displayName = "Guardian 1";
 		uniformClass = "BP_Guardian_F";
 		model = "\breakingpoint_classes\models\BP_GuardianF.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
+		side = 11;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3294,7 +3398,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_1";
 		model = "\breakingpoint_classes\models\BP_Guardian1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
+		side = 11;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3313,7 +3417,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_2";
 		model = "\breakingpoint_classes\models\BP_Guardian2.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
+		side = 11;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3333,7 +3437,7 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_3";
 		model = "\breakingpoint_classes\models\BP_Guardian3.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
+		side = 11;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3398,18 +3502,17 @@ class CfgVehicles
 		uniformClass = "BP_Guardian_4";
 		model = "\a3\Characters_F_Enoch\Uniforms\I_E_Soldier_01_ShortSleeve_F.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
+		side = 11;
 		hiddenSelections[] = {"camo1","camo2","insignia"};
 		hiddenSelectionsTextures[] = {"a3\characters_f_enoch\uniforms\data\i_e_soldier_01_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_pants_co.paa"};
 	};
 	
-	class BP_Guardian4_Ind_F: BP_Ranger4 {
+	class BP_Guardian4_Ind_F: BP_Guardian4_F {
 		scope = 2;
 		displayName = "Guardian 4";
 		uniformClass = "BP_Guardian_Ind_4";
 		model = "\a3\Characters_F_Enoch\Uniforms\I_E_Soldier_01_TankTop_F.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 18;
 		class Wounds
 		{
 			tex[] = {};
@@ -3417,8 +3520,8 @@ class CfgVehicles
 		};
 		hiddenSelections[] = {"camo1","camo2","camo3","insignia"};
 		hiddenSelectionsTextures[] = {"a3\characters_f_enoch\uniforms\data\i_e_soldier_01_tanktop_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_pants_co.paa","a3\characters_f_enoch\uniforms\data\i_e_soldier_01_gloves_camo_co.paa"};
-		impactEffectsBlood = "ImpactEffectsBlood";
-		impactEffectsNoBlood = "ImpactPlastic";
+		//impactEffectsBlood = "ImpactEffectsBlood";
+		//impactEffectsNoBlood = "ImpactPlastic";
 	};
 
 	class BP_RebelF_F: BP_Player {
@@ -3427,7 +3530,7 @@ class CfgVehicles
 		uniformClass = "BP_Rebel_1";
 		model = "\breakingpoint_classes\models\BP_Rebel0.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 19;
+		side = 12;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3467,7 +3570,7 @@ class CfgVehicles
 		uniformClass = "BP_Rebel_1";
 		model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla1_1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 20;
+		side = 12;
 		hiddenSelections[]=
 		{
 			"camo1",
@@ -3495,7 +3598,7 @@ class CfgVehicles
 		uniformClass = "BP_Rebel_2";
 		model = "\breakingpoint_classes\models\BP_Rebel2.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 21;
+		side = 12;
 		//hiddenSelections[] = {"Camo"};
 		//hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing1_co.paa"};
 	};
@@ -3515,7 +3618,7 @@ class CfgVehicles
 		uniformClass = "BP_Rebel_3";
 		model = "\breakingpoint_classes\models\BP_Rebel3.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 22;
+		side = 12;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3535,53 +3638,52 @@ class CfgVehicles
 		uniformClass = "BP_Rebel_4";
 		model = "\A3\characters_F_gamma\Guerrilla\ig_leader.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 23;
+		side = 12;
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"breakingpoint_classes\textures\outlaw\BP_Outlaw4_co.paa","breakingpoint_classes\textures\outlaw\BP_Outlaw4_scarf.paa"};
 	};
  
- /*
-	class B_ZARA_TAKI_T_F: BP_Player
-	{};
-	class BP_Rebel4_Taki_F: B_ZARA_TAKI_T_F
+	class BP_Rebel4_Taki: BP_Rebel4_F
 	{
-		scope=2;
-		displayName="Rebel 4c";
-		uniformClass="BP_Rebel_4c";
-		model="tryk_unit\data\LOC_soldier01.p3d";
-		side=23;
-	};*/
+		scope = 2;
+		displayName="Rebel 4 Taki";
+		uniformClass="BP_Rebel_4_Taki";
+		model = "breakingpoint_classes\models\BP_Rebel4_Taki.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		hiddenSelectionsMaterials[] = {};
+	};
 	
 		//SCAVENGER
 	class BP_ScavengerF_F: BP_Player
 	{
-		scope=2;
-		displayName="Traitor Scavenger";
-		uniformClass="BP_Scavenger_F";
+		scope = 2;
+		displayName = "Traitor Scavenger";
+		uniformClass = "BP_Scavenger_F";
 		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=24;
+		side = 13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
 	
 	class BP_Scavenger1_F: BP_Player
 	{
-		scope=2;
+		scope = 2;
 		displayName="Scavenger 1";
 		uniformClass="BP_Scavenger_1";
 		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=25;
+		side=13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
 	
 	class BP_Scavenger2_F: BP_Player
 	{
-		scope=2;
-		displayName="Scavenger 2";
-		uniformClass="BP_Scavenger_2";
+		scope = 2;
+		displayName = "Scavenger 2";
+		uniformClass = "BP_Scavenger_2";
 		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=26;
+		side = 13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
@@ -3589,10 +3691,10 @@ class CfgVehicles
 	class BP_Scavenger3_F: BP_Player
 	{
 		scope=2;
-		displayName="Scavenger 3";
-		uniformClass="BP_Scavenger_3";
+		displayName = "Scavenger 3";
+		uniformClass = "BP_Scavenger_3";
 		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=27;
+		side = 13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
@@ -3600,10 +3702,10 @@ class CfgVehicles
 	class BP_Scavenger4_F: BP_Player
 	{
 		scope=2;
-		displayName="Scavenger 4";
-		uniformClass="BP_Scavenger_4";
+		displayName = "Scavenger 4";
+		uniformClass = "BP_Scavenger_4";
 		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=28;
+		side = 13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
@@ -3615,7 +3717,7 @@ class CfgVehicles
 		uniformClass = "BP_Hunter_1";
 		model = "\breakingpoint_classes\models\BP_Hunter1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 29;
+		side = 14;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3636,7 +3738,7 @@ class CfgVehicles
 		uniformClass = "BP_Hunter_2";
 		model = "\breakingpoint_classes\models\BP_Hunter2.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 30;
+		side = 14;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3656,7 +3758,7 @@ class CfgVehicles
 		uniformClass = "BP_Hunter_3";
 		model = "\breakingpoint_classes\models\BP_Hunter3.p3d";
 		//moves = "CfgMovesMaleSdrHunt3";
-		side = 31;
+		side = 14;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3677,7 +3779,7 @@ class CfgVehicles
 		uniformClass = "BP_Hunter_4";
 		model="\A3\characters_F_beta\indep\ia_soldier_02.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 32;
+		side = 14;
 		hiddenSelections[]=
 		{
 			"camo",
@@ -3702,7 +3804,7 @@ class CfgVehicles
 		uniformClass = "BP_Survivalist_F";
 		model = "\breakingpoint_classes\models\BP_SurvivalistF.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 33;
+		side = 15;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3722,7 +3824,7 @@ class CfgVehicles
 		uniformClass = "BP_Survivalist_1";
 		model = "\breakingpoint_classes\models\BP_Survivalist1.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 34;
+		side = 15;
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
 	};
@@ -3742,7 +3844,7 @@ class CfgVehicles
 		uniformClass = "BP_Survivalist_2";
 		model = "\breakingpoint_classes\models\BP_Survivalist2.p3d";
 		//moves = "CfgMovesPlayerSdr";
-		side = 35;
+		side = 15;
 		hiddenSelections[] = {"Camo"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\ghillie_top_desert_co.paa"};
 	};
@@ -3763,7 +3865,7 @@ class CfgVehicles
 		model = "\breakingpoint_ghillie\models\ghilliegrass.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		//model = "A3\Characters_F\common\ghillie.p3d";
-		side = 36;
+		side = 15;
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures2\ghillie_5_co.paa"};
 	};
@@ -3784,7 +3886,7 @@ class CfgVehicles
 		model = "\breakingpoint_ghillie\models\ghilliegrass.p3d";
 		//moves = "CfgMovesPlayerSdr";
 		//model = "A3\Characters_F\common\ghillie.p3d";
-		side = 37;
+		side = 15;
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures2\ghillie_4_co.paa"};
 	};
@@ -3868,6 +3970,8 @@ class CfgVehicles
 	class B_MRAP_01_gmg_F;
 	class B_MRAP_01_hmg_F;
 	class C_Offroad_01_F;
+	class C_Offroad_01_comms_F;
+	class B_GEN_Offroad_01_gen_F;
 	class C_Quadbike_01_F;
     class C_SUV_01_F;
 	class C_Hatchback_01_F;
@@ -3880,6 +3984,7 @@ class CfgVehicles
 	class I_MRAP_03_F;
 	class O_Truck_02_covered_F;
 	class O_Truck_02_transport_F;
+	class C_Truck_02_fuel_F;
 	class B_G_Offroad_01_armed_F;
 	//Apex
 	class C_Scooter_Transport_01_F;
@@ -3889,7 +3994,9 @@ class CfgVehicles
 	class O_T_LSV_02_unarmed_F;
 	class B_T_LSV_01_armed_F;
 	class B_T_LSV_01_unarmed_F;
+	class LSV_01_unarmed_base_F;
 	class C_Offroad_02_unarmed_F;
+	class Offroad_02_unarmed_base_F;
 	/*
 	{
 		class ViewPilot;
@@ -3915,6 +4022,7 @@ class CfgVehicles
 		side = 3;
 		crew = "";
 		typicalCargo[] = {};
+		maximumLoad = 120;
 		//textures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
 		//hiddenSelectionsTextures[] = {"\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_CO.paa","\A3\Boat_F_Exp\Scooter_Transport_01\Data\Scooter_Transport_01_VP_CO.paa"};
 		//class TextureSources {};
@@ -4149,7 +4257,12 @@ class CfgVehicles
 		crew = "";
 		typicalCargo[] = {};
 		textures[] = {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};
-		hiddenSelectionsTextures[] = {"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa","\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_01_ghex_CO.paa",
+			"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_02_ghex_CO.paa",
+			"\A3\Soft_F_Exp\LSV_02\Data\CSAT_LSV_03_ghex_CO.paa"
+		};
 		class TextureSources {};
 		class TransportItems {};
 		class TransportMagazines{};
@@ -4207,7 +4320,9 @@ class CfgVehicles
 			};
 		};
 		
-		class EventHandlers : BP_VehicleEventHandlers {};
+		class EventHandlers : BP_VehicleEventHandlers {
+			init = "_this call BP_fnc_vehicleInit; if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
+		};
 	};
 	class BP_B_T_LSV_01_armed_F : B_T_LSV_01_armed_F { //Rusted Prowler (Armed)
 		author = "Bohemia Interactive";
@@ -4286,25 +4401,21 @@ class CfgVehicles
 		class EventHandlers : BP_VehicleEventHandlers {};
 				
 	};
-	class BP_B_T_LSV_01_unarmed_F : B_T_LSV_01_unarmed_F { //Rusted Prowler
-		author = "Bohemia Interactive";
-		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\B_T_LSV_01_unarmed_F.jpg";
-		_generalMacro = "Rusted Prowler";
-		displayName = "Rusted Prowler";
+	
+	class BP_B_LSV_01_unarmed_F : B_T_LSV_01_unarmed_F {
+		displayName = "Rusty Prowler";
 		scope = 2;
-		scopeCurator = 2;
-		DLC = "Expansion";
 		side = 3;
-		crew = "";
-		typicalCargo[] = {};
-		textures[] = {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};
-		hiddenSelectionsTextures[] = {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};
-		class TextureSources {};
-		class TransportItems {};
-		class TransportMagazines{};
-		class TransportWeapons{};
+		scopeCurator = 2;
+		//textures[] = {"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_olive_CO.paa","\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_olive_CO.paa"};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_01_sand_CO.paa",
+			"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_02_sand_CO.paa",
+			"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_03_sand_CO.paa",
+			"\A3\Soft_F_Exp\LSV_01\Data\NATO_LSV_Adds_sand_CO.paa"
+		};
 		armor = 50;
-		
 		class HitPoints  {
 			class HitEngine {
 				armor = 2;
@@ -4355,9 +4466,12 @@ class CfgVehicles
 				passThrough = 0;
 			};
 		};
-		
-		class EventHandlers : BP_VehicleEventHandlers {};
-	};	
+
+		class EventHandlers : BP_VehicleEventHandlers {
+			init = "_this call BP_fnc_vehicleInit; if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
+		};
+	};
+	
 	class BP_C_Offroad_02_unarmed_F : C_Offroad_02_unarmed_F { //Rusted MB 4WD
 		author = "Bohemia Interactive";
 		editorPreview = "\A3\EditorPreviews_F_Exp\Data\CfgVehicles\C_Offroad_02_unarmed_F.jpg";
@@ -5150,7 +5264,204 @@ class CfgVehicles
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
 	
-	class BP_Offroad_01_armed_F: C_Offroad_01_F 
+	class BP_Offroad_01_gen_F: B_GEN_Offroad_01_gen_F 
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Police Truck";
+		typicalCargo[] = {};
+		_generalMacro="B_GEN_Offroad_01_gen_F";
+		//hiddenSelections[]= {"camo", "camo2", "camo3"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\Offroad_01_ext_base03_CO.paa", "\breakingpoint_vehicles\textures\Offroad_01_ext_base03_CO.paa", "\breakingpoint_vehicles\textures\Offroad_01_proxy_CO.paa"};
+		//hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\offroad_01_ext.rvmat", "\breakingpoint_vehicles\textures\offroad_01_ext.rvmat", "\breakingpoint_vehicles\textures\offroad_01_proxy.rvmat"};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems {};
+		commanderCanSee = 2 + 4 + 8;
+		gunnerCanSee = 2 + 4 + 8;
+		driverCanSee = 2 + 4 + 8;
+		maximumLoad = 1500;
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 3;
+		
+		class HitPoints {
+			class HitGlass1 {
+				armor = 0.1;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			
+			class HitGlass2 {
+				armor = 0.1;
+				material = -1;
+				name = "glass2";
+				visual = "glass2";
+				passThrough = 0;
+			};
+		
+			class HitBody {
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0;
+			};
+			
+			class HitFuel {
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			
+			class HitLFWheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitLF2Wheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitRFWheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitRF2Wheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitEngine {
+				armor = 1;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
+		
+		class EventHandlers : BP_VehicleEventHandlers {
+			init = "_this call BP_fnc_vehicleInit; if (local (_this select 0)) then {[(_this select 0), """", [], true] call bis_fnc_initVehicle;};";
+		};
+	};
+	
+	class BP_Offroad_01_comms_F: C_Offroad_01_comms_F 
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Forest Ranger Truck";
+		typicalCargo[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems {};
+		commanderCanSee = 2 + 4 + 8;
+		gunnerCanSee = 2 + 4 + 8;
+		driverCanSee = 2 + 4 + 8;
+		maximumLoad = 1500;
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 3;
+		//hiddenSelections[] = {"Camo","Camo2","Camo3"};
+		//hiddenSelectionsTextures[] = {"\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_ext_blk_CO.paa","\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_ext_blk_CO.paa","\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_cover_blk_co.paa"};
+		class HitPoints {
+			class HitGlass1 {
+				armor = 0.1;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			
+			class HitGlass2 {
+				armor = 0.1;
+				material = -1;
+				name = "glass2";
+				visual = "glass2";
+				passThrough = 0;
+			};
+		
+			class HitBody {
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0;
+			};
+			
+			class HitFuel {
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			
+			class HitLFWheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitLF2Wheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitRFWheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitRF2Wheel {
+				armor = 0.8;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitEngine {
+				armor = 1;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
+		
+		class EventHandlers : BP_VehicleEventHandlers {};
+	};
+	
+	class BP_Offroad_01_F: C_Offroad_01_F 
 	{
 		scope = 2;
 		side = 3;
@@ -5248,7 +5559,7 @@ class CfgVehicles
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
 	
-	class BP_Offroad_02_armed_F:  C_Offroad_01_F 
+	class BP_Offroad_02_F:  C_Offroad_01_F 
 	{
 		scope = 2;
 		side = 3;
@@ -5362,7 +5673,7 @@ class CfgVehicles
 		commanderCanSee = 2 + 4 + 8;
 		gunnerCanSee = 2 + 4 + 8;
 		driverCanSee = 2 + 4 + 8;
-		maximumLoad = 1500;
+		maximumLoad = 1400;
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 3;
@@ -6346,7 +6657,7 @@ class CfgVehicles
 		commanderCanSee = 2 + 4 + 8;
 		gunnerCanSee = 2 + 4 + 8;
 		driverCanSee = 2 + 4 + 8;
-		maximumLoad = 500;
+		maximumLoad = 450;
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 5;
 		transportMaxBackpacks = 10;
@@ -6429,14 +6740,148 @@ class CfgVehicles
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
 	
-	/*class BP_Van_01_Transport_F:  I_G_Van_01_transport_F 
+	class BP_Truck_02_fuel_F:  C_Truck_02_fuel_F 
+	{
+		scope = 2;
+		side = 3;
+		crew = "";
+		displayName = "Kamas (Fuel)";
+		typicalCargo[] = {};
+		//hiddenSelections[]= {"camo1", "camo2"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\truck_02_kab_opfor_co.paa", "\breakingpoint_vehicles\textures\truck_02_kuz_opfor_co.paa"};
+		//hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\truck_02_kab.rvmat", "\breakingpoint_vehicles\textures\truck_02_kuz.rvmat"};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems {};
+		commanderCanSee = 2 + 4 + 8;
+		gunnerCanSee = 2 + 4 + 8;
+		driverCanSee = 2 + 4 + 8;
+		maximumLoad = 450;
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 10;
+		transportFuel = 1200;
+		
+		class HitPoints {
+			class HitGlass1 {
+				armor = 0.1;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			
+			class HitGlass2 {
+				armor = 0.1;
+				material = -1;
+				name = "glass2";
+				visual = "glass2";
+				passThrough = 0;
+			};
+			
+			class HitGlass3 {
+				armor = 0.1;
+				material = -1;
+				name = "glass3";
+				visual = "glass3";
+				passThrough = 0;
+			};
+			
+			class HitGlass4 {
+				armor = 0.1;
+				material = -1;
+				name = "glass4";
+				visual = "glass4";
+				passThrough = 0;
+			};
+			
+			class HitBody {
+				armor = 1;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.2;
+			};
+			
+			class HitFuel {
+				armor = 1;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			
+			class HitLFWheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitLF2Wheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftMiddleWheel";
+				passThrough = 0;
+			};
+			
+			class HitRFWheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitRF2Wheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightMiddleWheel";
+				passThrough = 0;
+			};
+			
+			class HitEngine {
+				armor = 1;
+				material = -1;
+				name = "motor";
+				visual = "Engine";
+				passThrough = 0.2;
+			};
+
+            class HitLMWheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_1_3_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+
+            class HitRMWheel {
+				armor = 0.7000;
+				material = -1;
+				name = "wheel_2_3_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+		};
+
+		//class EventHandlers : BP_VehicleEventHandlers {};
+		class EventHandlers : BP_VehicleEventHandlers {
+			init = "_this call BP_fnc_vehicleInit; if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
+		};
+	};
+	
+	class BP_Van_01_Transport_F:  I_G_Van_01_transport_F 
 	{
 		scope = 2;
 		side = 3;
 		crew = "";
 		typicalCargo[] = {};
 		hiddenSelections[]= {"camo1", "camo2"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\van_01_ext_CO.paa", "\breakingpoint_vehicles\textures\van_01_adds_CO.paa"};
+		//hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\van_01_ext_CO.paa", "\breakingpoint_vehicles\textures\van_01_adds_CO.paa"};
 		hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\van_01_ext.rvmat", "\breakingpoint_vehicles\textures\van_01_adds.rvmat"};
 		class TransportMagazines{};
 		class TransportWeapons{};
@@ -6444,14 +6889,80 @@ class CfgVehicles
 		commanderCanSee = 2 + 4 + 8;
 		gunnerCanSee = 2 + 4 + 8;
 		driverCanSee = 2 + 4 + 8;
-		maximumLoad = 950;
+		maximumLoad = 1600;
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
 		
+		class HitPoints {
+			class HitGlass1 {
+				armor = 0;
+				material = -1;
+				name = "glass1";
+				visual = "glass1";
+				passThrough = 0;
+			};
+			
+			class HitBody {
+				armor = 0.5;
+				material = -1;
+				name = "karoserie";
+				visual = "Hull";
+				passThrough = 0.2;
+			};
+			
+			class HitFuel {
+				armor = 0.5;
+				material = -1;
+				name = "palivo";
+				visual = "FuelHose";
+				passThrough = 0.5;
+			};
+			
+			class HitLFWheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_1_steering";
+				visual = "LeftFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitLF2Wheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_1_2_steering";
+				visual = "LeftBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitRFWheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_1_steering";
+				visual = "RightFrontWheel";
+				passThrough = 0;
+			};
+			
+			class HitRF2Wheel {
+				armor = 0.5;
+				material = -1;
+				name = "wheel_2_2_steering";
+				visual = "RightBackWheel";
+				passThrough = 0;
+			};
+			
+			class HitEngine {
+				armor = 0.5;
+				material = -1;
+				name = "motor";
+				visual = "";
+				passThrough = 0.2;
+			};
+		};
+		
 		class EventHandlers : BP_VehicleEventHandlers {};
 	};
-	*/
+	
 	class BP_Truck_02_transport_F:  O_Truck_02_transport_F 
 	{
 		scope = 2;
@@ -6728,7 +7239,7 @@ class CfgVehicles
 		commanderCanSee = 2 + 4 + 8;
 		gunnerCanSee = 2 + 4 + 8;
 		driverCanSee = 2 + 4 + 8;
-		maximumLoad = 2000;
+		maximumLoad = 1250;
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 7;
 		transportMaxBackpacks = 10;
@@ -6952,7 +7463,7 @@ class CfgVehicles
 		transportMaxMagazines = 10;
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
-		maxSpeed = 38;
+		maxSpeed = 45;
 		
 		class HitPoints {
 			class HitBody {

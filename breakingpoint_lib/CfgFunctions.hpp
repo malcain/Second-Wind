@@ -11,7 +11,7 @@ class CfgFunctions
 {
 	//Functions
 	//delete A3_Bootcamp;
-	delete A2PMC;
+	/*delete A2PMC;
 	delete Curator_F;
 	delete A3_Functions_F_Curator;
 
@@ -19,7 +19,7 @@ class CfgFunctions
 	delete A3_Modules;
 	delete A3_Modules_F_Bootcamp;
 	delete A3_Modules_F_Curator;
-	delete A3_Modules_F_Kart;
+	delete A3_Modules_F_Kart;*/
 
 	class A3 
 	{
@@ -150,7 +150,7 @@ class CfgFunctions
 		delete Waypoints;
 		delete Hints;
 		delete Map;
-		delete MP;
+		//delete MP;
 		delete Spawning;
 	};
 	
@@ -294,7 +294,7 @@ class CfgFunctions
 			};
 		};
 		
-		class Debug 
+		/*class Debug 
 		{
 			file = "A3\functions_f\Debug";
 			
@@ -352,7 +352,7 @@ class CfgFunctions
 			class shutdown {
 				description = "Shut downs the game.";
 			};
-		};
+		};*/
 		
 		class GUI {
 			file = "A3\functions_f\GUI";
@@ -445,7 +445,7 @@ class CfgFunctions
 			class singleMissionKeys {};
 		};
 		
-		delete MP;
+		//delete MP;
 		
 		class Numbers {
 			file = "A3\functions_f\Numbers";

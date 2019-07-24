@@ -106,13 +106,13 @@ switch (_type) do {
 			r_player_adrenalineTime = diag_tickTime;
 			"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
 			//Random Chance of Death if High health
-			if (r_player_blood > 11000) then
+			/*if (r_player_blood > 11000) then
 			{
 				_random = floor (random 100);
 				if (_random > 90) then {
 					[15] call BP_fnc_death;
 				};
-			};
+			};*/
 		};
 	};
 	case "medZombie": {

@@ -16,6 +16,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
+		//"A3_Data_F_Sams_Loadorder"
 		requiredAddons[] = {"A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui","A3_Weapons_F_Mod"};
 	};
 };
@@ -499,6 +500,12 @@ class CfgMovesBasic
 	};
 };
 
+//Ladder
+/*class CfgAnimation
+{
+	ladderSpeed="0.5*2";
+};*/
+
 class CfgMovesMaleSdr: CfgMovesBasic
 {
 	skeletonName = "OFP2_ManSkeleton";
@@ -513,7 +520,29 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class AidlPercMstpSrasWlnrDnon_G0S; //extern
 		class AidlPpneMstpSrasWpstDnon_G0S;  //extern
 		class AadjPpneMstpSrasWpstDup;  //extern
-
+		
+		//Swim
+		/*class AswmPercMstpSnonWnonDnon;
+		class AsswPercMstpSnonWnonDnon;
+		class AbswPercMstpSnonWnonDnon;
+		class AswmPercMrunSnonWnonDf: AswmPercMstpSnonWnonDnon
+		{
+			speed=0.5;
+		};
+		class AsswPercMrunSnonWnonDf: AsswPercMstpSnonWnonDnon
+		{
+			speed=0.5;
+		};
+		class AbswPercMrunSnonWnonDf: AbswPercMstpSnonWnonDnon
+		{
+			speed=0.4;
+		};
+		//Ladder
+		class LadderCivilStatic;
+		class LadderCivilUpLoop: LadderCivilStatic
+		{
+			speed="1.05/(2/3)";
+		};*/
 
 		class AmovPercMstpSlowWrflDnon; //stay weap low
 		class AmovPercMstpSrasWrflDnon; //stay weap up
@@ -35884,7 +35913,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			class StandardSound: BaseSoundModeType
  			{
  				begin1[] = {"breakingpoint_jsrs\sounds\M4SD_s1.wav", 1.094328, 1, 200};
-				begin2[] = {"breakingpoint_jsrs\sounds\M4SD_s2.wav", 1.094328, 1, 200};
+				begin2[] = {"breakingpoint_jsrs\sounds\M4SD_s1.wav", 1.094328, 0.97, 200};
 				soundBegin[] = {"begin1", 0.500000, "begin2", 0.500000};
  			};
 			reloadTime = 0.1;
@@ -52965,7 +52994,7 @@ class CfgMagazines {
 		autoReload = 0;
 		flash = "";
 		flashSize = 0;
-		initSpeed = 85;
+		initSpeed = 4; //85
 		maxLeadSpeed = 20;
 		picture = "\breakingpoint_weapons\icons\m_satchel_ca.paa";
 		//modelSpecial = "\breakingpoint_weapons\models\Hatchet\BP_hatchet_loaded.p3d";
@@ -54842,7 +54871,7 @@ class CfgMagazines {
 		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
 		displayName = "Human Trap";
 		model = "\breakingpoint\models\bp_beartrap.p3d";
-		descriptionShort = "Looks old and dirty, but sharp enough to do it's job";
+		descriptionShort = "Old and rusty, but sharp enough to do it's job";
 		class Library
 		{
 			libTextDesc = "Traps";
@@ -56066,7 +56095,8 @@ class CfgAmmo {
 		explosionSoundEffect = "";
 		CraterEffects = "NoCrater";
 		CraterWaterEffects = "ImpactGlassThin";
-		explosionEffects = "NoExplosion";
+		//explosionEffects = "NoExplosion";
+		ExplosionEffects = "alarmClock";
 		visibleFire = 0;
 		audibleFire = 0;
 		visibleFireTime = 0;
@@ -56116,7 +56146,7 @@ class CfgAmmo {
 		proxyShape = "";
 		explosive = 0;
 		cartridge = "";
-		simulation = "shotRocket";
+		simulation = "shotRocket"; //shotRocket
 		model = "\A3\Weapons_F\empty.p3d";
 		muzzleEffect = "";
 		soundFly[] = {"", 0, 1};
@@ -56271,8 +56301,8 @@ class CfgAmmo {
 	class BP_Hatchet_Swing_Ammo : Melee
 	{
 		hit = 10;
-		typicalSpeed = 85;
-		timeToLive = 0.018;
+		typicalSpeed = 3; //85
+		timeToLive = 1.018; //0.018;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -56326,10 +56356,10 @@ class CfgAmmo {
 	class BP_Katana_Swing_Ammo : Melee
 	{
 		hit = 12;
-		typicalSpeed = 85;
+		typicalSpeed = 3;
 		//explosive = 1;
 		//explosionTime = 0.1;
-		timeToLive = 0.020;
+		timeToLive = 1.020;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -56383,8 +56413,8 @@ class CfgAmmo {
 	class BP_Pickaxe_Swing_Ammo : Melee
 	{
 		hit = 10;
-		typicalSpeed = 85;
-		timeToLive = 0.020;
+		typicalSpeed = 3;
+		timeToLive = 1.020;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -56441,10 +56471,10 @@ class CfgAmmo {
 	class BP_Hammer_Swing_Ammo : Melee
 	{
 		hit = 13;
-		typicalSpeed = 85;
+		typicalSpeed = 3;
 		//explosive = 1;
 		//explosionTime = 0.1;
-		timeToLive = 0.020;
+		timeToLive = 1.020;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -56559,8 +56589,8 @@ class CfgAmmo {
 	class BP_Shovel_Swing_Ammo: Melee
 	{
 		hit = 10;
-		typicalSpeed = 85;
-		timeToLive = 0.02;
+		typicalSpeed = 3;
+		timeToLive = 1.02;
 		airFriction = -0.00001;
 		soundFly[] = {"",0,1};
 		soundEngine[] = {"",0,1};
@@ -56617,8 +56647,8 @@ class CfgAmmo {
 	class BP_Club_Swing_Ammo: Melee
 	{
 		hit = 11;
-		typicalSpeed = 85;
-		timeToLive = 0.018;
+		typicalSpeed = 3;
+		timeToLive = 1.018;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -56672,8 +56702,8 @@ class CfgAmmo {
 	class BP_Hammer_Swing_Ammo2 : Melee
 	{
 		hit = 15;
-		typicalSpeed = 85;
-		timeToLive = 0.020;
+		typicalSpeed = 3;
+		timeToLive = 1.020;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -60674,8 +60704,14 @@ class CfgAmmo {
 		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
 		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
 		//explosionEffects = "simplefbExplosion"; //MineExplosion
-		explosionEffects = "";
-		CraterEffects = "";
+		//explosionEffects = "";
+		explosionSoundEffect = "";
+		CraterEffects = "NoCrater";
+		CraterWaterEffects = "ImpactGlassThin";
+		explosionEffects = "NoExplosion";
+		visibleFire = 0;
+		audibleFire = 0;
+		visibleFireTime = 0;
 		whistleDist = 0;
 		cost = 200;
 		mineInconspicuousness = 1;

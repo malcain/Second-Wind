@@ -163,6 +163,11 @@ switch (_iClass) do {
 	};
 };
 
+_item hideObjectGlobal true;
+if (player distance _item < 65) then {
+_item hideObject false;
+};
+
 BP_LootGlobal = BP_LootGlobal + 1;
 
 _item

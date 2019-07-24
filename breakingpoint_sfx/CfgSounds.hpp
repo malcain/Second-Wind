@@ -40,8 +40,8 @@ class CfgSounds
 		titles[] = {};
 	};
 	class z_dog_bark_2 {
-		name = "";
-		sound[]={"breakingpoint_sfx\dogs\bark2.ogg",1,1};
+		name = "dog_barking";
+		sound[]={"breakingpoint_sfx\dogs\bark2.ogg",4,1};
 		titles[] = {};
 	};
 	class z_dog_bark_3 {
@@ -521,10 +521,10 @@ class CfgSounds
 		titles[] = {0, ""};
 	};
 	class z_attack_1 : z_attack_0 {
-		sound[] = {"breakingpoint_sfx\zombie\attack_1.ogg",0.5,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\attack_1.ogg",4.5,1,80};
 	};
 	class z_attack_2 : z_attack_0 {
-		sound[] = {"breakingpoint_sfx\zombie\attack_2.ogg",0.5,1,80};
+		sound[] = {"breakingpoint_sfx\zombie\attack_2.ogg",4.5,1,80};
 	};
 	class z_attack_3 : z_attack_0 {
 		sound[] = {"breakingpoint_sfx\zombie\attack_3.ogg",0.5,1,80};

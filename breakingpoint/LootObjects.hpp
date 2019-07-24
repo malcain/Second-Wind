@@ -108,7 +108,7 @@ class BP_OldDMRWeaponBox : BP_LootBox {
 	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
 };
 
-class BP_WeaponCratePacific : BP_LootBox {
+/*class BP_WeaponCratePacific : BP_LootBox {
     displayName = "Weapon Crate Pacific";
 	model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F.p3d";
 	hiddenSelections[]=
@@ -121,7 +121,7 @@ class BP_WeaponCratePacific : BP_LootBox {
 		"\A3\Supplies_F_Exp\Ammoboxes\Data\AmmoBox_signs_OPFOR_CA.paa",
 		"\A3\Supplies_F_Exp\Ammoboxes\Data\Box_T_East_Wps_F_co.paa"
 	};
-};
+};*/
 
 	
 /* Military Boxes Very Small (Small Magazine Supply Boxes)*/	
@@ -235,14 +235,47 @@ class BP_WeaponCrateOld : BP_LootBox {
     displayName = "Old Weapon Crate";
 	model = "\A3\weapons_F\AmmoBoxes\USBasicAmmo.p3d";
 };
-/*class BP_WeaponCrate_WWII : BP_LootBox {
-	displayName = "Surplus Weapon Crate";
-	model = "\A3\Weapons_F\Ammoboxes\Proxy_UsLouncherBox.p3d";
-};*/
 class BP_WeaponCrate_WWII : BP_LootBox {
 	displayName = "Surplus Weapon Crate";
 	model = "\breakingpoint\models\bp_crate1b.p3d";
 };
+
+/* Contaminated Objects*/	
+class BP_ContaminatedBlanket : BP_LootBox {
+	model = "\A3\Props_F_Orange\Humanitarian\Camps\EmergencyBlanket_01_discarded_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_EmergencyBlanket_01_discarded_F.jpg";
+};
+class BP_ContaminatedBlankets : BP_LootBox {
+	model = "\A3\Props_F_Orange\Humanitarian\Camps\EmergencyBlanket_01_stack_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_EmergencyBlanket_01_stack_F.jpg";
+};
+class BP_ContaminatedBlanket2 : BP_LootBox {
+	model = "\A3\Props_F_Orange\Humanitarian\Camps\EmergencyBlanket_02_discarded_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_EmergencyBlanket_02_discarded_F.jpg";
+};
+class BP_DecayedFoodStack : BP_LootBox {
+	model = "\A3\Props_F_Orange\Humanitarian\Supplies\FoodSack_01_destroyed_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_FoodSack_01_dmg_brown_F.jpg";
+	hiddenSelections[] = {"Camo"};
+	hiddenSelectionsTextures[] = {"\A3\Props_F_Orange\Humanitarian\Supplies\Data\FoodSack_01_dmg_brown_CO.paa"};
+};
+
+/*class BP_RadioactiveWaste : BP_LootBox {
+    model = "\a3\Props_F_Enoch\Military\Decontamination\HazmatBag_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\HazmatBag_01_F.jpg";
+};
+class BP_ContaminatedBarrel : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Garbage\GarbageBarrel_02_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBarrel_02_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\props_f_enoch\military\garbage\data\garbagebarrelc_co.paa"};
+};
+class BP_DecayedBarrel : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Garbage\GarbageBarrel_02_buried_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBarrel_02_buried_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\props_f_enoch\military\garbage\data\garbagebarrelc_co.paa"};
+};*/
 	
 /* Military Boxes Large (Helicrash/Underwater)*/	
 class BP_HeavyWeaponCrate : BP_LootBox {
@@ -253,6 +286,12 @@ class BP_VehicleAmmoCrate : BP_LootBox {
 };
 class BP_AirDropCrate : BP_LootBox {
     model = "\A3\Weapons_F\Ammoboxes\Supplydrop.p3d";
+};
+class BP_AirDropCrateOrng : BP_LootBox {
+    model = "\A3\Weapons_F\Ammoboxes\Supplydrop.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\C_IDAP_supplyCrate_F.jpg";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\a3\Supplies_F_Orange\Ammoboxes\Data\supplydrop_idap_co.paa"};
 };
 class BP_AmmoPallet1 : BP_LootBox {
     model = "\A3\structures_f_epa\Mil\Scrapyard\PaperBox_closed_F.p3d";
@@ -352,6 +391,76 @@ class BP_WeathCrateSmallBRN : BP_LootBox {
 class BP_WeathCrateSmallGRN : BP_LootBox {
 	model="plp_containers\StcWeatheredCrates\plp_cts_WeathCrateSmallGreen.p3d";
 };
+
+/* Camping */
+
+class BP_RedCampingBag : BP_LootBox {
+	editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_RotorCoversBag_01_F.jpg";
+	model = "\A3\Structures_F_Heli\Items\Airport\RotorCoversBag_01_F.p3d";
+};
+
+class BP_FoodContainer : BP_LootBox {
+	model = "\A3\Structures_F_Bootcamp\Items\Food\FoodContainer_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_FoodContainer_01_White_F.jpg";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Orange\Humanitarian\Supplies\Data\foodcontainer_01_white_co.paa"};
+};
+class BP_FoodContainerGrn : BP_LootBox {
+	model = "\A3\Structures_F_Bootcamp\Items\Food\FoodContainer_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_FoodContainer_01_F.jpg";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"a3\structures_f_bootcamp\items\food\data\foodcontainer_01_co.paa"};
+};
+
+/*class BP_CampBagRed : BP_LootBox {
+    model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_folded_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_folded_redwhite_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_redwhite_F_CO.paa"};
+};
+class BP_CampBagSand : BP_LootBox {
+   model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_folded_F.p3d";
+   editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_folded_sand_F.jpg";
+   hiddenSelections[] = {"Camo_1"};
+   hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_sand_F_CO.paa"};
+};
+class BP_CampBagBlue : BP_LootBox {
+    model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_folded_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_folded_bluewhite_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_bluewhite_F_CO.paa"};
+};
+class BP_CampBagGrn : BP_LootBox {
+    model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_folded_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_folded_olive_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_olive_F_CO.paa"};
+};
+
+class BP_TentRed : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_redwhite_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_redwhite_F_CO.paa"};
+};
+class BP_TentSand : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_sand_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_sand_F_CO.paa"};
+};
+class BP_TentBlue : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_bluewhite_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_bluewhite_F_CO.paa"};
+};
+class BP_TentGrn : BP_LootBox {
+	model = "\a3\Props_F_Enoch\Military\Camps\TentSolar_01_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_TentSolar_01_olive_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\Props_F_Enoch\Military\Camps\data\TentSolar_01_olive_F_CO.paa"};
+};*/
 
 /* Ghost Hotel */
 

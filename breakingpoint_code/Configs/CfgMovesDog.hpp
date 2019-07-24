@@ -7,413 +7,786 @@
 	Alderon Games Pty Ltd
 */
 
+//class CfgMovesDog_F;
 class CfgMovesDog_BP : CfgMovesAnimal_Base_F 
 {
-	access = ReadAndCreate;
-	enableDirectControl = 0;
-	skeletonName = "Dog_F";
-	collisionVertexPattern[] = {"1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a", "12a", "13a", "14a", "15a", "16a", "17a", "18a", "19a", "20a", "21a", "22a", "23a", "24a", "25a", "26a", "27a", "28a", "29a", "30a", "31a", "32a", "33a", "34a"};
-	collisionGeomCompPattern[] = {1};
-	
-	class Default : Default {
-		GetOutPara = "";
-		weaponLowered = 0;
-		canBlendStep = 0;
-		idle = "idleDefault";
-		access = 3;
-		actions = "NoActions";
-		file = "";
-		looped = true;
-		speed = 0.5;
-		disableWeapons = false;
-		enableOptics = false;
-		disableWeaponsLong = false;
-		showWeaponAim = false;
-		enableMissile = false;
-		enableBinocular = false;
-		showItemInHand = false;
-		showItemInRightHand = false;
-		showHandGun = false;
-		onLandBeg = false;
-		onLandEnd = false;
-		onLadder = false;
-		canPullTrigger = true;
-		canReload = 1;
-		duty = -0.5;
-		visibleSize = 0.75012;
-		aimPrecision = 1;
-		camShakeFire = 1;
-		relSpeedMin = 1;
-		relSpeedMax = 1;
-		soundEnabled = true;
-		soundOverride = "";
-		soundEdge[] = {0.5, 1};
-		terminal = false;
-		ragdoll = 0;
-		limitGunMovement = true;
-		variantsPlayer[] = {};
-		variantsAI[] = {""};
-		equivalentTo = "";
-		connectAs = "";
-		variantAfter[] = {5, 10, 20};
-		connectFrom[] = {};
-		connectTo[] = {};
-		interpolateWith[] = {};
-		interpolateTo[] = {};
-		interpolateFrom[] = {};
-		ignoreMinPlayTime[] = {};
-		aiming = "aimingDefault";
-		aimingBody = "aimingUpDefault";
-		leaning = "leaningDefault";
-		legs = "legsDefault";
-		head = "headDefault";
-		leaningFactorBeg = 0;
-		leaningFactorEnd = 0;
-		leaningFactorZeroPoint = -1;
-		interpolationSpeed = 6;
-		interpolationRestart = false;
-		enableDirectControl = 1;
-		headBobMode = 0;
-		headBobStrength = 0;
-		collisionShape = "A3\anims_f\Data\Geom\Sdr\Perc_Wnon.p3d";
-		//collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";// this for test, zombies will not push players in walls and not walk troth objects
-		hasCollShapeSafe = false;
-		collisionShapeSafe = "";
-		boundingSphere = 1.0;
-		enableAutoActions = false;
-		leftHandIKEnd = false;
-		leftHandIKBeg = false;
-		rightHandIKBeg = false;
-		rightHandIKEnd = false;
-		leftHandIKCurve[] = {};
-		rightHandIKCurve[] = {};
-		weaponIK = 0;
-		preload = false;
-		Walkcycles = 1;
-		forceAim = 0;
-		adjstance = "m";
-		useIdles = 0;
-		weaponObstructed = 0;
-	};
-	
-	//class ManActions : Default {};
-	
-	/*
-	class Default : Default 
+	access = 0;
+	enableDirectControl=0;
+	skeletonName="Dog_F";
+	collisionVertexPattern[]=
 	{
-		//Bonus
-		weaponLowered = 0;
-		adjstance = "m";
-		//End Of Bonus
-		access = ReadOnlyVerified;
-		file = "";
-		looped = true;
-		speed = 0.5;
-		disableWeapons = true;
-		enableOptics = true;
-		disableWeaponsLong = false;
-		canreload = 1;
-		showWeaponAim = true;
-		enableMissile = false;
-		enableBinocular = false;
-		showItemInHand = false;
-		showItemInRightHand = false;
-		showHandGun = false;
-		onLandBeg = false;
-		onLandEnd = false;
-		onLadder = false;
-		canPullTrigger = true;
-		duty = -0.51;
-		predictSpeedCoef = 1;
-		visibleSize = 1;
-		aimPrecision = 1;
-		relSpeedMin = 1.0;
-		relSpeedMax = 1.0;
-		soundEnabled = true;
-		soundOverride = "";
-		soundEdge[] = {0.5, 1};
-		soundEdge1 = 0.5;
-		soundEdge2 = 1;
-		terminal = false;
-		limitGunMovement = true;
-		variantsPlayer[] = {};
-		variantsAI[] = {};
-		equivalentTo = "";
-		connectAs = "";
-		variantAfter[] = {5, 10, 20};
-		connectFrom[] = {};
-		connectTo[] = {};
-		interpolateWith[] = {};
-		interpolateTo[] = {};
-		interpolateFrom[] = {};
-		aiming = "aimingNo";
-		leaning = "aimingNo";
-		untiltWeapon = "aimingNo";
-		aimingBody = "aimingUpDefault";
-		legs = "legsNo";
-		head = "headDefault";
-		leaningFactorBeg = 0;
-		leaningFactorEnd = 0;
-		leaningFactorZeroPoint = -1;
-		leaningCorrectionAngleBeg = 0;
-		leaningCorrectionAngleEnd = 0;
-		interpolationSpeed = 6;
-		interpolationRestart = false;
-		hasCollShapeSafe = false;
-		collisionShapeSafe = "";
-		boundingSphere = true;
-		enableDirectControl = 1;
-		enableAutoActions = false;
-		leftHandIKBeg = false;
-		leftHandIKEnd = false;
-		leftHandIKCurve = 0;
-		rightHandIKCurve = 0;
-		rightHandIKBeg = false;
-		rightHandIKEnd = false;
-		weaponIK = 0;
-		preload = false;
-		walkcycles = 1;
-		forceAim = 0;
-		showDisposableGun = 0;
-		headBobStrength = 0.5;
-		headBobMode = 1;
-		collisionShape = "A3\animals_f_beta\dog\Dog_CollShape.p3d";
+		"1a",
+		"2a",
+		"3a",
+		"4a",
+		"5a",
+		"6a",
+		"7a",
+		"8a",
+		"9a",
+		"10a",
+		"11a",
+		"12a",
+		"13a",
+		"14a",
+		"15a",
+		"16a",
+		"17a",
+		"18a",
+		"19a",
+		"20a",
+		"21a",
+		"22a",
+		"23a",
+		"24a",
+		"25a",
+		"26a",
+		"27a",
+		"28a",
+		"29a",
+		"30a",
+		"31a",
+		"32a",
+		"33a",
+		"34a"
 	};
-	*/
-	
-	class StandBase : Default {
-		aiming = "aimingDefault";
-		disableWeapons = true;
-		leaningFactorBeg = 1;
-		leaningFactorEnd = 1;
+	collisionGeomCompPattern[]={1};
+	class Default: Default
+	{
+		access=1;
+		file="";
+		looped=1;
+		speed=0.5;
+		disableWeapons=1;
+		enableOptics=1;
+		disableWeaponsLong=0;
+		canreload=1;
+		showWeaponAim=1;
+		enableMissile=0;
+		enableBinocular=0;
+		showItemInHand=0;
+		showItemInRightHand=0;
+		showHandGun=0;
+		onLandBeg=0;
+		onLandEnd=0;
+		onLadder=0;
+		canPullTrigger=1;
+		duty=-0.50999999;
+		predictSpeedCoef=1;
+		visibleSize=1;
+		aimPrecision=1;
+		relSpeedMin=1;
+		relSpeedMax=1;
+		soundEnabled=1;
+		soundOverride="";
+		soundEdge[]={0.5,1};
+		soundEdge1=0.5;
+		soundEdge2=1;
+		terminal=0;
+		limitGunMovement=1;
+		variantsPlayer[]={};
+		variantsAI[]={};
+		equivalentTo="";
+		connectAs="";
+		variantAfter[]={5,10,20};
+		connectFrom[]={};
+		connectTo[]={};
+		interpolateWith[]={};
+		interpolateTo[]={};
+		interpolateFrom[]={};
+		aiming="aimingNo";
+		leaning="aimingNo";
+		untiltWeapon="aimingNo";
+		aimingBody="aimingUpDefault";
+		legs="legsNo";
+		head="headDefault";
+		leaningFactorBeg=0;
+		leaningFactorEnd=0;
+		leaningFactorZeroPoint=-1;
+		leaningCorrectionAngleBeg=0;
+		leaningCorrectionAngleEnd=0;
+		interpolationSpeed=6;
+		interpolationRestart=0;
+		hasCollShapeSafe=0;
+		collisionShapeSafe="";
+		boundingSphere=1;
+		enableDirectControl=1;
+		enableAutoActions=0;
+		leftHandIKBeg=0;
+		leftHandIKEnd=0;
+		leftHandIKCurve=0;
+		rightHandIKCurve=0;
+		rightHandIKBeg=0;
+		rightHandIKEnd=0;
+		weaponIK=0;
+		preload=0;
+		walkcycles=1;
+		forceAim=0;
+		//ragdoll = 1;
+		showDisposableGun=0;
+		headBobStrength=0.5;
+		headBobMode=1;
+		collisionShape="A3\animals_f_beta\dog\Dog_CollShape.p3d";
 	};
-	
-	class DefaultDie : Default {
-		aiming = "aimingNo";
-		legs = "legsNo";
-		head = "headNo";
-		disableWeapons = true;
-		interpolationRestart = true;
-		soundOverride = "fallbody";
-		soundEdge1 = 0.45;
-		soundEdge2 = 0.45;
+	class StandBase: Default
+	{
+		aiming="aimingDefault";
+		disableWeapons=1;
+		leaningFactorBeg=1;
+		leaningFactorEnd=1;
 	};
-	
-	class States {
-		class Dog_Stop : StandBase {
-			enableDirectControl = 1;
-			actions = "FinActions";
-			duty = -1;
-			//file = "\A3\animals_f_beta\Dog\data\Anim\dogIdle9";
-			file = "\A3\animals_f_beta\Dog\Data\anim\dogIdle1.rtm";
-			showWeaponAim = false;
-			disableWeapons = true;
-			disableWeaponsLong = true;
-			//variantsAI[] = {"Dog_Idle_01", 0.04, "Dog_Bark", 0.04, "Dog_Growl", 0.04, "Dog_Walk", 0.1, "Dog_Sprint", 0.1};
-			//variantsAI[] = {"Dog_Idle_01", 0.04};
-			//variantsAI[] = {};
-			//variantsAI[] = {};
-			//variantsPlayer[] = {};
-			//variantAfter[] = {3, 6, 9};
-			//speed = 1e+010; //-3
-			speed = -3;
-			relSpeedMin = 0.7;
-			relSpeedMax = 1.1;
-			looped = true;
-			soundEnabled = false;
-			
-			//connectTo[] = {"Dog_Walk", 0.2, "Dog_Sprint", 0.02};
-			//interpolateTo[] = {"Dog_Idle_01", 0.05, "Dog_Bark", 0.05, "Dog_Growl", 0.05, "Dog_Walk", 0.2, "Dog_Sprint", 0.02, "Dog_die", 0.2};
-			
-			connectTo[] = {"Dog_Walk", 0.1, "Dog_Run", 0.1, "Dog_Sprint", 0.1};
-			interpolateTo[] = {"Dog_Die", 0.1, "Dog_Sprint", 0.1, "Dog_Run", 0.1, "Dog_Walk", 0.1};
-			
-			enableBinocular = true;
-			leftHandIKBeg = true;
-			leftHandIKEnd = true;
-			rightHandIKBeg = true;
-			rightHandIKEnd = true;
-			interpolationSpeed = 1;
-			preload = true;
-		};
-		
-		class Dog_TurnL : Dog_Stop {
-			file = "\A3\animals_f_beta\Dog\data\anim\dogTurnL.rtm";
-			connectTo[] = {"Dog_Stop", 0.1};
-			interpolateTo[] = {"Dog_Stop", 0.1};
-			speed = 1;
-		};
-		
-		class Dog_TurnR : Dog_TurnL {
-			file = "\A3\animals_f_beta\Dog\data\anim\dogTurnR.rtm";
-		};
-		
-		class Dog_Bark : Dog_Stop {
-			file = "\A3\animals_f_beta\Dog\Data\anim\dogBarkingLoop.rtm";
-			speed = -3;
-			variantsAI[] = {};
-			variantAfter[] = {3, 6, 9};
-			interpolateTo[] = {"Dog_Stop", 0.1, "Dog_Die", 0.2};
-			looped = true;
-		};
-		
-		class Dog_Growl : Dog_Stop {
-			file = "\A3\animals_f_beta\Dog\Data\anim\dogGrowlingLoop.rtm";
-			speed = -3;
-			variantsAI[] = {};
-			variantAfter[] = {3, 6, 9};
-			equivalentTo = "Dog_Growl";
-			interpolateTo[] = {"Dog_Stop", 0.1, "Dog_Die", 0.2};
-			looped = true;
-		};
-		
-		class Dog_Sprint : Dog_Stop {
-			actions = "FinSprint";
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogRun.rtm";
-			duty = 0.5;
-			speed = -1.47;
-			connectTo[] = {};
-			interpolateTo[] = {"Dog_Run", 0.02, "Dog_Stop", 0.02, "Dog_Sprint", 0.02, "Dog_Walk", 0.02, "Dog_Die_sprint", 0.02};
-			variantsAI[] = {};
-		};
-		
-		class Dog_Run : Dog_Stop {
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogTrot";
-			duty = -0.5;
-			speed = -1.63;
-			connectTo[] = {};
-			interpolateTo[] = {"Dog_Run", 0.02, "Dog_Stop", 0.02, "Dog_Sprint", 0.02, "Dog_Walk", 0.02, "Dog_Die_run", 0.02};
-			variantsAI[] = {};
-		};
-		
-		class Dog_Walk : Dog_Stop {
-			actions = "FinRun";
-			duty = -0.7;
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogWalk";
-			speed = -2.03;
-			variantAfter[] = {3, 10, 20};
-			connectTo[] = {};
-			interpolateTo[] = {"Dog_Run", 0.02, "Dog_Stop", 0.02, "Dog_Sprint", 0.02, "Dog_Walk", 0.02, "Dog_Die", 0.02};
-			variantsAI[] = {};
-		};
-		
-		class Dog_Die : DefaultDie {
-			enableDirectControl = 0;
-			actions = "NoActions";
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogDeath";
-			speed = 1.2;
-			looped = false;
-			variantsPlayer[] = {};
-			variantsAI[] = {};
-			variantAfter[] = {0, 0, 0};
-			interpolateFrom[] = {"Dog_Stop", 0.02, "Dog_Walk", 0.2, "Dog_Sprint", 0.02};
-			terminal = true;
-		};
-
-		class Dog_Die_sprint : Dog_Die {
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogRunDeath.rtm";
-			interpolateFrom[] = {"Dog_Sprint", 0.1};
-			terminal = true;
-		};
-		
-		class Dog_Die_run : Dog_Die {
-			file = "\A3\animals_f_beta\Dog\data\Anim\dogTrotDeath.rtm";
-			interpolateFrom[] = {"Dog_Run", 0.1};
-			terminal = true;
-		};
+	class DefaultDie: Default
+	{
+		aiming="aimingNo";
+		legs="legsNo";
+		head="headNo";
+		disableWeapons=1;
+		interpolationRestart=1;
+		soundOverride="fallbody";
+		soundEdge1=0.44999999;
+		soundEdge2=0.44999999;
 	};
-	
-	class Actions : Actions {
-		class NoActions : NoActions {
-			turnSpeed = 8;
-			limitFast = 5.5;
-			useFastMove = 0;
-			upDegree = 0;
-		};
-		
-		
-		class FinActions : NoActions 
+	class States
+	{
+		class Dog_Idle_Stop: StandBase
 		{
-			Default = "Dog_Stop";
-			Stop = "Dog_Stop";
-			StopRelaxed = "Dog_Stop";
-			//TurnL = "Zombie_Stop";
-			//TurnR = "Zombie_Stop";
-			//TurnLRelaxed = "Zombie_Stop";
-			//TurnRRelaxed = "Zombie_Stop";
-			//JumpOff = "Dog_Stop";
-			WalkF = "Dog_Walk";
-			SlowF = "Dog_Run";
-			FastF = "Dog_Sprint";
-			EvasiveForward = "Dog_Sprint";
-			Die = "Dog_Die";
-			CanNotMove = "";
-			turnSpeed = 8;
-			limitFast = 5.5;
-			useFastMove = 0;
-			upDegree = "ManPosNoWeapon";
+			enableDirectControl=1;
+			actions="FinActions";
+			duty=-1;
+			file="\A3\animals_f_beta\Dog\data\Anim\dogStop";
+			showWeaponAim=0;
+			disableWeapons=1;
+			disableWeaponsLong=1;
+			variantsAI[]=
+			{
+				"Dog_Idle_01",
+				0.039999999,
+				"Dog_Idle_02",
+				0.039999999,
+				"Dog_Idle_03",
+				0.039999999,
+				"Dog_Idle_04",
+				0.039999999,
+				"Dog_Idle_05",
+				0.039999999,
+				"Dog_Idle_06",
+				0.039999999,
+				"Dog_Idle_07",
+				0.039999999,
+				"Dog_Idle_08",
+				0.039999999,
+				"Dog_Idle_09",
+				0.039999999,
+				"Dog_Idle_10",
+				0.039999999,
+				"Dog_Idle_Sit01",
+				0.039999999,
+				"Dog_Idle_Sit02",
+				0.039999999,
+				"Dog_Idle_Sit03",
+				0.039999999,
+				"Dog_Idle_Sit04",
+				0.039999999,
+				"Dog_Idle_Sit05",
+				0.039999999,
+				"Dog_Idle_Sit06",
+				0.039999999,
+				"Dog_Idle_Sit07",
+				0.039999999,
+				"Dog_Idle_Sit08",
+				0.039999999,
+				"Dog_Idle_Bark",
+				0.039999999,
+				"Dog_Idle_Growl",
+				0.039999999,
+				"Dog_Idle_Walk",
+				0.1,
+				"Dog_Idle_Run",
+				0.050000001,
+				"Dog_Idle_Sprint",
+				0.050000001
+			};
+			variantsPlayer[]={};
+			variantAfter[]={3,6,9};
+			speed=1e+010;
+			relSpeedMin=0.69999999;
+			relSpeedMax=1.1;
+			looped=1;
+			soundEnabled=0;
+			connectTo[]=
+			{
+				"Dog_TurnL",
+				0.1,
+				"Dog_TurnR",
+				0.1
+			};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Stop",
+				0.050000001,
+				"Dog_Idle_01",
+				0.050000001,
+				"Dog_Idle_02",
+				0.050000001,
+				"Dog_Idle_03",
+				0.050000001,
+				"Dog_Idle_04",
+				0.050000001,
+				"Dog_Idle_05",
+				0.050000001,
+				"Dog_Idle_06",
+				0.050000001,
+				"Dog_Idle_07",
+				0.050000001,
+				"Dog_Idle_08",
+				0.050000001,
+				"Dog_Idle_09",
+				0.050000001,
+				"Dog_Idle_10",
+				0.050000001,
+				"Dog_Idle_Sit01",
+				0.050000001,
+				"Dog_Idle_Sit02",
+				0.050000001,
+				"Dog_Idle_Sit03",
+				0.050000001,
+				"Dog_Idle_Sit04",
+				0.050000001,
+				"Dog_Idle_Sit05",
+				0.050000001,
+				"Dog_Idle_Sit06",
+				0.050000001,
+				"Dog_Idle_Sit07",
+				0.050000001,
+				"Dog_Idle_Sit08",
+				0.050000001,
+				"Dog_Idle_Bark",
+				0.050000001,
+				"Dog_Idle_Growl",
+				0.050000001,
+				"Dog_Idle_Walk",
+				0.2,
+				"Dog_Idle_Run",
+				0.02,
+				"Dog_Idle_Sprint",
+				0.02,
+				"Dog_Die",
+				0.2,
+				"Dog_Walk",
+				0.5,
+				"Dog_Run",
+				0.5,
+				"Dog_Sprint",
+				0.5,
+				"Dog_Sit",
+				0.5,
+				"Dog_Stop",
+				0.5,
+				"Dog_TurnL",
+				0.1,
+				"Dog_TurnR",
+				0.1
+			};
+			enableBinocular=1;
+			leftHandIKBeg=1;
+			leftHandIKEnd=1;
+			rightHandIKBeg=1;
+			rightHandIKEnd=1;
+			interpolationSpeed=1;
+			preload=1;
 		};
-		
-		//class FinActions : NoActions {
-		//	Stop = "Dog_Stop";
-		//	StopRelaxed = "Dog_Stop";
-		//	TurnL = "Dog_TurnL";
-		//	TurnR = "Dog_TurnR";
-		//	TurnLRelaxed = "Dog_TurnL";
-		//	TurnRRelaxed = "Dog_TurnR";
-		//	Default = "Dog_Stop";
-		//	JumpOff = "Dog_Stop";
-		//	WalkF = "Dog_Walk";
-		//	SlowF = "Dog_Run";
-		//	FastF = "Dog_Sprint";
-		//	EvasiveForward = "Dog_Sprint";
-		//	Down = "Dog_Stop";
-		//	Up = "Dog_Stop";
-		//	PlayerStand = "Dog_Stop";
-		//	PlayerProne = "Dog_Stop";
-		//	PlayerCrouch = "Dog_Stop";
-		//	Crouch = "Dog_Stop";
-		//	Lying = "Dog_Stop";
-		//	Stand = "Dog_Stop";
-		//	Combat = "Dog_Stop";
-		//	CanNotMove = "Dog_Stop";
-		//	Civil = "Dog_Stop";
-		//	CivilLying = "Dog_Stop";
-		//	FireNotPossible = "Dog_Stop";
-		//	Die = "Dog_Die";
-		//	turnSpeed = 8;
-		//	limitFast = 5.5;
-		//	useFastMove = 0;
-		//	upDegree = "ManPosNoWeapon";
-		//};
-		
-		class FinRun : FinActions {
-			Die = "Dog_Die_run";
+		class Dog_TurnL: Dog_Idle_Stop
+		{
+			file="\A3\animals_f_beta\Dog\data\anim\dogTurnL";
+			connectTo[]=
+			{
+				"Dog_Idle_Stop",
+				0.1,
+				"Dog_Stop",
+				0.1
+			};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Stop",
+				0.1,
+				"Dog_Stop",
+				0.1
+			};
+			speed=1;
 		};
-		
-		class FinSprint : FinActions {
-			FastF = "Dog_Sprint";
-			EvasiveForward = "Dog_Sprint";
-			Die = "Dog_Die_sprint";
-			turnSpeed = 8;
-			limitFast = 5.5;
-			useFastMove = 1;
+		class Dog_TurnR: Dog_TurnL
+		{
+			file="\A3\animals_f_beta\Dog\data\anim\dogTurnR";
+		};
+		class Dog_Idling: Dog_Idle_Stop
+		{
+			variantAfter[]={3,6,9};
+			equivalentTo="Dog_Idle_Stop";
+			speed=-3;
+		};
+		class Dog_Idle_01: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle9";
+		};
+		class Dog_Idle_02: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle1";
+		};
+		class Dog_Idle_03: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle2";
+		};
+		class Dog_Idle_04: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle3";
+		};
+		class Dog_Idle_05: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle4";
+		};
+		class Dog_Idle_06: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle5";
+		};
+		class Dog_Idle_07: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle6";
+		};
+		class Dog_Idle_08: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle7";
+		};
+		class Dog_Idle_09: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle8";
+			speed=-4;
+		};
+		class Dog_Idle_10: Dog_Idling
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogIdle9";
+		};
+		class Dog_Idle_Sitting: Dog_Idle_Stop
+		{
+			variantAfter[]={3,6,9};
+			speed=-3;
+			interpolationSpeed=0.5;
+		};
+		class Dog_Idle_Sit01: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle";
+		};
+		class Dog_Idle_Sit02: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle1";
+		};
+		class Dog_Idle_Sit03: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle3";
+		};
+		class Dog_Idle_Sit04: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle3";
+		};
+		class Dog_Idle_Sit05: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle4";
+		};
+		class Dog_Idle_Sit06: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle5";
+		};
+		class Dog_Idle_Sit07: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle6";
+		};
+		class Dog_Idle_Sit08: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle7";
+		};
+		class Dog_Idle_Bark: Dog_Idle_Stop
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogBarkingLoop";
+			speed=-3;
+			variantsAI[]={};
+			variantAfter[]={3,6,9};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Stop",
+				0.1,
+				"Dog_Die",
+				0.2
+			};
+			looped=1;
+			soundOverride = "z_dog_bark_2";
+			soundEnabled = 1;
+			soundEdge[] = {0.25};
+		};
+		class Dog_Idle_Growl: Dog_Idle_Stop
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogGrowlingLoop";
+			speed=-1.5; //-3
+			variantsAI[]={};
+			variantAfter[]={3,6,9};
+			equivalentTo="Dog_Idle_Growl";
+			interpolateTo[]=
+			{
+				"Dog_Idle_Stop",
+				0.1,
+				"Dog_Die",
+				0.2
+			};
+			looped=1;
+		};
+		class Dog_Idle_Sprint: Dog_Idle_Stop
+		{
+			actions="FinSprint";
+			file="\A3\animals_f_beta\Dog\data\Anim\dogRun";
+			duty=0.5;
+			speed=-0.8; //-1.47
+			connectTo[]={};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Idle_Sprint",
+				0.02,
+				"Dog_Idle_Walk",
+				0.02,
+				"Dog_Die_Sprint",
+				0.02
+			};
+			variantsAI[]={};
+		};
+		class Dog_Idle_Run: Dog_Idle_Stop
+		{
+			file="\A3\animals_f_beta\Dog\data\Anim\dogTrot";
+			duty=-0.5;
+			speed=1.15; //-1.63;
+			connectTo[]={};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Idle_Sprint",
+				0.02,
+				"Dog_Idle_Walk",
+				0.02,
+				"Dog_Die_Run",
+				0.02
+			};
+			variantsAI[]={};
+		};
+		class Dog_Idle_Walk: Dog_Idle_Stop
+		{
+			actions="FinRun";
+			duty=-0.69999999;
+			file="\A3\animals_f_beta\Dog\data\Anim\dogWalk";
+			speed=-2.03;
+			variantAfter[]={3,10,20};
+			connectTo[]={};
+			interpolateTo[]=
+			{
+				"Dog_Idle_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Idle_Sprint",
+				0.02,
+				"Dog_Idle_Walk",
+				0.02,
+				"Dog_Die",
+				0.02
+			};
+			variantsAI[]={};
+		};
+		class Dog_Die: DefaultDie
+		{
+			enableDirectControl=0;
+			actions="NoActions";
+			file="\A3\animals_f_beta\Dog\data\Anim\dogDeath";
+			speed=1.2;
+			looped=0;
+			variantsPlayer[]={};
+			variantsAI[]={};
+			variantAfter[]={0,0,0};
+			terminal=1;
+		};
+		class Dog_Die_Sit: Dog_Die
+		{
+			file="\A3\animals_f_beta\Dog\data\Anim\dogSit2Death";
+			terminal=1;
+		};
+		class Dog_Die_Sprint: Dog_Die
+		{
+			file="\A3\animals_f_beta\Dog\data\Anim\dogRunDeath";
+			terminal=1;
+		};
+		class Dog_Die_Run: Dog_Die
+		{
+			file="\A3\animals_f_beta\Dog\data\Anim\dogTrotDeath";
+			terminal=1;
+		};
+		class Dog_Stop: Dog_Idle_Stop
+		{
+			actions="FinForceStop";
+			connectTo[]=
+			{
+				"Dog_TurnL",
+				0.1,
+				"Dog_TurnR",
+				0.1
+			};
+			interpolateTo[]=
+			{
+				"Dog_Idle_01",
+				0.050000001,
+				"Dog_Idle_02",
+				0.050000001,
+				"Dog_Idle_03",
+				0.050000001,
+				"Dog_Idle_04",
+				0.050000001,
+				"Dog_Idle_05",
+				0.050000001,
+				"Dog_Idle_06",
+				0.050000001,
+				"Dog_Idle_07",
+				0.050000001,
+				"Dog_Idle_08",
+				0.050000001,
+				"Dog_Idle_09",
+				0.050000001,
+				"Dog_Idle_10",
+				0.050000001,
+				"Dog_Idle_Stop",
+				0.050000001,
+				"Dog_Die",
+				0.2,
+				"Dog_Walk",
+				0.5,
+				"Dog_Run",
+				0.5,
+				"Dog_Sprint",
+				0.5,
+				"Dog_Sit",
+				0.5,
+				"Dog_TurnL",
+				0.1,
+				"Dog_TurnR",
+				0.1
+			};
+			variantsAI[]=
+			{
+				"Dog_Idle_01",
+				0.039999999,
+				"Dog_Idle_02",
+				0.039999999,
+				"Dog_Idle_03",
+				0.039999999,
+				"Dog_Idle_04",
+				0.039999999,
+				"Dog_Idle_05",
+				0.039999999,
+				"Dog_Idle_06",
+				0.039999999,
+				"Dog_Idle_07",
+				0.039999999,
+				"Dog_Idle_08",
+				0.039999999,
+				"Dog_Idle_09",
+				0.039999999,
+				"Dog_Idle_10",
+				0.039999999
+			};
+		};
+		class Dog_Sit: Dog_Idle_Sitting
+		{
+			file="\A3\animals_f_beta\Dog\Data\anim\dogSit2Idle";
+			actions="FinForceSit";
+			variantsAI[]={};
+			interpolateTo[]=
+			{
+				"Dog_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Sprint",
+				0.02,
+				"Dog_Walk",
+				0.02,
+				"Dog_Die_Sit",
+				0.02,
+				"Dog_Sit",
+				0.02,
+				"Dog_Stop",
+				0.02
+			};
+		};
+		class Dog_Walk: Dog_Idle_Walk
+		{
+			actions="FinForceWalk";
+			interpolateTo[]=
+			{
+				"Dog_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Sprint",
+				0.02,
+				"Dog_Walk",
+				0.02,
+				"Dog_Die",
+				0.02,
+				"Dog_Sit",
+				0.02,
+				"Dog_Stop",
+				0.02
+			};
+		};
+		class Dog_Run: Dog_Idle_Run
+		{
+			actions="FinForceRun";
+			interpolateTo[]=
+			{
+				"Dog_Run",
+				0.02,
+				"Dog_Idle_Stop",
+				0.02,
+				"Dog_Sprint",
+				0.02,
+				"Dog_Walk",
+				0.02,
+				"Dog_Stop",
+				0.02,
+				"Dog_Die_Run",
+				0.02
+			};
+		};
+		class Dog_Sprint: Dog_Idle_Sprint
+		{
+			actions="FinForceSprint";
+			interpolateTo[]=
+			{
+				"Dog_Run",
+				0.02,
+				"Dog_Sprint",
+				0.02,
+				"Dog_Stop",
+				0.02,
+				"Dog_Die_Sprint",
+				0.02
+			};
 		};
 	};
-	
-	class Interpolations {};
-	transitionsInterpolated[] = {};
-	transitionsSimple[] = {};
-	transitionsDisabled[] = {};
-	
-	class BlendAnims : BlendAnims {
-		aimingDefault[] = {"head", 1, "head", 1, "head", 1};
-		untiltWeaponDefault[] = {};
-		legsDefault[] = {};
-		headDefault[] = {};
-		aimingNo[] = {};
-		legsNo[] = {};
-		headNo[] = {};
-		aimingUpDefault[] = {};
+	class Actions: Actions
+	{
+		class NoActions: NoActions
+		{
+			turnSpeed=8;
+			limitFast=5.5;
+			useFastMove=0;
+			upDegree=0;
+		};
+		class FinActions: NoActions
+		{
+			Stop="Dog_Idle_Stop";
+			StopRelaxed="Dog_Idle_Stop";
+			TurnL="Dog_TurnL";
+			TurnR="Dog_TurnR";
+			TurnLRelaxed="Dog_TurnL";
+			TurnRRelaxed="Dog_TurnR";
+			Default="Dog_Idling";
+			JumpOff="Dog_Idle_Stop";
+			WalkF="Dog_Idle_Walk";
+			SlowF="Dog_Idle_Run";
+			FastF="Dog_Idle_Sprint";
+			EvasiveForward="Dog_Idle_Sprint";
+			Down="Dog_Idle_Stop";
+			Up="Dog_Idle_Stop";
+			PlayerStand="Dog_Idle_Stop";
+			PlayerProne="Dog_Idle_Stop";
+			PlayerCrouch="Dog_Idle_Sitting";
+			Crouch="Dog_Idle_Sitting";
+			Lying="Dog_Idle_Stop";
+			Stand="Dog_Idle_Stop";
+			Combat="Dog_Idle_Stop";
+			CanNotMove="Dog_Idle_Stop";
+			Civil="Dog_Idle_Stop";
+			CivilLying="Dog_Idle_Stop";
+			FireNotPossible="Dog_Idle_Stop";
+			Die="Dog_Die";
+			turnSpeed=8;
+			limitFast=5.5;
+			useFastMove=0;
+			upDegree="ManPosNoWeapon";
+		};
+		class FinRun: FinActions
+		{
+			Die="Dog_Die_Run";
+		};
+		class FinSprint: FinActions
+		{
+			FastF="Dog_Idle_Sprint";
+			EvasiveForward="Dog_Idle_Sprint";
+			Die="Dog_Die_Sprint";
+			turnSpeed=2;
+			limitFast=5.5;
+			useFastMove=1;
+		};
+		class FinSit: FinActions
+		{
+			Stop="Dog_Idle_Sitting";
+			StopRelaxed="Dog_Idle_Sitting";
+			Die="Dog_Die_Sit";
+		};
+		class FinForceStop: FinActions
+		{
+			CivilLying="Dog_Stop";
+		};
+		class FinForceSit: FinSit
+		{
+			CivilLying="Dog_Sit";
+		};
+		class FinForceWalk: FinActions
+		{
+			CivilLying="Dog_Walk";
+		};
+		class FinForceRun: FinRun
+		{
+			CivilLying="Dog_Run";
+		};
+		class FinForceSprint: FinSprint
+		{
+			CivilLying="Dog_Sprint";
+		};
 	};
+	class Interpolations
+	{
+	};
+	transitionsInterpolated[]={};
+	transitionsSimple[]={};
+	transitionsDisabled[]={};
+	class BlendAnims: BlendAnims
+	{
+		aimingDefault[]=
+		{
+			"head",
+			1,
+			"head",
+			1,
+			"head",
+			1
+		};
+		untiltWeaponDefault[]={};
+		legsDefault[]={};
+		headDefault[]={};
+		aimingNo[]={};
+		legsNo[]={};
+		headNo[]={};
+		aimingUpDefault[]={};
+	};	
 };

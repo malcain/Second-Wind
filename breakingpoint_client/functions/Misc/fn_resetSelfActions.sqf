@@ -82,6 +82,7 @@
 	s_player_dog_stay = -1;
 	s_player_dog_track = -1;
 	s_player_dog_speak = -1;
+	s_player_dog_setName = -1;
 	s_player_dog_warn = -1;
 	s_player_dog_follow = -1;
 	s_player_dog_move =	-1;
@@ -89,6 +90,7 @@
 	s_player_dog_call = 	-1;
 	s_player_dog_combat = -1;
 	s_player_dog_heal = -1;
+	s_player_dog_getin = -1;
 
 	//Nomad / Survivalist Dog Gear Access
 	s_player_dog_gear = -1;

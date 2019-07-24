@@ -16,10 +16,11 @@ _mapConfig = (missionConfigFile >> "BreakingPoint" >> "CfgSettings" >> "Map");
 if !(isClass _mapConfig) exitWith {false};
 
 //Fetch Bounds, Min XY, Max XY and Target XY
-_minBounds = getArray (_mapConfig >> "BoundryMin");
-if (_minBounds isEqualTo []) exitWith {false};
 _maxBounds = getArray (_mapConfig >> "BoundryMax");
 if (_maxBounds isEqualTo []) exitWith {false};
+_minBounds = [0,0];
+//_minBounds = getArray (_mapConfig >> "BoundryMin");
+//if (_minBounds isEqualTo []) exitWith {false};
 
 _minBounds params ["_minX","_minY"];
 _maxBounds params ["_maxX","_maxY"];

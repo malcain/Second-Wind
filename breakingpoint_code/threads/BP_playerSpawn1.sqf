@@ -34,8 +34,8 @@ waitUntil
 		
 		//Update hunter's speed
 		_class = player getVariable ["class",0];
+		_factionLevel = player call BP_fnc_getFactionLevel;
 		if (_class == 3) then {
-			_factionLevel = player call BP_fnc_getFactionLevel;
 			_speedcoef = getAnimSpeedCoef player;
 			if (_factionLevel > 2 && {_speedcoef <= 1}) then {
 				if (_factionLevel > 3) then {
@@ -45,7 +45,54 @@ waitUntil
 				};
 			};
 		};
+
+		if (!isNil "BP_RadioChannels" && {_factionLevel > 0}) then {
+				switch (_class) do
+			{
+				case 1: { //Ranger
+					((BP_RadioChannels select 0)+5) enableChannel [true, false];
+					((BP_RadioChannels select 2)+5) enableChannel [false, false];
+					((BP_RadioChannels select 3)+5) enableChannel [false, false];
+				};
+				case 2: { //Outlaw
+					((BP_RadioChannels select 1)+5) enableChannel [true, false];
+					((BP_RadioChannels select 4)+5) enableChannel [false, false];
+				};
+				case 4: { //Nomad
+					((BP_RadioChannels select 0)+5) enableChannel [false, false];
+					((BP_RadioChannels select 2)+5) enableChannel [true, false];
+					((BP_RadioChannels select 3)+5) enableChannel [false, false];
+				};
+				case 5: { //Survivalist
+					((BP_RadioChannels select 0)+5) enableChannel [false, false];
+					((BP_RadioChannels select 2)+5) enableChannel [false, false];
+					((BP_RadioChannels select 3)+5) enableChannel [true, false];
+				};
+				case 8: { //Scavenger
+					((BP_RadioChannels select 1)+5) enableChannel [false, false];
+					((BP_RadioChannels select 4)+5) enableChannel [true, false];
+				};
+			};
+		};
 	};
+	
+	_position = getPosATL player;
+	BP_NearbyLootBox = _position nearEntities ["BP_LootBox",275];
+	BP_NearbyLootBox = BP_NearbyLootBox + (_position nearObjects ["GroundWeaponHolder_Scripted",275]);
+	
+	BP_NearbyLootNum = {
+		_distanceTo = player distance _x;
+		if (isObjectHidden _x) then {
+			if (_distanceTo < 65) then {
+				_x hideobject false;
+			};
+		} else {
+			if (_distanceTo >= 65 && {[_x] call BP_fnc_isInsideBuilding}) then {
+				_x hideobject true;
+			};
+		};
+		true;
+	} count BP_NearbyLootBox;
 
 	//Update Group Members
 	BP_Group = call BP_fnc_groupGetMembers;

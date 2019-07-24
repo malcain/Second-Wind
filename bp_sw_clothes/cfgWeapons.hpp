@@ -60,3 +60,47 @@ class cfgWeapons {
 		};
 	};
 };
+	class CfgGlasses
+{
+	class None;
+	class BP_Facewear: None
+	{
+		identityTypes[]=
+		{
+			"NoGlasses",
+			0,
+			"G_NATO_default",
+			0,
+			"G_NATO_casual",
+			0,
+			"G_NATO_pilot",
+			0,
+			"G_NATO_recon",
+			0,
+			"G_NATO_SF",
+			0,
+			"G_NATO_sniper",
+			0,
+			"G_NATO_diver",
+			0,
+			"G_IRAN_default",
+			0,
+			"G_IRAN_diver",
+			0,
+			"G_GUERIL_default",
+			0,
+			"G_HAF_default",
+			0,
+			"G_CIVIL_female",
+			0,
+			"G_CIVIL_male",
+			0
+		};
+	};
+	class TightScarf_Tan: BP_Facewear
+	{
+		displayname="Tight Scarf";
+		model="bp_sw\bp_sw_clothes\Facewear\NeckTight_Tan.p3d";
+		descriptionShort = "Tight Scarf";
+	};
+};

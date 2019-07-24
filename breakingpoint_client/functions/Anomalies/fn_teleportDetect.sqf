@@ -53,7 +53,7 @@ _list_teleport = (position _obj_teleporter) nearEntities ["CAManBase",15];
 				//null=[[_x,_obj_teleporter],"AL_smuggler\teleport_effect.sqf"] remoteExec ["execVM"];
 				[_x,_obj_teleporter] remoteExec ["BP_fnc_teleportHandle",_x];
 			} else {
-				_dest_tele = [getpos _obj_teleporter,300,-1,4,0,0.5,0] call BIS_fnc_findSafePos; 
+				_dest_tele = [getpos _obj_teleporter,50,450,5,0,4,0] call BIS_fnc_findSafePos; 
 				_x setPos _dest_tele;
 				//_x setDammage ((getDammage _x) + (random 0.25));
 			};

@@ -322,6 +322,32 @@ class CfgCloudlets {
 		randomDirectionIntensityVar = 0.02;
 	};
 	
+	//Alarm clock
+	class alarmClock: Default
+	{
+		interval = 0.265;
+		circleRadius = 0;
+		circleVelocity[] = {0,0,0};
+		angle = 0;
+		angleVar = 360;
+		animationName = "";
+		particleType = "Billboard";
+		lifeTime = 0.05;
+		moveVelocity[] = {0,0,0};
+		rotationVelocity = 0;
+		animationSpeed[] = {1000};
+		randomDirectionPeriod = 0.01;
+		randomDirectionIntensity = 1;
+		timerPeriod = 0.05;
+		onTimerScript = "";
+		beforeDestroyScript = "\breakingpoint_client\functions\Events\fn_alarmClock.sqf";
+		lifeTimeVar = 0;
+		positionVar[] = {0,0,0};
+		MoveVelocityVar[] = {0,0,0};
+		rotationVelocityVar = 0;
+		sizeVar = 0;
+	};
+	
 	//Gore
 	class BP_HeadBleed: Default
 	{

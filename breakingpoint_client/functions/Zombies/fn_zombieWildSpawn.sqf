@@ -16,7 +16,7 @@ if (true) exitWith {};
 if (!BP_Zeds) exitWith {};
 if (BP_LocalZeds > BP_ZedMaxLocal) exitWith {};
 if (BP_NearbyZombies > BP_ZedMaxNearby) exitwith {};
-if (BP_SpawnZombies > BP_ZedMaxNearby) exitWith {};
+//if (BP_SpawnZombies > BP_ZedMaxNearby) exitWith {};
 if (BP_RemoteZeds > BP_GlobalZeds) exitWith {};
 if (BP_GlobalZeds > BP_ZedMaxGlobal) exitWith {};
 

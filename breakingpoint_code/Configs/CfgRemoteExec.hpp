@@ -30,6 +30,7 @@ class CfgRemoteExec
 		// Login / Setup
 		class BPServer_fnc_checkLogin { allowedTargets=2; };		//BP_Login
 		class BPServer_fnc_playerSetup { allowedTargets=2; };		//BP_PlayerSetup
+		class BPServer_fnc_factionGear { allowedTargets=2; };		//BP_factionGear
 		
 		// Death / Respawn
 		class BPServer_fnc_playerDeath { allowedTargets=2; };		//BP_Death

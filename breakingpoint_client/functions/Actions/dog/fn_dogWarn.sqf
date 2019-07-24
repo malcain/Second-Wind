@@ -32,7 +32,7 @@ _warn = {
 				[_dog,"dog_growl",2,false] call BP_fnc_objSpeak;
 			};
 		};
-		sleep 2;
+		sleep 4;
 	};
 };
 

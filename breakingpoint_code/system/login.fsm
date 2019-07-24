@@ -17,7 +17,7 @@ item12[] = {"Display_Ready",4,218,-175.000000,1300.000000,-75.000000,1350.000000
 item13[] = {"Preload_Display",2,250,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
 item14[] = {"Display_Preloade",4,218,-175.000000,1400.000000,-75.000000,1450.000000,0.000000,"Display" \n "Preloaded"};
 item15[] = {"Initialize",2,250,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Initialize"};
-item16[] = {"Finish",1,250,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
+item16[] = {"Finish",1,4346,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
 item17[] = {"True",8,218,-175.000000,1675.000000,-75.000000,1725.000000,0.000000,"True"};
 item18[] = {"Initialized",4,218,-175.000000,-25.000000,-75.000000,25.000000,0.000000,"Initialized"};
 item19[] = {"Preloaded",4,218,-175.000000,1200.000000,-75.000000,1250.000000,0.000000,"Preloaded"};
@@ -269,8 +269,8 @@ link119[] = {104,105};
 link120[] = {105,106};
 link121[] = {106,25};
 link122[] = {96,107};
-globals[] = {0.000000,0,0,0,0,640,480,1,251,6316128,1,-929.068542,632.969116,1407.632813,82.449203,1042,884,1};
-window[] = {2,-1,-1,-32000,-32000,925,26,1607,26,3,1060};
+globals[] = {0.000000,0,0,0,0,640,480,1,251,6316128,1,-654.671692,358.562866,1916.377319,1055.127930,1040,884,1};
+window[] = {2,-1,-1,-32000,-32000,1081,182,1763,182,3,1058};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -731,9 +731,32 @@ class FSM
                          "	setViewDistance 300;" \n
                          "	player setVariable [""lastFeed"",diag_tickTime];" \n
                          "} else {" \n
-                         "	setViewDistance -1;" \n
+                         "	//setViewDistance -1;" \n
                          "	//[""Breaking Point"",_town,""Day"" + str(_days)] spawn BIS_fnc_infoText;" \n
                          "	[_survival] spawn BP_fnc_loginUI;" \n
+                         "};" \n
+                         "" \n
+                         "if (!isNil ""BP_selectClass"") then {" \n
+                         "" \n
+                         "	[player,_class] call BP_fnc_factionGear;" \n
+                         "" \n
+                         "	if (_class == 4) then {" \n
+                         "	_dogPos = player modelToWorld [-2,1,0];" \n
+                         "	_type = selectRandom [""BP_Dog_1"",""BP_Dog_2"",""BP_Dog_3"",""BP_Dog_5"",""BP_Dog_6"",""BP_Dog_7""];" \n
+                         "	_dog = [_type,player,_dogPos] call BP_fnc_spawnDog;" \n
+                         "	_dog setVariable [""CharacterID"",BP_characterID,true];" \n
+                         "	_dogID = player getVariable ""dogID"";" \n
+                         "	_dogID setFSMVariable [""_combat"", 0];" \n
+                         "	_dogID setFSMVariable [""_hunger"", 0];" \n
+                         "	_dogID setFSMVariable [""_thirst"", 0];" \n
+                         "	_dogID setFSMVariable [""_blood"", 8000];" \n
+                         "	_dogID setFSMVariable [""_zombieKills"", 0];" \n
+                         "	_dogID setFSMVariable [""_playerKills"", 0];" \n
+                         "" \n
+                         "	_dog setVariable [""created"",true];" \n
+                         "	_dog setName [""Dog"",""Dog"",""""];" \n
+                         "	_dog setVariable [""bodyName"",""Dog"",true];" \n
+                         "	};" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -1616,7 +1639,7 @@ class FSM
                         itemno = 90;
                         init = /*%FSM<STATEINIT""">*/"_data = [(netID player),(netID _body)];" \n
                          "" \n
-                         "if (_isNew or _randomSpot) then" \n
+                         "if (_isNew or _randomSpot or !isNil ""BP_selectClass"") then" \n
                          "{" \n
                          "	_spawnLocation = -1;	" \n
                          "	//if (BP_FactionStrongholds and BP_Strongholds == 1) then" \n

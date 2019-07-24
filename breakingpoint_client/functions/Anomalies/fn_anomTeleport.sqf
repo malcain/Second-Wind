@@ -7,12 +7,13 @@
 	by Malcain
 */
 
-params ["_unit","_pozitie"];
+params ["_unit","_pos"];
 
 waitUntil {isNil{player getVariable "tele"}};
 
 player setVariable ["tele",true];
-
+_height = 2;
+if (random 100 < 20) then {_height = 7 + random 550};
 //remoteExec ["BP_fnc_tp_effect",_unit];
 call BP_fnc_teleportEffect;
 
@@ -23,7 +24,7 @@ _sound_in = ["halu_1","halu_2","halu_3","halu_4","halu_5","halu_6","halu_7","hal
 playsound _sound_in;
 //[_sound_in] remoteExec ["playsound",_unit];
 sleep 0.5;
-_unit setPos [_pozitie select 0,_pozitie select 1,2];
-//[_unit,[_pozitie select 0,_pozitie select 1,2]] remoteExec ["setPos",_unit];
+_unit setPos [_pos select 0,_pos select 1,_height];
+//[_unit,[_pos select 0,_pos select 1,2]] remoteExec ["setPos",_unit];
 sleep (4 + random 3);
 player setVariable ["tele",nil];

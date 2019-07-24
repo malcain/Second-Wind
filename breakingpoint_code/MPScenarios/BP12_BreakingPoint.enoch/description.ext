@@ -13,13 +13,14 @@ showGroupIndicator = 0;
 disableRandomization[] = {"All"};
 joinUnassigned = 0;
 enableDebugConsole = 1;
+//enableDebugConsole[] = {""};
 allowFunctionsLog = 0;
 author = "Malcain";
 dev = "Malcain";
 onLoadName = "Breaking Point";
 respawn = "BASE";
 respawnTemplates[] = {"BP_Base","Counter"};
-respawndelay = 40;
+respawndelay = 45;
 respawnDialog = 0;
 onLoadMission= "";
 OnLoadIntro = "Welcome to BP:SecondWind!";
@@ -27,13 +28,16 @@ OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
 skipLobby = 1;
+//unsafeCVL = 1;
 disableChannels[]=
 {
+	{0,true,true},	// Global
 	{1,true,true},	// Side
 	{2,true,true},	// Command
 	{3,true,true},	// Group
 	{4,false,false},	// Vehicle
 	{5,false,false},	// Direct
+	{7,false,true},	// Custom
 	{7,false,true},	// Custom
 	{8,false,true},	// Custom
 	{9,false,true},	// Custom
@@ -55,6 +59,12 @@ class BreakingPoint
 {
 	class CfgSettings
 	{
+		class Map
+		{
+			BoundryMin[] = {0,0};
+			BoundryMax[] = {12800,12800};
+		};
+		
 		class SpawnPos
 		{
 			//Enable Spawn Selection Screen

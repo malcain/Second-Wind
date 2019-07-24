@@ -25,8 +25,8 @@ if (!_playerDog) exitWith {};
 //Get Health
 _blood = _fsmID getFSMVariable "_blood";
 _type = [_damage,_ammo] call BP_fnc_medicalDamageType;
-_isMinor = (_hit in med_MinorWounds);
-_isHeadHit = (_hit == "head");
+//_isMinor = (_selectionName in med_MinorWounds);
+//_isHeadHit = (_selectionName == "head");
 _selfDamage = (_dog == _source);
 
 //Handle Nil Blood
@@ -65,14 +65,14 @@ if (_ammo != "zombie") then {
 	if (_damage > 0.01) then 
 	{
 		//Headshot
-		if (_isHeadHit) then { _scale = _scale + 375; };
+		//if (_isHeadHit) then { _scale = _scale + 375; };
 		//Damage Was Caused By Another Player
 		if (isPlayer _source) then 
 		{
 			_scale = _scale + 650;
-			if (_isHeadHit) then { _scale = _scale + 3000; };
+			//if (_isHeadHit) then { _scale = _scale + 3000; };
 			switch (_type) do {
-				case 1: { _scale = _scale + 100; };
+				case 1: { _scale = _scale + 500; };
 				case 2: { _scale = _scale + 100; };
 			};
 

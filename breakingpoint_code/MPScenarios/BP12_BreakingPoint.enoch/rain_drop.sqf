@@ -20,7 +20,7 @@ if (_rain>=0.1) then
 	_rain_drops_eff = "#particlesource" createVehicleLocal position player;  
 	_rain_drops_eff setParticleCircle [20, [0, 0, 0]];   
 	_rain_drops_eff setParticleRandom [0.2,[20,20,0],[0,0,1],13,0.5,[0,0,0,0],1,0];   
-	_rain_drops_eff setParticleParams [["\A3\Data_F_Mark\ParticleEffects\Universal\waterBallonExplode_01",4,0,16,0],"", "Billboard", 1,0.4,[0,0,150],[0,0,0.5],0,18,7.9,0,[0.05,(_anim_factor+0.2)],[[0.5,0.5,0.5,1],[0.5,0.5,0.5,1]],[2],1,0,"","",vehicle player,0,true];    
+	_rain_drops_eff setParticleParams [["\A3\Data_F_Mark\ParticleEffects\Universal\waterBallonExplode_01",4,0,16,0],"", "Billboard", 1,0.4,[0,0,30],[0,0,0.5],0,18,7.9,0,[0.05,(_anim_factor+0.2)],[[0.5,0.5,0.5,1],[0.5,0.5,0.5,1]],[2],1,0,"","",vehicle player,0,true];    
 	_rain_drops_eff setDropInterval _drop_factor;
 
 	waitUntil {sleep 10; rain < 0.1};

@@ -16,8 +16,10 @@ _dogHandle = _array select 1;
 [player,"dog_whistleNon",0,false] call BP_fnc_objSpeak;
 
 //Delay
-sleep 1;
+sleep 0.5;
 
+_dog playMoveNow "Dog_Idle_Bark";
+
+sleep 1;
 //Dog Bark
-_dog playActionNow "GestureBark";
 [_dog,"dog_bark",0,false] call BP_fnc_objSpeak;

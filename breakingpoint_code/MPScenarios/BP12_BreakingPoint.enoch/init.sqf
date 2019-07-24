@@ -86,7 +86,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 		[rainleak50] execvm "AL_Leaks\water_leak.sqf";*/
 		
 if (hasInterface) then {
-[] execVm "nighttime.sqf";
+//[] execVm "nighttime.sqf";
 [] execVM "rain_drop.sqf";
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 };
@@ -175,18 +175,20 @@ null9 = [rad9,30,300,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm
 //Smuggler
 //null22 = ["smugg1",false,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F","BPZombie_RebelImp1","BPZombie_RebelImp2","BPZombie_RebelImp3","BPZombie_GuardianImp1","BPZombie_GuardianImp2","BPZombie_GuardianImp3","BPZombie_SurvivalistImp1","BPZombie_SurvivalistImp2","BPZombie_SurvivalistImp3","BPZombie_RefugeeImp1","BPZombie_RefugeeImp2","BPZombie_RefugeeImp3","BPZombie_HunterImp1","BPZombie_HunterImp2","BPZombie_HunterImp3"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
 //null22 = ["smugg1",true,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] execVM "AL_smuggler\alias_smugg.sqf";
-["smugg1",true,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] call BPServer_fnc_smuggler;
+//["smugg1",true,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] call BPServer_fnc_smuggler;
 
 if (isNil "globViewDist") then
 {
-	globViewDist = 2300;
+	globViewDist = 1450;
 };
-setViewDistance globViewDist;
-setObjectViewDistance 1450;
+//setViewDistance globViewDist;
+//setObjectViewDistance 1450;
+
 if (worldname == "Enoch") then {
 dvdArray = [dvd1,dvd2];
 dvdArray call BP_fnc_dvdCheck;
 };
+
 //Client Init Only
 if (isServer) exitWith {};
 if (!hasInterface) exitWith {};

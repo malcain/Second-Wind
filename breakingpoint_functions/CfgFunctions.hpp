@@ -81,6 +81,7 @@ class CfgFunctions
 			class getFactionOwner {};
 			class checkFactionClothing {};
 			class checkFactionClothing2 {};
+			class factionGear {};
 		};
 		class Medical {
 			file = "\breakingpoint_functions\functions\Medical";

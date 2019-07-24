@@ -129,6 +129,13 @@ class BP_BarrelFuel_Scavenger : BP_BarrelFuel
 	};
 };
 
+/*class BP_BarrelFuel_Contaminated : BP_BarrelFuel 
+{
+	model = "\a3\Props_F_Enoch\Military\Garbage\GarbageBarrel_02_F.p3d";
+	editorPreview = "\A3\EditorPreviews_F_Enoch\Data\CfgVehicles\Land_GarbageBarrel_02_F.jpg";
+	hiddenSelections[] = {"Camo_1"};
+	hiddenSelectionsTextures[] = {"a3\props_f_enoch\military\garbage\data\garbagebarrelc_co.paa"};
+};*/
 
 class BP_Television: BP_HouseObject 
 {

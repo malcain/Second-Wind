@@ -11,7 +11,7 @@ private ["_vehicle","_cursorTarget","_isPlayerChar","_inVehicle","_isWater","_ha
 _vehicle = vehicle player;
 _cursorTarget = cursorTarget;
 _isPlayerChar = (isPlayer _cursorTarget);
-_inVehicle = (_vehicle != player);
+_inVehicle = (!isNull objectParent player);
 _isWater = ((getPosASL player select 2) < -0.5);
 _isStove = (_cursorTarget isKindOf "BP_Stove");
 _isCookable = (inflamed _cursorTarget or _isStove);
@@ -395,7 +395,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	
 
 	//Dog
-	_isDog = (_cursorTarget isKindOf "BP_Dog");
+	_isDog = _cursorTarget isKindOf "BP_Dog";
 
 	//Safe
 	_isSafe = _cursorTarget isKindOf "BP_Safe";
@@ -423,15 +423,6 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	// Dog
-	if (_isDog and _isAlive and _lowBlood and _canDo) then {
-		if (s_player_dog_heal < 0) then {
-			s_player_dog_heal = player addAction ["Dog: Perform Operation", "\breakingpoint_code\medical\surgerykit.sqf",[_cursorTarget], 0, true, true, "", "'ItemSurgeryKit' in assignedItems player"];
-		};
-	} else {
-		player removeAction s_player_dog_heal;
-		s_player_dog_heal = -1;
-	};
-
 	if (_isDog and _ownerID == BP_characterID and _isAlive and _canDo) then
 	{
 		_dogHandle = player getVariable ["dogID", 0];
@@ -444,17 +435,24 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		if (s_player_dog_track < 0) then {
 			s_player_dog_track = player addAction ["Dog: Track Animal",{ _this spawn BP_fnc_dogTrackAnimal; }, [_cursorTarget,_dogHandle], 4, false, true,"",""];
 		};
-		if (s_player_dog_speak < 0) then {
-			s_player_dog_speak = player addAction ["Dog: Speak",{ _this spawn BP_fnc_dogSpeak; }, [_cursorTarget,_dogHandle], 3, false, true,"",""];
+		if (s_player_dog_speak < 0 && {cursorObject == _cursorTarget}) then {
+			s_player_dog_speak = player addAction ["Dog: Speak",{ _this spawn BP_fnc_dogSpeak; }, [_cursorTarget,_dogHandle], 3, true, true,"",""];
+			//player setUserActionText [s_player_dog_speak , "Speak"];
 		};
+		/*if (s_player_dog_setName < 0 && {cursorObject == _cursorTarget}) then {
+			s_player_dog_setName = player addAction ["Dog: Name",{ _this spawn BP_fnc_dogNameSet; }, [_cursorTarget,player], 3, true, true,"",""];
+		};*/
+		if (s_player_dog_heal < 0 and _lowBlood) then {
+			s_player_dog_heal = player addAction ["Dog: Perform Operation", "\breakingpoint_code\medical\surgerykit.sqf",[_cursorTarget], 0, true, true, "", "'ItemSurgeryKit' in assignedItems player"];
+		};
+		/*if (s_player_dog_follow < 0) then {
+			s_player_dog_follow = player addAction ["Dog: Follow",{ _this spawn BP_fnc_dogFollow; },[_cursorTarget,_dogHandle,true], 6, false, true,"",""];
+		};*/
 		//if (s_player_dog_warn < 0) then {
 		//	_warn = _dogHandle getFSMVariable "_watchDog";
 		//	if (_warn) then { _text = "Quiet"; _warn = false; } else { _text = "Alert"; _warn = true; };
 		//	s_player_dog_warn = player addAction [format["%1",_text],{ _this spawn BP_fnc_dogWarn; },[_cursorTarget,_dogHandle, _warn], 2, false, true,"",""];
 		//};
-		if (s_player_dog_follow < 0) then {
-			s_player_dog_follow = player addAction ["Dog: Follow",{ _this spawn BP_fnc_dogFollow; },[_cursorTarget,_dogHandle,true], 6, false, true,"",""];
-		};
 		//Faction Specific Actions
 		/*
 		if (s_player_dog_ranger_alertPlayer < 0) then {
@@ -485,10 +483,14 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 		s_player_dog_track = -1;
 		player removeAction s_player_dog_speak;
 		s_player_dog_speak = -1;
-		player removeAction s_player_dog_warn;
-		s_player_dog_warn = -1;
-		player removeAction s_player_dog_follow;
+		//player removeAction s_player_dog_setName;
+		//s_player_dog_setName = -1;
+		player removeAction s_player_dog_heal;
+		s_player_dog_heal = -1;
+		/*player removeAction s_player_dog_follow;
 		s_player_dog_follow = -1;
+		player removeAction s_player_dog_warn;
+		s_player_dog_warn = -1;*/
 
 		//player removeAction s_player_dog_ranger_alertPlayer;
 		//s_player_dog_ranger_alertPlayer = -1;
@@ -1071,6 +1073,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	s_player_dog_track = -1;
 	player removeAction s_player_dog_speak;
 	s_player_dog_speak = -1;
+	//player removeAction s_player_dog_setName;
+	//s_player_dog_setName = -1;
 	player removeAction s_player_dog_warn;
 	s_player_dog_warn = -1;
 	player removeAction s_player_dog_follow;
@@ -1108,36 +1112,53 @@ if (_inAirVehicle) then
 
 //Dog actions on player self
 _dogHandle = player getVariable ["dogID", 0];
-if (_dogHandle > 0 and !_inVehicle) then
+if (_dogHandle > 0) then
 {
 	_dog = player getVariable ["dog",objNull];
 	_ownerID = _dog getVariable ["CharacterID","0"];
 
 	if (_canDo and alive _dog and _ownerID == BP_characterID) then
 	{
+		if (isNull attachedTo _dog && {_inVehicle or !(fullcrew [_cursortarget,"",true] isEqualTo [])}) then {
+			if (s_player_dog_getin < 0) then {
+				s_player_dog_getin = player addAction ["Dog: Get in", { (_this select 3) setFSMVariable ["_command","getin"]; },_dogHandle, 2, false, true, "", ""];
+			};
+		} else {
+			if (s_player_dog_getin != -1) then {
+				player removeAction s_player_dog_getin;
+				s_player_dog_getin = -1;
+			};
+		};
 		if (s_player_dog_call < 0) then {
 			s_player_dog_call = player addAction ["Dog: Call", { _this spawn BP_fnc_dogFollow; },[_dog,_dogHandle,true], 2, false, true, "", ""];
 		};
-		if (s_player_dog_stay < 0) then {
-			s_player_dog_stay = player addAction ["Dog: Stay",{ _this spawn BP_fnc_dogStay; }, [_dog,_dogHandle], 2, false, true,"",""];
+		if (_dog distance player < 75) then {
+			if (s_player_dog_stay < 0) then {
+				s_player_dog_stay = player addAction ["Dog: Stay",{ _this spawn BP_fnc_dogStay; }, [_dog,_dogHandle], 2, false, true,"",""];
+			};
+		} else {
+			if (s_player_dog_stay != -1) then {
+				player removeAction s_player_dog_stay;
+				s_player_dog_stay = -1;
+			};
 		};
 		if (s_player_dog_combat < 0) then {
 			_combatMode = _dogHandle getFSMVariable "_combat";
 			_nextMode = 0;
 			_text = "Passive";
-			//Aggressive
-			if (_combatMode == 2) then {
-				_text = "Aggressive";
-				_nextMode = 0;
-			};
+			//Passive
+			//if (_combatMode == 2) then {
+			//	_text = "Passive";
+			//	_nextMode = 0;
+			//};
 			//Defensive
 			if (_combatMode == 1) then {
 				_text = "Defensive";
 				_nextMode = 2;
 			};
-			//Defensive
+			//Aggressive
 			if (_combatMode == 0) then {
-				_text = "Passive";
+				_text = "Aggressive";
 				_nextMode = 1;
 			};
 			s_player_dog_combat = player addAction [format["Dog: Combat: %1",_text],{ _this spawn BP_fnc_dogCombatMode; },[_dog,_dogHandle,_nextMode], 2, false, true,"",""];
@@ -1157,4 +1178,6 @@ if (_dogHandle > 0 and !_inVehicle) then
 	s_player_dog_stay = 		-1;
 	player removeAction s_player_dog_combat;
 	s_player_dog_combat = 		-1;
+	player removeAction s_player_dog_getin;
+	s_player_dog_getin = -1;
 };

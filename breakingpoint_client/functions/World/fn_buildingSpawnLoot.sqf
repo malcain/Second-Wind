@@ -116,8 +116,6 @@ for "_i" from 1 to (count _positions) do {
 			_cntWeights = count _weights;
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
-			//if (_index <= count _itemTypes) then
-			//{
 			_itemType = _itemTypes select _index;
 			
 			if (count _itemType > 2) then {
@@ -125,7 +123,6 @@ for "_i" from 1 to (count _positions) do {
 			} else {
 				[_itemType select 0, _itemType select 1, "Default", _iPos] call BP_fnc_spawnLoot;
 			};
-			//};
 			_lootRnd = _lootRnd - 1;
 		} else {
 			//["building_spawnLoot: Error: Building Type: %1 with Position %2 Not Found in BP-CBLBase.",_buildingType,_x] call BP_fnc_debugConsoleFormat;
@@ -136,15 +133,43 @@ for "_i" from 1 to (count _positions) do {
 } count _posShuffle;
 
 //Loop Through Each Special Position if there is one
-_haveSpecialType = isClass (_config >> "specialLootPos");
-if (!_haveSpecialType) exitWith {};
+_lootChanceSpc = getNumber (_config >> "lootChanceSPC");
+if (_lootChanceSpc == 0) exitWith {};
 _rnd = random 1;
-if (_rnd < _lootChance) then {
-	_spcPositions =	[] + getArray (_config >> "specialLootPos");
-	_spcItemTypes =	[] + getArray (_config >> "specialItemType");
+if (_rnd < _lootChanceSpc) then {
+	_spcPositions =	[] + getArray (_config >> "lootPosSpc");
+	_spawnPos = selectRandom _spcPositions;
+	
+	_specialType = getText(_config >> "lootTypeSpc");
+	_configSpecial = configFile >> "CfgBuildingLoot" >> _specialType;
+	_spcItemTypes =	[] + getArray (_configSpecial >> "ItemType");
 
-	_posShuffle = [];
-	for "_i" from 1 to (count _spcPositions) do {
-		_posShuffle pushBack (_spcPositions deleteAt (floor (random (count _spcPositions))));
+	//Calculate Item Position in World Space
+	_iPosSpecial = _building modelToWorld _spawnPos;
+	//Check If Any Loot Boxes are in that world position
+	_nearby = nearestObjects [_iPosSpecial, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
+	
+	if (_nearby isEqualTo []) then
+	{
+		//Find Index Of Building Type
+		_index = BP_CBLBase find _specialType;
+
+		//Check Index Building Type is Valid
+		if (_index != -1) then
+		{
+			_weights = BP_CBLChances select _index;
+			_cntWeights = count _weights;
+			_index = floor(random _cntWeights);
+			_index = _weights select _index;
+			_itemType = _spcItemTypes select _index;
+			
+			if (count _itemType > 2) then {
+				[_itemType select 0, _itemType select 1, _itemType select 2, _iPosSpecial] call BP_fnc_spawnLoot;
+			} else {
+				[_itemType select 0, _itemType select 1, "Default", _iPosSpecial] call BP_fnc_spawnLoot;
+			};
+		} else {
+			//["building_spawnLoot: Error: Building Type: %1 with Position %2 Not Found in BP-CBLBase.",_specialType,_x] call BP_fnc_debugConsoleFormat;
+		};
 	};
 };

@@ -16,9 +16,12 @@ _dryBush = false;
 _state = damage _object;
 
 _woodChopped = player getVariable ["chopWood", 0];
-if (_woodChopped > 3) exitwith {
-cutText ["You're too tired","PLAIN DOWN",2];
-["chopWood",300] call BP_fnc_clearLocalVarDelay;
+if (_woodChopped == 0) then {
+	["chopWood",270] spawn BP_fnc_clearLocalVarDelay;
+};
+
+if (_woodChopped >= 3) exitwith {
+cutText ["You're too tired","PLAIN DOWN",1];
 };
 
 if (_isWoodPile) exitwith {
@@ -55,7 +58,7 @@ if (worldName == "Enoch") then {
 };
 
 if (!_dryWood && {!_dryOrRotten} && {!_dryBush}) exitwith {
-cutText ["Living vegetation, axe is not effective. Find something drier.","PLAIN DOWN",2];
+cutText ["Living vegetation, hatchet is not effective. Find something drier.","PLAIN DOWN",1];
 };
 	
 if (_dryWood) exitwith {
@@ -79,7 +82,7 @@ if (_dryOrRotten) exitwith {
 	_object setdamage (_state + 0.15) min 1;
 	//Check if wood is rotten
 	if ((random 100 < 12) && {_state < 0.7}) then {
-		cutText ["That wood is rotten","PLAIN DOWN",2];
+		cutText ["That wood is rotten","PLAIN DOWN",1];
 		_object setdamage 1;
 	} else {
 		if (_state > 0.7) then {

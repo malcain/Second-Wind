@@ -44835,8 +44835,9 @@ class CfgGesturesZombie {
 		{
 			file = "\breakingpoint_anim\zmb\BPZombie1_Attack1.rtm";
 			speed = 1;
-			soundOverride = "";
-			soundEnabled = 0;
+			soundOverride = "z_attack_0";
+			soundEnabled = 1;
+			soundEdge[] = {0.25};
 			looped = false;
 			duty = 1.0;
 			aimingBody = "aimingUpDefault";
@@ -44860,8 +44861,9 @@ class CfgGesturesZombie {
 		{
 			file = "\breakingpoint_anim\zmb\BPZombie2_Attack1.rtm";
 			speed = 1;
-			soundOverride = "";
-			soundEnabled = 0;
+			soundOverride = "z_attack_2";
+			soundEnabled = 1;
+			soundEdge[] = {0.25};
 			looped = false;
 			duty = 1.0;
 			aimingBody = "aimingUpDefault";

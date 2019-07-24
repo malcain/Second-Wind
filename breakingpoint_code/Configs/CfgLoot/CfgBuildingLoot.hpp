@@ -401,8 +401,8 @@ class CfgBuildingLoot
 			{"BP_DustbinGR","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"BP_DustbinGRSide","object","Trash"},
-			{"BP_LuggageCaseGR","object","Office2"},
-			{"BP_Bag3","object","Office2"},
+			{"BP_LuggageCaseGR","object","Office"},
+			{"BP_Bag3","object","Office"},
 			{"BP_BriefbagOrangeSide","object","Residential"},
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
@@ -505,7 +505,38 @@ class CfgBuildingLoot
 			0.01,	//CANVAS MATERIAL
 			0.01	//NETTING MATERIAL	
 		};		
-	};	
+	};
+	class Office2: Default {
+		minRoaming = 0;
+		maxRoaming = 1;
+		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
+		lootChance = 0.10;
+		lootPos[] = {};
+		itemType[] =	{
+			{"BP_CardboardBox_1","object","Office"},
+            {"BP_CardboardBox_2","object","Supermarket"},
+            {"BP_DustbinBlkSide","object","Generic"},
+            {"BP_DustbinBlk","object","Trash"},
+			{"BP_DustbinGR","object","Trash"},
+			{"BP_Bag1","object","Generic"},
+			{"BP_DustbinGRSide","object","Trash"},
+			{"BP_LuggageCaseGR","object","Office"},
+			{"BP_Bag3","object","Office"},
+			{"BP_BriefbagOrangeSide","object","Residential"}
+		};
+		itemChance[] =	{
+			0.15,	//BP_CardBoardBox1
+			0.01,	//BP_CardBoardBox2
+			0.04,	//BP_CardBoardBox3
+			0.03,	//BP_DustbinBLK
+			0.04,	//BP_DustbinGR
+			0.07,   //BP_Bag1
+			0.07,   //BP_DustbinGRSide
+			0.04,   //BP_LuggageBags
+			0.03,   //BP_Bag3
+			0.07   //BP_BriefbagOrangeSide
+		};		
+	};
 	class Hospital: Default {
 		zombieChance = 0.4;
 		minRoaming = 0;
@@ -926,20 +957,20 @@ class CfgBuildingLoot
 			{"MeleeHammer2","weaponNA"}
 		};
 		itemChance[] =	{
-			0.02,	//BP_CardBoardBox3
-			0.02,	//BP_Trashcan
-			0.02,   //BP_Bag1
-			0.02,   //BP_Bag2
-			0.05,	//BP_Skip1
-			0.05,	//BP_Skip2
-            0.05,   //BP_Skip3
-            0.05,	//BP_Skip4
-            0.05,	//BP_Skip5
-            0.05,	//BP_Dumpster1
-            0.05,	//BP_Dumpster2
-            0.05,	//BP_Dumpster3
-            0.05,	//BP_Dumpster4
-            0.05,	//BP_Dumpster5
+			0.03,	//BP_CardBoardBox3
+			0.03,	//BP_Trashcan
+			0.03,   //BP_Bag1
+			0.03,   //BP_Bag2
+			0.07,	//BP_Skip1
+			0.07,	//BP_Skip2
+            0.07,   //BP_Skip3
+            0.07,	//BP_Skip4
+            0.07,	//BP_Skip5
+            0.07,	//BP_Dumpster1
+            0.07,	//BP_Dumpster2
+            0.07,	//BP_Dumpster3
+            0.07,	//BP_Dumpster4
+            0.07,	//BP_Dumpster5
 			0.01,	//DUCT TAPE
 			0.02,	//WATER TAPE
 			0.02,   //NAILS
@@ -1038,7 +1069,6 @@ class CfgBuildingLoot
 			{"BlueprintCache1","magazine"},
 			{"V_Chestrig_rgr_BP","vest"},
 			{"ItemSurgeryKit","toolbelt"},
-			{"BP_Arrow_Mag","magazine"},
 			{"V_BandollierB_khk_BP","vest"},
 			{"BP_m9","weapon"},
 			{"BP_G17","weapon"},
@@ -1054,34 +1084,22 @@ class CfgBuildingLoot
 			{"BP_R300","weaponA"},
 			{"BP_SVT40","weapon"},
 			{"BP_LeeEnfield2","weaponA"},
-			{"BP_Crossbow","weapon"},
-			{"BP_Crossbow_DigitCamo","weaponA"},
-			{"BP_MP5","weapon"},
-			{"BP_5Rnd_300AAC_Mag","magazine"},
-			{"BP_8Rnd_Slug","magazine"},
-			{"BP_16Rnd_9x21_Mag","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"SmokeShell","magazine"},
-			{"BP_30Rnd_9x21_Mag","magazine"},
-			{"BP_556old_Stanag","magazine"},
-			{"BP_8Rnd_MagBuckshot","magazine"}
+			{"BP_MP5","weapon"}
 		};
 		itemChance[] =	{
-			0.07,	//BP_AmmoBoxNew
-			0.11,   //BP_AmmoCrateOld
-			0.14,   //BP_WeaponCrateOld
+			0.14,	//BP_AmmoBoxNew
+			0.22,   //BP_AmmoCrateOld
+			0.28,   //BP_WeaponCrateOld
 			0.03,   //BP_WeaponCrate_WWII
 			0.01,   //BP_ApexMilBox1
 			0.01,   //BP_ApexMilBox2
-			0.05,   //TRASH
-			0.02,   //GENERIC
+			0.07,   //TRASH
+			0.04,   //GENERIC
 			0.01,	//ACO OPTIC
 			0.01,	//HAMR OPTIC
 			0.01,	//CHEEKPIECE
-			0.02,	//Morphine
-			0.02,	//Field Dressing
+			0.01,	//Morphine
+			0.01,	//Field Dressing
 			0.01,	//KNIFE
 			0.01,	//MAPA
 			0.01,	//RADIO
@@ -1100,7 +1118,6 @@ class CfgBuildingLoot
 			0.01,   //CRATE BLUEPRINT
 			0.01,   //Survival Rig
 			0.01,   //SURGERY KIT
-			0.01,	//Arrow
 			0.01,	//Bandolier Mid
 			0.01,	//M9
 			0.01,	//G17
@@ -1116,19 +1133,7 @@ class CfgBuildingLoot
 			0.01,	//R300
 			0.01,	//SVT40
 			0.01,	//ENFIELD SCOPED
-			0.01,	//Crossbow
-			0.01,	//Crossbow
-			0.01,	//Mp5
-			0.01,	//{"BP_5Rnd_300AAC_Mag","magazine"},
-			0.01,	//{"BP_8Rnd_Slug","magazine"},
-			0.01,	//{"BP_16Rnd_9x21_Mag","magazine"},
-			0.01,	//{"BP_5Rnd_3006_Mag","magazine"},
-			0.01,	//{"BP_10Rnd_303_Mag","magazine"},
-			0.01,	//{"BP_7Rnd_45acp","magazine"},
-			0.01,	//{"SmokeShell","magazine"},
-			0.01,	//{"BP_30Rnd_9x21_Mag","magazine"},
-			0.01,	//{"BP_556old_Stanag","magazine"},
-			0.01	//{"BP_8Rnd_MagBuckshot","vest"}
+			0.01	//Mp5
 		};		
 	};
 	class MilitarySpecial: Default {
@@ -1145,6 +1150,7 @@ class CfgBuildingLoot
 			{"BP_WeaponCrateOld","object","MilitaryGeneralWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
 			{"BP_Bag1","object","Generic"},
+			{"BP_Trashcan","object","Trash"},
 			{"BP_MedicalBox","object","Hospital"},
 			{"BP_M4_300MK","weapon"},
 			{"BP_m9","weapon"},
@@ -1165,8 +1171,6 @@ class CfgBuildingLoot
 			{"BP_AK74U","weapon"},
 			{"BP_SVT40","weaponA"},
 			{"BP_M16OLD","weapon"},
-			//{"BP_SUD_AK108","weaponA"},
-			//{"BP_SUD_AK109","weaponA"},
 			{"optic_Aco","toolbelt"},
 			{"optic_mrco","toolbelt"},
 			{"Binocular","weaponNA"},
@@ -1174,23 +1178,7 @@ class CfgBuildingLoot
 			{"BP_AFG","toolbelt"},
 			{"ItemKnife","magazine"},
 			{"ItemMap","toolbelt"}, 
-		    {"BP_Kitbag_sgg","backpack"},
-			{"BP_Kitbag_cbr","backpack"},
-			{"BP_Kitbag_mcamo","backpack"},
-		    {"BP_FieldPack_blk","backpack"},
-			{"BP_FieldPack_ocamo","backpack"},
-			{"BP_FieldPack_oucamo","backpack"},
-			{"BP_FieldPack_cbr","backpack"},
-			{"BP_Bergen_drt","backpack"},
-			{"BP_Bergen_grs","backpack"},
-			{"BP_Bergen_stn","backpack"},
-			{"BP_Bergen_tre","backpack"},
-			{"BP_Bergen_mcamo","backpack"},
-			{"BP_Bergen_sgg","backpack"},
-			{"BP_Bergen_rgr","backpack"},
-			{"BP_Bergen_blk","backpack"},
             {"ItemSoda1","magazine"},
-			{"ItemCereal1","magazine"},
 			{"ItemCan1","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemPainkiller","magazine"},
@@ -1198,79 +1186,54 @@ class CfgBuildingLoot
 			{"SmokeShellRed","magazine"},
 			{"optic_holosight","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"BlueprintCrate1","magazine"},
-			{"BlueprintCamoNet","magazine"},
 			{"V_HarnessOGL_brn_BP","vest"},
-			{"BP_gemtech9","toolbelt"},
-			{"ItemSurgeryKit","toolbelt"},
-			{"V_BanditBandolier_BP","vest"}
+			{"BP_gemtech9","toolbelt"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_AmmoBoxNew
-			0.10,   //BP_AmmoCrateOld
-			0.15,   //BP_WeaponCrateOld
-			0.15,   //BP_WeaponCrateOld
-			0.04,   //BP_WeaponCrateOld
-			0.05,   //GENERIC
+			0.13,	//BP_AmmoBoxNew
+			0.13,   //BP_AmmoCrateOld
+			0.20,   //BP_WeaponCrateOld
+			0.20,   //BP_WeaponCrateOld
+			0.04,   //WeaponCrate_WWII
+			0.07,   //GENERIC
+			0.07,   //Trashcan
 			0.01,    //BP_MedicalBox
-			0.02,	//M4_300MK
-			0.02,	//M9
-			0.02,	//G18
-			0.02,	//G17
-			0.02,	//1911
-			0.02,	//AK74m	
-			0.02,	//AK107	
-			0.02,	//M4A1
-			0.02,	//M4A1
+			0.01,	//M4_300MK
+			0.01,	//M9
+			0.01,	//G18
+			0.01,	//G17
+			0.01,	//1911
+			0.01,	//AK74m	
+			0.01,	//AK107	
+			0.01,	//M4A1
+			0.01,	//M4A1
 			0.01,	//BENELLI
-			0.02,	//AKM
-			0.02,	//AR10
-			0.02,	//SVT40
+			0.01,	//AKM
+			0.01,	//AR10
+			0.01,	//SVT40
 			0.01,	//1911DES
-			0.02,	//M4300
-			0.02,   //M4300K
-			0.02,	//AKS74U
-			0.02,	//SVT40 PSO
-			0.02,    //AR15
-			//0.02,	//AK108
-			//0.02,	//AK109
-			0.02,	//ACO OPTIC
+			0.01,	//M4300
+			0.01,   //M4300K
+			0.01,	//AKS74U
+			0.01,	//SVT40 PSO
+			0.01,    //AR15
+			0.01,	//ACO OPTIC
 			0.01,	//HAMR OPTIC
 			0.01,	//BINOCULARS
 			0.01,	//CHEEKPIECE
 			0.01,	//AFG
 			0.01,	//KNIFE
 			0.01,	//MAPA
-			0.01, 	//KIT SAGE
-			0.01, 	//KIT CBR
-			0.01,   //KIT CAMO
-			0.01, 	//FIELD BLACK
-			0.01, 	//FIELD HEX
-			0.01,   //FIELD URBAN
-            0.01,   //FIELD TAN	
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-			0.01,   //BERGEN 
-            0.01,   //BERGEN BLACK		
 			0.01,   //Soda
-			0.01,   //Food
 			0.01,   //Food
 			0.01,	//BANDAGE
 			0.01,	//PAINKILLER
-			0.07,	//HAND GRENADE
+			0.01,	//HAND GRENADE
 			0.01,	//SMOKE GRENADE RED
 			0.01,	//HOLO
 			0.01,	//BANDOLIER OLIVE
-			0.01,   //TENT BLUEPRINT
-			0.01,   //CAMO NET BLUEPRINT
 			0.01,   //TAC VEST
-			0.01,   //GEMTECH 9MM SUPPR
-			0.01,   //SURGERY KIT
-			0.01	//Bandolier Mid
+			0.01   //GEMTECH 9MM SUPPR
 		};		
 	};	
 	class MilitaryAirfield: Default {
@@ -1422,8 +1385,8 @@ class CfgBuildingLoot
 			{"BP_GhostBoxBrn","object","HotelAcc"},
 			{"BP_WeathCrateBigBRN","object","HotelWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_Bag1","object","Generic"},
-			{"BP_WeathCrateBigGRN","object","MilitaryTower"}
+			{"BP_WreckedBox","object","Generic"},
+			{"BP_WeathCrateBigBRN","object","MilitaryTower"}
 		};
 		itemChance[] =	{
 			0.08,	//BP_GhostBoxBlk
@@ -1838,6 +1801,106 @@ class CfgBuildingLoot
 		};
 	};
 	
+	class Stalker: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {"z_soldier_pilot"};
+		lootChance = 0.85;
+		lootPos[] = {};
+		itemType[] =	{		
+			{"BP_Bag3","object","Stalker"},
+			{"BP_AWSM","weapon"},
+			{"BP_SVDK_WDL","weaponA"},
+			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
+			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
+			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
+			{"BP_762Muzzle","toolbelt"},
+			{"ItemToiletPaper","magazine"}
+		};
+		itemChance[] =	{
+			0.90,	//SuicideCrate
+			0.01,   //BP_AWSM
+			0.01,   //BP_SVDK_WDL
+			0.01,	//Type 115 Green Hex
+			0.01,	//Type 115 Hex
+			0.01,	//Gendarmerie Vest
+			0.01,	//7.62 Muzzle
+			0.02	//ToiletPaper
+		};
+	};
+	
+	class SuicideCrate: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {"z_soldier_pilot"};
+		lootChance = 0.85;
+		lootPos[] = {};
+		itemType[] =	{		
+			{"BP_HeavyWeaponCrate","object","SuicideCrate"},
+			{"BP_AWSM","weapon"},
+			{"BP_SVDK_WDL","weaponA"},
+			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
+			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
+			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
+			{"BP_762Muzzle","toolbelt"},
+			{"ItemToiletPaper","magazine"}
+		};
+		itemChance[] =	{
+			0.90,	//SuicideCrate
+			0.01,   //BP_AWSM
+			0.01,   //BP_SVDK_WDL
+			0.01,	//Type 115 Green Hex
+			0.01,	//Type 115 Hex
+			0.01,	//Gendarmerie Vest
+			0.01,	//7.62 Muzzle
+			0.02	//ToiletPaper
+		};
+	};
+	
+	class Survivor: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {"z_soldier_pilot"};
+		lootChance = 0.85;
+		lootPos[] = {};
+		itemType[] =	{		
+			{"BP_ContrabandBox","object","SurvivorCrate"},
+			{"BP_ContrabandBoxEmpty","object","AmmoPalletTroll"},
+			{"BP_SVD_DES","weapon"},
+			{"BP_arifle_AKM_FL_F"},
+			{"BP_Kar98","weaponA"},
+			{"BP_LeeEnfieldK","weaponA"},
+			{"BP_CampPack","backpack"},
+			{"BP_HCampPack","backpack"},
+			{"V_TacVest_camo","vest"},
+			{"V_Chestrig_blk_BP","vest"},
+			{"BP_R7Sup","toolbelt"},
+			{"BP_CZSup_br","toolbelt"},
+			{"BP_PPK","weapon"}
+		};
+		itemChance[] =	{
+			0.70,	//SurvivorCrate
+			0.20,	//Empty SurvivorCrate
+			0.01,   //SVD_DES
+			0.01,   //AKM_FL_F
+			0.01,   //Kar98 Scoped
+			0.01,   //LeeEnfieldK Scoped
+			0.01,	//Camping Pack
+			0.01,	//Heavy Camping Pack
+			0.01,   //TacVest_camo
+			0.01,   //Chestrig_blk
+			0.01,   //R7Sup
+			0.01,    //CZSup
+			0.01    //Walter PPK suppressed
+		};
+	};
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////////////////---OLD LOOTTABLES---///////////////////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	class UnderWater: Default {
 		zombieChance = 0.0;
@@ -1933,103 +1996,6 @@ class CfgBuildingLoot
 		};
 	};
 	
-	class SuicideCrate: Default {
-		zombieChance = 0;
-		minRoaming = 0;
-		maxRoaming = 0;
-		zombieClass[] = {"z_soldier_pilot"};
-		lootChance = 0.85;
-		lootPos[] = {};
-		itemType[] =	{		
-			{"BP_HeavyWeaponCrate","object","SuicideCrate"},
-			{"BP_AWSM","weapon"},
-			{"BP_SVDK_WDL","weaponA"},
-			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
-			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
-			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
-			{"BP_762Muzzle","toolbelt"},
-			{"ItemToiletPaper","magazine"}
-		};
-		itemChance[] =	{
-			0.90,	//SuicideCrate
-			0.01,   //BP_AWSM
-			0.01,   //BP_SVDK_WDL
-			0.01,	//Type 115 Green Hex
-			0.01,	//Type 115 Hex
-			0.01,	//Gendarmerie Vest
-			0.01,	//7.62 Muzzle
-			0.02	//ToiletPaper
-		};
-	};
-	
-	class SurvivorCrateSpot: Default {
-		zombieChance = 0;
-		minRoaming = 0;
-		maxRoaming = 0;
-		zombieClass[] = {"z_soldier_pilot"};
-		lootChance = 0.85;
-		lootPos[] = {};
-		itemType[] =	{		
-			{"BP_ContrabandBox","object","SurvivorCrate"},
-			{"BP_ContrabandBoxEmpty","object","AmmoPalletTroll"},
-			{"BP_SVD_DES","weapon"},
-			{"BP_arifle_AKM_FL_F"},
-			{"BP_Kar98","weaponA"},
-			{"BP_LeeEnfieldK","weaponA"},
-			{"BP_CampPack","backpack"},
-			{"BP_HCampPack","backpack"},
-			{"V_TacVest_camo","vest"},
-			{"V_Chestrig_blk_BP","vest"},
-			{"BP_R7Sup","toolbelt"},
-			{"BP_CZSup_br","toolbelt"}
-		};
-		itemChance[] =	{
-			0.70,	//SurvivorCrate
-			0.20,	//Empty SurvivorCrate
-			0.01,   //SVD_DES
-			0.01,   //AKM_FL_F
-			0.01,   //Kar98 Scoped
-			0.01,   //LeeEnfieldK Scoped
-			0.01,	//Camping Pack
-			0.01,	//Heavy Camping Pack
-			0.01,   //TacVest_camo
-			0.01,   //Chestrig_blk
-			0.01,   //R7Sup
-			0.01    //CZSup
-		};
-	};
-	
-	class Sacrifice: Default {
-		zombieChance = 0;
-		minRoaming = 0;
-		maxRoaming = 0;
-		zombieClass[] = {"z_soldier_pilot"};
-		lootChance = 0.85;
-		lootPos[] = {};
-		itemType[] =	{
-			{"BP_SkeletonRemains","object","Residential2"},
-			{"V_TacVest_camo","vest"},
-			{"V_Chestrig_blk_BP","vest"},
-			{"BP_R7Sup","toolbelt"},
-			{"BP_CZSup_br","toolbelt"},
-			{"WaterbotEmpty","magazine"},
-			{"BP_PPK","weapon"}
-		};
-		itemChance[] =	{
-			0.10,    //SkeletonRemains
-			0.01,    //TacVest_camo
-			0.01,    //Chestrig_blk
-			0.01,    //R7Sup
-			0.01,    //CZSup
-			0.55,    //MeatPlayerCooked
-			0.30     //MeatRabbitCooked
-		};
-	};
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	///////////////////////////////////////////////////////////////////////////////////////////////---A2 BUILDING LOOT---///////////////////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 //A2 RESIDENTIAL	
 	class A2Residential: Default {
 		zombieChance = 0.2;

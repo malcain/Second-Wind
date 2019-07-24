@@ -5,8 +5,6 @@
 	Author: Deathlyrage
 */
 
-#define RADIUS 360
-
 if (isNil "r_player_dead") exitWith {};
 
 BP_LootGlobal = (count entities "BP_LootBox");
@@ -40,11 +38,11 @@ _deadZeds = 0;
 _position = getPosATL player;
 
 BP_LocalZeds = _localZeds;
-BP_NearbyZombies = {alive _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
-BP_NearbyLootBox = {alive _x} count (_position nearEntities ["BP_LootBox",RADIUS]);
-BP_NearbyLootBox = BP_NearbyLootBox + count nearestObjects [_position, ["WeaponHolder","WeaponHolderSimulated"],270];
+BP_NearbyZombies = {alive _x} count (_position nearEntities ["zZombie_Base",325]);
+//BP_NearbyLootBox = {alive _x} count (_position nearEntities ["BP_LootBox",275]);
+//BP_NearbyLootBox = BP_NearbyLootBox + count _position nearObjects ["GroundWeaponHolder_Scripted",275];
 BP_GlobalZeds = _aliveZeds;
-BP_SpawnZombies = {alive _x AND local _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
+//BP_SpawnZombies = {alive _x AND local _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
 BP_RemoteZeds = _remoteZeds;
 BP_DeadZeds = _deadZeds;
 

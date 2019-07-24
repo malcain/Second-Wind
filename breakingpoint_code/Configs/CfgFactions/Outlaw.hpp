@@ -50,7 +50,7 @@
 					clothing[] = {"BP_Rebel_F"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_F"};
+					uniform[] = {"BP_Rebel_F",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -78,7 +78,7 @@
 					clothing[] = {"BP_Rebel_1"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_1"};
+					uniform[] = {"BP_Rebel_1",""};
 					headgear[]={""};
 					nvg[]={"Outlaw_BandanaRED"};
 					facewear[]={""};

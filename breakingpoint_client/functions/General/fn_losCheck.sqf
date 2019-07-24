@@ -14,12 +14,13 @@ _cantSee = true;
 if (!isNull _target) then {
 	_tPos = eyePos _target;
 	_zPos = eyePos _agent;
-	if ((count _tPos > 0) and (count _zPos > 0)) then {
+	_cantSee = [objNull, "VIEW"] checkVisibility [_zPos, _tPos] == 0;
+	/*if ((count _tPos > 0) and (count _zPos > 0)) then {
 		_cantSee = terrainIntersectASL [_tPos, _zPos];
 		if (!_cantSee) then {
 			_cantSee = lineIntersects [_tPos, _zPos, _agent, vehicle _target];
 		};
-	};
+	};*/
 };
 
 _cantSee

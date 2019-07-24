@@ -64,8 +64,8 @@ if ((_combatMode == 2) or (_combatMode == 1)) then
 			if (_x isKindOf "zZombie_Base") then
 			{
 				if (!(isNull _target)) then {
-					//Resign Target If Another One Is Closer
-					if ((_dog distance _x) < (_dog distance _target)) then {	_target = _x; };
+					//Resign Target If Another One Is Closer to Player
+					if ((player distance _x) < (player distance _target)) then {	_target = _x; };
 				} else {
 					//Assign Target because we have none
 					_target = _x;

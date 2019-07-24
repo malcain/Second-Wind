@@ -24,8 +24,8 @@ _isHostage = player getVariable ["med_hostage", false];
 _isWater = (surfaceIsWater (getPosATL player));
 
 if (_inVehicle) then {
-	if (inputAction 'personView' > 0 || {inputAction 'optics'}) then {
-		player switchCamera 'INTERNAL';
+	if ((inputAction "personView" > 0) or (inputAction "optics" > 0)) then {
+		player switchCamera "INTERNAL";
 		_handled = true;
 	};
 };

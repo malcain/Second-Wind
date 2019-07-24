@@ -13,11 +13,10 @@ BP_AllPlayersVehicles =  BP_AllPlayers + ["AllVehicles"];
 BP_ZombieClasses = ["zZombie_Base","z_villager1","z_villager2","z_villager3","z_villager4","z_villager5","z_villager6","z_suit1","z_suit2","BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_Rebel3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_Guardian3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_Survivalist3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_Refugee3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_Hunter3"];
 BP_LootClasses = [];
 BP_StorageClasses = [];
+BP_NearbyLootBox = [];
+BP_NearbyLootNum = 22;
 
 bis_disabled_Door = nil;
-
-//variable for JIP check, deleted after first object spawn check.
-1stRun = true;
 
 if (isNil "cntStrongholds") then
 {
@@ -377,7 +376,7 @@ BP_DebugRadius = getNumber (_cfgSettings >> "Debug" >> "radius");
 //BP_dusk = getNumber (_cfgSettings >> "Time" >> "dusk");
 
 BP_MaxAnimals = getNumber (_cfgSettings >> "Animals" >> "max");
-BP_AnimalDistance = getNumber (_cfgSettings >> "Animals" >> "distance");
+//BP_AnimalDistance = getNumber (_cfgSettings >> "Animals" >> "distance");
 
 BP_Zeds = (getNumber (_cfgSettings >> "Zombies" >> "enabled") == 1);
 BP_ZedDistance = getNumber (_cfgSettings >> "Zombies" >> "distance");

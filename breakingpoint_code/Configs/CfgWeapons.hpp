@@ -99,6 +99,11 @@ class CfgWeapons
 	class ItemInfo;
 	};
 
+	class HelmetBase: ItemCore
+	{
+	class ItemInfo;
+	};
+	
 	class U_BasicBody;
 	
 	class BP_BasicBody : U_BasicBody
@@ -450,7 +455,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Refugee_1: Uniform_Base {
+	/*class BP_Refugee_1: Uniform_Base {
 		scope = 2;
 		displayName = "Nomad level 1";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
@@ -462,6 +467,21 @@ class CfgWeapons
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
+		};
+	};*/
+	class BP_Refugee_1: Uniform_Base
+	{
+		scope=2;
+		author="Weyn, Malcain";
+		displayName="Nomad level 1";
+		picture="\A3\characters_f\data\ui\icon_U_G_guerila3_1_ca.paa";
+		model="\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+		class ItemInfo: UniformItem
+		{
+			uniformModel="-";
+			uniformClass="BP_Refugee1_F";
+			containerClass="Supply20";
+			mass=40;
 		};
 	};
 	
@@ -544,47 +564,37 @@ class CfgWeapons
 	class BP_Refugee_4: Uniform_Base {
 		scope = 2;
 		displayName = "Nomad level 4";
+		//picture = "\a3\Characters_F_Enoch\Uniforms\data\ui\icon_U_O_R_Gorka_01_F_ca.paa";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Khaki_CO.paa"};
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "B_pad_T_hood_ODBK_F";
+			uniformClass = "BP_Refugee4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
 		};
 	};
-		
-	class BP_Refugee_4_brown: Uniform_Base {
+	
+	class BP_Refugee_4_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
-		displayName = "Nomad level 4 (brown)";
+		displayName = "Fallen Nomad";
 		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_civilian_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\a3\Characters_F_Enoch\Uniforms\Data\Gorka_01_Khaki_CO.paa"};
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "B_PCUOD_bi_F";
+			uniformClass = "BP_Refugee4_Z";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
 		};
 	};
-		
-	/*class BP_Refugee_4d: Uniform_Base {
-		scope = 2;
-		displayName = "Nomad level 4 (snow)";
-		picture = "\breakingpoint_ui\icons\NomadIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-
-		class ItemInfo: UniformItem {
-			uniformModel = "-";
-			uniformClass = "B_pad_T_hood_mc_F";
-			allowedSlots[] = {};
-			containerClass = "Supply50";
-			mass = 40;
-		};
-	};*/
 	
 	class BP_Guardian_F: Uniform_Base {
 		scope = 2;
@@ -927,48 +937,17 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Rebel_4_Agenda: Uniform_Base
+	class BP_Rebel_4_Taki: Uniform_Base
 	{
 		scope=2;
-		displayName="Outlaw level 4 (agenda t-shirt)";
-		picture="\breakingpoint_ui\icons\OutlawIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		displayName="Outlaw level 4 (Choc-Chip)";
+		//picture = "\breakingpoint_ui\icons\OutlawIcon.paa";
+		picture="\breakingpoint_classes\textures\outlaw\taki_icon.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
 			uniformModel="-";
-			uniformClass="BP_Rebel4a_F";
-			allowedSlots[]={};
-			containerClass="Supply50";
-			mass=40;
-		};
-	};
-	
-	class BP_Rebel_4_Orange: Uniform_Base
-	{
-		scope=2;
-		displayName="Outlaw level 4 (clockwork orange t-shirt)";
-		picture="\breakingpoint_ui\icons\OutlawIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="BP_Rebel4b_F";
-			allowedSlots[]={};
-			containerClass="Supply50";
-			mass=40;
-		};
-	};
-	
-	class BP_Rebel_4_ChocChip: Uniform_Base
-	{
-		scope=2;
-		displayName="Outlaw level 4 (Zarataki Choc-Chip)";
-		picture="\breakingpoint_ui\icons\OutlawIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		class ItemInfo: UniformItem
-		{
-			uniformModel="-";
-			uniformClass="BP_Rebel4c_F";
+			uniformClass="BP_Rebel4_Taki";
 			allowedSlots[]={};
 			containerClass="Supply50";
 			mass=40;
@@ -1556,7 +1535,7 @@ class CfgWeapons
 			mass = 60;
 		};
 	};
-	
+		
 	class BP_Shemag_bandit: H_HelmetB {
 	    scope = 2;
 		displayName = "Bandit Leader Shemag";
@@ -1693,6 +1672,28 @@ class CfgWeapons
 			//hiddenSelections[] = {"camo"};
 		};
 	};
+	
+	////////////////////////////////HATS/////////////////////////////////////
+	
+	/*class BP_RefugeeHat: HelmetBase {
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="H_Watchcap_blk";
+		scope=2;
+		displayName="$STR_A3_H_Watchcap_blk0";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_beanie_CA.paa";
+		model="\bp_sw\bp_sw_clothes\Facewear\Beaniehat";
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\characters_f\common\data\woolhat_black_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Facewear\Beaniehat";
+			modelSides[]={10};
+		};
+	};*/
 	
 	class V_BanditBandolier_BP: Vest_Camo_Base {
 		scope = 2;
@@ -2020,8 +2021,8 @@ class CfgWeapons
 		{
 			uniformModel = "\A3\Characters_F_Enoch\Vests\V_SmershVest_01_F.p3d";
 			hiddenSelections[] = {"Camo","Camo2","Radio1_hide"};
-			containerClass = "Supply140";
-			mass = 30;
+			containerClass = "Supply90";
+			mass = 40;
 			class HitpointsProtectionInfo
 			{
 				class Body
@@ -2044,7 +2045,7 @@ class CfgWeapons
 		picture = "\A3\Characters_F_Exp\Vests\Data\UI\icon_V_PlateCarrierGL_tna_F_ca.paa";
 		
 		class ItemInfo : VestItem {
-			containerClass = "Supply140";
+			containerClass = "Supply70";
 			hiddenSelections[] = {"camo"};
 			mass = 100;
 			uniformModel = "\A3\Characters_F\BLUFOR\equip_b_carrier_gl_rig.p3d";
@@ -2081,7 +2082,24 @@ class CfgWeapons
 		picture = "\A3\Characters_F_Exp\Data\UI\icon_V_TacChestrig_grn_ca.paa";
 		scope = 2;
 		class ItemInfo : ItemInfo {
-			containerClass = "Supply140";
+			containerClass = "Supply90";
+			hiddenSelections[] = {"camo"};
+			mass = 20;
+			uniformModel = "\A3\Characters_F_Exp\Common\equip_TacChestrig.p3d";
+		};
+	};
+	
+	class V_TacChestrig_oli_BP : V_TacChestrig_grn_BP { //Tactical Chest Rig (Olive)
+		_generalMacro = "V_TacChestrig_grn_F";
+		author = "Bohemia Interactive";
+		displayName = "Nomad Chest Rig";
+		DLC = "Expansion";
+		hiddenSelectionsTextures[] = {"\A3\Characters_F_Exp\Common\Data\equip_TacChestrig_oli_co.paa"};
+		model = "\A3\Characters_F_Exp\Common\equip_TacChestrig.p3d";
+		picture = "\A3\Characters_F_Exp\Data\UI\icon_V_TacChestrig_oli_ca.paa";
+		scope = 2;
+		class ItemInfo : ItemInfo {
+			containerClass = "Supply90";
 			hiddenSelections[] = {"camo"};
 			mass = 20;
 			uniformModel = "\A3\Characters_F_Exp\Common\equip_TacChestrig.p3d";

@@ -13,11 +13,22 @@ scriptName "BP_playerSpawn2";
 
 private ["_size","_vel","_speed","_hunger","_thirst","_array","_unsaved"];
 
+	//Remove sidechat and global
+	{
+	_x params [["_chan",-1,[0]], ["_noText","false",[""]], ["_noVoice","false",[""]]];
+
+	_noText = [false,true] select ((["false","true"] find toLower _noText) max 0);
+	_noVoice = [false,true] select ((["false","true"] find toLower _noVoice) max 0);
+
+	_chan enableChannel [!_noText, !_noVoice];
+
+	} forEach getArray (missionConfigFile >> "disableChannels");
+
 waitUntil
 {
 	//Initialize
-	_vehicle = (vehicle player);
-	_inVehicle = (_vehicle != player);
+	_vehicle = objectParent player;
+	_inVehicle = !isnull _vehicle;
 	_size = (sizeOf typeOf _vehicle) * 0.6;
 	_vel = velocity player;
 	_speed = round((_vel distance [0,0,0]) * 3.5);
@@ -36,13 +47,24 @@ waitUntil
 	};
 	
 	//Check Vehicle & Player Out Of Bounds
-	if (player call BP_fnc_isOutOfBounds) exitWith
+	if (player call BP_fnc_isOutOfBounds) then
 	{
 		//Destroy Vehicle
-		if (_inVehicle) then { _vehicle setDamage 1; };
+		if (_inVehicle) then { 
+			_vehicle setDamage 1; 
+			player action ["Eject", _vehicle];
+		};
 		
-		//Kill Player
-		r_player_blood = 0;
+		//Punish Player
+		r_player_blood = r_player_blood - 400;
+		cutText ["WARNING: Infected zone, leave ASAP!","PLAIN DOWN",1];
+	};
+	
+	//Save Medical Data - Every 1 Minute
+	if ((diag_tickTime - BP_lastSaveMed) > _saveTimeMed) then {
+		["playerSpawn2: Medical Sync"] call BP_fnc_debugConsoleFormat;
+		player setVariable ["messing",[BP_hunger,BP_thirst]];
+		call BP_fnc_medSave;
 	};
 	
 	if (!BP_isUndead) then
@@ -219,7 +241,8 @@ waitUntil
 	//Check If Camera Is Legit
 	if (cameraView == "Group") then { cameraOn switchCamera "internal"; };
 	
-	if ((vehicle player) == player) then
+	//Undead !in vehicle animations check?
+	/*if (isNull objectParent player) then
 	{
 		_uniform = (uniform player);
 		if (_uniform in BP_ZombieClothing) then
@@ -238,25 +261,12 @@ waitUntil
 				player playMoveNow "AmovPzmbMstpSnonWnonDnon_fast";
 			};
 		};
-	};
-	
-	//Remove sidechat and global
-	{
-	_x params [["_chan",-1,[0]], ["_noText","false",[""]], ["_noVoice","false",[""]]];
-
-	_noText = [false,true] select ((["false","true"] find toLower _noText) max 0);
-	_noVoice = [false,true] select ((["false","true"] find toLower _noVoice) max 0);
-
-	_chan enableChannel [!_noText, !_noVoice];
-
-	} forEach getArray (missionConfigFile >> "disableChannels");
-	
-	
+	};*/
 	
 	//Thirsk Snow
-	if (worldName == "thirskw" || {worldName == "namalsk"}) then
+	/*if (worldName == "thirskw" || {worldName == "namalsk"}) then
 	{
-		/*
+		
 		//Environment Snow Sounds
 		_lastSnowSound = player getVariable ["snowTime",0];
 		if ((diag_tickTime - _lastSnowSound) > 60) then
@@ -268,7 +278,7 @@ waitUntil
 		*/
 		
 		//Snow FX
-		call
+		/*call
 		{
 			private ["_snow"];
 			_snow = player getVariable ["snow",objNull];
@@ -390,8 +400,8 @@ waitUntil
 				};
 			};
 		} count allPlayers;
-		*/
-	};
+		
+	};*/
 	
 	r_player_dead
 };

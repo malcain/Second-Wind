@@ -126,6 +126,7 @@ class CfgFunctions
 			class dogAlertVehicle {};
 			class dogCombatMode {};
 			class dogWarn {};
+			class dogGetIn {};
 		};
 		class Television_Actions {
 			file = "\breakingpoint_client\functions\Actions\television";

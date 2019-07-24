@@ -13,8 +13,6 @@ if (BP_isUndead) exitWith {};
 	
 if (_isHostage) exitWith {};
 
-//_animspeedcoef = getAnimSpeedCoef player;
-
 if (time - BP_lastCheckBit > 1) then
 {
 	BP_lastCheckBit = time;
@@ -34,7 +32,7 @@ if (time - BP_lastCheckBit > 1) then
 			BP_AutoRunThread = scriptNull;
 		};
 		
-		//Autoswim speed depends on player's carrying weight.
+		/*//Autoswim speed depends on player's carrying weight.
 		_weight = loadAbs player;
 		if (_weight < 670) then {
 			player setanimspeedcoef 1.5;
@@ -44,7 +42,7 @@ if (time - BP_lastCheckBit > 1) then
 			} else {
 				player setanimspeedcoef 1.25;
 			};
-		};
+		};*/
 		
 		BP_AutoRunThread = [] spawn 
 		{
@@ -70,7 +68,6 @@ if (time - BP_lastCheckBit > 1) then
 				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getterrainheightASL getPosATL player) > -1.5});
 			};
 			
-			player setanimspeedcoef 1;
 			BP_AutoRun = false;
 		};
 		[BP_AutoRunThread] call BP_fnc_addThreadHandle;

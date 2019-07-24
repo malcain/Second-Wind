@@ -9,10 +9,20 @@
 
 params ["_position","_unitTypes",["_temp",false,[false]]];
 
-if (speed (vehicle player) >= 140) exitWith {};
+if (speed (vehicle player) >= 120) exitWith {};
 
 if (!BP_Zeds) exitWith {};
 if (BP_GlobalZeds > BP_ZedMaxGlobal) exitWith {};
+
+_destination = _position;
+_PosList = selectBestPlaces [_position,150,"(0.1 + 2*houses - trees) * (1 - forest) * (1 - sea) * (0.2 + deadBody)",10,7];
+if (random 100 < 50 && !(_PosList isEqualTo [])) then {
+	_PosSelect = selectRandom _PosList;
+	_Pos = _PosSelect select 0 findEmptyPosition [0,10];
+	if !(_Pos isEqualTo []) then {
+		_destination = _Pos;
+	};
+};
 
 _config = configFile >> "CfgBuildingLoot";
 /*if (isClass (missionConfigFile >> "CfgBuildingLoot")) then
@@ -38,8 +48,10 @@ _zombie setBehaviour "CARELESS";
 _zombie setCombatMode "RED";
 
 _zombie setVariable ["agentObject",_zombie];
-_zombie setVariable ["myDest",_position];
-_zombie setVariable ["newDest",_position];
+_zombie setVariable ["myDest",_destination];
+_global = (!local _zombie);
+_zombie setVariable ["myDestSpeed",2,_global];
+//_zombie setVariable ["newDest",_position];
 _zombie setDir random 360;
 _zombie setUnitPos "UP";
 _zombie setVariable ["stance","UP"];

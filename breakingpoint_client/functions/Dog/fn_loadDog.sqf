@@ -15,7 +15,7 @@ private ["_array","_typeID","_hunger","_thirst","_classname","_dog","_fsmid"];
 
 _classname = switch (_typeID) do {
 	default 	{"BP_Dog_1"};
-	case 1:	{"BP_Dog_1"};
+	case 1:		{"BP_Dog_1"};
 	case 2: 	{"BP_Dog_2"};
 	case 3: 	{"BP_Dog_3"};
 	case 4: 	{"BP_Dog_4"};

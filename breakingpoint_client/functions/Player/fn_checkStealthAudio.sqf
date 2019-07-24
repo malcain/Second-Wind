@@ -28,7 +28,7 @@ _stance = stance _unit;
 switch (_stance) do {
 	case "STAND": {
 		_scaleMvmt = 1.15;
-		_scalePose = 0.0;	
+		//_scalePose = 0.0;	
 	};
 	case "CROUCH": {
 		_scaleMvmt = 0.60;
@@ -52,35 +52,35 @@ if (uniform _unit == "BP_Survivalist2_F") then
 {
 	switch (_stance) do {
 		case "STAND": {
-			_scaleMvmt = 0.85;
-			_scalePose = 0.0;	
+			_scaleMvmt = 0.8;
+			//_scalePose = 0.0;	
 		};
 		case "CROUCH": {
-			_scaleMvmt = 0.45;
+			_scaleMvmt = 0.4;
 		};
 		case "UNDEFINED": {
 			_scaleMvmt = 0.1;
 		};
 		case "PRONE": {
-			_scaleMvmt = 0.1; 
+			_scaleMvmt = 0.05; 
 		};
 	};
 } else {
-	if (uniform _unit == "BP_Survivalist3_F") then
+	if (uniform _unit == "BP_Survivalist3_F" or (uniform _unit == "BP_Survivalist4_F")) then
 	{
 		switch (_stance) do {
 			case "STAND": {
-				_scaleMvmt = 0.65;
-				_scalePose = 0.0;	
+				_scaleMvmt = 0.6;
+				//_scalePose = 0.0;	
 			};
 			case "CROUCH": {
-				_scaleMvmt = 0.25;
+				_scaleMvmt = 0.2;
 			};
 			case "UNDEFINED": {
 				_scaleMvmt = 0.05;
 			};
 			case "PRONE": {
-				_scaleMvmt = 0.05; 
+				_scaleMvmt = 0.02; 
 			};
 		};
 	};

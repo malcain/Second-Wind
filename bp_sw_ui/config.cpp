@@ -16,7 +16,7 @@ class CfgVideoOptions
 {
 	class ShadowsVisibility
 	{
-		minValue=60;
+		minValue=30;
 		maxValue=1500;
 	};
 	class Particles
@@ -52,14 +52,14 @@ class CfgVideoOptions
 			vramNeeded=796;
 		};
 	};
-	class ObjectsQuality
+	/*class ObjectsQuality
 	{
 		class Extreme
 		{
 			text="Extreme";
 			value=2400000;
 		};
-	};
+	};*/
 	/*class TerrainQuality
 	{
 		class Extreme
@@ -72,15 +72,19 @@ class CfgVideoOptions
 	{
 		delete VeryLow;
 		delete Low;
-		delete Normal;
+		class Normal
+		{
+			text="$STR_A3_OPTIONS_STANDARD";
+			value=96;
+		};
 		class High
 		{
-			text="$STR_A3_OPTIONS_VERYHIGH";
-			value=96;
+			text="$STR_A3_OPTIONS_HIGH";
+			value=128;
 		};
 		class VeryHigh
 		{
-			text="$STR_A3_OPTIONS_ULTRA";
+			text="$STR_A3_OPTIONS_VERYHIGH";
 			value=128;
 		};
 	};
