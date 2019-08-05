@@ -12,12 +12,13 @@ private ["_hasKnife","_hasKnifeBlunt","_type","_config","_isPlayer","_isZombie",
 params ["","","","_item"];
 
 _hasKnife = "ItemKnife" in magazines player;
-_hasKnifeBlunt = "ItemKnifeBlunt" in magazines player;
+//_hasKnifeBlunt = "ItemKnifeBlunt" in magazines player;
 _type = typeOf _item;
 _config = configFile >> "CfgSurvival" >> "Meat" >> _type;
 _alive = (alive _item);
-_isPlayer = ((_type in BP_AllPlayers) or (isPlayer _item));
+//_isPlayer = ((_type in BP_AllPlayers) or (isPlayer _item));
 _isZombie = (_item isKindOf "zZombie_Base");
+_isPlayer = (isPlayer _item or (_item isKindOf "CAManBase" && !_isZombie));
 _isAnimal = (_item isKindOf "Animal");
 
 //Remove Action to Prevent Spamming
@@ -35,7 +36,7 @@ if (!_leaveReturn) exitWith {};
 
 r_action_gut = true;
 
-if (_hasKnife or _hasKnifeBlunt) then 
+if (_hasKnife) then 
 {
 	_dis=10;
 	[player,"gut",0,false,_dis] call BP_fnc_objSpeak;  

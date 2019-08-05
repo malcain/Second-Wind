@@ -52,7 +52,7 @@
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_1"};
+					uniform[] = {"BP_Hunter_1",""};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -80,7 +80,7 @@
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {"BP_AssaultPack_khk"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_1"};
+					uniform[] = {"BP_Hunter_1",""};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -98,7 +98,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife"};
+					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -114,7 +114,7 @@
 					clothing[] = {"BP_Hunter_2"};
 					backpack[] = {"BP_AssaultPack_sgg"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_2"};
+					uniform[] = {"BP_Hunter_2",""};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -133,7 +133,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife"};
+					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -149,7 +149,7 @@
 					clothing[] = {"BP_Hunter_3"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_3"};
+					uniform[] = {"BP_Hunter_3",""};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -180,10 +180,10 @@
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
 					handgun[] = {};
-					clothing[] = {"BP_Hunter_4"};
+					clothing[] = {"BP_Hunter_3"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_4","BP_Hunter_4_Green"};
+					uniform[] = {"BP_Hunter_3",""};
 					headgear[] = {"BP_Shemag_bandit","H_Shemag_olive"};
 					nvg[] = {"TRYK_Shemagh_G_NV"};
 					facewear[] = {""};//{"rvg_balaclava_4", "rvg_balaclavaLow_4", "rvg_balaclavaLow_1"};
@@ -327,45 +327,51 @@
 			class Kill {
 				class scavenger {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
+					Dog = 10;
 				};
 				class Ranger {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 125;
 					Level_4 = 150;
+					Dog = 10;
 				};
 				class Outlaw {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
+					Dog = 10;
 				};
 				class Hunter {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 150;
+					Dog = 10;
 				};
 				class Nomad {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
+					Dog = 20;
 				};
 				class Survivalist {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 40;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 125;
+					Dog = 10;
 				};
 			};
 		};

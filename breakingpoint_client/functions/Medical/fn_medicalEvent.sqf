@@ -20,7 +20,7 @@ _medic = objectFromNetId (_data select 1);
 
 ["medicalEvent: %1",_this] call BP_fnc_debugConsoleFormat;
 
-if (_unit != player) exitWith {};
+if (_unit != player && {_type != "medSurgeryDog"}) exitWith {};
 
 switch (_type) do {
 	case "medBandage": {
@@ -45,7 +45,26 @@ switch (_type) do {
 		_rndInfection = (random 10);
 		_TransfusionInfection = (_rndInfection < 0.3);
 		if (_TransfusionInfection) then { r_player_infected = true; };
-		if ("ItemFieldDressing" in magazines _medic) then
+		//Health
+		r_player_blood = r_player_bloodTotal;
+		r_player_lowblood = false;
+		10 fadeSound 1;
+		"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
+		"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5;
+		r_player_injured = false;
+		r_player_bleedingLevel = 0;
+		r_player_handler = false;
+		player setVariable ["med_lowBlood",false,true];
+		//Pain&fractures
+		player setVariable ["hit_legs",0];
+		player setVariable ["hit_hands",0];
+		r_hit_legs = 0;
+		r_hit_hands = 0;
+		r_fracture_legs = false;
+		r_fracture_arms = false;
+		r_player_inpain = false;
+
+		/*if ("ItemFieldDressing" in magazines _medic) then
 		{
 		_medic removeMagazineGlobal "ItemFieldDressing"; 
 		r_player_blood = r_player_bloodTotal;
@@ -78,7 +97,7 @@ switch (_type) do {
 		player say3D ["z_dog_damage_0", 100];
 		r_player_unconscious = true;
 		r_player_unconsciousWeapon = true;
-		};
+		};*/
 	};
 	case "medSurgeryDog": {
 		_dog = player getVariable ["dog",objNull];

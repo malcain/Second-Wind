@@ -168,23 +168,28 @@ _wound_objs =
 	"Land_WiredFence_01_4m_F",
 	"Land_WiredFence_01_8m_F",
 	"Land_WiredFence_01_16m_F",
-	"Land_Razorwire_F"
+	"Land_Razorwire_F",
+	"Land_NetFence_03_m_9m_F",
+	"Land_NetFence_03_m_3m_F"
 ];
 
-if (typeOf _obj in _wound_objs) then {
+//camoconcretewall_01_l_4m_v2_f
+//camoconcretewall_01_l_4m_d_v1_f
+//camoconcretewall_01_l_4m_v1_f
 
+if (typeOf _obj in _wound_objs) then {
+	r_player_bleedingLevel = 2;
+	r_player_injured = true;
+	r_player_inpain = true;
 };
 
-//_isTree = ["t_",str(_obj),false] call BP_fnc_inString;
-if (str _obj find ": t_" > -1) exitwith {};
-//if (_isTree) exitWith {};
+_invalid = [["t_","b_","camoconcretewall"],str(_obj)] call BP_fnc_inStringArray;
+if (_invalid && {typeof _obj == ""}) exitwith {};
 
 if (count _poses > 0) then
 {
 	_pos = _poses select 0;
 };
-
-
 
 
 _posWT = _climber worldToModel (asltoagl _pos);

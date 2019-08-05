@@ -31498,6 +31498,11 @@ class CfgWeapons
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\Hatchet_Idle.rtm"};
 		descriptionShort = "$STR_EQUIP_DESC_41";
 		modes[] = {"Single"};
+		/*bullet1[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10};
+		bullet2[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10};
+		bullet3[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10};
+		bullet4[] = {"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.80, 10};
+		soundBullet[] = {"begin1", 0.25, "begin2", 0.25, "begin3", 0.25, "begin4", 0.25};*/
 		class Single : Mode_SemiAuto
 		{
 			sounds[] = {StandardSound};
@@ -31518,7 +31523,7 @@ class CfgWeapons
  			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 0.6;
+			reloadTime = 1.5;
 			recoil = "recoil_single_primary_prone_1outof10";
 			recoilProne = "";
 		};
@@ -31602,7 +31607,7 @@ class CfgWeapons
  			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 0.6;
+			reloadTime = 1.5;
 			recoil = "recoil_single_primary_prone_1outof10";
 			recoilProne = "";
 		};
@@ -31685,7 +31690,7 @@ class CfgWeapons
  			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 1.0;
+			reloadTime = 2.0;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -31769,7 +31774,7 @@ class CfgWeapons
  			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 1.2;
+			reloadTime = 2.0;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -31850,7 +31855,7 @@ class CfgWeapons
  			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 1.2;
+			reloadTime = 2.0;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -31933,7 +31938,7 @@ class CfgWeapons
 			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 0.8;
+			reloadTime = 2.0;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -32098,7 +32103,7 @@ class CfgWeapons
 			};
 			dispersion = 0.0092;
 			soundContinuous = 0;
-			reloadTime = 1.1;
+			reloadTime = 1.5;
 			recoil = "recoil_single_primary_prone_3outof10";
 			recoilProne = "";
 		};
@@ -36047,117 +36052,19 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		initSpeed = -1.07;
 		recoil = "recoil_ebr";
 		modes[] = {"Single", "FullAuto", "far_optic1"};
-		bullet1[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_1.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet2[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_2.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet3[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_3.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet4[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Metal_4.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet5[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_1.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet6[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_2.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet7[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_3.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet8[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_4.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet9[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_1.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet10[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_2.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet11[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_3.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		bullet12[]=
-		{
-			"\breakingpoint_jsrs\sounds\Shells\medium\Grass_4.ogg",
-			2.0099001,
-			1,
-			10
-		};
-		soundBullet[]=
-		{
-			"bullet1",
-			0.079999998,
-			"bullet2",
-			0.083999999,
-			"bullet3",
-			0.083999999,
-			"bullet4",
-			0.083999999,
-			"bullet5",
-			0.093000002,
-			"bullet6",
-			0.093000002,
-			"bullet7",
-			0.074000001,
-			"bullet8",
-			0.074000001,
-			"bullet9",
-			0.083999999,
-			"bullet10",
-			0.085000001,
-			"bullet11",
-			0.082999997,
-			"bullet12",
-			0.082999997
-		};
+		bullet1[]={"\breakingpoint_jsrs\sounds\Shells\medium\Metal_1.ogg",2.0099001,1,10};
+		bullet2[]={"\breakingpoint_jsrs\sounds\Shells\medium\Metal_2.ogg",2.0099001,1,10};
+		bullet3[]={"\breakingpoint_jsrs\sounds\Shells\medium\Metal_3.ogg",2.0099001,1,10};
+		bullet4[]={"\breakingpoint_jsrs\sounds\Shells\medium\Metal_4.ogg",2.0099001,1,10};
+		bullet5[]={"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_1.ogg",2.0099001,1,10};
+		bullet6[]={"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_2.ogg",2.0099001,1,10};
+		bullet7[]={"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_3.ogg",2.0099001,1,10};
+		bullet8[]={"\breakingpoint_jsrs\sounds\Shells\medium\Dirt_4.ogg",2.0099001,1,10};
+		bullet9[]={"\breakingpoint_jsrs\sounds\Shells\medium\Grass_1.ogg",2.0099001,1,10};
+		bullet10[]={"\breakingpoint_jsrs\sounds\Shells\medium\Grass_2.ogg",2.0099001,1,10};
+		bullet11[]={"\breakingpoint_jsrs\sounds\Shells\medium\Grass_3.ogg",2.0099001,1,10};
+		bullet12[]={"\breakingpoint_jsrs\sounds\Shells\medium\Grass_4.ogg",2.0099001,1,10};
+		soundBullet[]={"bullet1",0.079999998,"bullet2",0.083999999,"bullet3",0.083999999,"bullet4",0.083999999,"bullet5",0.093000002,"bullet6",0.093000002,"bullet7",0.074000001,"bullet8",0.074000001,"bullet9",0.083999999,"bullet10",0.085000001,"bullet11",0.082999997,"bullet12",0.082999997};
 		class Single : Mode_SemiAuto
 		{
 			sounds[]=
@@ -39686,6 +39593,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		initSpeed = -0.94;
 		 class WeaponSlotsInfo
 		{
+			mass = 75;
 			class PointerSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";

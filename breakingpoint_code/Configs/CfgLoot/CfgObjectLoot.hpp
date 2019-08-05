@@ -311,17 +311,13 @@ class CfgObjectLoot {
 			{"ItemBrick1","magazine"},
 			{"ItemBrick2","magazine"},
 			{"ItemKnife","magazine"},
-			{"ItemSoda1","magazine"},
-			{"ItemSoda2","magazine"},
-			{"ItemSoda3","magazine"},
 			{"ItemSoda4","magazine"},
 			{"ItemSoda5","magazine"},
-			{"ItemCan1","magazine"},
-			{"ItemCan2","magazine"},
 			{"ItemCan3","magazine"},
 			{"ItemCan4","magazine"},
 			{"ItemCan5","magazine"},
 			{"ItemToolbox","toolbelt"},
+			{"BP_M3AMRAD","toolbelt"},
 			{"ItemNails","magazine"},
 			{"ItemHammer","magazine"},
 			{"BlueprintCrate1","magazine"},
@@ -346,6 +342,8 @@ class CfgObjectLoot {
 			{"ItemVideoTape","magazine"},
 			{"ItemZipDisk","magazine"},
 			{"ItemCards","magazine"},
+			{"ItemPlate1","magazine"},   //Plate
+			{"ItemPlate2","magazine"},   //Plate2
 			{"HandGrenade","magazine"},
 			{"BP_AlarmClock_Black","magazine"},
 			{"BP_1Rnd_HE_shell","magazine"},
@@ -357,7 +355,11 @@ class CfgObjectLoot {
 			{"BP_Arrow_Fire","magazine"},
 			{"BP_Arrow_Tranq","magazine"},
 			{"BP_Arrow_Poison","magazine"},
-			{"BP_93x64_SVDK","magazine"}
+			{"BP_93x64_SVDK","magazine"},
+			{"BP_10Rnd_338Lapua_Mag","magazine"},
+			{"BP_10Rnd_300_Mag","magazine"},
+			{"BP_100Rnd_127x99_box","magazine"},
+			{"BP_10Rnd_50BW_Mag_F","magazine"}
 		};
 		itemChance[] =	{	
 			0.10,	//Brick 1
@@ -365,15 +367,11 @@ class CfgObjectLoot {
 			0.03,	//KNIFE
 			0.01,	//Water
 			0.01,	//Water
-			0.01,	//Water
-			0.01,	//Water
-			0.01,	//Water
-			0.01,	//FOOD
-			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//Toolbox
+			0.03,   //BP_M3AMRAD
 			0.01,	//Nails
 			0.01,	//Hammer
 			0.01,	//Crate
@@ -398,18 +396,24 @@ class CfgObjectLoot {
 			0.05,	//TRASH
 			0.05,	//TRASH
 			0.05,	//TRASH
+			0.05,	//TRASH
+			0.05,	//TRASH
 			0.01,	//NADE
 			0.02,	//AlarmClock
 			0.01,	//BP_1Rnd_HE_shell
 			0.01,	//Makarov
 			0.02,	//BP_Crossbow
 			0.02,	//Crossbow_DigitCamo
-			0.04,	//Arrow
+			0.05,	//Arrow
 			0.01,	//Arrow_Rambo
-			0.02,	//Arrow_Fire
-			0.02,	//Arrow_Tranq
-			0.02,	//Arrow_Poison
-			0.05	//93x64_SVDK
+			0.03,	//Arrow_Fire
+			0.03,	//Arrow_Tranq
+			0.04,	//Arrow_Poison
+			0.05,	//93x64_SVDK
+			0.04,	//338Lapua_Mag
+			0.04,	//300_Mag
+			0.01,	//127x99
+			0.02	//BW mag
 		};
 	};
 	
@@ -609,9 +613,10 @@ class CfgObjectLoot {
 			{"ItemCan4","magazine"},
 			{"ItemCan5","magazine"},
 			{"BP_Carryall_Hero","backpack"},
-			{"BP_StoneGhillie","uniform"},
-			{"BP_TreeGhillie","uniform"},
-			{"BP_DirtGhillie","uniform"},
+			{"BP_Survivalist_4_Stone","uniform"},
+			{"BP_Survivalist_4_Tree","uniform"},
+			{"BP_Survivalist_4_Dirt","uniform"},
+			{"BP_Survivalist_4_Snow","uniform"},
 			{"V_RebreatherB","vest"},
 			{"BP_200Rnd_556x45_MINIMI","magazine"},
 			{"BP_100Rnd_762x51_MINIMI","magazine"},
@@ -694,9 +699,10 @@ class CfgObjectLoot {
 			0.02,	//FOOD
 			0.02,	//FOOD
 			0.03,	//MILITARY SURVIVAL PACK
-			0.05,	//STONE GHILLIE
-			0.05,	//TREE GHILLIE
-			0.05,	//DIRT GHILLIE
+			0.04,	//STONE GHILLIE
+			0.04,	//TREE GHILLIE
+			0.04,	//DIRT GHILLIE
+			0.04,	//Snow GHILLIE
 			0.03,   //REBREATHER
 			0.05,   //200Rnd_556
 			0.05,   //100Rnd_762
@@ -970,7 +976,8 @@ class CfgObjectLoot {
 			{"ChemY","magazine"},
 			{"ChemR","magazine"},
 			{"ChemB","magazine"},
-			{"ItemSoda5","magazine"},
+			{"ItemSoda2","magazine"},
+			{"ItemSoda3","magazine"},
 			{"ItemCereal6","magazine"},
 			{"ItemCan5","magazine"},
 			{"BP_5Rnd_22_Mag","magazine"},
@@ -1021,6 +1028,7 @@ class CfgObjectLoot {
 			0.05,	//CHEM
 			0.05,	//CHEM
 			0.05,	//CHEM
+			0.01,	//SODA
 			0.01,	//SODA
 			0.01,	//FOOD
 			0.01,	//FOOD
@@ -1088,8 +1096,8 @@ class CfgObjectLoot {
 			{"ItemCan1","magazine"},
 			{"ItemCan2","magazine"},
 			{"ItemCan3","magazine"},
-			{"ItemCan4","magazine"},
-			{"ItemCan5","magazine"},
+			{"ItemSoda4","magazine"},
+			{"ItemSoda5","magazine"},
 			{"ChemG","magazine"},
 			{"ChemR","magazine"},
 			{"ChemY","magazine"},
@@ -1144,6 +1152,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"ItemSoda1","magazine"},
+			{"ItemSoda2","magazine"},
 			{"ItemWatch","toolbelt"},
 			{"ItemCompass","toolbelt"},
 			{"ItemMap","toolbelt"},
@@ -1177,7 +1186,7 @@ class CfgObjectLoot {
 			{"BP_10Rnd_303_JSP_Mag","magazine"},
 			{"ItemPainkiller","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"WaterbotEmpty","magazine"},
+			{"ItemSoda3","magazine"},
 			{"ItemTennisBall","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemElectronics","magazine"},
@@ -1187,6 +1196,7 @@ class CfgObjectLoot {
 			
 		};
 		itemChance[] =	{
+			0.01,	//Mountain DEW
 			0.01,	//Mountain DEW
 			0.10,	//WATCH
 			0.10,	//COMPASS
@@ -1221,7 +1231,7 @@ class CfgObjectLoot {
 			0.01,	//303_JSP_Mag
 			0.07,	//PAINKILLER
 			0.01,	//ANTIBIOTIC
-			0.01,	//WATER BOTTLE
+			0.01,	//Soda
 			0.05,	//TENNIS BALL
 			0.08,	//BANDAGE
 			0.03,	//ELECTRONICS
@@ -1253,7 +1263,6 @@ class CfgObjectLoot {
 			{"PartGlass","magazine"},
 			{"ItemFuelcanEmpty","magazine"},
 			{"ItemFuelcanLargeEmpty","magazine"},
-			//{"MeleeMachete","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemLiquidResin","magazine"},
 			{"ItemPunctureKit","magazine"},
@@ -1293,13 +1302,12 @@ class CfgObjectLoot {
 			0.13,	//CRISTAL
 			0.14,	//JERRY CAN
 			0.03,	//FuelcanLarge
-			//0.01,	//Machete
 			0.07,	//KNIFE
 			0.15,   //LIQUID RESIN
 			0.11,   //PUNCTURE KIT
 			0.09,   //ITEM BATTERY
 			0.12,   //FIBERGLASS
-			0.02,   //STEEL
+			0.01,   //STEEL
 			0.07,   //HYDRAULIC FLUID
 			0.05,   //ELECTRONICS
 			0.07,   //WIRE
@@ -1411,6 +1419,7 @@ class CfgObjectLoot {
 			{"MeleeClub","weaponNA"},
 			{"BlueprintStove","magazine"},
 			{"ItemStove","magazine"},
+			{"PartWoodPile","magazine"},
 			{"ItemToolbox","toolbelt"},
 			{"BP_M8","toolbelt"}
 		};
@@ -1452,6 +1461,7 @@ class CfgObjectLoot {
 			0.02,    //CROWBAR
 			0.02,   //Stove BLUEPRINT
 			0.02,   //Stove
+			0.01,   //Woodpile
 			0.09,	//TOOLBOX
 			0.01	//SW.500 Optic
 		};
@@ -1521,12 +1531,12 @@ class CfgObjectLoot {
 			0.03, 	//KIT SAGE
 			0.02, 	//KIT CBR
 			0.01,   //KIT CAMO
-			0.02,	//WaterbotEmptyTLE
-			0.02,	//SODA
-			0.02,	//SODA
-			0.02,	//SODA
-			0.02,	//SODA
-			0.02,	//SODA
+			0.02,	//WaterbotEmpty
+			0.03,	//SODA
+			0.03,	//SODA
+			0.03,	//SODA
+			0.03,	//SODA
+			0.03,	//SODA
 			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//FOOD
@@ -1558,7 +1568,7 @@ class CfgObjectLoot {
 			{"ItemMorphine","magazine"},
 			{"ItemFieldDressing","magazine"},
 			{"ItemAntibiotic","magazine"},
-			//{"ItemSurgeryKit","toolbelt"},
+			{"ItemSurgeryKit","toolbelt"},
 			{"ItemAdrenaline","magazine"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
@@ -1572,7 +1582,7 @@ class CfgObjectLoot {
 			0.14,	//MORPHINE
 			0.14,	//FIELD DRESSING
 			0.10,	//ANTIBIOTIC
-			//0.05,     //SURGERY KIT
+			0.02,     //SURGERY KIT
 			0.04,     //Adrenaline
 			0.02,	//KNIFE
 			0.05,	//MATCHES
@@ -1610,7 +1620,7 @@ class CfgObjectLoot {
 			0.14,	//MORPHINE
 			0.14,	//FIELD DRESSING
 			0.14,	//ANTIBIOTIC
-			0.05,    //SURGERY KIT
+			0.07,    //SURGERY KIT
 			0.05,    //Adrenaline
 			0.03,	//KNIFE
 			0.07,	//MATCHES
@@ -2170,10 +2180,8 @@ class CfgObjectLoot {
 			{"BP_Bergen_tre","backpack"},
 			{"BP_Bergen_mcamo","backpack"},
 			{"BP_Bergen_sgg","backpack"},
-			{"BP_Bergen_rgr","backpack"},	
-			{"BP_StoneGhillie","uniform"},
-			{"BP_TreeGhillie","uniform"},
-			{"BP_DirtGhillie","uniform"},
+			{"BP_Bergen_rgr","backpack"},
+			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"V_PlateCarrierIA1_dgtl_BP","vest"},
 			{"BP_optic_ACOG","toolbelt"},
 			{"BP_CPad","toolbelt"},
@@ -2223,9 +2231,7 @@ class CfgObjectLoot {
 			0.04,   //BERGEN 
 			0.04,   //BERGEN 
 			0.04,   //BERGEN
-			0.03,	//STONE GHILLIE
-			0.03,	//TREE GHILLIE
-			0.03,	//DIRT GHILLIE
+			0.01,   //Gendarmerie Vest
 			0.01,	//PLATE CARRIER
 			0.05,	//ACOG
 			0.02,	//CHEEKPIECE
@@ -2253,12 +2259,12 @@ class CfgObjectLoot {
 			0.25,	//Arrow Fire
 			0.25,	//Arrow Tranq
 			0.10,	//Arrow Poison
-			0.02,    //BP_10Rnd_303_JSP_Mag
-			0.02,   //BP_762x54_7N1_10rnd
-			0.02,    //BP_762x54_7N13_10rnd
-			0.01,   //BP_556x45_Stanag_Tracer
+			0.04,    //BP_10Rnd_303_JSP_Mag
+			0.04,   //BP_762x54_7N1_10rnd
+			0.04,    //BP_762x54_7N13_10rnd
+			0.03,   //BP_556x45_Stanag_Tracer
 			0.10, 	//Bandolier Mid
-			0.07	//100RND BOX GRENDEL
+			0.07	//100RND BOX 127x99
 		};
 	};
 	
@@ -2267,7 +2273,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_ATMine_Mag","magazine"},
-			//{"BP_TripMine_Mag","magazine"},
+			{"BP_TripMine_Mag","magazine"},
 			{"BP_M4_300MK","weapon"},
 			{"BP_MX_SW","weapon"},
 			{"BP_Minimi_HG","weapon"},
@@ -2293,7 +2299,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.01,	//ATMine
-			//0.01,	//TripMine
+			0.02,	//TripMine
 			0.03,	//M4_300MK
 			0.02,	//MXSW
 			0.02,	//M249
@@ -2303,7 +2309,7 @@ class CfgObjectLoot {
 			0.09,	//FNFAL
 			0.03,	//FNFALK
 			0.01, 	//M21
-			0.02, 	//MK12MOD1
+			0.01, 	//MK12MOD1
 			0.02, 	//1911DES
 			0.02,	//M40A3
 			0.13,   //MP5
@@ -2336,9 +2342,9 @@ class CfgObjectLoot {
 			{"BP_Bergen_tre","backpack"},
 			{"BP_Bergen_sgg","backpack"},
 			{"BP_Bergen_rgr","backpack"},
-			{"BP_StoneGhillie","uniform"},
-			{"BP_TreeGhillie","uniform"},
-			{"BP_DirtGhillie","uniform"},
+			{"BP_Survivalist_4_Stone","uniform"},
+			{"BP_Survivalist_4_Tree","uniform"},
+			{"BP_Survivalist_4_Dirt","uniform"},
 			{"BP_Carryall_mcamo","backpack"},
 			{"BP_Carryall_blk","backpack"},					
 			{"BP_optic_ACOG","toolbelt"},
@@ -2510,8 +2516,7 @@ class CfgObjectLoot {
 			{"BP_5Rnd_Mauser_Mag","magazine"},
 			{"BP_10Rnd_65x39","magazine"},
 			{"BP_10Rnd_303_Mag","magazine"},
-			{"V_BandollierB_oli_BP","vest"},
-			{"BP_Binocular_Hunter","weaponNA"},
+			{"V_BandollierB_oli_BP","vest"}
 		};
 		itemChance[] =	{
 			0.04,   //45GOV
@@ -2534,8 +2539,7 @@ class CfgObjectLoot {
 			0.01,   //5RND 762
 			0.02,   //10RND GRENDEL
 			0.10,    //10RND 303 BRIT
-			0.07,	//Bandolier Mid
-			0.02,   //BP_Binocular_Hunter
+			0.07	//Bandolier Mid
 		};
 	};
 	
@@ -2707,9 +2711,6 @@ class CfgObjectLoot {
 			{"ItemSoda3","magazine"},
 			{"ItemSoda4","magazine"},
 			{"ItemSoda5","magazine"},
-			{"ItemCereal4","magazine"},
-			{"ItemCereal5","magazine"},
-			{"ItemCereal6","magazine"},
 			{"ItemCan1","magazine"},
 			{"ItemCan2","magazine"},
 			{"ItemCan3","magazine"},
@@ -2724,8 +2725,8 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.01,	//M21
-			0.02,	//Kar98 Scoped
-			0.02,   //ENFIELD SCOPED
+			0.03,	//Kar98 Scoped
+			0.03,   //ENFIELD SCOPED
 			0.04,	//Tripmine
 			0.04,	//BearTrap
 			0.02,	//Camping Pack
@@ -2744,9 +2745,9 @@ class CfgObjectLoot {
 			0.01, 	//Rifle Woodland camo
 			0.01, 	//Rifle Desert camo
 			0.03, 	//Axe
-			0.05,   //Morphine
-			0.05,	//FIELD DRESSING
-			0.05,	//ANTIBIOTIC
+			0.03,   //Morphine
+			0.03,	//FIELD DRESSING
+			0.03,	//ANTIBIOTIC
 			0.02,   //SURGERY KIT
 			0.03,   //Adrenaline
 			0.04,	//KNIFE
@@ -2764,14 +2765,11 @@ class CfgObjectLoot {
 			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//FOOD
-			0.01,	//FOOD
-			0.01,	//FOOD
-			0.01,	//FOOD
 			0.05,	//303_JSP_Mag
-			0.05,	//Mauser_Mag
+			0.06,	//Mauser_Mag
 			0.04,	//762x54_7N13
 			0.04,	//762x54_7N1
-			0.01,	//HandGrenade
+			0.02,	//HandGrenade
 			0.04	//BP_M84_Flash
 		};
 	};

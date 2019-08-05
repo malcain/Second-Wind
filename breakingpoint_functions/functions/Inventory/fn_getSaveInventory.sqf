@@ -99,7 +99,7 @@ _itemsVest = (getItemCargo vestContainer _unit) call BP_fnc_cargoToPairs;
 _itemsBackpack = (getItemCargo backpackContainer _unit) call BP_fnc_cargoToPairs;
 	
 // Extra Weapons and Binoculars / Range Finders
-_extraWeaponClasses = ["Binocular","Rangefinder"];	
+_extraWeaponClasses = ["Binocular","Rangefinder","BP_Binocular_Hunter"];	
 _extraWeapons = [];
 {
 	if (_x in _extraWeaponClasses) then {

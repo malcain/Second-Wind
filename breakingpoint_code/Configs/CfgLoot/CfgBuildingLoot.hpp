@@ -669,8 +669,9 @@ class CfgBuildingLoot
 			{"BP_Bag1","object","Generic"},
 			{"BP_Sack","object","Supermarket"},
 			{"BP_WeathCrateBigWRN","object","WindmillWpn"},
-			{"BP_WeathCrateWRN","object","Castle"},
+			{"BP_WeathCrateBigWRN","object","Castle"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
+			{"BP_WeathCrateWRN","object","WindmillAcc"},
 			{"BP_WeathCrateSmallWRN","object","WindmillAcc"}
 		};
 		itemChance[] =	{
@@ -680,7 +681,8 @@ class CfgBuildingLoot
 			0.08,   //WINDMILL WPN
 			0.07,   //Castle
 			0.01,   //SURPLUS WPN
-			0.30    //WINDMILL ACC 
+			0.15,   //WINDMILL ACC
+			0.15    //WINDMILL ACC
 		};		
 	};	
 	class Farm: Default {
@@ -702,6 +704,7 @@ class CfgBuildingLoot
 			{"ItemWaterTape","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemNails","magazine"},
+			{"PartWoodPile","magazine"},
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BP_6Rnd_45_Mag","magazine"},
 			{"BP_6Rnd_44Mag","magazine"},
@@ -741,17 +744,18 @@ class CfgBuildingLoot
 			{"BP_5Rnd_3006_Mag","magazine"}
 		};
 		itemChance[] =	{
-			0.05,   //BP_Bag1
-			0.05,   //BP_Sack
-			0.05,   //BP_WreckedBox Trash
+			0.06,   //Generic
+			0.06,   //Generic
+			0.06,   //BP_WreckedBox Trash
 			0.08,   //BP_WindmillAcc
 			0.01,   //SURPLUS WPN
-			0.05,    //BP_WreckedBox Farm
-			0.15,    //BP_Farm
+			0.06,    //BP_WreckedBox Farm
+			0.17,    //BP_Farm
 			0.01,	//JERRY CAN
 			0.01,	//WATER TAPE
 			0.01,	//BANDAGE
 			0.01,   //NAILS
+			0.01,   //Woodpile
 			0.01,	//BANDOLIER	
 			0.01,	//45 MAG ROUNDS
 			0.01,	//44 MAG ROUNDS
@@ -1238,8 +1242,8 @@ class CfgBuildingLoot
 	};	
 	class MilitaryAirfield: Default {
 		zombieChance = 1;
-		minroaming = 5;
-		maxRoaming = 7;
+		minroaming = 0;
+		maxRoaming = 3;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -1320,8 +1324,8 @@ class CfgBuildingLoot
 	};
 	class MilitaryRanger: Default {
 		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -1345,8 +1349,8 @@ class CfgBuildingLoot
 
 	class GhostHotelAcc: Default {
 		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -1374,8 +1378,8 @@ class CfgBuildingLoot
 	
 	class GhostHotelWpn: Default {
 		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.05;
 		lootPos[] = {};
@@ -1423,7 +1427,7 @@ class CfgBuildingLoot
 			{"BP_Zafir","weapon"},
 			{"V_RebreatherB","vest"},
 			{"BP_MK20_GL","weapon"},
-			{"BP_StoneGhillie","uniform"},
+			{"BP_Survivalist_4_Stone","uniform"},
 			{"BP_MXM_black","weaponA"},
 			{"BP_MXM","weapon"},
 			{"BP_MXC","weapon"},
@@ -1486,7 +1490,7 @@ class CfgBuildingLoot
 			{"AmmoBoxSmall_556","object"},
 			{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_camo_BP","vest"},
-			{"BP_DirtGhillie","uniform"},
+			{"BP_Survivalist_4_Dirt","uniform"},
 			{"BP_M24Spec","weaponA"},
 			{"BP_MK20Spec","weaponA"},
 			{"BP_M110","weapon"},
@@ -1638,8 +1642,8 @@ class CfgBuildingLoot
 	};
 	class Castle: Default {
 		zombieChance = 0.4;
-		minRoaming = 1;
-		maxRoaming = 4;
+		minRoaming = 0;
+		maxRoaming = 1;
 		zombieClass[] = {"z_soldier_pilot"};
 		lootChance = 0.75;
 		lootPos[] = {};
@@ -1685,8 +1689,8 @@ class CfgBuildingLoot
 	};
 	class ApexMilBox1: Default {
 		zombieChance = 1;
-		minRoaming = 5;
-		maxRoaming = 7;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.50;
 		lootPos[] = {};
@@ -1772,8 +1776,8 @@ class CfgBuildingLoot
 	
 	class ApexMilBox2: Default {
 		zombieChance = 1;
-		minRoaming = 20;
-		maxRoaming = 20;
+		minRoaming = 0;
+		maxRoaming = 2;
 		zombieClass[] = {"BPZombie_Rebel1","BPZombie_Rebel2","BPZombie_RebelImp3","BPZombie_Guardian1","BPZombie_Guardian2","BPZombie_GuardianImp3","BPZombie_Survivalist1","BPZombie_Survivalist2","BPZombie_SurvivalistImp3","BPZombie_Refugee1","BPZombie_Refugee2","BPZombie_RefugeeImp3","BPZombie_Hunter1","BPZombie_Hunter2","BPZombie_HunterImp3"};
 		lootChance = 0.50;
 		lootPos[] = {};
@@ -1801,6 +1805,29 @@ class CfgBuildingLoot
 		};
 	};
 	
+	class Greenhouse: Default {
+		zombieChance = 0;
+		minRoaming = 0;
+		maxRoaming = 0;
+		zombieClass[] = {"z_soldier_pilot"};
+		lootChance = 0.85;
+		lootPos[] = {};
+		itemType[] =	{		
+			{"ItemPlate1","magazine"},   //Plate
+			{"ItemPlate2","magazine"},   //Plate2
+			{"ItemRock","magazine"},   //Rock
+			{"FoodPumpkin","magazine"},
+			{"FoodMushroom","magazine"}
+		};
+		itemChance[] =	{
+			0.11,	//Plate
+			0.11,	//Plate2
+			0.11,	//Rock
+			0.35,	//FoodPumpkin
+			0.32	//FoodMushroom
+		};
+	};
+	
 	class Stalker: Default {
 		zombieChance = 0;
 		minRoaming = 0;
@@ -1810,23 +1837,23 @@ class CfgBuildingLoot
 		lootPos[] = {};
 		itemType[] =	{		
 			{"BP_Bag3","object","Stalker"},
-			{"BP_AWSM","weapon"},
 			{"BP_SVDK_WDL","weaponA"},
 			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
 			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex 
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
 			{"BP_762Muzzle","toolbelt"},
-			{"ItemToiletPaper","magazine"}
+			{"ItemToiletPaper","magazine"},
+			{"ItemRock","magazine"}   //Rock
 		};
 		itemChance[] =	{
-			0.90,	//SuicideCrate
-			0.01,   //BP_AWSM
+			0.93,	//Stalker
 			0.01,   //BP_SVDK_WDL
 			0.01,	//Type 115 Green Hex
 			0.01,	//Type 115 Hex
 			0.01,	//Gendarmerie Vest
 			0.01,	//7.62 Muzzle
-			0.02	//ToiletPaper
+			0.02,	//ToiletPaper
+			0.02	//Rock
 		};
 	};
 	
@@ -1870,6 +1897,7 @@ class CfgBuildingLoot
 			{"BP_ContrabandBox","object","SurvivorCrate"},
 			{"BP_ContrabandBoxEmpty","object","AmmoPalletTroll"},
 			{"BP_SVD_DES","weapon"},
+			{"BP_AWSM","weapon"},
 			{"BP_arifle_AKM_FL_F"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
@@ -1879,12 +1907,17 @@ class CfgBuildingLoot
 			{"V_Chestrig_blk_BP","vest"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_CZSup_br","toolbelt"},
-			{"BP_PPK","weapon"}
+			{"BP_PPK","weapon"},
+			{"BP_SVDK_WDL","weaponA"},
+			{"BP_arifle_ARX_ghex_F","weapon"},  //Type 115 Green Hex
+			{"BP_arifle_ARX_hex_F","weapon"},  //Type 115 Hex
+			{"BP_762Muzzle","toolbelt"}
 		};
 		itemChance[] =	{
 			0.70,	//SurvivorCrate
 			0.20,	//Empty SurvivorCrate
 			0.01,   //SVD_DES
+			0.01,   //BP_AWSM
 			0.01,   //AKM_FL_F
 			0.01,   //Kar98 Scoped
 			0.01,   //LeeEnfieldK Scoped
@@ -1893,8 +1926,12 @@ class CfgBuildingLoot
 			0.01,   //TacVest_camo
 			0.01,   //Chestrig_blk
 			0.01,   //R7Sup
-			0.01,    //CZSup
-			0.01    //Walter PPK suppressed
+			0.01,   //CZSup
+			0.01,   //Walter PPK suppressed
+			0.01,   //BP_SVDK_WDL
+			0.01,   //Type 115 Green Hex
+			0.01,   //Type 115 Hex
+			0.01   //762Muzzle
 		};
 	};
 	

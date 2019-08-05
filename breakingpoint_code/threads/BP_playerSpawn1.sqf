@@ -16,7 +16,7 @@ waitUntil
 {
 	_camPos = positionCameraToWorld [0,0,0];
 	
-	if (((_lastPos distance _camPos) > 175) || {(diag_tickTime - _lastSpawnCheck) > 45}) then
+	if (((_lastPos distance _camPos) > 135) || {(diag_tickTime - _lastSpawnCheck) > 35}) then
 	{
 		_lastSpawnCheck = diag_tickTime;
 		_lastPos = _camPos;
@@ -68,7 +68,7 @@ waitUntil
 					((BP_RadioChannels select 2)+5) enableChannel [false, false];
 					((BP_RadioChannels select 3)+5) enableChannel [true, false];
 				};
-				case 8: { //Scavenger
+				case 6: { //Scavenger
 					((BP_RadioChannels select 1)+5) enableChannel [false, false];
 					((BP_RadioChannels select 4)+5) enableChannel [true, false];
 				};
@@ -77,17 +77,17 @@ waitUntil
 	};
 	
 	_position = getPosATL player;
-	BP_NearbyLootBox = _position nearEntities ["BP_LootBox",275];
-	BP_NearbyLootBox = BP_NearbyLootBox + (_position nearObjects ["GroundWeaponHolder_Scripted",275]);
+	BP_NearbyLootBox = _position nearEntities ["BP_LootBox",300];
+	BP_NearbyLootBox = BP_NearbyLootBox + (_position nearObjects ["GroundWeaponHolder_Scripted",300]);
 	
 	BP_NearbyLootNum = {
 		_distanceTo = player distance _x;
 		if (isObjectHidden _x) then {
-			if (_distanceTo < 65) then {
+			if (_distanceTo < 75) then {
 				_x hideobject false;
 			};
 		} else {
-			if (_distanceTo >= 65 && {[_x] call BP_fnc_isInsideBuilding}) then {
+			if (_distanceTo >= 75 && {[_x] call BP_fnc_isInsideBuilding}) then {
 				_x hideobject true;
 			};
 		};

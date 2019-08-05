@@ -56,6 +56,9 @@ if (_finished) then
 	
 	//Loot Remains
 	[(netID player),(netID _body)] remoteExecCall ["BPServer_fnc_playerLoot",2];
+	
+	player removeAction s_player_lootbody;
+	s_player_lootbody = -1;
 } else {
 	r_interrupt = false;
 	player switchMove "";

@@ -57,7 +57,7 @@ if (_unit isKindOf "BP_DeadBody") then
 			case "AssignedItems":
 			{
 				{
-					if (_x in ["Binocular","Rangefinder"]) then {
+					if (_x in ["Binocular","Rangefinder","BP_Binocular_Hunter"]) then {
 						_unit addWeaponCargoGlobal [_x,1];
 					} else {
 						_unit addItemCargoGlobal [_x,1];

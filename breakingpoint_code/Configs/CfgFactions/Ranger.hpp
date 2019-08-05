@@ -54,7 +54,7 @@ class Ranger : BP_BaseFaction
 				clothing[] = {"BP_Guardian_F"};
 				backpack[] = {};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_F"};
+				uniform[] = {"BP_Guardian_F",""};
 				headgear[]={""};
 				nvg[]={""};
 				facewear[]={""};
@@ -83,7 +83,7 @@ class Ranger : BP_BaseFaction
 				clothing[] = {"BP_Guardian_1"};
 				backpack[] = {"BP_AssaultPack_blk"};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_1"};
+				uniform[] = {"BP_Guardian_1",""};
 				headgear[]={""};
 				nvg[]={""};
 				facewear[]={""};
@@ -117,7 +117,7 @@ class Ranger : BP_BaseFaction
 				clothing[] = {"BP_Guardian_2"};
 				backpack[] = {"BP_FieldPack_blk"};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_2"};
+				uniform[] = {"BP_Guardian_2",""};
 				headgear[]={""};
 				nvg[]={""};
 				facewear[]={""};
@@ -149,12 +149,12 @@ class Ranger : BP_BaseFaction
 				launcher[] = {};
 				handgun[] = {"BP_1911"};
 				clothing[] = {"BP_Guardian_3"};
-				backpack[] = {"BP_Mpack"};
+				backpack[] = {"BP_FieldPack_Ranger"};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_3"};
+				uniform[] = {"BP_Guardian_3",""};
 				headgear[]={""};
 				nvg[]={""};
-				facewear[]={""};
+				facewear[]={"","G_Aviator"};
 			};
 			class Uniform : BP_BaseGear  {
 				//Array Of Weapons Inside Uniform
@@ -170,7 +170,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Backpack
 				weapons[] = {};
 				//Array Of Magazines Inside Backpack
-				magazines[] = {};
+				magazines[] = {"ItemMorphine","ItemMorphine","ItemFieldDressing","ItemFieldDressing"};
 				//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -184,12 +184,12 @@ class Ranger : BP_BaseFaction
 				launcher[] = {};
 				handgun[] = {"BP_1911"};
 				clothing[] = {"BP_Guardian_4"};
-				backpack[] = {"BP_Mpack"};
-				vest[] = {};
-				uniform[] = {"BP_Guardian_4","BP_Guardian_Ind_4"};
+				backpack[] = {""};
+				vest[] = {"V_RangerVest_BP"};
+				uniform[] = {"BP_Guardian_4","BP_Guardian_Ind_4",""};
 				headgear[] = {""};
 				nvg[] = {""};
-				facewear[] = {""};
+				facewear[] = {"","G_Aviator"};
 			};
 			class Uniform : BP_BaseGear  {
 				//Array Of Weapons Inside Uniform
@@ -197,7 +197,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Magazines Inside Uniform
 				magazines[] = {"BP_7Rnd_45acp","BP_7Rnd_45acp"};
 				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
-				items[] = {};
+				items[] = {"G_Aviator"};
 			};
 			class Vest : BP_BaseGear {};
 			class Backpack : BP_BaseGear 
@@ -333,43 +333,49 @@ class Ranger : BP_BaseFaction
 				Level_0 = 50;
 				Level_1 = 50;
 				Level_2 = 75;
-				Level_3 = 150;
+				Level_3 = 125;
 				Level_4 = 150;
+				Dog = 10;
 			};
 			class Ranger {
-				Level_0 = 150;
+				Level_0 = 50;
 				Level_1 = -1000;
 				Level_2 = -2000;
 				Level_3 = -3000;
 				Level_4 = -3000;
+				Dog = -25;
 			};
 			class Outlaw {
 				Level_0 = 50;
-				Level_1 = 50;
+				Level_1 = 75;
 				Level_2 = 100;
 				Level_3 = 150;
 				Level_4 = 200;
+				Dog = 10;
 			};
 			class Hunter {
-				Level_0 = 75;
-				Level_1 = 75;
+				Level_0 = 50;
+				Level_1 = 50;
 				Level_2 = 125;
 				Level_3 = 175;
-				Level_4 = 250;
+				Level_4 = 200;
+				Dog = 10;
 			};
 			class Nomad {
-				Level_0 = 100;
+				Level_0 = 40;
 				Level_1 = -500;
 				Level_2 = -1000;
 				Level_3 = -2500;
 				Level_4 = -2500;
+				Dog = -25;
 			};
 			class Survivalist {
-				Level_0 = 100;
+				Level_0 = 40;
 				Level_1 = -500;
 				Level_2 = -1000;
 				Level_3 = -2000;
 				Level_4 = -2000;
+				Dog = -25;
 			};
 		};
 	};

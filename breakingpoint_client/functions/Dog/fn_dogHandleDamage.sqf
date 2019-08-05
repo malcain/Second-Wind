@@ -62,7 +62,7 @@ _scale = 100;
 /// Player Damage
 if (_ammo != "zombie") then {
 	_scale = _scale + 50;
-	if (_damage > 0.01) then 
+	if (_damage > 0.02) then 
 	{
 		//Headshot
 		//if (_isHeadHit) then { _scale = _scale + 375; };
@@ -81,11 +81,8 @@ if (_ammo != "zombie") then {
 };
 
 // Blood Damage
-if (_damage > 0.01) then 
+if (_damage > 0.02) then 
 {
-	//Enable aggressor Actions
-	if (_source isKindOf "CAManBase") then { _dog setVariable ["killer",_source]; };
-
 	//Calculate Blood Loss
 	private "_bloodLoss";
 	_bloodLoss = (_damage * _scale);
@@ -95,6 +92,13 @@ if (_damage > 0.01) then
 	
 	if (_blood < 8000 && {!_lowBlood}) then { _dog setVariable ["med_lowBlood",true,true]; };
 
+	//Enable aggressor Actions
+	//if (_source isKindOf "CAManBase") then {
+	if (isPlayer _source) then {
+		_dog setVariable ["killer",_source];
+		[(netID _source),(netID player),_blood] remoteExecCall ["BP_fnc_dogHurt", 2];
+	};
+	
 	//Update Blood
 	_fsmID setFSMVariable ["_blood",_blood];
 };

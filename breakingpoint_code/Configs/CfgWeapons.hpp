@@ -1307,7 +1307,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_undbld_ref";
+			uniformClass = "BP_ScavengerF_F";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 40;
@@ -1322,7 +1322,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_undbld_ref";
+			uniformClass = "BP_ScavengerF_F";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 40;
@@ -1337,7 +1337,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_WKR_lite";
+			uniformClass = "BP_Scavenger1_F";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -1352,7 +1352,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_WKR_lite";
+			uniformClass = "BP_Scavenger1_F";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -1397,7 +1397,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_SDR_snip_crow";
+			uniformClass = "BP_Scavenger3_F";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -1413,7 +1413,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_SDR_snip_bld";
+			uniformClass = "BP_Scavenger4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -1429,7 +1429,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "FRITH_RUIN_SDR_snip_hawk";
+			uniformClass = "BP_Scavenger4Hawk_F";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -2290,7 +2290,7 @@ class CfgWeapons
 		scope = 2;
 		displayName = "Equipment Harness";
 		descriptionShort = "Medium capacity, light armor";
-		picture = "\A3\characters_f\Data\UI\icon_V_HarnessOUGL_gry_CA.paa";
+		picture = "\A3\characters_f_beta\Data\UI\icon_V_HarnessOU_gry_CA.paa";
 		model = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
 		hiddenSelections[] = {"Camo1","Camo2"};
 		hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa","\A3\Characters_F\OPFOR\Data\tech_oucamo_co"};

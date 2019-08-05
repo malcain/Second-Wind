@@ -28,7 +28,7 @@ if (typeName _msgID == "STRING") then {
 			_msg = "This player is not thirsty.";
 		};
 		case 4: {
-			_msg = "No points gained, player still recovering from wounds.";
+			_msg = "No points gained, player is still recovering from wounds.";
 		};
 		case 5: {
 			_msg = "No Points are gained on this map.";
@@ -75,6 +75,9 @@ if (typeName _msgID == "STRING") then {
 		//Start capture.
 		case 16: {
 			_msg = "Code requests for schemes sent. Capturing started.";
+		};
+		case 17: {
+			_msg = "No points gained, dog is still recovering from wounds.";
 		};
 	};
 

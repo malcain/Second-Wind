@@ -188,7 +188,7 @@ switch true do {
 if (!_valid or {_attachPos isEqualTo []}) exitwith {
 	_dogHandle = player getVariable ["dogID", 0];
 	_dog playMoveNow "Dog_Idle_Bark";
-	[_dog,"dog_growl",0,false] call BP_fnc_objSpeak;
+	[_dog,"dog_fail",0,false] call BP_fnc_objSpeak;
 	_dogHandle setFSMVariable ["_command","return"];
 };
 

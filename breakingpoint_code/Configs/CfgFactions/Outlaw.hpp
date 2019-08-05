@@ -112,7 +112,7 @@
 					clothing[] = {"BP_Rebel_2"};
 					backpack[] = {"BP_Rpack"};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_2"};
+					uniform[] = {"BP_Rebel_2",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -147,7 +147,7 @@
 					clothing[] = {"BP_Rebel_3"};
 					backpack[] = {"BP_Rpack2"};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_3"};
+					uniform[] = {"BP_Rebel_3",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""}; //"CUP_FR_NeckScarf5", "CUP_FR_NeckScarf2"
@@ -181,7 +181,7 @@
 					clothing[] = {"BP_Rebel_4"};
 					backpack[] = {"BP_Rpack2"};
 					vest[]={};
-					uniform[] = {"BP_Rebel_4","BP_Rebel_4_Agenda","BP_Rebel_4_Orange","BP_Rebel_4_ChocChip","BP_Rebel_4_Classic"};
+					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip",""};
 					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4"};
@@ -336,13 +336,15 @@
 					Level_2 = -500;
 					Level_3 = -1200;
 					Level_4 = -1700;
+					Dog = -25;
 				};
 				class Ranger {
-					Level_0 = 50;
+					Level_0 = 25;
 					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 175;
 					Level_4 = 200;
+					Dog = 20;
 				};
 				class Outlaw {
 					Level_0 = 75;
@@ -350,27 +352,31 @@
 					Level_2 = -600;
 					Level_3 = -1500;
 					Level_4 = -2000;
+					Dog = -25;
 				};
 				class Hunter {
-					Level_0 = 25;
-					Level_1 = 25;
+					Level_0 = 50;
+					Level_1 = 50;
 					Level_2 = 100;
 					Level_3 = 200;
 					Level_4 = 250;
+					Dog = 20;
 				};
 				class Nomad {
 					Level_0 = 25;
-					Level_1 = 25;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 125;
 					Level_4 = 150;
+					Dog = 20;
 				};
 				class Survivalist {
 					Level_0 = 25;
-					Level_1 = 25;
-					Level_2 = 50;
+					Level_1 = 50;
+					Level_2 = 75;
 					Level_3 = 125;
 					Level_4 = 150;
+					Dog = 20;
 				};
 			};
 		};

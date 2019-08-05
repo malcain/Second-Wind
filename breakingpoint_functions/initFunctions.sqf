@@ -584,7 +584,7 @@ if (_recompile == 3) then
 				
 				//Add Mission Event Handler
 				addMissionEventHandler ["Draw3D",{_this call BP_fnc_onDraw3D}];
-				addMissionEventHandler ["Map", {params ["_isOpened","_isForced"]; [_isOpened,_isForced] call BP_fnc_mapOpened}];
+				//addMissionEventHandler ["Map", {params ["_isOpened","_isForced"]; [_isOpened,_isForced] call BP_fnc_mapOpened}];
 				eh_parkour = [];
 				addMissionEventHandler ["EachFrame", {call BP_fnc_handleEHs}];
 				call BP_fnc_initParkour;

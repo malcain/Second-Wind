@@ -37,7 +37,8 @@ if (_hasPatient and !r_action and !_inVehicle and !r_player_unconscious and _isC
 	_hasEtool = 	"ItemEtool" in weapons player;
 	_hasWire = 		"ItemWire" in magazines player;
 	_hasPainkillers = 	"ItemPainkiller" in magazines player;
-	_hasMedBackpack = ("BP_Mpack" == (backpack player));
+	//_hasMedBackpack = ("BP_Mpack" == (backpack player) or {"V_RangerVest_BP" == (vest player)});
+	_hasMedBackpack = ("V_RangerVest_BP" == (vest player));
 	_isPlayer = (isPlayer _menClose);
 
 	if (_injured && {_hasBandage} && {_isPlayer}) then {

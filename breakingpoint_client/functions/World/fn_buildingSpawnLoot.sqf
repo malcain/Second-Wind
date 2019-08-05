@@ -71,7 +71,7 @@ private "_lootRnd";
 if (_lootMin == _lootMax) then {
 	_lootRnd = _lootMax;
 } else {
-	_lootRnd = round (random _lootMax);
+	_lootRnd = _lootMin + round (random _lootMax) min _lootMax;
 };
 if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
 if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };

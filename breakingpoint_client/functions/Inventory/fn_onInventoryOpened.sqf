@@ -224,7 +224,13 @@ if (!_return) then
 		{
 			_lootSpawned = _container getVariable ["lootSpawned",false];
 			if !(_lootSpawned) then {
-				[(netID _container)] remoteExecCall ["BPServer_fnc_containerOpened",2];
+				//Scavenger point gain for looting
+				_class = player getVariable ["class",0];
+				if (_class == 6) then {
+					[(netID _container),(netID player)] remoteExecCall ["BPServer_fnc_containerOpened",2];
+				} else {
+					[(netID _container)] remoteExecCall ["BPServer_fnc_containerOpened",2];
+				};
 				_container setVariable ["lootSpawned",true];
 			};
 		};

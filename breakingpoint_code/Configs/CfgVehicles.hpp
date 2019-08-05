@@ -11,6 +11,7 @@ class SmallFire;
 class Thing;
 class UniformSlotInfo;
 class WeaponCloudsMGun;
+class ViewPilot;
 
 class CfgVehicles 
 {
@@ -183,7 +184,9 @@ class CfgVehicles
 	};
 	
 	class B_Heli_Transport_03_unarmed_F;
-	class BP_Chinook : B_Heli_Transport_03_unarmed_F {};
+	class BP_Chinook : B_Heli_Transport_03_unarmed_F {
+		displayName = "Chinook";
+	};
 	
 	//Fire Objects
 	class test_EmptyObjectForFireBig;
@@ -681,7 +684,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\rvg_tactical.paa"};
 	};
 	
-	//
+	//Field pack
 
 	class BP_FieldPack_blk: BP_FieldPack_Base {
 		scope = 2;
@@ -706,6 +709,12 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = {"\A3\weapons_f\ammoboxes\bags\data\backpack_gorod_cbr_co.paa"};
 		displayName = "Activity Rucksack (Tan)";
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Gorod_cbr_ca.paa";
+	};
+	
+	class BP_FieldPack_Ranger: BP_FieldPack_Base {
+		scope = 2;
+		displayName = "Activity Rucksack (Ranger)";
+		hiddenSelectionsTextures[] = {"\A3\Supplies_F_Enoch\bags\data\backpack_gorod_RUkhk_co.paa"};
 	};
 	
 	//ENVIRO FP
@@ -984,6 +993,14 @@ class CfgVehicles
 	class CAManBase;
 	class BP_Man : CAManBase
 	{
+		extCameraPosition[] = { 0.200000, -0.110000, -0.700000  };
+		//extCameraParams[] = { 0.5, 10, 50, 0.5, 1, 10, 30, 0, 1 };
+		class ViewPilot: ViewPilot
+        {
+            MinFov=0.45;//="tan(atan(0.75) / 1)";  def 0.25;
+            MaxFov=0.75;//="tan(atan(0.75) / 1)";  def 1.25;
+            InitFov=0.75;//="tan(atan(0.75) / 1)";  def 0.75;
+        };
 		class HitPoints 
 		{
 			class HitFace {
@@ -1171,7 +1188,7 @@ class CfgVehicles
 		textPlural = "";
 		nameSound = "";
 	};
-	class BP_Ranger1 : BP_Player
+	/*class BP_Ranger1 : BP_Player
 	{
 		class HitPoints 
 		{
@@ -1181,66 +1198,42 @@ class CfgVehicles
 				name = "pelvis";
 				passThrough = 0.100000;
 				radius = 0.200000;
-				explosionShielding = 2;
+				explosionShielding = 1;
 				visual = "injury_body";
-				minimalHit = 0.01;
-				depends="0";
+				minimalHit = 0.010000;
 			};
-
+			
 			class HitAbdomen: HitPelvis {
 				armor = 1;
 				material = -1;
 				name = "spine1";
-				passThrough = 0.10000;
+				passThrough = 0.100000;
 				radius = 0.0250000;
 				explosionShielding = 1;
 				visual = "injury_body";
-				minimalHit = 0.1;
+				minimalHit = 0.010000;
 			};
 
 			class HitDiaphragm: HitAbdomen {
 				armor = 1;
 				material = -1;
 				name = "spine2";
-				passThrough = 0.10000;
+				passThrough = 0.100000;
 				radius = 0.0250000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.1;
+				minimalHit = 0.010000;
 			};
 
 			class HitChest: HitDiaphragm {
 				armor = 1;
 				material = -1;
 				name = "spine3";
-				passThrough = 0.10000;
+				passThrough = 0.100000;
 				radius = 0.050000;
 				explosionShielding = 6;
 				visual = "injury_body";
-				minimalHit = 0.1;
-			};
-
-			class HitBody: HitChest {
-				armor = 1;
-				material = -1;
-				name = "body";
-				passThrough = 0.10000;
-				radius = 0.150000;
-				explosionShielding = 6;
-				visual = "injury_body";
-				minimalHit = 0.1;
-				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
-			};
-
-			class HitLegs {
-				armor = 1;
-				material = -1;
-				name = "legs";
-				passThrough = 0.1;
-				radius = 0.090000;
-				explosionShielding = 1;
-				visual = "injury_legs";
-				minimalHit = 0.010000;
+				minimalHit = 0.01;
 			};
 		};
 	};
@@ -1249,18 +1242,6 @@ class CfgVehicles
 	{
 		class HitPoints 
 		{
-			class HitPelvis {
-				armor = 1;
-				material = -1;
-				name = "pelvis";
-				passThrough = 0.100000;
-				radius = 0.200000;
-				explosionShielding = 2;
-				visual = "injury_body";
-				minimalHit = 0.01;
-				depends="0";
-			};
-
 			class HitAbdomen: HitPelvis {
 				armor = 2;
 				material = -1;
@@ -1323,18 +1304,6 @@ class CfgVehicles
 	{
 		class HitPoints 
 		{
-			class HitPelvis {
-				armor = 1;
-				material = -1;
-				name = "pelvis";
-				passThrough = 0.100000;
-				radius = 0.200000;
-				explosionShielding = 2;
-				visual = "injury_body";
-				minimalHit = 0.01;
-				depends="0";
-			};
-
 			class HitAbdomen: HitPelvis {
 				armor = 2;
 				material = -1;
@@ -1465,7 +1434,7 @@ class CfgVehicles
 				minimalHit = 0.020000;
 			};
 		};
-	};
+	};*/
 	
 	/*
 	class CAManBase : Man {
@@ -3392,7 +3361,7 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
-	class BP_Guardian1_F: BP_Ranger1 {
+	class BP_Guardian1_F: BP_Player {
 		scope = 2;
 		displayName = "Guardian 1";
 		uniformClass = "BP_Guardian_1";
@@ -3411,7 +3380,7 @@ class CfgVehicles
 		moves = "CfgMovesZombieSdr";
 	};
 	
-	class BP_Guardian2_F: BP_Ranger2 {
+	class BP_Guardian2_F: BP_Player {
 		scope = 2;
 		displayName = "Guardian 2";
 		uniformClass = "BP_Guardian_2";
@@ -3431,7 +3400,7 @@ class CfgVehicles
 		canHideBodies = 0;
 	};
 	
-	class BP_Guardian3_F: BP_Ranger3 {
+	class BP_Guardian3_F: BP_Player {
 		scope = 2;
 		displayName = "Guardian 3";
 		uniformClass = "BP_Guardian_3";
@@ -3496,7 +3465,7 @@ class CfgVehicles
 	selectionGlasses = "brejle";
 };*/
 
-	class BP_Guardian4_F: BP_Ranger4 {
+	class BP_Guardian4_F: BP_Player {
 		scope = 2;
 		displayName = "Guardian 4";
 		uniformClass = "BP_Guardian_4";
@@ -3660,10 +3629,23 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Traitor Scavenger";
 		uniformClass = "BP_Scavenger_F";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		model="\A3\characters_F\Common\basicbody.p3d";
 		side = 13;
-		hiddenSelections[] = {"Camo","Insignia"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
+		hiddenSelections[]=
+		{
+			"camo",
+			"hl"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_fabpants_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_fabpants.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+		};
 	};
 	
 	class BP_Scavenger1_F: BP_Player
@@ -3671,10 +3653,26 @@ class CfgVehicles
 		scope = 2;
 		displayName="Scavenger 1";
 		uniformClass="BP_Scavenger_1";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
-		side=13;
-		hiddenSelections[] = {"Camo","Insignia"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
+		model="\A3\characters_F\civil\c_worker.p3d";
+		side = 13;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"hl"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_cloth1_wht_dpm_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_cloth3_lite_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_cloth1_rags.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_cloth3_rags.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+		};
 	};
 	
 	class BP_Scavenger2_F: BP_Player
@@ -3693,10 +3691,26 @@ class CfgVehicles
 		scope=2;
 		displayName = "Scavenger 3";
 		uniformClass = "BP_Scavenger_3";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		model = "\A3\characters_F_beta\indep\ia_sniper.p3d";
 		side = 13;
-		hiddenSelections[] = {"Camo","Insignia"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo3",
+			"hl"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltrdrk_co.paa",
+			"\friths_ruin_cloth\data\frith_ruin_ghillie_crow_co.paa",
+			"\friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"\friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
+			"\friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
+			"\friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+		};
 	};
 	
 	class BP_Scavenger4_F: BP_Player
@@ -3704,10 +3718,52 @@ class CfgVehicles
 		scope=2;
 		displayName = "Scavenger 4";
 		uniformClass = "BP_Scavenger_4";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		model = "\A3\characters_F_beta\indep\ia_sniper.p3d";
 		side = 13;
-		hiddenSelections[] = {"Camo","Insignia"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo3",
+			"hl"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\friths_ruin_cloth\data\frith_ruin_sdr_ltrred_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crowbld_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+		};
+	};
+	class BP_Scavenger4Hawk_F: BP_Player
+	{
+		scope=2;
+		displayName = "Scavenger 4 (Hawk)";
+		uniformClass = "BP_Scavenger4Hawk_F";
+		model = "\A3\characters_F_beta\indep\ia_sniper.p3d";
+		side = 13;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo3",
+			"hl"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_sdr_fabtan_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_hawk_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+		};
+		hiddenSelectionsMaterials[]=
+		{
+			"friths_ruin_cloth\data\frith_ruin_sdr_fab.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+		};
 	};
 	
 		//HUNTER
@@ -5382,8 +5438,8 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 3;
-		//hiddenSelections[] = {"Camo","Camo2","Camo3"};
-		//hiddenSelectionsTextures[] = {"\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_ext_blk_CO.paa","\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_ext_blk_CO.paa","\a3\Soft_F_Enoch\Offroad_01\Data\offroad_01_cover_blk_co.paa"};
+		hiddenSelections[] = {"Camo","Camo2","Camo3"};
+		hiddenSelectionsTextures[] = {"a3\soft_f_enoch\offroad_01\data\offroad_01_ext_ranger_co.paa","a3\soft_f_enoch\offroad_01\data\offroad_01_ext_ranger_co.paa","a3\soft_f_enoch\offroad_01\data\offroad_01_cover_ranger_co.paa"};
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.1;

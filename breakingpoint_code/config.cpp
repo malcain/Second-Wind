@@ -134,7 +134,7 @@ class CfgSurvival {
 		
 		/* Sheep */
 		class BP_Sheep_Base: Default {
-			yield = 4;
+			yield = 3;
 			rawfoodtype = "FoodMuttonRaw";
 		};
 		class BP_Sheep_1: BP_Sheep_Base {};
@@ -156,6 +156,10 @@ class CfgSurvival {
 		class BP_Rabbit: Default {
 			yield = 1;
 			rawfoodtype = "FoodrabbitRaw";
+		};
+		class Goat_random_F: Default {
+			yield = 3;
+			rawfoodtype = "FoodMuttonRaw";
 		};
 		class zZombie_Base : Default {
 			rawfoodtype = "FoodZombieRaw";

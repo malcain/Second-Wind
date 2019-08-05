@@ -8,6 +8,9 @@ if (count _ins isEqualTo 0) exitWith {surface_obj setpos [0,0,0]};
 
 if (isNull _obj) exitWith {surface_obj setpos [0,0,0]};
 
+_invalid = [["t_","b_"],str(_obj)] call BP_fnc_inStringArray;
+if (_invalid && {typeof _obj == ""}) exitwith {surface_obj setpos [0,0,0]};
+
 surface_obj setMass 0;
 surface_obj setPosASL _pos;
 surface_obj setVectorUp _surfno;

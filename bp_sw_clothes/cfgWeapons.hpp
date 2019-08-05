@@ -59,7 +59,162 @@ class cfgWeapons {
 			mass = 1;
 		};
 	};
+	
+	class HelmetBase: ItemCore
+	{
+		weaponPoolAvailable=1;
+		scope=0;
+		displayName="$STR_A3_H_HelmetB0";
+		picture="\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model="\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F\BLUFOR\Data\equip1_co.paa"
+		};
+		descriptionShort="$STR_A3_SP_NOARMOR";
+		class ItemInfo: HeadgearItem
+		{
+			mass=0;
+			uniformModel="\A3\Characters_F\BLUFOR\headgear_b_helmet_plain";
+			modelSides[]={3,1};
+			hiddenSelections[]=
+			{
+				"camo"
+			};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName="HitHead";
+					armor=0;
+					passThrough=1;
+				};
+			};
+		};
+	};
+class BP_Woolhat_blk: HelmetBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="BP_Woolhat_blk";
+		scope=2;
+		displayName="Woolhat black";
+		picture="\A3\characters_f\Data\UI\icon_H_Cap_beanie_CA.paa";
+		model="\bp_sw\bp_sw_clothes\Headgear\headgear_beaniehat01.p3d";
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\characters_f\common\data\woolhat_black_co.paa"
+		};
+		allowedFacewear[]=
+		{
+			"",
+			6,
+			"G_Aviator",
+			1,
+			"G_Bandanna_aviator",
+			1,
+			"G_Bandanna_beast",
+			1,
+			"G_Shades_Black",
+			1,
+			"G_Shades_Blue",
+			1,
+			"G_Shades_Red",
+			1,
+			"G_Shades_Green",
+			1
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Headgear\headgear_beaniehat01";
+			modelSides[]={6};
+		};
+	};
+	class BP_Woolcap_brn: BP_Woolhat_blk
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="BP_Woolcap_brn";
+		displayName="Woolhat brown";
+		picture="\A3\Characters_F_Bootcamp\Data\UI\icon_H_Watchcap_cbr_ca.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Bootcamp\Civil\Data\woolhat_brown_co.paa"
+		};
+		allowedFacewear[]=
+		{
+			"",
+			6.5,
+			"G_Aviator",
+			1,
+			"G_Shades_Black",
+			1,
+			"G_Shades_Blue",
+			1,
+			"G_Shades_Red",
+			1,
+			"G_Shades_Green",
+			1
+		};
+	};
+	class BP_Woolcap_khk: BP_Woolhat_blk
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="BP_Woolcap_khk";
+		displayName="Woolhat khaki";
+		picture="\A3\Characters_F_Bootcamp\Data\UI\icon_H_Watchcap_khk_ca.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Bootcamp\Civil\Data\woolhat_khk_co.paa"
+		};
+		allowedFacewear[]=
+		{
+			"",
+			6.5,
+			"G_Aviator",
+			1,
+			"G_Shades_Black",
+			1,
+			"G_Shades_Blue",
+			1,
+			"G_Shades_Red",
+			1,
+			"G_Shades_Green",
+			1
+		};
+	};
+	class BP_Woolcap_grn: BP_Woolhat_blk
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="BP_Woolcap_grn";
+		displayName="Woolhat green";
+		picture="\A3\Characters_F_Bootcamp\Data\UI\icon_H_Watchcap_camo_ca.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Characters_F_Bootcamp\Civil\Data\woolhat_green_co.paa"
+		};
+		allowedFacewear[]=
+		{
+			"",
+			6,
+			"G_Aviator",
+			1,
+			"G_Shades_Black",
+			1,
+			"G_Shades_Blue",
+			1,
+			"G_Shades_Red",
+			1,
+			"G_Shades_Green",
+			1
+		};
+	};
 };
+
 	class CfgGlasses
 {
 	class None;

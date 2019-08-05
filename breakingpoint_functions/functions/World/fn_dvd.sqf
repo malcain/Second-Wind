@@ -15,7 +15,7 @@ _center spawn {
  
 	sleep 1;
 
-	while {_distance < 1250} do {
+	while {_distance < 950} do {
 		_distance = player distance _this;
 		_angleFactor = linearConversion [900,50,_distance,30,90,true];
 		
@@ -31,7 +31,7 @@ _center spawn {
 			//hint str format ["%1",_zoom_factor];
  
 			if (_zoom != _oldZoom or {abs(_distance - _oldDistance) > 25}) then {
-				_distanceFactor = linearConversion [400,1250,_distance,550,1100,true];
+				_distanceFactor = linearConversion [400,950,_distance,550,900,true];
 				_zoomViewFactor = linearConversion [0.2,1.2,_zoom,_distanceFactor,globViewDist,true];
 				setViewDistance _zoomViewFactor;
 				_oldDistance = _distance;

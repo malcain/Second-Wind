@@ -166,8 +166,8 @@ waitUntil
 		
 		if (r_player_blood == 12000) exitWith { cutText ["Full health reached.", "PLAIN DOWN"]; };
 		
-		if ((r_player_blood > 9000) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
-		if ((r_action_restTime > 7) or (_isNomad)) then {
+		if ((r_player_blood > 9600) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
+		if ((r_action_restTime > 6) or (_isNomad)) then {
 			r_player_blood = r_player_blood + _regenRateSitting;
 			titleRsc ["Default","PLAIN",0];
 			titleRsc ["BP_Resting","PLAIN",0];

@@ -32,7 +32,7 @@ _hasMatches = 	"ItemMatchbox" in magazines player;
 _hasBlowtorch = 	"ItemBlowtorch" in magazines player;
 _hasToolbox = 	"ItemToolbox" in assignedItems player;
 _hasIED = "BP_IED1_Mag" in magazines player;
-_hasMedBackpack = ("BP_Mpack" == (backpack player));
+_hasMedBackpack = ("BP_Mpack" == (backpack player) or {"V_RangerVest_BP" == (vest player)});
 _hasSVest = ("V_OutlawVest_BP" == (vest player));
 
 _isHostage = player getVariable ["med_hostage",false];
@@ -345,7 +345,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	_ownerID = _cursorTarget getVariable ["CharacterID","0"];
 	_isAnimal = ((_cursorTarget isKindOf "Animal") or (_cursorTarget isKindOf "Animal_Base_F") or (_cursorTarget isKindOf "BP_Dog"));
 	_isZombie = (_cursorTarget isKindOf "zZombie_base");
-	_isPlayer = (typeOf _cursorTarget in BP_AllPlayers);
+	//_isPlayer = (typeOf _cursorTarget in BP_AllPlayers);
+	_isPlayer = isplayer _cursorTarget;
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isFuel = false;
 	_isAlive = alive _cursorTarget;
@@ -377,7 +378,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			}
 			else
 			{
-				if (_playerClass == 2 && _cursorTargetClass == 2) then
+				if (_playerClass in [2,6] && _cursorTargetClass in [2,6]) then
 				{
 					_sameFaction = true;
 				}
@@ -405,11 +406,17 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	_hasRawMeat = false;
 	{ if (_x in magazines player) exitWith { _hasRawMeat = true; }; } count _rawmeat;
 
-	if (_hasFuelE) then {
+	_cursorobject = cursorobject;
+	if (!isNull _cursorObject && _hasFuelE) then {
 		_isFuel = false;
-		if (_cursorTarget isKindOf "Land_FuelStation_Feed_F") then { _isFuel = true };
-		if (_cursorTarget isKindOf "Land_Tank_rust_F") then { _isFuel = true };
-		if (_cursorTarget isKindOf "Land_fs_feed_F") then { _isFuel = true };
+		_fuelstation = [["Feed","fuelstation"],str (_cursorObject)] call BP_fnc_inStringArray;
+		if (_fuelstation) then { _isFuel = true };
+		_fuelTank = [["trailercistern","tank_rust"],str (_cursorObject)] call BP_fnc_inStringArray;
+		if (_fuelTank) then { _isFuel = true };
+		
+		//if (_cursorTarget isKindOf "Land_FuelStation_Feed_F") then { _isFuel = true };
+		//if (_cursorTarget isKindOf "Land_Tank_rust_F") then { _isFuel = true };
+		//if (_cursorTarget isKindOf "Land_fs_feed_F") then { _isFuel = true };
 	};
 
 	// Dog
@@ -436,7 +443,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 			s_player_dog_track = player addAction ["Dog: Track Animal",{ _this spawn BP_fnc_dogTrackAnimal; }, [_cursorTarget,_dogHandle], 4, false, true,"",""];
 		};
 		if (s_player_dog_speak < 0 && {cursorObject == _cursorTarget}) then {
-			s_player_dog_speak = player addAction ["Dog: Speak",{ _this spawn BP_fnc_dogSpeak; }, [_cursorTarget,_dogHandle], 3, true, true,"",""];
+			s_player_dog_speak = player addAction ["Dog: Speak",{ _this spawn BP_fnc_dogSpeak; }, [_cursorTarget,_dogHandle], 3, false, true,"",""];
 			//player setUserActionText [s_player_dog_speak , "Speak"];
 		};
 		/*if (s_player_dog_setName < 0 && {cursorObject == _cursorTarget}) then {
@@ -610,7 +617,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	/* Add To Group */
-	if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
+	//if (_isPlayer and !_isInMyGroup and !_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
+	if (!_isUndead and !_targetUndead and _isAlive and _isPlayerChar and _canDo and _sameFaction) then {
 		if (s_player_groupAdd < 0) then {
 			s_player_groupAdd = player addAction ["Add To Group", { _this call BP_fnc_groupAdd; },_cursorTarget, 1, false, true, "", ""];
 		};

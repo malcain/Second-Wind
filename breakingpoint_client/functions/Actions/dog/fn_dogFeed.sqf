@@ -49,26 +49,35 @@ _drinkTypes = ["Waterbot","ItemWaterbotBoiled"];
 	
 } count (magazines player);
 
+_lastFeedCheck = player getVariable ["lastFeedCheck",0];
 //Food
 if (_foodType == 0) exitWith
 {
-	if (_hasFood) then
+	if ((diag_tickTime - _lastFeedCheck) > 90) then 
 	{
-		//Remove Food
-		player removeMagazine _foodClassname;
+		player setVariable ["lastFeedCheck",diag_tickTime];
+		if (_hasFood) then
+		{
+			//Remove Food
+			player removeMagazine _foodClassname;
 		
-		//Reset Hunger
-		_dogHandle setFSMVariable ["_hunger",0];
+			//Reset Hunger
+			_dogHandle setFSMVariable ["_hunger",0];
 		
-		//Remove Action
-		player removeAction s_player_dog_food;
-		s_player_dog_food = -1;
+			//Remove Action
+			player removeAction s_player_dog_food;
+			s_player_dog_food = -1;
 		
-		_dog playActionNow "GestureBark";
-		[_dog,"dog_confirm",0,false] call BP_fnc_objSpeak;
+			_dog playActionNow "GestureBark";
+			[_dog,"dog_confirm",0,false] call BP_fnc_objSpeak;
+
+			[(netID _dog),(netID player),_foodClassname] remoteExecCall ["BPServer_fnc_dogGive",2];
+		} else {
+			//Error Message
+			cutText ["You need either Raw Steak or Raw Mutton to feed this animal.","PLAIN DOWN"];
+		};
 	} else {
-		//Error Message
-		cutText ["You need either Raw Steak or Raw Mutton to feed this animal.","PLAIN DOWN"];
+		cutText ["Not hungry yet","PLAIN DOWN"];
 	};
 };
 

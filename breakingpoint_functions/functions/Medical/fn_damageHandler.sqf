@@ -38,12 +38,13 @@ if (_selfDamage && {_isMelee}) exitWith {};
 // Loot Damage
 if (_source isKindOf "BP_LootBox") exitWith {};
 
-["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 HitPoint: %10 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer,_hitPoint] call BP_fnc_debugConsoleFormat;
+_fallVelocity = (velocity _unit) select 2;
+["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 HitPoint: %10 Velocity: %11 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer,_hitPoint,_fallVelocity] call BP_fnc_debugConsoleFormat;
 
 // Fuck Hackers
 //if (_source == player) exitWith {};
 //if (isNull _source) exitWith {};
-//if (_ammo == "") exitWith {};
+if (_ammo == "" && {_fallVelocity > - 0.25} && {_selfDamage}) exitWith {};
 
 // Heart Hit
 //if (_isHeartHit and (_damage > 1)) exitWith
@@ -58,6 +59,12 @@ if (_ammo isKindOf "BP_NonLethal" || {_ammo isKindOf "BP_Arrow_Tranq"}) exitWith
 		r_player_unconscious = true;
 		r_player_unconsciousWeapon = true;
 	};
+};
+
+if (_ammo isKindOf "BP_InfectedNeedle") exitWith {
+	r_player_unconscious = true;
+	r_player_unconsciousWeapon = true;
+	if (!r_player_infected) then { r_player_infected = true; };
 };
 
 //Fire Arrows
@@ -373,19 +380,16 @@ if (_hitpoint in med_MinorWounds) then
 				{
 					if (_damage > 0.98) then 
 					{
-						if (_damage < 1.4) then 
+						if (_damage < 1.6) then 
 						{
 							titleRsc ["BP_BloodsprayLarge","PLAIN",0];
 							r_player_blood = r_player_blood - 8000;
+							r_fracture_legs = true;
 							if (r_player_blood <= 0) then { [17] call BP_fnc_death; };
-						};
-						if (_damage < 3.3) then 
-						{
+						} else {
 							if (!BP_isUndead) then {
 							[0] call BP_fnc_death;
 							};
-						} else {
-							r_fracture_legs = true;
 						};
 					};
 				};
@@ -478,7 +482,7 @@ if (_damage > 0.4) then //0.25
 	if (_isHit) then { r_player_blood = r_player_blood - 50; };
 	if (_hitInfection) then { r_player_infected = true; };
 	if (_hitPain) then { r_player_inpain = true; };
-	if ((_damage > 1.5) and _isHeadHit) exitWith {
+	if ((_damage > 1.5) and _isHeadHit and !_selfDamage) exitWith {
 		if (!BP_isUndead) then 
 		{
 			_unit say ["z_headshot_0", 10];
@@ -491,7 +495,7 @@ if (_damage > 0.4) then //0.25
 // BALISTIC DAMAGE (Grenades /  Missles etc)
 if (_type == 1) then 
 {
-	if (_damage > 0.1) then {
+	if (_damage > 0.01) then {
 		//affect the player
 		[20,45] call BP_fnc_medicalPitchWhine; //Visual , Sound
 	};
@@ -509,10 +513,10 @@ if (_type == 1) then
 };
 
 // HIGH CALIBRE
-/*if (_type == 2) then 
+if (_type == 2) then 
 {
 	//serious ballistic damage
 	if (!BP_isUndead) then {
 		if (_damage > 4) then { [4] call BP_fnc_death; };
 	};
-};*/
+};

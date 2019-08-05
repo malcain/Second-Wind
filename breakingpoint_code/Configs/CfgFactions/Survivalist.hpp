@@ -54,7 +54,7 @@
 					clothing[] = {"BP_Survivalist_F"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Survivalist_F"};
+					uniform[] = {"BP_Survivalist_F",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -83,7 +83,7 @@
 					clothing[] = {"BP_Survivalist_1"};
 					backpack[] = {"BP_AssaultPack_grs"};
 					vest[] = {};
-					uniform[] = {"BP_Survivalist_1"};
+					uniform[] = {"BP_Survivalist_1",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -117,7 +117,7 @@
 					clothing[] = {"BP_Survivalist_2"};
 					backpack[] = {"BP_Kitbag_drt"};
 					vest[] = {"V_VPack_BP"};
-					uniform[] = {"BP_Survivalist_2"};
+					uniform[] = {"BP_Survivalist_2",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -158,7 +158,7 @@
 					clothing[] = {"BP_Survivalist_3"};
 					backpack[] = {"BP_Kitbag_grs"};
 					vest[] = {"V_CPack_BP"};
-					uniform[] = {"BP_Survivalist_3"};
+					uniform[] = {"BP_Survivalist_3",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -200,7 +200,7 @@
 					clothing[] = {"BP_Survivalist_4"};
 					backpack[] = {"BP_Kitbag_grs"};
 					vest[] = {"V_CPack_BP"};
-					uniform[] = {"BP_Survivalist_4","BP_Survivalist_4_Dirt","BP_Survivalist_4_Stone","BP_Survivalist_4_Classic","BP_Survivalist_4_Tree","BP_Survivalist_4_Snow"};
+					uniform[] = {"BP_Survivalist_4","BP_Survivalist_4_Dirt","BP_Survivalist_4_Stone","BP_Survivalist_4_Tree","BP_Survivalist_4_Snow",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -350,25 +350,28 @@
 			};
 			class Kill {
 				class scavenger {
-					Level_0 = 25;
+					Level_0 = 20;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;
 					Level_4 = 0;
+					Dog = 0;
 				};
 				class Ranger {
-					Level_0 = 50;
+					Level_0 = 20;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -3000;
 					Level_4 = -3000;
+					Dog = -25;
 				};
 				class Outlaw {
-					Level_0 = 25;
+					Level_0 = 20;
 					Level_1 = 0;
 					Level_2 = 0;
 					Level_3 = 0;
 					Level_4 = 0;
+					Dog = 0;
 				};
 				class Hunter {
 					Level_0 = 0;
@@ -376,20 +379,23 @@
 					Level_2 = 0;
 					Level_3 = 0;
 					Level_4 = 0;
+					Dog = 0;
 				};
 				class Nomad {
-					Level_0 = 50;
+					Level_0 = 20;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -3000;
 					Level_4 = -3000;
+					Dog = -25;
 				};
 				class Survivalist {
-					Level_0 = 50;
+					Level_0 = 30;
 					Level_1 = -1000;
 					Level_2 = -2000;
 					Level_3 = -3500;
 					Level_4 = -3500;
+					Dog = -25;
 				};
 			};
 		};

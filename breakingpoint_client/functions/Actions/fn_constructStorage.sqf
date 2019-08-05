@@ -271,8 +271,8 @@ switch (_class) do {
 	case 4: { _ObjClassFaction = _ObjClassFaction + "_Nomad"};
 	//Survivalist
 	case 5: { _ObjClassFaction = _ObjClassFaction + "_Survivalist"};
-	//Survivalist
-	case 5: { _ObjClassFaction = _ObjClassFaction + "_Scavenger"};
+	//Scavenger
+	case 6: { _ObjClassFaction = _ObjClassFaction + "_Scavenger"};
 };
 
 //Handle Faction Specific Object Name If It Exists in CfgVehicles

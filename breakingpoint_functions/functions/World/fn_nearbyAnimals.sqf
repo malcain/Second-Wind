@@ -7,4 +7,4 @@
 	Alderon Games Pty Ltd
 */
 
-(count ((_this select 0) nearEntities ["Animal", (_this select 1)]))
+(count ((_this select 0) nearEntities ["Animal_Base_F", (_this select 1)]))

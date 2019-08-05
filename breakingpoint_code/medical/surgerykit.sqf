@@ -25,6 +25,12 @@ if (_finished) then
 	};
 	
 	[_eventName,(netID _unit),(netID player)] remoteExecCall ["BPServer_fnc_medicalUpdate",2];
+	
+	_rndSurgerySupplies = (random 100);
+	if (_rndSurgerySupplies < 14) then {
+		player unlinkItem "ItemSurgeryKit";
+		titleText ["\nSurgery has run out of supplies.", "PLAIN DOWN"];
+	};
 } else {
 	r_interrupt = false;
 	player switchMove "";

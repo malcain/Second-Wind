@@ -54,7 +54,7 @@
 					clothing[] = {"BP_Scavenger_F"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Scavenger_F"};
+					uniform[] = {"BP_Scavenger_F",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -83,7 +83,7 @@
 					clothing[] = {"BP_Scavenger_1"};
 					backpack[] = {"BP_AssaultPack_Worn"};
 					vest[] = {};
-					uniform[] = {"BP_Scavenger_1"};
+					uniform[] = {"BP_Scavenger_1",""};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={"G_MM_Hockey_Mask"};
@@ -117,7 +117,7 @@
 					clothing[] = {"BP_Scavenger_2"};
 					backpack[] = {"BP_AssaultPack_Worn"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_2"};
+					uniform[] = {"BP_Scavenger_2",""};
 					headgear[]={""};
 					nvg[]={"TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"G_MM_FaceFork"};
@@ -158,7 +158,7 @@
 					clothing[] = {"BP_Scavenger_3"};
 					backpack[] = {"BP_Carryall_Bandit"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_3"};
+					uniform[] = {"BP_Scavenger_3",""};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
@@ -200,7 +200,7 @@
 					clothing[] = {"BP_Scavenger_4"};
 					backpack[] = {"BP_Coyote_Bandit"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk"};
+					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk",""};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
@@ -364,46 +364,52 @@
 			};
 			class Kill {
 				class Scavenger {
-					Level_0 = 50;
+					Level_0 = 20;
 					Level_1 = -500;
 					Level_2 = -800;
 					Level_3 = -1500;
 					Level_4 = -1750;
+					Dog = -25;
 				};
 				class Ranger {
 					Level_0 = 10;
 					Level_1 = 10;
 					Level_2 = 10;
-					Level_3 = 25;
-					Level_4 = 25;
+					Level_3 = 20;
+					Level_4 = 20;
+					Dog = 5;
 				};
 				class Outlaw {
-					Level_0 = 50;
+					Level_0 = 10;
 					Level_1 = -400;
 					Level_2 = -700;
 					Level_3 = -1200;
 					Level_4 = -1500;
+					Dog = -25;
 				};
 				class Hunter {
 					Level_0 = 10;
 					Level_1 = 10;
 					Level_2 = 10;
-					Level_3 = 25;
-					Level_4 = 25;
+					Level_3 = 20;
+					Level_4 = 20;
+					Dog = 5;
 				};
 				class Nomad {
 					Level_0 = 10;
 					Level_1 = 10;
 					Level_2 = 10;
-					Level_3 = 25;
-					Level_4 = 25;
+					Level_3 = 20;
+					Level_4 = 20;
+					Dog = 5;
 				};
 				class Survivalist {
 					Level_0 = 10;
 					Level_1 = 10;
 					Level_2 = 10;
-					Level_3 = 25;
-					Level_4 = 25;
+					Level_3 = 20;
+					Level_4 = 20;
+					Dog = 5;
 				};
 				class Engineer {
 					Level_0 = 0;
@@ -411,6 +417,7 @@
 					Level_2 = 0;
 					Level_3 = 0;
 					Level_4 = 0;
+					Dog = 0;
 				};
 			};
 		};

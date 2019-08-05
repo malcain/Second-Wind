@@ -14,6 +14,7 @@ _canFill = 		count nearestObjects [_playerPos, ["Land_StallWater_F","Land_Water_
 _canFill_1 = 	count nearestObjects [_playerPos, ["Land_BarrelWater_F"], 10] > 0;
 _isPond = 		false;
 _isWell = 		false;
+_isWaterSource = false;
 _pondPos = 		[];
 _objectsWell = 	[];
 _invalid = false;
@@ -43,7 +44,7 @@ _objectsWell = 	nearestObjects [_playerPos, [], 4];
 
 {
     if (str _x find ": waterbarrel" > -1) then {
-		if (damage _x >= 0.80) exitwith {
+		if (damage _x >= 0.75) exitwith {
 			cutText ["No water left here.", "PLAIN DOWN"];
 			_invalid = true;
 		};
@@ -64,7 +65,7 @@ _objectsWell = 	nearestObjects [_playerPos, [], 4];
     };
 	
 	if (str _x find ": watertank" > -1) then {
-		if (damage _x >= 0.80) exitwith {
+		if (damage _x >= 0.75) exitwith {
 			cutText ["No water left here.", "PLAIN DOWN"];
 			_invalid = true;
 		};
@@ -112,15 +113,17 @@ if (_invalid) exitwith {};
 if (!_canFill) then {
 	//_objectsWell = 	nearestObjects [_playerPos, [], 4];
 	{
-		//Check for Well
+		_isWaterSource = [["well","water","kasna_new","drainage"],str(_x)] call BP_fnc_inStringArray;
+		if (_isWaterSource) then {_canFill = true};
+		/*//Check for Well
 		_isWell = ["well",str(_x),false] call BP_fnc_inString;
 		if (_isWell) then {_canFill = true};
 		//Check For Water
 		_isWater = ["water",str(_x),false] call BP_fnc_inString;
-		if (_isWater) then {_canFill = true};
+		if (_isWaterSource) then {_canFill = true};
 		//Check For Other
 		_isOther = ["kasna_new",str(_x),false] call BP_fnc_inString;
-		if (_isOther) then {_canFill = true};
+		if (_isOther) then {_canFill = true};*/
 	} count _objectsWell;
 };
 

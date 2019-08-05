@@ -46,6 +46,8 @@ class CfgRemoteExec
 		// Loot Body / Dog Death
 		class BPServer_fnc_playerLoot { allowedTargets=2; };		//BP_LootBody
 		class BP_fnc_dogKilled { allowedTargets=2; };				//BP_DogDeath
+		class BP_fnc_dogHurt { allowedTargets=2; };					//BP_DogHurt
+		class BPServer_fnc_dogGive { allowedTargets=2; };			//BP_DogGive
 		
 		// Gear / Med Sync
 		class BPServer_fnc_medSync { allowedTargets=2; };			//BP_MedSync

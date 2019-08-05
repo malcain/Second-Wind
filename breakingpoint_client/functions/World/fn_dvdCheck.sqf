@@ -16,7 +16,7 @@ _checkArray spawn {
 	
 	while {true} do {
 		{
-			if (player distance _x < 1250) exitwith {
+			if (player distance _x < 950) exitwith {
 				_x call BP_fnc_dvd;
 				_dvdActive = true;
 			};

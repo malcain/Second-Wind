@@ -53,21 +53,17 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	if (_Pos isEqualTo []) exitWith {};
 	
 	if (_mushroom) then {
-		if (NOT surfaceIsWater _Pos) then 
-		{
-			["FoodMushroom", "magazine", "Default", _Pos] call BP_fnc_spawnLoot;
-		};
-	} else {
-		//_nearbyAnimals = [_playerPos,150] call BP_fnc_nearbyAnimals;
-		if (player distance _Pos > 150 and (NOT surfaceIsWater _Pos)) then {
-			_spawnType = "FORM";
-			if (_type in DOGS) then { _spawnType = "NONE"; };
-			_agent = createAgent [_type, _Pos, [], 0, _spawnType];
-			_agent setPos _Pos;
-			//_fsmid = [_pos,_agent] execFSM "\breakingpoint_code\system\animal_agent.fsm";
-			//_fsmid setFSMVariable ["_handle", _fsmid];
-			//_agent setVariable ["fsm_handle", _fsmid];
-		};
+		["FoodMushroom", "magazine", "Default", _Pos] call BP_fnc_spawnLoot;
+	};
+	//_nearbyAnimals = [_playerPos,150] call BP_fnc_nearbyAnimals;
+	if (player distance _Pos > 150 and (NOT surfaceIsWater _Pos)) then {
+		_spawnType = "FORM";
+		if (_type in DOGS) then { _spawnType = "NONE"; };
+		_agent = createAgent [_type, _Pos, [], 0, _spawnType];
+		_agent setPos _Pos;
+		//_fsmid = [_pos,_agent] execFSM "\breakingpoint_code\system\animal_agent.fsm";
+		//_fsmid setFSMVariable ["_handle", _fsmid];
+		//_agent setVariable ["fsm_handle", _fsmid];
 	};
 };
 

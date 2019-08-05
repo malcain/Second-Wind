@@ -41,11 +41,13 @@ _buildingPos = getPosATL _building;
 //_nearStrongholdRadius = _buildingPos call BP_fnc_strongholdNearbyRadius;
 //if (_nearStrongholdRadius < 100) exitWith {};
 
-_min = getNumber (_config >> "minRoaming");
-_max = getNumber (_config >> "maxRoaming");
+//_min = getNumber (_config >> "minRoaming");
+//_max = getNumber (_config >> "maxRoaming");
+_min = 0;
+_max = 2;
 
 //Zedz Don't Spawn in busy positions && no more than _max Zedz for each house
-_zedsNearby = count (_buildingPos nearEntities ["CAManBase",_buildingSize]);
+_zedsNearby = count (_buildingPos nearEntities ["CAManBase",_buildingSize+35]);
 _noZedNearby = _zedsNearby < _max;
 _posFree = ((count (_buildingPos nearEntities ["CAManBase",2])) == 0);
 if (!_noZedNearby or !_posFree) exitWith {};
@@ -67,11 +69,11 @@ if (_positions isEqualTo []) exitWith {};
 
 _chanceRnd = (floor random 100);
 
-if (_chanceRnd < 65 && {_nearByObj > 0}) exitwith {};
+if (_chanceRnd < 55) exitwith {};
 
 _unitTypes = getArray (_config >> "zombieClass");
-//Spawn inside or outside.
-if (_chanceRnd > 85 or {_chanceRnd < 30}) then {
+//Spawn outside or inside.
+if (_chanceRnd > 80 or {_chanceRnd < 30}) then {
 	_nearestRoad = selectRandom ((position _building) nearRoads 15);
 	if !(isNil "_nearestRoad") then {
 		_position = [_nearestRoad, 1, 3, 1, 0] call BIS_fnc_findSafePos;

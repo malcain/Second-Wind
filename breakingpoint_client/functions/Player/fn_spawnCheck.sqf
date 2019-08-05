@@ -11,13 +11,13 @@ private ["_isAir","_inVehicle","_spawnZombies"];
 _isAir = objectparent player iskindof "air";
 _inMovingVehicle = speed player > 85;
 
-_nearbyBuildings = (getPos player) nearObjects ["building",375];
+_nearbyBuildings = (getPos player) nearObjects ["building",340];
 _spawnZombies = true;
 _spawnLoot = true;
 
 //Limit Zombie Spawning to 18 Local Zombies Per Player / Limit Zombie Spawning to 24 per 300m Bubble
 if (BP_LocalZeds > 18 || {BP_NearbyZombies >= 22}) then { _spawnZombies = false; };
-if (BP_NearbyLootNum > 25) then { _spawnLoot = false; };
+if (BP_NearbyLootNum > 50) then { _spawnLoot = false; };
 
 {
 	_type = typeOf _x;
@@ -40,8 +40,8 @@ if (BP_NearbyLootNum > 25) then { _spawnLoot = false; };
 		{
 			
 			//Zombies
-			_spawnZombies = BP_NearbyZombies < 22;
-			if ((_spawnZombies) && {_dis > 55} && {_dis < 325}) then {
+			_spawnZombies = BP_NearbyZombies <= 18;
+			if ((_spawnZombies) && {_dis > 60} && {_dis < 325}) then {
 				[_x] call BP_fnc_buildingSpawnZombies;
 				BP_NearbyZombies = BP_NearbyZombies + 1;
 				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
@@ -53,7 +53,7 @@ if (BP_NearbyLootNum > 25) then { _spawnLoot = false; };
 			//Loot
 			if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
 			{
-				if (_dis < 275 && {_dis > 30} && {!_isAir} && {_spawnLoot}) then {
+				if (_dis < 300 && {_dis > 30} && {!_isAir} && {_spawnLoot}) then {
 					[_x] call BP_fnc_buildingSpawnLoot;
 					//_handle = [_x] spawn BP_fnc_buildingSpawnLoot;
 					//[_handle] call BP_fnc_addThreadHandle;

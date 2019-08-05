@@ -526,13 +526,13 @@ class CfgMagazines
 		count = 1;
 		type = 256;
 		ammo = "BP_InfectedNeedle";
-		displayName = "Infected Needle";
+		displayName = "Infected Tranquilizing Needle";
 		descriptionUse = "Infected Needle";
 		model = "\breakingpoint\models\bp_morphine2.p3d";
 		initSpeed = 25;
 		picture = "\breakingpoint\textures\icons\bp_morphine2_ca.paa";
-		descriptionShort = "Used For: Infecting your enemies.";
-		displayNameShort = "Infected Needle";
+		descriptionShort = "Used For: Infecting and tranquilizing your enemies.";
+		displayNameShort = "Infected Tranquilizing Needle";
 		mass = 1;
 	};
 
@@ -1250,7 +1250,7 @@ class CfgMagazines
 	class FoodRabbitRaw : FoodmeatRaw {
 		displayName = "Rabbit (Raw)";
 		descriptionShort = "";
-		bloodRegen = 400;
+		bloodRegen = 200;
 		mass = 10;
 	};
 	
@@ -1339,7 +1339,7 @@ class CfgMagazines
 	class FoodRabbitCooked : FoodMeatCooked {
 		displayName = "Rabbit (Cooked)";
 		descriptionShort = "";
-		bloodRegen = 1200;
+		bloodRegen = 1300;
 		mass = 10;
 	};
 	class FoodBeefCooked : FoodMeatCooked {
@@ -1352,7 +1352,7 @@ class CfgMagazines
 	class FoodPumpkin : FoodEdible {
 		scope = public;
 		count = 1;
-		bloodRegen = 1000;
+		bloodRegen = 250;
 		displayName = "Pumpkin";
 		descriptionShort = "";
 		model = "\breakingpoint\models\bp_pumpkin.p3d";
