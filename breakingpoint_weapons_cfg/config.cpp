@@ -53895,8 +53895,8 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "75Rnd RPK Drum";
-		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
-		//picture = "a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
+		//picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
 		ammo = "BP_545x39_Ball";
 		count = 75;
 		initSpeed = 880;
@@ -53923,7 +53923,7 @@ class CfgMagazines {
 		scope = 2;
 		displayName = "60Rnd AKM Magazine";
 		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
-		//picture = "a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
+		//picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
 		ammo = "BP_762x39_Ball";
 		count = 60;
 		mass = 23;
