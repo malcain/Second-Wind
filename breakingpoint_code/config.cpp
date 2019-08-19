@@ -263,6 +263,15 @@ class CfgCloudlets {
 		damageType = "";
 	};
 	
+	/*extern*/ class MediumDestructionFire;
+	class MediumFireBP: MediumDestructionFire {
+		coreIntensity = 0.300000;
+		coreDistance = 0.420000;
+		damageTime = 1.500000;
+		constantDistance = 0.420000;
+		//damageType = "";
+	};
+	
 /* Flash Grenade Effects */
 	class Default;
 	class simplefb_flash: Default
@@ -438,6 +447,48 @@ class CfgCloudlets {
 //Flashbang grenade
 class CfgLights
 {
+	class Chem_Green
+	{
+		color[]={0.2,1,0,1};
+		ambient[]={0,0,0,0};
+		brightness=1;
+		intensity=16000;
+		drawLight=0;
+		class Attenuation
+		{
+			start=0;
+			constant=1;
+			linear=0;
+			quadratic=5;
+		};
+		position[]={0,0,0};
+		diffuse[]={0.1,0.5,0};
+	};
+	class Chem_Red: Chem_Green
+	{
+		color[]={1,0,0.025,1};
+		diffuse[]={0.5,0,0.0125};
+		intensity=24000;
+	};
+	class Chem_Yellow: Chem_Green
+	{
+		color[]={1,0.6,0,1};
+		diffuse[]={1,0.6,0};
+		intensity=12000;
+	};
+	class Chem_Blue: Chem_Green
+	{
+		color[]={0,0.6,1,1};
+		diffuse[]={0,0.6,1};
+		intensity=8000;
+	};
+	class Chem_Orange: Chem_Green
+	{
+		color[]={1,0.32,0,1};
+		diffuse[]={1,0.32,0};
+		intensity=12000;
+	};
+	
 	class simplefb_light
 	{
 		color[] = {11,11,9};
@@ -544,5 +595,46 @@ class ImpactEffectsBlood {
 		intensity = 1;
 		interval = 1;
 		lifeTime = 0.4;
+	};
+};
+
+class ChemlightIllum_green
+{
+	class Light1
+	{
+		simulation="light";
+		type="Chem_green";
+	};
+};
+class ChemlightIllum_red
+{
+	class Light1
+	{
+		simulation="light";
+		type="Chem_red";
+	};
+};
+class ChemlightIllum_yellow
+{
+	class Light1
+	{
+		simulation="light";
+		type="Chem_yellow";
+	};
+};
+class ChemlightIllum_blue
+{
+	class Light1
+	{
+		simulation="light";
+		type="Chem_blue";
+	};
+};
+class ChemlightIllum_orange
+{
+	class Light1
+	{
+		simulation="light";
+		type="Chem_orange";
 	};
 };

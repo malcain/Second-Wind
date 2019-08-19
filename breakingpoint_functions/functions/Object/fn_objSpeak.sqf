@@ -7,6 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
+//params [["_source", objNull, [objNull]],["_type", "", [""]],["_chance", 0, [0]],["_local", false, [false]],["_distance",  0, [0]];
 private ["_source","_type","_chance","_distance","_num"];
 _source = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _type = [_this, 1, "", [""]] call BIS_fnc_param;
@@ -89,6 +90,7 @@ if ((round(random _chance) == _chance) or (_chance == 0)) then
 
 	if (_local) then {
 		_source say [_sound, _distance];
+		player say ["z_cough_0",9];
 	} else {
 		//Check If Player is Inside a Building
 		_isInside = [_source] call BP_fnc_isInsideBuilding;

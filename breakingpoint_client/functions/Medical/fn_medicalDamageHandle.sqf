@@ -34,4 +34,5 @@ _unit addEventHandler ["Put", {_this call BP_fnc_onPutItem;}];
 _unit addEventHandler ["InventoryOpened", {_this call BP_fnc_onInventoryOpened;}];
 _unit addEventHandler ["InventoryClosed", {_this call BP_fnc_onInventoryClosed;}];
 _unit addEventHandler ["HandleRating", {0}];
-_unit addEventHandler ["GetInMan", {_this call BP_fnc_vehicleViewLock;;}];
+_unit addEventHandler ["GetInMan", {[_this select 2,true] call BP_fnc_vehicleViewLock;}];
+_unit addEventHandler ["GetOutMan", {[_this select 2,false] call BP_fnc_vehicleViewLock;}];

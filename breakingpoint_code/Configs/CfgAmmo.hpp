@@ -9,6 +9,34 @@
 
 class CfgAmmo
 {
+	class Chemlight_base;
+	class Chem_green: Chemlight_base
+	{
+		model="\A3\Weapons_f\chemlight\chemlight_green_lit";
+		effectsSmoke="ChemlightIllum_green";
+		typicalspeed=14;
+	};
+	class Chem_red: Chemlight_base
+	{
+		model="\A3\Weapons_f\chemlight\chemlight_red_lit";
+		effectsSmoke="ChemlightIllum_red";
+	};
+	class Chem_yellow: Chemlight_base
+	{
+		model="\A3\Weapons_f\chemlight\chemlight_yellow_lit";
+		effectsSmoke="ChemlightIllum_yellow";
+	};
+	class Chem_blue: Chemlight_base
+	{
+		model="\A3\Weapons_f\chemlight\chemlight_blue_lit";
+		effectsSmoke="ChemlightIllum_blue";
+	};
+	class Chem_orange: Chemlight_base
+	{
+		model="\A3\Weapons_f\chemlight\chemlight_yellow_lit";
+		effectsSmoke="ChemlightIllum_orange";
+	};
+	
 	class DirectionalBombBase;
 	class BP_TripMine_Ammo : DirectionalBombBase
 	{

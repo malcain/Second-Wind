@@ -89,7 +89,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -98,7 +98,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
+					magazines[] = {"ChemR","ChemR","ChemR","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -123,7 +123,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -133,7 +133,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
+					magazines[] = {"ChemR","ChemR","ChemR","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -158,7 +158,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -167,7 +167,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
+					magazines[] = {"ChemR","ChemR","ChemR","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -192,7 +192,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -201,7 +201,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
+					magazines[] = {"ChemR","ChemR","ChemR","ItemKnife","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle","ItemInfectedNeedle"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -232,7 +232,7 @@
 					dressing = -15;
 					morphine = -15;
 					surgery = -25;
-					gut = 300;
+					gut = 240;
 				};
 				class Nomad {
 					food = 0;
@@ -272,7 +272,7 @@
 				};
 			};
 			class Destroy {
-				vehicle = 25;
+				vehicle = 10;
 				class scavenger {
 					storage = 50;
 				};
@@ -336,8 +336,8 @@
 				class Ranger {
 					Level_0 = 25;
 					Level_1 = 40;
-					Level_2 = 75;
-					Level_3 = 125;
+					Level_2 = 80;
+					Level_3 = 120;
 					Level_4 = 150;
 					Dog = 10;
 				};
@@ -363,7 +363,7 @@
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
-					Dog = 20;
+					Dog = 15;
 				};
 				class Survivalist {
 					Level_0 = 25;

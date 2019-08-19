@@ -8,10 +8,11 @@
 */
 
 private ["_location","_dir"];
-_location = player modelToWorld [0,0.7,0];
+_location = player modelToWorld [0,1.2,0];
 if ((_location select 2) < 0) then { _location set [2,0]; };
 
-if !("PartWoodPile" in magazines player) exitWith { cutText ["You need wood to build a small camp fire.", "PLAIN DOWN"]; };
+if !("PartWoodPile" in magazines player) exitWith { cutText ["You need wood to build camp fire.", "PLAIN DOWN"]; };
+if !("ItemMatchbox" in magazines player) exitWith { cutText ["You need matches to build camp fire.", "PLAIN DOWN"]; };
 
 // Remove Wood and Play Animation
 player removeMagazine "PartWoodPile";
@@ -30,7 +31,8 @@ if (_finished) then
 		BP_hasFire = objNull;
 	};
 
-	BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"];
+	//BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"];
+	BP_hasFire = createVehicle ["BP_LargeCampFireEH", _location, [], 0, "CAN_COLLIDE"];
 	BP_hasFire setDir _dir;
 	BP_hasFire enableDynamicSimulation true;
 

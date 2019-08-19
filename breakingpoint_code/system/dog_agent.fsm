@@ -35,7 +35,7 @@ item30[] = {"",7,210,1021.033081,-131.063568,1029.032837,-123.063568,0.000000,""
 item31[] = {"",7,210,1020.999573,-1304.000000,1029.000488,-1295.999878,0.000000,""};
 item32[] = {"",7,210,196.000000,121.000000,204.000000,129.000000,0.000000,""};
 item33[] = {"",7,210,196.479202,-6.246673,204.479202,1.753327,0.000000,""};
-item34[] = {"Moving",2,4346,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
+item34[] = {"Moving",2,250,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
 item35[] = {"",7,210,1020.996704,376.950623,1028.996948,384.950653,0.000000,""};
 item36[] = {"Breaking_Point_Dog",-1,250,-450.000000,-75.000000,-100.000000,-25.000000,0.000000,"Breaking Point Dog Agent FSM"};
 item37[] = {"Created_By_Malcain",-1,250,-432.461609,-30.564850,-113.786621,16.694519,0.000000,"Created By Malcain & Deathlyrage"};
@@ -230,8 +230,8 @@ link100[] = {84,87};
 link101[] = {85,80};
 link102[] = {86,80};
 link103[] = {87,84};
-globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-197.712799,1111.135986,606.183105,-255.337616,1343,884,1};
-window[] = {2,-1,-1,-32000,-32000,740,78,1038,78,3,1361};
+globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-449.638611,1266.083862,615.769348,-513.566956,1343,884,1};
+window[] = {2,-1,-1,-32000,-32000,792,130,1090,130,3,1361};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -310,7 +310,7 @@ class FSM
                 {
                         name = "action_init";
                         itemno = 2;
-                        init = /*%FSM<STATEINIT""">*/"_heartbeat = [_dog,_thisFSM] spawn" \n
+                        init = /*%FSM<STATEINIT""">*/"dogHeartbeat = [_dog,_thisFSM] spawn" \n
                          "{" \n
                          "	params [""_dog"",""_handle""];" \n
                          "" \n
@@ -318,7 +318,7 @@ class FSM
                          "	" \n
                          "	_lastAnimation = ""Stop"";" \n
                          "" \n
-                         "	while {alive _dog} do" \n
+                         "	while {alive _dog && alive player} do" \n
                          "	{" \n
                          "		_hunger = _handle getFSMVariable ""_hunger"";" \n
                          "		_thirst = _handle getFSMVariable ""_thirst"";" \n
@@ -335,7 +335,7 @@ class FSM
                          "			_lastAnimation = _animation;" \n
                          "		};" \n
                          "		" \n
-                         "		sleep 1;" \n
+                         "		sleep 1.5;" \n
                          "	};" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -371,7 +371,7 @@ class FSM
                                         priority = 10.000000;
                                         to="End";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"!(alive _dog)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(alive _dog) or !(alive player)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -460,8 +460,9 @@ class FSM
                 {
                         name = "End";
                         itemno = 7;
-                        init = /*%FSM<STATEINIT""">*/"terminate _heartbeat;" \n
-                         "player setVariable [""dogID"", 0];"/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"terminate dogHeartbeat;" \n
+                         "player setVariable [""dogID"", 0];" \n
+                         "player setVariable [""dog"", objNull];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

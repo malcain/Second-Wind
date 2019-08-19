@@ -64,7 +64,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {};
+					magazines[] = {"ChemY"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -94,7 +94,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -103,7 +103,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller"};
+					magazines[] = {"ChemY","ChemY","ChemY"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -129,7 +129,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -138,7 +138,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemKnife","ItemFieldDressing"};
+					magazines[] = {"ChemY","ChemY","ChemY","ItemKnife"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -164,7 +164,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemAntibiotic","ItemPainkiller","ItemPainkiller","ItemFieldDressing","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -174,7 +174,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_CZ455"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular"};
 				};
@@ -200,7 +200,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemAntibiotic","ItemPainkiller","ItemPainkiller","ItemFieldDressing","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -210,7 +210,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_CZ455"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemAntibiotic","ItemDuctTape","ItemKnife"};
+					magazines[] = {"BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular"};
 				};
@@ -336,9 +336,9 @@
 				class scavenger {
 					Level_0 = 25;
 					Level_1 = 40;
-					Level_2 = 75;
-					Level_3 = 100;
-					Level_4 = 125;
+					Level_2 = 60;
+					Level_3 = 80;
+					Level_4 = 100;
 					Dog = 10;
 				};
 				class Ranger {
@@ -352,17 +352,17 @@
 				class Outlaw {
 					Level_0 = 25;
 					Level_1 = 40;
-					Level_2 = 75;
-					Level_3 = 100;
-					Level_4 = 125;
+					Level_2 = 60;
+					Level_3 = 80;
+					Level_4 = 100;
 					Dog = 10;
 				};
 				class Hunter {
-					Level_0 = 50;
-					Level_1 = 50;
-					Level_2 = 75;
-					Level_3 = 100;
-					Level_4 = 125;
+					Level_0 = 40;
+					Level_1 = 40;
+					Level_2 = 60;
+					Level_3 = 80;
+					Level_4 = 100;
 					Dog = 10;
 				};
 				class Nomad {

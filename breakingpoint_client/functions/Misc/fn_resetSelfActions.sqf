@@ -12,6 +12,7 @@
 	s_player_cook =		-1;
 	s_player_boil =		-1;
 	s_player_fireout =	-1;
+	s_player_igniteCampFire = -1;
 
 	//CursorTarget (Animal)
 	s_player_butcher =	-1;
@@ -31,6 +32,7 @@
 	s_player_fillwater =	-1;
 	s_player_fillwater2 = 	-1;
 	s_player_fillfuel = 	-1;
+	s_player_drinkwater = 	-1;
 
 	//Building
 	s_player_deleteBuild =	-1;
@@ -40,6 +42,7 @@
 	//Destroy Vehicle / Safe
 	s_player_destroySafe = -1;
 	s_player_destroyVehicle = -1;
+	s_player_explodeRemoteVeh = -1;
 
 	//Vehicle
 	s_player_saveVehicle = -1;

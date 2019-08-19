@@ -92,7 +92,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -101,7 +101,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller"};
+					magazines[] = {"ChemG","ChemG","FoodRabbitCooked"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -126,7 +126,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -142,7 +142,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_TranQPistol"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemPainkiller","ItemFieldDressing"};
+					magazines[] = {"ChemG","ChemG","FoodRabbitCooked"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -167,7 +167,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemAntibiotic","ItemPainkiller","ItemFieldDressing"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -184,7 +184,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_TranQRifle"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
+					magazines[] = {"ChemG","ChemG","ItemKnife","PartWoodPile"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular", "BP_SOS"};
 				};
@@ -209,7 +209,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemAntibiotic","ItemPainkiller","ItemFieldDressing"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -226,7 +226,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_TranQRifle","BP_TranQPistol"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemAntibiotic","ItemDuctTape","ItemKnife","PartWoodPile"};
+					magazines[] = {"ChemG","ChemG","ItemKnife","PartWoodPile"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {"Binocular", "BP_SOS"};
 				};

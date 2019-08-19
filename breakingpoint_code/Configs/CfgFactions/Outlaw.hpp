@@ -87,7 +87,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -96,7 +96,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller", "ItemMatchbox"};
+					magazines[] = {"ChemR","ChemR","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -121,7 +121,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -131,7 +131,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemPainkiller","ItemMatchbox"};
+					magazines[] = {"ChemR","ChemR","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -150,13 +150,13 @@
 					uniform[] = {"BP_Rebel_3",""};
 					headgear[]={""};
 					nvg[]={""};
-					facewear[]={""}; //"CUP_FR_NeckScarf5", "CUP_FR_NeckScarf2"
+					facewear[]={""};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemFieldDressing","BlueprintIED1"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage","BlueprintIED1"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -165,7 +165,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"HandGrenade","ItemMatchbox"};
+					magazines[] = {"ChemR","ChemR","HandGrenade","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -184,13 +184,13 @@
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip",""};
 					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"rvg_bandana_4","rvg_bandana_5","rvg_bandana_3","rvg_bandanaShades_4","rvg_bandanaAvi_4"};
+					facewear[]={"Outlaw_BandanaRED"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemBandage","ItemFieldDressing","BlueprintIED1"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage","BlueprintIED1"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -206,7 +206,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {"BP_Lupara"};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"HandGrenade","ItemMatchbox"};
+					magazines[] = {"ChemR","ChemR","HandGrenade","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -342,9 +342,9 @@
 					Level_0 = 25;
 					Level_1 = 50;
 					Level_2 = 100;
-					Level_3 = 175;
+					Level_3 = 150;
 					Level_4 = 200;
-					Dog = 20;
+					Dog = 15;
 				};
 				class Outlaw {
 					Level_0 = 75;
@@ -357,10 +357,10 @@
 				class Hunter {
 					Level_0 = 50;
 					Level_1 = 50;
-					Level_2 = 100;
-					Level_3 = 200;
-					Level_4 = 250;
-					Dog = 20;
+					Level_2 = 75;
+					Level_3 = 100;
+					Level_4 = 150;
+					Dog = 10;
 				};
 				class Nomad {
 					Level_0 = 25;
@@ -368,7 +368,7 @@
 					Level_2 = 75;
 					Level_3 = 125;
 					Level_4 = 150;
-					Dog = 20;
+					Dog = 10;
 				};
 				class Survivalist {
 					Level_0 = 25;
@@ -376,7 +376,7 @@
 					Level_2 = 75;
 					Level_3 = 125;
 					Level_4 = 150;
-					Dog = 20;
+					Dog = 10;
 				};
 			};
 		};

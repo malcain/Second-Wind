@@ -42,48 +42,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 		[rainleak6] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak7] execvm "AL_Leaks\water_leak.sqf";
 		[rainleak8] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak9] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak10] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak11] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak12] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak13] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak14] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak15] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak16] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak17] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak18] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak19] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak20] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak21] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak22] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak23] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak24] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak25] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak26] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak27] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak28] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak29] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak30] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak31] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak32] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak33] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak34] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak35] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak36] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak37] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak38] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak39] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak40] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak41] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak42] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak43] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak44] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak45] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak46] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak47] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak48] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak49] execvm "AL_Leaks\water_leak.sqf";
-		[rainleak50] execvm "AL_Leaks\water_leak.sqf";*/
+		[rainleak9] execvm "AL_Leaks\water_leak.sqf";*/
 		
 if (hasInterface) then {
 //[] execVm "nighttime.sqf";
@@ -152,7 +111,7 @@ if ((!isServer) && (player != player)) then {waitUntil {player == player};};
 [fire_up9,4,0.27] execvm "AL_Leaks\fire_leak.sqf";
 */
 // making an object radioactive
-null1 = [rad1,20,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
+/*null1 = [rad1,20,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null2 = [rad2,30,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null3 = [rad3,17,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null4 = [rad4,10,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
@@ -160,7 +119,7 @@ null5 = [rad5,10,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm
 null6 = [rad6,35,140,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null7 = [rad7,25,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
 null8 = [rad8,52,100,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
-null9 = [rad9,30,300,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";
+null9 = [rad9,30,300,"H_PilotHelmetFighter_B","Binocular",false,10,false] execvm "AL_radiation\radioactive_object.sqf";*/
 
 /*//Strigoi
 ["strigoi_1",250,true,950,40] execvm "AL_strigoi\strigoi.sqf";
@@ -205,5 +164,5 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 initialized = true;
 
 waitUntil {time > 0};
-setObjectViewDistance 1400;
+setObjectViewDistance 1450;
 enableEnvironment [true,true];

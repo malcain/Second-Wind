@@ -33,6 +33,11 @@ class CfgFunctions
 			file = "\breakingpoint_functions\functions\Fire";
 			class fireDelete {};
 		};
+		
+		class Effects {
+			file = "\breakingpoint_functions\functions\Effects";
+			class waterLeakSFX {};
+		};
 
 		class Geometry {
 			file = "\breakingpoint_functions\functions\Geometry";

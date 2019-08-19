@@ -34,6 +34,7 @@ while {r_doLoop} do {
 		r_doLoop = false;
 		_finished = true;
 	};
+	if (!isNull (findDisplay 602)) then { closeDialog 0; };
 	if (r_interrupt) then {
 		r_doLoop = false;
 	};

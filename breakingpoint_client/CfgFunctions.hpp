@@ -67,6 +67,7 @@ class CfgFunctions
 			class cook {};
 			class boil {};
 			class drink {};
+			class drinkWater {};
 			class eat {};
 			class sprayCan {};
 			class gatherMeat {};
@@ -77,6 +78,8 @@ class CfgFunctions
 			class useMeds {};
 			class flash {};
 			class flash_effect {};
+			class igniteCampFire {};
+			class explodeRemoteVeh {};
 		};
 		class Anomalies {
 			file = "\breakingpoint_client\functions\Anomalies";
@@ -174,6 +177,7 @@ class CfgFunctions
 			class skipBriefing { preInit = 1; };
 			class spaceInterrupt {};
 			class spaceInterruptInv {};
+			class spaceMouseInterrupt {};
 			class updateGui {};
 			class UpdateUI {};
 			class loginError {};

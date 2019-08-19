@@ -77,6 +77,11 @@ if (_killerClass == 3) exitWith {
 	["damageHandlerHit: Killer Hunter"] call BP_fnc_debugConsoleFormat;
 };
 
+//Exit On Slight Vehicle Hit
+if (!isNull objectParent _killer && {_damage < 1}) exitWith {
+	["damageHandlerHit: Killer Hunter"] call BP_fnc_debugConsoleFormat;
+};
+
 //Exit If Player Is a Traitor
 if (_playerUniform in BP_TraitorClothing) exitWith {
 	["damageHandlerHit: Player is a traitor."] call BP_fnc_debugConsoleFormat;

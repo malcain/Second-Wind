@@ -26,6 +26,18 @@ class CfgSounds
 		titles[]={};
 	};
 	
+	//Environment
+	class waterleak_0 {
+		name = "";
+		sound[]={"breakingpoint_sfx\environment\leak.ogg",1,1};
+		titles[] = {};
+	};
+	class waterleak_1 {
+		name = "";
+		sound[]={"breakingpoint_sfx\environment\leak.ogg",1,1};
+		titles[] = {};
+	};
+	
 	//----=Infected Hounds=-----
 
 	//Thirst
@@ -349,17 +361,17 @@ class CfgSounds
 	};
 	class z_cough_0 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\cough_0.ogg",0.5,1,140};
+		sound[] = {"breakingpoint_sfx\effects\cough_0.ogg",0.6,1,140};
 		titles[] = {};
 	};
 	class z_cough_1 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\cough_1.ogg",0.4,1,140};
+		sound[] = {"breakingpoint_sfx\effects\cough_1.ogg",0.5,1,140};
 		titles[] = {};
 	};
 	class z_cough_2 {
 		name = "";
-		sound[] = {"breakingpoint_sfx\effects\cough_2.ogg",0.3,1,140};
+		sound[] = {"breakingpoint_sfx\effects\cough_2.ogg",0.4,1,140};
 		titles[] = {};
 	};
 	class z_bandage_0 {

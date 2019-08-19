@@ -10,11 +10,15 @@
 private ["_vehicle","_cursorTarget","_isPlayerChar","_inVehicle","_isWater","_hasAntiB","_hasMedBackpack","_isUnconscious"];
 _vehicle = vehicle player;
 _cursorTarget = cursorTarget;
+_cursorObject = cursorObject;
 _isPlayerChar = (isPlayer _cursorTarget);
 _inVehicle = (!isNull objectParent player);
 _isWater = ((getPosASL player select 2) < -0.5);
 _isStove = (_cursorTarget isKindOf "BP_Stove");
-_isCookable = (inflamed _cursorTarget or _isStove);
+_isCookable = false;
+_isFuel = false;
+_campFire = false;
+_campFireBurn = false;
 _hasAntiB = 	"ItemAntibiotic" in magazines player;
 _hasFuelE = false;
 {
@@ -29,7 +33,7 @@ _hasFuel = false;
 _hasbottleitem = (("Waterbot" in magazines player) or ("WaterbotBoiled" in magazines player));
 _hasKnife = 	"ItemKnife" in magazines player;
 _hasMatches = 	"ItemMatchbox" in magazines player;
-_hasBlowtorch = 	"ItemBlowtorch" in magazines player;
+//_hasBlowtorch = 	"ItemBlowtorch" in magazines player;
 _hasToolbox = 	"ItemToolbox" in assignedItems player;
 _hasIED = "BP_IED1_Mag" in magazines player;
 _hasMedBackpack = ("BP_Mpack" == (backpack player) or {"V_RangerVest_BP" == (vest player)});
@@ -64,7 +68,7 @@ if (BP_isUndead) then
 	s_player_undeadAttack = -1;
 };
 
-// Allow Level 3 Ranger to Use Med Backpack
+// Use of Med Rig
 if (_hasMedBackpack and _canDo) then {
 	if (s_player_medPack < 0) then {
 		s_player_medPack = player addAction ["Use Medpack (Self)", "\breakingpoint_code\medical\medpack.sqf",[player], 1, false, true, "", ""];
@@ -335,11 +339,36 @@ if (typeOf (vehicle player) in BP_LoadObject) then {
 	s_player_loadTurretAmmo = -1;
 };
 
-if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6)) then //has some kind of target
+if (!isNull _cursorobject && {isNull _cursorTarget} && {!_inVehicle} && {player distance _cursorobject < 5}) then //has some kind of cursorobject
+{
+	
+	if (_hasFuelE) then {
+		_fuelTank = ["tank_rust",str(_cursorObject),false] call BP_fnc_inString;
+		if (_fuelTank) then { _isFuel = true; _cursorTarget = _cursorobject; };
+	};
+	
+	_campfire = [["campfire"],str (_cursorObject)] call BP_fnc_inStringArray;
+	//_campFireBurn = count (nearestObjects [player, ["Land_HelipadEmpty_F"], 4]) > 0;
+
+	if (_campfire && {_hasMatches} && {!isObjectHidden _cursorObject} && {_canDo}) then {
+		if (s_player_igniteCampFire < 0) then {
+			s_player_igniteCampFire = player addAction ["Ignite Fireplace", { (_this select 3) spawn BP_fnc_igniteCampFire; },[_cursorObject,true], 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_igniteCampFire;
+		s_player_igniteCampFire = -1;
+	};
+} else {
+	player removeAction s_player_igniteCampFire;
+	s_player_igniteCampFire = -1;
+};
+
+if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget < 6)) then //has some kind of target
 {
 	_targetName = getText (configFile >> "CfgVehicles" >> (typeOf _cursorTarget) >> "displayName");
 	_isHarvested = _cursorTarget getVariable ["gutted",false];
-	_isVehicle = _cursorTarget isKindOf "AllVehicles";
+	_isVehicle = count fullcrew [_cursorTarget, "driver", true] > 0;
+	//_isVehicle = _cursorTarget isKindOf "AllVehicles";
 	_isVehicletype = typeOf _cursorTarget isEqualTo "BP_Quadbike_01";
 	_isMan = _cursorTarget isKindOf "Man";
 	_ownerID = _cursorTarget getVariable ["CharacterID","0"];
@@ -348,7 +377,9 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//_isPlayer = (typeOf _cursorTarget in BP_AllPlayers);
 	_isPlayer = isplayer _cursorTarget;
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
-	_isFuel = false;
+	_isCookable = (inflamed _cursorTarget or _isStove);
+	_isWater = false;
+	_isWaterWell = false;
 	_isAlive = alive _cursorTarget;
 	_canmove = canMove _cursorTarget;
 	_text = getText (configFile >> "CfgVehicles" >> typeOf _cursorTarget >> "displayName");
@@ -401,24 +432,29 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//Safe
 	_isSafe = _cursorTarget isKindOf "BP_Safe";
 	_safeLocked = (_cursorTarget getVariable ["locked",false]);
+	
+	//WaterColumn
+	_isWaterColumn = _cursorTarget isKindOf "Land_ConcreteWell_02_F";
 
 	_rawmeat = meatraw;
 	_hasRawMeat = false;
 	{ if (_x in magazines player) exitWith { _hasRawMeat = true; }; } count _rawmeat;
 
-	_cursorobject = cursorobject;
-	if (!isNull _cursorObject && _hasFuelE) then {
-		_isFuel = false;
-		_fuelstation = [["Feed","fuelstation"],str (_cursorObject)] call BP_fnc_inStringArray;
-		if (_fuelstation) then { _isFuel = true };
-		_fuelTank = [["trailercistern","tank_rust"],str (_cursorObject)] call BP_fnc_inStringArray;
-		if (_fuelTank) then { _isFuel = true };
-		
-		//if (_cursorTarget isKindOf "Land_FuelStation_Feed_F") then { _isFuel = true };
-		//if (_cursorTarget isKindOf "Land_Tank_rust_F") then { _isFuel = true };
-		//if (_cursorTarget isKindOf "Land_fs_feed_F") then { _isFuel = true };
+	if (_hasFuelE) then {
+		_fuelsource = [["Feed","fuelstation","trailercistern"],str (_cursorTarget)] call BP_fnc_inStringArray;
+		if (_fuelsource) then { _isFuel = true; };
 	};
-
+	
+	// Drink water
+	if ((_isWater || _isWaterColumn) && {!_isHostage} && {_canDo}) then {
+		if (s_player_drinkwater < 0) then {
+			s_player_drinkwater = player addAction ["Drink dirty water", { _this spawn BP_fnc_drinkWater; },_cursorTarget, 1, true, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_drinkwater;
+		s_player_drinkwater = -1;
+	};
+	
 	// Dog
 	if (_isDog and _isAlive and (_hasRawMeat) and _canDo and _ownerID == "0" and player getVariable ["dogID", 0] == 0) then {
 		if (s_player_dog_tame < 0) then {
@@ -567,7 +603,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	*/
 
 	// Force Save (Vehicle)
-	if (_isVehicle and _canDo and !_isMan and _isNotDestroyed) then {
+	if (_isVehicle and _canDo and _isNotDestroyed) then {
 		if (s_player_saveVehicle < 0) then {
 			s_player_saveVehicle = player addAction [format ["Force Save %1",_targetName], { _this call BP_fnc_forceSave; },_cursorTarget, 1, false, true, "", ""];
 		};
@@ -577,7 +613,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	// Push Vehicle
-	if (_isVehicle and _canDo and !_isMan and _isNotDestroyed) then {
+	if (_isVehicle and _canDo and _isNotDestroyed) then {
 		if (s_player_pushBoat < 0) then {
 			s_player_pushBoat = player addAction [format ["Push Vehicle %1",_targetName], { _this spawn BP_fnc_pushBoat; },_cursorTarget, 1, false, true, "", ""];
 		};
@@ -588,7 +624,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 
 
 	//Destroy Vehicle
-	if (_hasIED and _isVehicle and _isNotDestroyed) then
+	if (_hasIED and {_isVehicle} and {_isNotDestroyed}) then
 	{
 		if (s_player_destroyVehicle < 0) then {
 			s_player_destroyVehicle = player addAction ["Detonate IED on Vehicle", { _this spawn BP_fnc_explodeObject; },_cursorTarget, 0, false, true, "", ""];
@@ -596,6 +632,17 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	} else {
 		player removeAction s_player_destroyVehicle;
 		s_player_destroyVehicle = -1;
+	};
+	
+	//Remote IED on a Vehicle
+	if (_hasIED and {_isVehicle} and {_isNotDestroyed}) then
+	{
+		if (s_player_explodeRemoteVeh < 0) then {
+			s_player_explodeRemoteVeh = player addAction ["Remote Control IED Vehicle", { _this spawn BP_fnc_explodeRemoteVeh; },_cursorTarget, 0, false, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_explodeRemoteVeh;
+		s_player_explodeRemoteVeh = -1;
 	};
 
 
@@ -700,7 +747,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	// Fill Fuel Can
 	if (_isFuel && {_hasFuelE} && {!_isZombie} && {!_isAnimal} && {!_isHostage} && {!_isMan} && {_canDo} && {damage _cursorTarget < 1}) then {
 		if (s_player_fillfuel < 0) then {
-			s_player_fillfuel = player addAction ["Fill Fuelcan", { _this spawn BP_fnc_fuelFill; },[], 1, false, true, "", ""];
+			s_player_fillfuel = player addAction ["Fill Fuelcan", { _this spawn BP_fnc_fuelFill; },[], 1, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_fillfuel;
@@ -790,7 +837,7 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	};
 
 	// Vehicle Repar / Replace / Remove
-	if ((BP_myCursorTarget != _cursorTarget) and _isVehicle and !_isUndead and _canDo and !_isMan and _hasToolbox and (count (crew _cursorTarget))== 0 and (damage _cursorTarget < 1)) then
+	if ((BP_myCursorTarget != _cursorTarget) and _isVehicle and _canDo and _hasToolbox and (count (crew _cursorTarget))== 0 and (damage _cursorTarget < 1)) then
 	{
 		_vehicle = _cursorTarget;
 
@@ -1031,6 +1078,8 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	s_player_cook = -1;
 	player removeAction s_player_boil;
 	s_player_boil = -1;
+	player removeAction s_player_drinkwater;
+	s_player_drinkwater = -1;
 	player removeAction s_player_fireout;
 	s_player_fireout = -1;
 	player removeAction s_player_fillfuel;
@@ -1067,6 +1116,9 @@ if (!isNull _cursorTarget and !_inVehicle and (player distance _cursorTarget < 6
 	//Destroy Vehicle
 	player removeAction s_player_destroyVehicle;
 	s_player_destroyVehicle = -1;
+	//Remote Control Explosive Vehicle
+	player removeAction s_player_explodeRemoteVeh;
+	s_player_explodeRemoteVeh = -1;
 
 	//Dog
 	player removeAction s_player_dog_tame;

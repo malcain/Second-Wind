@@ -14,10 +14,10 @@ item9[] = {"End_Mission",1,250,750.000000,225.000000,850.000000,275.000000,0.000
 item10[] = {"Preload_Position",2,250,-75.000000,1150.000000,25.000000,1200.000000,0.000000,"Preload Position"};
 item11[] = {"Load_Position",2,250,-75.000000,1250.000000,25.000000,1300.000000,0.000000,"Load Position"};
 item12[] = {"Display_Ready",4,218,-175.000000,1300.000000,-75.000000,1350.000000,0.000000,"Display" \n "Ready"};
-item13[] = {"Preload_Display",2,250,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
+item13[] = {"Preload_Display",2,4346,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
 item14[] = {"Display_Preloade",4,218,-175.000000,1400.000000,-75.000000,1450.000000,0.000000,"Display" \n "Preloaded"};
 item15[] = {"Initialize",2,250,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Initialize"};
-item16[] = {"Finish",1,4346,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
+item16[] = {"Finish",1,250,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
 item17[] = {"True",8,218,-175.000000,1675.000000,-75.000000,1725.000000,0.000000,"True"};
 item18[] = {"Initialized",4,218,-175.000000,-25.000000,-75.000000,25.000000,0.000000,"Initialized"};
 item19[] = {"Preloaded",4,218,-175.000000,1200.000000,-75.000000,1250.000000,0.000000,"Preloaded"};
@@ -84,31 +84,31 @@ item79[] = {"Client_Outdated",4,218,50.000000,200.000000,150.000000,250.000000,0
 item80[] = {"Server_Outdated",4,218,50.000000,250.000000,150.000000,300.000000,0.000000,"Server" \n "Outdated"};
 item81[] = {"Timeout",4,218,50.000000,1200.000000,150.000000,1250.000000,0.000000,"Timeout"};
 item82[] = {"Timeout",4,218,50.000000,1300.000000,150.000000,1350.000000,0.000000,"Timeout"};
-item83[] = {"True",8,218,-175.000000,1100.000000,-75.000000,1150.000000,0.000000,"True"};
-item84[] = {"Preload_Objects",2,250,-75.000000,1550.000000,25.000000,1600.000000,0.000000,"Preload" \n "Objects"};
-item85[] = {"Objects_Preloade",8,218,-175.000000,1600.000000,-75.000000,1650.000000,0.000000,"Objects" \n "Preloaded"};
-item86[] = {"Preload_Loot___Z",2,250,-75.000000,1450.000000,25.000000,1500.000000,0.000000,"Preload" \n "Loot / Zeds"};
-item87[] = {"Loot___Zeds_Prel",4,218,-175.000000,1500.000000,-75.000000,1550.000000,0.000000,"Loot / Zeds" \n "Preloaded"};
-item88[] = {"Timeout",4,218,50.000000,1600.000000,150.000000,1650.000000,0.000000,"Timeout"};
-item89[] = {"Load_Medical",2,250,-75.000000,1050.000000,25.000000,1100.000000,0.000000,"Load Medical"};
-item90[] = {"Request_Setup",2,250,-75.000000,850.000000,25.000000,900.000000,0.000000,"Request" \n "Setup"};
-item91[] = {"Response",4,218,-175.000000,900.000000,-75.000000,950.000000,0.000000,"Response"};
-item92[] = {"True",8,218,-175.000000,1000.000000,-75.000000,1050.000000,0.000000,"True"};
-item93[] = {"Retry",4,218,50.000000,900.000000,150.000000,950.000000,0.000000,"Retry"};
-item94[] = {"Retry",4,218,50.000000,850.000000,150.000000,900.000000,0.000000,"Retry"};
-item95[] = {"Retry_1",2,250,175.000000,850.000000,275.000000,900.000000,0.000000,"Retry"};
-item96[] = {"Auth_Failed",4,218,300.000000,850.000000,400.000000,900.000000,0.000000,"Auth" \n "Failed"};
-item97[] = {"Update_Msg",4,218,50.000000,800.000000,150.000000,850.000000,0.000000,"Update" \n "Msg"};
-item98[] = {"Load_Faction_Dat",2,250,-75.000000,550.000000,25.000000,600.000000,0.000000,"Load Faction" \n "Data"};
-item99[] = {"Body_Ready",4,218,-175.000000,500.000000,-75.000000,550.000000,0.000000,"Body Ready"};
-item100[] = {"Legion_Only",4,218,-650.000000,-250.000000,-550.000000,-200.000000,0.000000,"Legion" \n "Only"};
-item101[] = {"",7,210,-479.000000,-228.999954,-471.000000,-221.000046,0.000000,""};
-item102[] = {"ERROR_7__LEGION",2,250,-800.000000,-250.000000,-700.000000,-200.000000,0.000000,"ERROR 7:" \n "LEGION ONLY"};
-item103[] = {"",7,210,-904.000000,-228.999954,-896.000000,-221.000046,0.000000,""};
-item104[] = {"Response_1",4,218,-361.734772,298.226898,-261.734772,348.226837,0.000000,"Response"};
-item105[] = {"Faction_Dialog",2,250,-314.298584,205.854370,-214.298584,255.854370,0.000000,"Faction Dialog"};
-item106[] = {"True",8,218,-261.594452,296.823730,-161.594452,346.823730,0.000000,"True"};
-item107[] = {"____FAKE____",9,0,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+item83[] = {"Preload_Objects",2,250,-75.000000,1550.000000,25.000000,1600.000000,0.000000,"Preload" \n "Objects"};
+item84[] = {"Objects_Preloade",8,218,-175.000000,1600.000000,-75.000000,1650.000000,0.000000,"Objects" \n "Preloaded"};
+item85[] = {"Preload_Loot___Z",2,250,-75.000000,1450.000000,25.000000,1500.000000,0.000000,"Preload" \n "Loot / Zeds"};
+item86[] = {"Loot___Zeds_Prel",4,218,-175.000000,1500.000000,-75.000000,1550.000000,0.000000,"Loot / Zeds" \n "Preloaded"};
+item87[] = {"Timeout",4,218,50.000000,1600.000000,150.000000,1650.000000,0.000000,"Timeout"};
+item88[] = {"Load_Medical",2,250,-75.000000,1050.000000,25.000000,1100.000000,0.000000,"Load Medical"};
+item89[] = {"Request_Setup",2,250,-75.000000,850.000000,25.000000,900.000000,0.000000,"Request" \n "Setup"};
+item90[] = {"Response",4,218,-175.000000,900.000000,-75.000000,950.000000,0.000000,"Response"};
+item91[] = {"Timeout",4,218,-186.100159,1099.203491,-86.100159,1149.203613,0.000000,"Timeout"};
+item92[] = {"Retry",4,218,50.000000,900.000000,150.000000,950.000000,0.000000,"Retry"};
+item93[] = {"Retry",4,218,50.000000,850.000000,150.000000,900.000000,0.000000,"Retry"};
+item94[] = {"Retry_1",2,250,175.000000,850.000000,275.000000,900.000000,0.000000,"Retry"};
+item95[] = {"Auth_Failed",4,218,300.000000,850.000000,400.000000,900.000000,0.000000,"Auth" \n "Failed"};
+item96[] = {"Update_Msg",4,218,50.000000,800.000000,150.000000,850.000000,0.000000,"Update" \n "Msg"};
+item97[] = {"Load_Faction_Dat",2,250,-75.000000,550.000000,25.000000,600.000000,0.000000,"Load Faction" \n "Data"};
+item98[] = {"Body_Ready",4,218,-175.000000,500.000000,-75.000000,550.000000,0.000000,"Body Ready"};
+item99[] = {"Legion_Only",4,218,-650.000000,-250.000000,-550.000000,-200.000000,0.000000,"Legion" \n "Only"};
+item100[] = {"",7,210,-479.000000,-228.999954,-471.000000,-221.000046,0.000000,""};
+item101[] = {"ERROR_7__LEGION",2,250,-800.000000,-250.000000,-700.000000,-200.000000,0.000000,"ERROR 7:" \n "LEGION ONLY"};
+item102[] = {"",7,210,-904.000000,-228.999954,-896.000000,-221.000046,0.000000,""};
+item103[] = {"Response_1",4,218,-361.734772,298.226898,-261.734772,348.226837,0.000000,"Response"};
+item104[] = {"Faction_Dialog",2,250,-314.298584,205.854370,-214.298584,255.854370,0.000000,"Faction Dialog"};
+item105[] = {"True",8,218,-261.594452,296.823730,-161.594452,346.823730,0.000000,"True"};
+item106[] = {"Timeout",4,218,-186.100128,1002.039124,-86.100128,1052.039185,0.000000,"Timeout"};
+item107[] = {"____FAKE____",9,196636,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
 version=1;
 class LayoutItems
 {
@@ -154,15 +154,15 @@ link4[] = {3,5};
 link5[] = {4,29};
 link6[] = {5,38};
 link7[] = {6,7};
-link8[] = {7,99};
-link9[] = {8,92};
+link8[] = {7,98};
+link9[] = {8,106};
 link10[] = {10,19};
 link11[] = {10,81};
 link12[] = {11,12};
 link13[] = {11,82};
 link14[] = {12,13};
 link15[] = {13,14};
-link16[] = {14,86};
+link16[] = {14,85};
 link17[] = {15,17};
 link18[] = {17,16};
 link19[] = {18,3};
@@ -188,7 +188,7 @@ link38[] = {35,34};
 link39[] = {36,6};
 link40[] = {36,26};
 link41[] = {36,32};
-link42[] = {36,104};
+link42[] = {36,103};
 link43[] = {37,9};
 link44[] = {38,39};
 link45[] = {39,9};
@@ -208,7 +208,7 @@ link58[] = {51,52};
 link59[] = {52,64};
 link60[] = {53,43};
 link61[] = {53,44};
-link62[] = {54,90};
+link62[] = {54,89};
 link63[] = {55,54};
 link64[] = {56,58};
 link65[] = {57,56};
@@ -235,41 +235,41 @@ link85[] = {74,70};
 link86[] = {75,78};
 link87[] = {76,75};
 link88[] = {77,76};
-link89[] = {77,101};
+link89[] = {77,100};
 link90[] = {78,74};
 link91[] = {79,49};
 link92[] = {80,49};
 link93[] = {81,11};
 link94[] = {82,13};
-link95[] = {83,10};
-link96[] = {84,85};
-link97[] = {84,88};
-link98[] = {85,15};
-link99[] = {86,87};
-link100[] = {87,84};
-link101[] = {88,15};
-link102[] = {89,83};
-link103[] = {90,91};
-link104[] = {90,93};
-link105[] = {90,97};
-link106[] = {91,8};
-link107[] = {92,89};
-link108[] = {93,95};
-link109[] = {94,90};
-link110[] = {95,94};
-link111[] = {95,96};
-link112[] = {97,95};
-link113[] = {98,41};
-link114[] = {99,98};
-link115[] = {100,102};
-link116[] = {101,100};
-link117[] = {102,103};
-link118[] = {103,78};
+link95[] = {83,84};
+link96[] = {83,87};
+link97[] = {84,15};
+link98[] = {85,86};
+link99[] = {86,83};
+link100[] = {87,15};
+link101[] = {88,91};
+link102[] = {89,90};
+link103[] = {89,92};
+link104[] = {89,96};
+link105[] = {90,8};
+link106[] = {91,10};
+link107[] = {92,94};
+link108[] = {93,89};
+link109[] = {94,93};
+link110[] = {94,95};
+link111[] = {96,94};
+link112[] = {97,41};
+link113[] = {98,97};
+link114[] = {99,101};
+link115[] = {100,99};
+link116[] = {101,102};
+link117[] = {102,78};
+link118[] = {103,104};
 link119[] = {104,105};
-link120[] = {105,106};
-link121[] = {106,25};
-link122[] = {96,107};
-globals[] = {0.000000,0,0,0,0,640,480,1,251,6316128,1,-654.671692,358.562866,1916.377319,1055.127930,1040,884,1};
+link120[] = {105,25};
+link121[] = {106,88};
+link122[] = {95,107};
+globals[] = {0.000000,0,0,0,0,640,480,1,253,6316128,1,-776.553284,480.443787,1560.351074,491.903809,1040,884,1};
 window[] = {2,-1,-1,-32000,-32000,1081,182,1763,182,3,1058};
 *//*%FSM</HEAD>*/
 class FSM
@@ -415,7 +415,7 @@ class FSM
                                 /*%FSM<LINK "Body_Ready">*/
                                 class Body_Ready
                                 {
-                                        itemno = 99;
+                                        itemno = 98;
                                         priority = 0.000000;
                                         to="Load_Faction_Dat";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/"_body = objectFromNetID _bodyID;"/*%FSM</CONDPRECONDITION""">*/;
@@ -457,18 +457,21 @@ class FSM
                          "BP_myWeapons = [];" \n
                          "BP_myBackpack = objNull;" \n
                          "BP_myBackpackMags = [];" \n
-                         "BP_myBackpackWpns = [];"/*%FSM</STATEINIT""">*/;
+                         "BP_myBackpackWpns = [];" \n
+                         "" \n
+                         "_myTime = diag_tickTime;" \n
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "True">*/
-                                class True
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
                                 {
-                                        itemno = 92;
+                                        itemno = 106;
                                         priority = 0.000000;
                                         to="Load_Medical";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 2"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -584,7 +587,8 @@ class FSM
                         name = "Preload_Display";
                         itemno = 13;
                         init = /*%FSM<STATEINIT""">*/"BP_lastCheckBit = 0;" \n
-                         "(findDisplay 46) displayAddEventHandler [""KeyDown"",""_this call BP_fnc_spaceInterrupt""];"/*%FSM</STATEINIT""">*/;
+                         "(findDisplay 46) displayAddEventHandler [""KeyDown"",""_this call BP_fnc_spaceInterrupt""];" \n
+                         "(findDisplay 46) displayAddEventHandler [""onMouseButtonDown"",""_this call BP_fnc_spaceMouseInterrupt""];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -860,7 +864,7 @@ class FSM
                                 /*%FSM<LINK "Response_1">*/
                                 class Response_1
                                 {
-                                        itemno = 104;
+                                        itemno = 103;
                                         priority = 0.000000;
                                         to="Faction_Dialog";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -990,7 +994,7 @@ class FSM
                                 /*%FSM<LINK "Legion_Only">*/
                                 class Legion_Only
                                 {
-                                        itemno = 100;
+                                        itemno = 99;
                                         priority = 0.000000;
                                         to="ERROR_7__LEGION";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1441,7 +1445,7 @@ class FSM
                 class Preload_Objects
                 {
                         name = "Preload_Objects";
-                        itemno = 84;
+                        itemno = 83;
                         init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Preloading Objects..."";" \n
                          "" \n
                          "_objectPreloadThread = [] spawn" \n
@@ -1473,7 +1477,7 @@ class FSM
                                 /*%FSM<LINK "Timeout">*/
                                 class Timeout
                                 {
-                                        itemno = 88;
+                                        itemno = 87;
                                         priority = 0.000000;
                                         to="Initialize";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1484,7 +1488,7 @@ class FSM
                                 /*%FSM<LINK "Objects_Preloade">*/
                                 class Objects_Preloade
                                 {
-                                        itemno = 85;
+                                        itemno = 84;
                                         priority = 0.000000;
                                         to="Initialize";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1499,7 +1503,7 @@ class FSM
                 class Preload_Loot___Z
                 {
                         name = "Preload_Loot___Z";
-                        itemno = 86;
+                        itemno = 85;
                         init = /*%FSM<STATEINIT""">*/"BP_loadScreenMsg = ""Preloading Loot & Zombies..."";" \n
                          "" \n
                          "_lootZedPreloadThread = [] spawn" \n
@@ -1520,7 +1524,7 @@ class FSM
                                 /*%FSM<LINK "Loot___Zeds_Prel">*/
                                 class Loot___Zeds_Prel
                                 {
-                                        itemno = 87;
+                                        itemno = 86;
                                         priority = 0.000000;
                                         to="Preload_Objects";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1535,7 +1539,7 @@ class FSM
                 class Load_Medical
                 {
                         name = "Load_Medical";
-                        itemno = 89;
+                        itemno = 88;
                         init = /*%FSM<STATEINIT""">*/"if !(_medical isEqualTo []) then " \n
                          "{" \n
                          "	player setVariable [""med_isDead"",(_medical select 0),true];" \n
@@ -1614,19 +1618,22 @@ class FSM
                          "_messing = player getVariable[""messing"",[0,0]];" \n
                          "BP_hunger = 	_messing select 0;" \n
                          "BP_thirst = _messing select 1;" \n
+                         "" \n
+                         "_myTime = diag_tickTime;" \n
+                         "" \n
                          ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
-                                /*%FSM<LINK "True">*/
-                                class True
+                                /*%FSM<LINK "Timeout">*/
+                                class Timeout
                                 {
-                                        itemno = 83;
+                                        itemno = 91;
                                         priority = 0.000000;
                                         to="Preload_Position";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 1"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -1636,7 +1643,7 @@ class FSM
                 class Request_Setup
                 {
                         name = "Request_Setup";
-                        itemno = 90;
+                        itemno = 89;
                         init = /*%FSM<STATEINIT""">*/"_data = [(netID player),(netID _body)];" \n
                          "" \n
                          "if (_isNew or _randomSpot or !isNil ""BP_selectClass"") then" \n
@@ -1665,7 +1672,7 @@ class FSM
                                 /*%FSM<LINK "Retry">*/
                                 class Retry
                                 {
-                                        itemno = 93;
+                                        itemno = 92;
                                         priority = 0.000000;
                                         to="Retry_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1676,7 +1683,7 @@ class FSM
                                 /*%FSM<LINK "Update_Msg">*/
                                 class Update_Msg
                                 {
-                                        itemno = 97;
+                                        itemno = 96;
                                         priority = 0.000000;
                                         to="Retry_1";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1688,7 +1695,7 @@ class FSM
                                 /*%FSM<LINK "Response">*/
                                 class Response
                                 {
-                                        itemno = 91;
+                                        itemno = 90;
                                         priority = 0.000000;
                                         to="Character_Transf";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1704,7 +1711,7 @@ class FSM
                 class Retry_1
                 {
                         name = "Retry_1";
-                        itemno = 95;
+                        itemno = 94;
                         init = /*%FSM<STATEINIT""">*/"_AuthAttempt = _AuthAttempt +1;" \n
                          "_myTime = diag_tickTime;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
@@ -1713,7 +1720,7 @@ class FSM
                                 /*%FSM<LINK "Auth_Failed">*/
                                 class Auth_Failed
                                 {
-                                        itemno = 96;
+                                        itemno = 95;
                                         priority = 0.000000;
                                         to="____FAKE____";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1727,7 +1734,7 @@ class FSM
                                 /*%FSM<LINK "Retry">*/
                                 class Retry
                                 {
-                                        itemno = 94;
+                                        itemno = 93;
                                         priority = 0.000000;
                                         to="Request_Setup";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
@@ -1742,7 +1749,7 @@ class FSM
                 class Load_Faction_Dat
                 {
                         name = "Load_Faction_Dat";
-                        itemno = 98;
+                        itemno = 97;
                         init = /*%FSM<STATEINIT""">*/"//Select Faction Data" \n
                          "_faction params [""_class"",""_ranger"",""_outlaw"",""_hunter"",""_nomad"",""_survivalist"",""_scavenger"",""_undead""];" \n
                          "" \n
@@ -1780,7 +1787,7 @@ class FSM
                 class ERROR_7__LEGION
                 {
                         name = "ERROR_7__LEGION";
-                        itemno = 102;
+                        itemno = 101;
                         init = /*%FSM<STATEINIT""">*/"[""BP_LegionOnly""] call BP_fnc_loginError;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -1803,7 +1810,7 @@ class FSM
                 class Faction_Dialog
                 {
                         name = "Faction_Dialog";
-                        itemno = 105;
+                        itemno = 104;
                         init = /*%FSM<STATEINIT""">*/"//_msg params [""_faction""];" \n
                          "" \n
                          "//_faction params [""_class"",""_ranger"",""_outlaw"",""_hunter"",""_nomad"",""_survivalist"",""_scavenger"",""_undead""];" \n
@@ -1871,7 +1878,7 @@ class FSM
                                 /*%FSM<LINK "True">*/
                                 class True
                                 {
-                                        itemno = 106;
+                                        itemno = 105;
                                         priority = 0.000000;
                                         to="Request_Login";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;

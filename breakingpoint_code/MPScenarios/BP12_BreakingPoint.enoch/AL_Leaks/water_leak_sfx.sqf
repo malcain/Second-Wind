@@ -64,21 +64,21 @@ while {!isNull _leak_obj} do
 	_splash_r setDropInterval 0.1;
 
 	while {player distance _splash_r < 300} do {
-	if (rain < 0.15) exitWith {};
-	_splash_r say3D ["leak_ext", 20];
-	sleep 7+(random 1.4);
+		if (rain < 0.15) exitWith {};
+		_splash_r say3D ["leak_ext", 20];
+		sleep 7+(random 1.4);
 	};
 	waitUntil {
-	sleep 61;
-	(player distance _puddle_leak > 300) or (rain < 0.15)
+		sleep 61;
+		(player distance _puddle_leak > 300) or (rain < 0.15)
 	};
-	deletevehicle _bubble_leak;
-	deletevehicle _wet_leak;
-	deletevehicle _stropi;
-	deletevehicle _splash_wave;
-	deletevehicle _impact;
-	deletevehicle _drop_up;
-	deletevehicle _splash_r;
-	sleep 240;
-	deletevehicle _puddle_leak;
+		deletevehicle _bubble_leak;
+		deletevehicle _wet_leak;
+		deletevehicle _stropi;
+		deletevehicle _splash_wave;
+		deletevehicle _impact;
+		deletevehicle _drop_up;
+		deletevehicle _splash_r;
+		sleep 240;
+		deletevehicle _puddle_leak;
 	};

@@ -60,6 +60,25 @@ class cfgWeapons {
 		};
 	};
 	
+	class Scavenger_Goggles: NVGoggles
+	{
+		scope=2;
+		displayname="Sand Goggles";
+		descriptionShort = "Scavenger";
+		picture="\bp_sw\bp_sw_clothes\Facewear\UI\UI_LHD.paa";
+		model="bp_sw\bp_sw_clothes\Facewear\LHDGlassesTAN_BLK.p3d";
+		modelOptics="-";
+		visionMode[] = {"Normal"};
+		class ItemInfo
+		{
+			type=616;
+			hmdType = 16;
+			uniformModel="bp_sw\bp_sw_clothes\Facewear\LHDGlassesTAN_BLK.p3d";
+			modelOff="bp_sw\bp_sw_clothes\Facewear\LHDGlassesTAN_BLK.p3d";
+			mass=2;
+		};
+	};
+	
 	class HelmetBase: ItemCore
 	{
 		weaponPoolAvailable=1;
@@ -96,7 +115,29 @@ class cfgWeapons {
 			};
 		};
 	};
-class BP_Woolhat_blk: HelmetBase
+	
+	class BP_prizrak_hat: HelmetBase
+	{
+		scope = 2;
+		displayName  = "Ranger's Hat";
+		picture = "\A3\characters_f\Data\UI\icon_H_Cap_blk_CA.paa";
+		model   = "\bp_sw\bp_sw_clothes\Headgear\ranger_hat.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\bp_sw\bp_sw_clothes\Headgear\data\prizrak_co.paa"};
+		class ItemInfo: HeadgearItem
+		{
+			mass = 10;
+			uniformModel = "\bp_sw\bp_sw_clothes\Headgear\ranger_hat.p3d";
+			//allowedSlots[] = {UNIFORM_SLOT, BACKPACK_SLOT, VEST_SLOT, HEADGEAR_SLOT};
+			//modelSides[] = {};
+			armor = 0;
+			passThrough = 1;
+			hiddenSelections[] = {"camo"};
+			hiddenSelectionsTextures[] = {"\bp_sw\bp_sw_clothes\Headgear\data\prizrak_co.paa"};
+		};
+	};
+	
+	class BP_Woolhat_blk: HelmetBase
 	{
 		author="$STR_A3_Bohemia_Interactive";
 		_generalMacro="BP_Woolhat_blk";

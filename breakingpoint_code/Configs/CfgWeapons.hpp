@@ -1314,7 +1314,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Scavenger_F_Z: Uniform_Base { //ZOMBIE
+	/*class BP_Scavenger_F_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
 		displayName = "Fallen Scavenger";
 		picture = "\breakingpoint_ui\icons\ScavengerIcon.paa";
@@ -1327,7 +1327,7 @@ class CfgWeapons
 			containerClass = "Supply10";
 			mass = 40;
 		};
-	};
+	};*/
 	
 	class BP_Scavenger_1: Uniform_Base {
 		scope = 2;
@@ -1344,7 +1344,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Scavenger_1_Z: Uniform_Base { //ZOMBIE
+	/*class BP_Scavenger_1_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
 		displayName = "Fallen Scavenger";
 		picture = "\breakingpoint_ui\icons\ScavengerIcon.paa";
@@ -1357,7 +1357,7 @@ class CfgWeapons
 			containerClass = "Supply30";
 			mass = 40;
 		};
-	};
+	};*/
 	
 	class BP_Scavenger_2: Uniform_Base {
 		scope = 2;
@@ -1374,7 +1374,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Scavenger_2_Z: Uniform_Base { //ZOMBIE
+	/*class BP_Scavenger_2_Z: Uniform_Base { //ZOMBIE
 		scope = 2;
 		displayName = "Fallen Scavenger";
 		picture = "\breakingpoint_ui\icons\ScavengerIcon.paa";
@@ -1387,7 +1387,7 @@ class CfgWeapons
 			containerClass = "Supply40";
 			mass = 40;
 		};
-	};
+	};*/
 	
 	class BP_Scavenger_3: Uniform_Base {
 		scope = 2;
@@ -2890,7 +2890,7 @@ class CfgWeapons
 		descriptionUse = "Portable Surgery Kit";
 		model = "\breakingpoint\models\bp_surgerykit.p3d";
 		picture = "\breakingpoint\textures\icons\bp_surgerykit_ca.paa";
-		descriptionShort = "Full treatment operation. Saves lifes in safe hands.<br/>For operation to pass without consequences Requires- 1x Morphine, 1x Military Field Dressing.";
+		descriptionShort = "Full treatment operation. Saves lives in safe hands.<br/>Has limited amount of supplies.";
 		simulation = "ItemRadio";
 		
 		class ItemInfo {

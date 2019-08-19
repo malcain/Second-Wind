@@ -975,6 +975,47 @@ class CfgVehicles
 	class BP_LargeCampFire :  BP_CampfireBase 
 	{
 		scope = public;
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_Campfire_F.jpg";
+		model = "\A3\Structures_F\Civ\Camping\Campfire_F.p3d";
+		
+		class Effects: SmallFire 
+		{
+			class Light1 {
+				simulation = "light";
+				type = "SmallFireLight";
+			};
+
+			class sound {
+				simulation = "sound";
+				type = "Fire";
+			};
+
+			class Smoke1 {
+				simulation = "particles";
+				type = "SmallDestructionSmoke";
+			};
+
+			class Fire1: Smoke1 {
+				simulation = "particles";
+				//type = "MediumFireBP";
+				type = "SmallFireBarrel";
+			};
+
+			class Refract1 {
+				simulation = "particles";
+				type = "Refract";
+			};
+		};
+	};
+	class BP_LargeCampFireEH :  BP_LargeCampFire 
+	{
+		scope = public;
+		
+		class EventHandlers
+		{
+			init = "_this spawn BP_fnc_igniteCampFire;";
+			local = "if (_this select 1) then { deleteVehicle (_this select 0); };";
+		};
 	};
     class BP_SmallCampFire : BP_CampfireBase 
 	{
@@ -993,12 +1034,12 @@ class CfgVehicles
 	class CAManBase;
 	class BP_Man : CAManBase
 	{
-		extCameraPosition[] = { 0.200000, -0.110000, -0.700000  };
+		extCameraPosition[] = { 0.280000, -0.100000, -0.770000  };
 		//extCameraParams[] = { 0.5, 10, 50, 0.5, 1, 10, 30, 0, 1 };
 		class ViewPilot: ViewPilot
         {
             MinFov=0.45;//="tan(atan(0.75) / 1)";  def 0.25;
-            MaxFov=0.75;//="tan(atan(0.75) / 1)";  def 1.25;
+            MaxFov=0.80;//="tan(atan(0.75) / 1)";  def 1.25;
             InitFov=0.75;//="tan(atan(0.75) / 1)";  def 0.75;
         };
 		class HitPoints 
@@ -3680,11 +3721,13 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Scavenger 2";
 		uniformClass = "BP_Scavenger_2";
-		model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		//model = "\A3\characters_F_exp\BLUFOR\B_CTRG_Soldier_03_F.p3d";
+		model = "\A3\Characters_F\BLUFOR\b_soldier_03.p3d";
 		side = 13;
 		hiddenSelections[] = {"Camo","Insignia"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\fatigues_Blood_co.paa"};
 	};
+	
 	
 	class BP_Scavenger3_F: BP_Player
 	{

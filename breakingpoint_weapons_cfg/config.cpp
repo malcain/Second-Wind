@@ -17,7 +17,7 @@ class CfgPatches
 		weapons[] = {};
 		requiredVersion = 0.1;
 		//"A3_Data_F_Sams_Loadorder"
-		requiredAddons[] = {"A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui","A3_Weapons_F_Mod"};
+		requiredAddons[] = {"A3_Weapons_F_Enoch","A3_Anims_F","A3_Anims_F_Config_Sdr","breakingpoint_weapons","A3_Weapons_F","a3_sounds_f","a3_sounds_f_exp","a3_weapons_f_exp","jsrs_soundmod_framework","A3_characters_F","A3_Data_F","breakingpoint_ui","A3_Weapons_F_Mod"};
 	};
 };
 
@@ -26,6 +26,60 @@ class Mode_SemiAuto;
 class Mode_FullAuto;
 class recoil_default;
 class Mode_Burst;
+
+/*
+	Breaking Point: Magazines Group
+		By TheDJ
+*/
+
+	class CfgMagazineWells
+	{
+		class bp_2rng_shotgun 
+		{
+			bp2rndshotgunmags[] =
+			{
+			"BP_2Rnd_Buckshot", 
+			"BP_2Rnd_Slug", 
+			"BP_2Rnd_MagBuckshot"
+			};
+		};
+		class bp_8rnd_shotgun
+		{
+			bp8rngshotgunmags[] =
+			{
+			"BP_8Rnd_MagBuckshot",
+			"BP_8Rnd_Buckshot",
+			"BP_8Rnd_Slug"
+			};
+		};
+		class bp_762x51_boltrifle
+		{
+			bp762x51boltriflemags[] =
+			{
+			"BP_10Rnd_762mk316_Mag",
+			"BP_10Rnd_762x51_Mag",
+			"BP_10Rnd_762m80a1_Mag",
+			"BP_5Rnd_762x51_Mag",
+			"BP_5Rnd_762mk316_Mag",
+			"BP_5Rnd_762m80a1_Mag",
+			"BP_10Rnd_762Rubber_Mag"
+			};
+		};
+		class bp_65x39_mxrifle
+		{
+			bp65x39mxrifle[] =
+			{
+				"BP_20Rnd_65x47_Lapua",
+				"BP_30Rnd_65x39",
+				"BP_30Rnd_65x39_SD",
+				"BP_10Rnd_65x39",
+				"BP_10Rnd_65x47_Lapua",
+				"BP_10Rnd_65x39_SD"
+			};
+		};
+		
+	};	
+
 
 /*
 	Breaking Point: Melee Weapons
@@ -32400,7 +32454,7 @@ class CfgWeapons
 
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] = {"BP_FlashMuzzle","BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle"};
+		muzzles[] = {"BP_FlashMuzzle","BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle","ChemOMuzzle"};
 
 		class ThrowMuzzle: GrenadeLauncher
 		{
@@ -32536,6 +32590,12 @@ class CfgWeapons
 			displayName = "Chemlight";
 			magazines[] = {"ChemY"};
 		};
+		
+		class ChemOMuzzle: ThrowMuzzle
+		{
+			displayName = "Chemlight";
+			magazines[] = {"ChemO"};
+		};
 	};
 
 	class Put: Default
@@ -32602,10 +32662,11 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		hiddenSelections[] = {"camo_1","camo_2"};
 		htMax = 880;
 		htMin = 7;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		inertia = 0.4;
 		initSpeed = 735;
 		magazines[] = {"BP_30Rnd_545x39_Mag_F","BP_30Rnd_545x39_Mag_Green_F","BP_30Rnd_545x39_Mag_Tracer_F","BP_30Rnd_545x39_Mag_Tracer_Green_F"};
-		maxZeroing = 600;
 		model = "\A3\Weapons_F_Exp\Rifles\AKS\AKS_F.p3d";
 		modes[] = {"FullAuto","Single"};
 		recoil = "recoil_aks";
@@ -32693,6 +32754,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_AKS_F";
 		displayName = "AKS-74U 5.45 mm";
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\AKS\Data\aks74u_co.paa","\A3\Weapons_F_Exp\Rifles\AKS\Data\magazine_ak74_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\AKS\Data\UI\arifle_AKS_F_X_CA.paa";
 		scope = 2;
@@ -32705,6 +32768,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "Assault Rifle<br />Caliber: 7.62x39 mm";
 		dexterity = 1.4;
 		displayName = "AKM 7.62 mm";
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\Rifle_AK47\AK47_dry",0.177828,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\AKM\Data\Anim\akm.rtm"};
 		hiddenSelections[] = {"camo_1","camo_2","camo_3"};
@@ -32713,7 +32778,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.6;
 		initSpeed = 715;
 		magazines[] = {"BP_30Rnd_762x39_Mag_F","BP_30Rnd_762x39_Mag_Green_F","BP_30Rnd_762x39_Mag_Tracer_F","BP_30Rnd_762x39_Mag_Tracer_Green_F"};
-		maxZeroing = 800;
 		model = "\A3\Weapons_F_Exp\Rifles\AKM\AKM_F.p3d";
 		modes[] = {"FullAuto","Single"};
 		recoil = "recoil_akm";
@@ -32811,6 +32875,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		baseWeapon = "arifle_AKM_F";
 		model = "\A3\Weapons_F_Exp\Rifles\AKM\AKM_flashlight_F.p3d";
 		scope = 1;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		class FlashLight {
 			ambient[] = {0.9,0.78,0.6};
 			color[] = {180,156,120};
@@ -32854,7 +32920,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.6;
 		initSpeed = 900;
 		magazines[] = {"BP_30Rnd_762x39_Mag_F","BP_30Rnd_762x39_Mag_Green_F","BP_30Rnd_762x39_Mag_Tracer_F","BP_30Rnd_762x39_Mag_Tracer_Green_F"};
-		maxZeroing = 1000;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\A3\Weapons_F_Exp\Rifles\AK12\AK12_F.p3d";
 		modes[] = {"FullAuto","Burst","Single"};
 		recoil = "recoil_ak12";
@@ -32957,7 +33024,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -32968,6 +33035,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_AK12_F";
 		displayName = "AK-12 7.62 mm";
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		//hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\AK12\Data\arifle_AK12_F_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
 		scope = 2;
@@ -32982,6 +33051,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		model = "\A3\Weapons_F_Exp\Rifles\AK12\AK12_GL_F.p3d";
 		muzzles[] = {"this","EGLM"};
 		scope = 0;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa";
 		class WeaponSlotsInfo{ //["WeaponSlotsInfo"]
 			mass = 160;
@@ -32995,6 +33066,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_AK12_GL_F";
 		displayName = "AK-12 GL 7.62 mm";
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa","\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_GL_F_X_CA.paa";
 		scope = 2;
@@ -33004,6 +33077,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "LMG_03_base_F";
 		aiDispersionCoefX = 21;
 		aiDispersionCoefY = 24;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		author = "Bohemia Interactive";
 		changeFiremodeSound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Machineguns\SyndikatLMG\SyndikatLMG_firemode",0.316228,1,5};
 		cursor = "mg";
@@ -33019,7 +33094,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		initSpeed = 915;
 		magazineReloadSwitchPhase = 0.4;
 		magazines[] = {"BP_200Rnd_556x45_LIM_Box_F","BP_200Rnd_556x45_LIM_Box_Red_F","BP_200Rnd_556x45_LIM_Box_Tracer_F","BP_200Rnd_556x45_LIM_Box_Tracer_Red_F"};
-		maxZeroing = 1000;
 		model = "\A3\Weapons_F_Exp\Machineguns\LMG_03\LMG_03_F.p3d";
 		modes[] = {"FullAutoSlow"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponLIM_ca.paa";
@@ -33074,7 +33148,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {};
+				compatibleItems[] = {"BP_Harris"};
 				iconPosition[] = {0.35,0.85};
 				iconScale = 0.3;
 			};
@@ -33084,6 +33158,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "LMG_03_F";
 		author = "Bohemia Interactive";
 		baseWeapon = "LMG_03_F";
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "LIM-85 5.56 mm";
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Machineguns\LMG_03\Data\LMG_03_f_acc_co.paa","\A3\Weapons_F_Exp\Machineguns\LMG_03\Data\LMG_03_f_body_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Machineguns\LMG_03\Data\UI\icon_LMG_03_F_X_CA.paa";
@@ -33117,7 +33193,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.1;
 		initSpeed = 315;
 		magazines[] = {"BP_16Rnd_9x21_Mag"};
-		maxZeroing = 100;
+		maxZeroing = 50;
 		model = "\A3\Weapons_F_Exp\Pistols\Pistol_01\Pistol_01_F.p3d";
 		modes[] = {"Single"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponPM_ca.paa";
@@ -33244,6 +33320,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "SPAR-16 5.56 mm";
 		distanceZoomMax = 300;
 		distanceZoomMin = 300;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\SPAR01\SPAR01_dry",0.562341,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\Anim\SPAR_01.rtm"};
 		hiddenSelections[] = {"camo1","camo2"};
@@ -33252,7 +33330,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.5;
 		initSpeed = 800;
 		magazines[] = {"BP_556x45_Stanag","BP_556x45_Stanag_Tracer","BP_556x45_StanagSD","BP_556x45_StanagM855A1","BP_556x45_StanagMK262","BP_556old_Stanag","BP_5Rnd_223_Mag","BP_5Rnd_223BTHP_mag","BP_556x45_Rubber"};
-		maxZeroing = 800;
 		model = "\A3\Weapons_F_Exp\Rifles\SPAR_01\SPAR_01_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponSPAR_ca.paa";
@@ -33323,7 +33400,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -33334,6 +33411,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_SPAR_01_blk_F";
 		displayName = "SPAR-16 5.56 mm (Black)";
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_blk_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_blk_F_02_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\UI\arifle_SPAR_01_blk_F_X_CA.paa";
 		scope = 2;
@@ -33361,6 +33440,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "arifle_SPAR_01_GL_base_F";
 		aiDispersionCoefX = 4;
 		aiDispersionCoefY = 6;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		author = "Bohemia Interactive";
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\Anim\SPAR_01_GL.rtm"};
 		hiddenSelections[] = {"camo1","camo2","camo3"};
@@ -33392,6 +33473,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "Bohemia Interactive";
 		baseWeapon = "arifle_SPAR_01_GL_blk_F";
 		displayName = "SPAR-16 GL 5.56 mm (Black)";
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		hiddenSelectionsTextures[] = {"\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_blk_F_01_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_blk_F_02_co.paa","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\arifle_SPAR_01_GL_blk_F_01_co.paa"};
 		picture = "\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\UI\arifle_SPAR_01_GL_blk_F_X_CA.paa";
 		scope = 2;
@@ -33433,7 +33516,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.6;
 		initSpeed = 850;
 		magazines[] = {"BP_150Rnd_556x45_Drum_Mag_F","BP_150Rnd_556x45_Drum_Mag_Tracer_F"};
-		maxZeroing = 1000;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\A3\Weapons_F_Exp\Rifles\SPAR_02\SPAR_02_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		recoil = "recoil_spar_lsw";
@@ -33502,7 +33586,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{
 
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -33545,6 +33629,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "SPAR-17 7.62 mm";
 		distanceZoomMax = 300;
 		distanceZoomMin = 300;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\Rifles\SPAR_17\SPAR_17_dry",0.562341,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\SPAR_01\Data\Anim\SPAR_01.rtm"};
 		hiddenSelections[] = {"camo1","camo2"};
@@ -33553,7 +33639,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.8;
 		initSpeed = 900;
 		magazines[] = {"BP_20Rnd_762x51_BPMag","BP_20Rnd_762x51_M80A1","BP_20Rnd_762x51_Mk316Mod0","BP_10Rnd_762mk316_Mag","BP_10Rnd_762x51_Mag","BP_10Rnd_762m80a1_Mag","BP_5Rnd_762x51_Mag","BP_5Rnd_762mk316_Mag","BP_5Rnd_762m80a1_Mag","BP_10Rnd_762Rubber_Mag"};
-		maxZeroing = 1600;
 		model = "\A3\Weapons_F_Exp\Rifles\SPAR_03\SPAR_03_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponSPAR17_ca.paa";
@@ -33624,7 +33709,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
+				compatibleItems[] = {"BP_Harris","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
 
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
@@ -33667,6 +33752,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "CAR-95 5.8 mm";
 		distanceZoomMax = 300;
 		distanceZoomMin = 300;
+		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\dry_Katiba",0.562341,1,10};
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\CTAR\Anim\CTAR_F.rtm"};
 		hiddenSelections[] = {"camo"};
@@ -33675,7 +33762,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.3;
 		initSpeed = 930;
 		magazines[] = {"BP_30Rnd_580x42_Mag_F","BP_30Rnd_580x42_Mag_Tracer_F"};
-		maxZeroing = 800;
 		model = "\A3\Weapons_F_Exp\Rifles\CTAR\CTAR_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponCAR_ca.paa";
@@ -33731,7 +33817,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				iconScale = 0.2;
 			};
 			class MuzzleSlot : SlotInfo { //["MuzzleSlot","SlotInfo"]
-				compatibleItems[] = {"BP_muzzle_snds_58_blk_F","BP_muzzle_snds_58_wdm_F"};
+				compatibleItems[] = {"BP_muzzle_snds_58_blk_F"};
 				iconPosition[] = {0,0.45};
 				iconScale = 0.2;
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -33780,6 +33866,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_Exp\Rifles\CTAR\Anim\CTARGL.rtm"};
 		hiddenSelections[] = {"camo1","camo2"};
 		inertia = 0.4;
+		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		model = "\A3\Weapons_F_Exp\Rifles\CTAR\CTAR_GL_F.p3d";
 		muzzles[] = {"this","EGLM"};
 		scope = 0;
@@ -33843,7 +33931,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.4;
 		initSpeed = 970;
 		magazines[] = {"BP_100Rnd_580x42_Mag_F","BP_100Rnd_580x42_Mag_Tracer_F"};
-		maxZeroing = 1000;
+		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		model = "\A3\Weapons_F_Exp\Rifles\CTARS\CTARS_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		recoil = "recoil_car_lsw";
@@ -33896,7 +33985,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 			class MuzzleSlot : SlotInfo
 			{
-				compatibleItems[] = {"BP_muzzle_snds_58_blk_F","BP_muzzle_snds_58_wdm_F"};
+				compatibleItems[] = {"BP_muzzle_snds_58_blk_F"};
 				iconPosition[] = {0,0.45};
 				iconScale = 0.2;
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -33946,7 +34035,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Katiba\firemode_katiba",0.251189,1,5};
 		descriptionShort = "Assault Rifle<br />Caliber: 6.5x39 mm / .50 BW";
 		dexterity = 1.1;
-		discreteDistance[] = {100,200,300,400,500,600};
 		discreteDistanceInitIndex = 0;
 		displayName = "Type 115 6.5 mm";
 		distanceZoomMax = 600;
@@ -33959,7 +34047,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.9;
 		initSpeed = 960;
 		magazines[] = {"BP_30Rnd_65x39","BP_30Rnd_65x39_SD","BP_10Rnd_65x39","BP_10Rnd_65x39_SD"};
-		maxZeroing = 1000;
+		magazineWell[] = {"bp_65x39_mxrifle"};
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\A3\Weapons_F_Exp\Rifles\ARX\ARX_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		muzzles[] = {"this","Secondary"};
@@ -34073,7 +34163,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			};
 			class MuzzleSlot : SlotInfo
 			{
-				compatibleItems[] = {"BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_65_TI_hex_F","BP_muzzle_snds_65_TI_ghex_F"};
+				compatibleItems[] = {"BP_muzzle_snds_65_TI_blk_F","BP_muzzle_snds_h","BP_muzzle_snds_65_TI_ghex_F"};	
 				iconPosition[] = {0,0.45};
 				iconScale = 0.2;
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -34081,7 +34171,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class PointerSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[] = {"acc_flashlight","acc_pointer_IR"};
+				compatibleItems[] = {"BP_flashlight"};
 
 				iconPosition[] = {0.35,0.45};
 				iconScale = 0.2;
@@ -34089,8 +34179,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot : SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris","BP_Harris2","bipod_03_F_blk", "bipod_02_F_blk", "bipod_01_F_blk", "bipod_02_F_hex", "bipod_01_F_khk", "bipod_01_F_mtp", "bipod_03_F_oli", "bipod_01_F_snd", "bipod_02_F_tan"};
-
+				compatibleItems[] = {};
 				iconPosition[] = {0.2,0.8};
 				iconScale = 0.3;
 			};
@@ -34137,6 +34226,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		_generalMacro = "DMR_07_base_F";
 		aiDispersionCoefX = 2;
 		aiDispersionCoefY = 3;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		author = "Bohemia Interactive";
 		bullet1[] = {"A3\sounds_f\weapons\shells\7_62\metal_762_01",0.630957,1,15};
 		bullet10[] = {"A3\sounds_f\weapons\shells\7_62\grass_762_02",0.630957,1,15};
@@ -34154,7 +34245,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		cursor = "srifle";
 		deployedPivot = "bipod";
 		descriptionShort = "Marksman Rifle<br />Caliber: 6.5x39 mm";
-		discreteDistance[] = {300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600};
 		discreteDistanceInitIndex = 0;
 		displayName = "CMR-76 6.5 mm";
 		distanceZoomMax = 1600;
@@ -34167,7 +34257,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.5;
 		initSpeed = 960;
 		magazines[] = {"BP_20Rnd_650x39_Cased_Mag_F","BP_30Rnd_65x39","BP_30Rnd_65x39_SD","BP_10Rnd_65x39","BP_10Rnd_65x39_SD"};
-		maxZeroing = 1400;
 		model = "\A3\Weapons_F_Exp\LongRangeRifles\DMR_07\DMR_07_F.p3d";
 		modes[] = {"Single"};
 		overviewPicture = "\A3\Data_F_Exp\Images\WeaponCMR_ca.paa";
@@ -34249,6 +34338,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "Submachine Gun<br />Caliber: 9x21 mm";
 		dexterity = 1.8;
 		displayName = "Protector 9 mm";
+		maxZeroing = 100;
+		discreteDistance[] = {100};
 		distanceZoomMax = 300;
 		distanceZoomMin = 300;
 		drySound[] = {"A3\Sounds_F_Exp\arsenal\weapons\SMGs\Rogue9\Rogue9_dry",0.562341,1,10};
@@ -34260,7 +34351,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.2;
 		initSpeed = 375;
 		magazines[] = {"BP_30Rnd_9x21_Mag","BP_33Rnd_9x19OVP","BP_16Rnd_9x21_Mag","BP_33Rnd_9x19","BP_17Rnd_9x19_SD","BP_15Rnd_9x19_M9","BP_15Rnd_9x19OVP"};
-		maxZeroing = 200;
 		model = "\A3\Weapons_F_Exp\SMGs\SMG_05\SMG_05_F.p3d";
 		modes[] = {"Single","FullAuto"};
 		picture = "\A3\Weapons_F_Exp\SMGs\SMG_05\Data\UI\icon_SMG_05_F_X_CA.paa";
@@ -34390,6 +34480,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M60E4.rtm"};
 		inertia = 0.200000;
 		recoil = "recoil_ebr";
+		discreteDistance[] = {50,100,150,200};
+		maxZeroing = 200;
 		changeFiremodeSound[] = {};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\Bolt_reload_s1.wav", 0.30, 0.6, 30};
 		//muzzleEffect = "BIS_fnc_effectFiredRifle";
@@ -34480,6 +34572,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "An old Remington pump action shotgun";
 		inertia = 0.210000; //Inertiachange, increaced.
 		descriptionUse = "Old Remington 870";
+		discreteDistance[] = {50,100,150,200};
+		maxZeroing = 200;
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M24.rtm"};
 		class WeaponSlotsInfo
 		{
@@ -34524,7 +34618,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		hiddenSelectionsTextures[] = {"breakingpoint_weapons\textures\870\Rem870_urb_co.paa"};
 	};
 
-	class BP_Lupara : BP_Benelli
+		class BP_Lupara : BP_Benelli
 	{
 	    scope = 2;
 		model = "\breakingpoint_weapons\models\Lupara\BP_Lupara.p3d";
@@ -34534,6 +34628,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		magazines[] = {"BP_2Rnd_Buckshot", "BP_2Rnd_Slug", "BP_2Rnd_MagBuckshot"};
 		descriptionShort = "Sawed off double barrel shotgun";
 		inertia = 0.12000;
+		maxZeroing = 50;
 		initSpeed = -0.85;
 		//recoil = ""; recoilChange test a higher value for sawnoff, like m320
 		descriptionUse = "Lupara Double Barrel";
@@ -34666,6 +34761,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 //CLASS CREATION WEAPONS PISTOL-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+	
 	class BP_1911: Pistol_Base_F
 	{
 	    scope = 2;
@@ -34680,6 +34776,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.090000; //Inertiachange, reduced.
 		recoil = "recoil_pistol_acpc2";
+		maxZeroing = 50;
 		modes[] = {"Single"};
 		class Single : Mode_SemiAuto
 		{
@@ -34762,6 +34859,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    magazines[] = {"BP_12Rnd_9x18", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
 		descriptionShort = "Russian semi automatic pistol, updated 12 round magazine";
 		descriptionUse = "Old Makarov PM";
+		maxZeroing = 50;
 		changeFiremodeSound[] = {};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols", 0.300000, 1, 50};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
@@ -34841,6 +34939,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Glock 17";
 		descriptionUse = "Glock 17";
 		changeFiremodeSound[] = {};
+		maxZeroing = 50;
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols", 0.300000, 1, 50};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		inertia = 0.0800000; //Inertiachange, reduced.
@@ -34928,6 +35027,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\breakingpoint_weapons\icons\gear_g18_rifle_x_ca.paa";
 		descriptionShort = "Standard issue US Military select fire pistol, compatible with all standard capacity 9mm magazines";
 		displayName = "Glock 18";
+		maxZeroing = 50;
 		descriptionUse = "Glock 18";
 		changeFiremodeSound[] = {};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\pistols", 0.300000, 1, 50};
@@ -35045,6 +35145,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	    scope = 2;
 		model = "breakingpoint_weapons\models\M9\BP_M9.p3d";
 		magazines[] = {"BP_16Rnd_9x21_Mag", "BP_19Rnd_9x19", "BP_17Rnd_9x19_SD", "BP_15Rnd_9x19OVP", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
+		maxZeroing = 50;
 		picture = "\breakingpoint_weapons\icons\gear_m9_rifle_x_ca.paa";
 		descriptionShort = "Standard issue US Military semi automatic pistol, compatible with all standard capacity 9mm magazines";
 		displayName = "Beretta M9";
@@ -35131,6 +35232,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_m9Tac: BP_m9
 	{
 	    scope = 2;
+		maxZeroing = 50;
 		model = "breakingpoint_weapons\models\M9\BP_BerettaTac.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m9tac_rifle_x_ca.paa";
 		magazines[] = {"BP_33Rnd_9x19OVP", "BP_30Rnd_9x21_Mag", "BP_16Rnd_9x21_Mag", "BP_19Rnd_9x19", "BP_17Rnd_9x19_SD", "BP_15Rnd_9x19OVP", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
@@ -35258,6 +35360,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionUse = "Smith and Wesson .45";
 		descriptionshort = ".45 Revolver";
 		changeFiremodeSound[] = {};
+		maxZeroing = 50;
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\pistol_heavy_01\reload", 0.300000, 1, 50};
 		inertia = 0.110000; //Inertiachange, increased.
@@ -35330,7 +35433,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Rhino : hgun_Pistol_heavy_02_F
 	{
 		scope = 2;
-		maxZeroing = 200;
+		maxZeroing = 75;
 		displayName = "Chiappa Rhino 44";
 		descriptionUse = "Chiappa Rhino 44";
 		picture = "\breakingpoint_weapons\icons\gear_rhino_rifle_x_ca.paa";
@@ -35390,7 +35493,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SW44 : hgun_Pistol_heavy_02_F
 	{
 		scope = 2;
-		maxZeroing = 200;
+		maxZeroing = 75;
 		model = "breakingpoint_weapons\models\SW44\BP_SW44.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_sw500_rifle_x_ca.paa";
 		displayName = "Smith and Wesson Model 500";
@@ -35487,6 +35590,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		magazines[] = {"BP_7Rnd_45acp", "BP_7Rnd_45JHP", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
 		inertia = 0.110000; //Inertiachange, increased.
 		recoil = "recoil_pistol_p07";
+		maxZeroing = 50;
 		modes[] = {"Single"};
 		muzzles[] = {"this", "TranQ"};
 		class Single : Mode_SemiAuto
@@ -35599,7 +35703,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_FNPTac45: hgun_pistol_heavy_01_F
 	{
 		scope = 2;
-		maxZeroing = 200;
+		maxZeroing = 50;
 		model = "\A3\Weapons_F_EPA\Pistols\Pistol_heavy_01\Pistol_heavy_01_F.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_fnp_rifle_x_ca.paa";
 		magazines[] = {"BP_15Rnd_45JHP", "BP_12Rnd_45JHP", "BP_7Rnd_45acp", "BP_7Rnd_45JHP", "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
@@ -35677,6 +35781,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\breakingpoint_weapons\icons\gear_uzi_rifle_x_ca.paa";
 		displayName = "Micro Uzi";
 		descriptionUse = "Micro Uzi";
+		maxZeroing = 100;
 		changeFiremodeSound[] = {};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\PDW2000_reload_2", 0.400000, 1, 10};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
@@ -35793,6 +35898,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		model = "\breakingpoint_weapons\models\SA61\BP_SA61.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_sa61_rifle_x_ca.paa";
 		displayName = "Skorpion vz61";
+		maxZeroing = 75;
 		descriptionUse = "Skorpion vz61";
 		changeFiremodeSound[] = {};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\Reloads\PDW2000_reload_2", 0.400000, 1, 10};
@@ -35893,6 +35999,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_PPK : Pistol_Base_F
 	{
 		scope = 2;
+		maxZeroing = 50;
 		model = "breakingpoint_weapons\models\PPK\BP_PPK.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_ppk_rifle_x_ca.paa";
 		displayName = "Walther PPK";
@@ -35971,6 +36078,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_1911MDes: hgun_ACPC2_F
 	{
 	    scope = 2;
+		maxZeroing = 50;
 		model = "\A3\Weapons_F_Beta\Pistols\ACPC2\ACPC2_F.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1911m_rifle_x_ca.paa";
 		magazines[] = {"BP_7Rnd_45acp", "BP_7Rnd_45JHP", /*"BP_6Rnd_45_Mag", "BP_6Rnd_45JHP_Mag",*/ "BP_6Rnd_GreenFlare", "BP_6Rnd_RedFlare"};
@@ -36037,7 +36145,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_ScarH: Rifle_Base_F_BP
 	{
 	    scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1200;
 		displayName = "FN-SCAR Heavy";
 		model = "\breakingpoint_weapons\models\SCAR\BP_ScarH.p3d";
 		descriptionShort = "7.62mm Modular Battle Rifle";
@@ -36221,7 +36329,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -36363,7 +36471,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_AR10: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
 		model = "\breakingpoint_weapons\models\M16\BP_AR10.p3d";
 		displayName = "AR10 Battle Rifle";
 		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_Mk316Mod0", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_30Rnd_762x51_BPMag", "BP_30Rnd_762x51_M80A1", "BP_30Rnd_762x51_Mk316Mod0" /*", BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag"*/};
@@ -36715,7 +36823,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_MXM: Rifle_Base_F_BP
 	{
 	    scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
 		displayName = "MX Marksman Rifle";
 		descriptionUse = "Semi-auto MX marksman variant with longer barrel and improved accuracy."; //Descriptionchange
 		model = "\A3\Weapons_F\Rifles\MX\MXM_F.p3d";
@@ -36854,6 +36962,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\reloads\new_MX.wss", 0.31, 1, 30};
 		inertia = 0.220000; //Inertiachange, increased.
 		recoil = "recoil_mx";
+		discreteDistance[] = {200,300,400,500,600};
 		modes[] = {"Single", "FullAuto"};
 
 		class Single : Mode_SemiAuto
@@ -36972,6 +37081,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "MX 6.5mm Rifle GL";
 		descriptionUse = "MX 6.5mm Rifle GL";
 		model = "\A3\Weapons_F\Rifles\MX\MX_GL_F.p3d";
@@ -37059,9 +37169,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			useModelOptics = 0;
 			useExternalOptic = 0;
 			cameraDir = "OP_look";
-			discreteDistance[] = {300, 450};
-			//discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75", "OP_eye_100", "OP_eye_150", "OP_eye_200", "OP_eye_250", "OP_eye_300", "OP_eye_350", "OP_eye_400"};
-			discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75"};
+			discreteDistance[] = {50, 75, 100, 150, 200, 250, 300, 350, 400};
+			discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75", "OP_eye_100", "OP_eye_150", "OP_eye_200", "OP_eye_250", "OP_eye_300", "OP_eye_350", "OP_eye_400"};
+			//discreteDistanceCameraPoint[] = {"OP_eye_50", "OP_eye_75"};
 			discreteDistanceInitIndex = 1;
 		};
 		class WeaponSlotsInfo
@@ -37111,6 +37221,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "MX 6.5mm Carbine";
 		descriptionUse = "MX 6.5mm Carbine Rifle";
 		model = "\A3\Weapons_F\Rifles\MX\MXC_F.p3d";
@@ -37303,6 +37414,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\A3\Weapons_F_beta\Rifles\mk20\mk20_F.p3d";
 		displayName = "FN F2000 Assault Rifle";
 		descriptionUse = "FN F2000 Assault Rifle";
@@ -37431,6 +37543,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\A3\Weapons_F_beta\Rifles\mk20\Mk20_GL_F.p3d";
 		displayName = "FN F2000 Assault Rifle GL";
 		descriptionUse = "FN F2000 Assault Rifle GL";
@@ -37518,9 +37631,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			useModelOptics = 0;
 			useExternalOptic = 0;
 			cameraDir = "OP_look";
-			discreteDistance[] = {300, 400, 500};
+			discreteDistance[] = {50, 75, 100};
 			magazines[] = {"BP_1Rnd_40mm_Flashbang", "BP_1Rnd_HE_shell", "BP_3Rnd_HE_shell", "BP_UGL_FlareWhite", "BP_UGL_FlareRed", "BP_UGL_FlareGreen"};
-			//discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"};
 			discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_75", "OP_eye_100"};
 			discreteDistanceInitIndex = 1;
 		};
@@ -37597,7 +37709,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_MK20C: Rifle_Base_F_BP
 	{
 	    scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 500;
+		discreteDistance[] = {200,300,400,500};
 		model = "\A3\Weapons_F_beta\Rifles\mk20\Mk20_C_F.p3d";
 		displayName = "FN F2000 Carbine Assault Rifle";
 		descriptionUse = "FN F2000 Carbine Assault Rifle";
@@ -37726,6 +37839,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\A3\weapons_f\Rifles\TRG20\TRG21_F.p3d";
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_weapons\textures\Tavor\tar21_base_co.paa"};
@@ -37978,7 +38092,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
 		picture = "\breakingpoint_weapons\icons\gear_ak47_rifle_x_ca.paa";
 		inertia = 0.30000; //Inertiachange, increased.
-		discreteDistance[] = {100,200,300,400,500,600};
+		discreteDistance[] = {200,300,400,500,600};
 		discreteDistanceInitIndex = 3;//400m AK zero
 		recoil = "recoil_trg21";
 		modes[] = {"Single", "Burst", "FullAuto"};
@@ -38115,7 +38229,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_AK74_DMR: BP_SUD_AK74M
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "Tabuk";
 		descriptionUse = "DMR built from the AK-74 platform";
 		descriptionShort = "5.45x39mm DMR";
@@ -38237,7 +38352,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_AK74U: BP_SUD_AK74M
 	{
 		scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		displayName = "Old AKS-74U";
 		descriptionUse = "Old AK74U";
 		descriptionShort = "Old, poorly maintained 5.45x39mm Assault Rifle";
@@ -38296,6 +38412,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "AK-107";
 		descriptionUse = "AK-107";
 		descriptionShort = "AK-100 Series 5.45x39mm Assault Rifle with Balanced Automatics Recoil System."; //DescriptionChange
@@ -38310,7 +38427,6 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.250000;
 		initSpeed = -1.02;
 		recoil = "recoil_mk20";
-		discreteDistance[] = {100,200,300,400,500,600};
 		discreteDistanceInitIndex = 3;
 		modes[] = {"Single", "Burst", "FullAuto"};
 		class Single : Mode_SemiAuto
@@ -38453,7 +38569,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_AKM: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		displayName = "AKMS";
 		descriptionShort = "Modern AK-47 variant with folding stock"; //Descriptionchange
 		model = "breakingpoint_weapons\models\SA58\BP_AKM.p3d";
@@ -38682,7 +38799,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SA58: BP_AKM
 	{
 		scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		displayName = "VZ.58";
 		descriptionShort = "Modern AK-47 variant";
 		magazines[] = {"BP_60Rnd_762x39_AKM", "BP_762x39_AKM"};
@@ -38761,6 +38879,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SA582: BP_SA58
 	{
 		scope = 2;
+		discreteDistance[] = {200,300,400,500,600};
+		maxZeroing = 600;
 		displayName = "AKM RIS";
 		descriptionShort = "Modern AK-47 variant with telescopic stock and weaver rails";
 		magazines[] = {"BP_762x39_AKM", "BP_60Rnd_762x39_AKM"};
@@ -38853,6 +38973,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
         scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_M4A1.p3d";
 		displayName = "M4A1 Assault Rifle";
 		picture = "\breakingpoint_weapons\icons\gear_m4a1_rifle_x_ca.paa";
@@ -38989,7 +39110,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4K : BP_M4
 	{
         scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 500;
+		discreteDistance[] = {200,300,400,500};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_m4a3K.p3d";
 		displayName = "M4A3 Assault Rifle w/Bayonet";
 		picture = "\breakingpoint_weapons\icons\gear_m4a3k_rifle_x_ca.paa";
@@ -39101,6 +39223,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
         scope = 2;
 		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_M300.p3d";
 		displayName = "M4 300 Blackout";
 		picture = "\breakingpoint_weapons\icons\gear_m300_rifle_x_ca.paa";
@@ -39378,7 +39501,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4_300K : BP_M4_300
 	{
         scope = 2;
-		maxZeroing = 800;
+		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_M300K.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m300k_rifle_x_ca.paa";
 		displayName = "M4 300 Blackout w/Bayonet";
@@ -39485,6 +39609,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
         scope = 2;
 		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_M300MK.p3d";
 		displayName = "M4 300 Blackout Masterkey";
 		picture = "\breakingpoint_weapons\icons\gear_m300mk_rifle_x_ca.paa";
@@ -39583,7 +39708,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M4OLD: BP_M4
 	{
         scope = 2;
-		maxZeroing = 300;
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_m4a3.p3d";
 		displayName = "M4A3 Carbine Rifle";
 		descriptionShort = "A poorly maintained carbine rifle";
@@ -39643,6 +39769,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M16OLD: BP_M4OLD
 	{
         scope = 2;
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		model = "\breakingpoint_weapons\models\M16\BP_M16old.p3d";
 		displayName = "AR15 Rifle";
 		picture = "\breakingpoint_weapons\icons\gear_m16a2_rifle_x_ca.paa";
@@ -39729,6 +39857,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\M16\BP_m16a2.p3d";
 		displayName = "M16A2";
 		descriptionShort = "5.56mm Assault Rifle";
@@ -39841,6 +39970,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M16A4: BP_m4
 	{
 		scope = 2;
+		discreteDistance[] = {200,300,400,500,600};
+		maxZeroing = 600;
 		model = "\breakingpoint_weapons\models\M16\BP_m16a4.p3d";
 		displayName = "M16A4";
 		descriptionShort = "5.56mm Assault Rifle";
@@ -40162,6 +40293,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\M4A3_old\BP_M4Tac.p3d";
 		displayName = "M4 Block 2";
 		descriptionShort = "5.56mm Assault Rifle";
@@ -40340,6 +40472,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
         scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\G36\BP_G36.p3d";
 		displayName = "HK G36 Carbine";
 		picture = "\breakingpoint_weapons\icons\gear_g36_rifle_x_ca.paa";
@@ -40463,7 +40596,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Mk12mod1: BP_M16A4
 	{
 		scope = 2;
-		maxZeroing = 900;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\breakingpoint_weapons\models\SPR\BP_SPR.p3d";
 		displayName = "Mk12 SPR";
 		descriptionShort = "Special Purpose Rifle derived from the M16";
@@ -40581,6 +40715,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Mk12mod1Spec: BP_Mk12mod1
 	{
 	    scope = 2;
+		discreteDistance[] = {200,300,400,500,600,700,800};
+		maxZeroing = 800;
 		model = "\breakingpoint_weapons\models\SPR\BP_SPRS.p3d";
 		displayName = "Mk12 Mod 1";
 		descriptionShort = "Heavily modified Designated Marksman variant of the M16 customized for special operations";
@@ -40685,7 +40821,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 
 	class BP_MP5 : Rifle_Base_F_BP
 	{
-		maxZeroing = 300;
+		maxZeroing = 200;
+		discreteDistance[] = {100,200};
 		scope = 2;
 		displayName = "HK MP5";
 		model = "\breakingpoint_weapons\models\MP5\BP_mp5.p3d";
@@ -40854,7 +40991,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionShort = "A well maintained collectible high power WWI bolt action rifle";
 		model = "\breakingpoint_weapons\models\LeeEnfield\BP_LeeEnfield.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_enfieldcollector_rifle_x_ca.paa";
-		discreteDistance[] = {100, 200, 300, 400, 500, 600};
+		discreteDistance[] = {100, 200, 300, 400, 500, 600,700,800};
 		discreteDistanceInitIndex = 1;
 		handAnim[] = {"OFP2_ManSkeleton", "breakingpoint_weapons\anim\LeeEnfield.rtm"};
 		magazines[] = {"BP_10Rnd_303_Mag", "BP_10rnd_303_JSP_Mag"};
@@ -40973,7 +41110,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_LeeEnfieldK: BP_LeeEnfield
 	{
 		scope = 2;
-		maxZeroing = 1000;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "Enfield MkIV Collector w/Bayonet";
 		descriptionShort = "A well maintained collectible high power WWI bolt action rifle";
 		model = "\breakingpoint_weapons\models\LeeEnfield\BP_LeeEnfieldK.p3d";
@@ -41058,7 +41196,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_LeeEnfield_old: BP_LeeEnfield
 	{
 		scope = 2;
-		maxZeroing = 300;
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		displayName = "Old Enfield MkIII";
 		descriptionShort = "An old, poorly maintained high power WWI bolt action rifle";
 		model = "\breakingpoint_weapons\models\LeeEnfieldOld\BP_LeeEnfield_old.p3d";
@@ -41130,7 +41269,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Garand: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		displayName = "M1 Garand";
 		descriptionShort = "A well maintained WWII infantry rifle";
 		model = "\breakingpoint_weapons\models\Garand\BP_Garand.p3d";
@@ -41242,6 +41382,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "M1 Garand Bayonet";
 		descriptionShort = "A well maintained WWII infantry rifle";
 		model = "\breakingpoint_weapons\models\Garand\BP_GarandK.p3d";
@@ -41401,7 +41542,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SVT40: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1400;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		displayName = "Tokarev SVT-40";
 		descriptionShort = "Russian WWII high power rifle";
 		model = "\breakingpoint_weapons\models\SVT40\BP_SVT40.p3d";
@@ -41642,13 +41784,14 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_1866: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 500;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		displayName = "Winchester 1866";
 		descriptionShort = "A classic lever rifle chambered for .45ACP";
 		model = "\breakingpoint_weapons\models\1866\BP_1866.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1866_rifle_x_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton", "breakingpoint_weapons\anim\LeeEnfield.rtm"};
-		magazines[] = {"BP_7Rnd_45acp", "BP_7Rnd_45JHP"};
+		magazines[] = {"BP_8Rnd_45gov"};
 		inertia = 0.280000;
 		recoil = "recoil_mk20";
 		initSpeed = -1.12;
@@ -41740,12 +41883,14 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_1866C: BP_1866
 	{
 		scope = 2;
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		displayName = "Winchester 1866 Collector";
 		descriptionShort = "A classic lever rifle chambered for .45ACP";
 		model = "\breakingpoint_weapons\models\1866\BP_1866_2.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_1866c_rifle_x_ca.paa";
 		handAnim[] = {"OFP2_ManSkeleton", "breakingpoint_weapons\anim\LeeEnfield.rtm"};
-		magazines[] = {"BP_7Rnd_45JHP", "BP_7Rnd_45acp"};
+		magazines[] = {"BP_8Rnd_45gov"};
 		inertia = 0.280000;
 		muzzles[] = {"this", "Butt"};
 		modes[] = {"Single"};
@@ -41835,6 +41980,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_1886S: BP_1866
 	{
 		scope = 2;
+		maxZeroing = 400;
+		discreteDistance[] = {200,300,400};
 		displayName = "Winchester 1886 Short";
 		descriptionShort = "A classic lever rifle chambered for .45-70";
 		model = "\breakingpoint_weapons\models\1866\BP_1886S.p3d";
@@ -41929,7 +42076,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M1903: BP_LeeEnfield
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\breakingpoint_weapons\models\M1903\BP_M1903.p3d";
 		displayname = "Springfield M1903";
 		picture = "\breakingpoint_weapons\icons\gear_m1903_rifle_x_ca.paa";
@@ -42021,6 +42169,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M1903K: BP_M1903
 	{
 		scope = 2;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\M1903\BP_M1903K.p3d";
 		displayname = "Springfield M1903 w/Bayonet";
 		picture = "\breakingpoint_weapons\icons\gear_m1903k_rifle_x_ca.paa";
@@ -42140,7 +42290,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
     class BP_MX_SW: Rifle_Base_F_BP
 	{
 	    scope = 2;
-		maxZeroing = 1000;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		displayName = "MX LMG";
 		descriptionUse = "MX LMG";
 		model = "\A3\Weapons_F\Rifles\MX\MX_SW_F.p3d";
@@ -42276,7 +42427,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -42286,7 +42437,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
             {"optic_ACO_grn", 0.50},
 			{"BP_compM4s", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10}
+			{"BP_Harris", 0.10}
         };
 	};
 
@@ -42312,6 +42463,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\A3\Weapons_F_Beta\Machineguns\Zafir\Zafir_F.p3d";
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F_Beta\Machineguns\Zafir\Data\Anim\zafir.rtm"};
 		displayName = "Negev NG7 LMG";
@@ -42460,7 +42612,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -42470,7 +42622,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
             {"optic_ACO_grn", 0.50},
 			{"BP_compM4s", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10}
+			{"BP_Harris", 0.10}
         };
 	};
 
@@ -42601,7 +42753,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Minimi_HG: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1000;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		type = 1;
 		displayName = "M249 SAW";
 		descriptionUse = "M249 SAW";
@@ -42708,7 +42861,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -42718,7 +42871,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
             {"optic_ACO_grn", 0.50},
 			{"BP_compM4s", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10},
+			{"BP_Harris", 0.10},
 			{"BP_AFG", 0.10}
         };
 	};
@@ -42822,6 +42975,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 	    scope = 2;
 		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		type = 1;
 		displayName = "Mk48 Mod 1";
 		descriptionUse = "Mk48 Mod 1";
@@ -42916,7 +43070,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -42926,7 +43080,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
             {"optic_ACO_grn", 0.50},
 			{"BP_compM4s", 0.50},
             {"BP_optic_ACOG", 0.05},
-			{"BP_Harris2", 0.10},
+			{"BP_Harris", 0.10},
 			{"BP_AFG", 0.10}
         };
 	};
@@ -43018,7 +43172,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_BAR: Rifle_Base_F_BP
 	{
 	    scope = 2;
-		maxZeroing = 1000;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		type = 1;
 		displayName = "M1918 BAR";
 		descriptionUse = "M1918 BAR";
@@ -43154,6 +43309,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		type = 1;
 		model = "\A3\Weapons_F\LongRangeRifles\M320\M320_F.p3d";
 		//model = "\A3\Weapons_F_Bootcamp\LongRangeRifles\M320_camo\M320_camo_F.p3d";
@@ -43323,6 +43479,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		type = 1;
 		magazines[] = {"BP_5Rnd_127x108_Mag"};
 		model = "\A3\Weapons_F\LongRangeRifles\GM6\GM6_F.p3d";
@@ -43481,6 +43638,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		type = 1;
 		model = "\breakingpoint_weapons\models\M107\BP_M107.p3d";
 		displayName = "Barrett M107";
@@ -43566,7 +43724,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[] = {"BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
 		};
@@ -43659,7 +43817,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_AWSM: Rifle_Long_Base_F
 	{
 	    scope = 2;
-		maxZeroing = 2000;
+		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\AWSM\BP_AWSM.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_awsm_rifle_x_ca.paa";
 		magazines[] = {"BP_10Rnd_338Lapua_Mag"};
@@ -43871,6 +44030,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\M24A2\BP_M24A2.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m24a2_rifle_x_ca.paa";
 		displayName = "M24A2 SpecOps";
@@ -43989,6 +44149,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\M24G\BP_M24G.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m24a1_rifle_x_ca.paa";
 		displayName = "M24A1 Camo";
@@ -44135,6 +44296,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1400;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400};
 		model = "\breakingpoint_weapons\models\R700\BP_R700.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_r700_rifle_x_ca.paa";
 		displayName = "Remington Model 700";
@@ -44299,6 +44461,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\R300\BP_R300.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_r300_rifle_x_ca.paa";
 		magazines[] = {"BP_5Rnd_300AAC_Mag"};
@@ -44306,6 +44469,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		descriptionshort = "Remington 700 customized for the .300 Blackout hunting cartridge";
 		initSpeed = -1.06;
 		recoil = "recoil_mxm";
+		reloadAction = "GestureReloadLRR";
 		modes[] = {"Single"};
 		class Single : Mode_SemiAuto
 		{
@@ -44438,7 +44602,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Rem6: BP_MXM
 	{
 	    scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700};
 		displayName = "Remington Grendel";
 		descriptionUse = "Remington Grendel";
 		model = "\breakingpoint_weapons\models\Rem6\BP_Rem6.p3d";
@@ -44452,7 +44617,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.200000;
 		initSpeed = -1.07;
 		recoil = "recoil_mxm";
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {"\breakingpoint_jsrs\sounds\Bolt_s1.wav", 0.35000, 1.150000, 35};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\Bolt_reload_s1.wav", 0.351417, 1.10, 30};
 		modes[] = {"Single"};
@@ -44558,6 +44723,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\M40A3\BP_m40a3.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m40a3_rifle_x_ca.paa";
 		displayName = "USMC M40A5";
@@ -44758,6 +44924,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		inertia = 0.0000;
 		aiDispersionCoefY = 0.100000;
 		aiDispersionCoefK = 0.100000;
+		reloadAction = "GestureReloadLRR";
 		class Single : Mode_SemiAuto
 		{
 			sounds[] = {StandardSound, SilencedSound, AlternateSound};
@@ -44835,6 +45002,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		model = "\breakingpoint_weapons\models\CZ550_old\BP_CZ550_old.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_cz550_rifle_x_ca.paa";
 		displayName = "Old CZ-550";
@@ -44971,10 +45139,10 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_CZ455: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1000;
 		model = "\breakingpoint_weapons\models\CZ_455\BP_CZ455.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_cz445_rifle_x_ca.paa";
 		displayName = "CZ-452 Varmint";
+		maxZeroing = 100;
 		descriptionshort = "Compact .22LR small game Hunting/Target Rifle";
 		magazines[] = {"BP_5Rnd_22_Mag", "BP_5Rnd_762Rubber_Mag"};
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M24.rtm"};
@@ -45066,7 +45234,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
         };
 
 		memoryPointCamera = "eye";
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {"\breakingpoint_jsrs\sounds\Bolt_s1.wav", 0.35000, 1.450000, 45};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\Bolt_reload_s1.wav", 0.351417, 1.30, 30};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.230957, 1, 100};
@@ -45098,7 +45266,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Ruger: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 600;
+		maxZeroing = 100;
 		model = "\breakingpoint_weapons\models\Ruger\BP_Ruger.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_ruger_rifle_x_ca.paa";
 		displayName = "Ruger 10/22 Carbine";
@@ -45191,7 +45359,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
         };
 
 		memoryPointCamera = "eye";
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {};
 		reloadMagazineSound[] = {"A3\sounds_f\weapons\reloads\new_ebr", 0.398107, 1.5, 10};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.230957, 1, 50};
@@ -45219,6 +45387,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		//model = "\breakingpoint_weapons\models\Ruger\BP_Ruger.p3d";
 		model = "\breakingpoint_weapons\models\DMR\BP_DMR.p3d";
 		//picture = "\breakingpoint_weapons\icons\gear_ruger_rifle_x_ca.paa";
@@ -45303,6 +45472,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\CZ_MC550\BP_mc5502.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_mc550_rifle_x_ca.paa";
 		displayName = "CZ-MC550";
@@ -45399,7 +45569,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"",0.60}
         };
 
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {"\breakingpoint_jsrs\sounds\HA550_bolt", 0.350000, 1.000000, 55};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\HA550_Reload", 0.301417, 1.20, 30};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
@@ -45434,6 +45604,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\CZ_HA550\BP_ha550.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_ha550_rifle_x_ca.paa";
 		displayName = "CZ-HA550 Hunter";
@@ -45575,7 +45746,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"",0.60}
         };
 
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {"\breakingpoint_jsrs\sounds\HA550_bolt", 0.350000, 1.000000, 50};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\HA550_Reload", 0.301417, 1.20, 30};
 		drySound[] = {"A3\sounds_f\weapons\other\dry1", 0.330957, 1, 130};
@@ -45603,6 +45774,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 1600;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400,1600};
 		model = "\breakingpoint_weapons\models\Win70\BP_Win70.p3d";
 		displayName = "Winchester Model 70";
 		descriptionShort = "High caliber hunting rifle";
@@ -45716,7 +45888,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_WinCoy: BP_MC550
 	{
 		scope = 2;
-		maxZeroing = 800;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\Win70\BP_WinCoy.p3d";
 		displayName = "Remington Model Seven";
 		descriptionShort = ".223 Short action hunting rifle";
@@ -45798,7 +45971,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			{"",0.50}
         };
 
-		reloadAction = "GestureReloadMX";
+		reloadAction = "GestureReloadLRR";
 		reloadSound[] = {"\breakingpoint_jsrs\sounds\HA550_bolt", 0.350000, 1.000000, 50};
 		reloadMagazineSound[] = {"\breakingpoint_jsrs\sounds\HA550_Reload", 0.301417, 0.880, 30};
 	};
@@ -45824,12 +45997,14 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_WinCoy2: BP_WinCoy
 	{
 		scope = 2;
-		maxZeroing = 1300;
+		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\Win70\BP_WinCoy2.p3d";
 		displayName = "Remington Model Seven CDL";
 		magazines[] = {"BP_5Rnd_223BTHP_mag", "BP_5Rnd_223_Mag", "BP_5Rnd_250_Mag"};
 		picture = "\breakingpoint_weapons\icons\gear_wincdl_rifle_x_ca.paa";
 		descriptionShort = "Intermediate caliber precision hunting rifle";
+		reloadAction = "GestureReloadLRR";
 		modes[] = {"Single"};
 		class Single : Mode_SemiAuto
 		{
@@ -45894,7 +46069,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Win70F: BP_HA550
 	{
 		scope = 2;
-		maxZeroing = 1300;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\Win70\BP_Win70F.p3d";
 		displayName = "Winchester Model 70 Super Grade";
 		descriptionShort = "High caliber precision hunting rifle";
@@ -46119,7 +46295,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Kar98: BP_Win70
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\Kar98\BP_Kar98.p3d";
 		displayName = "Karabiner 98";
 		magazines[] = {"BP_5Rnd_Mauser_Mag"};
@@ -46232,7 +46409,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Kar98k: BP_Win70
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 800;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		model = "\breakingpoint_weapons\models\Kar98\BP_Kar98k.p3d";
 		displayName = "Karabiner 98k";
 		magazines[] = {"BP_5Rnd_Mauser_Mag"};
@@ -46478,7 +46656,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M110: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		displayName = "M110 SASS";
 		descriptionshort = "Semi-Automatic 7.62mm Sniper Rifle System";
 		descriptionUse = "M110 Desert";
@@ -46706,7 +46885,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -46746,7 +46925,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SR25: BP_M110
 	{
 		scope = 2;
-		maxZeroing = 1400;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		displayName = "SR-25";
 		descriptionshort = "Semi-Automatic 7.62mm Sniper Rifle";
 		descriptionUse = "SR-25";
@@ -46860,7 +47040,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -46977,6 +47157,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	{
 		scope = 2;
 		maxZeroing = 600;
+		discreteDistance[] = {200,300,400,500,600};
 		model = "\breakingpoint_weapons\models\FNFALM\BP_fnfal.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_FNFAL_rifle_x_ca.paa";
 		displayName = "FNFAL";
@@ -47247,6 +47428,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_FNFALK: BP_FNFAL
 	{
 		scope = 2;
+		maxZeroing = 700;
+		discreteDistance[] = {200,300,400,500,600,700};
 		model = "\breakingpoint_weapons\models\FNFALM\BP_fnfalK.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_FNFALk_rifle_x_ca.paa";
 		displayName = "FNFAL w/Bayonet";
@@ -47323,7 +47506,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_FALM: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1400;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\FNFALM\BP_FALM.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_FALM_rifle_x_ca.paa";
 		displayName = "FNFAL DMR-HB";
@@ -47684,7 +47868,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_G36DMR: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1400;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\G36\BP_G36DMR.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_G36DMR_rifle_x_ca.paa";
 		displayName = "G36 DMR";
@@ -47835,7 +48020,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -47939,7 +48124,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_DMR_Officer: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1400;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\DMR\BP_DMR.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_dmr_rifle_x_ca.paa";
 		displayName = "M14 DMR";
@@ -48174,6 +48360,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M14RIS: BP_DMR_Officer
 	{
 		scope = 2;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\DMR\BP_dmrRIS.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_dmr_rifle_x_ca.paa";
 		displayName = "M14 RIS DMR";
@@ -48219,7 +48407,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			class UnderBarrelSlot: SlotInfo
 			{
 				linkProxy = "\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
-				compatibleItems[] = {"BP_Harris", "BP_Harris2"};
+				compatibleItems[] = {"BP_Harris"};
 				iconScale = 0.1;
 			};
         };
@@ -48250,7 +48438,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M21: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\M21\BP_M21.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m21_rifle_x_ca.paa";
 		displayName = "M21 Super Match";
@@ -48524,7 +48713,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		aiDispersionCoefX = 0.100000;
 		class Single : Mode_SemiAuto
 		{
-			sounds[] = {StandardSound, SilencedSound};
+			sounds[] = {StandardSound, "SilencedSound"};
  			class BaseSoundModeType
  			{
  				weaponSoundEffect  = "DefaultRifle";
@@ -48592,7 +48781,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M21K: BP_M21
 	{
 		scope=2;
-		maxZeroing=1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model="\breakingpoint_weapons\models\M21\BP_M21K.p3d";
 		picture="\breakingpoint_weapons\icons\gear_m21k_rifle_x_ca.paa";
 		displayName="M21 Super Match w/Bayonet";
@@ -48798,7 +48988,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M25WF: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\M25WF\BP_M25WF2.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m25_rifle_x_ca.paa";
 		displayName = "M25 White Feather";
@@ -49033,7 +49224,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_M25WFK: BP_M25WF
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\breakingpoint_weapons\models\M25WF\BP_M25WK.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_m25k_rifle_x_ca.paa";
 		displayName = "M25 White Feather w/Bayonet";
@@ -49156,7 +49348,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SVD: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		magazines[] = {"BP_762x54_SVD", "BP_762x54_7N1_10rnd", "BP_762x54_7N13_10rnd"};
 		reloadAction = "GestureReloadEBR";
 		picture = "\breakingpoint_weapons\icons\gear_svd_rifle_x_ca.paa";
@@ -49396,7 +49589,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SVDK: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1600;
+		maxZeroing = 1400;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1200,1400};
 		magazines[] = {"BP_93x64_SVDK"};
 		reloadAction = "GestureReloadEBR";
 		picture = "\breakingpoint_weapons\icons\gear_svdk_rifle_x_ca.paa";
@@ -49722,7 +49916,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_TranQRifle: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 800;
+		maxZeroing = 1000;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
 		model = "\A3\Weapons_F_EPA\LongRangeRifles\DMR_01\DMR_01_F.p3d";
 		dexterity = 1.680000;
 		magazines[] = {"BP_10Rnd_762Rubber_Mag", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
@@ -49807,7 +50002,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		aimTransitionSpeed = 1.3;
 		dexterity = 1.7;
 		initSpeed = -1.1;
-		maxZeroing = 800;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_tr_ca.paa";
 		UiPicture = "\A3\Weapons_F\data\UI\icon_regular_CA.paa";
 		descriptionShort = "$STR_A3_CfgWeapons_SMG_03_TR_BASE1";
@@ -49917,6 +50113,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		maxZeroing = 600;
 		initSpeed = -1;
 		inertia = 0.2;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		aimTransitionSpeed = 1.4;
 		dexterity = 1.8;
 		class Single: Single
@@ -50015,6 +50213,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "$STR_A3_Bohemia_Interactive";
 		_generalMacro = "BP_P90_black";
 		scope = 2;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		displayName = "$STR_A3_CfgWeapons_SMG_03_black0";
 		model = "\A3\Weapons_F_Mod\SMGs\SMG_03\SMG_03.p3d";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_black_ca.paa";
@@ -50074,6 +50274,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		author = "$STR_A3_Bohemia_Interactive";
 		_generalMacro = "BP_P90C_black";
 		scope = 2;
+		maxZeroing = 300;
+		discreteDistance[] = {200,300};
 		displayName = "$STR_A3_CfgWeapons_SMG_03C_black0";
 		picture = "\A3\Weapons_F_Mod\SMGs\SMG_03\data\UI\gear_adr97_c_black_ca.paa";
 		model = "\A3\Weapons_F_Mod\SMGs\SMG_03\SMG_03C.p3d";
@@ -50937,7 +51139,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.070900;
 					opticsZoomMax = 0.175000;
 					opticsZoomInit = 0.175000;
-					discreteDistance[] = {50, 100, 200, 300, 400, 500};
+					discreteDistance[] = {100, 200, 300, 400, 500};
 					discreteDistanceInitIndex = 2;
 					distanceZoomMin = 100;
 					distanceZoomMax = 500;
@@ -51218,7 +51420,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.062900;
 					opticsZoomMax = 0.062900;
 					opticsZoomInit = 0.062900;
-					discreteDistance[] = {100,200,300,350,400,450,500,550,600,650,700,750,800,850,900,950,1000};//Real pso does not have 50m from 100-300
+					discreteDistance[] = {200,300,400,500,600,700,800,900,1000};//Real pso does not have 50m from 100-300
 					discreteDistanceInitIndex = 2;
 					modelOptics[] = {"breakingpoint_weapons\scopes\bek_pso_r0.p3d","breakingpoint_weapons\scopes\bek_pso_r1.p3d"};
 					distanceZoomMin = 100;
@@ -51230,17 +51432,32 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsFlare = 1;
 					cameraDir = "";
 				};
+
 				class Iron: PSO1
-				{
+				{ 
+				/*
+					opticsID = 2;
+					useModelOptics = 0;
+					opticsFlare = 0;
+					opticsDisablePeripherialVision = 0.5;
+					opticsZoomMin = 0.025000;
+					opticsZoomMax = 0.040000;
+					opticsZoomInit = 0.010000;
+					distanceZoomMin = 100;
+					distanceZoomMax = 100;
+					memoryPointCamera = "eye";
+					visionMode[] = {};
+				}; */
 					opticsID = 2;
 					useModelOptics = 0;
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0.5;
 					opticsZoomMin = 0.425000;
 					opticsZoomMax = 1.100000;
-					opticsZoomInit = 0.750000;
-					distanceZoomMin = 100;
-					distanceZoomMax = 100;
+					opticsZoomInit = 0.00000;
+					discreteDistance[] = {50, 100, 200, 300};
+					discreteDistanceInitIndex = 1;
+					discretefov[] = {};
 					memoryPointCamera = "eye";
 					visionMode[] = {};
 				};
@@ -51329,7 +51546,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.07143;
 					opticsZoomMax = 0.07143;
 					opticsZoomInit = 0.07143;
-					discreteDistance[] = {100,200,300,400};
+					discreteDistance[] = {200,300,400};
 					discreteDistanceInitIndex = 1;
 					distanceZoomMin = 100;
 					distanceZoomMax = 400;
@@ -52878,21 +53095,35 @@ class CfgMagazines {
 
 	class ChemG: Chemlight_green
 	{
+		ammo="Chem_green";
 		mass = 5;
 	};
 
 	class ChemR: Chemlight_red
 	{
+		ammo="Chem_red";
 		mass = 5;
 	};
 
 	class ChemY: Chemlight_yellow
 	{
+		ammo="Chem_yellow";
 		mass = 5;
 	};
 
 	class ChemB: Chemlight_blue
 	{
+		ammo="Chem_blue";
+		mass = 5;
+	};
+	
+	class ChemO: Chemlight_yellow
+	{
+		displayName="Chemlight (Orange)";
+		ammo="Chem_orange";
+		descriptionShort="Orange Chemlight";
+		displayNameShort="Chemlight (Orange)";
+		picture="\A3\Weapons_F\Data\UI\M_chemlight_yellow_CA.paa";
 		mass = 5;
 	};
 
@@ -53609,7 +53840,7 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "30rnd 545x39mm Magazine";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_545x39_Mag_F_ca.paa";
 		ammo = "BP_545x39_Ball";
 		count = 30;
 		initSpeed = 880;
@@ -53622,7 +53853,7 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "30rnd 545x39mm HP Magazine";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_545x39_Mag_Tracer_F_ca.paa";
 		ammo = "BP_545x39_HP";
 		count = 30;
 		initSpeed = 895;
@@ -53636,7 +53867,7 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "30rnd 545x39mm 7N22 Magazine";
-		picture = "\breakingpoint_weapons\icons\BP_M855A1_ca.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_545x39_Mag_Tracer_Green_F_ca.paa";
 		ammo = "BP_545x39_7N22";
 		count = 30;
 		initSpeed = 890;
@@ -53651,7 +53882,7 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "30rnd 545x39mm 7T3 Tracer Magazine";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_545x39_Mag_Tracer_F_ca.paa";
 		ammo = "BP_545x39_Ball";
 		count = 30;
 		initSpeed = 880;
@@ -53664,7 +53895,8 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "75Rnd RPK Drum";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
+		//picture = "a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
 		ammo = "BP_545x39_Ball";
 		count = 75;
 		initSpeed = 880;
@@ -53676,7 +53908,7 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "30Rnd AKM Magazine";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
 		ammo = "BP_762x39_Ball";
 		count = 30;
 		mass = 15;
@@ -53690,7 +53922,8 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "60Rnd AKM Magazine";
-		picture = "\A3\weapons_F\data\UI\m_30stanag_CA.paa";
+		picture = "\A3\Weapons_F_Exp\Data\UI\icon_30Rnd_762x39_Mag_F_ca.paa";
+		//picture = "a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_75Rnd_762x39_Mag_F_CA.paa";
 		ammo = "BP_762x39_Ball";
 		count = 60;
 		mass = 23;
@@ -54466,7 +54699,7 @@ class CfgMagazines {
 		mass = 17;
 	};
 
-	class BP_6Rnd_45_Mag: CA_Magazine
+	class BP_6Rnd_45_Mag: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45ACP";
 		displayName = "6Rnd .45ACP";
@@ -54477,7 +54710,7 @@ class CfgMagazines {
 		mass = 7;
 	};
 
-	class BP_6Rnd_45JHP_Mag: CA_Magazine
+	class BP_6Rnd_45JHP_Mag: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45JHP";
 		displayName = "6Rnd .45JHP";
@@ -54488,7 +54721,7 @@ class CfgMagazines {
 		mass = 7;
 	};
 
-	class BP_7Rnd_45acp: CA_Magazine
+	class BP_7Rnd_45acp: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45ACP";
 		displayName = "7Rnd .45ACP";
@@ -54499,7 +54732,7 @@ class CfgMagazines {
 		mass = 7;
 	};
 
-	class BP_8Rnd_45gov: CA_Magazine
+	class BP_8Rnd_45gov: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45GOV";
 		initSpeed = 617;
@@ -54510,7 +54743,7 @@ class CfgMagazines {
 		mass = 12;
 	};
 
-	class BP_7Rnd_45JHP: CA_Magazine
+	class BP_7Rnd_45JHP: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45JHP";
 		count = 7;
@@ -54522,7 +54755,7 @@ class CfgMagazines {
 		mass = 8;
 	};
 
-	class BP_7Rnd_45Rubber: CA_Magazine
+	class BP_7Rnd_45Rubber: 11Rnd_45ACP_Mag
 	{
 	    ammo = "BP_45Rubber";
 		displayName = "7Rnd .45ACP TranQ rounds";
@@ -54533,7 +54766,7 @@ class CfgMagazines {
 		mass = 7;
 	};
 
-	class BP_12Rnd_45cal: CA_Magazine
+	class BP_12Rnd_45cal: 11Rnd_45ACP_Mag
 	{
 		ammo = "BP_45ACP";
 		displayName = "12Rnd .45ACP";
@@ -54544,7 +54777,7 @@ class CfgMagazines {
 		mass = 9;
 	};
 
-	class BP_12Rnd_45JHP: CA_Magazine
+	class BP_12Rnd_45JHP: 11Rnd_45ACP_Mag
 	{
 		ammo = "BP_45JHP";
 		displayName = "12Rnd .45JHP+";
@@ -54555,7 +54788,7 @@ class CfgMagazines {
 		mass = 9;
 	};
 
-	class BP_15Rnd_45cal: CA_Magazine
+	class BP_15Rnd_45cal: 11Rnd_45ACP_Mag
 	{
 		ammo = "BP_45ACP";
 		displayName = "15Rnd .45ACP";
@@ -54566,7 +54799,7 @@ class CfgMagazines {
 		mass = 10;
 	};
 
-	class BP_15Rnd_45JHP: CA_Magazine
+	class BP_15Rnd_45JHP: 11Rnd_45ACP_Mag
 	{
 		ammo = "BP_45JHP";
 		displayName = "15Rnd .45JHP";
@@ -54635,7 +54868,12 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "2Rnd Slugs";
-		picture = "\A3\Weapons_F\Data\UI\M_12gauge_slugs_CA.paa";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_2rnd_12gauge_CA.paa";
+		modelSpecialIsProxy = 1;
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_12ga_hunter_2rnd";
+		hiddenSelections[] = {"camo","cap1"};
+		hiddenSelectionsTextures[] = {"\a3\Weapons_F_Enoch\MagazineProxies\data\12GA_Pellets_CO.paa"};
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		count = 2;
 		initSpeed = 609;
 		ammo = "BP_12Gauge_Slug";
@@ -54659,7 +54897,12 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "2Rnd 00 Buckshot";
-		picture = "\A3\Weapons_F\Data\UI\M_12gauge_slugs_CA.paa";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_2rnd_12gauge_CA.paa";
+		hiddenSelections[] = {"camo","cap2"};
+		hiddenSelectionsTextures[] = {"\a3\Weapons_F_Enoch\MagazineProxies\data\12GA_Slug_CO.paa"};
+		modelSpecialIsProxy = 1;
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_12ga_hunter_2rnd";
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		count = 2;
 		initSpeed = 365;
 		ammo = "BP_12Gauge_Buck";
@@ -54683,7 +54926,12 @@ class CfgMagazines {
 	{
 		scope = 2;
 		displayName = "2Rnd Magnum 000 Buckshot";
-		picture = "\A3\Weapons_F\Data\UI\M_12gauge_slugs_CA.paa";
+		picture = "\a3\Weapons_F_Enoch\MagazineProxies\data\UI\icon_2rnd_12gauge_CA.paa";
+		hiddenSelections[] = {"camo","cap2"};
+		hiddenSelectionsTextures[] = {"\a3\Weapons_F_Enoch\MagazineProxies\data\12GA_Slug_CO.paa"};
+		modelSpecialIsProxy = 1;
+		modelSpecial = "a3\Weapons_F_Enoch\MagazineProxies\mag_12ga_hunter_2rnd";
+		model = "\A3\weapons_F\ammo\mag_univ.p3d";
 		count = 2;
 		initSpeed = 440;
 		ammo = "BP_12Gauge_Buck2";

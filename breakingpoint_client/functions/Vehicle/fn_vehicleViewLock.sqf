@@ -7,13 +7,26 @@
 	by Malcain
 */
 
-params ["_unit","_role","_vehicle"];
+//params ["_unit","_role","_vehicle","_turret"];
+params ["_vehicle","_inVehicle"];
 
 if (missionDifficulty > 2) exitwith {};
 
 if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) exitwith {};
 
-[] spawn
+//_inVehicle = (!isNull objectParent player);
+
+if (_inVehicle) exitwith {
+	oldCamView = cameraView;
+	player switchCamera "INTERNAL";
+};
+
+if (!isNil "oldCamView" && !_inVehicle) then {
+	player switchCamera oldCamView;
+};
+
+
+/*[] spawn
 {
 	waitUntil {
 		sleep 0.2; 
@@ -24,8 +37,7 @@ if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) ex
 		
 		isNull objectParent player;
 	};
-};
-
+};*/
 
 /*[] spawn
 {

@@ -72,6 +72,7 @@ class CfgRemoteExec
 		
 		// Global Effects
 		class BPServer_fnc_headGore { allowedTargets=2; };		//BP_effectHeadExplode
+		class BPServer_fnc_cleanupCampFire { allowedTargets=2; };	//BPServer_fnc_cleanupCampFire
 		
 		// Ignite Things
 		class BPServer_fnc_igniteEntity { allowedTargets=2; };
@@ -84,6 +85,7 @@ class CfgRemoteExec
 		// Vehicles ( Call)
 		class BP_fnc_vehicleKilled { allowedTargets=2; };			//BP_VehicleKilled
 		class BPServer_fnc_changeOwner { allowedTargets=2; };		//for Push vehicle
+		class BPServer_fnc_explodeRemControl { allowedTargets=2; };	//Explosive Vehicle Remote Control
 		
 		// Vehicles (Handle Repair Call)
 		class BP_fnc_vehicleHandleFuel { allowedTargets=1; };

@@ -95,7 +95,7 @@ waitUntil
 			if (_rnd < 3) then { addCamShake [2, 1, 25]; };
 			
 			//Lower Health as a result of infection
-			if (r_player_blood > 2500) then { r_player_blood = r_player_blood - 5; };
+			if (r_player_blood > 2500) then { r_player_blood = r_player_blood - 4; };
 		};
 
 		//Pain Shake Effects

@@ -97,7 +97,7 @@ if (_eventName == "LBSelChanged") then
 if (_eventName == "LBDblClick") then
 {
 	if (_data == "WaterbotEmpty") exitWith { [_data] spawn BP_fnc_waterFill; };
-	if (_data == "ItemMatchbox") exitWith { [_data] spawn BP_fnc_fireMake; };	
+	if (_data == "ItemMatchbox" or _data == "ItemWoodPile") exitWith { [_data] spawn BP_fnc_fireMake; };	
 	if (_data in BP_FuelEmpty) exitWith { [_data] spawn BP_fnc_fuelFill; };
 	if (_data in BP_TrapBuildables) exitWith { [_data] spawn BP_fnc_constructTrap; };
 	if (_data in BP_Blueprints) exitWith {[_data] spawn BP_fnc_constructStorage;};

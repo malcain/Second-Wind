@@ -101,7 +101,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {};
+					magazines[] = {"ChemO","ChemO","ChemO"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -109,7 +109,7 @@
 			class Level_2 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"TRYK_ESS_BLKTAN_NV","G_MM_FaceFork"};
+					toolbelt[] = {"G_MM_FaceFork","Scavenger_Goggles"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeShovel"};
@@ -119,7 +119,7 @@
 					vest[] = {"V_BanditBandolier_BP"};
 					uniform[] = {"BP_Scavenger_2",""};
 					headgear[]={""};
-					nvg[]={"TRYK_ESS_BLKTAN_NV"};
+					nvg[]={"Scavenger_Goggles"};
 					facewear[]={"G_MM_FaceFork"};
 				};
 				class Uniform : BP_BaseGear {
@@ -131,18 +131,18 @@
 					items[] = {};
 				};
 				class Vest : BP_BaseGear  {
-					//Array Of Weapons Inside Backpack
+					//Array Of Weapons Inside Vest
 					weapons[] = {};
-					//Array Of Magazines Inside Backpack
+					//Array Of Magazines Inside Vest
 					magazines[] = {};
-					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
+					//Array Of Items Inside Vest ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
 				class Backpack : BP_BaseGear  {
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {};
+					magazines[] = {"ChemO","ChemO","ChemO"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -161,7 +161,7 @@
 					uniform[] = {"BP_Scavenger_3",""};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
+					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -184,7 +184,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemDuctTape"};
+					magazines[] = {"ChemO","ChemO","ChemO","ItemDuctTape"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -203,7 +203,7 @@
 					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk",""};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask","NeckTight_RED","NeckTight_TanO"};
+					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -226,7 +226,7 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"ItemDuctTape"};
+					magazines[] = {"ChemO","ChemO","ChemO","ItemDuctTape"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};

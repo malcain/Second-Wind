@@ -85,10 +85,10 @@ class RscDisplayMPInterrupt : RscStandardDisplay
 			idc = 1010;
 			style = 48;
 			text = "\breakingpoint_ui\pause\button_respawn.paa";
-			x = 0.00396872 * safezoneW + safezoneX;
-			y = 0.9598 * safezoneH + safezoneY;
-			w = 0.252656 * safezoneW;
-			h = 0.0286 * safezoneH;
+			x="-111.00396872 * safezoneW + safezoneX";
+            y="-111.9598 * safezoneH + safezoneY";
+            w="0.001 * safezoneW";
+            h="0.0001 * safezoneH";
 			color[] = { 1, 1, 1, 1 };
 			colorActive[] = { 1, 1, 1, 1 };
 			action = "";

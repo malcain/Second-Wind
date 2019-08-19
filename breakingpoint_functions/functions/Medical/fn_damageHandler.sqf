@@ -11,6 +11,7 @@ scriptName "BP_fnc_damageHandler";
 
 params ["_unit","_hit","_damage","_source","_ammo","_hitPartIndex","_instigator","_hitPoint"];
 
+if (_damage isEqualTo 0) exitwith {};
 //Only Handle Damage On Valid Units
 if (isNull _unit) exitWith {};
 

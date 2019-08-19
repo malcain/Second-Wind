@@ -92,7 +92,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Uniform
 				weapons[] = {};
 				//Array Of Magazines Inside Uniform
-				magazines[] = {"ItemBandage","ItemBandage"};
+				magazines[] = {"ItemPainkiller","ItemPainkiller","ItemBandage","ItemBandage"};
 				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -101,7 +101,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Backpack
 				weapons[] = {};
 				//Array Of Magazines Inside Backpack
-				magazines[] = {"ItemPainkiller","ItemPainkiller"};
+				magazines[] = {"ChemB","ChemB"};
 				//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -126,7 +126,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Uniform
 				weapons[] = {};
 				//Array Of Magazines Inside Uniform
-				magazines[] = {"ItemBandage","ItemBandage"};
+				magazines[] = {"ItemPainkiller","ItemMorphine","ItemBandage","ItemFieldDressing"};
 				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -135,7 +135,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Backpack
 				weapons[] = {};
 				//Array Of Magazines Inside Backpack
-				magazines[] = {"ItemPainkiller","ItemPainkiller","ItemMorphine","ItemFieldDressing"};
+				magazines[] = {"ChemB","ChemB"};
 				//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -160,7 +160,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Uniform
 				weapons[] = {};
 				//Array Of Magazines Inside Uniform
-				magazines[] = {"BP_7Rnd_45acp","BP_7Rnd_45acp"};
+				magazines[] = {"ItemMorphine","ItemAdrenaline","ItemFieldDressing","ItemFieldDressing"};
 				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -170,7 +170,7 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Backpack
 				weapons[] = {};
 				//Array Of Magazines Inside Backpack
-				magazines[] = {"ItemMorphine","ItemMorphine","ItemFieldDressing","ItemFieldDressing"};
+				magazines[] = {"ChemB","ChemB","BP_7Rnd_45acp","BP_7Rnd_45acp"};
 				//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {};
 			};
@@ -187,7 +187,7 @@ class Ranger : BP_BaseFaction
 				backpack[] = {""};
 				vest[] = {"V_RangerVest_BP"};
 				uniform[] = {"BP_Guardian_4","BP_Guardian_Ind_4",""};
-				headgear[] = {""};
+				headgear[] = {"BP_prizrak_hat"};
 				nvg[] = {""};
 				facewear[] = {"","G_Aviator"};
 			};
@@ -195,11 +195,15 @@ class Ranger : BP_BaseFaction
 				//Array Of Weapons Inside Uniform
 				weapons[] = {};
 				//Array Of Magazines Inside Uniform
-				magazines[] = {"BP_7Rnd_45acp","BP_7Rnd_45acp"};
+				magazines[] = {};
 				//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 				items[] = {"G_Aviator"};
 			};
-			class Vest : BP_BaseGear {};
+			class Vest : BP_BaseGear {
+				weapons[] = {};
+				magazines[] = {"BP_7Rnd_45acp","BP_7Rnd_45acp","ChemB","ChemB"};
+				items[] = {};
+			};
 			class Backpack : BP_BaseGear 
 			{
 				//Array Of Weapons Inside Backpack
@@ -276,7 +280,7 @@ class Ranger : BP_BaseFaction
 			};
 		};
 		class Destroy {
-			vehicle = 10;
+			vehicle = 5;
 			class scavenger {
 				storage = 50;
 			};
@@ -330,11 +334,11 @@ class Ranger : BP_BaseFaction
 		};
 		class Kill {
 			class scavenger {
-				Level_0 = 50;
-				Level_1 = 50;
+				Level_0 = 25;
+				Level_1 = 40;
 				Level_2 = 75;
-				Level_3 = 125;
-				Level_4 = 150;
+				Level_3 = 100;
+				Level_4 = 125;
 				Dog = 10;
 			};
 			class Ranger {
@@ -357,7 +361,7 @@ class Ranger : BP_BaseFaction
 				Level_0 = 50;
 				Level_1 = 50;
 				Level_2 = 125;
-				Level_3 = 175;
+				Level_3 = 150;
 				Level_4 = 200;
 				Dog = 10;
 			};

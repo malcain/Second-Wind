@@ -53,6 +53,14 @@ _handle = [player,20,true,getPosATL player] spawn BP_fnc_zombieAlert;
 // Set Body Death Reason
 if (_method != 0) then { player setVariable ["deathType",_method,true]; };
 
+_dog = player getVariable ["dog", objNull];
+if (!isnull _dog) then
+{
+	player setVariable ["dog",objNull];
+	player setVariable ["dogID",0];
+	//terminate dogHeartbeat;
+};
+
 // Clean Layers
 _layers = [0,1,2,3,4];
 { _x cutRsc ["Default", "PLAIN",1] } count _layers;

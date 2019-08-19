@@ -646,7 +646,7 @@ class CfgWorlds
 					mie[]={0.0049000001,0.0049000001,0.0049000001};
 					cloudsColor[]=
 					{
-						{0.5,0.64999998,1},
+						{0.5,0.65,1},
 						13.016
 					};
 					swBrightness=1;
@@ -1654,7 +1654,7 @@ class CfgWorlds
 					mie[]={0.0049000001,0.0049000001,0.0049000001};
 					cloudsColor[]=
 					{
-						{0.5,0.64999998,1},
+						{0.5,0.65,1},
 						12.1
 					};
 					swBrightness=1;
@@ -4176,7 +4176,7 @@ class CfgWorlds
 			};
 			class LightningsConfig: LightningsConfig
 			{
-				minCloudiness=0.7;
+				minCloudiness=0.72;
 				minProbability=0;
 				maxProbability=1;
 				minCount=0;

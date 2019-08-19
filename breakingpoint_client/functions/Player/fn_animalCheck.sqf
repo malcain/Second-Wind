@@ -34,27 +34,28 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//http://community.bistudio.com/wiki/selectBestPlaces
 	//http://resources.bisimulations.com/wiki/selectBestPlaces
 	
-	_favouritezones = "(meadow + forest + trees) * (1 - houses) * (1 - sea)";
+	_favouritezones = "(forest + meadow + trees) * (1 - houses) * (1 - sea)";
+	_mushroomZones = "forest + trees - meadow * (1 - sea) * (1 - houses)";
 	
-	if (random 100 < 60) then {
-	_mushroom = true;
-	_favouritezones = "forest + trees - meadow * (1 - sea) * (1 - houses)";
+	if (random 100 < 65) then {
+		_mushroom = true;
+	};
+	if (_mushroom) then {
+		_mushPosList = selectBestPlaces [_playerPos,_randomDistance,_mushroomZones,10,7];
+		if (_mushPosList isEqualTo []) exitWith {};
+		_mushPosSelect = selectRandom _mushPosList;
+		_mushPos = _mushPosSelect select 0 findEmptyPosition [0,10];
+		if (_mushPos isEqualTo []) exitWith {};
+		["FoodMushroom", "magazine", "Default", _mushPos] call BP_fnc_spawnLoot;
 	};
 	
 	_PosList = selectBestPlaces [_playerPos,_randomDistance,_favouritezones,10,7];
-	
 	if (_PosList isEqualTo []) exitWith {};
 	
-	//_num = (floor random 5 min (count _PosList));
 	_PosSelect = selectRandom _PosList;
-	
 	_Pos = _PosSelect select 0 findEmptyPosition [0,10];
-	
 	if (_Pos isEqualTo []) exitWith {};
 	
-	if (_mushroom) then {
-		["FoodMushroom", "magazine", "Default", _Pos] call BP_fnc_spawnLoot;
-	};
 	//_nearbyAnimals = [_playerPos,150] call BP_fnc_nearbyAnimals;
 	if (player distance _Pos > 150 and (NOT surfaceIsWater _Pos)) then {
 		_spawnType = "FORM";
@@ -66,4 +67,3 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 		//_agent setVariable ["fsm_handle", _fsmid];
 	};
 };
-
