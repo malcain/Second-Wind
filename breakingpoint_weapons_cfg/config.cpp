@@ -40311,13 +40311,13 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				"standardsound",
 				"silencedsound"
 			};
- 			class BaseSoundModeType
- 			{
- 				weaponSoundEffect  = "DefaultRifle";
- 				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6", 0.307946, 1, 10};
- 				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7", 0.307946, 1, 10};
- 				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
- 			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect  = "DefaultRifle";
+				closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_6", 0.307946, 1, 10};
+				closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_7", 0.307946, 1, 10};
+				soundClosure[] = {"closure1", 0.500000, "closure2", 0.500000};
+			};
 			class standardsound: basesoundmodetype
 			{
 				soundsetshot[]=
@@ -50779,7 +50779,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Aimpoint CompM4 red dot";
 		picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
 		model = "\breakingpoint_weapons\models\AIM\BP_AIM.p3d";
-		descriptionShort = "";
+		descriptionShort = "Fixed? ;) if not, tell to Kol9yN";
 		weaponInfoType = "RscWeaponZeroing";
 		inertia = 0.010000;
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -52210,7 +52210,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_gemtech45: BP_muzzle_snds_acp
 	{
 		scope = 2;
-		displayName = ".45 Suppressor";
+		displayName = ".45 GemTech Suppressor";
 		descriptionshort = "Custom .45 Suppressor";
 		inertia = 0.100000;
 		class ItemInfo: InventoryMuzzleItem_Base_F
@@ -52254,8 +52254,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_m9qd : BP_muzzle_snds_L
 	{
 		scope = 2;
-		displayName = "Tactical QD Suppressor";
-		descriptionShort = "Specialized tactical sound suppressor";
+		displayName = "Tactical 9mm QD Suppressor";
+		descriptionShort = "9mm Specialized tactical sound suppressor";
 		picture = "\A3\weapons_F\Data\UI\gear_acca_snds_l_CA.paa";
 		model = "\breakingpoint_weapons\models\M9QD\M9QD.p3d";
 		inertia = 0.100000;
