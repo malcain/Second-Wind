@@ -265,6 +265,7 @@ class Cfgweapons
 		};	
 			class WeaponSlotsInfo
 			{
+				mass = 165;
 				class MuzzleSlot
 				{
 					linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";

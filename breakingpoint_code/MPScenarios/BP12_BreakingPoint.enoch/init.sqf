@@ -45,7 +45,7 @@ BP_FastBoot = (paramsArray select 11) == 1;
 		[rainleak9] execvm "AL_Leaks\water_leak.sqf";*/
 		
 if (hasInterface) then {
-//[] execVm "nighttime.sqf";
+[] execVm "nighttime.sqf";
 [] execVM "rain_drop.sqf";
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";
 };

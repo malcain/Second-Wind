@@ -12,7 +12,7 @@ for "_i" from 1 to 10 do {
 	effect_screen ppEffectAdjust [0.1,0.5,0.5,0.1,0.1,true]; 
 	effect_screen ppEffectCommit 0;
 	};
-	sleep 15;
+	sleep 25;
 };
 
 /*

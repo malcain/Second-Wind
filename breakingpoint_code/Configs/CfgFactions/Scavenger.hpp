@@ -242,57 +242,57 @@
 			levels[] = {0,2000,5000,10000};
 			class Aid {
 				class Scavenger {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
 					morphine = 15;
 					surgery = 25;
-					gut = -50;
+					gut = -4000;
 				};
 				class Ranger {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -25;
-					morphine = -25;
+					food = -30;
+					drink = -30;
+					bandage = -30;
+					dressing = -50;
+					morphine = -50;
 					surgery = -100;
 					gut = 0;
 				};
 				class Nomad {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -25;
-					morphine = -25;
+					food = -30;
+					drink = -30;
+					bandage = -30;
+					dressing = -50;
+					morphine = -50;
 					surgery = -100;
 					gut = 0;
 				};
 				class Survivalist {
-					food = -5;
-					drink = -5;
-					bandage = -5;
-					dressing = -10;
-					morphine = -10;
-					surgery = -50;
+					food = -30;
+					drink = -30;
+					bandage = -30;
+					dressing = -50;
+					morphine = -50;
+					surgery = -100;
 					gut = 0;
 				};
 				class Outlaw {
-					food = 5;
-					drink = 5;
-					bandage = 10;
+					food = 10;
+					drink = 10;
+					bandage = 5;
 					dressing = 10;
-					morphine = 10;
-					surgery = 20;
-					gut = 0;
+					morphine = 15;
+					surgery = 25;
+					gut = -4000;
 				};
 				class Hunter {
-					food = -5;
-					drink = -5;
-					bandage = -5;
-					dressing = -10;
-					morphine = -25;
-					surgery = -50;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -80;
+					morphine = -80;
+					surgery = -150;
 					gut = 50;
 				};
 				class Engineer {
@@ -306,7 +306,7 @@
 				};
 			};
 			class Destroy {
-				vehicle = 50;
+				vehicle = 25;
 				class Scavenger {
 					storage = 0;
 				};

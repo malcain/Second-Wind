@@ -217,48 +217,48 @@
 			class Aid
 			{
 				class scavenger {
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 200;
 				};
 				class Ranger {
-					food = 0;
-					drink = 0;
-					bandage = -10;
-					dressing = -15;
-					morphine = -15;
-					surgery = -25;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 240;
 				};
 				class Nomad {
-					food = 0;
-					drink = 0;
-					bandage = -10;
-					dressing = -15;
-					morphine = -15;
-					surgery = -25;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 200;
 				};
 				class Survivalist {
-					food = 0;
-					drink = 0;
-					bandage = -10;
-					dressing = -15;
-					morphine = -15;
-					surgery = -50;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 300;
 				};
 				class Outlaw {
-					food = 0;
-					drink = 0;
-					bandage = 0;
-					dressing = 0;
-					morphine = 0;
-					surgery = 0;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 200;
 				};
 				class Hunter {

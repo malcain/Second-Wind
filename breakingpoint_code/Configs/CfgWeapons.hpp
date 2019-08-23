@@ -2286,9 +2286,9 @@ class CfgWeapons
 		};
 	};
 	
-	class V_HarnessOGL_gry_BP: Vest_NoCamo_Base {
+	class BP_ExplosiveVest: Vest_NoCamo_Base {
 		scope = 2;
-		displayName = "Equipment Harness";
+		displayName = "Outlaw Explosive Vest";
 		descriptionShort = "Medium capacity, light armor";
 		picture = "\A3\characters_f_beta\Data\UI\icon_V_HarnessOU_gry_CA.paa";
 		model = "\A3\Characters_F\OPFOR\equip_o_vest_gl";

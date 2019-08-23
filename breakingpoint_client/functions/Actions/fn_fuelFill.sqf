@@ -29,7 +29,7 @@ if (_fuelTank) then {
 	if (damage _cursorobject >= 0.75) exitwith {
 		cutText ["No fuel left here.", "PLAIN DOWN"];
 	};
-	if (random 1 < 0.80) then {
+	if (random 1 < 0.65) then {
 		_cursorobject setdamage 0.75;
 		cutText ["No fuel left here.", "PLAIN DOWN"];
 	} else {
@@ -56,7 +56,7 @@ if (_finished) then
 				player removeMagazine _empty;
 				player addMagazine _full;
 			};
-			_dis = 10;
+			_dis = 15;
 			[player,"refuel",0,false,_dis] call BP_fnc_objSpeak;  
 			_handle = [player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 			[_handle] call BP_fnc_addThreadHandle;

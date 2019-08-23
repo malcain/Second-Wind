@@ -14,9 +14,9 @@ item9[] = {"End_Mission",1,250,750.000000,225.000000,850.000000,275.000000,0.000
 item10[] = {"Preload_Position",2,250,-75.000000,1150.000000,25.000000,1200.000000,0.000000,"Preload Position"};
 item11[] = {"Load_Position",2,250,-75.000000,1250.000000,25.000000,1300.000000,0.000000,"Load Position"};
 item12[] = {"Display_Ready",4,218,-175.000000,1300.000000,-75.000000,1350.000000,0.000000,"Display" \n "Ready"};
-item13[] = {"Preload_Display",2,4346,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
+item13[] = {"Preload_Display",2,250,-75.000000,1350.000000,25.000000,1400.000000,0.000000,"Preload" \n "Display"};
 item14[] = {"Display_Preloade",4,218,-175.000000,1400.000000,-75.000000,1450.000000,0.000000,"Display" \n "Preloaded"};
-item15[] = {"Initialize",2,250,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Initialize"};
+item15[] = {"Initialize",2,4346,-75.000000,1650.000000,25.000000,1700.000000,0.000000,"Initialize"};
 item16[] = {"Finish",1,250,-75.000000,1725.000000,25.000000,1775.000000,0.000000,"Finish"};
 item17[] = {"True",8,218,-175.000000,1675.000000,-75.000000,1725.000000,0.000000,"True"};
 item18[] = {"Initialized",4,218,-175.000000,-25.000000,-75.000000,25.000000,0.000000,"Initialized"};
@@ -108,7 +108,7 @@ item103[] = {"Response_1",4,218,-361.734772,298.226898,-261.734772,348.226837,0.
 item104[] = {"Faction_Dialog",2,250,-314.298584,205.854370,-214.298584,255.854370,0.000000,"Faction Dialog"};
 item105[] = {"True",8,218,-261.594452,296.823730,-161.594452,346.823730,0.000000,"True"};
 item106[] = {"Timeout",4,218,-186.100128,1002.039124,-86.100128,1052.039185,0.000000,"Timeout"};
-item107[] = {"____FAKE____",9,196636,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+item107[] = {"____FAKE____",9,0,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
 version=1;
 class LayoutItems
 {
@@ -269,8 +269,8 @@ link119[] = {104,105};
 link120[] = {105,25};
 link121[] = {106,88};
 link122[] = {95,107};
-globals[] = {0.000000,0,0,0,0,640,480,1,253,6316128,1,-776.553284,480.443787,1560.351074,491.903809,1040,884,1};
-window[] = {2,-1,-1,-32000,-32000,1081,182,1763,182,3,1058};
+globals[] = {0.000000,0,0,0,0,640,480,1,256,6316128,1,-474.226654,590.507935,2005.542969,1092.618164,1031,884,1};
+window[] = {2,-1,-1,-32000,-32000,1029,130,1711,130,3,1049};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -507,9 +507,6 @@ class FSM
                          "" \n
                          "_worldspace params [""_setDir"",""_setPos""];" \n
                          "" \n
-                         "//Load Dog" \n
-                         "_dog call BP_fnc_loadDog;" \n
-                         "" \n
                          "//Update Local Vars" \n
                          "call BP_fnc_updateVars;" \n
                          "" \n
@@ -552,7 +549,8 @@ class FSM
                 {
                         name = "Load_Position";
                         itemno = 11;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        init = /*%FSM<STATEINIT""">*/"//Load Dog" \n
+                         "_dog call BP_fnc_loadDog;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -588,7 +586,10 @@ class FSM
                         itemno = 13;
                         init = /*%FSM<STATEINIT""">*/"BP_lastCheckBit = 0;" \n
                          "(findDisplay 46) displayAddEventHandler [""KeyDown"",""_this call BP_fnc_spaceInterrupt""];" \n
-                         "(findDisplay 46) displayAddEventHandler [""onMouseButtonDown"",""_this call BP_fnc_spaceMouseInterrupt""];"/*%FSM</STATEINIT""">*/;
+                         "(findDisplay 46) displayAddEventHandler [""onMouseButtonDown"",""_this call BP_fnc_spaceMouseInterrupt""];" \n
+                         "(findDisplay 46) displayAddEventHandler [""onMouseButtonUp"",""_this call BP_fnc_spaceMouseInterrupt""];" \n
+                         "(findDisplay 46) displayAddEventHandler [""onMouseButtonClick"",""_this call BP_fnc_spaceMouseInterrupt""];" \n
+                         "(findDisplay 46) displayAddEventHandler [""onMouseHolding"",""_this call BP_fnc_spaceMouseInterrupt""];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -620,6 +621,13 @@ class FSM
                          "//Music" \n
                          "_musicHandle = [] execVM ""\breakingpoint_code\threads\BP_Music.sqf"";" \n
                          "[_musicHandle] call BP_fnc_addThreadHandle;" \n
+                         "" \n
+                         "//Faces" \n
+                         "_permittedFaces = [""Bloody_Neck"",""Head_brain"",""BP_Zombie1"",""BP_Zombie1"",""BP_Zombie2"",""BP_Zombie3"",""BP_Zombie4"",""BP_Zombie5""];" \n
+                         "" \n
+                         "if (face player in _permittedFaces) then {" \n
+                         "	(netID player) remoteExecCall [""BPServer_fnc_changeFace"",2];" \n
+                         "};" \n
                          "" \n
                          "if (r_player_unconscious) then {" \n
                          "	r_player_timeout = player getVariable[""unconsciousTime"",0];" \n
@@ -1632,7 +1640,7 @@ class FSM
                                         priority = 0.000000;
                                         to="Preload_Position";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 1"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _myTime) > 2"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"BP_TimeOut = 0;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -1665,7 +1673,8 @@ class FSM
                          "bpSetupResult = [];" \n
                          "_myTime = diag_tickTime;" \n
                          "" \n
-                         "_data remoteExecCall [""BPServer_fnc_playerSetup"",2];"/*%FSM</STATEINIT""">*/;
+                         "_data remoteExecCall [""BPServer_fnc_playerSetup"",2];" \n
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {

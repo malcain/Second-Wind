@@ -83,7 +83,7 @@ waitUntil
 		BP_thirst = BP_thirst + (_thirst / 60);
 
 		//Player is Infected
-		if (r_player_infected and !r_player_adrenaline) then
+		if (r_player_infected and {!r_player_adrenaline}) then
 		{
 			//Random Chance
 			_rnd = ceil (random 8);
@@ -99,8 +99,7 @@ waitUntil
 		};
 
 		//Pain Shake Effects
-		if (r_player_inpain and !r_player_unconscious and !r_player_adrenaline) then {
-			playSound "breath_1";
+		if (r_player_inpain and {!r_player_unconscious} and {!r_player_adrenaline}) then {
 			addCamShake [2, 1, 25];
 		};
 

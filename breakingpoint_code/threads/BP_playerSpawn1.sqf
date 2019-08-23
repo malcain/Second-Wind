@@ -83,11 +83,11 @@ waitUntil
 	BP_NearbyLootNum = {
 		_distanceTo = player distance _x;
 		if (isObjectHidden _x) then {
-			if (_distanceTo < 75) then {
+			if (_distanceTo < 100) then {
 				_x hideobject false;
 			};
 		} else {
-			if (_distanceTo >= 75 && {[_x] call BP_fnc_isInsideBuilding}) then {
+			if (_distanceTo >= 100 && {[_x] call BP_fnc_isInsideBuilding}) then {
 				_x hideobject true;
 			};
 		};

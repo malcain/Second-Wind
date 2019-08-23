@@ -22,9 +22,9 @@ _handled = false;
 _vehicle = objectParent player;
 _inVehicle = (!isNull _vehicle);
 
-if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) exitwith {};
-
 if (_inVehicle) then {
+	if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) exitwith {_handled};
+	
 	if ((inputAction "personView" > 0) or (inputAction "optics" > 0)) then {
 		player switchCamera "INTERNAL";
 		_handled = true;

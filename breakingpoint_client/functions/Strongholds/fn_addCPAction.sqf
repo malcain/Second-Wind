@@ -14,7 +14,7 @@ _controlPoint addAction
 	"Capture the Stronghold",
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"];
-		[_target, _caller, _actionId, _arguments] call BP_fnc_flagAction;
+		[_target, _caller, _actionId, _arguments] spawn BP_fnc_flagAction;
 	}, 
 	_marker,
 	10,

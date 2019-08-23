@@ -10,6 +10,10 @@
 _entity = _this select 3 select 0;
 _type = _this select 3 select 1;
 
+_leaveReturn = true;
+_theOrder = [1,4,5];
+_anarchists = [2,6];
+
 player removeAction s_player_igniteEntity;
 s_player_igniteEntity = -1;
 
@@ -20,10 +24,6 @@ if (player distance _entity > 10) exitWith {};
 //Mutex Lock On Igniting
 _fire = _entity getVariable ["fire",objNull];
 if !(isNull _fire) exitWith {};
-
-//Are you sure warning, because people are stupid..
-//if (_isPlayer and _alive) then { _leaveReturn = ["Are you sure you want to ignite this entity? ","Ignite Entity",nil,true] call BIS_fnc_guiMessage; };
-//if (!_leaveReturn) exitWith {};
 
 if (_type == "Vehicle") exitwith {
 _isCar = (_entity isKindOf "Car");
@@ -43,10 +43,20 @@ _isShip = (_entity isKindOf "Ship");
 	};
 };
 
+//Are you sure warning, because people are stupid..
+if (isPlayer _entity) then {
+	_entityClass = _entity getVariable ["class",0];
+	_playerClass = player getVariable ["class",0];
+	if(((_entityClass in _theOrder) && (_playerClass in _theOrder)) || ((_entityClass in _anarchists) && (_playerClass in _anarchists))) then {
+		_leaveReturn = ["Are you sure you want to ignite this entity? ","Ignite Entity",nil,true] call BIS_fnc_guiMessage;
+	};
+};
+if (!_leaveReturn) exitWith {};
+
 //Tell the server to ignite it
 [(netID player),(netID _entity),_type] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 
 if (_type == "Animal") then
 {
-_entity setdamage 1;
+	_entity setdamage 1;
 };

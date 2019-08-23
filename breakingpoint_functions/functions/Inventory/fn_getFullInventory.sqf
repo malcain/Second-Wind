@@ -57,11 +57,13 @@ _fullMagsBackpack = [];
 
 {
 	_id = _x select 2;
-	call
-	{
-		if (_id == 0) exitWith { 0 = _fullMagsUniform pushBack [_x select 0, _x select 1]; };
-		if (_id == 1) exitWith { 0 = _fullMagsVest pushBack [_x select 0, _x select 1]; };
-		if (_id == 2) exitWith { 0 = _fullMagsBackpack pushBack [_x select 0, _x select 1]; };
+	if (!isNil "_id") then {
+		call
+		{
+			if (_id == 0) exitWith { 0 = _fullMagsUniform pushBack [_x select 0, _x select 1]; };
+			if (_id == 1) exitWith { 0 = _fullMagsVest pushBack [_x select 0, _x select 1]; };
+			if (_id == 2) exitWith { 0 = _fullMagsBackpack pushBack [_x select 0, _x select 1]; };
+		};
 	};
 } count _allCargoMags;
 

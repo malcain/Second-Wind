@@ -247,8 +247,6 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"V_PlateCarrierGL_tna_BP","vest"},  //Carrier GL Rig (Tropic)
 			{"V_TacVest_gen_BP","vest"},   //Gendarmerie Vest
-			{"V_HarnessO_gry_BP","vest"},   //LBV Harness (Grey)
-			{"V_HarnessO_ghex_BP","vest"},   //LBV Harness (Green Hex)
 			{"V_BandollierB_ghex_BP","vest"},   //Slash Bandolier (Green Hex)
 			{"V_TacChestrig_grn_BP","vest"},    //Tactical Chest Rig (Green)
 			{"V_TacChestrig_cbr_BP","vest"},  //Tactical Chest Rig (Coyote)
@@ -273,8 +271,6 @@ class CfgObjectLoot {
 		itemChance[] =	{
 			0.01,	//Carrier GL Rig (Tropic)
 			0.01,	//Gendarmerie Vest
-			0.02,	//LBV Harness (Grey)
-			0.02,   //LBV Harness (Green Hex)
 			0.05,   //Slash Bandolier (Green Hex)
 			0.01,   //Tactical Chest Rig (Green)
 			0.01,	//Tactical Chest Rig (Coyote)
@@ -1415,6 +1411,7 @@ class CfgObjectLoot {
 			{"MeleeClub","weaponNA"},
 			{"BlueprintStove","magazine"},
 			{"ItemStove","magazine"},
+			{"ItemHammer","magazine"},
 			{"PartWoodPile","magazine"},
 			{"ItemToolbox","toolbelt"}
 		};
@@ -1443,6 +1440,7 @@ class CfgObjectLoot {
 			0.02,    //CROWBAR
 			0.02,   //Stove BLUEPRINT
 			0.02,   //Stove
+			0.02,   //Hammer
 			0.01,   //Woodpile
 			0.09	//TOOLBOX
 		};
@@ -1797,7 +1795,6 @@ class CfgObjectLoot {
 			{"BP_CPad","toolbelt"},
 			{"BP_AFG","toolbelt"},
 			{"V_Rangemaster_belt_BP","vest"},
-			{"V_HarnessO_brn_BP","vest"},
 			{"BlueprintCache1","magazine"},
 			{"optic_Aco","toolbelt"},
 			{"optic_Hamr","toolbelt"},
@@ -1832,8 +1829,7 @@ class CfgObjectLoot {
 			0.03,   //CHEEKPIECE
 			0.03,   //AFG
 			0.09,   //OLIVE BANDOLIER
-			0.02,   //Equipment Harness
-			0.04,   //MILITARY CRATE
+			0.04,   //MILITARY Cache
 			0.03,	//OPTIC ACO
 			0.05,	//HAMR OPTIC
 			0.05,	//RADIO
@@ -1973,7 +1969,6 @@ class CfgObjectLoot {
 			{"V_Rangemaster_belt_BP","vest"},
 			{"BlueprintCrate1","magazine"},
 			{"BlueprintCamoNet","magazine"},
-			{"V_HarnessOGL_brn_BP","vest"},
 			{"BP_gemtech9","toolbelt"},
 			{"ItemSurgeryKit","toolbelt"},
 			{"BP_545x39_HP_30rnd","magazine"},
@@ -2024,7 +2019,6 @@ class CfgObjectLoot {
 			0.12,	//BANDOLIER OLIVE
 			0.17,   //TENT BLUEPRINT
 			0.14,   //CAMO NET BLUEPRINT
-			0.03,   //TAC VEST
 			0.01,   //GEMTECH 9MM SUPPR
 			0.03,   //SURGERY KIT
 			0.04,   //30rnd 5.45x39 Hollow Point magazine
@@ -2481,36 +2475,42 @@ class CfgObjectLoot {
 			{"BP_VX3","toolbelt"},
 			{"BP_5Rnd_250_Mag","magazine"},
 			{"BP_5Rnd_300_Mag","magazine"},
-			{"BP_15Rnd_9x19OVP","magazine"},
 			{"BP_5Rnd_3006_Mag","magazine"},
 			{"BP_5Rnd_762x51_Mag","magazine"},
 			{"BP_5Rnd_Mauser_Mag","magazine"},
 			{"BP_10Rnd_65x39","magazine"},
 			{"BP_10Rnd_303_Mag","magazine"},
+			{"BP_10Rnd_303_JSP_Mag","magazine"},
+			{"BP_2Rnd_Buckshot","magazine"},
+			{"BP_2Rnd_MagBuckshot","magazine"},
+			{"BP_2Rnd_Slug","magazine"},
 			{"V_BandollierB_oli_BP","vest"}
 		};
 		itemChance[] =	{
-			0.04,   //45GOV
+			0.08,   //45GOV
 			0.01,   //RANGEFINDER
-			0.02,   //Hunting Binocular
+			0.03,   //Hunting Binocular
 			0.16,   //KNIFE
 			0.14,   //MATCHBOX
 			0.13,   //COMPASS
 			0.13,   //MAP
-			0.07,   //CZ STANDARD BARREL
+			0.06,   //CZ STANDARD BARREL
 			0.02,   //CZ PRECISION BARREL
 			0.02,   //REM7 PRECISION BARREL
-			0.01,   //UNERTL 32X
-			0.01,   //VX3
-			0.04,   //.22-250
-			0.01,   //300 WINMAG
-			0.07,   //9MM OVP
-			0.08,   //30-06 MAG
-			0.02,   //5RND 762
-			0.01,   //5RND 762
-			0.02,   //10RND GRENDEL
-			0.10,    //10RND 303 BRIT
-			0.07	//Bandolier Mid
+			0.02,   //UNERTL 32X
+			0.02,   //VX3
+			0.09,   //.22-250
+			0.02,   //300 WINMAG
+			0.10,   //30-06 MAG
+			0.04,   //5RND 762
+			0.08,   //5RND Mauser
+			0.09,   //10RND GRENDEL
+			0.05,    //10RND 303 BRIT
+			0.04,    //10RND 303 BRIT
+			0.05,	//2RND BUCKSHOT
+			0.03,	//2RND MAGBUCKSHOT
+			0.02,	//2RND SLUG
+			0.02	//Bandolier Mid
 		};
 	};
 	

@@ -146,7 +146,7 @@
 					handgun[] = {};
 					clothing[] = {"BP_Rebel_3"};
 					backpack[] = {"BP_Rpack2"};
-					vest[] = {};
+					vest[]={"BP_ExplosiveVest"};
 					uniform[] = {"BP_Rebel_3",""};
 					headgear[]={""};
 					nvg[]={""};
@@ -179,12 +179,12 @@
 					launcher[] = {};
 					handgun[] = {};
 					clothing[] = {"BP_Rebel_4"};
-					backpack[] = {"BP_Rpack2"};
-					vest[]={};
+					backpack[] = {"BP_RadioPack"};
+					vest[]={"BP_ExplosiveVest"};
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip",""};
 					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
-					nvg[]={"","TRYK_US_ESS_Glasses_NV","TRYK_ESS_BLKTAN_NV"};
-					facewear[]={"Outlaw_BandanaRED"};
+					nvg[]={"Outlaw_BandanaRED"};
+					facewear[]={""};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
@@ -222,62 +222,62 @@
 			class Aid
 			{
 				class scavenger {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
-					morphine = 10;
-					surgery = 25;
-					gut = -500;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
+					morphine = 15;
+					surgery = 30;
+					gut = -3500;
 				};
 				class Ranger {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -20;
-					morphine = -20;
-					surgery = -50;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 50;
 				};
 				class Nomad {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -20;
-					morphine = -20;
-					surgery = -50;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 0;
 				};
 				class Survivalist {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -20;
-					morphine = -20;
-					surgery = -50;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 0;
 				};
 				class Outlaw {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
 					morphine = 15;
 					surgery = 30;
-					gut = -500;
+					gut = -3500;
 				};
 				class Hunter {
-					food = -5;
-					drink = -5;
-					bandage = -5;
-					dressing = -10;
-					morphine = -10;
-					surgery = -25;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 50;
 				};
 			};
 			class Destroy {
-				vehicle = 25;
+				vehicle = 10;
 				class scavenger {
 					storage = 0;
 				};

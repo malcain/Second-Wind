@@ -225,57 +225,57 @@ class Ranger : BP_BaseFaction
 		levels[]={0,2000,5000,10000};
 		class Aid {
 			class scavenger {
-				food = -10;
-				drink = -10;
-				bandage = -10;
-				dressing = -20;
-				morphine = -20;
-				surgery = -75;
+				food = -50;
+				drink = -50;
+				bandage = -50;
+				dressing = -100;
+				morphine = -100;
+				surgery = -200;
 				gut = 0;
 			};
 			class Ranger {
 				food = 10;
 				drink = 10;
-				bandage = 10;
-				dressing = 15;
+				bandage = 5;
+				dressing = 10;
 				morphine = 15;
 				surgery = 30;
-				gut = -2500;
+				gut = -4000;
 			};
 			class Nomad {
 				food = 10;
 				drink = 10;
-				bandage = 10;
-				dressing = 15;
+				bandage = 5;
+				dressing = 10;
 				morphine = 15;
 				surgery = 30;
-				gut = -1000;
+				gut = -4000;
 			};
 			class Survivalist {
 				food = 10;
 				drink = 10;
-				bandage = 10;
-				dressing = 15;
+				bandage = 5;
+				dressing = 10;
 				morphine = 15;
 				surgery = 30;
-				gut = -1000;
+				gut = -4000;
 			};
 			class Outlaw {
-				food = -10;
-				drink = -10;
-				bandage = -10;
-				dressing = -20;
-				morphine = -20;
-				surgery = -50;
+				food = -50;
+				drink = -50;
+				bandage = -50;
+				dressing = -100;
+				morphine = -100;
+				surgery = -200;
 				gut = 0;
 			};
 			class Hunter {
-				food = -10;
-				drink = -10;
-				bandage = -10;
-				dressing = -25;
-				morphine = -25;
-				surgery = -100;
+				food = -50;
+				drink = -50;
+				bandage = -50;
+				dressing = -100;
+				morphine = -100;
+				surgery = -200;
 				gut = 0;
 			};
 		};

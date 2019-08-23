@@ -33,9 +33,10 @@ _loadedMags = [];
 		if (_container == "Backpack") exitWith { _containerID = 2; };
 	};
 	
+	_itemType = (_x call BIS_fnc_itemType) select 1;
 	if !(_mag in BP_DontSave) then
 	{
-		if (_mag in BP_Throwables) then
+		if (_itemType in BP_Throwables) then
 		{
 			0 = _partialMags pushBack [_mag, _ammo,_containerID];
 		} else {
@@ -61,11 +62,13 @@ _fullMagsBackpack = [];
 
 {
 	_id = _x select 2;
-	call
-	{
-		if (_id == 0) exitWith { 0 = _fullMagsUniform pushBack [_x select 0, _x select 1]; };
-		if (_id == 1) exitWith { 0 = _fullMagsVest pushBack [_x select 0, _x select 1]; };
-		if (_id == 2) exitWith { 0 = _fullMagsBackpack pushBack [_x select 0, _x select 1]; };	
+	if (!isNil "_id") then {
+		call
+		{
+			if (_id == 0) exitWith { 0 = _fullMagsUniform pushBack [_x select 0, _x select 1]; };
+			if (_id == 1) exitWith { 0 = _fullMagsVest pushBack [_x select 0, _x select 1]; };
+			if (_id == 2) exitWith { 0 = _fullMagsBackpack pushBack [_x select 0, _x select 1]; };
+		};
 	};
 } count _allCargoMags;
 	

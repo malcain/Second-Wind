@@ -27,6 +27,7 @@ _build = (_this select 0);
 _object = player getVariable ["constructionObject", objNull];
 _classname = player getVariable ["constructionClassname",""];
 _blueprint = player getVariable ["constructionBlueprint",""];
+_itemType = _blueprint call BIS_fnc_itemType select 0;
 
 if (isNull _object) exitWith {};
 if (_classname == "") exitWith {};
@@ -36,7 +37,8 @@ _objectName = getText(ConfigFile >> "CfgVehicles" >> _classname >> "displayName"
 
 if (_build) then 
 {
-	if (_blueprint in BP_TrapBuildables) then
+	//if (_blueprint in BP_TrapBuildables) then
+	if (_itemType == "Mine") then
 	{
 		_valid = false;
 		if (_blueprint in magazines player) then

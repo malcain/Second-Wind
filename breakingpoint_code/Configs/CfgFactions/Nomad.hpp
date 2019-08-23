@@ -226,62 +226,62 @@
 			levels[]={0,2000,5000,10000};
 			class Aid {
 				class scavenger {
-					food = -5;
-					drink = -5;
-					bandage = -5;
-					dressing = -10;
-					morphine = -10;
-					surgery = -25;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 100;
 				};
 				class Ranger {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
-					morphine = 20;
-					surgery = 35;
-					gut = -1000;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
+					morphine = 15;
+					surgery = 25;
+					gut = -3500;
 				};
 				class Nomad {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
-					morphine = 20;
-					surgery = 35;
-					gut = -2000;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
+					morphine = 15;
+					surgery = 25;
+					gut = -3500;
 				};
 				class Survivalist {
-					food = 5;
-					drink = 5;
-					bandage = 10;
-					dressing = 15;
-					morphine = 20;
-					surgery = 35;
-					gut = -500;
+					food = 10;
+					drink = 10;
+					bandage = 5;
+					dressing = 10;
+					morphine = 15;
+					surgery = 25;
+					gut = -3500;
 				};
 				class Outlaw {
-					food = -5;
-					drink = -5;
-					bandage = -5;
-					dressing = -10;
-					morphine = -10;
-					surgery = -25;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 100;
 				};
 				class Hunter {
-					food = -10;
-					drink = -10;
-					bandage = -10;
-					dressing = -25;
-					morphine = -25;
-					surgery = -100;
+					food = -50;
+					drink = -50;
+					bandage = -50;
+					dressing = -100;
+					morphine = -100;
+					surgery = -200;
 					gut = 100;
 				};
 			};
 			class Destroy {
-				vehicle = 20;
+				vehicle = 0;
 				class scavenger {
 					storage = 50;
 				};
@@ -343,7 +343,7 @@
 				};
 				class Ranger {
 					Level_0 = 25;
-					Level_1 = -500;
+					Level_1 = -700;
 					Level_2 = -1500;
 					Level_3 = -3000;
 					Level_4 = -3000;
@@ -375,8 +375,8 @@
 				};
 				class Survivalist {
 					Level_0 = 25;
-					Level_1 = -500;
-					Level_2 = -1000;
+					Level_1 = -700;
+					Level_2 = -1500;
 					Level_3 = -2500;
 					Level_4 = -2500;
 					Dog = -25;

@@ -14,6 +14,7 @@ if (BP_isUndead) exitWith {};
 private ["_class","_factionName","_factionLevel","_levelStr","_clothingArray","_clothing","_oldUniform","_weaponsUniform","_magsUniform","_itemsUniform","_headgear","_nvg","_facewear","_oldheadgear","_oldfacewear","_oldnvg"];
 
 _class = player getVariable ["class",0];
+_inVehicle = !isNull objectParent player;
 
 //Doesn't Apply To Undead Classes
 if (_class == 7) exitWith {};
@@ -68,7 +69,7 @@ if (_traitorFlag) then
 			[_traitorHandle] call BP_fnc_addThreadHandle;
 		} else { 
 			//Already A Traitor - Handle Timer
-			if ((diag_tickTime - r_traitorTime) > 120) then
+			if ((diag_tickTime - r_traitorTime) > 600 && !_inVehicle) then
 			{
 				player setVariable ["traitorFlag",false,true];
 				r_traitorFlag = false;

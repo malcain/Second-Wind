@@ -97,54 +97,54 @@ _player = player;
 
 	//Add Storage Items (Backpack,Uniform,Vest,Headgear)
 	{
+		_itemType = (_x call BIS_fnc_itemType) select 1;
 		if (typeName _x == "STRING") then
 		{
 			//Storage: Backpack
-			if (_x in BP_AllBackpacks) then 
+			if (_itemType == "Backpack") then 
 			{
 				if (isClass(configFile >> "CfgVehicles" >> _x)) then {
 					_player addBackpack _x; 
 				};
 			} else {
-				if (isClass (configFile >> "CfgWeapons" >> _x)) then 
+				if (_itemType == "Uniform") then
 				{
-					if (_x in BP_CustomItems) then
-					{
-						if (_x in BP_AllSkins) then
-						{
-							//["gearSet: Adding Uniform: %1~0001",_x] call BP_fnc_debugConsoleFormat;
-							_player addUniform _x;
-						};
-						if (_x in BP_NormalClothing) then
-						{
-							//["gearSet: Adding Uniform: %1~0001",_x] call BP_fnc_debugConsoleFormat;
-							_player addUniform _x;
-						};
-						if (_x in BP_ZombieClothing) then
-						{
-							_clothing = "";
-							_clothingIndex = (BP_ZombieClothing find _x);
-							if (_clothingIndex > -1) then {
-								_clothing = (BP_NormalClothing select _clothingIndex);
-							} else {
-								_levelStr = format ["Level_%1",_factionLevel];
-								_clothingArray = getArray (configFile >> "CfgFactions" >> _factionName >> "Levels" >> _levelStr >> "Spawn" >> "clothing");
-								_clothing = (_clothingArray select 0);
-							};
-							//["gearSet: Adding Uniform: %1~0001",_clothing] call BP_fnc_debugConsoleFormat;
-							_player addUniform _clothing;
-						};
-						if (_x in BP_AllVests) then
-						{
-							//["gearSet: Adding Vest: %1~0001",_x] call BP_fnc_debugConsoleFormat;
-							_player addVest _x;
-						};
-						if (_x in BP_AllHeadgear) then
-						{
-							//["gearSet: Adding Headgear: %1~0001",_x] call BP_fnc_debugConsoleFormat;
-							_player addHeadgear _x;
-						};
+					//["gearSet: Adding Uniform: %1~0001",_x] call BP_fnc_debugConsoleFormat;
+					_player addUniform _x;
+				};
+				if (_x in BP_ZombieClothing) then
+				{
+					_clothing = "";
+					_clothingIndex = (BP_ZombieClothing find _x);
+					if (_clothingIndex > -1) then {
+						_clothing = (BP_NormalClothing select _clothingIndex);
+					} else {
+						_levelStr = format ["Level_%1",_factionLevel];
+						_clothingArray = getArray (configFile >> "CfgFactions" >> _factionName >> "Levels" >> _levelStr >> "Spawn" >> "clothing");
+						_clothing = (_clothingArray select 0);
 					};
+					//["gearSet: Adding Uniform: %1~0001",_clothing] call BP_fnc_debugConsoleFormat;
+					_player addUniform _clothing;
+				};
+				if (_itemType == "Vest") then
+				{
+					//["gearSet: Adding Vest: %1~0001",_x] call BP_fnc_debugConsoleFormat;
+					_player addVest _x;
+				};
+				if (_itemType == "Headgear") then
+				{
+					//["gearSet: Adding Headgear: %1~0001",_x] call BP_fnc_debugConsoleFormat;
+					_player addHeadgear _x;
+				};
+				if (_itemType == "Glasses") then
+				{
+					//["gearSet: Adding Facewear: %1~0001",_x] call BP_fnc_debugConsoleFormat;
+					_player addGoggles _x;
+				};
+				if (_itemType == "NVGoggles") then
+				{
+					//["gearSet: Adding NVG: %1~0001",_x] call BP_fnc_debugConsoleFormat;
+					_player linkItem _x;
 				};
 			};
 		};
@@ -152,9 +152,10 @@ _player = player;
 
 	//Add Assigned Items
 	{
+		_itemType = (_x call BIS_fnc_itemType) select 0;
 		if (typeName _x == "STRING") then
 		{
-			if (_x in BP_ToolbeltItems) then
+			if (_itemType == "Item") then
 			{
 				if (isClass(configFile >> "CfgWeapons" >> _x)) then 
 				{
@@ -237,11 +238,12 @@ _player = player;
 
 	{
 		_x params [["_magazine","",[""]],["_ammo",0,[0]],["_containerID",-1]];
+		_itemType = (_magazine call BIS_fnc_itemType) select 1;
 
 		call
 		{
 			if !(isClass (configFile >> "CfgMagazines" >> _magazine)) exitWith {};
-			if (_magazine in BP_DontSave) exitWith {};
+			if (_magazine in BP_DontSave or _itemType == "Horn") exitWith {};
 
 			if (_containerID == -1) exitWith { _player addMagazine [_magazine,_ammo]; };
 			if (_containerID == 0) exitWith {

@@ -386,11 +386,6 @@ class CfgMovesBasic
 		BP_Act_CutBody = "";
 		BP_Act_OvenCooking = "";
 
-		/*BP_Jump = " ";
-		BP_Zomb_Act_Attack1 = " ";
-		BP_Zomb_Act_Attack2 = " ";
-		BP_Act_Man_Drink_Erc_x3_Gesture = "";
-		BP_Act_Man_Eat_Erc_x3_Gesture = "";*/
 
 	};
 
@@ -476,6 +471,28 @@ class CfgMovesBasic
 			BP_Act_OvenCooking = "BP_OvenCooking";
 		};
 
+		class RifleBaseStandActions;
+		class RifleProneActions: RifleBaseStandActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+		class RifleAdjustProneBaseActions;
+		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+		class RifleAdjustLProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+		class RifleAdjustFProneActions: RifleAdjustProneBaseActions
+		{
+			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
+		};
+
+	};
+};
+
 /*
 		class RifleStandActions {
 		};
@@ -532,34 +549,6 @@ class CfgMovesBasic
 
 */
 
-		class RifleBaseStandActions;
-		class RifleProneActions: RifleBaseStandActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-		class RifleAdjustProneBaseActions;
-		class RifleAdjustRProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-		class RifleAdjustLProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-		class RifleAdjustFProneActions: RifleAdjustProneBaseActions
-		{
-			crossbow_reload[] = {"crossbow_reload_prone", "Gesture"};
-		};
-
-	};
-};
-
-//Ladder
-/*class CfgAnimation
-{
-	ladderSpeed="0.5*2";
-};*/
-
 class CfgMovesMaleSdr: CfgMovesBasic
 {
 	skeletonName = "OFP2_ManSkeleton";
@@ -590,13 +579,13 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class AbswPercMrunSnonWnonDf: AbswPercMstpSnonWnonDnon
 		{
 			speed=0.4;
-		};
+		};*/
 		//Ladder
 		class LadderCivilStatic;
 		class LadderCivilUpLoop: LadderCivilStatic
 		{
 			speed="1.05/(2/3)";
-		};*/
+		};
 
 		class AmovPercMstpSlowWrflDnon; //stay weap low
 		class AmovPercMstpSrasWrflDnon; //stay weap up
@@ -54509,160 +54498,6 @@ class CfgMagazines {
 		picture = "\A3\Weapons_F_Kart\Pistols\Pistol_Signal_F\Data\UI\M_6Rnd_RedSignal_CA.paa";
 	};
 
-	/*class 5Rnd_127x108_Mag: 5Rnd_127x108_Mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 5Rnd_127x108_APDS_Mag: 5Rnd_127x108_APDS_Mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 7Rnd_408_Mag: 7Rnd_408_Mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 20Rnd_762x51_Mag: 20Rnd_762x51_Mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_556x45_Stanag: 30Rnd_556x45_Stanag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-    class 30Rnd_556x45_Stanag_Tracer_Green: 30Rnd_556x45_Stanag_Tracer_Green
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_556x45_Stanag_Tracer_Red: 30Rnd_556x45_Stanag_Tracer_Red
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_556x45_Stanag_Tracer_Yellow: 30Rnd_556x45_Stanag_Tracer_Yellow
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 100Rnd_65x39_caseless_mag_Tracer: 100Rnd_65x39_caseless_mag_Tracer
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 100Rnd_65x39_caseless_mag: 100Rnd_65x39_caseless_mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_65x39_caseless_mag: 30Rnd_65x39_caseless_mag
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_65x39_caseless_mag_Tracer: 30Rnd_65x39_caseless_mag_Tracer
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_65x39_caseless_green: 30Rnd_65x39_caseless_green
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 30Rnd_65x39_caseless_green_mag_Tracer: 30Rnd_65x39_caseless_green_mag_Tracer
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 50Rnd_762x51_Box: 50Rnd_762x51_Box
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class 150Rnd_762x51_Box_Tracer: 150Rnd_762x51_Box_Tracer
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class RPG32_F: RPG32_F
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class RPG32_HE_F: RPG32_HE_F
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class NLAW_F: NLAW_F
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class Titan_AT: Titan_AT
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class Titan_AP: Titan_AP
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};
-
-	class Titan_AA: Titan_AA
-	{
-		initSpeed = 105;
-		descriptionShort = "Enjoy your ban";
-		ammo = "BP_9x19_Rubber";
-	};*/
-
 	class BP_15Rnd_9x19OVP: CA_Magazine
 	{
 	    ammo = "BP_9x19OVP_Ball";
@@ -60568,7 +60403,7 @@ class CfgAmmo {
 		visibleFire = 10;
 		audibleFire = 27;
 		airFriction = -0.00215;
-		caliber = 1.4;
+		caliber = 1.7;
 		deflecting = 30;
 		simulation = "shotShell";
 		model = "";
@@ -60582,6 +60417,32 @@ class CfgAmmo {
 			power = 10;
 			duration = 1;
 			frequency = 20;
+		};
+		class Medical
+		{
+			//Instant Bleeding (Bullet will always make you bleed on impact)
+			InstantBleeding = 0; // 0 - Disabled / 1 - Enabled
+
+			//Medical State Level (Bullet Hit will always put you in this state)
+			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
+			MedicalState = 2;
+			MedicalChance = 50;
+
+			// Bleeding Level (Rate of blood loss)
+			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
+			BleedingLevel = 3;
+			BleedingChance = 85;
+
+			// Infection (Bullet Wound Chance Of Infection)
+			Infection = 0; // 0 - Disabled / 1 - Enabled
+			InfectionChance = 0.5; //Between 0 -> 100
+
+			// Knockout (Bullet Wound Chance Of Knockout)
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 1; //Between 0 -> 100
+
+			//Blood Damage Scale
+			scale = 0;
 		};
 	};
 
@@ -60768,8 +60629,8 @@ class CfgAmmo {
 			InfectionChance = 0.5; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0 -> 100
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60909,8 +60770,8 @@ class CfgAmmo {
 			InfectionChance = 1; //Between 0 -> 100
 
 			// Knockout (Bullet Wound Chance Of Knockout)
-			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0; //Between 0 -> 100
+			Knockout = 1; // 0 - Disabled / 1 - Enabled
+			KnockoutChance = 1; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

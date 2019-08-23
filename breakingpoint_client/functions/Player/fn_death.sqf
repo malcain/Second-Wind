@@ -56,6 +56,7 @@ if (_method != 0) then { player setVariable ["deathType",_method,true]; };
 _dog = player getVariable ["dog", objNull];
 if (!isnull _dog) then
 {
+	_dog setdamage 1;
 	player setVariable ["dog",objNull];
 	player setVariable ["dogID",0];
 	//terminate dogHeartbeat;

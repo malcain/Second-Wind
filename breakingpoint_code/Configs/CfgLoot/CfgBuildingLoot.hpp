@@ -776,19 +776,6 @@ class CfgBuildingLoot
 			{"ItemWaterTape","magazine"},
 			{"ItemBandage","magazine"},
 			{"ItemNails","magazine"},
-			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_6Rnd_45_Mag","magazine"},
-			{"BP_6Rnd_44Mag","magazine"},
-			{"BP_sw45","weapon"},
-			{"BP_sw44","weaponA"},
-			{"BP_5Rnd_Mauser_Mag","magazine"},
-			{"BP_Rem870","weapon"},
-			{"BP_Ruger","weapon"},
-			{"BP_1886S","weaponA"},
-			{"BP_25Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
-			{"BP_Rhino","weapon"},
-			{"BP_8Rnd_Slug","magazine"},
 			{"PartPalette","magazine"},
 			{"PartWheel","magazine"},
 			{"ItemCanvasMaterial","magazine"},
@@ -807,11 +794,8 @@ class CfgBuildingLoot
 			{"MeleeCrowbar","weaponNA"},
 			{"MeleeClub","weaponNA"},
 			{"ItemStove","magazine"},
-			{"ItemToolbox","toolbelt"},
-			{"BP_8Rnd_45gov","magazine"},
-			{"BP_Unertl32x","toolbelt"},
-			{"BP_15Rnd_9x19OVP","magazine"},
-			{"BP_5Rnd_3006_Mag","magazine"}
+			{"ItemHammer","magazine"},
+			{"ItemToolbox","toolbelt"}
 		};
 		itemChance[] =	{
 			0.05,   //BP_WreckedBox
@@ -824,19 +808,6 @@ class CfgBuildingLoot
 			0.01,	//WATER TAPE
 			0.01,	//BANDAGE
 			0.01,   //NAILS
-			0.01,	//BANDOLIER	
-			0.01,	//45 MAG ROUNDS
-			0.01,	//44 MAG ROUNDS
-			0.01,	//SW45
-			0.01,	//SW.500 Scoped
-			0.01,	//MAUSER 7.92
-			0.01,	//REMINGTON 870
-			0.01,	//RUGER 10/22
-			0.01,	//1886S
-			0.01,	//25RND .22LR
-			0.01,	//.500SW
-			0.01,	//RHINO
-			0.01,	//BENELLI SLUGS
 			0.02,   //PALETTE
 			0.03,	//WHEEL
 			0.02,   //CANVAS MATERIAL
@@ -850,16 +821,13 @@ class CfgBuildingLoot
 			0.01,   //PICKAXE
 			0.01,   //HAMMER
 			0.01,   //HAMMER2
-			0.01,    //SHOVEL
-			0.01,    //BAT
-			0.01,    //CROWBAR
+			0.01,   //SHOVEL
+			0.01,   //BAT
+			0.01,   //CROWBAR
 			0.01,   //Stove BLUEPRINT
 			0.01,   //Stove
-			0.02,	//TOOLBOX
-			0.01,   //45GOV
-			0.01,   //UNERTL 32X
-			0.01,   //9MM OVP
-			0.01   //30-06 MAG
+			0.01,   //Hammer
+			0.02	//TOOLBOX
 		};		
 	};
 	
@@ -918,7 +886,6 @@ class CfgBuildingLoot
 			{"ItemStove","magazine"},
 			{"MeleeShovel","weaponNA"}, 
 			{"MeleeCrowbar","weaponNA"},
-            {"MeleeClub","weaponNA"},
 			{"ItemSandbag","magazine"},
 			{"MeleeHammer2","weaponNA"}
 		};
@@ -968,9 +935,8 @@ class CfgBuildingLoot
 			0.02,	//HAMMER
 			0.02,   //HavenReinforcement BLUEPRINT
 			0.02,   //Stove
-			0.01, //SHOVEL
-			0.02, //Crowbar
-			0.01, //Melee club
+			0.01, 	//SHOVEL
+			0.02, 	//Crowbar
 			0.02,  //SAND BAG
 			0.02   //HAMMER MELEE
 		};		

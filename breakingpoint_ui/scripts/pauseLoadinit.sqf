@@ -28,8 +28,11 @@ _control ctrlCommit 0;
 //If the mission defines an onPauseScript, then process that script.
 private ["_script"];
 _script = getText(missionConfigFile >> "onPauseScript");
+_script = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+private ["_handle"];
+_handle = [_display] execVM _script;
 
-if (_script != "") then 
+/*if (_script != "") then 
 {
 	private ["_handle"];
 	_handle = [_display] execVM _script;
@@ -42,7 +45,7 @@ if (_script != "") then
 			_handle = [_display] call (missionnamespace getvariable _x);
 		} foreach _scripts;
 	};
-};
+};*/
 
 /*
 switch (_this select 0) do {

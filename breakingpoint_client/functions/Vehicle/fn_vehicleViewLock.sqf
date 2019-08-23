@@ -10,6 +10,34 @@
 //params ["_unit","_role","_vehicle","_turret"];
 params ["_vehicle","_inVehicle"];
 
+_crew = crew _vehicle;
+_playerClass = player getVariable ["class",0];
+_theOrder = [1,4,5];
+_anarchists = [2,6];
+_outsiders = [0,3,7];
+_TRAITORS = false;
+_crewClass = 0;
+
+if (_inVehicle) then {
+{
+	_crewClass = _x getVariable ["class",0];
+	if(((_crewClass in _theOrder) && !(_playerClass in _theOrder)) || ((_crewClass in _anarchists) && !(_playerClass in _anarchists)) || ((_crewClass in _outsiders) && !(_playerClass in _outsiders))) exitWith 
+	{
+		_TRAITORS = true;
+	};
+} foreach _crew;
+
+if (_TRAITORS) then {
+	{
+		_crewClass = _x getVariable ["class",0];
+		_traitorFlag = _x getVariable ["traitorFlag",false];
+		if (!_traitorFlag and !(_crewClass in _outsiders)) then {
+			_x setVariable ["traitorFlag",true,true];
+		};
+	} foreach _crew;
+};
+};
+
 if (missionDifficulty > 2) exitwith {};
 
 if ((_vehicle iskindof "C_Quadbike_01_F") or {_vehicle iskindof "Bicycle_F"}) exitwith {};

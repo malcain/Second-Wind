@@ -77,7 +77,7 @@ if (_hasPatient and !r_action and !_inVehicle and !r_player_unconscious and _isC
 	
 	if (_hasMedBackpack && {_isPlayer} && {_isPlayer}) then {
 		r_action = true;
-		_action = _unit addAction ["Use Medpack (Other)", "\breakingpoint_code\medical\medpack.sqf",[_unit], 0, true, true, "", ""];
+		_action = _unit addAction ["Use MedRig (Other)", "\breakingpoint_code\medical\medpack.sqf",[_unit], 0, true, true, "", ""];
 		0 = r_player_actions pushBack _action;
 	};
 	if (r_action) then { 0 = r_action_targets pushBack _unit; };

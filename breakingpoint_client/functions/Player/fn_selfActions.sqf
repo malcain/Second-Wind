@@ -36,8 +36,9 @@ _hasMatches = 	"ItemMatchbox" in magazines player;
 //_hasBlowtorch = 	"ItemBlowtorch" in magazines player;
 _hasToolbox = 	"ItemToolbox" in assignedItems player;
 _hasIED = "BP_IED1_Mag" in magazines player;
+_hasRadioPack = ("BP_RadioPack" == (backpack player));
 _hasMedBackpack = ("BP_Mpack" == (backpack player) or {"V_RangerVest_BP" == (vest player)});
-_hasSVest = ("V_OutlawVest_BP" == (vest player));
+_hasSVest = ("BP_ExplosiveVest" == (vest player));
 
 _isHostage = player getVariable ["med_hostage",false];
 _hasTape = (("ItemDuctTape" in magazines player) or ("ItemWaterTape" in magazines player));
@@ -71,7 +72,7 @@ if (BP_isUndead) then
 // Use of Med Rig
 if (_hasMedBackpack and _canDo) then {
 	if (s_player_medPack < 0) then {
-		s_player_medPack = player addAction ["Use Medpack (Self)", "\breakingpoint_code\medical\medpack.sqf",[player], 1, false, true, "", ""];
+		s_player_medPack = player addAction ["Use MedRig (Self)", "\breakingpoint_code\medical\medpack.sqf",[player], 1, false, true, "", ""];
 	};
 } else {
 	player removeAction s_player_medPack;
@@ -635,7 +636,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	};
 	
 	//Remote IED on a Vehicle
-	if (_hasIED and {_isVehicle} and {_isNotDestroyed}) then
+	if (_hasIED and {_hasRadioPack} and {_isVehicle} and {_isNotDestroyed}) then
 	{
 		if (s_player_explodeRemoteVeh < 0) then {
 			s_player_explodeRemoteVeh = player addAction ["Remote Control IED Vehicle", { _this spawn BP_fnc_explodeRemoteVeh; },_cursorTarget, 0, false, true, "", ""];

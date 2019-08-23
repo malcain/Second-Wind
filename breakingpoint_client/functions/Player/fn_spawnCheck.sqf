@@ -17,7 +17,7 @@ _spawnLoot = true;
 
 //Limit Zombie Spawning to 18 Local Zombies Per Player / Limit Zombie Spawning to 24 per 300m Bubble
 if (BP_LocalZeds > 18 || {BP_NearbyZombies >= 22}) then { _spawnZombies = false; };
-if (BP_NearbyLootNum > 50) then { _spawnLoot = false; };
+if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 
 {
 	_type = typeOf _x;
