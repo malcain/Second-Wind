@@ -210,6 +210,7 @@ class CfgFunctions
 			class inventoryChangeSkin {};
 			class onTakeItem {};
 			class onPutItem {};
+			class storageCheck {};
 		};
 		class Sound {
 			file = "\breakingpoint_client\functions\Sound";

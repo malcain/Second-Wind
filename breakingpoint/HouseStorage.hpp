@@ -20,7 +20,7 @@ class BP_Safe: BP_HouseStorage
 	model = "\breakingpoint\models\bp_safe.p3d";
 	displayName = "Cast Iron Safe";
 	vehicleClass = "Survival";
-	maximumLoad = 750;
+	maximumLoad = 500;
 	transportMaxMagazines = 50;
 	transportMaxWeapons = 3;
 	transportMaxBackpacks = 5;
@@ -29,12 +29,15 @@ class BP_Safe: BP_HouseStorage
 class BP_Chest: BP_HouseStorage
 {
 	scope = public;
-	model = "\breakingpoint\models\bp_crate1a.p3d";
+	//model = "\breakingpoint\models\bp_crate1a.p3d";
+	model = "\plp_containers\plp_ct_footlocker.p3d";
+	hiddenSelections[] = {"camo"};
+	hiddenSelectionsTextures[] = {"\plp_containers\StcFootlockers\plp_ct_FootlockerBrown_co.paa"};
 	displayName = "Storage Chest";
 	mapSize = 0.7;
 	accuracy = 0.2;
 	vehicleClass = "Survival";
-	maximumLoad = 750;
+	maximumLoad = 1250;
 	transportMaxMagazines = 50;
 	transportMaxWeapons = 3;
 	transportMaxBackpacks = 7;
@@ -81,16 +84,17 @@ class BP_Chest_Survivalist: BP_Chest
 class BP_Chest_Scavenger: BP_Chest
 {
 	displayName = "Scavenger Storage Chest";
-	maximumLoad = 1000;
+	maximumLoad = 1300;
 	transportMaxMagazines = 60;
 };
 
 class BP_Refrigerator: BP_HouseStorage
 {
 	scope = public;
-	model = "\breakingpoint\models\bp_refrigerator.p3d";
+	//model = "\breakingpoint\models\bp_refrigerator.p3d";
+	model = "a3\structures_f_heli\items\electronics\fridge_01_f.p3d";
 	displayName = "Ice Box";
-	maximumLoad = 1500;
+	maximumLoad = 670;
 	transportMaxMagazines = 100;
 	transportMaxWeapons = 0;
 	transportMaxBackpacks = 1;
@@ -138,7 +142,7 @@ class BP_Refrigerator_Survivalist: BP_Refrigerator
 class BP_Refrigerator_Scavenger: BP_Refrigerator
 {
 	displayName = "Scavenger Ice Box";
-	maximumLoad = 1700;
+	maximumLoad = 700;
 	transportMaxWeapons = 1;
 };
 
@@ -147,7 +151,7 @@ class BP_GunCabinet: BP_HouseStorage
 	scope = public;
 	model = "\breakingpoint\models\bp_guncab.p3d";
 	displayName = "Gun Cabinet";
-	maximumLoad = 1750;
+	maximumLoad = 1250;
 	transportMaxMagazines = 8;
 	transportMaxWeapons = 20;
 	transportMaxBackpacks = 2;
@@ -163,9 +167,6 @@ class BP_GunCabinet_Ranger: BP_GunCabinet
 class BP_GunCabinet_Outlaw: BP_GunCabinet
 {
 	displayName = "Outlaw Gun Cabinet";
-	maximumLoad = 2000;
-	transportMaxWeapons = 25;
-	transportMaxMagazines = 10;
 	//hiddenSelections[] = {"camo"};
 	//hiddenSelectionsTextures[] = {"breakingpoint\textures\objects\guncab_outlaw_co.paa"};
 };
@@ -196,7 +197,7 @@ class BP_GunCabinet_Survivalist: BP_GunCabinet
 class BP_GunCabinet_Scavenger: BP_GunCabinet
 {
 	displayName = "Scavenger Gun Cabinet";
-	maximumLoad = 2000;
+	maximumLoad = 1300;
 	transportMaxWeapons = 25;
 	transportMaxMagazines = 10;
 };

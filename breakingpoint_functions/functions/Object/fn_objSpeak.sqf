@@ -33,7 +33,7 @@ _num = switch (_type) do
 	case "fieldbandage": 		{1};
 	case "thirst": 			{2};
 	case "hunger": 			{2};
-	case "cough": 			{2};
+	case "cough": 			{5};
 	case "scream": 			{4};
 	case "fracture":			{1};
 	case "eat": 				{3};
@@ -90,7 +90,6 @@ if ((round(random _chance) == _chance) or (_chance == 0)) then
 
 	if (_local) then {
 		_source say [_sound, _distance];
-		player say ["z_cough_0",9];
 	} else {
 		//Check If Player is Inside a Building
 		_isInside = [_source] call BP_fnc_isInsideBuilding;

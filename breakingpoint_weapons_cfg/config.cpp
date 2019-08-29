@@ -60720,12 +60720,10 @@ class CfgAmmo {
 		soundTrigger[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",0.56234133,1,30};
 		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
 		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
-		//explosionEffects = "simplefbExplosion"; //MineExplosion
-		//explosionEffects = "";
 		explosionSoundEffect = "";
-		CraterEffects = "NoCrater";
+		CraterEffects = "";
 		CraterWaterEffects = "ImpactGlassThin";
-		explosionEffects = "NoExplosion";
+		explosionEffects = "";
 		visibleFire = 0;
 		audibleFire = 0;
 		visibleFireTime = 0;

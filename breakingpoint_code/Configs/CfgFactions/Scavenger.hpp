@@ -54,7 +54,7 @@
 					clothing[] = {"BP_Scavenger_F"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Scavenger_F",""};
+					uniform[] = {"BP_Scavenger_F"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};

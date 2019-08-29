@@ -973,8 +973,6 @@ class CfgBuildingLoot
 			{"BP_AmmoCrateOld","object","MilitaryGeneralAcc"},
 		    {"BP_WeaponCrateOld","object","MilitaryGeneralWpn"},
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
-			{"BP_ApexMilBox1","object","ApexMilBox1"},
-			{"BP_ApexMilBox2","object","ApexMilBox2"},
 			{"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
 			{"optic_Aco","toolbelt"},
@@ -1019,12 +1017,10 @@ class CfgBuildingLoot
 			{"BP_MP5","weapon"}
 		};
 		itemChance[] =	{
-			0.14,	//BP_AmmoBoxNew
-			0.22,   //BP_AmmoCrateOld
-			0.28,   //BP_WeaponCrateOld
+			0.16,	//BP_AmmoBoxNew
+			0.25,   //BP_AmmoCrateOld
+			0.17,   //BP_WeaponCrateOld
 			0.03,   //BP_WeaponCrate_WWII
-			0.01,   //BP_ApexMilBox1
-			0.01,   //BP_ApexMilBox2
 			0.07,   //TRASH
 			0.04,   //GENERIC
 			0.01,	//ACO OPTIC
@@ -1358,6 +1354,11 @@ class CfgBuildingLoot
 			{"V_RebreatherB","vest"},
 			{"BP_MK20_GL","weapon"},
 			{"BP_Survivalist_4_Stone","uniform"},
+			{"BP_Survivalist_4_Tree","uniform"},
+			{"BP_Survivalist_4_Dirt","uniform"},
+			{"BP_Survivalist_4_Snow","uniform"},
+			{"BP_Survivalist_4_Corn","uniform"},
+			{"BP_Survivalist_4_Night","uniform"},
 			{"BP_MXM_black","weaponA"},
 			{"BP_MXM","weapon"},
 			{"BP_MXC","weapon"},
@@ -1368,7 +1369,9 @@ class CfgBuildingLoot
 			{"BP_Minimi_762CCO","weaponA"},
 			{"BP_M14RIS","weapon"},
 			{"BP_SW44","weaponA"},
-			{"BP_M4_300MK","weaponA"}
+			{"BP_M4_300MK","weaponA"},
+			{"BP_M25WF","weaponA"},
+			{"BP_DMR_Officer","weapon"}
 			
 		};
 		itemChance[] =	{
@@ -1387,7 +1390,12 @@ class CfgBuildingLoot
 			0.10,	//ZAFIR LMG
 			0.12,	//REBREATHER
 			0.11,	//MK20 GL
-			0.10,	//STONE GHILLIE
+			0.01,	//STONE GHILLIE
+			0.01,	//TREE GHILLIE
+			0.01,	//DIRT GHILLIE
+			0.01,	//Snow GHILLIE
+			0.01,	//Corn GHILLIE
+			0.01,	//Night GHILLIE
 			0.01,   //MXM SpecOps
 			0.03,	//MXM
 			0.13,	//MXC
@@ -1396,9 +1404,11 @@ class CfgBuildingLoot
 			0.15,   //HE SHELL
 			0.01,   //50CAL M2 BOX
 			0.07,    //MK48 CCO
-			0.03,    //M14 RIS
+			0.01,    //M14 RIS
 			0.07,    //BP_SW44
-			0.07    //BP_M4_300MK
+			0.07,    //BP_M4_300MK
+			0.01,    //M25WF
+			0.01,    //M14 DMR
 		};
 	};
 	class HeliCrash: Default {
@@ -1420,7 +1430,12 @@ class CfgBuildingLoot
 			{"AmmoBoxSmall_556","object"},
 			{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_camo_BP","vest"},
+			{"BP_Survivalist_4_Stone","uniform"},
+			{"BP_Survivalist_4_Tree","uniform"},
 			{"BP_Survivalist_4_Dirt","uniform"},
+			{"BP_Survivalist_4_Snow","uniform"},
+			{"BP_Survivalist_4_Corn","uniform"},
+			{"BP_Survivalist_4_Night","uniform"},
 			{"BP_M24Spec","weaponA"},
 			{"BP_MK20Spec","weaponA"},
 			{"BP_M110","weapon"},
@@ -1446,15 +1461,8 @@ class CfgBuildingLoot
 			{"BP_M14RIS","weapon"},
 			{"BP_M25WF","weaponA"},
 			{"BP_DMR_Officer","weapon"},
-			{"BP_M14RIS","weapon"},
 			{"BP_SW44","weaponA"},
 			{"BP_M4_300MK","weaponA"}
-			//{"BP_HK417M_DES","weapon"},	
-			//{"BP_EBR_MRCO","weapon"},
-			//{"BP_p226Tac","weaponA"},
-			//{"BP_7Rnd_408Chey_Mag","magazine"},
-			//{"BP_HK417_DES","weapon"},
-			//{"BP_SUD_RPK107","weapon"}
 		};
 		itemChance[] =	{
 			0.10,	//MX SW
@@ -1468,7 +1476,12 @@ class CfgBuildingLoot
 			0.10,	//AMMO BOX 5.56
 			0.05,	//AMMO BOX 7.62
 			0.40,	//TAC VEST
-			0.02,	//DIRT GHILLIE
+			0.01,	//STONE GHILLIE
+			0.01,	//TREE GHILLIE
+			0.01,	//DIRT GHILLIE
+			0.01,	//Snow GHILLIE
+			0.01,	//Corn GHILLIE
+			0.01,	//Night GHILLIE
 			0.01,	//M24A2 SPECOPS
 			0.02,	//MK20 SPEC
 			0.02,	//M110WL
@@ -1491,18 +1504,11 @@ class CfgBuildingLoot
 			0.03,	//762MUZZLE
 			0.06,   //SURGERY KIT
 			0.02,    //PlateCarrier Digital
-			0.03,    //M14 RIS
+			0.02,    //M14 RIS
 			0.01,    //M25 WF
-			0.02,	//m14DMR
-			0.02,	//m14DMRRIS
+			0.02,	//M14 DMR
 			0.07,    //BP_SW44
 			0.15   //BP_M4_300MK
-			//0.50,	//HK417M 16
-			//0.50,	//MK18 ADR MRCO
-			//0.09,	//P226 TACTICAL
-			//0.02, //408 CHEETAH
-			//0.50,	//HK417L DES
-			//0.50,	//RPK107
 		};
 	};
 	class HeliCrash_No50s: Default {
@@ -1515,8 +1521,6 @@ class CfgBuildingLoot
 		itemType[] =	{		
 			{"BP_SA582","weapon"},
 			{"BP_FNFAL","weapon"},
-			//{"BP_EBR_MRCO","weapon"},
-			//{"BP_Mk200","weapon"},
 			{"BP_Minimi_762","weapon"},
 			{"BP_Minimi_HG","weapon"},
 			{"BP_R700","weaponA"},
@@ -1528,10 +1532,7 @@ class CfgBuildingLoot
 			{"ItemFieldDressing","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"ItemAdrenaline","magazine"},
-			//{"AmmoBoxSmall_556","object"},
-			//{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_khk_BP","vest"},
-			//{"BP_p226Tac","weaponA"},
 			{"V_RebreatherB","vest"},
 			{"BP_Mk12mod1Spec","weapon"},
 			{"BP_M21K","weaponA"},
@@ -1539,15 +1540,11 @@ class CfgBuildingLoot
 			{"BP_muzzle_snds_H","toolbelt"},
 			{"BP_20Rnd_65x47_Lapua","magazine"},
 			{"BP_150Rnd_762x51_Box","magazine"},
-			//{"BP_G18Tac","weaponA"},
-			//{"BP_deagles","weapon"},
 			{"ItemSurgeryKit","toolbelt"}
 		};
 		itemChance[] =	{
 			0.12,   //SA58
 			0.25,   //FNFAL
-			//0.15,	//EBR MRCO
-			//0.12,	//MK200
 			0.08,	//MINIMI 762
 			0.12,	//MINIMI HG
 			0.12,   //R700
@@ -1559,10 +1556,7 @@ class CfgBuildingLoot
 			0.12,	//FieldDressing
 			0.12,	//Antibiotic
 			0.08,	//Adrenaline
-			//0.1,	//AmmoBoxSmall_556
-			//0.1,	//AmmoBoxSmall_762
 			0.10,	//TACTICAL VEST
-			//0.02,	//P226 TACTICAL
 			0.03,	//REBREATHER
 			0.05,	//MK12MOD1
 			0.02,	//M21K
@@ -1570,8 +1564,6 @@ class CfgBuildingLoot
 			0.01,	//5.56 SUPPRESSOR
 			0.07,	//LAPUA 6.5x47MM MAG
 			0.03,   //150RND 762.51MM BOX
-			//0.03,   //G18 TACTICAL
-			//0.01,   //DEAGLE GOLD
 			0.06   //SURGERY KIT
 			
 		};
@@ -1588,7 +1580,6 @@ class CfgBuildingLoot
 			{"AmmoBoxSmall_762","object"},
 			{"V_TacVest_camo","vest"},
 			{"Rangefinder","weaponNA"},
-			//{"BP_G18","weapon"},
 			{"BP_Bergen_rgr","backpack"}, 
 			{"BP_Kitbag_sgg","backpack"}, 
 			{"BP_Bergen_rgr","backpack"}, 
@@ -1599,7 +1590,6 @@ class CfgBuildingLoot
 			0.03,	//AMMO BOX 7.62
 			0.02,	//CAMO CLOTHING
 			0.01,	//Telemetro
-			//0.01,	//G18
 			0.04, 	//ALICE PACK
 			0.04, 	//ASSAULT PACK
 			0.03,   //BRITISH BACKPACK
@@ -1684,11 +1674,11 @@ class CfgBuildingLoot
 			{"FoodMushroom","magazine"}
 		};
 		itemChance[] =	{
-			0.11,	//Plate
-			0.11,	//Plate2
-			0.11,	//Rock
-			0.35,	//FoodPumpkin
-			0.32	//FoodMushroom
+			0.14,	//Plate
+			0.14,	//Plate2
+			0.14,	//Rock
+			0.38,	//FoodPumpkin
+			0.20	//FoodMushroom
 		};
 	};
 	

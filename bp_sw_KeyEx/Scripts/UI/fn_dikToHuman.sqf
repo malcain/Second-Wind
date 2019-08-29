@@ -22,6 +22,7 @@ _lookupTable = [
 	["7",0x08],
 	["8",0x09],
 	["9",0x0A],
+	["APOSTROPHE",0x28],
 	["NUMPAD0",0x52],
 	["NUMPAD1",0x4F],
 	["NUMPAD2",0x50],
@@ -32,6 +33,9 @@ _lookupTable = [
 	["NUMPAD7",0x47],
 	["NUMPAD8",0x48],
 	["NUMPAD9",0x49],
+	["NUMPADENTER",0x9C],
+	["DECIMAL",0x53],
+	["MULTIPLY",0x37],
 	["A",0x1E],
 	["B",0x30],
 	["C",0x2E],
@@ -63,6 +67,8 @@ _lookupTable = [
 	["BACKSPACE",0x0E],
 	["ENTER",0x1C],
 	["SPACE",0x39],
+	["END",0xCF],
+	["HOME",0xC7],
 	["Prim. Mouse Btn.",-1],
 	["Sec. Mouse Btn.",-2]
 ];

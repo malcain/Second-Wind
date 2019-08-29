@@ -21,9 +21,9 @@ _sfx = "drink";
 [player,_sfx,0,false,_dis] call BP_fnc_objSpeak;
 [player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 
-if (random 15 < 3) then { 
+if (random 15 < 3.5) then { 
 	r_player_infected = true; 
-	player say3D ["z_cough_2",350,1.1];
+	player say3D ["z_cough_5",350,1.1];
 	//[player,"cough",0,false,9] call BP_fnc_objSpeak;
 };
 

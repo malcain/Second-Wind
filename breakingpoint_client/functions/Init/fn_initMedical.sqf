@@ -291,16 +291,21 @@ waitUntil
 	if (BP_isUndead) then {
 		"colorCorrections" ppEffectAdjust [1, 1, 0, [0.1, 0.5, 0.5, -1.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
 	} else {
-		if (r_player_adrenaline) then {
-			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_bloodTotal/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
+		if (r_player_infected && {random r_player_bloodTotal < 100}) then {
+			"colorCorrections" ppEffectAdjust [1, 1, 0, [0.1, 0.5, 0.5, -1.0], [1, 1, 1, 0.8],  [0.3, 0.3, 1, 0.0]];
+			playSound "heartbeat_1";
 		} else {
-			"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
+			if (r_player_adrenaline) then {
+				"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_bloodTotal/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
+			} else {
+				"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (r_player_blood/r_player_bloodTotal)],  [0.3, 0.3, 1, 0.0]];
+			};
 		};
 	};
 	"colorCorrections" ppEffectCommit 0;
 	
 	//Delay
-	sleep 1;
+	sleep 1.5;
 
 	//Publish Any Network Variables to Server / Other Clients
 	call BP_fnc_medicalSync;

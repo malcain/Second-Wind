@@ -89,7 +89,7 @@ if (isBurning _unit) exitWith
 };
 
 //Bear Trap
-if ((_ammo == "Human_Trap_Ammo" && _hitpoint == "hitlegs") && _damage > 0.1) exitwith 
+if ((_ammo == "Human_Trap_Ammo" && _hitpoint == "hitlegs") && {_damage > 0.1}) exitwith 
 {
 	r_player_infected = true;
 	r_player_injured = true;

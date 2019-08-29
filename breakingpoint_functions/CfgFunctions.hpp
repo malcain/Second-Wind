@@ -158,6 +158,13 @@ class CfgFunctions
 			class setObjectInventory {};
 			class isEmptyInventory {};
 			class removeItemCargo {};
+			class removeWeaponCargo {};
+			class removeMagazineCargo {};
+			class removeBackpackCargo {};
+			class dropItemCargo {};
+			class dropWeaponCargo {};
+			class dropMagazineCargo {};
+			class dropBackpackCargo {};
 			class getItemConfig {};
 			class getNonPresetClass {};
 			class weaponComponents {};

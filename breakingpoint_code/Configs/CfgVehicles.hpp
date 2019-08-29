@@ -874,8 +874,6 @@ class CfgVehicles
 		displayName = "Survival pack (Scavenged)";
 		picture = "\A3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Tortila_cbr.paa";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_tortila_cbr_co.paa"}; 
-		maximumLoad = 360;
-		mass = 100;
 	};
 	
 	class BP_Coyote_Bandit: BP_Coyote_Base {
@@ -884,7 +882,7 @@ class CfgVehicles
 		model = "\A3\Drones_F\Weapons_F_Gamma\Ammoboxes\Bags\UAV_backpack_F.p3d";
 		hiddenSelectionsTextures[] = {"\breakingpoint\textures\backpack\backpack_coyote_bandit_co.paa"};
 		allowedSlots[] = {};
-		maximumLoad = 420;
+		maximumLoad = 300;
 		mass = 150;
 	};
 
@@ -3200,12 +3198,102 @@ class CfgVehicles
 		scope = 2;
 		displayName = "Survivalist 4";
 		uniformClass = "BP_Survivalist_4";
-		model = "\breakingpoint_ghillie\models\ghilliegrass.p3d";
-		//moves = "CfgMovesPlayerSdr";
-		//model = "A3\Characters_F\common\ghillie.p3d";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
 		side = 15;
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures2\ghillie_4_co.paa"};
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"a3\characters_f_exp\OPFOR\Data\ghillie_tna_CO.paa"};
+		/*class EventHandlers
+		{
+			init="if(local(_this select 0))then{[(_this select 0),"""",[],false] call bis_fnc_initVehicle;};";
+		};
+		class textureSources
+		{
+			class mtp {displayname="MTP";textures[]={"\A3\Characters_F\Common\Data\ghillie_mcamo_co.paa"};};
+			class woodland {displayname="Woodland";textures[]={"\A3\Characters_F\Common\Data\ghillie_woodland_co.paa"};};
+			class tropical {displayname="Tropical";textures[]={"a3\characters_f_exp\blufor\data\u_bt_sniper_f_tna_co.paa"};};
+			class desert {displayname="Desert";textures[]={"\A3\Characters_F\Common\Data\ghillie_desert_co.paa"};};
+			class camonet {displayname="Camonet";textures[]={"\hidden_ghillie\ghillie_camonet.paa"};};
+			class night {displayname="Night";textures[]={"\hidden_ghillie\ghillie_night_co.paa"};};
+			class fishnet {displayname="Fishnet";textures[]={"\hidden_ghillie\ghillie_fishnet_co.paa"};};
+			class grass {displayname="Grass";textures[]={"\hidden_ghillie\ghillie_grass.paa"};};
+			class virtual {displayname="Virtual";textures[]={"#(ai,1024,1024,1)perlinNoise(64,32,0.25,0.75)"};};
+			class meshtape {displayname="Meshtape";textures[]={"hidden_ghillie\ghillie_mesh_tape.paa"};};
+			class tna {displayname="Tropical";textures[]={"a3\characters_f_exp\OPFOR\Data\ghillie_tna_CO.paa"};};
+		};
+		textureList[]={"tna",1};*/
+	};
+	
+	class BP_DirtSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Dirt)";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Dirt";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\ghillie_desert_co.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
+	};
+	
+	class BP_CornSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Corn Fields)";
+		//model = "\breakingpoint_ghillie\models\ghillieDirt.p3d";
+		model = "A3\Characters_F\common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Corn";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_4_ca.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
+	};
+	
+	class BP_SnowSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Snow)";
+		model = "A3\Characters_F\common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Snow";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_5_ca.paa", "\breakingpoint_ghillie\textures\ghillie_5_ca.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
+	};
+	
+	class BP_StoneSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Stone)";
+		model = "A3\Characters_F\common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Stone";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_ghillie\textures\ghillie_2_ca.paa", "\breakingpoint_ghillie\textures\ghillie_2_ca.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
+	};
+	
+	class BP_TreeSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Tree)";
+		model = "A3\Characters_F\common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Tree";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"a3\characters_f_exp\blufor\data\u_bt_sniper_f_tna_co.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
+	};
+	
+	class BP_NightSurvivalist4_F: BP_Survivalist4_F 
+	{
+		scope = 2;
+		displayName = "Survivalist 4 (Night)";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		uniformClass = "BP_Survivalist_4_Night";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\hidden_ghillie\ghillie_night_co.paa"};
+		
+		class EventHandlers : BP_PlayerEventHandlers {};
 	};
 	
 	//Legacy NoClass

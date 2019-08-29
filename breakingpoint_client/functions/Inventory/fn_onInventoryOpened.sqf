@@ -88,22 +88,46 @@ if !(isNull _container) then
 	};
 	
 	//House Storage
-	//if (_container isKindOf "BP_HouseStorage" || _nearHouse) then
-	//{
-	//	_building = nearestObject [_unit, "HouseBase"];
-	//	if (!isNull _building) then
-	//	{
-	//		if ((_building distance _unit) < 30) then
-	//		{
-	//			_buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
-	//			if (_buildingLocked) then 
-	//			{
-	//				cutText ["This object is locked. Unlock the Building to access it.","PLAIN DOWN"];
-	//				_restrictedInventory = true;
-	//			};
-	//		};
-	//	};
-	//};
+	if (_container isKindOf "BP_HouseStorage") then
+	{
+		
+		if (_container isKindOf "BP_GunCabinet") then {
+			_allMags = magazineCargo _container;
+			clearBackpackCargoGlobal _container;
+			clearItemCargoGlobal _container;
+			{
+				_acessories = ["Bullet", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"];
+				_itemType = _x call BIS_fnc_itemType;
+				_category = _itemType select 0;
+				_type = _itemType select 1;
+				if (_category != "Weapon" && !(_type in _acessories)) then {
+					if (_type == "Backpack") then {
+						[_container, _x, 1, true] call BP_fnc_removeBackpackCargo;
+					} else {
+						if (_type == "Item" or _type == "Equipment") then {
+							[_container, _x, 1, true] call BP_fnc_removeItemCargo;
+						} else {
+							[_container, _x, 1] call BP_fnc_removeMagazineCargo;
+						};
+					};
+				};
+			} count _allMags;
+		} else {
+			if (_container isKindOf "BP_Chest") then {
+				_allMags = magazineCargo _container;
+				clearWeaponCargoGlobal _container;
+				{
+					if (_x in AllFood) then {
+						[_container, _x, 1] call BP_fnc_removeMagazineCargo;
+					};
+				} count _allMags;
+			} else {
+				if (_container isKindOf "BP_Refrigerator") then {
+					clearWeaponCargoGlobal _container;
+				};
+			}
+		};
+	};
 
 	//} else {
 	//	[_unit,_container,_nearHouse,_nearSafe] spawn

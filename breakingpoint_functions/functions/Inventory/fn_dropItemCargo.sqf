@@ -36,6 +36,14 @@ Author:
 
 params [["_container", objNull, [objNull]], ["_item", "", [""]], ["_count", 1, [0]], ["_keepContents", false, [true]]];
 
+_position = getPosATL player;
+_newContainer = _position nearObjects ["GroundWeaponHolder_Scripted",5];
+if (_newContainer isEqualTo []) then {
+	_newContainer = createVehicle ["GroundWeaponHolder_Scripted", _position, [], 0, "CAN_COLLIDE"];
+} else {
+	_newContainer = _newContainer select 0;
+};
+
 if (isNull _container) exitWith {
     //TRACE_2("Container not Object or null",_container,_item);
     false
@@ -77,7 +85,6 @@ private _containerNames = [];
 
 // Clear cargo space and readd the items as long it's not the type in question
 clearItemCargoGlobal _container;
-
 
 // Add contents to backpack or box helper function
 private _fnc_addContents = {
@@ -155,14 +162,16 @@ private _fnc_addContents = {
             _itemCount = _itemCount - _count;
             if (_itemCount > 0) then {
                 // Add with new count
-                _container addItemCargoGlobal [_x, _itemCount];
+                _newContainer addItemCargoGlobal [_x, _itemCount];
             };
         } else {
             if (_keepContents) then {
                 (_containerData select _containerIndex) params ["_itemCargo", "_magazinesAmmoCargo", "_weaponsItemsCargo"];
-                [_container, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
+                [_newContainer, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
             };
-
+	
+			_newContainer addItemCargoGlobal [_item,1];
+					
             _containerData deleteAt _containerIndex;
             _containerNames deleteAt _containerIndex;
         };

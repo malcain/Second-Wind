@@ -571,7 +571,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_safemetal.p3d";
 		picture = "\breakingpoint\textures\icons\bp_safemetal_ca.paa";
 		descriptionShort = "A mixture of steel materials that can be used to build various constructables.";
-		mass = 25;
+		mass = 30;
 	};
 
 	class PartPalette : BP_Magazine {
@@ -643,7 +643,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_fuelhose.p3d";
 		picture = "\breakingpoint\textures\icons\bp_fuelhose_ca.paa";
 		descriptionShort = "";
-		mass = 45;
+		mass = 60;
 	};
 
 	class ItemBattery : BP_Magazine {
@@ -667,7 +667,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_container3.p3d";
 		picture = "\breakingpoint\textures\icons\bp_container3_ca.paa";
 		descriptionShort = "";
-		mass = 10;
+		mass = 15;
 	};
 
 	class ItemHydraulicCylinder : BP_Magazine {
@@ -715,7 +715,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_electricalwire.p3d";
 		picture = "\breakingpoint\textures\icons\bp_electricalwire_ca.paa";
 		descriptionShort = "";
-		mass = 5;
+		mass = 3;
 	};
 	
 	class ItemStove: BP_Magazine {
@@ -727,7 +727,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_ovenItem.p3d";
 		picture = "\breakingpoint\textures\icons\bp_stovetop_ca.paa";
 		descriptionShort = "Allow boil water and cook meat in a Haven.";
-		mass = 20;
+		mass = 40;
 	};
 
 	class PartFiberGlass : BP_Magazine {
@@ -739,7 +739,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_fiberglass.p3d";
 		picture = "\breakingpoint\textures\icons\bp_fiberglass_ca.paa";
 		descriptionShort = "";
-		mass = 50;
+		mass = 45;
 	};
 
 	class PartWoodPile : BP_Magazine {
@@ -833,33 +833,44 @@ class CfgMagazines
 	class BlueprintHavenReinforce : ItemBlueprint {
 		displayName = "Blueprint Haven Reinforcement Kit";
 		descriptionUse = "Blueprint Haven Reinforcement Kit";
-		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside an unlocked haven. Haven can be upgraded up to 5 times.<br/>Requires- Water Barrel(located nearby), Shovel, 3x Cement Bag, 2x Steel";
+		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside an unlocked haven. Havens can be upgraded up to 5 times.<br/>Reinforced materials save the haven in case of destruction events. Downgraded by 1 for each house destruction event (cannot be downgraded more than once every 3 hours). <br/>Requires- Water Barrel(located nearby), Shovel, 3x Bag of Cement, 1x Bag of Sand, 2x Steel.";
 		class Construction {
 			Object = "BP_HavenReinforcement";  // Not a real object
 			Weapons[] = {"MeleeShovel"};
-			Materials[] = {"PartSteel","PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag"};
+			Materials[] = {"PartSteel","PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag", "ItemSandBag"};
 		};
 	};
 	
 	class BlueprintChest : ItemBlueprint {
 		displayName = "Blueprint Haven Chest";
 		descriptionUse = "Blueprint Haven Chest";
-		descriptionShort = "Allows for the creation of a Safe Haven Storage Chest.<br/>Requires- Hammer, 3x Box of Nails, 3x Palette, 1x Steel.";
+		descriptionShort = "Allows for the creation of a Safe Haven Storage Chest.<br/>Requires- Hammer, 5x Box of Nails, 6x Palette, 2x Steel.";
 		class Construction {
 			Object = "BP_Chest";
 			Tools[] = {"ItemHammer"};
-			Materials[] = {"ItemNails", "ItemNails", "ItemNails", "PartSteel", "PartPalette", "PartPalette", "PartPalette"};
+			Materials[] = {"ItemNails", "ItemNails", "ItemNails", "ItemNails", "ItemNails", "PartSteel", "PartSteel", "PartPalette", "PartPalette", "PartPalette", "PartPalette", "PartPalette", "PartPalette"};
 		};
 	};
 	
 	class BlueprintIceBox : ItemBlueprint {
 		displayName = "Blueprint Haven Refrigerator";
 		descriptionUse = "Blueprint Haven Refrigerator";
-		descriptionShort = "Allows for the creation of a Safe Haven Refrigerator.<br/>Requires- Hammer, 2x Fiberglass, 2x Steel, 1x Battery.";
+		descriptionShort = "Allows for the creation of a Safe Haven Refrigerator.<br/>Requires- Blowtorch, Power Generator, 1x Fiberglass, 1x Steel, 3x Aluminium Poles, 2x Battery, 3x Electrical Wire, 2x Electronics Board.";
 		class Construction {
 			Object = "BP_Refrigerator";
-			Tools[] = {"ItemHammer"};
-			Materials[] = {"PartFiberGlass", "PartFiberGlass", "PartSteel", "PartSteel", "ItemBattery"};
+			Tools[] = {"ItemBlowtorch"};
+			Materials[] = {"PartFiberGlass", "PartSteel", "ItemWoodenPoles", "ItemWoodenPoles", "ItemWoodenPoles", "ItemBattery", "ItemBattery", "ItemElectricalWire", "ItemElectricalWire", "ItemElectricalWire", "ItemElectronics", "ItemElectronics"};
+		};
+	};
+	
+	class BlueprintGenerator : ItemBlueprint {
+		displayName = "Blueprint Power Generator";
+		descriptionUse = "Blueprint Haven Power Generator";
+		descriptionShort = "Allows for the creation of haven Power Generator.<br/>Requires- Blowtorch, 3x Aluminium Poles, 2x Battery, 3x Electrical Wire, 2x Electronics Board.";
+		class Construction {
+			Object = "BP_PowerGenerator";
+			Tools[] = {"ItemBlowtorch"};
+			Materials[] = {"ItemWoodenPoles", "ItemWoodenPoles", "ItemWoodenPoles", "ItemBattery", "ItemBattery", "ItemElectricalWire", "ItemElectricalWire", "ItemElectricalWire", "ItemElectronics", "ItemElectronics"};
 		};
 	};
 	
@@ -877,21 +888,21 @@ class CfgMagazines
 	class BlueprintGunCab : ItemBlueprint {
 		displayName = "Blueprint Haven Gun Cabinet";
 		descriptionUse = "Blueprint Haven Gun Cabinet";
-		descriptionShort = "Allows for the creation of a Safe Haven Gun Cabinet.<br/>Requires- Hammer, 4x Box of Nails, 3x Steel, 3x Fiberglass.";
+		descriptionShort = "Allows for the creation of a Safe Haven Gun Cabinet.<br/>Requires- Hammer, 3x Box of Nails, 3x Steel, 3x Fiberglass.";
 		class Construction {
 			Object = "BP_GunCabinet";
 			Tools[] = {"ItemHammer"};
-			Materials[] = {"ItemNails", "ItemNails", "ItemNails", "ItemNails", "PartSteel", "PartSteel", "PartSteel", "PartFiberGlass", "PartFiberGlass","PartFiberGlass"};
+			Materials[] = {"ItemNails", "ItemNails", "ItemNails", "PartSteel", "PartSteel", "PartSteel", "PartFiberGlass", "PartFiberGlass","PartFiberGlass"};
 		};
 	};
 	
 	class BlueprintStove : ItemBlueprint {
 		displayName = "Blueprint Haven Stove";
 		descriptionUse = "Blueprint Haven Stove";
-		descriptionShort = "Allows for the creation of a Safe Haven Oven.<br/>Requires- Hammer, 1x Stove Top, 2x Aluminium Poles, 1x Fiberglass, 1x Battery, 1x Electrical Wire.";
+		descriptionShort = "Allows for the creation of a Safe Haven Oven.<br/>Requires- Blowtorch, Power Generator, 1x Stove Top, 2x Aluminium Poles, 1x Fiberglass, 1x Battery, 1x Electrical Wire.";
 		class Construction {
 			Object = "BP_Stove";
-			Tools[] = {"ItemHammer"};
+			Tools[] = {"ItemBlowtorch"};
 			Materials[] = {"ItemStove", "ItemWoodenPoles", "ItemWoodenPoles", "PartFiberGlass", "ItemElectricalWire", "ItemBattery"};
 		};
 	};
@@ -899,7 +910,7 @@ class CfgMagazines
 	class BlueprintTele : ItemBlueprint {
 		displayName = "Blueprint Haven Old Television";
 		descriptionUse = "Blueprint Haven Old Television";
-		descriptionShort = "Allows for the creation of a Old Television with Camera Secruity System.<br/>Requires- Hammer, 1x Box of Nails, 5x Electrical Wire, 3x Electronics Board, 2x Steel.";
+		descriptionShort = "Allows for the creation of a Old Television with Camera Secruity System.<br/>Requires- Hammer, Power Generator, 1x Box of Nails, 5x Electrical Wire, 3x Electronics Board, 2x Steel.";
 		class Construction {
 			Object = "BP_Television";
 			Tools[] = {"ItemHammer"};
@@ -921,11 +932,11 @@ class CfgMagazines
 	class BlueprintFuelBarrel : ItemBlueprint {
 		displayName = "Blueprint Haven Fuel Barrel";
 		descriptionUse = "Blueprint Haven Fuel Barrel";
-		descriptionShort = "Allows for the creation of a fuel barrel for use in havens.<br/>Requires- Blowtorch, 1x Box of Nails, 1x Fiberglass, 2x Fuel Hose Kits, 2x Waterproof Tape.";
+		descriptionShort = "Allows for the creation of a fuel barrel for use in havens.<br/>Requires- Hammer, 1x Box of Nails, 1x Fiberglass, 2x Fuel Hose Kits, 3x Waterproof Tape.";
 		class Construction {
 			Object = "BP_BarrelFuel";
-			Tools[] = {"ItemBlowtorch"};
-			Materials[] = {"ItemNails","PartFiberGlass","ItemFuelhoseKit","ItemFuelhoseKit","ItemWaterTape","ItemWaterTape"};
+			Tools[] = {"ItemHammer"};
+			Materials[] = {"ItemNails","PartFiberGlass","ItemFuelhoseKit","ItemFuelhoseKit","ItemWaterTape","ItemWaterTape","ItemWaterTape"};
 		};
 	};
 

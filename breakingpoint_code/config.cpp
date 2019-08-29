@@ -509,6 +509,11 @@ class CfgLights
 	};
 };
 
+class NoExplosion
+{
+
+};
+
 class simplefbExplosion
 {
 	class Smoke1

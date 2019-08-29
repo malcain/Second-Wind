@@ -120,7 +120,7 @@ _buildingClaimed = ((netID _building) in BP_Buildings);
 _buildingLocked = (_building getVariable ['bis_disabled_Door',0] == 1);
 
 //Check Building Conditions
-if (!isNull _building && {!_inVehicle} && {_canDo} && {_buildingLockable} && {_buildingClaimed} && {(player distance _building) < 10}) then
+if (!isNull _building && {_buildingLockable} && {!_inVehicle} && {_canDo} && {_buildingClaimed} && {(player distance _building) < 10}) then
 {
 	if (_buildingLocked) then
 	{

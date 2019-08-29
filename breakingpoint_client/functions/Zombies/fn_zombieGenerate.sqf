@@ -45,6 +45,7 @@ _zombie setVariable ["temp",_temp];
 { _zombie disableAI _x; } forEach ["FSM","AUTOTARGET","TARGET","AIMINGERROR","SUPPRESSION","CHECKVISIBLE","COVER","AUTOCOMBAT"];
 
 _zombie setBehaviour "CARELESS";
+_zombie setBehaviourStrong "CARELESS";
 _zombie setCombatMode "RED";
 
 _zombie setVariable ["agentObject",_zombie];

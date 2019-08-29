@@ -103,15 +103,15 @@ _oldnvg = (hmd player);
 if !(_oldUniform in _clothingArray) then 
 {
 	//Backup Uniform Gear
-	_weaponsUniform = (getMagazineCargo uniformContainer player) call BP_fnc_cargoToPairs;
-	_magsUniform = (getMagazineCargo uniformContainer player) call BP_fnc_cargoToPairs;
-	_itemsUniform = (getItemCargo uniformContainer player) call BP_fnc_cargoToPairs;
+	//_weaponsUniform = (getMagazineCargo uniformContainer player) call BP_fnc_cargoToPairs;
+	//_magsUniform = (getMagazineCargo uniformContainer player) call BP_fnc_cargoToPairs;
+	//_itemsUniform = (getItemCargo uniformContainer player) call BP_fnc_cargoToPairs;
 
 	//Add New Uniform
 	removeUniform player;
 	player addUniform _item;
-	[_cont, _item, 1] call BP_fnc_removeItemCargo;
-
+	[_cont, _item, 1, true] call BP_fnc_removeItemCargo;
+/*
 	//Add Uniform Weapons
 	{
 		_x params ["_mag","_count"];
@@ -132,7 +132,7 @@ if !(_oldUniform in _clothingArray) then
 		_isOK = isClass(configFile >> "CfgWeapons" >> _mag);
 		if (_isOK) then { (uniformContainer player) addItemCargoGlobal [_mag,_count]; };
 	} count _itemsUniform;
-	
+	*/
 	//Force Save Character
 	BP_forceSave = true;
 };

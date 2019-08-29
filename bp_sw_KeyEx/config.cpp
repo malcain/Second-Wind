@@ -35,6 +35,15 @@ class CfgFunctions {
 };
 /* Example of KeybindsEx usage in mod configs*/
 class CfgKeybindsEx {
+	class breakingpoint_Wheel {
+		displayName = "Control Wheel"; //Tab Display Name
+		class Wheel { //Unique Identifier for this Keybind
+			displayName = "Control Wheel"; //Display name of this keybinding
+			tooltip = "Opens all options in one window"; //Tooltip
+			defaultKeys[] = {{0x0F,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			code = "call BP_fnc_optionWheel;"; //Code to run when this keybind is pressed
+		};
+	};
 	class breakingpoint_FactionStats {
 		displayName = "Open Diary"; //Tab Display Name
 		class Diary { //Unique Identifier for this Keybind
@@ -49,7 +58,7 @@ class CfgKeybindsEx {
 		class Heal { //Unique Identifier for this Keybind
 			displayName = "Heal"; //Display name of this keybinding
 			tooltip = "Sit to Heal"; //Tooltip
-			defaultKeys[] = {{0x15,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0x23,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerHeal;"; //Code to run when this keybind is pressed
 		};
 	};
@@ -121,7 +130,7 @@ class CfgKeybindsEx {
 		class Earplugs { //Unique Identifier for this Keybind
 			displayName = "Earplugs"; //Display name of this keybinding
 			tooltip = "Automatically lowers sound volume for use in vehicles and helicopters. Using the key again will revert to normal volume."; //Tooltip
-			defaultKeys[] = {{0x19,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0xCF,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerEarplugs;"; //Code to run when this keybind is pressed
 		};
 	};
@@ -130,7 +139,7 @@ class CfgKeybindsEx {
 		class LeaveGroup { //Unique Identifier for this Keybind
 			displayName = "Leave Group"; //Display name of this keybinding
 			tooltip = "Leave current player group"; //Tooltip
-			defaultKeys[] = {{0x47,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			defaultKeys[] = {{0xC7,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_playerLeaveGroup;"; //Code to run when this keybind is pressed
 		};
 	};

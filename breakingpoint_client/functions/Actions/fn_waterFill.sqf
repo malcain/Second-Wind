@@ -10,8 +10,7 @@
 private ["_playerPos","_canFill","_isPond","_isWell","_pondPos","_objectsWell","_onLadder","_hasbottleitem","_config","_item","_text","_objectsPond","_qty","_dis","_sfx","_invalid","_rain"];
 _item = 		_this select 0;
 _playerPos = 	getPosATL player;
-_canFill = 		count nearestObjects [_playerPos, ["Land_StallWater_F","Land_Water_source_F"], 10] > 0;
-_canFill_1 = 	count nearestObjects [_playerPos, ["Land_BarrelWater_F"], 10] > 0;
+_canFill = 		count nearestObjects [_playerPos, ["Land_StallWater_F","Land_Water_source_F","Land_BarrelWater_F"], 7] > 0;
 _isPond = 		false;
 _isWell = 		false;
 _isWaterSource = false;
@@ -20,9 +19,6 @@ _objectsWell = 	[];
 _invalid = false;
 _rain = rain;
 
-if (_canFill_1) then {
-	_canFill = true;
-};
 
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {};

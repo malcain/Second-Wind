@@ -15,6 +15,7 @@ params ["_unit","_container","_item"];
 //Magazine Check
 call BP_fnc_magazineCheck;
 [_container,_item] call BP_fnc_checkFactionClothing2;
+[_container,_item] call BP_fnc_storageCheck;
 
 //Flag Player as Unsaved
 BP_unsaved = true;

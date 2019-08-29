@@ -25,6 +25,13 @@ class BP_Stove : BP_HouseObject
 	displayName = "Stove";
 };
 
+class BP_PowerGenerator : BP_HouseObject 
+{
+	scope = public;
+	model = "\a3\structures_f\items\electronics\portable_generator_f.p3d";
+	displayName = "Portable Power Generator";
+};
+
 class BP_BarrelWater : BP_HouseObject 
 {
 	scope = public;

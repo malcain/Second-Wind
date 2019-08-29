@@ -1179,11 +1179,14 @@ class CfgWeapons
 		};
 	};
 	
+	//class U_O_GhillieSuit;
 	class BP_Survivalist_4: Uniform_Base {
 		scope = 2;
 		displayName = "Survivalist level 4";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {"a3\characters_f_exp\OPFOR\Data\ghillie_tna_CO.paa"};
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
@@ -1194,15 +1197,31 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Survivalist_4_Dirt: Uniform_Base {
+	class BP_Survivalist_4_Dirt: BP_Survivalist_4 {
 		scope = 2;
 		displayName = "Survivalist level 4 (Dirt)";
+		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Data\ghillie_desert_co.paa"};
+
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "BP_DirtSurvivalist4_F";
+			allowedSlots[] = {};
+			containerClass = "Supply70";
+			mass = 40;
+		};
+	};
+	
+	class BP_Survivalist_4_Corn: Uniform_Base {
+		scope = 2;
+		displayName = "Survivalist level 4 (Corn Fields)";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "BP_DirtGhillie";
+			uniformClass = "BP_CornSurvivalist4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1217,7 +1236,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "BP_StoneGhillie";
+			uniformClass = "BP_StoneSurvivalist4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1239,15 +1258,32 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Survivalist_4_Tree: Uniform_Base {
+	class BP_Survivalist_4_Tree: BP_Survivalist_4 {
 		scope = 2;
 		displayName = "Survivalist level 4 (Tree)";
 		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
-		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver.p3d";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		hiddenSelectionsTextures[] = {"a3\characters_f_exp\blufor\data\u_bt_sniper_f_tna_co.paa"};
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "BP_TreeGhillie";
+			uniformClass = "BP_TreeSurvivalist4_F";
+			allowedSlots[] = {};
+			containerClass = "Supply70";
+			mass = 40;
+		};
+	};
+	
+	class BP_Survivalist_4_Night: BP_Survivalist_4 {
+		scope = 2;
+		displayName = "Survivalist level 4 (Night)";
+		picture = "\breakingpoint_ui\icons\SurvivalistIcon.paa";
+		model = "\A3\Characters_F\Common\ghillie.p3d";
+		hiddenSelectionsTextures[] = {"\hidden_ghillie\ghillie_night_co.paa"};
+
+		class ItemInfo: UniformItem {
+			uniformModel = "-";
+			uniformClass = "BP_NightSurvivalist4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1262,7 +1298,7 @@ class CfgWeapons
 
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
-			uniformClass = "BP_SnowGhillie";
+			uniformClass = "BP_SnowSurvivalist4_F";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -2293,12 +2329,13 @@ class CfgWeapons
 		picture = "\A3\characters_f_beta\Data\UI\icon_V_HarnessOU_gry_CA.paa";
 		model = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
 		hiddenSelections[] = {"Camo1","Camo2"};
-		hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa","\A3\Characters_F\OPFOR\Data\tech_oucamo_co"};
+		//hiddenSelectionsTextures[] = {"\A3\Characters_F\OPFOR\Data\clothing_oucamo_co.paa","\A3\Characters_F\OPFOR\Data\tech_oucamo_co"};
+		hiddenSelectionsTextures[] = {"\breakingpoint_classes\textures\outlaw\SVest_cloth_co.paa","\breakingpoint_classes\textures\outlaw\SVest_tech_co.paa"};
 		class ItemInfo: VestItem {
 			uniformModel = "\A3\Characters_F\OPFOR\equip_o_vest_gl";
 			allowedSlots[] = {};
 			containerClass = "Supply90";
-			mass = 25;
+			mass = 40;
 			hiddenSelections[] = {"Camo1","Camo2"};
 			class HitpointsProtectionInfo
 			{

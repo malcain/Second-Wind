@@ -24,9 +24,6 @@ if ("ItemGPS" in assignedItems player) then {
 	//};
 };
 
-//Faction Clothing Check
-//call BP_fnc_checkFactionClothing;
-
 //Bayonet
 _bayonetMag = "BP_Bayonet_Stab";
 _hasBayonetMag = (_bayonetMag in magazines player);

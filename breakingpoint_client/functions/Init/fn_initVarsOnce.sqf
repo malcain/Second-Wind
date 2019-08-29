@@ -263,6 +263,7 @@ BP_Blueprints =
 	"BlueprintTele", //ItemBlueprint_Television
 	"BlueprintWaterBarrel",
 	"BlueprintFuelBarrel",
+	"BlueprintGenerator",
 
 	//World Objects
 	"BlueprintCrate1", //ItemBlueprint_Crate1
@@ -355,7 +356,21 @@ BP_Houses =
 	"Land_Slum_03_F", //Purple Shack
 	"Land_Addon_04_F", //Terrace
 	"Land_House_Small_02_F", //Brick bungalow
-	"Land_House_Small_03_F" //Beach bungalow
+	"Land_House_Small_03_F", //Beach bungalow
+	
+	//Enoch
+	"Land_House_1W01_F",
+	"Land_House_1W02_F",
+	"Land_House_1W03_F",
+	"Land_House_1W04_F",
+	"Land_House_1W05_F",
+	"Land_House_1W06_F",
+	"Land_House_1W07_F",
+	"Land_House_1W08_F",
+	"Land_House_1W09_F",
+	"Land_House_1W10_F",
+	"Land_House_1W11_F",
+	"Land_House_1W12_F"
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];

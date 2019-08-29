@@ -27,9 +27,9 @@ Author:
 //SCRIPT(createNamespace);
 
 params [["_isGlobal", false]];
-
+/*
 if (_isGlobal isEqualTo true) then {
     createSimpleObject ["CBA_NamespaceDummy", DUMMY_POSITION]
 } else {
     createLocation ["CBA_NamespaceDummy", DUMMY_POSITION, 0, 0]
-};
+};*/

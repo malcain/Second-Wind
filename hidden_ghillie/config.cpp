@@ -1498,7 +1498,8 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="Sniper BDU";
-		vehicleClass="snpr_ghillie";editorSubcategory="EdSubcat_Ghillies";
+		vehicleClass="snpr_ghillie";
+		editorSubcategory="EdSubcat_Ghillies";
 		textureList[] = {"wdl_csat", 1};
 		hiddenSelections[] = {"Camo","camo3","insignia"};
 		hiddenSelectionsTextures[] = {"\a3\characters_f\blufor\data\clothing_wdl_co.paa","A3\Characters_F_Exp\OPFOR\Data\ghillie_tna_CO.paa"};
@@ -1648,7 +1649,8 @@ class CfgVehicles
 	class B_Sniper_Full_tna_F: B_Sniper_Full_F
 	{
 		displayName = "Sniper Tropical [Legacy Full]";
-		vehicleClass="snpr_ghillie";editorSubcategory="EdSubcat_Ghillies";
+		vehicleClass="snpr_ghillie";
+		editorSubcategory="EdSubcat_Ghillies";
 		uniformClass = "U_B_GhillieFull_tna";
 		hiddenSelectionsTextures[] = {"a3\characters_f_exp\blufor\data\u_bt_sniper_f_tna_co.paa"};
 		textureList[]={"tropical",1};
@@ -1657,7 +1659,8 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName = "Sniper Night [Legacy Full]";
-		vehicleClass="snpr_ghillie";editorSubcategory="EdSubcat_Ghillies";
+		vehicleClass="snpr_ghillie";
+		editorSubcategory="EdSubcat_Ghillies";
 		model = "\A3\Characters_F\Common\ghillie.p3d";
 		uniformClass = "U_B_GhillieFull_Night";
 		hiddenSelectionsTextures[] = {"\hidden_ghillie\ghillie_night_co.paa"};
@@ -1714,7 +1717,8 @@ class CfgVehicles
 	class O_Sniper_Full_F: O_Sniper_F
 	{
 		displayName = "Sniper [Legacy Full]";
-		vehicleClass="snpr_ghillie";editorSubcategory="EdSubcat_Ghillies";
+		vehicleClass="snpr_ghillie";
+		editorSubcategory="EdSubcat_Ghillies";
 		model = "\A3\Characters_F\Common\ghillie.p3d";
 		uniformClass = "U_O_GhillieFull";
 		hiddenSelections[] = {"camo"};
@@ -1741,7 +1745,8 @@ class CfgVehicles
 	class O_Sniper_Full_tna_F: O_Sniper_Full_F
 	{
 		displayName = "Sniper Tropical [Legacy Full]";
-		vehicleClass="snpr_ghillie";editorSubcategory="EdSubcat_Ghillies";
+		vehicleClass="snpr_ghillie";
+		editorSubcategory="EdSubcat_Ghillies";
 		uniformClass = "U_O_GhillieFull_tna";
 		hiddenSelectionsTextures[] = {"a3\characters_f_exp\OPFOR\Data\ghillie_tna_CO.paa"};
 		textureList[]={"tna",1};

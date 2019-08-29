@@ -54,7 +54,7 @@ class Ranger : BP_BaseFaction
 				clothing[] = {"BP_Guardian_F"};
 				backpack[] = {};
 				vest[] = {};
-				uniform[] = {"BP_Guardian_F",""};
+				uniform[] = {"BP_Guardian_F"};
 				headgear[]={""};
 				nvg[]={""};
 				facewear[]={""};

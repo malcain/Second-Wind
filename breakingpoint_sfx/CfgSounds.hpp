@@ -374,6 +374,21 @@ class CfgSounds
 		sound[] = {"breakingpoint_sfx\effects\cough_2.ogg",0,1,40};
 		titles[] = {};
 	};
+	class z_cough_3 {
+		name = "";
+		sound[] = {"breakingpoint_sfx\effects\cough_0.ogg",0.5,1,140};
+		titles[] = {};
+	};
+	class z_cough_4 {
+		name = "";
+		sound[] = {"breakingpoint_sfx\effects\cough_1.ogg",0.4,1,140};
+		titles[] = {};
+	};
+	class z_cough_5 {
+		name = "";
+		sound[] = {"breakingpoint_sfx\effects\cough_2.ogg",0.3,1,140};
+		titles[] = {};
+	};
 	class z_bandage_0 {
 		name = "";
 		sound[] = {"breakingpoint_sfx\effects\bandage_0.ogg",0.3,1,150};

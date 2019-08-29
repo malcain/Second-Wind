@@ -19,6 +19,12 @@ private ["_onLadder","_isWater","_ToolsNum","_displayMsg","_amountHas","_itemCon
 _onLadder =	(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _isWater = ((getPosASL player select 2) < 0);
 //_isWater = (surfaceIsWater (getPosATL player));
+_building = nearestObject [player, "HouseBase"];
+_buildingLogic = nearestObject [player, "BP_Haven"];
+_buildingPos = getPosATL _building;
+_inside = [player,_building] call BP_fnc_isInsideBuilding;
+_type = typeOf _building;
+_size = ((sizeOf _type)+5);
 
 if (_onLadder) exitWith { cutText ["You can't build while on a ladder.","PLAIN DOWN"]; };
 if (_isWater) exitWith { cutText ["You can't build while in water.","PLAIN DOWN"]; };
@@ -68,7 +74,13 @@ _WeaponNum = 0;
 count _Weapons;
 
 if (_WeaponNum < _WeaponCount) exitWith {
-	cutText [format ["You don't have the necessary weapons to construct a %1.",_ObjName], "PLAIN DOWN"];
+	cutText [format ["You don't have the necessary tools to construct a %1.",_ObjName], "PLAIN DOWN"];
+};
+
+//Objects required
+_powerGenerator = count nearestObjects [player, ["BP_PowerGenerator"], _size] > 0;
+if (!_powerGenerator && (_blueprint == "BlueprintIceBox" or _blueprint == "BlueprintStove" or _blueprint == "BlueprintTele")) exitwith {
+	cutText [format ["%1 requires power generator, construct it first.",_ObjName], "PLAIN DOWN"];
 };
 
 //*********************************************************************************
@@ -105,7 +117,7 @@ _dir = round(direction player);
 _location = player modelToWorld [0,0.3,0];
 if ((_location select 2) < 0) then { _location set [2,0]; };
 
-_dis=20;
+_dis=30;
 [player,"tentunpack",0,false,_dis] call BP_fnc_objSpeak;
 [player,_dis,true,_playerPos] spawn BP_fnc_zombieAlert;
 
@@ -128,12 +140,12 @@ if (_blueprint == "BlueprintIED1") exitWith
 
 if (_blueprint == "BlueprintHaven") exitWith
 {
-	private ["_building","_buildingPos","_inside","_type","_size","_config","_lockable","_locked"];
-	_building = nearestObject [player, "HouseBase"];
+	private ["_config","_lockable","_locked"];
+	/*_building = nearestObject [player, "HouseBase"];
 	_buildingPos = getPosATL _building;
 	_inside = [player,_building] call BP_fnc_isInsideBuilding;
 	_type = typeOf _building;
-	_size = ((sizeOf _type)+5);
+	_size = ((sizeOf _type)+5);*/
 
 	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
@@ -208,13 +220,14 @@ if (_blueprint == "BlueprintHaven") exitWith
 
 if (_blueprint == "BlueprintHavenReinforce") exitWith
 {
-	private ["_building","_buildingLogic","_buildingPos","_inside","_type","_size","_config","_lockable","_locked"];
-	_building = nearestObject [player, "HouseBase"];
+	private ["_config","_lockable","_locked","_waterBarrel"];
+	/*_building = nearestObject [player, "HouseBase"];
 	_buildingLogic = nearestObject [player, "BP_Haven"];
 	_buildingPos = getPosATL _building;
 	_inside = [player,_building] call BP_fnc_isInsideBuilding;
 	_type = typeOf _building;
-	_size = ((sizeOf _type)+5);
+	_size = ((sizeOf _type)+5);*/
+	_waterBarrel = count nearestObjects [player, ["Land_StallWater_F","Land_Water_source_F","Land_BarrelWater_F","BP_BarrelWater"], _size] > 0;
 
 	// Mission config file loot table override.
 	_config = configFile >> "CfgBuildingLoot" >> _type;
@@ -230,7 +243,7 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 	_weaponHolder = (_type in _weaponHolderTypes);
 
 	//Error Add / Blueprint
-	if (!_inside or !_lockable or _locked or _weaponHolder) exitWith
+	if (!_inside or !_lockable or _locked or _weaponHolder or !_waterBarrel) exitWith
 	{
 		//WeaponHolder
 		if (_weaponHolder) then {
@@ -243,6 +256,9 @@ if (_blueprint == "BlueprintHavenReinforce") exitWith
 			//Message
 			cutText ["Unable to detect building. Please try again in a different spot.", "PLAIN DOWN"];
 		};
+		
+		//Not In Building
+		if (!_waterBarrel) then { cutText ["No water source nearby. Build haven water barrel first.", "PLAIN DOWN"]; };
 
 		//Not In Building
 		if (!_inside) then { cutText ["You need to be inside the building.", "PLAIN DOWN"]; };
@@ -289,7 +305,11 @@ _object = _ObjClass createVehicleLocal _location;
 _object hideObject true;
 _boundingBox = boundingBox _object;
 _maxPoint = ((_boundingBox select 1) select 0) max ((_boundingBox select 1) select 1);
-_object attachTo [player, [0, _maxPoint + 0.7, ((_boundingBox select 1) select 2)]];
+if (_blueprint == "BlueprintIceBox") then {
+	_object attachTo [player, [0, 1.1, 0.5]];
+} else {
+	_object attachTo [player, [0, _maxPoint + 0.7, ((_boundingBox select 1) select 2)]];
+};
 _object hideObject false;
 
 player setVariable ["constructionObject",_object];

@@ -1,38 +1,38 @@
 #include "script_component.hpp"
 /* ----------------------------------------------------------------------------
-Function: BP_fnc_removeItemCargo
+Function: CBA_fnc_removeBackpackCargo
 
 Description:
-    Removes specific item(s) from cargo space.
+    Removes specific backpack(s) from cargo space.
 
-    Warning: All weapon attachments/magazines in containers in container will become detached.
+    Warning: All weapon attachments/magazines in all backpacks in container will become detached.
     Warning: Preset weapons without non-preset parents will get their attachments readded (engine limitation).
 
 Parameters:
     _container    - Object with cargo <OBJECT>
-    _item         - Classname of item(s) to remove <STRING>
-    _count        - Number of item(s) to remove <NUMBER> (Default: 1)
-    _keepContents - Keep contents of the removed item (if uniform/vest) <BOOLEAN> (Default: false)
+    _item         - Classname of backpack(s) to remove <STRING>
+    _count        - Number of backpack(s) to remove <NUMBER> (Default: 1)
+    _keepContents - Keep contents of the removed backpack <BOOLEAN> (Default: false)
 
 Returns:
     true on success, false otherwise <BOOLEAN>
 
 Examples:
     (begin example)
-    // Remove 1 GPS from a box
-    _success = [myCoolItemBox, "ItemGPS"] call BP_fnc_removeItemCargo;
+    // Remove 1 Kitbag Tan backpack from a box
+    _success = [myCoolBackpackBox, "B_Kitbag_cbr"] call CBA_fnc_removeBackpackCargo;
 
-    // Remove 2 Compasses from a box
-    _success = [myCoolItemBox, "ItemCompass", 2] call BP_fnc_removeItemCargo;
+    // Remove 2 Carryall Desert Camo backpacks from a box
+    _success = [myCoolBackpackBox, "B_Carryall_ocamo", 2] call CBA_fnc_removeBackpackCargo;
 
-    // Remove 1 Vest from a box and keep contents
-    _success = [myCoolWeaponBox, "V_PlateCarrier1_rgr", 1, true] call BP_fnc_removeItemCargo;
+    // Remove 1 Backpack from a box and keep contents
+    _success = [myCoolWeaponBox, "B_AssaultPack_khk", 1, true] call CBA_fnc_removeBackpackCargo;
     (end)
 
 Author:
     Jonpas
 ---------------------------------------------------------------------------- */
-//SCRIPT(removeItemCargo);
+//SCRIPT(removeBackpackCargo);
 
 params [["_container", objNull, [objNull]], ["_item", "", [""]], ["_count", 1, [0]], ["_keepContents", false, [true]]];
 
@@ -46,12 +46,12 @@ if (_item isEqualTo "") exitWith {
     false
 };
 
-private _config = _item call BP_fnc_getItemConfig;
+/*private _config = _item call CBA_fnc_getObjectConfig;
 
-if (isNull _config || {getNumber (_config >> "scope") < 1}) exitWith {
-    //TRACE_2("Item does not exist in Config",_container,_item);
+if (isNull _config || {getNumber (_config >> "scope") < 1} || {getNumber (_config >> "isBackpack") != 1}) exitWith {
+   // TRACE_2("Item not exist in Config",_container,_item);
     false
-};
+};*/
 
 if (_count <= 0) exitWith {
     //TRACE_3("Count is not a positive number",_container,_item,_count);
@@ -61,22 +61,14 @@ if (_count <= 0) exitWith {
 // Ensure proper count
 _count = round _count;
 
-// Save containers and contents
-private _containerData = []; // [object1, object2, ...]
-private _containerNames = [];
+// Save backpacks and contents
+private _backpackData = [];
 {
-    _x params ["_class", "_object"];
-    if !(_object in (everyBackpack _container)) then {
-        _containerData pushBack [getItemCargo _object, magazinesAmmoCargo _object, weaponsItemsCargo _object];
-        _containerNames pushBack _class;
-    };
-} forEach (everyContainer _container); // [["class1", object1], ["class2", object2]]
-
-// [[type1, typeN, ...], [count1, countN, ...]]
-(getItemCargo _container) params ["_allItemsType", "_allItemsCount"];
+    _backpackData pushBack [typeOf _x, getItemCargo _x, magazinesAmmoCargo _x, weaponsItemsCargo _x];
+} forEach (everyBackpack _container); // [object1, object2, ...]
 
 // Clear cargo space and readd the items as long it's not the type in question
-clearItemCargoGlobal _container;
+clearBackpackCargoGlobal _container;
 
 
 // Add contents to backpack or box helper function
@@ -144,49 +136,30 @@ private _fnc_addContents = {
     } forEach _weaponsItemsCargo;
 };
 
-// Process removal
+// Process all backpacks
 {
-    private _itemCount = _allItemsCount select _forEachIndex;
-    private _containerIndex = _containerNames find _x;
+    _x params ["_backpackClass", "_itemCargo", "_magazinesAmmoCargo", "_weaponsItemsCargo"];
 
-    if (_count != 0 && {_x == _item}) then {
+    if (_count != 0 && {_backpackClass == _item}) then {
         // Process removal
-        if (_containerIndex < 0) then {
-            _itemCount = _itemCount - _count;
-            if (_itemCount > 0) then {
-                // Add with new count
-                _container addItemCargoGlobal [_x, _itemCount];
-            };
-        } else {
-            if (_keepContents) then {
-                (_containerData select _containerIndex) params ["_itemCargo", "_magazinesAmmoCargo", "_weaponsItemsCargo"];
-                [_container, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
-            };
+        _count = _count - 1;
 
-            _containerData deleteAt _containerIndex;
-            _containerNames deleteAt _containerIndex;
+        if (_keepContents) then {
+            [_container, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
         };
-        _count = 0;
     } else {
-        // Readd only
-        if (_containerIndex < 0) then {
-            _container addItemCargoGlobal [_x, _itemCount];
-        } else {
-            (_containerData select _containerIndex) params ["_itemCargo", "_magazinesAmmoCargo", "_weaponsItemsCargo"];
+        // Save all backpacks for finding the one we readd after this
+        private _addedBackpacks = everyBackpack _container;
 
-            // Save all containers for finding the one we readd after this
-            private _addedContainers = ((everyContainer _container) apply {_x select 1}) - everyBackpack _container;
+        // Readd
+        private _backpack = [_backpackClass, "CfgVehicles"] call BP_fnc_getNonPresetClass;
+        _container addBackpackCargoGlobal [_backpack, 1];
 
-            // Readd
-            private _addedContainer = [_containerNames select _containerIndex] call BP_fnc_getNonPresetClass;
-            _container addItemCargoGlobal [_addedContainer, 1];
+        // Find just added backpack and add contents (no command returns reference when adding)
+        private _backpack = (everyBackpack _container - _addedBackpacks) select 0;
 
-            // Find just added container and add contents (no command returns reference when adding)
-            private _addedContainer = ((((everyContainer _container) apply {_x select 1}) - everyBackpack _container) - _addedContainers) select 0;
-
-            [_addedContainer, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
-        };
+        [_backpack, _itemCargo, _magazinesAmmoCargo, _weaponsItemsCargo] call _fnc_addContents;
     };
-} forEach _allItemsType;
+} forEach _backpackData;
 
 (_count == 0)

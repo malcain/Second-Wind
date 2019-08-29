@@ -41,7 +41,10 @@ if (_hasoutput && {!_inVehicle}) then
     [player,(drink_output select (drink_with_output find _itemorignal))] call BP_fnc_dropWeaponHolderMag;
 };
 
-if ((random 15 < 3) and (_itemorignal == "Waterbot")) then { r_player_infected = true; };
+if ((random 15 < 3.5) and (_itemorignal == "Waterbot")) then { 
+	r_player_infected = true; 
+	player say3D ["z_cough_5",350,1.1];
+};
 
 BP_thirst = 0;
 

@@ -96,6 +96,21 @@ switch (_iClass) do {
 		_item enableDynamicSimulation true;
 		_item addWeaponCargoGlobal [_iItem,1];
 	};
+	case "shotgun": {
+		//shutgun with ammo
+		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item enableDynamicSimulation true;
+		_item addWeaponCargoGlobal [_iItem,1];
+		_mags = ["BP_2Rnd_Buckshot", "BP_2Rnd_Slug", "BP_2Rnd_MagBuckshot"];
+		_ammoClass = selectRandom _mags;
+		_magRndCount = round(random 2) + 2;
+		if (_magRndCount > 0) then {
+			for "_i" from 1 to _magRndCount do {
+				_amount = 2 + round random parsenumber (_ammoClass select [3,2]);
+				_item addMagazineAmmoCargo [_ammoClass,1,_amount];
+			};
+		};
+	};
 	case "magazine": {
 		//Item is one object or full magazine
 		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
