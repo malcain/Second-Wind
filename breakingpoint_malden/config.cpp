@@ -9,7 +9,8 @@ class CfgPatches
 		requiredAddons[] = 
 		{
 			"A3_Map_Malden",
-			"A3_Structures_F_Argo"
+			"A3_Structures_F_Argo",
+			"A3_Data_F_Enoch_Loadorder"
 		};
 	};
 };
@@ -34,6 +35,76 @@ class CfgWorlds
 class CfgVehicles
 {
 	class House_F;
+	//Enoch
+	class Land_House_1W01_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W02_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W03_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W04_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W05_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W06_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W07_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W08_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W09_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W10_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W11_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_1W12_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_2W01_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_2W03_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_House_2W04_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_Camp_House_01_brown_F : House_F
+	{
+		armor = 5000;
+	};
+	class Land_Workshop_03_F : House_F
+	{
+		armor = 5000;
+	};
+	//Malden
 	class i_House_Big_02_b_base_F: House_F 
 	{
 		class UserActions 

@@ -53,7 +53,8 @@ disableChannels[]=
 enableItemsDropping = 1;
 showUAVFeed = 0;
 corpseLimit = 9999;
-onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+//onPauseScript = "\breakingpoint_client\functions\GUI\fn_onPause.sqf";
+//onPauseScript[]	= { bp_fnc_onpause };	
 loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
 corpseManagerMode = 0;
 

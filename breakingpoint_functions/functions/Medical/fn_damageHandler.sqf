@@ -11,6 +11,8 @@ scriptName "BP_fnc_damageHandler";
 
 params ["_unit","_hit","_damage","_source","_ammo","_hitPartIndex","_instigator","_hitPoint"];
 
+["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 hitPartIndex: %6 instigator: %7 hitPoint: %8 #1000",_unit,_hit,_damage,_source,_ammo,_hitPartIndex,_instigator,_hitPoint] call BP_fnc_debugConsoleFormat;
+
 if (_damage isEqualTo 0) exitwith {};
 //Only Handle Damage On Valid Units
 if (isNull _unit) exitWith {};
@@ -32,6 +34,12 @@ _inVehicle = !isNull objectParent _unit;
 _inVehicleSource = ((vehicle _source) != _source);
 _isMelee = _ammo isKindOf "Melee";
 _selfDamage = (_unit == _source);
+_trapDamage = player getVariable ["med_trap", false];
+
+if (_ammo in BP_TrapAmmo && !_trapDamage) then {
+	player setVariable ["med_trap", true];
+	_trapDamage = true;
+};
 
 //Melee Self Damage
 if (_selfDamage && {_isMelee}) exitWith {};
@@ -60,12 +68,17 @@ if (_ammo isKindOf "BP_NonLethal" || {_ammo isKindOf "BP_Arrow_Tranq"}) exitWith
 		r_player_unconscious = true;
 		r_player_unconsciousWeapon = true;
 	};
+	
+	player setVariable ["hostage_perpetrator", (netID _source), true];
+	//[(netID _source),(netID player)] remoteExecCall ["BPServer_fnc_hostageAdd",2];
 };
 
 if (_ammo isKindOf "BP_InfectedNeedle") exitWith {
 	r_player_unconscious = true;
 	r_player_unconsciousWeapon = true;
 	if (!r_player_infected) then { r_player_infected = true; };
+	
+	player setVariable ["hostage_perpetrator", (netID _source), true];
 };
 
 //Fire Arrows
@@ -169,6 +182,7 @@ if (_damage > 0.01) then
 				_rndBleeding = (random 100);
 				_hitBleeding = (_rndBleeding < _BleedingChance);
 				if (_hitBleeding) then { _hitInjured = true; };
+				if (random 100 < 35) then {r_player_infected = true; };
 			};
 		};
 		
@@ -343,11 +357,11 @@ if (_damage > 0.01) then
 	
 	//Process who Killed Who Events.
 	if (_source != player) then 
-	{	
-		if (_isPlayer || {_source isKindOf "BP_Stronghold_AI"}) then
+	{
+		if (_isPlayer && !_trapDamage) then
 		{
 			//Enable aggressor Actions
-			if (_source distance player > 2000) then {
+			if (_source distance player > 2000 && !(_ammo in BP_TrapAmmo)) then {
 				r_player_blood = r_player_blood + _bloodLoss;
 				r_player_injured = false;
 			} else {

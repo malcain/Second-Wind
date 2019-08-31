@@ -46,6 +46,7 @@ if (!isDedicated) then
         findDisplay 46 displayAddEventHandler ["MouseButtonDown", _fncDown];
         findDisplay 46 displayAddEventHandler ["MouseButtonUp", _fncUp];
         findDisplay 46 displayAddEventHandler ["JoystickButton", _fncDown];
+		(findDisplay 46) displayAddEventHandler ["KeyDown","if ((_this select 1)==1) then {[] spawn BP_fnc_onPause;}"];
     };
 
 	//Skip Briefing

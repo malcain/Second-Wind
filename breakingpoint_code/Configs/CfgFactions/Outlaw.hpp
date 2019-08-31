@@ -78,7 +78,7 @@
 					clothing[] = {"BP_Rebel_1"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_1",""};
+					uniform[] = {"BP_Rebel_1"};
 					headgear[]={""};
 					nvg[]={"Outlaw_BandanaRED"};
 					facewear[]={""};
@@ -112,7 +112,7 @@
 					clothing[] = {"BP_Rebel_2"};
 					backpack[] = {"BP_Rpack"};
 					vest[] = {};
-					uniform[] = {"BP_Rebel_2",""};
+					uniform[] = {"BP_Rebel_2"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -147,7 +147,7 @@
 					clothing[] = {"BP_Rebel_3"};
 					backpack[] = {"BP_Rpack2"};
 					vest[]={"BP_ExplosiveVest"};
-					uniform[] = {"BP_Rebel_3",""};
+					uniform[] = {"BP_Rebel_3"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -181,7 +181,7 @@
 					clothing[] = {"BP_Rebel_4"};
 					backpack[] = {"BP_RadioPack"};
 					vest[]={"BP_ExplosiveVest"};
-					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip",""};
+					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip"};
 					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
 					nvg[]={"Outlaw_BandanaRED"};
 					facewear[]={""};

@@ -1427,7 +1427,7 @@ class CfgWeapons
 	
 	class BP_Scavenger_3: Uniform_Base {
 		scope = 2;
-		displayName = "Scavenger level 3 (Crow)";
+		displayName = "Scavenger level 3 (Bloody crow)";
 		picture = "\breakingpoint_ui\icons\ScavengerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 
@@ -1443,7 +1443,7 @@ class CfgWeapons
 	class BP_Scavenger_4: Uniform_Base
 	{
 		scope = 2;
-		displayName = "Scavenger level 4 (Bloody crow)";
+		displayName = "Scavenger level 4 (Crow)";
 		picture = "\breakingpoint_ui\icons\ScavengerIcon.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		class ItemInfo: UniformItem

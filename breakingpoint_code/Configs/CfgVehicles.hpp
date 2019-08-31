@@ -2960,15 +2960,15 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"friths_ruin_cloth\data\frith_ruin_sdr_ltrdrk_co.paa",
-			"\friths_ruin_cloth\data\frith_ruin_ghillie_crow_co.paa",
-			"\friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltrred_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crowbld_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"\friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
-			"\friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
-			"\friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
 		};
 	};
 	
@@ -2987,8 +2987,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\friths_ruin_cloth\data\frith_ruin_sdr_ltrred_co.paa",
-			"friths_ruin_cloth\data\frith_ruin_ghillie_crowbld_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltrdrk_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crow_co.paa",
 			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
 		};
 		hiddenSelectionsMaterials[]=

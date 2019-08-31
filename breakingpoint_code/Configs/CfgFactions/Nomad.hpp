@@ -85,7 +85,7 @@
 					clothing[] = {"BP_Refugee_1"};
 					backpack[] = {"BP_AssaultPack_blk"};
 					vest[] = {};
-					uniform[] = {"BP_Refugee_1",""};
+					uniform[] = {"BP_Refugee_1"};
 					headgear[]={"BP_Woolcap_brn","BP_Woolhat_blk","BP_Woolcap_khk"};
 					nvg[]={""};
 					facewear[]={""};
@@ -120,7 +120,7 @@
 					clothing[] = {"BP_Refugee_2"};
 					backpack[] = {"BP_CampPack"};
 					vest[] = {};
-					uniform[] = {"BP_Refugee_2",""};
+					uniform[] = {"BP_Refugee_2"};
 					headgear[]={"BP_Bandit_Bandanna"};
 					nvg[]={""};
 					facewear[]={""};
@@ -155,7 +155,7 @@
 					clothing[] = {"BP_Refugee_3"};
 					backpack[] = {"BP_Hpack"};
 					vest[] = {};
-					uniform[] = {"BP_Refugee_3",""};
+					uniform[] = {"BP_Refugee_3"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -188,7 +188,7 @@
 					primary[] = {};
 					launcher[] = {"MeleeHatchet"};
 					handgun[] = {};
-					clothing[] = {"BP_Refugee_4",""};
+					clothing[] = {"BP_Refugee_4"};
 					backpack[] = {"BP_Hpack"};
 					vest[] = {"V_TacChestrig_oli_BP"};
 					uniform[] = {"BP_Refugee_4"};

@@ -52,7 +52,7 @@
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_1",""};
+					uniform[] = {"BP_Hunter_1"};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -80,7 +80,7 @@
 					clothing[] = {"BP_Hunter_1"};
 					backpack[] = {"BP_AssaultPack_khk"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_1",""};
+					uniform[] = {"BP_Hunter_1"};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -114,7 +114,7 @@
 					clothing[] = {"BP_Hunter_2"};
 					backpack[] = {"BP_AssaultPack_sgg"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_2",""};
+					uniform[] = {"BP_Hunter_2"};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -149,7 +149,7 @@
 					clothing[] = {"BP_Hunter_3"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_3",""};
+					uniform[] = {"BP_Hunter_3"};
 					headgear[] = {""};
 					nvg[] = {""};
 					facewear[] = {""};
@@ -183,7 +183,7 @@
 					clothing[] = {"BP_Hunter_3"};
 					backpack[] = {"BP_AssaultPack_mcamo"};
 					vest[] = {};
-					uniform[] = {"BP_Hunter_3",""};
+					uniform[] = {"BP_Hunter_3"};
 					headgear[] = {"BP_Shemag_bandit","H_Shemag_olive"};
 					nvg[] = {"TRYK_Shemagh_G_NV"};
 					facewear[] = {""};//{"rvg_balaclava_4", "rvg_balaclavaLow_4", "rvg_balaclavaLow_1"};

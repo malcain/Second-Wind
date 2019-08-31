@@ -83,7 +83,7 @@
 					clothing[] = {"BP_Survivalist_1"};
 					backpack[] = {"BP_AssaultPack_grs"};
 					vest[] = {};
-					uniform[] = {"BP_Survivalist_1",""};
+					uniform[] = {"BP_Survivalist_1"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -117,7 +117,7 @@
 					clothing[] = {"BP_Survivalist_2"};
 					backpack[] = {"BP_Kitbag_drt"};
 					vest[] = {"V_VPack_BP"};
-					uniform[] = {"BP_Survivalist_2",""};
+					uniform[] = {"BP_Survivalist_2"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -158,7 +158,7 @@
 					clothing[] = {"BP_Survivalist_3"};
 					backpack[] = {"BP_Kitbag_grs"};
 					vest[] = {"V_CPack_BP"};
-					uniform[] = {"BP_Survivalist_3",""};
+					uniform[] = {"BP_Survivalist_3"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};
@@ -200,7 +200,7 @@
 					clothing[] = {"BP_Survivalist_4"};
 					backpack[] = {"BP_Kitbag_grs"};
 					vest[] = {"V_CPack_BP"};
-					uniform[] = {"BP_Survivalist_4","BP_Survivalist_4_Dirt","BP_Survivalist_4_Stone","BP_Survivalist_4_Tree","BP_Survivalist_4_Snow",""};
+					uniform[] = {"BP_Survivalist_4","BP_Survivalist_4_Dirt","BP_Survivalist_4_Stone","BP_Survivalist_4_Tree","BP_Survivalist_4_Snow","BP_Survivalist_4_Corn","BP_Survivalist_4_Night"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={""};

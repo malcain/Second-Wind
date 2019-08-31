@@ -493,62 +493,6 @@ class CfgMovesBasic
 	};
 };
 
-/*
-		class RifleStandActions {
-		};
-		class RifleCrouchActions {
-		};
-		class RifleKneelActions {
-		};
-		class RifleLowStandActions {
-		};
-		class RifleAdjustStandBaseActions {
-		};
-
-		//Pistol
-		class PistolStandActions {
-		};
-		class PistolLowStandActions {
-		};
-		class PistolStandActionsNoAdjust{
-		};
-		class PistolLowStandActionsNoAdjust{
-		};
-		class PistolKneelActions {
-		};
-		class PistolLowKneelActions {
-		};
-		class PistolProneActions {
-		};
-
-		//Launcher
-		class LauncherStandActions {
-		};
-		class LauncherKneelActions {
-		};
-		class LauncherProneActions {
-		};
-
-		//Melee
-		class CivilStandActions {
-		};
-		class CivilKneelActions {
-		};
-		class CivilProneActions {
-		};
-		class CivilStandSurrenderActions {
-		};
-		class CivilSiTactions {
-		};
-		class CivilStandSaluteActions {
-		};
-		class CivilEvasiveActions {
-		};
-		class CivilRunActions {
-		};
-
-*/
-
 class CfgMovesMaleSdr: CfgMovesBasic
 {
 	skeletonName = "OFP2_ManSkeleton";
@@ -585,6 +529,22 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class LadderCivilUpLoop: LadderCivilStatic
 		{
 			speed="1.05/(2/3)";
+		};
+		
+		//Crouch sprint
+		class SprintCivilBaseDf;
+		class AmovPknlMevaSnonWnonDf: SprintCivilBaseDf
+		{
+			speed=1.587;
+		};
+		
+		class AmovPknlMevaSnonWnonDfl: AmovPknlMevaSnonWnonDf
+		{
+			speed=1.595;
+		};
+		class AmovPknlMevaSnonWnonDfr: AmovPknlMevaSnonWnonDf
+		{
+			speed=1.595;
 		};
 
 		class AmovPercMstpSlowWrflDnon; //stay weap low
@@ -54856,13 +54816,13 @@ class CfgMagazines {
 	};
 	class Human_Trap_Mag: ATMine_Range_Mag
 	{
-		author = "Kol9yN";
+		author = "Malcain, Kol9yN";
 		mass = 40;
 		ammo = "Human_Trap_Ammo";
 		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
 		displayName = "Human Trap";
 		model = "\breakingpoint\models\bp_beartrap.p3d";
-		descriptionShort = "Old and rusty, but sharp enough to do it's job";
+		descriptionShort = "Old and rusty, but does it's job";
 		class Library
 		{
 			libTextDesc = "Traps";
@@ -54886,6 +54846,250 @@ class CfgMagazines {
 //-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //CLASS CREATION BULLETS|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class CfgVehicles
+{
+	class MineGeneric;
+	class MineBase: MineGeneric
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		_generalMacro="MineBase";
+		icon="iconExplosiveGP";
+	};
+	class BP_ATMine: MineBase
+	{
+		author="Malcain";
+		mapSize=0.33000001;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\ATMine.jpg";
+		_generalMacro="ATMine";
+		scope=2;
+		ammo="BP_ATMine_Ammo";
+		icon="iconExplosiveAT";
+		displayName="$STR_A3_cfgMagazines_Mine0";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_f\Explosives\mine_at";
+		descriptionShort="$STR_A3_cfgMagazines_Mine1";
+		class Library
+		{
+			libTextDesc="$STR_A3_cfgMagazines_Mine_Library0";
+		};
+	};
+	class BP_TripMine: MineBase
+	{
+		author="Malcain";
+		mapSize=3.0599999;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\APERSTripMine.jpg";
+		_generalMacro="APERSTripMine";
+		scope=2;
+		ammo="BP_TripMine_Ammo";
+		displayName="$STR_A3_cfgMagazines_ClassicMineWireMagazine0";
+		icon="iconExplosiveAP";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\explosives\mine_AP_tripwire";
+		descriptionShort="$STR_A3_cfgMagazines_ClassicMineWireMagazine1";
+		class Library
+		{
+			libTextDesc="$STR_A3_cfgMagazines_ClassicMineWireMagazine_Library0";
+		};
+	};
+	class BP_BearTrap: MineBase
+	{
+		author="Malcain";
+		mapSize=0.090000004;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\APERSMine.jpg";
+		_generalMacro="BearTrap";
+		scope=2;
+		ammo="Human_Trap_Ammo";
+		displayName="Bear Trap";
+		icon="iconExplosiveAP";
+		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
+		model = "\breakingpoint\models\bp_beartrap.p3d";
+		descriptionShort="$STR_A3_cfgMagazines_ClassicMineRangeMagazine1";
+		class Library
+		{
+			libTextDesc="$STR_A3_cfgMagazines_ClassicMineRangeMagazine_Library0";
+		};
+	};
+	/*class APERSBoundingMine: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.079999998;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\APERSBoundingMine.jpg";
+		_generalMacro="APERSBoundingMine";
+		scope=2;
+		ammo="APERSBoundingMine_Range_Ammo";
+		displayName="$STR_A3_cfgMagazines_BouncingMineRangeMagazine0";
+		icon="iconExplosiveAP";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\explosives\mine_AP_bouncing";
+		descriptionShort="$STR_A3_cfgMagazines_BouncingMineRangeMagazine1";
+		class Library
+		{
+			libTextDesc="$STR_A3_cfgMagazines_BouncingMineRangeMagazine_Library0";
+		};
+	};
+	class SLAMDirectionalMine: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.090000004;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\SLAMDirectionalMine.jpg";
+		_generalMacro="SLAMDirectionalMine";
+		scope=2;
+		ammo="SLAMDirectionalMine_Wire_Ammo";
+		displayName="$STR_A3_cfgMagazines_DirectionalMineRangeMagazine0";
+		icon="iconExplosiveAPDirectional";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\Explosives\mine_SLAM_directional";
+		descriptionShort="$STR_A3_cfgMagazines_DirectionalMineRangeMagazine1";
+		class Library
+		{
+			libTextDesc="$STR_A3_cfgMagazines_DirectionalMineRangeMagazine_Library0";
+		};
+	};
+	class UnderwaterMine: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.86000001;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\UnderwaterMine.jpg";
+		_generalMacro="UnderwaterMine";
+		scope=2;
+		ammo="UnderwaterMine_Range_Ammo";
+		displayName="$STR_A3_CfgVehicles_UnderwaterMineRange0";
+		icon="iconExplosiveUW";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\explosives\mine_naval";
+		descriptionShort="$STR_A3_CfgVehicles_UnderwaterMineRange1";
+		class Library
+		{
+			libTextDesc="$STR_A3_CfgVehicles_UnderwaterMineRange_Library0";
+		};
+	};
+	class UnderwaterMineAB: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\UnderwaterMineAB.jpg";
+		_generalMacro="UnderwaterMineAB";
+		scope=2;
+		ammo="UnderwaterMineAB_Range_Ammo";
+		displayName="$STR_A3_CfgVehicles_UnderwaterMineRangeAB0";
+		icon="iconExplosiveUW";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\explosives\mine_naval2";
+		descriptionShort="$STR_A3_CfgVehicles_UnderwaterMineRangeAB1";
+		class Library
+		{
+			libTextDesc="$STR_A3_CfgVehicles_UnderwaterMineRangeAB_Library0";
+		};
+	};
+	class UnderwaterMinePDM: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.80000001;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\UnderwaterMinePDM.jpg";
+		_generalMacro="UnderwaterMinePDM";
+		scope=2;
+		ammo="UnderwaterMinePDM_Range_Ammo";
+		displayName="$STR_A3_CFGVEHICLES_UNDERWATERMINEPDM0";
+		icon="iconExplosiveUW";
+		picture="\A3\Weapons_F\Data\clear_empty.paa";
+		model="\A3\Weapons_F\explosives\mine_naval3";
+		descriptionShort="$STR_A3_CFGVEHICLES_UNDERWATERMINEPDM1";
+		class Library
+		{
+			libTextDesc="$STR_A3_CFGVEHICLES_UNDERWATERMINEPDM_LIBRARY0";
+		};
+	};
+	class SatchelCharge_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.43000001;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\SatchelCharge_F.jpg";
+		_generalMacro="SatchelCharge_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="SatchelCharge_Remote_Ammo";
+		model="\A3\Weapons_F\Explosives\satchel";
+		displayName="$STR_A3_cfgMagazines_PipeBomb0";
+		DLC="Curator";
+	};
+	class DemoCharge_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.31;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\DemoCharge_F.jpg";
+		_generalMacro="DemoCharge_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="DemoCharge_Remote_Ammo";
+		model="\A3\Weapons_F\explosives\c4_charge_small";
+		displayName="$STR_A3_cfgMagazines_DemoCharge0";
+		DLC="Curator";
+	};
+	class Claymore_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Claymore_F.jpg";
+		_generalMacro="Claymore_F";
+		scope=2;
+		icon="iconExplosiveAPDirectional";
+		ammo="ClaymoreDirectionalMine_Remote_Ammo";
+		model="\A3\Weapons_F\explosives\mine_AP_miniclaymore";
+		displayName="$STR_A3_cfgMagazines_DirectionalMineRemoteMagazine0";
+		DLC="Curator";
+	};
+	class IEDUrbanBig_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1.54;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\IEDUrbanBig_F.jpg";
+		_generalMacro="IEDUrbanBig_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="IEDUrbanBig_Remote_Ammo";
+		model="\A3\Weapons_F\Explosives\IED_urban_big";
+		displayName="$STR_A3_CfgVehicles_IEDUrbanBig_F";
+		DLC="Curator";
+	};
+	class IEDLandBig_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=1.14;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\IEDLandBig_F.jpg";
+		_generalMacro="IEDLandBig_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="IEDLandBig_Remote_Ammo";
+		model="\A3\Weapons_F\Explosives\IED_land_big";
+		displayName="$STR_A3_CfgVehicles_IEDLandBig_F";
+		DLC="Curator";
+	};
+	class IEDUrbanSmall_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.72000003;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\IEDUrbanSmall_F.jpg";
+		_generalMacro="IEDUrbanSmall_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="IEDUrbanSmall_Remote_Ammo";
+		model="\A3\Weapons_F\Explosives\IED_urban_small";
+		displayName="$STR_A3_CfgVehicles_IEDUrbanSmall_F";
+		DLC="Curator";
+	};
+	class IEDLandSmall_F: MineBase
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.83999997;
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\IEDLandSmall_F.jpg";
+		_generalMacro="IEDLandSmall_F";
+		scope=2;
+		icon="iconExplosiveGP";
+		ammo="IEDLandSmall_Remote_Ammo";
+		model="\A3\Weapons_F\Explosives\IED_land_small";
+		displayName="$STR_A3_CfgVehicles_IEDLandSmall_F";
+		DLC="Curator";
+	};*/
+};
 
 class CfgAmmo {
 	class Default;	// External class reference
@@ -56311,10 +56515,16 @@ class CfgAmmo {
 			angle = 75; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56367,10 +56577,16 @@ class CfgAmmo {
 			angle = 75; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.284893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.184893, 1.1, 10},
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.584893, 0.8, 10}
-			};
+			};*/
 
 		};
 		class Medical
@@ -56426,10 +56642,16 @@ class CfgAmmo {
 			angle = 50; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.284893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.184893, 1.1, 10},
 				{"breakingpoint_jsrs\sounds\Machete1.wav", 1.584893, 0.8, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56485,10 +56707,16 @@ class CfgAmmo {
 			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56544,10 +56772,16 @@ class CfgAmmo {
 			angle = 50; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56602,10 +56836,16 @@ class CfgAmmo {
 			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56657,10 +56897,16 @@ class CfgAmmo {
 			angle = 90; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56714,10 +56960,16 @@ class CfgAmmo {
 			angle = 60; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.384893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.284893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -56762,10 +57014,16 @@ class CfgAmmo {
 			angle = 55; //Angle Of Hit Detection
 			sounds[] =
 			{
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.95, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.70, 10},
+				{"breakingpoint_sfx\effects\Swing.wav", 1.994328, 0.60, 10}
+			};
+			/*sounds[] =
+			{
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.084893, 1, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 1.184893, 0.7, 10},
 				{"breakingpoint_jsrs\sounds\Hatchet1.wav", 0.884893, 1.1, 10}
-			};
+			};*/
 		};
 		class Medical
 		{
@@ -60594,9 +60852,9 @@ class CfgAmmo {
 
 	class BP_IED: MineBase
 	{
-		hit = 50;
-		indirectHit = 20;
-		indirectHitRange = 10;
+		hit = 150;
+		indirectHit = 110;
+		indirectHitRange = 6;
 		audibleFire = 50;
 		model = "\A3\Weapons_F\explosives\IED_urban_small.p3d";
 		modelModelDisabled = "\A3\Weapons_F\explosives\IED_urban_small.p3d";
@@ -60640,7 +60898,7 @@ class CfgAmmo {
 	{
 		hit=100;
 		indirectHit=85;
-		indirectHitRange=15;
+		indirectHitRange=4;
 		explosive = 1;
 		model="\A3\Weapons_F\explosives\mine_AP_tripwire";
 		mineModelDisabled="\A3\Weapons_F\explosives\mine_AP_tripwire_d";
@@ -60662,7 +60920,7 @@ class CfgAmmo {
 
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
-			MedicalState = 3;
+			MedicalState = 5;
 			MedicalChance = 70;
 
 			// Bleeding Level (Rate of blood loss)
@@ -60717,9 +60975,10 @@ class CfgAmmo {
 		soundHit1[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,15};
 		soundHit2[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",3.1622777,1,15};
 		multiSoundHit[] = {"soundHit1",0.5,"soundHit2",0.5};
-		soundTrigger[] = {"\breakingpoint_sfx\gore\Fracture_0.ogg",0.56234133,1,30};
+		soundTrigger[] = {"\breakingpoint_jsrs\sounds\Machete1.wav",0.56234133,1,30};
 		//soundActivation[] = {"A3\Sounds_F\weapons\mines\electron_activate_mine_1",0.56234133,1,20};
 		//soundDeactivation[] = {"A3\Sounds_F\weapons\Mines\deactivate_mine_3a",1.9952624,1,20};
+		soundsetexplosion[] = {""};
 		explosionSoundEffect = "";
 		CraterEffects = "";
 		CraterWaterEffects = "ImpactGlassThin";

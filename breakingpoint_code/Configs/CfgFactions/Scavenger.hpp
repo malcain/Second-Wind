@@ -83,7 +83,7 @@
 					clothing[] = {"BP_Scavenger_1"};
 					backpack[] = {"BP_AssaultPack_Worn"};
 					vest[] = {};
-					uniform[] = {"BP_Scavenger_1",""};
+					uniform[] = {"BP_Scavenger_1"};
 					headgear[]={""};
 					nvg[]={""};
 					facewear[]={"G_MM_Hockey_Mask"};
@@ -117,7 +117,7 @@
 					clothing[] = {"BP_Scavenger_2"};
 					backpack[] = {"BP_AssaultPack_Worn"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_2",""};
+					uniform[] = {"BP_Scavenger_2"};
 					headgear[]={""};
 					nvg[]={"Scavenger_Goggles"};
 					facewear[]={"G_MM_FaceFork"};
@@ -158,7 +158,7 @@
 					clothing[] = {"BP_Scavenger_3"};
 					backpack[] = {"BP_Carryall_Bandit"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_3",""};
+					uniform[] = {"BP_Scavenger_3"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"","G_MM_Crow_Dazzle_Mask","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask"};
@@ -200,7 +200,7 @@
 					clothing[] = {"BP_Scavenger_4"};
 					backpack[] = {"BP_Coyote_Bandit"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Hawk",""};
+					uniform[] = {"BP_scavenger_4_Hawk","BP_Scavenger_4"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask"};

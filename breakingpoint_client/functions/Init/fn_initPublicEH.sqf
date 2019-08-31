@@ -224,6 +224,7 @@ if (!hasInterface) exitWith {};
 		
 		//Activate Hostage Thread...
 		uiNamespace setVariable ["BP_LastHostageTime",diag_tickTime];
+		BP_LastHostageTime = diag_tickTime;
 		while {player getVariable "med_hostage"} do {
 			player playMove "AmovPercMstpSnonWnonDnon_Ease";
 			waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player getVariable "med_hostage")};

@@ -55,6 +55,14 @@ if (_build) then
 			
 			//Delete Old Crate
 			deleteVehicle _object;
+			
+			/*switch (_blueprint) do {
+				case "BP_TripMine_Mag": { _classname = "BP_TripMine" };
+
+				case "BP_ATMine_Mag": { _classname = "BP_ATMine"};
+
+				case "Human_Trap_Mag": { _classname = "BP_BearTrap"};
+			};*/
 
 			[(netID player),BP_characterID,_blueprint,_classname,_pos,_dir] remoteExecCall ["BPServer_fnc_publishTrap",2];
 		};

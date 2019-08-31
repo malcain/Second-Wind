@@ -94,12 +94,14 @@ if (_eventName == "LBSelChanged") then
 	};
 };
 
+_itemType = _data call BIS_fnc_itemType select 0;
 if (_eventName == "LBDblClick") then
 {
 	if (_data == "WaterbotEmpty") exitWith { [_data] spawn BP_fnc_waterFill; };
 	if (_data == "ItemMatchbox" or _data == "ItemWoodPile") exitWith { [_data] spawn BP_fnc_fireMake; };	
 	if (_data in BP_FuelEmpty) exitWith { [_data] spawn BP_fnc_fuelFill; };
-	if (_data in BP_TrapBuildables) exitWith { [_data] spawn BP_fnc_constructTrap; };
+	//if (_data in BP_TrapBuildables) exitWith { [_data] spawn BP_fnc_constructTrap; };
+	if (_itemType == "Mine") exitWith { [_data] spawn BP_fnc_constructTrap; };
 	if (_data in BP_Blueprints) exitWith {[_data] spawn BP_fnc_constructStorage;};
 	if (_data in AllMedical) exitWith {[_data] spawn BP_fnc_useMeds;};
 	if (_data in AllFood) exitWith {[_data] spawn BP_fnc_eat;};

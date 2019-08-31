@@ -1283,7 +1283,7 @@ class CfgObjectLoot {
 			{"MeleeShovel","weaponNA"}, 
 			{"MeleeCrowbar","weaponNA"},
             {"MeleeClub","weaponNA"},
-			{"ItemSandbag","magazine"}			
+			{"ItemSandbag","magazine"}
 		};
 		itemChance[] =	{
 			0.10,	//DUCT TAPE
@@ -1406,6 +1406,7 @@ class CfgObjectLoot {
 			{"MeleeCrowbar","weaponNA"},
 			{"MeleeClub","weaponNA"},
 			{"BlueprintStove","magazine"},
+			{"BlueprintGenerator","magazine"},
 			{"ItemStove","magazine"},
 			{"ItemHammer","magazine"},
 			{"PartWoodPile","magazine"},
@@ -1434,7 +1435,8 @@ class CfgObjectLoot {
 			0.01,    //SHOVEL
 			0.01,    //BAT
 			0.02,    //CROWBAR
-			0.02,   //Stove BLUEPRINT
+			0.01,   //Stove BLUEPRINT
+			0.02,   //Power Generator BLUEPRINT
 			0.02,   //Stove
 			0.02,   //Hammer
 			0.01,   //Woodpile
@@ -1506,7 +1508,7 @@ class CfgObjectLoot {
 			0.03, 	//KIT SAGE
 			0.02, 	//KIT CBR
 			0.01,   //KIT CAMO
-			0.02,	//WaterbotEmpty
+			0.01,	//WaterbotEmpty
 			0.02,	//SODA
 			0.02,	//SODA
 			0.02,	//SODA

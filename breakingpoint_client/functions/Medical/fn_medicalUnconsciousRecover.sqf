@@ -21,3 +21,5 @@ player setVariable ["unconsciousTime", 0, true];
 player switchMove "AmovPpneMstpSnonWnonDnon_healed";
 disableUserInput false;
 player playActionNow "stop";
+
+player setVariable ["hostage_perpetrator", "0", true];

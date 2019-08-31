@@ -73,9 +73,10 @@ if (_hasWater and _hasContainer) then
 			sleep _qty;
 			for "_x" from 1 to _qty do
 			{
-				if ("Waterbot" in magazines player) then
+				if ("Waterbot" in magazines player && ("ItemCanEmpty" in magazines player)) then
 				{
 					player removeMagazine "Waterbot";
+					player removeMagazine "ItemCanEmpty";
 					player addMagazine "WaterbotBoiled";
 					_qtyBoiled = _qtyBoiled + 1;
 				};

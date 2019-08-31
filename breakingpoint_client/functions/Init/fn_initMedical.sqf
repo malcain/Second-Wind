@@ -195,7 +195,7 @@ waitUntil
 	
 	//Handle Unconscious Player
 	if (r_player_unconscious) then
-	{ 
+	{
 		//Initially Going Unconscious
 		if (!r_player_handler1) then {
 			[player] spawn BP_fnc_medicalUnconscious;

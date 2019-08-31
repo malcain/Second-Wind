@@ -14,6 +14,6 @@ waitUntil
 	call BP_fnc_UpdateUI;
 	call BP_fnc_zombieCheck;
 	BP_AllowInventory = true;
-	sleep 0.6;
+	sleep 0.7;
 	r_player_dead
 };

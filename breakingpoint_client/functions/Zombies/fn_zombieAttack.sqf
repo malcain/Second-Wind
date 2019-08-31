@@ -11,10 +11,11 @@ private ["_damage","_wound"];
 
 params ["_unit","_type"];
 
-_vehicle = (vehicle player);
+_vehicle = objectParent player;
 
 if (!alive _unit) exitWith {};
 if (!alive _vehicle) exitWith {};
+if (!alive player) exitWith {};
 
 //if ((uniform player) in BP_ZombieClothing) exitWith {};
 
@@ -32,7 +33,7 @@ sleep 0.451;
 if (!alive _unit) exitWith {};
 if (!alive _vehicle) exitWith {};
 
-if (_vehicle != player) then 
+if (!isNull _vehicle) then 
 {
 	_hpList = _vehicle call BP_fnc_vehicleHitpoints;
 	_hp = selectRandom _hpList;
@@ -80,13 +81,13 @@ if (_vehicle != player) then
 } else {
 	if ((_unit distance player) <= 2.75) then
 	{
-		_tPos = (getPosASL _vehicle);
+		_tPos = (getPosASL player);
 		_zPos = (getPosASL _unit);
 		_inAngle = [_zPos,(getDir _unit),120,_tPos] call BIS_fnc_inAngleSector;
 		if (_inAngle) then 
 		{
 			//LOS check
-			_cantSee = [_unit,_vehicle] call BP_fnc_losCheck;
+			_cantSee = [_unit,player] call BP_fnc_losCheck;
 			if (!_cantSee) then {
 				
 				_cnt = count (BP_woundHit_ok select 1);

@@ -42,9 +42,9 @@ switch (_type) do {
 		};
 	};
 	case "medSurgery": {
-		_rndInfection = (random 10);
-		_TransfusionInfection = (_rndInfection < 0.3);
-		if (_TransfusionInfection) then { r_player_infected = true; };
+		//_rndInfection = (random 10);
+		//_TransfusionInfection = (_rndInfection < 0.3);
+		//if (_TransfusionInfection) then { r_player_infected = true; };
 		//Health
 		r_player_blood = r_player_bloodTotal;
 		r_player_lowblood = false;

@@ -37,7 +37,7 @@ class CfgAmmo
 		effectsSmoke="ChemlightIllum_orange";
 	};
 	
-	class DirectionalBombBase;
+	/*class DirectionalBombBase;
 	class BP_TripMine_Ammo : DirectionalBombBase
 	{
 		hit=30;
@@ -56,14 +56,14 @@ class CfgAmmo
 		cost=200;
 		mineTrigger="WireTrigger";
 		mineInconspicuousness=50;
-	};
+	};*/
 	
 	class MineBase;
 	class BP_ATMine_Ammo : MineBase
 	{
-		hit=1500;
-		indirectHit=1500;
-		indirectHitRange=3;
+		hit=1000;
+		indirectHit=1000;
+		indirectHitRange=4;
 		model="\A3\Weapons_f\Explosives\mine_at";
 		mineModelDisabled="\A3\Weapons_f\Explosives\mine_at_d";
 		defaultMagazine="BP_ATMine_Mag";
@@ -73,6 +73,7 @@ class CfgAmmo
 		whistleDist=8;
 		mineInconspicuousness=40;
 		mineTrigger="TankTriggerMagnetic";
+		
 	};
 	
 	//class BP_BearTrap_Ammo : MineBase

@@ -141,6 +141,7 @@ BP_SyncLastInventory = [];
 BP_SyncLastMed = [];
 
 //How Long Ago Player Has Been a Hostage for enabling the respawn button
+BP_LastHostageTime = 0;
 uiNamespace setVariable ["BP_LastHostageTime",0];
 
 //player special variables

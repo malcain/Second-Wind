@@ -39,6 +39,13 @@ BP_TrapBuildables =
 //	"BP_BearTrap_Mag"
 ];
 
+BP_TrapAmmo =
+[
+	"BP_ATMine_Ammo",
+	"BP_TripMine_Ammo",
+	"Human_Trap_Ammo"
+];
+
 BP_NormalClothing =
 [
 	"BP_Refugee_F",
@@ -370,7 +377,12 @@ BP_Houses =
 	"Land_House_1W09_F",
 	"Land_House_1W10_F",
 	"Land_House_1W11_F",
-	"Land_House_1W12_F"
+	"Land_House_1W12_F",
+	"Land_House_2W01_F",
+	"Land_House_2W03_F",
+	"Land_House_2W04_F",
+	"Land_Camp_House_01_brown_F",
+	"Land_Workshop_03_F"
 ];
 
 Attachments_Both = ["acc_flashlight","acc_pointer_IR","BP_milSpec_suppr"];
