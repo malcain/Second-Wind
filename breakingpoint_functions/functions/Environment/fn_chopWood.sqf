@@ -48,7 +48,7 @@ _object setdamage (_state + 0.15) min 1;
 
 if (worldName == "Enoch") then {
 	//trees
-	_dryWood = [["t_piceaabies_2d","t_piceaabies_3d","t_piceaabies_1sb","t_piceaabies_2f","t_piceaabies_3f","t_fagussylvatica_2d","t_fagussylvatica_3d","t_pinussylvestris_3d"],_woodType] call BP_fnc_inStringArray;
+	_dryWood = [["t_piceaabies_2d","t_piceaabies_3d","t_piceaabies_1sb","t_piceaabies_2f","t_piceaabies_2fb","t_piceaabies_3f","t_fagussylvatica_2d","t_fagussylvatica_3d","t_pinussylvestris_3d"],_woodType] call BP_fnc_inStringArray;
 	_dryOrRotten = [["d_picea","d_fagussylvatica","d_betula_pendula"],_woodType] call BP_fnc_inStringArray;
 } else {
 	//trees

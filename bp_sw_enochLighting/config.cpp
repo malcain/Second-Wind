@@ -2767,8 +2767,8 @@ class CfgWorlds
 		hazeFogCoef=0.98000002;
 		fogHeight=2000;
 		hazeBaseHeight=0;
-		hazeBaseBeta0=0.00012;
-		hazeDensityDecay=0.00060000003;
+		hazeBaseBeta0=0.00004;
+		hazeDensityDecay=0.00025000003;
 		aroundSunCoefMultiplier=1.38;
 		aroundSunCoefExponent=8;
 		soundMapSizeCoef=4;

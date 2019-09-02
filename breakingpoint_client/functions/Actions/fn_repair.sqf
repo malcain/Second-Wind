@@ -81,7 +81,7 @@ if (_damage > 0) then
 	_selection = getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "name");
 	
 	//Zombie SFX and Sound
-	//[player,"repair",0,false,20] call BP_fnc_objSpeak;  
+	[player,"repair",0,false,20] call BP_fnc_objSpeak;  
 	[player,20,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 		
 		

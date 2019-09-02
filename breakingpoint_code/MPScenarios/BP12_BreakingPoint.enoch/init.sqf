@@ -23,6 +23,7 @@ BP_LegionOnly = (paramsArray select 10) == 1;
 BP_FastBoot = (paramsArray select 11) == 1;
 
 [] execVm "real_weather.sqf";
+[] execVM "Enoch.sqf";
 
 		/*[caveleak_s1,true] execvm "AL_Leaks\cave_leak.sqf";
 		[caveleak_s2,true] execvm "AL_Leaks\cave_leak.sqf";
@@ -144,7 +145,7 @@ if (isNil "globViewDist") then
 //setObjectViewDistance 1450;
 
 if (worldname == "Enoch") then {
-dvdArray = [dvd1,dvd2,dvd3,dvd4,dvd5,dvd6,dvd7,dvd8,dvd9,dvd10,dvd11,dvd12,dvd13,dvd14,dvd15,dvd16,dvd17,dvd18,dvd19,dvd20,dvd21,dvd22,dvd23,dvd24,dvd25,dvd26,dvd28,dvd29,dvd30,dvd31,dvd32,dvd33,dvd34,dvd36,dvd37,dvd37,dvd38,dvd39,dvd40,dvd41,dvd42,dvd43,dvd44,dvd45,dvd46];
+dvdArray = [dvd1,dvd2,dvd3,dvd4,dvd5,dvd6,dvd7,dvd8,dvd9,dvd10,dvd11,dvd12,dvd13,dvd14,dvd15,dvd16,dvd17,dvd20,dvd22,dvd23,dvd24,dvd25,dvd28,dvd29,dvd30,dvd32,dvd33,dvd34,dvd36,dvd37,dvd37,dvd38,dvd39,dvd40,dvd41,dvd42,dvd43,dvd44];
 dvdArray call BP_fnc_dvdCheck;
 };
 

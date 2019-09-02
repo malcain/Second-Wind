@@ -28,7 +28,7 @@ waitUntil{!isNull (findDisplay 46)};
 			_dik = _x select 0;
 			_entry = _x select 1;
 			if(_key == _dik) then {
-				_continue = false;
+				_continue = true;
 				if(_entry == 0) then {_continue = true;};
 				if(_entry == 1 && _shift) then {_continue = true;};
 				if(_entry == 2 && _ctrl) then {_continue = true;};
