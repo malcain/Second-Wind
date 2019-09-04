@@ -219,7 +219,7 @@ class CfgMarkers
 		name="Uncontrolled";
 		icon="\breakingpoint_ui\icons\NoneIcon.paa";
 		color[]={1,1,1,1};
-		size=24;
+		size=16;
 		shadow=1;
 		scope=0;
 	};

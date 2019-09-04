@@ -2403,7 +2403,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_ATMine_Mag","magazine"},
-			//{"BP_TripMine_Mag","magazine"},
+			{"BP_TripMine_Mag","magazine"},
 			{"BP_SA61","weapon"},
 			{"BP_G36C","weapon"},
 			{"BP_SA58","weapon"},
@@ -2425,7 +2425,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.01,	//ATMine
-			//0.01,	//TripMine
+			0.01,	//TripMine
 			0.07,	//SA61
 			0.08,	//SA58
 			0.11,	//SA58
@@ -2641,7 +2641,6 @@ class CfgObjectLoot {
 			{"srifle_DMR_06_hunter_F","weapon"},
 			{"BP_Kar98","weaponA"},
 			{"BP_LeeEnfieldK","weaponA"},
-			{"BP_TripMine_Mag","magazine"},
 			{"Human_Trap_Mag","magazine"},
 			{"BP_CampPack","backpack"},
 			{"BP_HCampPack","backpack"},
@@ -2690,8 +2689,7 @@ class CfgObjectLoot {
 			0.01,	//Hunting mk14
 			0.03,	//Kar98 Scoped
 			0.03,   //ENFIELD SCOPED
-			0.02,	//Tripmine
-			0.03,	//BearTrap
+			0.02,	//BearTrap
 			0.02,	//Camping Pack
 			0.01,	//Heavy Camping Pack
 			0.01,	//CAMO vest
@@ -2937,6 +2935,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_8Rnd_45gov","magazine"},
+			{"Human_Trap_Mag","magazine"},
 			{"Rangefinder","weaponNA"},
 			{"ItemKnife","magazine"},
 			{"ItemMatchbox","magazine"},
@@ -2959,6 +2958,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.04,   //440 CORBON
+			0.01,   //Bear Trap
 			0.01,   //RANGEFINDER
 			0.16,   //KNIFE
 			0.14,   //MATCHBOX

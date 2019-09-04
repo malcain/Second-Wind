@@ -59,7 +59,10 @@ class CfgWorlds
 		class RainParticles
 		{
 			//minRainDensity=0.0099999998;
-			effectRadius=28;
+			maxRainDensity=1;
+			RainDensity=1;
+			maxPrecipitationParticles = 1000000;
+			effectRadius=26;
 			//dropSpeed=55;
 			//rndSpeed=0.2;
 			rndDir=0.08;
@@ -186,10 +189,24 @@ class CfgWorlds
 		};
 		startFogBase=250;
 		forecastFogBase=250;
-		startFogDecay=0.017999999;
-		forecastFogDecay=0.017999999;
+		startFogDecay=0.018;
+		forecastFogDecay=0.018;
 		fogBeta0Min=0;
 		fogBeta0Max=0.0049999999;
+		clutterDist=130;
+		/*
+		clutterGrid=0.80000001;
+		terrainBlendMaxDarkenCoef=1;
+		terrainBlendMaxBrightenCoef=0;
+		noDetailDist=65;
+		fullDetailDist=10;
+		clutterRoadwayCheckRadiusCoef=0.80000001;
+		interpolateClutterColoring=1;
+		clutterColoringFarCoef=5;
+		clutterColoringFarStart=20;
+		clutterColoringFarSpeed=2;
+		midDetailTexture="A3\Map_Tanoabuka\Data\L_middle_mco.paa";
+		*/
 		class HDRNewPars
 		{
 			minAperture=9.9999997e-006;
@@ -484,7 +501,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.090000004,0.13699999,0.22},
-						0.025
+						0.002
 					};
 					apertureMin=5;
 					apertureStandard=7;
@@ -1180,7 +1197,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.090000004,0.13699999,0.22},
-						0.025
+						0.002
 					};
 					apertureMin=5;
 					apertureStandard=7;
@@ -2661,6 +2678,7 @@ class CfgWorlds
 			fogStart=0;
 			fogEnd=50000;
 			fogHeight=2000;
+			maxPrecipitationParticles = 1000000;
 			class DefaultKeyframe
 			{
 				rayleigh[]={0.0074900002,0.01388,0.02878};

@@ -223,9 +223,15 @@ class CfgSounds
 	};
 
 	
-	class z_deathscreen {
+	/*class z_deathscreen {
 		name = "";
 		sound[] = {"breakingpoint_sfx\tracks\BP_DeathScreen.wss", 1, 1};
+		titles[] = {};
+	};*/
+	
+	class z_deathscreen {
+		name = "";
+		sound[] = {"breakingpoint_sfx\tracks\track_intro_1.ogg", 1, 1};
 		titles[] = {};
 	};
 	

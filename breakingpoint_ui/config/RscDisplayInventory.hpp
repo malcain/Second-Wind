@@ -534,15 +534,7 @@ class RscDisplayInventory
 		*/
 		
 		delete BackgroundSlotHandgunMagazine;
-		/*
-		class BackgroundSlotHandgunMagazine : BackgroundSlotPrimary {
-			idc = 1256;
-			x = "35.6 * 					(			((safezoneW / safezoneH) min 1.2) / 40) + 		(safezoneX + (safezoneW - 					((safezoneW / safezoneH) min 1.2))/2)";
-			y = "20.1 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + 		(safezoneY + (safezoneH - 					(			((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-			w = "2.9 * 					(			((safezoneW / safezoneH) min 1.2) / 40)";
-			h = "2 * 					(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-		};
-		*/
+		delete BackgroundSlotHandgunUnderBarrel;
 		
 		delete BackgroundSlotHeadgear;
 		/*

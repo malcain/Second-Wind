@@ -509,21 +509,22 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class AadjPpneMstpSrasWpstDup;  //extern
 		
 		//Swim
-		/*class AswmPercMstpSnonWnonDnon;
+		class AswmPercMstpSnonWnonDnon;
 		class AsswPercMstpSnonWnonDnon;
 		class AbswPercMstpSnonWnonDnon;
 		class AswmPercMrunSnonWnonDf: AswmPercMstpSnonWnonDnon
 		{
-			speed=0.5;
+			speed=0.4;
 		};
 		class AsswPercMrunSnonWnonDf: AsswPercMstpSnonWnonDnon
 		{
-			speed=0.5;
+			speed=0.4;
 		};
 		class AbswPercMrunSnonWnonDf: AbswPercMstpSnonWnonDnon
 		{
-			speed=0.4;
-		};*/
+			speed=0.25;
+		};
+		
 		//Ladder
 		class LadderCivilStatic;
 		class LadderCivilUpLoop: LadderCivilStatic
@@ -546,6 +547,21 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		{
 			speed=1.595;
 		};
+		
+		class AmovPercMevaSnonWnonDf: SprintCivilBaseDf
+		{
+			//aimPrecision=7;
+			speed=1.81;
+			//canPullTrigger=0;
+			//collisionShape="A3\anims_f\Data\Geom\Sdr\Perc_Wnon.p3d";
+		};
+		class AmovPercMevaSnonWnonDfl: AmovPercMevaSnonWnonDf {
+			speed=1.81;
+		};
+		class AmovPercMevaSnonWnonDfr: AmovPercMevaSnonWnonDf {
+			speed=1.81;
+		};
+		
 
 		class AmovPercMstpSlowWrflDnon; //stay weap low
 		class AmovPercMstpSrasWrflDnon; //stay weap up
@@ -576,7 +592,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class DeadState;
 
 		class BP_OvenCooking : AmovPercMstpSnonWnonDnon {
-			file = "\bp_sw\bp_sw_anims\Interacts\BPOvenCooking.rtm";
+			file = "\bp_sw_anims\Interacts\BPOvenCooking.rtm";
 			looped = 0;
 			speed = 0.0517241379310345;
 			mask = "BodyFullReal";
@@ -613,7 +629,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 
 		class BP_CutBody : AmovPercMstpSnonWnonDnon {
-			file = "\bp_sw\bp_sw_anims\Interacts\BPCutBody.rtm";
+			file = "\bp_sw_anims\Interacts\BPCutBody.rtm";
 			looped = 0;
 			speed = 0.085;
 			mask = "BodyFullReal";
@@ -32590,7 +32606,7 @@ class CfgWeapons
 			autoreload = 0;
 			enableAttack = 1;
 			magazines[] = {"Human_Trap_Mag"};
-			displayName = "Human Trap";
+			displayName = "Bear Trap";
 			picture = "\A3\Weapons_F\Data\clear_empty.paa";
 			showToPlayer = 0;
 		};
@@ -50728,7 +50744,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		displayName = "Aimpoint CompM4 red dot";
 		picture = "\A3\weapons_F\Data\UI\gear_acco_Arco_CA.paa";
 		model = "\breakingpoint_weapons\models\AIM\BP_AIM.p3d";
-		descriptionShort = "Fixed? ;) if not, tell to Kol9yN";
+		descriptionShort = "Red Collimator Optics";
 		weaponInfoType = "RscWeaponZeroing";
 		inertia = 0.010000;
 		class ItemInfo: InventoryOpticsItem_Base_F
@@ -54820,9 +54836,9 @@ class CfgMagazines {
 		mass = 40;
 		ammo = "Human_Trap_Ammo";
 		picture = "\breakingpoint\textures\icons\bp_beartrap_ca.paa";
-		displayName = "Human Trap";
+		displayName = "Bear Trap";
 		model = "\breakingpoint\models\bp_beartrap.p3d";
-		descriptionShort = "Old and rusty, but does it's job";
+		descriptionShort = "Old hunting trap";
 		class Library
 		{
 			libTextDesc = "Traps";

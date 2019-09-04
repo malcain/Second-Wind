@@ -90,7 +90,7 @@ if (!isNull _television) then
 if (commandingMenu != "") then {showCommandingMenu ""};
 
 //Disable F1-F10 Exploits
-if ((_dikCode > 58) and (_dikCode < 69)) then {_handled = true};
+//if ((_dikCode > 58) and (_dikCode < 69)) then {_handled = true};
 
 //Disable Key and Menu Exploits
 if (_dikCode in actionKeys "TacticalView") then {_handled = true};

@@ -398,7 +398,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	{
 		_playerClass = player getVariable ["class",0];
 		_cursorTargetClass =_cursorTarget getVariable ["class",0];
-		if (_playerClass in [0,3] && _cursorTargetClass in [0,3]) then
+		if (_playerClass in [3] && _cursorTargetClass in [3]) then
 		{
 			_sameFaction = true;
 		}

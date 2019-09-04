@@ -256,7 +256,7 @@
 					bandage = 5;
 					dressing = 10;
 					morphine = 15;
-					surgery = 25;
+					surgery = 15;
 					gut = -4000;
 				};
 				class Nomad {
@@ -265,7 +265,7 @@
 					bandage = 5;
 					dressing = 10;
 					morphine = 15;
-					surgery = 25;
+					surgery = 15;
 					gut = -4000;
 				};
 				class Survivalist {
@@ -274,7 +274,7 @@
 					bandage = 10;
 					dressing = 15;
 					morphine = 20;
-					surgery = 30;
+					surgery = 20;
 					gut = -4000;
 				};
 				class Outlaw {

@@ -70,6 +70,7 @@ if (_ammo isKindOf "BP_NonLethal" || {_ammo isKindOf "BP_Arrow_Tranq"}) exitWith
 	};
 	
 	player setVariable ["hostage_perpetrator", (netID _source), true];
+	player setVariable["med_unconscious", true ,true];
 	//[(netID _source),(netID player)] remoteExecCall ["BPServer_fnc_hostageAdd",2];
 };
 
@@ -79,6 +80,7 @@ if (_ammo isKindOf "BP_InfectedNeedle") exitWith {
 	if (!r_player_infected) then { r_player_infected = true; };
 	
 	player setVariable ["hostage_perpetrator", (netID _source), true];
+	player setVariable["med_unconscious", true ,true];
 };
 
 //Fire Arrows

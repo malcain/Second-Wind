@@ -19,9 +19,6 @@ if (isNull _cursorTarget) exitWith {};
 //Can only add players to your group.
 if (!isPlayer _cursorTarget) exitWith {};
 
-//Can only add players who are not inside a vehicle.
-if (!isNull objectParent _cursorTarget) exitWith {};
-
 //if (BP_combat == 1) exitWith {
 //	cutText ["You can't invite someone to a group in combat.", "PLAIN DOWN"];
 //};

@@ -32,7 +32,11 @@ if (_hasWater and _hasContainer) then
 		call BP_fnc_medicalRemoveMedicActions;
 		r_action = false;
 
-		player playActionNow "Medic";
+		if (_fire isKindOf "BP_Stove") then {
+			player playMoveNow "bp_ovencooking";
+		} else {
+			player playActionNow "Medic";
+		};
 
 		r_interrupt = false;
 		private _animState = animationState player;
@@ -42,7 +46,8 @@ if (_hasWater and _hasContainer) then
 
 		while {r_doLoop} do {
 			_animState = animationState player;
-			_isMedic = ["medic",_animState] call BP_fnc_inString;
+			//_isMedic = ["medic",_animState] call BP_fnc_inString;
+			_isMedic = [["medic","bp_ovencooking"],_animState] call BP_fnc_inStringArray;
 			if (_isMedic) then {
 				_started = true;
 			};

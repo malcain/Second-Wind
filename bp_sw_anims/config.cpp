@@ -35,7 +35,9 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			canBlendStep=0;
 			canPullTrigger=1;
 			canReload=1;
-			collisionShape="A3\anims_f\Data\Geom\Sdr\Perc_Wrfl.p3d";
+			//collisionShape="A3\anims_f\Data\Geom\Sdr\Perc_Wrfl.p3d";
+			//collisionShape = "A3\anims_f\Data\Geom\Sdr\geom_empty.p3d";
+			collisionShape="A3\anims_f\Data\Geom\Sdr\Perc_Wovr.p3d";
 			collisionShapeSafe="";
 			connectAs="";
 			connectFrom[]={};

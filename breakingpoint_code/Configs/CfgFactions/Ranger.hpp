@@ -239,7 +239,7 @@ class Ranger : BP_BaseFaction
 				bandage = 5;
 				dressing = 10;
 				morphine = 15;
-				surgery = 30;
+				surgery = 15;
 				gut = -4000;
 			};
 			class Nomad {
@@ -248,7 +248,7 @@ class Ranger : BP_BaseFaction
 				bandage = 5;
 				dressing = 10;
 				morphine = 15;
-				surgery = 30;
+				surgery = 15;
 				gut = -4000;
 			};
 			class Survivalist {
@@ -257,7 +257,7 @@ class Ranger : BP_BaseFaction
 				bandage = 5;
 				dressing = 10;
 				morphine = 15;
-				surgery = 30;
+				surgery = 15;
 				gut = -4000;
 			};
 			class Outlaw {

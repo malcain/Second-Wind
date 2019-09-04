@@ -29,7 +29,11 @@ _cookedmeat = meatcooked;
 		r_action = false;
 
 		//player playActionNow "Medic";
-		player playmovenow "AinvPknlMstpSnonWnonDr_medic2";
+		if (_fire isKindOf "BP_Stove") then {
+			player playMoveNow "bp_ovencooking";
+		} else {
+			player playmovenow "AinvPknlMstpSnonWnonDr_medic2";
+		};
 
 		r_interrupt = false;
 		_animState = animationState player;
@@ -39,7 +43,8 @@ _cookedmeat = meatcooked;
 		//[player,"bandage",0,false] call BP_fnc_objSpeak;
 		while {r_doLoop} do {
 			_animState = animationState player;
-			_isMedic = ["medic",_animState] call BP_fnc_inString;
+			//_isMedic = ["medic",_animState] call BP_fnc_inString;
+			_isMedic = [["medic","bp_ovencooking"],_animState] call BP_fnc_inStringArray;
 			if (_isMedic) then {
 				_started = true;
 			};

@@ -38,11 +38,11 @@ r_action_gut = true;
 
 if (_hasKnife) then 
 {
-	_dis=10;
+	_dis=30;
 	[player,"gut",0,false,_dis] call BP_fnc_objSpeak;  
 	[player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
 	
-	_finished = ["ainvpknlmstpsnonwnondr_medic3"] call BP_fnc_constructAnim;
+	_finished = ["bp_cutbody"] call BP_fnc_constructAnim;
 	if (_finished) then
 	{
 		//Remove Fire From Body
