@@ -14,7 +14,6 @@ params ["_unit","_type"];
 _vehicle = objectParent player;
 
 if (!alive _unit) exitWith {};
-if (!alive _vehicle) exitWith {};
 if (!alive player) exitWith {};
 
 //if ((uniform player) in BP_ZombieClothing) exitWith {};
@@ -31,7 +30,7 @@ _unit playActionNow "BP_Zomb_Act_Attack2";
 sleep 0.451;
 
 if (!alive _unit) exitWith {};
-if (!alive _vehicle) exitWith {};
+if (!alive player) exitWith {};
 
 if (!isNull _vehicle) then 
 {

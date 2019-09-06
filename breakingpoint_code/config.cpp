@@ -291,7 +291,7 @@ class CfgCloudlets {
 		randomDirectionIntensity = 1;
 		timerPeriod = 0.05;
 		onTimerScript = "";
-		beforeDestroyScript = "\breakingpoint_client\functions\Actions\fn_flash.sqf";
+		beforeDestroyScript = "\breakingpoint_code\events\flash.sqf";
 		lifeTimeVar = 0;
 		positionVar[] = {0,0,0};
 		MoveVelocityVar[] = {0,0,0};
@@ -336,7 +336,7 @@ class CfgCloudlets {
 	};
 	
 	//Alarm clock
-	class alarmClock: Default
+	class alarm_clock: Default
 	{
 		interval = 0.265;
 		circleRadius = 0;
@@ -353,7 +353,7 @@ class CfgCloudlets {
 		randomDirectionIntensity = 1;
 		timerPeriod = 0.05;
 		onTimerScript = "";
-		beforeDestroyScript = "\breakingpoint_client\functions\Events\fn_alarmClock.sqf";
+		beforeDestroyScript = "\breakingpoint_code\events\alarmclock.sqf";
 		lifeTimeVar = 0;
 		positionVar[] = {0,0,0};
 		MoveVelocityVar[] = {0,0,0};
@@ -497,22 +497,29 @@ class CfgLights
 		intensity = 1090;
 		diffuse[] = {0,0,0};
 		position[] = {0,0,0};
+		dayLight = 1;			// boolean (0/1). Is light shown during daylight.
+		useFlare = 1;			// boolean (0/1). Is light having a flare effect
+		flareSize = 1;
+		flareMaxDistance = 1400;
 		class Attenuation
 		{
-			start = 0.05;
+			start = 1;
+			constant = 0;
+			linear = 50;
+			quadratic = 2000;
+			hardLimitStart = 10;
+			hardLimitEnd = 50;
+			/*start = 0.05;
 			constant = 0;
 			linear = 0;
 			quadratic = 40;
 			hardLimitStart = 2;
-			hardLimitEnd = 4;
+			hardLimitEnd = 4;*/
 		};
 	};
 };
 
-class NoExplosion
-{
-
-};
+//class NoExplosion {};
 
 class simplefbExplosion
 {
@@ -540,6 +547,19 @@ class simplefbExplosion
 		simulation = "light";
 		type = "simplefb_light";
 		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+	};
+};
+
+class alarmClock
+{
+	class Alarm1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "alarm_clock";
+		intensity = 0.5;
 		interval = 1;
 		lifeTime = 1;
 	};

@@ -601,7 +601,7 @@ class CfgObjectLoot {
 			{"ItemAdrenaline","magazine"},
 			{"ItemFieldDressing","magazine"},
 			{"ItemAntibiotic","magazine"},
-			{"ItemSurgeryKit","toolbelt"},   
+			{"ItemSurgeryKit","toolbelt"},
 			{"ItemMap","toolbelt"},
 			{"BP_SPack","backpack"},
 			{"ItemSoda1","magazine"},
@@ -628,7 +628,6 @@ class CfgObjectLoot {
 			{"BP_Survivalist_4_Snow","uniform"},
 			{"BP_Survivalist_4_Corn","uniform"},
 			{"BP_Survivalist_4_Night","uniform"},
-			{"V_RebreatherB","vest"},
 			{"BP_200Rnd_556x45_MINIMI","magazine"},
 			{"BP_100Rnd_762x51_MINIMI","magazine"},
 			{"BP_100Rnd_65x39","magazine"},
@@ -661,7 +660,7 @@ class CfgObjectLoot {
 			{"BP_VX3","toolbelt"},
 			{"BP_300Sup","toolbelt"},
 			{"BP_762Muzzle","toolbelt"},
-			{"BP_muzzle_snds_58_wdm_F","toolbelt"},
+			//{"BP_muzzle_snds_58_wdm_F","toolbelt"},
 			{"BP_muzzle_snds_65_TI_blk_F","toolbelt"},
 			{"BP_muzzle_snds_H_MG","toolbelt"},
 			{"BP_muzzle_snds_H","toolbelt"},
@@ -672,8 +671,9 @@ class CfgObjectLoot {
 			{"V_PlateCarrierIA1_dgtl_BP","vest"},
 			{"V_TacVest_oli_BP","vest"},
 			{"HandGrenade","magazine"},
-			{"BP_10Rnd_338Lapua_Mag","magazine"},
-			{"BP_10Rnd_50BW_Mag_F","magazine"}
+			{"BP_UGL_FlareGreen","magazine"},
+			{"BP_M84_Flash","magazine"},
+			{"BP_10Rnd_338Lapua_Mag","magazine"}
 		};
 		itemChance[] =	
 		{	
@@ -707,13 +707,12 @@ class CfgObjectLoot {
 			0.02,	//FOOD
 			0.04,	//MILITARY SURVIVAL PACK
 			0.04,	//MILITARY British PACK
-			0.02,	//STONE GHILLIE
-			0.02,	//TREE GHILLIE
-			0.02,	//DIRT GHILLIE
-			0.02,	//Snow GHILLIE
-			0.02,	//Corn GHILLIE
-			0.02,	//Night GHILLIE
-			0.03,   //REBREATHER
+			0.01,	//STONE GHILLIE
+			0.01,	//TREE GHILLIE
+			0.01,	//DIRT GHILLIE
+			0.01,	//Snow GHILLIE
+			0.01,	//Corn GHILLIE
+			0.01,	//Night GHILLIE
 			0.05,   //200Rnd_556
 			0.05,   //100Rnd_762
 			0.05,   //100Rnd_65
@@ -745,8 +744,8 @@ class CfgObjectLoot {
 			0.03,   //optic_MRCO
 			0.03,   //BP_VX3
 			0.01,   //300 Silencer
-			0.03,   //762 Muzzle
-			0.01,   //5.8 mm Sound Suppressor (Green Hex)
+			0.02,   //762 Muzzle
+			//0.01,   //5.8 mm Sound Suppressor (Green Hex)
 			0.01,   //6.5 mm Stealth Sound Suppressor (Black)
 			0.02,   //BP_muzzle_snds_H_MG
 			0.01,   //BP_muzzle_snds_H
@@ -754,11 +753,12 @@ class CfgObjectLoot {
 			0.03,   //BP_NXS
 			0.03,   //BP_L14X
 			0.01,   //RANGEFINDER
-			0.02,	//PLATE CARRIER
-			0.04,	//TAC VEST
+			0.01,	//PLATE CARRIER
+			0.03,	//TAC VEST
 			0.04,	//HAND GRENADE
-			0.01,	//338Lapua_Mag
-			0.01	//50BW_Mag
+			0.06,	//Flare green
+			0.04,	//Flashbang
+			0.01	//338Lapua_Mag
 		};
 	};
 
@@ -2244,6 +2244,8 @@ class CfgObjectLoot {
 		itemType[] =	{
 			{"BP_ATMine_Mag","magazine"},
 			{"BP_TripMine_Mag","magazine"},
+			{"BP_M84_Flash","magazine"},
+			{"HandGrenade","magazine"},
 			{"BP_M4_300MK","weapon"},
 			{"BP_MX_SW","weapon"},
 			{"BP_Minimi_HG","weapon"},
@@ -2267,6 +2269,8 @@ class CfgObjectLoot {
 		itemChance[] =	{
 			0.01,	//ATMine
 			0.01,	//TripMine
+			0.04,	//Flashbang
+			0.02,	//Grenade
 			0.03,	//M4_300MK
 			0.02,	//MXSW
 			0.02,	//M249

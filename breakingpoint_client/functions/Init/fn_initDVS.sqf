@@ -15,7 +15,7 @@
 [] spawn {
 // Variables
 _dvs_vpref = getShadowDistance; // detect player's preferred shadow distance
-if (_dvs_vpref == 100) then {_dvs_vpref = 60}; //workaround, as "getShadowDistance" command doesn't return values lower than 100... set it to minimum if it returned 100.
+if (_dvs_vpref == 100) then {_dvs_vpref = 40}; //workaround, as "getShadowDistance" command doesn't return values lower than 100... set it to minimum if it returned 100.
 //_dvs_min = 350; // Minimum zoomed shadow distance
 //_dvs_max = 1350; // Maximum zoomed shadow distance
 //_zoomed = "n"; // start off not zoomed in
@@ -41,15 +41,6 @@ while {true} do {
 // Set shadowdistance if it has changed since last check
 	if (_svdist != _oldvdist) then {
 		setShadowDistance _svdist;
-	} else {
-		if (getShadowDistance != _svdist) then {
-			if (_zoom >= 2) then {
-				setShadowDistance _svdist; //prevent abuse of changing settings when zoomed
-			} else {
-				_dvs_vpref = getShadowDistance; //player changed his preferred shadow settings
-				_svdist = _dvs_vpref; //player changed his preferred shadow settings
-			};
-		};
 	};
 
 	_oldvdist = _svdist;

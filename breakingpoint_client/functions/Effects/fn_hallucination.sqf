@@ -14,8 +14,8 @@ switch (_effect_tip) do
 				"dynamicBlur" ppEffectAdjust [40];   
 				"dynamicBlur" ppEffectCommit 0;     
 				"dynamicBlur" ppEffectAdjust [0.0];
-				"dynamicBlur" ppEffectCommit 3;  
-				uisleep 3;
+				"dynamicBlur" ppEffectCommit 5;  
+				uisleep 5;
 				"dynamicBlur" ppEffectEnable false; 
 				};
 	case "colorinv": 
@@ -33,7 +33,7 @@ switch (_effect_tip) do
 					_handle ppEffectAdjust _effect;
 					_handle ppEffectCommit 5;
 					waitUntil {ppEffectCommitted _handle};
-					uiSleep 3; 
+					uiSleep 5; 
 					_handle ppEffectEnable false;
 					ppEffectDestroy _handle;
 				};
@@ -52,7 +52,7 @@ switch (_effect_tip) do
 					_handle ppEffectAdjust _effect;
 					_handle ppEffectCommit 5;
 					waitUntil {ppEffectCommitted _handle};
-					uiSleep 3; 
+					uiSleep 5; 
 					_handle ppEffectEnable false;
 					ppEffectDestroy _handle;
 				};
@@ -72,7 +72,7 @@ switch (_effect_tip) do
 					_handle ppEffectAdjust _effect;
 					_handle ppEffectCommit 5;
 					waitUntil {ppEffectCommitted _handle};
-					uiSleep 3; 
+					uiSleep 5; 
 					_handle ppEffectEnable false;
 					ppEffectDestroy _handle;
 				};

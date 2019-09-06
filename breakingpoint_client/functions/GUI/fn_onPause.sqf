@@ -42,31 +42,37 @@ while {!isNull _display} do {
 	switch true do {
 		case ({isPlayer _x} count (player nearEntities ["AllVehicles", 6]) > 1) : {
 			_btnAbort ctrlEnable false;
-			cutText ["Cannot Abort near another player!", "PLAIN DOWN"];
+			titleText  ["Cannot Abort near another player!", "PLAIN DOWN",0.4];
 		};
 		case (_timeOut < _timeMax && count (player nearEntities ["zZombie_Base", 35]) > 0) : {
 			_btnAbort ctrlEnable false;
-			cutText [format ["Can Abort in %1", (_timeMax - _timeOut)], "PLAIN DOWN"];
+			titleText  [format ["Can Abort in %1", (_timeMax - _timeOut)], "PLAIN DOWN",0.4];
 		};
 		case (player getVariable["combattimeout", 0] >= time) : {
 			_btnAbort ctrlEnable false;
-			cutText ["Cannot Abort while in combat!", "PLAIN DOWN"];					
+			titleText  ["Cannot Abort while in combat!", "PLAIN DOWN",0.4];					
 		};
 		case ([player,objNull] call BP_fnc_isInsideBuilding) : {
 			_btnAbort ctrlEnable false;
-			cutText ["Cannot Abort while inside a building.", "PLAIN DOWN"];
+			titleText  ["Cannot Abort while inside a building.", "PLAIN DOWN",0.4];
 		};
 		case (!isNull objectParent player) : {
 			_btnAbort ctrlEnable false;
-			cutText ["Cannot Abort while inside a vehicle.", "PLAIN DOWN"];
+			titleText  ["Cannot Abort while inside a vehicle.", "PLAIN DOWN",0.4];
 		};
 		default {
 			_btnAbort ctrlEnable true;
-			cutText ["", "PLAIN DOWN"];				
+			titleText  ["", "PLAIN DOWN"];	
 		};
 	};
+	cutRsc ["TitleScreen", "PLAIN"];
 	sleep 1;
 	_timeOut = _timeOut + 1;
 };
 
 cutText ["", "PLAIN DOWN"];
+//titleText ["", "PLAIN"];
+
+if (r_player_unconscious) then {
+	titleRsc ["BP_Unconscious","PLAIN",0];
+};

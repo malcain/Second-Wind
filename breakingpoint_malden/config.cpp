@@ -35,6 +35,90 @@ class CfgWorlds
 class CfgVehicles
 {
 	class House_F;
+	
+	//Fuel Pumps
+	class Land_FuelStation_01_pump_F: House_F
+	{
+		transportFuel=0;
+	
+	/*
+	class DestructionEffects
+		{
+			class FuelStationSmk1
+			{
+				simulation="particles";
+				type="FuelStationSmk1";
+				position="";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=0.001;
+			};
+			class Light1
+			{
+				simulation="light";
+				type="ObjectDestructionLight";
+				position="DestructionFire";
+				intensity=0.001;
+				interval=1;
+				lifeTime=0.5;
+			};
+			class FuelFire1
+			{
+				simulation="particles";
+				type="FuelFire1";
+				position="DestructionFire";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=0.5;
+			};
+			class FuelDestr
+			{
+				simulation="destroy";
+				type="FuelStationDestr";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=1;
+			};
+			class FuelSmoke1
+			{
+				simulation="particles";
+				type="FuelFire1";
+				position="ObjectDestructionSmokeFuelS";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=0.5;
+			};
+			class FuelSmoke2
+			{
+				simulation="particles";
+				type="ObjectDestructionSmokeFuelS1_2";
+				position="DestructionFire";
+				intensity=0.15000001;
+				interval=1;
+				lifeTime=0.5;
+			};
+		};
+		*/
+	};
+
+	class Land_FuelStation_01_pump_malevil_F: House_F
+	{
+		transportFuel=0;
+	};
+
+	class Land_FuelStation_02_pump_F: House_F
+	{
+		transportFuel=0;
+	};
+
+	class Land_FuelStation_03_pump_F: House_F
+	{
+		transportFuel=0;
+	};
+	
+	//Havens
+	
 	//Enoch
 	class Land_House_1W01_F : House_F
 	{

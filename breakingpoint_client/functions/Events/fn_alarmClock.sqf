@@ -9,5 +9,6 @@
 private ["_pos"];
 
 _pos = _this;
+diag_log format ["alarmclock position %1", _pos];
 
 [player,150,true,_pos] call BP_fnc_zombieAlert;

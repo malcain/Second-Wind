@@ -536,16 +536,16 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class SprintCivilBaseDf;
 		class AmovPknlMevaSnonWnonDf: SprintCivilBaseDf
 		{
-			speed=1.587;
+			speed=1.6;
 		};
 		
 		class AmovPknlMevaSnonWnonDfl: AmovPknlMevaSnonWnonDf
 		{
-			speed=1.595;
+			speed=1.68;
 		};
 		class AmovPknlMevaSnonWnonDfr: AmovPknlMevaSnonWnonDf
 		{
-			speed=1.595;
+			speed=1.68;
 		};
 		
 		class AmovPercMevaSnonWnonDf: SprintCivilBaseDf
@@ -32419,7 +32419,7 @@ class CfgWeapons
 
 	class Throw: GrenadeLauncher
 	{
-		muzzles[] = {"BP_FlashMuzzle","BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle","ChemOMuzzle"};
+		muzzles[] = {"BP_M84Muzzle", "BP_AlarmClockMuzzle", "HandGrenade_Stone", "HandGrenadeMuzzle", "MiniGrenadeMuzzle", "SmokeShellMuzzle", "SmokeShellYellowMuzzle", "SmokeShellGreenMuzzle", "SmokeShellRedMuzzle", "SmokeShellPurpleMuzzle", "SmokeShellOrangeMuzzle", "SmokeShellBlueMuzzle", "ChemlightGreenMuzzle", "ChemlightRedMuzzle", "ChemlightYellowMuzzle", "ChemlightBlueMuzzle", "KnifeMuzzle", "BookMuzzle", "MugMuzzle", "BrickMuzzle", "PotteryMuzzle", "VideotapeMuzzle", "ZipDiskMuzzle", "RockMuzzle", "PlateMuzzle", "TennisBallMuzzle", "CanMuzzle", "HammerMuzzle", "InfectedMuzzle", "ChemRMuzzle", "ChemGMuzzle", "ChemBMuzzle", "ChemYMuzzle","ChemOMuzzle"};
 
 		class ThrowMuzzle: GrenadeLauncher
 		{
@@ -32438,11 +32438,11 @@ class CfgWeapons
 			sound[] = {"", 0.000316, 1};
 		};
 
-		class BP_FlashMuzzle: ThrowMuzzle
+		/*class BP_FlashMuzzle: ThrowMuzzle
 		{
 			displayName = "Flashbang";
 			magazines[] = {"simplefb"};
-		};
+		};*/
 
 		class BP_M84Muzzle: ThrowMuzzle
 		{
@@ -53267,7 +53267,7 @@ class CfgMagazines {
 		model = "\breakingpoint_weapons\models\m84\m84.p3d";
 		displayName = "M84 Flashbang";
 		picture = "\breakingpoint_weapons\icons\m_m84_r_ca.paa";
-		displayNameShort = "Flashbang";
+		displayNameShort = "Flashbang Grenade";
 		ammo = "BP_Flashbang_Ammo";
 		mass = 5;
 	};
@@ -55185,7 +55185,7 @@ class CfgAmmo {
 		scope = 1;
 		hit = 0.001;
 		indirectHit = 0.001;
-		indirectHitRange = 0.01;
+		indirectHitRange = 8;
 		model = "\breakingpoint_weapons\models\m84\m84.p3d";
 		visibleFire = 0.5;
 		audibleFire = 0.05;
@@ -56306,7 +56306,6 @@ class CfgAmmo {
 		explosionSoundEffect = "";
 		CraterEffects = "NoCrater";
 		CraterWaterEffects = "ImpactGlassThin";
-		//explosionEffects = "NoExplosion";
 		ExplosionEffects = "alarmClock";
 		visibleFire = 0;
 		audibleFire = 0;
@@ -56328,12 +56327,12 @@ class CfgAmmo {
 
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
-			MedicalState = 5;
+			MedicalState = 1;
 			MedicalChance = 50;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
-			BleedingLevel = 1;
+			BleedingLevel = 0;
 			BleedingChance = 50;
 
 			// Infection (Bullet Wound Chance Of Infection)

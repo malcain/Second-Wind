@@ -58,11 +58,11 @@ switch (_type) do {
 		//Pain&fractures
 		player setVariable ["hit_legs",0];
 		player setVariable ["hit_hands",0];
-		r_hit_legs = 0;
-		r_hit_hands = 0;
 		r_fracture_legs = false;
 		r_fracture_arms = false;
 		r_player_inpain = false;
+		r_hit_legs = 0;
+		r_hit_hands = 0;
 
 		/*if ("ItemFieldDressing" in magazines _medic) then
 		{
@@ -110,11 +110,11 @@ switch (_type) do {
 	case "medMorphine": 	{
 		player setVariable ["hit_legs",0];
 		player setVariable ["hit_hands",0];
-		r_hit_legs = 0;
-		r_hit_hands = 0;
 		r_fracture_legs = false;
 		r_fracture_arms = false;
 		r_player_inpain = false;
+		r_hit_legs = 0;
+		r_hit_hands = 0;
 		"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
 	};
 	case "medAdrenaline": {
@@ -149,11 +149,11 @@ switch (_type) do {
 		};
 		player setVariable ["hit_legs",0];
 		player setVariable ["hit_hands",0];
-		r_hit_legs = 0;
-		r_hit_hands = 0;
 		r_fracture_legs = false;
 		r_fracture_arms = false;
 		r_player_inpain = false;
+		r_hit_legs = 0;
+		r_hit_hands = 0;
 		"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
 	};
 	case "medPainK": {

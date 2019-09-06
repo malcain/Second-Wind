@@ -182,7 +182,6 @@ null13 = [rad13,30,220,"H_PilotHelmetFighter_B","Binocular",false,10,false] exec
 ["smugg1",true,"",["Land_OfficeCabinet_01_F","Land_ArmChair_01_F","OfficeTable_01_old_F"],5,""] call BPServer_fnc_smuggler;
 
 setViewDistance 2300;
-setObjectViewDistance 1450;
 
 //Client Init Only
 if (isServer) exitWith {};

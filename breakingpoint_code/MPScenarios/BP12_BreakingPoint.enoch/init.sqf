@@ -165,5 +165,4 @@ if (!isMultiplayer) exitWith { call BIS_fnc_shutdown; };
 initialized = true;
 
 waitUntil {time > 0};
-setObjectViewDistance 1450;
 enableEnvironment [true,true];

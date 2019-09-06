@@ -26,6 +26,13 @@ class CfgSounds
 		titles[]={};
 	};
 	
+	class deafness
+	{
+		name = "deafness";
+		sound[] = {"breakingpoint_sfx\environment\tinnitus_2.ogg",3,0.95};
+		titles[]={};
+	};
+	
 	//Environment
 	class waterleak_0 {
 		name = "";

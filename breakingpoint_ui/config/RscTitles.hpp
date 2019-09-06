@@ -6,7 +6,7 @@ class RscTitles
 	class TitleScreen {
 		idd = -1;
 		movingEnable = "false";
-		duration = 30;
+		duration = 500;
 		fadein = 0;
 		name = "TitleScreen";
 		controls[] = {"TitleScreen"};

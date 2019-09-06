@@ -1749,7 +1749,7 @@ class CfgVehicles
 	class BP_VehicleEventHandlers : BP_DefaultEventHandlers
 	{
 		scope = protected;
-		init = "_this call BP_fnc_vehicleInit;";
+		init = "_this call BP_fnc_vehicleInit; if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;};";
 		killed = "_this call BP_fnc_vehicleKilled;";
 		handledamage = "_this call BP_fnc_damageHandlerVehicle;";
 		getin = "_this call BP_fnc_vehicleInteract;";
@@ -4335,7 +4335,7 @@ class CfgVehicles
 	};
 
 
-	class BP_Heli_Light_02_unarmed : O_Heli_Light_02_unarmed_F
+	/*class BP_Heli_Light_02_unarmed : O_Heli_Light_02_unarmed_F
 	{
 		scope = 2;
 		side = 3;
@@ -4449,9 +4449,9 @@ class CfgVehicles
 		};
 		
 		class EventHandlers : BP_VehicleEventHandlers {};
-	};
+	};*/
 
-	class BP_Heli_Transport_02 : I_Heli_Transport_02_F
+	/*class BP_Heli_Transport_02 : I_Heli_Transport_02_F
 	{
 		scope = 2;
 		side = 3;
@@ -4564,110 +4564,8 @@ class CfgVehicles
 			};
 		};
 		
-		/*class UserActions : UserActions
-		{
-			class DoorL1_Open
-			{
-				displayName = "Open/Close Left Door";
-				priority = 1.5;
-				radius = 5.0;  //1.5
-				available = 1;
-				position = "camera";
-				showWindow = 0;
-				onlyForPlayer = 1;
-				condition = __EVAL("this animationPhase ""door_back_L"" < 0.5 AND (Alive this) AND"+COND_SIDE);
-				//statement = "this animateDoor ['door_back_L', 1]";
-				//condition = __EVAL("(Alive this) AND"+COND_SIDE);
-				statement = "if (this animationPhase 'door_back_L' < 1) then { this animateDoor ['door_back_L',1] } else { this animateDoor ['door_back_L',0] };";
-			};
-			class DoorR1_Open : DoorL1_Open
-			{
-				displayName = "Open/Close Right Door";
-				condition = __EVAL("this animationPhase ""door_back_R"" < 0.5 AND (Alive this) AND"+COND_SIDE);
-				//statement = "this animateDoor ['door_back_R', 1]";
-				//condition = __EVAL("(Alive this) AND"+COND_SIDE);
-				statement = "if (this animationPhase 'door_back_R' < 1) then { this animateDoor ['door_back_R',1] } else { this animateDoor ['door_back_R',0] };";
-			};
-			class DoorL1_Close : DoorL1_Open
-			{
-				condition = __EVAL("this animationPhase ""door_back_L"" > 0.5 AND (Alive this) AND"+COND_SIDE);
-				statement = "this animateDoor ['door_back_L', 0]";
-			};
-			class DoorR1_Close : DoorL1_Close
-			{
-				condition = __EVAL("this animationPhase ""door_back_R"" > 0.5 AND (Alive this) AND"+COND_SIDE);
-				statement = "this animateDoor ['door_back_R', 0]";
-			};
-
-			class Ramp_Open : DoorL1_Open
-			{
-				//userActionID = 55;
-				available = 1;
-				displayName = "Open Ramp";
-				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='1.8'/> Open Ramp";
-				textToolTip = "Open Ramp";
-				onlyForPlayer = 1;
-				position = "cargoramp";
-				//priority = 1.5;
-				radius = 6.0;
-				//radiusView = 0.2;
-				//shortcut = "";
-				//showIn3D = 17;
-				showWindow = 0;
-				condition = __EVAL("(this doorPhase 'CargoRamp_Open' < 0.5) && (Alive this) AND (Player In this) AND"+COND_SIDE);
-				statement = "this animateDoor ['CargoRamp_Open', 1]";
-			};
-			class Ramp_Close : Ramp_Open
-			{
-				//userActionID = 56;
-				displayName = "Close Ramp";
-				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.paa' size='1.8'/> Close Ramp";
-				textToolTip = "Close Ramp";
-				condition = __EVAL("(this doorPhase 'CargoRamp_Open' > 0.5) && (Alive this) AND"+COND_SIDE);
-				statement = "this animateDoor ['CargoRamp_Open', 0]";
-			};
-
-			class DoorRamp_GetIn : Ramp_Open
-			{
-				priority = 5.5;
-				//userActionID = 58;
-				radius = 4.0;
-				showWindow = 1;
-				displayName = "Get In Ramp";
-				displayNameDefault = "<img image='\A3\ui_f\data\igui\cfg\actions\getout_ca.paa' size='1.8' shadow=2/> Get In Ramp";
-				textToolTip = "Get In Ramp";
-				condition = __EVAL("(this animationPhase ""CargoRamp_Open"" >= 0.66) AND (Alive this) AND !(Player In this) AND"+COND_SIDE);
-				statement = "TitleText['','BLACK OUT']; Player AssignAsCargo this; Player MoveInCargo this; TitleText['','BLACK IN'];";  // Player Action ['GetInCargo',this];
-			};
-			// move player out back ramp facing away from vehicle, if not pilot/copilot
-			class DoorRamp_GetOut : DoorRamp_GetIn
-			{
-				priority = 6.2;
-				//userActionID = 59;
-				radius = 6.0;
-				showWindow = 0;
-				displayName = "Get out - (Ramp)";
-				displayNameDefault = "<img image='\A3\ui_f\data\igui\cfg\actions\getout_ca.paa' size='1.8' shadow=2/> Get out - (Ramp)";
-				textToolTip = "Get out - (Ramp)";
-				shortcut = "eject";
-				condition = __EVAL("(this animationPhase ""CargoRamp_Open"" >= 0.66) AND (Alive this) AND (Player In this) AND (Driver this != Player) AND (this TurretUnit[0] != Player) AND"+COND_SIDE);
-				statement = "[this,Player] ExecVM '\breakingpoint_code\events\getOutRamp.sqf';";
-			};
-			// showWindow of action for outside of vehicle so not annoying in vehicle
-			class DoorRamp_out : Ramp_Open
-			{
-				priority = 1.4;
-				displayName = "Open Ramp";
-				displayNameDefault = "<img image='\A3\ui_f\data\igui\cfg\actions\getout_ca.paa' size='1.8' shadow=2/> Open Ramp";
-				textToolTip = "Open Ramp";
-				showWindow = 1;
-				condition = __EVAL("(this doorPhase 'CargoRamp_Open' < 0.5) AND (Alive this) AND !(Player In this) AND"+COND_SIDE);
-				statement = "this animateDoor ['CargoRamp_Open', 1]";
-			};
-		};*/
-		
 		class EventHandlers : BP_VehicleEventHandlers {};
-	};
+	};*/
 	
 	class BP_Offroad_01_gen_F: B_GEN_Offroad_01_gen_F 
 	{
@@ -6066,7 +5964,8 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 5;
 		transportMaxBackpacks = 10;
-		transportFuel = 1000;
+		transportFuel = 0;
+		fuelCapacity = 1000;
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6165,7 +6064,8 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
-		transportFuel = 1200;
+		transportFuel = 0;
+		fuelCapacity = 1250;
 		
 		class HitPoints {
 			class HitGlass1 {

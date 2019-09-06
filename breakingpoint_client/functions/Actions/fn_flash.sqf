@@ -1,13 +1,17 @@
 private ["_pos", "_range"];
 
 _pos = _this;
-_range = 20;
+_range = 30;
+//diag_log format ["flashbang position %1", _pos];
+[player,150,true,_pos] call BP_fnc_zombieAlert;
 
+[_pos,_range] remoteExec ["BPServer_fnc_flash",2];
+
+/*
 _units = _pos nearEntities ["CAManBase", _range];
 
 {
-	if((alive _x) && (isPlayer _x))then
-	{
+	if((alive _x) && (isPlayer _x)) then {
 		private ["_e", "_pos2"];
 		_e = eyePos _x;
 		_pos2 = [_pos select 0,_pos select 1,(_pos select 2)+0.4];
@@ -26,3 +30,4 @@ _units = _pos nearEntities ["CAManBase", _range];
 		};
 	};
 } foreach _units;
+*/

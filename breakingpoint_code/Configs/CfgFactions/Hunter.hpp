@@ -158,7 +158,7 @@
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage","BP_M84_Flash"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
@@ -184,15 +184,15 @@
 					backpack[] = {"BP_AssaultPack_mcamo"};
 					vest[] = {};
 					uniform[] = {"BP_Hunter_3"};
-					headgear[] = {"BP_Shemag_bandit","H_Shemag_olive"};
-					nvg[] = {"TRYK_Shemagh_G_NV"};
+					headgear[] = {"","BP_Shemag_bandit","H_Shemag_olive"};
+					nvg[] = {""};
 					facewear[] = {""};//{"rvg_balaclava_4", "rvg_balaclavaLow_4", "rvg_balaclavaLow_1"};
 				};
 				class Uniform : BP_BaseGear  {
 					//Array Of Weapons Inside Uniform
 					weapons[] = {};
 					//Array Of Magazines Inside Uniform
-					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage"};
+					magazines[] = {"ItemPainkiller","ItemBandage","ItemBandage","BP_M84_Flash"};
 					//Array Of Items Inside Uniform ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};

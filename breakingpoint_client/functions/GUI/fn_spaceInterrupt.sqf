@@ -100,14 +100,15 @@ if (_dikCode in actionKeys "TimeDec") then {_handled = true};
 if (_dikCode in actionKeys "Cheat1") then {_handled = true};
 if (_dikCode in actionKeys "Cheat2") then {_handled = true};
 if (_dikCode in actionKeys "LiteUnitInfoToggle") then {_handled = true};
-if (_dikCode in actionKeys "Help") then {_handled = true};
+/*if (_dikCode in actionKeys "Help") then {_handled = true};
 if (_dikCode in actionKeys "Diary") then {_handled = true};
 if (_dikCode in actionKeys "DSInterface") then {_handled = true};
 if (_dikCode in actionKeys "PushToTalkAll") then {_handled = true};
 if (_dikCode in actionKeys "PushToTalkCommand") then {_handled = true};
 if (_dikCode in actionKeys "PushToTalkSide") then {_handled = true};
 if (_dikCode in actionKeys "RevealTarget") then {_handled = true};
-if (_dikCode in actionKeys "Tank") then {_handled = true};
+if (_dikCode in actionKeys "Tank") then {_handled = true};*/
+
 //if (_dikCode in actionKeys "lockTarget") then {_handled = true};
 //if (_dikCode in actionKeys "TeamSwitch") then {_handled = true};
 //if (_dikCode in actionKeys "TeamSwitchPrev") then {_handled = true};
@@ -465,11 +466,11 @@ if ((_dikCode in actionKeys "PushToTalk") or (_dikCode in actionKeys "VoiceOverN
 	};
 	
 	//Disable VON on global channels
-	if (VoN_isOn) then {
+	/*if (VoN_isOn) then {
 		if ((VoN_currentTxt == "Ranger") or (VoN_currentTxt == "Nomad") or (VoN_currentTxt == "Outlaw") or (VoN_currentTxt == localize "str_channel_group")) then {
 			_handled = true;
 		};
-	};
+	};*/
 };
 
 if (_dikCode in actionKeys "PushToTalkDirect") then {
