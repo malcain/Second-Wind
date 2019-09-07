@@ -55219,6 +55219,29 @@ class CfgAmmo {
 		explosionSoundEffect = "";
 		explosionTime = 2.5;
 	};
+	
+	class BP_FireGrenade_Ammo: GrenadeHand
+	{
+		scope = 1;
+		hit = 0.001;
+		indirectHit = 0.001;
+		indirectHitRange = 8;
+		model = "\breakingpoint_weapons\models\m84\m84.p3d";
+		visibleFire = 0.5;
+		audibleFire = 0.05;
+		visibleFireTime = 1;
+		fuseDistance = 5;
+		ExplosionEffects = "fireExplosion";
+		soundHit1[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit2[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit3[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit4[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit5[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit6[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+		soundHit[] = {"breakingpoint_jsrs\sounds\m84.wav",1,10};
+	//	explosionSoundEffect = "flashbang2";
+		explosionTime = 1.5;
+	};
 
 	/*class BP_CSGas_Green: SmokeShell
 	{

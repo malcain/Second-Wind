@@ -354,7 +354,7 @@ class CfgMagazines
 		scope = 2;
 		count = 1;
 		type = 256;
-		fuelQuantity = 20;
+		fuelQuantity = 25;
 		displayName = "Large Fuelcan";
 		descriptionUse = "Large Fuelcan";
 		model = "\breakingpoint\models\bp_fuelcan.p3d";
@@ -367,7 +367,7 @@ class CfgMagazines
 		scope = 2;
 		count = 1;
 		type = 256;
-		fuelQuantity = 20;
+		fuelQuantity = 25;
 		displayName = "Large Fuelcan (Empty)";
 		descriptionUse = "Large Fuelcan (Empty)";
 		model = "\breakingpoint\models\bp_fuelcan.p3d";
@@ -380,7 +380,7 @@ class CfgMagazines
 		scope = 2;
 		count = 1;
 		type = 256;
-		fuelQuantity = 5;
+		fuelQuantity = 10;
 		displayName = "Fuelcan";
 		descriptionUse = "Fuelcan";
 		model = "\breakingpoint\models\bp_fuelcan.p3d";
@@ -393,7 +393,7 @@ class CfgMagazines
 		scope = 2;
 		count = 1;
 		type = 256;
-		fuelQuantity = 5;
+		fuelQuantity = 10;
 		displayName = "Fuelcan (Empty)";
 		descriptionUse = "Fuelcan (Empty)";
 		model = "\breakingpoint\models\bp_fuelcan.p3d";

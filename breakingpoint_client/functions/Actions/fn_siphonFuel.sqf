@@ -79,6 +79,7 @@ if (_vehicle isKindOf "BP_BarrelFuel") then {
 };
 
 _newFuel = (_curFuel - _canSize);
+_fuelCheck = (_curFuel - (_canSize*0.5));
 
 // calculate new fuel
 if (_capacity == 0) then {
@@ -87,7 +88,7 @@ if (_capacity == 0) then {
 	_newFuel = (_newFuel / _capacity);
 };
 
-if (_newFuel > 0) then 
+if (_fuelCheck > 0) then 
 {
 	//Sound SFX and Alert Zombies
 	[player,"refuel",0,false,20] call BP_fnc_objSpeak;  

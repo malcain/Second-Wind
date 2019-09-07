@@ -509,12 +509,29 @@ class CfgLights
 			quadratic = 2000;
 			hardLimitStart = 10;
 			hardLimitEnd = 50;
-			/*start = 0.05;
+		};
+	};
+	
+	class incend_light
+	{
+		color[] = {1,0.2,0.1};
+		ambient[] = {1,0.2,0.1};
+		brightness = 20;
+		intensity = 1090;
+		diffuse[] = {0,0,0};
+		position[] = {0,0,0};
+		dayLight = 1;			// boolean (0/1). Is light shown during daylight.
+		useFlare = 1;			// boolean (0/1). Is light having a flare effect
+		flareSize = 1;
+		flareMaxDistance = 1400;
+		class Attenuation
+		{
+			start = 0;
 			constant = 0;
 			linear = 0;
-			quadratic = 40;
-			hardLimitStart = 2;
-			hardLimitEnd = 4;*/
+			quadratic = 0;
+			hardLimitStart = 1;
+			hardLimitEnd = 200;
 		};
 	};
 };
@@ -522,6 +539,37 @@ class CfgLights
 //class NoExplosion {};
 
 class simplefbExplosion
+{
+	class Smoke1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "simplefb_flash";
+		intensity = 0.5;
+		interval = 1;
+		lifeTime = 1;
+	};
+	class Smoke2: Smoke1
+	{
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "simplefb_smoke";
+		intensity = 0.5;
+		interval = 1;
+		lifeTime = 1;
+	};
+	class Light
+	{
+		position[] = {0,0,0};
+		simulation = "light";
+		type = "simplefb_light";
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+	};
+};
+
+class fireExplosion
 {
 	class Smoke1
 	{

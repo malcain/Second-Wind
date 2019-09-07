@@ -2987,22 +2987,22 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"friths_ruin_cloth\data\frith_ruin_sdr_ltrdrk_co.paa",
-			"friths_ruin_cloth\data\frith_ruin_ghillie_crow_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_sdr_fabtan_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_hawk_co.paa",
 			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_sdr_fab.rvmat",
 			"friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
 			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
 		};
 	};
-	class BP_Scavenger4Hawk_F: BP_Player
+	class BP_Scavenger4Crow_F: BP_Player
 	{
 		scope=2;
-		displayName = "Scavenger 4 (Hawk)";
-		uniformClass = "BP_Scavenger4Hawk_F";
+		displayName = "Scavenger 4 (Crow)";
+		uniformClass = "BP_Scavenger_4_Crow";
 		model = "\A3\characters_F_beta\indep\ia_sniper.p3d";
 		side = 13;
 		hiddenSelections[]=
@@ -3013,13 +3013,13 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"friths_ruin_cloth\data\frith_ruin_sdr_fabtan_co.paa",
-			"friths_ruin_cloth\data\frith_ruin_ghillie_hawk_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltrdrk_co.paa",
+			"friths_ruin_cloth\data\frith_ruin_ghillie_crow_co.paa",
 			"friths_ruin_cloth\data\frith_ruin_hl_ljnbld_co.paa"
 		};
 		hiddenSelectionsMaterials[]=
 		{
-			"friths_ruin_cloth\data\frith_ruin_sdr_fab.rvmat",
+			"friths_ruin_cloth\data\frith_ruin_sdr_ltr.rvmat",
 			"friths_ruin_cloth\data\frith_ruin_ghillie_crow.rvmat",
 			"friths_ruin_cloth\data\frith_ruin_hl_ljn.rvmat"
 		};
@@ -5090,6 +5090,12 @@ class CfgVehicles
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 1;
 		maxSpeed = 80;
+		class ViewPilot: ViewPilot
+		{
+			MinFov=0.37;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 	
 		class HitPoints  {
 			class HitEngine {
@@ -5166,6 +5172,20 @@ class CfgVehicles
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 1;
 		maxSpeed = 80;
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints  {
 			class HitEngine {
@@ -5241,7 +5261,22 @@ class CfgVehicles
 		transportMaxMagazines = 35;
 		transportMaxWeapons = 7;
 		transportMaxBackpacks = 5;
-		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0;
@@ -5363,6 +5398,21 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 7;
 		transportMaxBackpacks = 5;
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -5485,6 +5535,21 @@ class CfgVehicles
 		transportMaxMagazines = 25;
 		transportMaxWeapons = 4;
 		transportMaxBackpacks = 3;
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -5599,6 +5664,21 @@ class CfgVehicles
 		transportMaxMagazines = 25;
 		transportMaxWeapons = 3;
 		transportMaxBackpacks = 3;
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {

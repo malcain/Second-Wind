@@ -200,7 +200,7 @@
 					clothing[] = {"BP_Scavenger_4"};
 					backpack[] = {"BP_Coyote_Bandit"};
 					vest[] = {"V_BanditBandolier_BP"};
-					uniform[] = {"BP_scavenger_4_Hawk","BP_Scavenger_4"};
+					uniform[] = {"BP_Scavenger_4","BP_scavenger_4_Crow"};
 					headgear[]={""};
 					nvg[]={"","TRYK_ESS_BLKTAN_NV"};
 					facewear[]={"G_MM_Crow_Dazzle_Mask","","G_MM_Hockey_Mask","G_MM_FaceFork","G_MM_Catchers_Mask"};

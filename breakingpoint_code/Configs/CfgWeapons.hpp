@@ -1456,7 +1456,7 @@ class CfgWeapons
 		};
 	};
 	
-	class BP_Scavenger_4_Hawk: Uniform_Base
+	class BP_Scavenger_4_Crow: Uniform_Base
 	{
 		scope = 2;
 		displayName = "Scavenger level 4 (Hawk)";
@@ -1465,7 +1465,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "BP_Scavenger4Hawk_F";
+			uniformClass = "BP_Scavenger4Crow_F";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
