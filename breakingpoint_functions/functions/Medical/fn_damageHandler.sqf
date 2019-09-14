@@ -31,7 +31,7 @@ _isHeadHit = (_hit == "head" or {_hitPoint == "hitneck"});
 //_isHeartHit = (_hit == "spine3");
 _isPlayer = (isPlayer _source);
 _inVehicle = !isNull objectParent _unit;
-_inVehicleSource = ((vehicle _source) != _source);
+_inVehicleSource = !isNull objectParent _source;
 _isMelee = _ammo isKindOf "Melee";
 _selfDamage = (_unit == _source);
 _trapDamage = player getVariable ["med_trap", false];
@@ -46,6 +46,8 @@ if (_selfDamage && {_isMelee}) exitWith {};
 
 // Loot Damage
 if (_source isKindOf "BP_LootBox") exitWith {};
+
+if (_inVehicleSource) then {_source = _instigator};
 
 _fallVelocity = (velocity _unit) select 2;
 ["damageHandler: Unit: %1 Hit: %2 Damage: %3 Source: %4 Ammo: %5 Type: %6 isMinor: %7 isHeadHit: %8 isPlayer: %9 HitPoint: %10 Velocity: %11 #1000",_unit,_hit,_damage,_source,_ammo,_type,_isMinor,_isHeadHit,_isPlayer,_hitPoint,_fallVelocity] call BP_fnc_debugConsoleFormat;
@@ -171,7 +173,6 @@ if (_damage > 0.01) then
 		_hitInjured = false;
 		_hitBleeding = false;
 		_hitKnockout = false;
-
 		//Zombie Ammo
 		if (!_inVehicle) then 
 		{
@@ -340,14 +341,18 @@ if (_damage > 0.01) then
 	//Calculate Blood Loss
 	_bloodLoss = (_damage * _scale);
 	
-	//50 % Damage Reduction while on Adrenaline
-	if (r_player_adrenaline) then { _bloodLoss = _bloodLoss / 2; };
-	
-	r_player_blood = (r_player_blood - _bloodLoss);
+	//25 % Damage Reduction while on Adrenaline
+	if (r_player_adrenaline) then { _bloodLoss = _bloodLoss / 1.5; };
 	
 	//If Blood Loss > 500 = Start Bleeding
 	if (_isPlayer) then
 	{
+		_playerClass = player getVariable ["class",0];
+		if (_playerClass isEqualTo 1) then {
+			_factionLevel = player call BP_fnc_getFactionLevel;
+			_reduction = _factionLevel*250 min 750;
+			_bloodLoss = _bloodLoss - _reduction max 0;
+		};
 		if (_bloodLoss > 500) then { r_player_injured = true; };
 	} else {
 		if (_inVehicle) then {
@@ -356,6 +361,8 @@ if (_damage > 0.01) then
 			};
 		};
 	};
+	
+	r_player_blood = (r_player_blood - _bloodLoss);
 	
 	//Process who Killed Who Events.
 	if (_source != player) then 
@@ -459,8 +466,7 @@ if (_hitpoint in med_MinorWounds) then
 					};
 					
 					//Calculate / Process Fatigue
-					_fatigue = (r_hit_legs * 2);
-					if (_fatigue > 1) then { _fatigue = 1; };
+					_fatigue = (r_hit_legs * 2.2) min 1;
 					player enableFatigue true;
 					player setFatigue _fatigue;
 					

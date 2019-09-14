@@ -56,12 +56,6 @@ if (!_houseObject && {!_houseStorage}) then
 	} forEach _list;
 };*/
 
-_objView = [_object, "VIEW"] checkVisibility [eyePos player, getPosASL _object];
-
-if (_objView == 0) then {
-_valid = false;
-};
-
 //Make sure the object surface isn't in water
 if (surfaceiswater _objectPos) exitWith {false};
 
@@ -77,6 +71,10 @@ if (_houseObject || {_houseStorage}) then {
 	if (!_isInsideObject or !_isInsidePlayer) then { _valid = false; };
 } else {
 	if (_isInsideObject or _isInsidePlayer) then { _valid = false; };
+	_objView = [_object, "VIEW"] checkVisibility [eyePos player, getPosASL _object];
+	if (_objView == 0) then {
+		_valid = false;
+	};
 };
 
 //Make sure the object isn't glitched into something

@@ -9,6 +9,8 @@
 params ["_animation"];
 r_action = false;
 
+if (underwater player) exitwith {true};
+
 if (currentWeapon player in BP_MeleeWeapons) then
 {
 	player action ["SwitchWeapon", player, player, 100];

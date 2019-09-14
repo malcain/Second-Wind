@@ -14,3 +14,4 @@ BP_AuthTimer = true;
 0 cutRsc ["Default","PLAIN",0];
 1 cutRsc [(_this select 0),"PLAIN"];
 endMission "END6";
+true;

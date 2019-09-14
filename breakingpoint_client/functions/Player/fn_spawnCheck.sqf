@@ -8,18 +8,21 @@
 */
 
 private ["_isAir","_inVehicle","_spawnZombies"];
-_isAir = objectparent player iskindof "air";
-_inMovingVehicle = speed player > 85;
+//_isAir = objectparent player iskindof "air";
+_inMovingVehicle = speed player > 90;
 
 _nearbyBuildings = (getPos player) nearObjects ["building",340];
 _spawnZombies = true;
 _spawnLoot = true;
+_underwater = false;
 
 //Limit Zombie Spawning to 18 Local Zombies Per Player / Limit Zombie Spawning to 24 per 300m Bubble
 if (BP_LocalZeds > 18 || {BP_NearbyZombies >= 22}) then { _spawnZombies = false; };
 if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 
 {
+	if (isObjectHidden _x) exitwith {};
+	if ((getPosASLW _x select 2) < -1.5) then {_underwater = true;};
 	_type = typeOf _x;
 	_config = configFile >> "CfgBuildingLoot" >> _type;
 	/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
@@ -41,7 +44,7 @@ if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 			
 			//Zombies
 			_spawnZombies = BP_NearbyZombies <= 18;
-			if ((_spawnZombies) && {_dis > 60} && {_dis < 325}) then {
+			if ((_spawnZombies) && {!_underwater} && {_dis > 60} && {_dis < 330}) then {
 				[_x] call BP_fnc_buildingSpawnZombies;
 				BP_NearbyZombies = BP_NearbyZombies + 1;
 				//_handle = [_x] spawn BP_fnc_buildingSpawnZombies;
@@ -53,7 +56,7 @@ if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 			//Loot
 			if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
 			{
-				if (_dis < 300 && {_dis > 30} && {!_isAir} && {_spawnLoot}) then {
+				if (_dis < 320 && {_dis > 30} && {!_inMovingVehicle} && {_spawnLoot}) then {
 					[_x] call BP_fnc_buildingSpawnLoot;
 					//_handle = [_x] spawn BP_fnc_buildingSpawnLoot;
 					//[_handle] call BP_fnc_addThreadHandle;

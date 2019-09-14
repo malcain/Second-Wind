@@ -8,7 +8,7 @@ item3[] = {"true",8,218,25.000000,100.000000,125.000000,150.000000,0.000000,"tru
 item4[] = {"Waiting",2,250,25.000000,225.000000,125.000000,275.000000,0.000000,"Waiting"};
 item5[] = {"",7,210,196.189301,472.767181,204.189301,480.767181,0.000000,""};
 item6[] = {"dead",4,218,-100.000000,452.582886,0.000000,502.582886,10.000000,"dead"};
-item7[] = {"End",1,4346,-100.000000,175.000000,0.000000,225.000000,0.000000,"End"};
+item7[] = {"End",1,250,-100.000000,175.000000,0.000000,225.000000,0.000000,"End"};
 item8[] = {"",7,210,196.057312,375.776337,204.057343,383.776337,0.000000,""};
 item9[] = {"",7,210,1020.999878,473.021576,1029.000000,481.021637,0.000000,""};
 item10[] = {"",7,210,196.000000,-409.397552,204.000000,-401.397552,0.000000,""};
@@ -35,7 +35,7 @@ item30[] = {"",7,210,1021.033081,-131.063568,1029.032837,-123.063568,0.000000,""
 item31[] = {"",7,210,1020.999573,-1304.000000,1029.000488,-1295.999878,0.000000,""};
 item32[] = {"",7,210,196.000000,121.000000,204.000000,129.000000,0.000000,""};
 item33[] = {"",7,210,196.479202,-6.246673,204.479202,1.753327,0.000000,""};
-item34[] = {"Moving",2,250,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
+item34[] = {"Moving",2,4346,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
 item35[] = {"",7,210,1020.996704,376.950623,1028.996948,384.950653,0.000000,""};
 item36[] = {"Breaking_Point_Dog",-1,250,-450.000000,-75.000000,-100.000000,-25.000000,0.000000,"Breaking Point Dog Agent FSM"};
 item37[] = {"Created_By_Malcain",-1,250,-432.461609,-30.564850,-113.786621,16.694519,0.000000,"Created By Malcain & Deathlyrage"};
@@ -230,8 +230,8 @@ link100[] = {84,87};
 link101[] = {85,80};
 link102[] = {86,80};
 link103[] = {87,84};
-globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-449.638611,1266.083862,615.769348,-513.566956,1343,884,1};
-window[] = {2,-1,-1,-1,-1,688,26,986,26,3,1361};
+globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-449.638611,1266.083862,868.720215,-260.616058,1343,884,1};
+window[] = {2,-1,-1,-32000,-32000,792,130,1090,130,3,1361};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -382,7 +382,7 @@ class FSM
                                         priority = 7.000000;
                                         to="Checking";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_combat > 0 and ((diag_tickTime - _combatTime) >1.5)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(diag_tickTime - _combatTime) > 5 and _combat > 0"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"_combatTime = diag_tickTime;"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -404,7 +404,7 @@ class FSM
                                         priority = 5.000000;
                                         to="Moving";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_command == ""return"" and _distance > 3.2)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_command == ""return"" and _distance > 3.5)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -415,7 +415,7 @@ class FSM
                                         priority = 4.000000;
                                         to="Idling";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(_command == ""return"" and _distance <= 3.2)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(_command == ""return"" and _distance <= 3.5)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
@@ -481,14 +481,14 @@ class FSM
                          "if (_cantSee) then {" \n
                          "_moveType = ""LEADER PLANNED"";" \n
                          "};" \n
-                         "if (_distance > 450) then {" \n
+                         "if (_distance > 150) then {" \n
                          "_replan = true;" \n
                          "};" \n
-                         "_dog setDestination [(getPosATL player), _moveType, _replan];" \n
+                         "_dog setDestination [player modelToWorld [2,1,0], _moveType, _replan];" \n
                          "//_dog setSpeedMode ""FULL"";" \n
                          "_waitTime = diag_tickTime;" \n
                          "if (_distance < 13) then {" \n
-                         "	if (_distance > 8) then {" \n
+                         "	if (_distance > 9) then {" \n
                          "		_animation = ""Dog_Run"";" \n
                          "	} else {" \n
                          "		_animation = ""Dog_Walk"";" \n
@@ -550,7 +550,9 @@ class FSM
                                          "//_dog enableAI ""MOVE"";" \n
                                          "_animation = ""Dog_Sprint"";" \n
                                          "//_dog playMoveNow ""Dog_StopV2"";" \n
-                                         "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;"/*%FSM</ACTION""">*/;
+                                         "[_dog,""dog_confirm"",0,false] call BP_fnc_objSpeak;" \n
+                                         "" \n
+                                         "_dog reveal [_attackTarget, 4];"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
                         };
@@ -561,13 +563,15 @@ class FSM
                 {
                         name = "Chase";
                         itemno = 44;
-                        init = /*%FSM<STATEINIT""">*/"_cantSee = [player,_dog] call BP_fnc_losCheck;" \n
+                        init = /*%FSM<STATEINIT""">*/"//_cantSee = [player,_dog] call BP_fnc_losCheck;" \n
                          "//_attackDist = _dog distance _attackTarget" \n
-                         "_moveType = ""LEADER DIRECT"";" \n
-                         "if (_cantSee or (_dog distance _attackTarget < 25)) then {" \n
-                         "_moveType = ""LEADER PLANNED"";" \n
-                         "};" \n
-                         "_dog setDestination [(getPosATL _attackTarget),""LEADER PLANNED"", false];" \n
+                         "//_moveType = ""LEADER DIRECT"";" \n
+                         "//if (_cantSee or (_dog distance _attackTarget < 25)) then {" \n
+                         "//_moveType = ""LEADER PLANNED"";" \n
+                         "//};" \n
+                         "" \n
+                         "_dog setDestination [position _attackTarget,""LEADER PLANNED"", true];" \n
+                         "" \n
                          "//_dog forceSpeed (_speedVal select _maxSpeed);" \n
                          "_forceChange = false;" \n
                          "_waitTime = diag_tickTime;" \n

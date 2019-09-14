@@ -47,7 +47,7 @@ if (!hasInterface) exitWith {};
 	if (_success) then {
 		cutText [format ["You have successfully created a %1.",_objectName], "PLAIN DOWN"];
 	} else {
-		cutText [format ["Server Rejected Creation Of %1. You may reached the limit of this type of object on this server.",_objectName], "PLAIN DOWN"];
+		cutText [format ["Server Rejected Creation Of %1. Wrong position or you may have reached the limit of objects on this server.",_objectName], "PLAIN DOWN"];
 	};
 };
 

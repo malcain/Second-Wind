@@ -81,7 +81,7 @@ if (_build) then
 	} else {
 		_objectType = (typeOf _object);
 		_valid = _object call BP_fnc_objCheck;
-		if (!_valid && !(_object isKindOf "BP_Refrigerator")) exitWith { cutText ["Storage must not collide with obstacles, be in the water or building.", "PLAIN DOWN"]; };
+		if (!_valid) exitWith { cutText ["Storage must not collide with obstacles, be in the water or building.", "PLAIN DOWN"]; };
 
 		//Deattach Old Crate
 		detach _object;

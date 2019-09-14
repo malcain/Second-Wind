@@ -38,10 +38,6 @@ r_action_gut = true;
 
 if (_hasKnife) then 
 {
-	_dis=30;
-	[player,"gut",0,false,_dis] call BP_fnc_objSpeak;  
-	[player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
-	
 	_finished = ["bp_cutbody"] call BP_fnc_constructAnim;
 	if (_finished) then
 	{

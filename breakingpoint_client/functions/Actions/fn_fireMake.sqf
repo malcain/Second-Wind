@@ -33,6 +33,7 @@ if (_finished) then
 
 	//BP_hasFire = createVehicle ["BP_SmallCampfire", _location, [], 0, "CAN_COLLIDE"];
 	BP_hasFire = createVehicle ["BP_LargeCampFireEH", _location, [], 0, "CAN_COLLIDE"];
+	//BP_hasFire setVehiclePosition [_location, [], 0, "CAN_COLLIDE"];
 	BP_hasFire setDir _dir;
 	BP_hasFire enableDynamicSimulation true;
 

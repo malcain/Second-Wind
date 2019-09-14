@@ -132,9 +132,10 @@ class CfgRemoteExec
 	// List of script commands allowed to be sent from client via remoteExec
 	class Commands
 	{
-		mode = 0;
+		mode = 1;
 		jip = 0;
 		/*your commands here*/
 		//class YourCommand1 { allowedTargets=0; jip=1; } // can target anyone, sending jip is turned off (overrides settings in the Commands class)
+		class say3D { allowedTargets=1; jip=0; } // can target anyone, sending jip is turned off (overrides settings in the Commands class)
 	};
 };

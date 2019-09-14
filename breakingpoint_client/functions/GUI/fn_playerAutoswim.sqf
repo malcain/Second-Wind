@@ -19,8 +19,8 @@ if (time - BP_lastCheckBit > 1) then
 	r_interrupt = true;
 	//r_action_rest = false;
 		
-	if ((getPosASL player select 2) > -1) exitWith {};
-	if ((getterrainheightASL position player) > -1.5) exitWith {};
+	if ((getPosASLW player select 2) > -1) exitWith {};
+	//if ((getterrainheightASL position player) > -1.5) exitWith {};
 	
 	if (!BP_AutoRun && {!r_fracture_legs} && {!(r_hit_legs > 0)}) then 
 	{
@@ -57,7 +57,7 @@ if (time - BP_lastCheckBit > 1) then
 				if (player getVariable ["med_hostage",false]) exitWith {true};
 				
 				//Don't Autorun While TranQ
-				if (r_player_unconscious) exitWith {true};
+				if (r_player_unconscious or lifeState player == "INCAPACITATED") exitWith {true};
 				
 				player playActionNow "FastF";
 				
@@ -65,7 +65,7 @@ if (time - BP_lastCheckBit > 1) then
 				sleep 0.05;
 				
 				//Condition Checks
-				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getterrainheightASL getPosATL player) > -1.5});
+				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASLW player select 2) > -1});
 			};
 			
 			BP_AutoRun = false;

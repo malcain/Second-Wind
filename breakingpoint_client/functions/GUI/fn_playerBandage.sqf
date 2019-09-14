@@ -14,11 +14,24 @@ _isWater = (surfaceIsWater (getPosATL player));
 if (time - BP_lastCheckBit > 1) then
 {
 	BP_lastCheckBit = time;
+	_needsFieldBandage = r_player_cardiac;
 	if (!r_player_unconscious and !_isHostage) then {
-		if ("ItemBandage" in magazines player) then {
-			["ItemBandage"] spawn BP_fnc_useMeds;
+		if (!_needsFieldBandage) then {
+			if ("ItemBandage" in magazines player) then {
+				["ItemBandage"] spawn BP_fnc_useMeds;
+			} else {
+				if ("ItemFieldDressing" in magazines player) then {
+					["ItemFieldDressing"] spawn BP_fnc_useMeds;
+				} else {
+					cutText ["You don't have any bandages.", "PLAIN DOWN"];
+				};
+			};
 		} else {
-			cutText ["You don't have any bandages.", "PLAIN DOWN"];
+			if ("ItemFieldDressing" in magazines player) then {
+				["ItemFieldDressing"] spawn BP_fnc_useMeds;
+			} else {
+				cutText ["You don't have any field dressings.", "PLAIN DOWN"];
+			};
 		};
 	};
 };

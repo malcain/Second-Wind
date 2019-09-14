@@ -96,6 +96,7 @@ if (_damage > 0.02) then
 	//if (_source isKindOf "CAManBase") then {
 	if (isPlayer _source) then {
 		_dog setVariable ["killer",_source];
+		diag_log format ["Dog killer %1", _source];
 		[(netID _source),(netID player),_blood] remoteExecCall ["BP_fnc_dogHurt", 2];
 	};
 	

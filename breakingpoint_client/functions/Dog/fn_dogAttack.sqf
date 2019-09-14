@@ -43,6 +43,6 @@ _dog setVelocity [_speed * sin(_dir), _speed * cos(_dir),4];
 sleep 0.7;
 detach _dog;
 sleep 1.6;
-_dog playmovenow "dog_sprint"
+//_dog playmovenow "dog_sprint"
 };
 

@@ -25,17 +25,14 @@ _x setVariable ["fire",_x,true];
 [(netID _x),(netID _x),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
 } forEach crew _vehicle;*/
 
-{ 
-_x spawn {
-_this action ["Eject",vehicle _this]; 
-sleep 2;
-//[_this,2] call BP_fnc_medicalKnockDown;
-_this setVariable ["fire",_this,true];
-[(netID _this),(netID _this),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
-};
-} forEach crew _vehicle;
-
 if (local _vehicle) then {
+	{ 
+		_x action ["Eject",_vehicle];
+		//[_this,2] call BP_fnc_medicalKnockDown;
+		//_x setVariable ["fire",_x,true];
+		//[(netID _x),(netID _x),"Player"] remoteExecCall ["BPServer_fnc_igniteEntity",2];
+
+	} forEach crew _vehicle;
 	//Don't Use NetID Here to allow for both vehicles / event handlers to use the same code
 	[_vehicle,_killer] remoteExecCall ["BP_fnc_vehicleKilled",2];
 };

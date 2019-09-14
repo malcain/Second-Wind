@@ -32,6 +32,10 @@ class CfgMissions
 			briefingName = "Breaking Point Dev";
 			directory = "breakingpoint_code\MPScenarios\BP1_BreakingPoint_Dev.Altis";
 		};
+		class Sunken_Altis {
+			briefingName = "Sunken Altis";
+			directory = "breakingpoint_code\MPScenarios\Sunken_Altis.Altis";
+		};
 
 		// Stratis
 		class BP2_BreakingPoint {
@@ -117,9 +121,9 @@ class CfgMissions
 			directory = "breakingpoint_code\MPScenarios\BP11_BreakingPoint.126map";
 		};
 		
-		// Bornholm
+		// Enoch
 		class BP12_BreakingPoint {
-			briefingName = "Breaking Point";
+			briefingName = "Second Wind";
 			directory = "breakingpoint_code\MPScenarios\BP12_BreakingPoint.enoch";
 		};
 		

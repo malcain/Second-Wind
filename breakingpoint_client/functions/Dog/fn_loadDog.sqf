@@ -30,6 +30,10 @@ _dog setName [_name,_name,""];
 _dog setVariable ["bodyName",_name,true];
 _dog setVariable ["CharacterID",BP_characterID,true];
 
+_dog setSkill 1;
+_dog setBehaviourStrong "CARELESS";
+
+
 //Delay to Ensure the FSM is spawned and setup
 //sleep 2;
 

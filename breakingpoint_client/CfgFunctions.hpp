@@ -173,7 +173,6 @@ class CfgFunctions
 		};
 		class GUI {
 			file = "\breakingpoint_client\functions\GUI";
-			class onPause {};
 			class skipBriefing { preInit = 1; };
 			class spaceInterrupt {};
 			class spaceInterruptInv {};
@@ -199,6 +198,7 @@ class CfgFunctions
 			class playerEarplugs{};
 			class playerZombieMovement{};
 			class playerDisableChat{};
+			class onPause {};
 		};
 		class Inventory {
 			file = "\breakingpoint_client\functions\Inventory";

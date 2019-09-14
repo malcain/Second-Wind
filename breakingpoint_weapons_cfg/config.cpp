@@ -525,6 +525,44 @@ class CfgMovesMaleSdr: CfgMovesBasic
 			speed=0.25;
 		};
 		
+		class AsdvPercMrunSnonWnonDf;
+		class AsdvPercMsprSnonWnonDf: AsdvPercMrunSnonWnonDf
+		{
+			stamina=-1;
+			//file="a3\anims_f\data\anim\sdr\dve\erc\spr\non\non\advepercmsprsnonwnondf.rtm";
+			file="a3\anims_f\data\anim\sdr\sdv\erc\run\non\non\asdvpercmrunsnonwnondf.rtm";
+			actions="SurfaceDivingActionsFastF";
+			relSpeedMax=1.5;
+			collisionShape="A3\anims_f\Data\Geom\Sdr\Pswm_Mrun.p3d";
+			speed=0.14336;
+			duty=0.80000001;
+			InterpolateTo[]=
+			{
+				"Unconscious",
+				0.02,
+				"AsdvPercMrunSnonWnonDf",
+				0.02,
+				"AbdvPercMsprSnonWnonDf",
+				0.02,
+				"AdvePercMsprSnonWnonDf",
+				0.02,
+				"AsdvPercMrunSnonWnonDfl",
+				0.02,
+				"AsdvPercMrunSnonWnonDfr",
+				0.02,
+				"AsdvPercMstpSnonWnonDnon_relax",
+				0.1,
+				"AmovPercMstpSnonWnonDnon",
+				0.029999999,
+				"AsdvPercMstpSnonWnonDnon",
+				0.029999999,
+				"AbdvPercMstpSnonWnonDnon",
+				0.029999999,
+				"AdvePercMstpSnonWnonDnon",
+				0.029999999
+			};
+		};
+		
 		//Ladder
 		class LadderCivilStatic;
 		class LadderCivilUpLoop: LadderCivilStatic
@@ -631,7 +669,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class BP_CutBody : AmovPercMstpSnonWnonDnon {
 			file = "\bp_sw_anims\Interacts\BPCutBody.rtm";
 			looped = 0;
-			speed = 0.085;
+			speed = 0.1;
 			mask = "BodyFullReal";
 			headBobStrength = 1.0;
 			headBobMode = 4;
@@ -53189,7 +53227,7 @@ class CfgMagazines {
 	class BP_Arrow_Mag: CA_Magazine
 	{
 		scope = 2;
-		displayName = "Boarhead Bolt";
+		displayName = "Broadhead Bolt";
 		picture = "\breakingpoint_weapons\icons\m_arrow_ca.paa"; //add different pics for each type
 		mass = 1;
 		ammo = "BP_Arrow_Ball";
@@ -53198,7 +53236,7 @@ class CfgMagazines {
 		initSpeed = 325;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
-		descriptionShort = "Classic boarhead hunting bolt for PSE TAC Elite Crossbow";
+		descriptionShort = "Classic broadhead hunting bolt for PSE TAC Elite Crossbow";
 	};
 
 	class BP_Arrow_Tranq: CA_Magazine
@@ -57355,12 +57393,12 @@ class CfgAmmo {
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
-			MedicalChance = 60;
+			MedicalChance = 100;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 50;
+			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
@@ -57453,7 +57491,7 @@ class CfgAmmo {
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
-			MedicalChance = 70;
+			MedicalChance = 100;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
@@ -57660,7 +57698,7 @@ class CfgAmmo {
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 3;
-			MedicalChance = 80;
+			MedicalChance = 100;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
@@ -60721,8 +60759,8 @@ class CfgAmmo {
 
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
-			MedicalState = 2;
-			MedicalChance = 50;
+			MedicalState = 3;
+			MedicalChance = 100;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
@@ -60735,7 +60773,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 1; //Between 0 -> 100
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60926,7 +60964,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 1; //Between 0 -> 100
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -60934,8 +60972,8 @@ class CfgAmmo {
 	};
 	class BP_TripMine_Ammo : MineBase
 	{
-		hit=100;
-		indirectHit=85;
+		hit=75;
+		indirectHit=55;
 		indirectHitRange=4;
 		explosive = 1;
 		model="\A3\Weapons_F\explosives\mine_AP_tripwire";
@@ -60959,12 +60997,12 @@ class CfgAmmo {
 			//Medical State Level (Bullet Hit will always put you in this state)
 			// 0 - None / 1 - Pain / 2 - Small Bandage / 3 - Field Dressing / 4 - Blood SFX / 5 - BloodSplash SFX
 			MedicalState = 5;
-			MedicalChance = 70;
+			MedicalChance = 100;
 
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 95;
+			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
@@ -60972,7 +61010,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 1; //Between 0 -> 100
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -61066,7 +61104,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 1; //Between 0 -> 100
+			KnockoutChance = 100; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

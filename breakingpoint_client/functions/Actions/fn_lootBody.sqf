@@ -40,7 +40,7 @@ if (isNull _body) exitWith {};
 if !(simulationEnabled _body) then { _body enableSimulation true; };
 
 //Delay
-sleep 1;
+sleep 0.5;
 
 //Handle Animation Result
 _finished = ["medic"] call BP_fnc_medicAnim;

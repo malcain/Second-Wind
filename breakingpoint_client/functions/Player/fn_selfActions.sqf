@@ -7,19 +7,18 @@
 	Alderon Games Pty Ltd
 */
 
-private ["_vehicle","_cursorTarget","_isPlayerChar","_inVehicle","_isWater","_hasAntiB","_hasMedBackpack","_isUnconscious"];
-_vehicle = vehicle player;
+private ["_vehicle","_cursorTarget","_isPlayerChar","_inVehicle","_isWater","_hasMedBackpack","_isUnconscious"];
+//_vehicle = vehicle player;
 _cursorTarget = cursorTarget;
 _cursorObject = cursorObject;
 _isPlayerChar = (isPlayer _cursorTarget);
 _inVehicle = (!isNull objectParent player);
-_isWater = ((getPosASL player select 2) < -0.5);
+_isWater = ((getPosASLW player select 2) < -0.5);
 _isStove = (_cursorTarget isKindOf "BP_Stove");
 _isCookable = false;
 _isFuel = false;
 _campFire = false;
 _campFireBurn = false;
-_hasAntiB = 	"ItemAntibiotic" in magazines player;
 _hasFuelE = false;
 {
 	if (_x in magazines player) exitWith { _hasFuelE = true; };
@@ -33,12 +32,13 @@ _hasFuel = false;
 _hasbottleitem = (("Waterbot" in magazines player) or ("WaterbotBoiled" in magazines player));
 _hasKnife = 	"ItemKnife" in magazines player;
 _hasMatches = 	"ItemMatchbox" in magazines player;
-//_hasBlowtorch = 	"ItemBlowtorch" in magazines player;
 _hasToolbox = 	"ItemToolbox" in assignedItems player;
 _hasIED = "BP_IED1_Mag" in magazines player;
 _hasRadioPack = ("BP_RadioPack" == (backpack player));
-_hasMedBackpack = ("BP_Mpack" == (backpack player) or {"V_RangerVest_BP" == (vest player)});
+_hasMedBackpack = ("V_RangerVest_BP" == (vest player));
 _hasSVest = ("BP_ExplosiveVest" == (vest player));
+//_Rebreathers = ["V_RebreatherB"];
+//_hasRebreather = (vest player in _Rebreathers);
 
 _isHostage = player getVariable ["med_hostage",false];
 _hasTape = (("ItemDuctTape" in magazines player) or ("ItemWaterTape" in magazines player));
@@ -376,7 +376,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	_isAnimal = ((_cursorTarget isKindOf "Animal") or (_cursorTarget isKindOf "Animal_Base_F") or (_cursorTarget isKindOf "BP_Dog"));
 	_isZombie = (_cursorTarget isKindOf "zZombie_base");
 	//_isPlayer = (typeOf _cursorTarget in BP_AllPlayers);
-	_isPlayer = isplayer _cursorTarget;
+	_isPlayer = isPlayer _cursorTarget;
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isCookable = (inflamed _cursorTarget or _isStove);
 	_isWater = false;
@@ -1214,12 +1214,12 @@ if (_dogHandle > 0) then
 			//};
 			//Defensive
 			if (_combatMode == 1) then {
-				_text = "Defensive";
+				_text = "Aggressive";
 				_nextMode = 2;
 			};
 			//Aggressive
 			if (_combatMode == 0) then {
-				_text = "Aggressive";
+				_text = "Defensive";
 				_nextMode = 1;
 			};
 			s_player_dog_combat = player addAction [format["Dog: Combat: %1",_text],{ _this spawn BP_fnc_dogCombatMode; },[_dog,_dogHandle,_nextMode], 2, false, true,"",""];
@@ -1242,3 +1242,18 @@ if (_dogHandle > 0) then
 	player removeAction s_player_dog_getin;
 	s_player_dog_getin = -1;
 };
+
+//Wheel
+/*_actionIDs = actionIDs player;
+
+AllActions deleteAt (AllActions findIf {(_x select 2 != -5) && !(_x select 2 in _actionIDs)});
+
+{
+	_params = player actionParams _x;
+	_title = _params select 0;
+	_script = _params select 1;
+	_arguments = _params select 2;
+	AllActions pushBackUnique [_title,_arguments call _script,_x]
+} forEach _actionIDs;
+
+[AllActions,{_this select 1;},0.3,0.15] call OptionWheel_fnc_setWheel;

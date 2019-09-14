@@ -36,6 +36,7 @@ switch (_iClass) do {
 	default {
 		//Item is food, add random quantity of cans along with an item (if exists)
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		_itemTypes = [] + ((getArray (configFile >> "cfgLoot" >> _iClass)) select 0);
 		_index = BP_CLBase find _iClass;
@@ -59,6 +60,7 @@ switch (_iClass) do {
 	case "weapon": {
 		//Item is a weapon, add it and a random quantity of magazines
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
@@ -74,6 +76,7 @@ switch (_iClass) do {
 	case "weaponA": {
 		//Item is a weapon, add it and a random quantity of magazines
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		_item addWeaponCargoGlobal [_iItem,1];
 		_mags = [] + getArray (configFile >> "cfgWeapons" >> _iItem >> "magazines");
@@ -93,11 +96,13 @@ switch (_iClass) do {
 	case "weaponNA": {
 		//Item is a weapon, add it with NO AMMO (NA)
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addWeaponCargoGlobal [_iItem,1];
 	};
 	case "magazine": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addMagazineCargoGlobal [_iItem,1];
 	};
 	case "ammo": {
@@ -105,6 +110,7 @@ switch (_iClass) do {
 		_magRndCount = round(random 1) + 1;
 		_amount = 1 + round random parsenumber (_iItem select [3,2]);
 		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		for "_i" from 1 to _magRndCount do {
 			_amount = 1 + round random parsenumber (_iItem select [3,2]);
@@ -133,30 +139,35 @@ switch (_iClass) do {
 	case "vest": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addItemCargoGlobal [_iItem,1];
 		_item enableDynamicSimulation true;
 	};
 	case "uniform": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addItemCargoGlobal [_iItem,1];
 		_item enableDynamicSimulation true;
 	};
 	case "headgear": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addItemCargoGlobal [_iItem,1];
 		_item enableDynamicSimulation true;
 	};
 	case "toolbelt": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addItemCargoGlobal [_iItem,1];
 		_item enableDynamicSimulation true;
 	};
 	case "backpack": {
 		//Item is one magazine
 		_item = createVehicle ["WeaponHolderSimulated_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item addBackpackCargoGlobal [_iItem,1];
 		_item enableDynamicSimulation true;
 	};

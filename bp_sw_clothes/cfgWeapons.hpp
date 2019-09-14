@@ -60,6 +60,21 @@ class cfgWeapons {
 		};
 	};
 	
+	class Outlaw_BandanaTAN: Outlaw_BandanaRED
+	{
+		displayName = "Grey Bandana";
+		picture="\bp_sw\bp_sw_clothes\Facewear\UI\icon_Bandana_clean.paa";
+		model = "bp_sw\bp_sw_clothes\Facewear\Shemagh_FaceTan.p3d";
+		class ItemInfo
+		{
+			type = 616;
+			hmdType = 16;
+			uniformModel = "bp_sw\bp_sw_clothes\Facewear\Shemagh_FaceTan.p3d";
+			modelOff = "bp_sw\bp_sw_clothes\Facewear\Shemagh_FaceTan.p3d";
+			mass = 1;
+		};
+	};
+	
 	class Scavenger_Goggles: NVGoggles
 	{
 		scope=2;
@@ -252,6 +267,98 @@ class cfgWeapons {
 			1,
 			"G_Shades_Green",
 			1
+		};
+	};
+	
+	class BP_Outlaw_LungeeBlue: HelmetBase
+	{
+		scope=2;
+		displayName="Outlaw hat (Blue)";
+		picture="\bp_sw\bp_sw_clothes\ui\outlaw_Hat_Blue.paa";
+		model="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\bp_sw\bp_sw_clothes\Headgear\data\loc_ind01_1_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee";
+			modelSides[]={6};
+		};
+	};
+	
+	class BP_Outlaw_LungeeDes: HelmetBase
+	{
+		scope=2;
+		displayName="Outlaw hat (Desert)";
+		picture="\bp_sw\bp_sw_clothes\ui\outlaw_Hat_Des.paa";
+		model="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\bp_sw\bp_sw_clothes\Headgear\data\loc_ind01_3_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee";
+			modelSides[]={6};
+		};
+	};
+	
+	class BP_Outlaw_LungeeOpen: HelmetBase
+	{
+		scope=2;
+		displayName="Outlaw hat";
+		picture="\bp_sw\bp_sw_clothes\ui\outlaw_hatOpen.paa";
+		model="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee_open.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\bp_sw\bp_sw_clothes\Headgear\data\loc_ind02_1_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee_open";
+			modelSides[]={6};
+		};
+	};
+	
+	class BP_Outlaw_LungeeOpenDes: HelmetBase
+	{
+		scope=2;
+		displayName="Outlaw hat (Desert)";
+		picture="\bp_sw\bp_sw_clothes\ui\outlaw_hatOpen_Des.paa";
+		model="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee_open.p3d";
+		hiddenSelections[]=
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\bp_sw\bp_sw_clothes\Headgear\data\loc_ind02_3_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			mass=6;
+			allowedSlots[]={801,901,701,605};
+			uniformModel="\bp_sw\bp_sw_clothes\Headgear\outlaw_lungee_open";
+			modelSides[]={6};
 		};
 	};
 };

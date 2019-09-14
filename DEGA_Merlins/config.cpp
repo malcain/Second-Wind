@@ -252,8 +252,8 @@ class CfgVehicles
 		
 		//extCameraPosition[]={0,5,-30};
 		maxSpeed = 300;
-		fuelCapacity=2500;
-		fuelConsumptionRate=0.138;
+		fuelCapacity=1000; //2500
+		fuelConsumptionRate=0.055; //0.138
 		maximumLoad = 3000;
 		accuracy=0.5;
 		cost=10000000;

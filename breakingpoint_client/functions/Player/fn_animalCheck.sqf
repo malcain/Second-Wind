@@ -7,7 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-#define ANIMALS ["BP_Dog","BP_Dog","BP_Chicken_1","BP_Chicken_2","BP_Sheep","BP_Sheep","Goat_random_F","Goat_random_F","BP_Rabbit","BP_Rabbit"]
+#define ANIMALS ["BP_Dog","BP_Dog","BP_Chicken_1","BP_Chicken_2","BP_Sheep","BP_Sheep","Goat_random_F","Goat_random_F","BP_Rabbit","BP_Rabbit","Snake_random_F","Snake_vipera_random_F"]
 #define DOGS ["BP_Dog_1","BP_Dog_2","BP_Dog_3","BP_Dog_5","BP_Dog_6","BP_Dog_7"] //removed bp_dog_4
 #define SHEEPS ["BP_Sheep_1","BP_Sheep_2","BP_Sheep_3","BP_Sheep_4"]
 
@@ -21,7 +21,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	_PosList = [];
 	_PosSelect = [];
 	_mushroom = false;
-	_randomDistance = 600 + random 600;
+	_randomDistance = 700 + random 700;
 
 	//Find where animal likes
 	_type = selectRandom ANIMALS;
@@ -35,7 +35,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//http://resources.bisimulations.com/wiki/selectBestPlaces
 	
 	_favouritezones = "(forest + meadow + trees) * (1 - houses) * (1 - sea)";
-	_mushroomZones = "forest + trees - meadow * (1 - sea) * (1 - houses)";
+	_mushroomZones = "forest - meadow * (1 - sea) * (1 - houses)";
 	
 	if (random 100 < 65) then {
 		_mushroom = true;
@@ -56,8 +56,8 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	_Pos = _PosSelect select 0 findEmptyPosition [0,10];
 	if (_Pos isEqualTo []) exitWith {};
 	
-	//_nearbyAnimals = [_playerPos,150] call BP_fnc_nearbyAnimals;
-	if (player distance _Pos > 150 and (NOT surfaceIsWater _Pos)) then {
+	_nearbyAnimals = [_Pos,150] call BP_fnc_nearbyAnimals;
+	if (player distance _Pos > 200 && {_nearbyAnimals < 1} and (NOT surfaceIsWater _Pos)) then {
 		_spawnType = "FORM";
 		if (_type in DOGS) then { _spawnType = "NONE"; };
 		_agent = createAgent [_type, _Pos, [], 0, _spawnType];

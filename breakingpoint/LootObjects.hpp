@@ -8,7 +8,8 @@
 */
 
 //Base Class
-class BP_LootBox : Thing 
+//class ThingX;
+class BP_LootBox : NATO_Box_Base 
 {
 	scope = public;
 	displayName = "Loot Box";
@@ -25,6 +26,8 @@ class BP_LootBox : Thing
 		init = "_this call BP_fnc_onLootInit;";
 		local = "_this call BP_fnc_onLootLocal;";
 	};
+	//waterLinearDampingCoefY=1;
+	//waterAngularDampingCoef=0.1;
 };
 	
 /* Medic Boxes*/

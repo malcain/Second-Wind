@@ -19,6 +19,12 @@ if (_weapon in BP_MeleeWeapons or (_weapon == _handgun)) then
 
 player playMoveNow _animation;
 
+if (_animation isEqualTo "bp_cutbody") then {
+	_dis=30;
+	[player,"gut",0,false,_dis] call BP_fnc_objSpeak;
+	[player,_dis,true,(getPosATL player)] spawn BP_fnc_zombieAlert;
+};
+
 r_interrupt = false;
 _animState = animationState player;
 r_doLoop = true;

@@ -105,6 +105,7 @@ class CfgFunctions
 			class objSpeak {};
 			class objVehicleKilled {};
 			class objCheck {};
+			class ropeAttachObject {};
 		};
 		
 		class Objects {

@@ -18,6 +18,9 @@ _dog = createAgent [_classname, _position, [], 0, "CAN_COLLIDE"];
 _dog setVariable ['BIS_fnc_animalBehaviour_disable',true];
 _dog setVariable ['BIS_noCoreConversations',true];
 
+_dog setSkill 1;
+_dog setBehaviourStrong "CARELESS";
+
 // -- Test AI Script
 //_cry = _dog spawn 
 //{

@@ -47,8 +47,8 @@ _player addBackpack (selectRandom _backpackRnd);
 
 //Toolbelt
 {
-	_player addItem _x;
-	_player assignItem _x;
+	//_player addItem _x;
+	//_player assignItem _x;
 	_player linkItem _x;
 } count (getArray (_baseConfig >> "Spawn" >> "toolbelt"));
 

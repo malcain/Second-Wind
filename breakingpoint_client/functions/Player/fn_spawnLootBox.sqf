@@ -45,6 +45,7 @@ while {_numItems > 0} do
 		//Item is one magazine with random ammo count
 		_amount = 1 + round random parsenumber (_iItem select [3,2]);
 		_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], RADIUS, "CAN_COLLIDE"];
+		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		_item addMagazineAmmoCargo [_iItem,1,_amount];
 		};

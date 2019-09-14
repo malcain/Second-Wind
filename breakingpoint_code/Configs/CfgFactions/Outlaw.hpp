@@ -173,7 +173,7 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"rvg_bandana_4","TRYK_US_ESS_Glasses_NV","CUP_H_TKI_Lungee_Open_06"};
+					toolbelt[] = {"Outlaw_BandanaTAN","BP_Outlaw_LungeeOpenDes"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {};
@@ -182,8 +182,8 @@
 					backpack[] = {"BP_RadioPack"};
 					vest[]={"BP_ExplosiveVest"};
 					uniform[] = {"BP_Rebel_4","BP_Rebel_4_ChocChip"};
-					headgear[] = {""};//{"CUP_H_TKI_Lungee_Open_06","CUP_H_TKI_Lungee_Open_04","CUP_H_TKI_Lungee_06"};
-					nvg[]={"Outlaw_BandanaRED"};
+					headgear[] = {"BP_Outlaw_LungeeOpenDes"};
+					nvg[]={"Outlaw_BandanaTAN","Outlaw_BandanaRED"};
 					facewear[]={""};
 				};
 				class Uniform : BP_BaseGear  {
@@ -198,13 +198,13 @@
 					//Array Of Weapons Inside Backpack
 					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_2Rnd_Buckshot"};
+					magazines[] = {};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
 					items[] = {};
 				};
 				class Backpack : BP_BaseGear {
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_Lupara"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
 					magazines[] = {"ChemR","ChemR","HandGrenade","ItemMatchbox"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )

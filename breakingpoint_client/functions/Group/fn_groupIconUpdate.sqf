@@ -46,16 +46,18 @@ _vehicleList = [];
 				_memberPosIcon set [2, ((_x modelToWorld [0,0,0]) select 2) + 2.0]; // Torso height
 				_memberPosText = visiblePositionASL _x;
 				_memberPosText set [2, ((_x modelToWorld [0,0,0]) select 2) + 1.8]; // Torso height
+				_iconSize = linearConversion [0,1500,_memberDist,0.4,1,true];
 				
 				if (_memberDistance < 2000) then 
 				{
 					//Member Icon
-					0 = _groupMembersIcons pushBack [_memberIcon, [255, 255, 255, 1], _memberPosIcon,1,1,0];
+					0 = _groupMembersIcons pushBack [_memberIcon, [255, 255, 255, 1], _memberPosIcon,_iconSize,_iconSize,0];
 					
 					if (_memberDistance < 1500) then 
 					{
 						//Member Name
-						if (!isStreamFriendlyUIEnabled) then { 0 = _groupMembersIcons pushBack ["", _memberColour, _memberPosText,0,0,0,_memberName,0,0.04,"PuristaMedium"]; };
+						_textSize = linearConversion [0,1500,_memberDist,0.02,0.04,true];
+						if (!isStreamFriendlyUIEnabled) then { 0 = _groupMembersIcons pushBack ["", _memberColour, _memberPosText,0,0,0,_memberName,0,_textSize,"PuristaMedium"]; };
 					};						
 				};
 			};
@@ -88,14 +90,16 @@ _vehicleList = [];
 				_memberPosIcon set [2, ((_dog modelToWorld [0,0,0]) select 2) + 1.35]; // Torso height
 				_memberPosText = visiblePositionASL _dog;
 				_memberPosText set [2, ((_dog modelToWorld [0,0,0]) select 2) + 1.20]; // Torso height
+				_iconSize = linearConversion [0,1500,_memberDist,0.3,0.8,true];
 				
 				if (_memberDistance < 2000) then {
 					//Member Icon
-					0 = _groupMembersIcons pushBack [_memberIcon, [255, 255, 255, 1], _memberPosIcon,0.8,0.8,0];
+					0 = _groupMembersIcons pushBack [_memberIcon, [255, 255, 255, 1], _memberPosIcon,_iconSize,_iconSize,0];
 					
 					//Member Name
 					if (_memberDistance < 1500) then {
-						0 = _groupMembersIcons pushBack ["", _memberColour, _memberPosText,0,0,0,_memberName,0,0.04,"PuristaMedium"];
+						_textSize = linearConversion [0,1500,_memberDist,0.02,0.04,true];
+						0 = _groupMembersIcons pushBack ["", _memberColour, _memberPosText,0,0,0,_memberName,0,_textSize,"PuristaMedium"];
 					};
 				};					
 			};

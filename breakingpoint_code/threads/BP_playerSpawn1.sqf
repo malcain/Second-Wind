@@ -85,6 +85,9 @@ waitUntil
 		if (isObjectHidden _x) then {
 			if (_distanceTo < 100) then {
 				_x hideobject false;
+				if (underwater _x && {count (actionIDs _x) == 0} && {_x isKindOf "BP_LootBox"}) then {
+					_x addAction ["Tow Up", { _this spawn BP_fnc_ropeAttachObject },[], 1, true, true, "", "", 3];
+				};
 			};
 		} else {
 			if (_distanceTo >= 100 && {[_x] call BP_fnc_isInsideBuilding}) then {

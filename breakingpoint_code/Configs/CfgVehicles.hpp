@@ -103,16 +103,18 @@ class CfgVehicles
 	//Dead Bodies
 	//class Dead_base_F;
 	class GroundWeaponHolder;
-	class BP_DeadBody : GroundWeaponHolder 
+	//class ThingX;
+	class NATO_Box_Base;
+	class BP_DeadBody : NATO_Box_Base 
 	{
 		scope = private;
 		displayName = "Dead Body";
 		model="\A3\Weapons_f\dummyweapon.p3d";
-		forceSupply = false;
+		vehicleClass = "Survival";
+		//forceSupply = false;
 		maximumLoad = 1000;
-		transportMaxMagazines = 400;
-		transportMaxWeapons = 10;
-		transportMaxBackpacks = 6;
+		//waterLinearDampingCoefY=1;
+		//waterAngularDampingCoef=0.1;
 	};
 	
 	class BP_DeadBodyAI : BP_DeadBody  {};
@@ -441,7 +443,11 @@ class CfgVehicles
 	
 	class BP_RadioPack: BP_Bag_Base {
 		scope = 2;
-		model = "\breakingpoint_classes\models\BP_MPack.p3d";
+		picture = "\a3\Supplies_F_Enoch\Bags\Data\UI\icon_B_RadioBag_01_wdl_F_ca.paa";
+		model = "\a3\Supplies_F_Enoch\Bags\B_RadioBag_01_F.p3d";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"a3\supplies_f_enoch\bags\data\B_RadioBag_01_WDL_CO.paa"};
+		headGforceLeaningFactor[] = {0.01,0.002,0.01};
 		allowedSlots[] = {};
 		maximumLoad = 200;
 		mass = 160;
@@ -1202,6 +1208,24 @@ class CfgVehicles
 		respawnlinkedItems[] = {};
 		weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 		canHideBodies = 0;
+		speechSingular[] = {};
+		speechPlural[] = {};
+		/*movesFatigue = "CfgMovesFatigue";
+		vehicleClass = "MenDiver";
+		class SpeechVariants
+        {
+            class Default
+            {
+                speechSingular[]=
+                {
+                    "veh_infantry_diver_s"
+                };
+                speechPlural[]=
+                {
+                    "veh_infantry_diver_p"
+                };
+            };
+        };*/
 		class SpeechVariants {
 
 			class Default {
@@ -4589,6 +4613,21 @@ class CfgVehicles
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 3;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.1;
@@ -4687,6 +4726,22 @@ class CfgVehicles
 		transportMaxBackpacks = 3;
 		hiddenSelections[] = {"Camo","Camo2","Camo3"};
 		hiddenSelectionsTextures[] = {"a3\soft_f_enoch\offroad_01\data\offroad_01_ext_ranger_co.paa","a3\soft_f_enoch\offroad_01\data\offroad_01_ext_ranger_co.paa","a3\soft_f_enoch\offroad_01\data\offroad_01_cover_ranger_co.paa"};
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.1;
@@ -4785,6 +4840,21 @@ class CfgVehicles
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 3;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.1;
@@ -4882,6 +4952,21 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 3;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -4992,6 +5077,21 @@ class CfgVehicles
 		};
 		*/
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.1;
@@ -5092,7 +5192,15 @@ class CfgVehicles
 		maxSpeed = 80;
 		class ViewPilot: ViewPilot
 		{
-			MinFov=0.37;
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
 			MaxFov=0.80;
 			InitFov=0.75;
 		};
@@ -5794,6 +5902,21 @@ class CfgVehicles
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 2;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0;
@@ -5907,6 +6030,21 @@ class CfgVehicles
 		transportMaxMagazines = 20;
 		transportMaxWeapons = 2;
 		transportMaxBackpacks = 2;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6047,6 +6185,21 @@ class CfgVehicles
 		transportFuel = 0;
 		fuelCapacity = 1000;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0;
@@ -6146,6 +6299,21 @@ class CfgVehicles
 		transportMaxBackpacks = 10;
 		transportFuel = 0;
 		fuelCapacity = 1250;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6279,6 +6447,21 @@ class CfgVehicles
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0;
@@ -6368,6 +6551,21 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6498,6 +6696,21 @@ class CfgVehicles
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitGlass1 {
@@ -6682,6 +6895,21 @@ class CfgVehicles
 			};
 		};
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.8;
@@ -6805,6 +7033,21 @@ class CfgVehicles
 		transportMaxBackpacks = 0;
 		maxSpeed = 85;
 		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitEngine {
 				armor = 1;
@@ -6849,6 +7092,21 @@ class CfgVehicles
 		transportMaxWeapons = 0;
 		transportMaxBackpacks = 0;
 		maxSpeed = 45;
+		
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+			
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitBody {

@@ -161,6 +161,14 @@ class CfgSurvival {
 			yield = 3;
 			rawfoodtype = "FoodMuttonRaw";
 		};
+		class Snake_random_F: Default {
+			yield = 1;
+			rawfoodtype = "FoodMuttonRaw";
+		};
+		class Snake_vipera_random_F: Default {
+			yield = 1;
+			rawfoodtype = "FoodMuttonRaw";
+		};
 		class zZombie_Base : Default {
 			rawfoodtype = "FoodZombieRaw";
 		};

@@ -30,9 +30,11 @@ if (BP_LootGlobal > BP_LootMax) exitWith {};
 _locked = (_building getVariable ['bis_disabled_Door',0] == 1);
 if (_locked) exitWith {};
 
-//Positions are broken if building is on water, so don't spawn in
-_height = getTerrainHeightASL getPos _building;
-if (_height < -1.5) exitwith {};
+//building is in water
+if ((getPosASLW _building select 2) < -1.5) then { 
+	_underwater = true;
+	_buildingSize = _buildingSize + 15;
+};
 
 //Check If Building Is A Haven
 if ((netID _building) in BP_Buildings) exitWith {};
@@ -98,9 +100,7 @@ for "_i" from 1 to (count _positions) do {
 
 	//Calculate Item Position in World Space
 	_iPos = _building modelToWorld _x;
-	if (_height < -0.1) then {
-	_iPos = [(_buildingPos select 0) + (_x select 0), (_buildingPos select 1) + (_x select 1),(_buildingPos select 2) + (_x select 2)];
-	};
+	
 	//Check If Any Loot Boxes are in that world position
 	_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
 
@@ -117,6 +117,7 @@ for "_i" from 1 to (count _positions) do {
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
 			_itemType = _itemTypes select _index;
+			if (_underwater && ((_itemType select 1) != "object")) exitwith {};
 			
 			if (count _itemType > 2) then {
 				[_itemType select 0, _itemType select 1, _itemType select 2, _iPos] call BP_fnc_spawnLoot;
@@ -162,6 +163,7 @@ if (_rnd < _lootChanceSpc) then {
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
 			_itemType = _spcItemTypes select _index;
+			if (underwater _building && ((_itemType select 1) != "object")) exitwith {};
 			
 			if (count _itemType > 2) then {
 				[_itemType select 0, _itemType select 1, _itemType select 2, _iPosSpecial] call BP_fnc_spawnLoot;

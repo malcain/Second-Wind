@@ -434,6 +434,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_RefugeeF_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 40;
@@ -480,6 +481,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BP_Refugee1_F";
+			uniformType = "Neopren";
 			containerClass="Supply20";
 			mass=40;
 		};
@@ -510,6 +512,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass = "BP_Refugee2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -540,6 +543,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Refugee3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -573,6 +577,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Refugee4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -605,6 +610,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_GuardianF_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -635,6 +641,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Guardian1_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -665,6 +672,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Guardian2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -695,6 +703,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Guardian3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply60";
 			mass = 40;
@@ -729,6 +738,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BP_Guardian4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass="Supply60";
 			mass=40;
@@ -749,6 +759,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "BP_Guardian4_Ind_F";
+			uniformType = "Neopren";
 			containerClass = "Supply40";
 			mass = 30;
 			//type = 801;
@@ -769,6 +780,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_RebelF_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply10";
 			mass = 40;
@@ -838,6 +850,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Rebel1_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -867,6 +880,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Rebel2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -897,6 +911,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Rebel3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -930,6 +945,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BP_Rebel4_F";
+			uniformType = "Neopren";
 			allowedSlots[]={};
 			containerClass="Supply50";
 			mass=40;
@@ -948,6 +964,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BP_Rebel4_Taki";
+			uniformType = "Neopren";
 			allowedSlots[]={};
 			containerClass="Supply50";
 			mass=40;
@@ -964,6 +981,7 @@ class CfgWeapons
 		{
 			uniformModel="-";
 			uniformClass="BP_Rebel3_F";
+			uniformType = "Neopren";
 			allowedSlots[]={};
 			containerClass="Supply50";
 			mass=40;
@@ -979,6 +997,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Hunter1_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -1009,6 +1028,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Hunter2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -1039,6 +1059,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Hunter3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply80";
 			mass = 40;
@@ -1068,21 +1089,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel="-";
 			uniformClass="BP_Hunter4_F";
-			allowedSlots[]={};
-			containerClass="Supply80";
-			mass=40;
-		};
-	};
-	
-	class BP_Hunter_4_Green: Uniform_Base
-	{
-		scope=2;
-		displayName="Hunter level 4 (Green)";
-		picture="\breakingpoint_ui\icons\HunterIcon.paa";
-		model="\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
-		class ItemInfo: UniformItem {
-			uniformModel="-";
-			uniformClass="FRITH_RUIN_sdr_fab_rs";
+			uniformType = "Neopren";
 			allowedSlots[]={};
 			containerClass="Supply80";
 			mass=40;
@@ -1098,6 +1105,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist1_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -1128,6 +1136,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply60";
 			mass = 40;
@@ -1158,6 +1167,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1191,6 +1201,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1207,6 +1218,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_DirtSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1222,6 +1234,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_CornSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1237,6 +1250,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_StoneSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1252,6 +1266,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Survivalist3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1268,6 +1283,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_TreeSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1284,6 +1300,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_NightSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1299,6 +1316,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_SnowSurvivalist4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply70";
 			mass = 40;
@@ -1314,6 +1332,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_SurvivalistF_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply20";
 			mass = 40;
@@ -1374,6 +1393,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Scavenger1_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply30";
 			mass = 40;
@@ -1404,6 +1424,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Scavenger2_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply40";
 			mass = 40;
@@ -1434,6 +1455,7 @@ class CfgWeapons
 		class ItemInfo: UniformItem {
 			uniformModel = "-";
 			uniformClass = "BP_Scavenger3_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -1450,6 +1472,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "BP_Scavenger4_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;
@@ -1466,6 +1489,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "BP_Scavenger4Crow_F";
+			uniformType = "Neopren";
 			allowedSlots[] = {};
 			containerClass = "Supply50";
 			mass = 40;

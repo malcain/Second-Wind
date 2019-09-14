@@ -332,7 +332,7 @@ class BreakingPoint
 		class Animals
 		{
 			enabled = true;
-			max = 8;
+			max = 7;
 			distance = 1200;
 		};
 

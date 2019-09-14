@@ -7,13 +7,7 @@
 	Alderon Games Pty Ltd
 */
 
-//params [["_source", objNull, [objNull]],["_type", "", [""]],["_chance", 0, [0]],["_local", false, [false]],["_distance",  0, [0]];
-private ["_source","_type","_chance","_distance","_num"];
-_source = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_type = [_this, 1, "", [""]] call BIS_fnc_param;
-_chance = [_this, 2, 0, [0]] call BIS_fnc_param;
-_local = [_this, 3, false, [false]] call BIS_fnc_param;
-_distance = [_this, 4, 0, [0]] call BIS_fnc_param;
+params [["_source", objNull, [objNull]],["_type", "", [""]],["_chance", 0, [0]],["_local", false, [false]],["_distance",  0, [0]]];
 
 //Exit If Source is Null
 if (isNull _source) exitWith {};
@@ -68,7 +62,7 @@ if (_distance == 0) then
 	_distance = 35;
 	
 	//Define Override Distance
-	if (_type in ["shout","hit","attack","scream","breath","spotted"]) then {
+	if (_type in ["shout","hit","attack","scream","breath","spotted","dog_bark","dog_growl","dog_confirm"]) then {
 		_distance = 75;
 	} else {
 		_distance = 40;
@@ -76,7 +70,9 @@ if (_distance == 0) then
 };
 
 //Check Locality if Anyone is Nearby
-if (!_local) then { _local = ({isPlayer _x} count (_source nearEntities ["AllVehicles",_distance]) < 2); };
+_nearbyPlayers = _source nearEntities ["BP_Man",_distance];
+_nearbyPlayers = _nearbyPlayers - [player];
+if (!_local) then { _local = (count _nearbyPlayers isEqualTo 0); };
 
 //Women Zombie Sounds (Stub)
 //_isWoman = getText(configFile >> "cfgVehicles" >> (typeOf _source) >> "TextPlural") == "Women";
@@ -94,6 +90,10 @@ if ((round(random _chance) == _chance) or (_chance == 0)) then
 		//Check If Player is Inside a Building
 		_isInside = [_source] call BP_fnc_isInsideBuilding;
 		
+		[_source, [_sound, _distance]] remoteExec ["say3D",_nearbyPlayers, false];
+		_source say3D [_sound, _distance];
+		
+		/*
 		//Set Default Sound Values
 		_soundVolume = 1;
 		_soundPitch = 1;
@@ -108,6 +108,6 @@ if ((round(random _chance) == _chance) or (_chance == 0)) then
 		["objSpeak: Sound: %1 Path: %2 Source: %3",_sound,_soundPath,_source] call BP_fnc_debugConsoleFormat;
 		
 		//Play Sound Globally Over The Network
-		playSound3D [_soundPath, _source, _isInside, getPos _source, _soundVolume, _soundPitch, _distance];
+		playSound3D [_soundPath, _source, _isInside, getPos _source, _soundVolume, _soundPitch, _distance];*/
 	};
 };

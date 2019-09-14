@@ -15,9 +15,10 @@ _whistle = _array select 2;
 
 if (_whistle) then { [player,"dog_whistleFollow",0,false] call BP_fnc_objSpeak; };
 
-if (_dog distance player > 1200) then {
-	_dogRelPos = [getpos player,900,1150,4,0,0.5,0] call BIS_fnc_findSafePos; 
+if (_dog distance player > 900) then {
+	_dogRelPos = [getpos player,800,900,4,0,0.5,0] call BIS_fnc_findSafePos; 
 	_dog setPos _dogRelPos;
+	_dog setDir ([_dog, player] call BIS_fnc_dirTo);
 };
 _dogHandle setFSMVariable ["_command","return"];
 

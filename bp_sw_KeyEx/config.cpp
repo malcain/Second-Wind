@@ -45,10 +45,10 @@ class CfgKeybindsEx {
 		};
 	};*/
 	class breakingpoint_FactionStats {
-		displayName = "Open Diary"; //Tab Display Name
+		displayName = "Character Diary"; //Tab Display Name
 		class Diary { //Unique Identifier for this Keybind
-			displayName = "Open Diary"; //Display name of this keybinding
-			tooltip = "Opens your Diary with progress"; //Tooltip
+			displayName = "Character Diary"; //Display name of this keybinding
+			tooltip = "Opens Diary with information on class progression"; //Tooltip
 			defaultKeys[] = {{0x24,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
 			code = "call BP_fnc_loadFactionStatsDiary;"; //Code to run when this keybind is pressed
 		};

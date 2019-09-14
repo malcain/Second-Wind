@@ -42,9 +42,7 @@ with uiNamespace do {
 						
 					];
 				};
-				
 			};
-			
 		};
 	};
 };

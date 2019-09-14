@@ -24,10 +24,10 @@ class CfgPatches
 {
 	class breakingpoint_client 
 	{
-		units[] = {"Altis","Stratis","Bornholm","newhaven"};
+		units[] = {""};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","A3_Map_Altis","A3_Map_Stratis","breakingpoint_infected"};
+		requiredAddons[] = {"breakingpoint_functions","A3_Data_F","breakingpoint_infected"};
 	};
 };
 
@@ -55,6 +55,7 @@ class CfgPatches
 //	class Stronghold_Hunter : Stronghold { texture = "\breakingpoint_ui\icons\HunterIcon.paa"; };
 //	class Stronghold_Survivalist : Stronghold { texture = "\breakingpoint_ui\icons\SurvivalistIcon.paa"; };
 //};
+/*
 
 class CfgWorlds 
 {
@@ -77,7 +78,7 @@ class CfgWorlds
 	
 	class Stratis : CAWorld 
 	{ 
-		midDetailTexture = "breakingpoint\textures\midrange\mid_range_stonesharp_mco.paa";
+		//midDetailTexture = "breakingpoint\textures\midrange\mid_range_stonesharp_mco.paa";
 		
 		class Ambient {};
 		
@@ -86,26 +87,26 @@ class CfgWorlds
 			maxCost = 500;
 			delete Radius440_500; //Kestrel / Seagull / Rabbit
 			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
-			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
-			delete Radius15_20; //FX / Wind / Paper / Pollen
-			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
+			//delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
+			//delete Radius15_20; //FX / Wind / Paper / Pollen
+			//delete Radius6_10; //HoneyBee / HouseFly / Mosquito
 		};
 	};
 
 	class Altis : CAWorld 
 	{
-		midDetailTexture = "breakingpoint\textures\midrange\mid_range_stone_mco.paa";
+		//midDetailTexture = "breakingpoint\textures\midrange\mid_range_stone_mco.paa";
 
 		class Ambient {};
 		
 		class AmbientA3 
 		{
 			maxCost = 500;
-			delete Radius440_500; //Kestrel / Seagull / Rabbit
-			delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
-			delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
-			delete Radius15_20; //FX / Wind / Paper / Pollen
-			delete Radius6_10; //HoneyBee / HouseFly / Mosquito
+			//delete Radius440_500; //Kestrel / Seagull / Rabbit
+			//delete Radius40_60; //CatShark / Turtle / Snake / Salema / Ornate / Mackerel / Mullet / Tuna
+			//delete Radius30_40; //DragonFly / ButterFly / FireFly / Cicada
+			//delete Radius15_20; //FX / Wind / Paper / Pollen
+			//delete Radius6_10; //HoneyBee / HouseFly / Mosquito
 		};
 		
 		class Names
@@ -140,4 +141,4 @@ class CfgWorlds
 		};
 	};
 	
-};
+};*/

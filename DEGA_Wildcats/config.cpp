@@ -36,6 +36,17 @@ class CfgVehicles
 	};
 	
 	class Heli_light_03_base_F : Helicopter_Base_F {
+	};
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////AW159 Wildcat////////////////////////////////
+///////////////////////////////////////Base/////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+	class DEGA_Wildcat_Base: Heli_light_03_base_F
+	{
+		scope = 1;
+		side = 3;
+		scopeCurator = 0;		// 2 means available from Zeus, whereas 0 means hidden		
+		faction = "CIV_F";
 		
 		/* Breaking Point : Custom Event Handlers */
 		class BP_DefaultEventHandlers
@@ -61,18 +72,6 @@ class CfgVehicles
 			getout = "_this call BP_fnc_vehicleInteract;";
 		};
 		class EventHandlers : BP_VehicleEventHandlers {};
-	};
-////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////AW159 Wildcat////////////////////////////////
-///////////////////////////////////////Base/////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-	class DEGA_Wildcat_Base: Heli_light_03_base_F
-	{
-//		expansion = 2; // BAF
-		scope = 1;
-		side = 3;
-		scopeCurator = 0;		// 2 means available from Zeus, whereas 0 means hidden		
-		faction = "CIV_F";
 		
 	    author = "Deltagamer";
 
@@ -98,8 +97,8 @@ class CfgVehicles
 		slingLoadMemoryPoint = "slingLoad0";
 		slingLoadMaxCargoMass = 2000;
 		slingLoadOperator = 1;
-		fuelCapacity=742;
-		fuelConsumptionRate=0.103;
+		fuelCapacity=572; //742
+		fuelConsumptionRate=0.089; //0.103
 		maximumLoad = 2000;
 		class RotorLibHelicopterProperties
 		{
@@ -1850,10 +1849,11 @@ class CfgVehicles
 		scopeCurator = 2;		// 2 means available from Zeus, whereas 0 means hidden
 		displayname = "Wildcat (Rescue)";
 		hiddenSelections[] = {"camo1", "camo2"};
+		hiddenSelectionsTextures[]={"\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_co.paa", "\DEGA_Wildcats\data\ah64d_details_co.paa"};
+		//hiddenSelectionsTextures[]={"\DEGA_Wildcats\Skins\lynx_base_rdaf_co.paa", "\DEGA_Wildcats\data\ah64d_details_co.paa"};
 		model = "\DEGA_Wildcats\AW159_BAF_unarmed";
 		picture = "\DEGA_Wildcats\data\UI\picture_lynx_unarmed_ca.paa";
 		icon = "\DEGA_Wildcats\data\UI\icon_lynx_unarmed_ca.paa";		
-        hiddenSelectionsTextures[]={"\DEGA_Wildcats\Skins\lynx_base_rdaf_co.paa", "\DEGA_Wildcats\data\ah64d_details_co.paa"};
 		_generalMacro = "DEGA_Wildcat_Unarmed_RDAF";			
 		class Turrets: Turrets
 		{
