@@ -45,7 +45,8 @@ class CfgVehicles
 	//Fuel Pumps
 	class Land_FuelStation_01_pump_F: House_F
 	{
-		transportFuel=0;
+		memoryPointSupply="testbr";
+		transportfuel=700;
 	
 	/*
 	class DestructionEffects
@@ -110,17 +111,20 @@ class CfgVehicles
 
 	class Land_FuelStation_01_pump_malevil_F: House_F
 	{
-		transportFuel=0;
+		memoryPointSupply="testbr";
+		transportfuel=700;
 	};
 
 	class Land_FuelStation_02_pump_F: House_F
 	{
-		transportFuel=0;
+		memoryPointSupply="testbr";
+		transportfuel=700;
 	};
 
 	class Land_FuelStation_03_pump_F: House_F
 	{
-		transportFuel=0;
+		memoryPointSupply="testbr";
+		transportfuel=700;
 	};
 	
 	//Electricity

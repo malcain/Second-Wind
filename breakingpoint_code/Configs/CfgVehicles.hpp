@@ -100,6 +100,316 @@ class CfgVehicles
 		maximumLoad=65;
 	};
 	
+	//Flashlights
+	class Reflector_Cone_01_base_F;
+	class SW_Flashlight: Reflector_Cone_01_base_F
+	{
+		author="Malcain";
+		scope = 2;
+		scopeCurator = 2;
+		side = 3;
+		displayName = "SW flashlight (White)";
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[] = {1,1,1};
+				ambient[] = {1,1,1};
+				innerAngle = 10;
+				outerAngle = 38;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				hitpointClass = "Hit_Light_1";
+				selection = "Light_1_hide";
+				useFlare = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+			class Light_1_Flare
+			{
+				color[] = {1,1,1};
+				ambient[] = {1,1,1};
+				innerAngle = 10;
+				hitpointClass = "Hit_Light_1_Flare";
+				outerAngle = 185;
+				useFlare = 1;
+				flareSize = 0.9;
+				flareMaxDistance = 250;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				selection = "Light_1_hide";
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	
+	class SW_FlashlightBlue: SW_Flashlight
+	{
+		author="Malcain";
+		displayName = "Shoulder Flashlight (Blue)";
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[] = {0.5,0.5,1};
+				ambient[] = {0.5,0.5,1};
+				innerAngle = 10;
+				outerAngle = 38;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				hitpointClass = "Hit_Light_1";
+				selection = "Light_1_hide";
+				useFlare = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+			class Light_1_Flare
+			{
+				color[] = {0.6,0.6,1};
+				ambient[] = {0.87,0.87,1};
+				innerAngle = 10;
+				hitpointClass = "Hit_Light_1_Flare";
+				outerAngle = 185;
+				useFlare = 1;
+				flareSize = 0.9;
+				flareMaxDistance = 250;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				selection = "Light_1_hide";
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	
+	class SW_FlashlightGreen: SW_Flashlight
+	{
+		author="Malcain";
+		displayName = "Shoulder Flashlight (Green)";
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[] = {0.5,1,0.5};
+				ambient[] = {0.5,1,0.5};
+				innerAngle = 10;
+				outerAngle = 38;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				hitpointClass = "Hit_Light_1";
+				selection = "Light_1_hide";
+				useFlare = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+			class Light_1_Flare
+			{
+				color[] = {0.7,1,0.7};
+				ambient[] = {0.9,1,0.9};
+				innerAngle = 10;
+				hitpointClass = "Hit_Light_1_Flare";
+				outerAngle = 185;
+				useFlare = 1;
+				flareSize = 0.9;
+				flareMaxDistance = 250;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				selection = "Light_1_hide";
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	
+	class SW_FlashlightRed: SW_Flashlight
+	{
+		author="Malcain";
+		displayName = "Shoulder Flashlight (Red)";
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[] = {1,0.3,0.3};
+				ambient[] = {1,0.1,0.1};
+				innerAngle = 10;
+				outerAngle = 38;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				hitpointClass = "Hit_Light_1";
+				selection = "Light_1_hide";
+				useFlare = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+			class Light_1_Flare
+			{
+				color[] = {1,0.4,0.4};
+				ambient[] = {1,0.9,0.9};
+				innerAngle = 10;
+				hitpointClass = "Hit_Light_1_Flare";
+				outerAngle = 185;
+				useFlare = 1;
+				flareSize = 0.9;
+				flareMaxDistance = 250;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				selection = "Light_1_hide";
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	
+	class SW_FlashlightOrange: SW_Flashlight
+	{
+		author="Malcain";
+		displayName = "Shoulder Flashlight (Orange)";
+		class Reflectors
+		{
+			class Light_1
+			{
+				color[] = {1,0.63,0.45};
+				ambient[] = {1,0.63,0.45};
+				innerAngle = 10;
+				outerAngle = 38;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				hitpointClass = "Hit_Light_1";
+				selection = "Light_1_hide";
+				useFlare = 0;
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+			class Light_1_Flare
+			{
+				color[] = {1,0.65,0.5};
+				ambient[] = {1,0.88,0.85};
+				innerAngle = 10;
+				hitpointClass = "Hit_Light_1_Flare";
+				outerAngle = 185;
+				useFlare = 1;
+				flareSize = 0.9;
+				flareMaxDistance = 250;
+				intensity = 2500;
+				size = 1;
+				coneFadeCoef = 6;
+				position = "Light_1_pos";
+				direction = "Light_1_dir";
+				hitpoint = "Light_1_hitpoint";
+				selection = "Light_1_hide";
+				class Attenuation
+				{
+					start = 0;
+					constant = 0;
+					linear = 2;
+					quadratic = 0.5;
+					hardLimitStart = 50;
+					hardLimitEnd = 70;
+				};
+			};
+		};
+	};
+	
 	//Dead Bodies
 	//class Dead_base_F;
 	class GroundWeaponHolder;

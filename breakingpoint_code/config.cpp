@@ -343,6 +343,132 @@ class CfgCloudlets {
 		randomDirectionIntensityVar = 0.02;
 	};
 	
+	class desease_dot : Default {
+		circleVelocity[] = {0,0,0};
+		moveVelocity[] = {0,0,0};
+		size[] = {0.06,0.06};
+		color[] = {{0.04,0.03,0.03,0},{0.04,0.03,0.03,2.2},{0.04,0.03,0.03,0}};
+		animationSpeed[] = {0};
+		circleRadius = 40;
+		position[] = {0, 2, 0};
+		positionVar[] = {40,6,40};
+		positionVarConst[] = {0, 0, 0};
+		MoveVelocityVar[] = {0.1,0.1,0.1};
+		colorVar[] = {0.01,0,0,0.1};
+		interval = 0.001;
+		particleShape = "\A3\data_f\cl_basic";
+		particleFSNtieth = 1;
+		particleFSIndex = 0;
+		particleFSFrameCount = 1;
+		//particleFSLoop = 0;
+		angleVar = 1;
+		animationName = "";
+		particleType = "Billboard";
+		timerPeriod = 0.1;
+		lifeTime = 60;
+		rotationVelocity = 13;
+		weight = 10;
+		volume = 7.843;
+		rubbing = 0.025;
+		randomDirectionPeriod = 0;
+		randomDirectionIntensity = 0;
+		onTimerScript = "";
+		beforeDestroyScript = "";
+		blockAIVisibility = 0;
+		lifeTimeVar = 0;
+		rotationVelocityVar = 0.1;
+		sizeVar = 0.05;
+		randomDirectionPeriodVar = 0;
+		randomDirectionIntensityVar = 0;
+		onSurface = false;					// placing of particle on (water) surface on start of it's existence, default value is true, works only if circleRadius > 0
+		keepOnSurface = false;
+		//smokeGenMinDist = 400;				// for more info see "Changes dependent on distance"
+		//smokeGenMaxDist = 1250;				// for more info see "Changes dependent on distance"
+		//smokeSizeCoef = 48.0;				// for more info see "Changes dependent on distance"
+		//smokeIntervalCoef = 30.0;
+	};
+	
+	class desease_area : Default {
+		interval="10";
+		circleRadius=3;
+		circleVelocity[]={0,0,0};
+		angleVar=0.30000001;
+		particleFSLoop=0;
+		particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth=16;
+		particleFSIndex=12;
+		particleFSFrameCount=8;
+		animationName="";
+		particleType="Billboard";
+		timerPeriod=10;
+		lifeTime=30;
+		position[] = {0, 5, 0};
+		positionVar[] = {40,15,40};
+		positionVarConst[] = {0, 0, 0};
+		MoveVelocityVar[] = {0.1,0.1,0.1};
+		moveVelocity[]={0,0,0};
+		rotationVelocity=1;
+		weight=0.051300001;
+		volume=0.04;
+		rubbing=0.02;
+		size[]={1,8};
+		color[] = {{0.03,0.03,0.03,0},{0.03,0.03,0.03,0.5},{0.03,0.03,0.03,0}};
+		//color[]={{1,1,1,0.1},{1,1,1,0}};
+		animationSpeed[]={1};
+		randomDirectionPeriod=0;
+		randomDirectionIntensity=0;
+		onTimerScript="\breakingpoint_code\events\hint.sqf";
+		beforeDestroyScript = "\breakingpoint_code\events\flash.sqf";
+		lifeTimeVar=0;
+		rotationVelocityVar=0.1;
+		sizeVar=0;
+		colorVar[]={0,0,0,0};
+		randomDirectionPeriodVar=0;
+		randomDirectionIntensityVar=0;
+		onSurface = false;
+		keepOnSurface = false;
+		
+		/*circleVelocity[] = {0,0,0};
+		moveVelocity[] = {0,0,0};
+		size[] = {4,4};
+		color[] = {{0.03,0.03,0.03,0},{0.03,0.03,0.03,0.3},{0.03,0.03,0.03,0}};
+		animationSpeed[] = {0};
+		circleRadius = 60;
+		position[] = {0, 2, 0};
+		positionVar[] = {60,30,60};
+		positionVarConst[] = {0, 0, 0};
+		MoveVelocityVar[] = {0.1,0.1,0.1};
+		colorVar[] = {0.01,0,0,0.1};
+		interval="0.1";
+		particleShape="\A3\data_f\cl_basic.p3d";
+		particleFSNtieth=16;
+		particleFSIndex=7;
+		particleFSFrameCount=48;
+		particleFSLoop=1;
+		//scale = [0.9,0.75,0.6,0.8];
+		angleVar = 1;
+		animationName = "";
+		particleType = "Billboard";
+		timerPeriod = 1;
+		lifeTime = 10;
+		rotationVelocity = 13;
+		weight = 20;
+		volume = 13;
+		rubbing = 0.01;
+		randomDirectionPeriod = 0;
+		randomDirectionIntensity = 0;
+		onTimerScript = "";
+		beforeDestroyScript = "";
+		blockAIVisibility = 0;
+		lifeTimeVar = 0;
+		rotationVelocityVar = 0.1;
+		sizeVar = 0.05;
+		randomDirectionPeriodVar = 0;
+		randomDirectionIntensityVar = 0;
+		onSurface = false;
+		keepOnSurface = false;*/
+	};
+	
 	//Alarm clock
 	class alarm_clock: Default
 	{

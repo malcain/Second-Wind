@@ -222,8 +222,9 @@ if (_dikCode == 4) then
 };
 
 // 4 - Binoculars
-if (_dikCode == 5) then 
+/*if (_dikCode == 5) then 
 {
+	
 	if (time - BP_lastCheckBit > 1) then
 	{
 		if (BP_isUndead) exitWith {};
@@ -247,7 +248,7 @@ if (_dikCode == 5) then
 		};
 	};
 	_handled = true;
-};
+};*/
 
 // 5 - No Weapon
 if (_dikCode == 6) then {
@@ -319,7 +320,6 @@ if (_dikCode == 6) then {
 // Movement Keys
 if (_dikCode in actionKeys "TurnLeft") then { 
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -327,7 +327,6 @@ if (_dikCode in actionKeys "TurnLeft") then {
 
 if (_dikCode in actionKeys "TurnRight") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -335,7 +334,6 @@ if (_dikCode in actionKeys "TurnRight") then {
 
 if (_dikCode in actionKeys "MoveForward") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -343,7 +341,6 @@ if (_dikCode in actionKeys "MoveForward") then {
 
 if (_dikCode in actionKeys "MoveBack") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -351,7 +348,6 @@ if (_dikCode in actionKeys "MoveBack") then {
 
 if (_dikCode in actionKeys "MoveUp") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -359,7 +355,6 @@ if (_dikCode in actionKeys "MoveUp") then {
 
 if (_dikCode in actionKeys "MoveDown") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	if (r_player_unconscious) then {
 		_handled = true;
 	};
@@ -367,7 +362,6 @@ if (_dikCode in actionKeys "MoveDown") then {
 
 if (_dikCode in actionKeys "Fire") then {
 	r_interrupt = true;
-	//r_action_rest = false;
 	
 	if (r_player_unconscious and !_isHostage) exitWith { _handled = true; };
 	

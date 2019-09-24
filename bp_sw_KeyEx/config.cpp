@@ -62,6 +62,15 @@ class CfgKeybindsEx {
 			code = "call BP_fnc_playerHeal;"; //Code to run when this keybind is pressed
 		};
 	};
+	class breakingpoint_FlashLight {
+		displayName = "Character Diary"; //Tab Display Name
+		class Flashlight { //Unique Identifier for this Keybind
+			displayName = "Shoulder flashlight"; //Display name of this keybinding
+			tooltip = "Turns on/off shoulder flashlight"; //Tooltip
+			defaultKeys[] = {{0x05,0}}; //All default keys format is DIK_CODE,Special. Note that 0 means no special key (ctrl,shift,alt)
+			code = "call BP_fnc_shoulderLight;"; //Code to run when this keybind is pressed
+		};
+	};
 	class breakingpoint_Jump {
 		displayName = "Jump"; //Tab Display Name
 		class Jump { //Unique Identifier for this Keybind

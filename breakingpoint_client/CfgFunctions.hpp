@@ -152,6 +152,7 @@ class CfgFunctions
 			class smugglerSFX {};
 			class monsoonEffect {};
 			class monsoonCamShake {};
+			class shoulderLight {};
 		};
 		class Group {
 			file = "\breakingpoint_client\functions\Group";

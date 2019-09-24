@@ -124,14 +124,6 @@ switch (_type) do {
 			r_player_adrenaline = true;
 			r_player_adrenalineTime = diag_tickTime;
 			"dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
-			//Random Chance of Death if High health
-			/*if (r_player_blood > 11000) then
-			{
-				_random = floor (random 100);
-				if (_random > 90) then {
-					[15] call BP_fnc_death;
-				};
-			};*/
 		};
 	};
 	case "medZombie": {
@@ -179,6 +171,15 @@ switch (_type) do {
 		r_hit_legs = 1;
 		r_fracture_legs = true;
 		[player,"dog_damage",0,false] call BP_fnc_objSpeak;
+	};
+	case "medSharkAttack": {
+		r_player_injured = true;
+		r_player_inpain = true;
+		r_player_cardiac = true;
+		r_player_bleedingLevel = 2;
+		r_hit_legs = 1;
+		r_fracture_legs = true;
+		r_player_blood = r_player_blood - 2500;
 	};
 	case "medGut": {
 		private "_BloodHitFX";

@@ -166,7 +166,7 @@ class Land_FuelStation_Feed_F : House_Small_F
 	model="\A3\Structures_F\Ind\FuelStation\FuelStation_Feed_F.p3d";
 	cost=70000;
 	memoryPointSupply="Refuel_pos";
-	transportFuel=0; //50000
+	transportFuel=700; //50000
 	class DestructionEffects
 	{
         class FuelStationSmk1
@@ -241,7 +241,7 @@ class Land_fs_feed_F : House_Small_F
 	model="\A3\Structures_f\Ind\FuelStation_Small\fs_feed_F.p3d";
 	cost=10000;
 	memoryPointSupply="Refuel_pos";
-	transportFuel=0; //50000
+	transportFuel=700; //50000
 	class DestructionEffects
 	{
 		class FuelStationSmk1

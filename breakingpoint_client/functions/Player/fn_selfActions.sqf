@@ -394,38 +394,19 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	_isUndead = (player getVariable ["class",0] == 7);
 	_targetUndead = (_cursorTarget getVariable ["class",0] == 7);
 	_sameFaction = false;
-	if(BP_Factions_disableMixedgrouping) then
-	{
-		_playerClass = player getVariable ["class",0];
-		_cursorTargetClass =_cursorTarget getVariable ["class",0];
-		if (_playerClass in [3] && _cursorTargetClass in [3]) then
+
+	_playerClass = player getVariable ["class",0];
+	_cursorTargetClass =_cursorTarget getVariable ["class",0];
+	if (_playerClass in [1,4,5] && _cursorTargetClass in [1,4,5]) then {
+		_sameFaction = true;
+	} else {
+		if (_playerClass in [2,6] && _cursorTargetClass in [2,6]) then
 		{
 			_sameFaction = true;
-		}
-		else
-		{
-			if (_playerClass in [1,4,5] && _cursorTargetClass in [1,4,5]) then
-			{
-				_sameFaction = true;
-			}
-			else
-			{
-				if (_playerClass in [2,6] && _cursorTargetClass in [2,6]) then
-				{
-					_sameFaction = true;
-				}
-				else
-				{
-					_sameFaction = false;
-				};
-			};
+		} else {
+			_sameFaction = false;
 		};
-	}
-	else
-	{
-		_sameFaction = true;
 	};
-	
 
 	//Dog
 	_isDog = _cursorTarget isKindOf "BP_Dog";

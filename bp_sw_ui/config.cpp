@@ -21,6 +21,8 @@ class CfgVideoOptions
 	};
 	class Particles
 	{
+		delete Low;
+		delete Normal;
 		class VeryHigh
 		{
 			text="Ultra";
@@ -28,7 +30,7 @@ class CfgVideoOptions
 			particlesHardLimit=18000;
 			smokeGenMinDist=400;
 			smokeGenMaxDist=1600;
-			smokeSizeCoef=2.5999999;
+			smokeSizeCoef=2.6;
 			smokeIntervalCoef=4;
 			smokeZoomCoef=1.42857;
 			highQualityShader=1;

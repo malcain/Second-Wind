@@ -21,5 +21,3 @@ if (_dog distance player > 900) then {
 	_dog setDir ([_dog, player] call BIS_fnc_dirTo);
 };
 _dogHandle setFSMVariable ["_command","return"];
-
-

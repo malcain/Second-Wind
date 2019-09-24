@@ -6,7 +6,11 @@ class CfgPatches
 		Weapons[]={};
 		RequiredAddons[]=
 		{
-			"A3_Data_F_SAMs_LoadOrder"
+			"A3_Data_F",
+			"A3_Map_Altis",
+			"A3_Map_Malden",
+			"A3_Map_Stratis",
+			"A3_Map_Tanoabuka"
 		};
 	};
 };
@@ -72,8 +76,65 @@ class CfgWorlds
 	class DefaultLighting;
 	class Altis: CAWorld
 	{
+		latitude = 0;
+		longitude = 0;
+		class AmbientA3
+		{
+			class Radius40_60
+			{
+				class Species
+				{
+					delete Snake_random_F;
+				};
+			};
+			class Radius440_500
+			{
+				class Species
+				{
+					delete Rabbit_F;
+				};
+			};
+		};
+		
+		class EnvMaps
+		{
+			class EnvMap1
+			{
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_clearsky_ca.paa";
+				overcast=0;
+			};
+			class EnvMap2
+			{
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_overcastsky_ca.paa";
+				overcast=0.30000001;
+			};
+			class EnvMap3
+			{
+				texture="bp_sw\bp_sw_lighting\data\sky1\env_land_semicloudysky_ca.paa";
+				overcast=0.60000002;
+			};
+		};
+		
 		dynLightMinBrightnessAmbientCoef=0.5;
 		dynLightMinBrightnessAbsolute=0.050000001;
+		
+		hazeDistCoef=0.1;
+		hazeFogCoef=0.98000002;
+		fogHeight=2000;
+		hazeBaseHeight=0;
+		hazeBaseBeta0=0.00012;
+		hazeDensityDecay=0.00060000003;
+		aroundSunCoefMultiplier=1.38;
+		aroundSunCoefExponent=8;
+		//skyObject="bp_sw\bp_sw_lighting\data\OldSky\obloha.p3d";
+		horizontObject="bp_sw\bp_sw_lighting\data\OldSky\horizont.p3d";
+		//horizontObject="A3\Map_Tanoabuka\data\horizon.p3d"; //They have cleared the skybox texture, but fucked up model setup. TODO: make an own one?
+		skyTexture="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
+		skyTextureR="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
+		//skyTexture="A3\Map_Tanoabuka\data\sky_semicloudy_sky.paa";
+		//skyTextureR="A3\Map_Tanoabuka\data\sky_semicloudy_lco.paa";
+		haloObject="bp_sw\bp_sw_lighting\data\OldSky\sunhalo.p3d";
+		
 		class HDRNewPars
 		{
 			minAperture=9.9999997e-006;
@@ -278,34 +339,118 @@ class CfgWorlds
 				0
 			};
 		};
+		
+		//-------Sea--------//
+		//terrainBlendMaxBrightenCoef=0;
+		class Sea
+		{
+			seaTexture="a3\data_f\seatexture_co.paa";
+			seaMaterial="#waterriver";
+			shoreMaterial="#shore";
+			shoreFoamMaterial="#shorefoam";
+			shoreWetMaterial="#shorewet";
+			WaterMapScale=20;
+			WaterGrid=50;
+			MaxTide=167;
+			MaxWave=3.25; //0.25
+			SeaWaveXScale="1.5/50";
+			SeaWaveZScale="0.75/50";
+			SeaWaveHScale=2.0; //1
+			SeaWaveXDuration=15000;
+			SeaWaveZDuration=30000;
+		};
+		class Underwater
+		{
+			noWaterFog=-0.001;
+			fullWaterFog=0.001;
+			deepWaterFog=160;
+			waterFogDistanceNear=-10;
+			waterFogDistance=90;
+			waterColor[]={0,0.04,0.03};
+			deepWaterColor[]={0,0.04,0.03};
+			//deepWaterColor[]={0,0.001,0.0089999996};
+			surfaceColor[]={0,0.04,0.03};
+			deepSurfaceColor[]={0,0.001,0.0089999996};
+		};
+		class SeaWaterShaderPars
+		{
+			refractionMoveCoef=0.03;
+			minWaterOpacity = 0.45;
+			waterOpacityDistCoef = 0.07;
+			underwaterOpacity=0.25;
+			waterOpacityFadeStart=100;
+			waterOpacityFadeLength=20;
+		};
+		class WaterExPars: WaterExPars
+		{
+			fogDensity=0.12;
+			fogColor[] = {0.03015,0.07155,0.09045};
+			fogColorExtinctionSpeed[]={0.030000001,0.030000001,0.0051100001};
+			ligtExtinctionSpeed[] = {0.000914,0.000082,0.0000555};
+			diffuseLigtExtinctionSpeed[] = {0.045,0.022,0.0254};
+			fogGradientCoefs[]={0.11,0.32,0.51};
+			fogColorLightInfluence[]={0.80000001,0.2,1};
+			shadowIntensity=0.2;
+			ssReflectionStrength=0.85000002;
+			ssReflectionMaxJitter=1;
+			ssReflectionRippleInfluence=0.2;
+			ssReflectionEdgeFadingCoef=10;
+			ssReflectionDistFadingCoef=4;
+			refractionMinCoef=0.03;
+			refractionMaxCoef=0.14;
+			refractionMaxDist=5.1;
+			specularMaxIntensity=75;
+			specularPowerOvercast0=300;
+			specularPowerOvercast1=3;
+			specularNormalModifyCoef=0.001;
+			foamAroundObjectsIntensity=0.2;
+			foamAroundObjectsFadeCoef=6;
+			foamColorCoef=2;
+			foamDeformationCoef=0.02;
+			foamTextureCoef=0.2;
+			foamTimeMoveSpeed=0.2;
+			foamTimeMoveAmount=0.1;
+			shoreDarkeningMaxCoef=0.62;
+			shoreDarkeningOffset=0.3;
+			shoreDarkeningGradient=0.5;
+			shoreWaveTimeScale=0.80000001;
+			shoreWaveShifDerivativeOffset=-0.80000001;
+			shoreFoamIntensity=1.5;
+			shoreMaxWaveHeight=0.092; //0.046
+			shoreWetLayerReflectionIntensity=2.05000001;
+		};
+		
+		shoreTop = 0;
+		
+		//-----Lighting-----//
 		class Weather: Weather
 		{
 			class LightingNew
 			{
 				class Lighting0
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=-15;
 					sunOrMoon=0;
 					diffuse[]=
 					{
 						{0.1,0.14,0.22},
-						5
+						3.5
 					};
-					diffuseCloud[]={0.1,0.1,0.2};
+					diffuseCloud[]={{0.1,0.1,0.2},2.8};
 					ambient[]=
 					{
 						{0.51999998,0.67000002,1},
-						2
+						4
 					};
-					ambientCloud[]={0.51999998,0.67000002,1};
+					ambientCloud[]={{0.51999998,0.67000002,1},3.5};
 					ambientMid[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						0.5
+						3.3
 					};
-					ambientMidCloud[]={0.57200003,0.67000002,0.89999998};
+					ambientMidCloud[]={{0.57200003,0.67000002,0.89999998},3};
 					groundReflection[]={0.57200003,0.67000002,0.89999998};
 					groundReflectionCloud[]={0.57200003,0.67000002,0.89999998};
 					bidirect[]={0.090000004,0.090000004,0.090000004};
@@ -319,11 +464,11 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.090000004,0.13699999,0.22},
-						0.025
+						0.002
 					};
-					apertureMin=6;
+					apertureMin=4;
 					apertureStandard=6;
-					apertureMax=9;
+					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -333,37 +478,37 @@ class CfgWorlds
 					mie[]={0.0099999998,0.0074999998,0.0049999999};
 					cloudsColor[]=
 					{
-						{1,1,1},
-						9
+						{0.17,0.32,0.8},
+						14
 					};
 					swBrightness=3;
 				};
 				class Lighting1
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=-4;
-					sunOrMoon=1;
+					sunOrMoon=0.2;
 					diffuse[]=
 					{
 						{0.090000004,0.090000004,0.1},
-						1.5
+						2.6
 					};
-					diffuseCloud[]={0.090000004,0.090000004,0.2};
+					diffuseCloud[]={{0.090000004,0.090000004,0.2},2.3};
 					ambient[]=
 					{
 						{0.51999998,0.67000002,1},
-						4
+						5.4
 					};
-					ambientCloud[]={0.51999998,0.67000002,1};
+					ambientCloud[]={{0.51999998,0.67000002,1},5.2};
 					ambientMid[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						2
+						5.4
 					};
-					ambientMidCloud[]={0.57200003,0.67000002,0.89999998};
-					groundReflection[]={0.57200003,0.67000002,0.89999998};
-					groundReflectionCloud[]={0.57200003,0.67000002,0.89999998};
+					ambientMidCloud[]={{0.57200003,0.67000002,0.89999998},5.2};
+					groundReflection[]={{0.57200003,0.67000002,0.89999998},1};
+					groundReflectionCloud[]={{0.57200003,0.67000002,0.89999998},0.05};
 					bidirect[]={0.090000004,0.090000004,0.090000004};
 					bidirectCloud[]={0.090000004,0.090000004,0.090000004};
 					sky[]=
@@ -381,9 +526,9 @@ class CfgWorlds
 						{0.15000001,0.15000001,0.175},
 						3
 					};
-					apertureMin=7;
-					apertureStandard=8;
-					apertureMax=9;
+					apertureMin=5;
+					apertureStandard=6;
+					apertureMax=7;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -393,17 +538,17 @@ class CfgWorlds
 					mie[]={0.0099999998,0.0074999998,0.0049999999};
 					cloudsColor[]=
 					{
-						{1,1,1},
-						9
+						{0.9,1,1},
+						13
 					};
 					swBrightness=3;
 				};
 				class Lighting2
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=0;
-					sunOrMoon=1;
+					sunOrMoon=0.6;
 					diffuse[]=
 					{
 						{0.80000001,0.40000001,0.18000001},
@@ -412,7 +557,7 @@ class CfgWorlds
 					diffuseCloud[]=
 					{
 						{1,0.34999999,0.34},
-						2
+						3
 					};
 					ambient[]=
 					{
@@ -422,7 +567,7 @@ class CfgWorlds
 					ambientCloud[]=
 					{
 						{0.60000002,0.5,0.5},
-						1
+						5
 					};
 					ambientMid[]=
 					{
@@ -432,7 +577,7 @@ class CfgWorlds
 					ambientMidCloud[]=
 					{
 						{0.55000001,0.60000002,0.80000001},
-						0.5
+						5.5
 					};
 					groundReflection[]=
 					{
@@ -442,7 +587,7 @@ class CfgWorlds
 					groundReflectionCloud[]=
 					{
 						{0.55000001,0.60000002,0.89999998},
-						0.25
+						3.25
 					};
 					bidirect[]={0,0,0};
 					bidirectCloud[]={0,0,0};
@@ -474,16 +619,16 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.69999999,0.69999999,0.69999999},
-						9
+						8
 					};
 					swBrightness=2;
 				};
 				class Lighting3
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=4;
-					sunOrMoon=1;
+					sunOrMoon=0.9;
 					diffuse[]=
 					{
 						{0.89999998,0.40000001,0.16},
@@ -560,7 +705,7 @@ class CfgWorlds
 				};
 				class Lighting4
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=8;
 					sunOrMoon=1;
@@ -634,13 +779,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.2,0.2,0.15000001},
-						11
+						12
 					};
 					swBrightness=1;
 				};
 				class Lighting5
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=15;
 					sunOrMoon=1;
@@ -714,13 +859,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.5,0.5,0.30000001},
-						11
+						12
 					};
 					swBrightness=1;
 				};
 				class Lighting6
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=22;
 					sunOrMoon=1;
@@ -794,13 +939,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,0.89999998,0.69999999},
-						11
+						12
 					};
 					swBrightness=1;
 				};
 				class Lighting7
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=35;
 					sunOrMoon=1;
@@ -859,7 +1004,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.14,0.2},
-						11.2
+						11.7
 					};
 					apertureMin=28;
 					apertureStandard=35;
@@ -874,13 +1019,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,0.89999998,0.69999999},
-						12
+						13
 					};
 					swBrightness=1;
 				};
 				class Lighting8
 				{
-					height=0;
+					height=0.01;
 					overcast=0.25;
 					sunAngle=40;
 					sunOrMoon=1;
@@ -939,7 +1084,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.145,0.2},
-						11.5
+						12
 					};
 					apertureMin=33;
 					apertureStandard=36;
@@ -954,45 +1099,45 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,0.89999998,0.69999999},
-						12
+						13
 					};
 					swBrightness=1;
 				};
 				class Lighting9
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=-15;
 					sunOrMoon=0;
 					diffuse[]=
 					{
 						{0.1,0.13,0.2},
-						5
+						3.5
 					};
 					diffuseCloud[]=
 					{
-						{0,0,0},
-						5
+						{0.1,0.13,0.2},
+						3
 					};
 					ambient[]=
 					{
 						{0.51999998,0.67000002,1},
-						2
+						3.8
 					};
 					ambientCloud[]=
 					{
 						{1,1,1},
-						2
+						3.4
 					};
 					ambientMid[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						1
+						3.2
 					};
 					ambientMidCloud[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						0.1
+						2.9
 					};
 					groundReflection[]=
 					{
@@ -1015,11 +1160,11 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.090000004,0.13699999,0.22},
-						0.025
+						0.002
 					};
-					apertureMin=6;
+					apertureMin=4;
 					apertureStandard=6;
-					apertureMax=9;
+					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1029,37 +1174,37 @@ class CfgWorlds
 					mie[]={0.0099999998,0.0074999998,0.0049999999};
 					cloudsColor[]=
 					{
-						{1,1,1},
-						4
+						{0.17,0.32,0.8},
+						14
 					};
 					swBrightness=3;
 				};
 				class Lighting10
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=-4;
-					sunOrMoon=1;
+					sunOrMoon=0.2;
 					diffuse[]=
 					{
 						{0.090000004,0.090000004,0.2},
-						1
+						2.5
 					};
-					diffuseCloud[]={0,0,0};
+					diffuseCloud[]={{0,0,0},2.25};
 					ambient[]=
 					{
 						{0.51999998,0.67000002,1},
-						3
+						5.4
 					};
-					ambientCloud[]={1,1,1};
+					ambientCloud[]={{1,1,1},5};
 					ambientMid[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						2
+						5.2
 					};
-					ambientMidCloud[]={0.57200003,0.67000002,0.89999998};
-					groundReflection[]={0.57200003,0.67000002,0.89999998};
-					groundReflectionCloud[]={0.57200003,0.67000002,0.89999998};
+					ambientMidCloud[]={{0.57200003,0.67000002,0.89999998},5};
+					groundReflection[]={{0.57200003,0.67000002,0.89999998},1};
+					groundReflectionCloud[]={{0.57200003,0.67000002,0.89999998},0.05};
 					bidirect[]={0.090000004,0.090000004,0.090000004};
 					bidirectCloud[]={0.090000004,0.090000004,0.090000004};
 					sky[]=
@@ -1077,9 +1222,9 @@ class CfgWorlds
 						{0.15000001,0.15000001,0.175},
 						2
 					};
-					apertureMin=7;
-					apertureStandard=8;
-					apertureMax=9;
+					apertureMin=5;
+					apertureStandard=6;
+					apertureMax=7;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1090,22 +1235,22 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						4
+						16
 					};
 					swBrightness=3;
 				};
 				class Lighting11
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=0;
-					sunOrMoon=1;
+					sunOrMoon=0.6;
 					diffuse[]=
 					{
 						{0.89999998,0.34999999,0.075000003},
 						4
 					};
-					diffuseCloud[]={0.89999998,0.34999999,0.075000003};
+					diffuseCloud[]={{0.89999998,0.34999999,0.075000003},1};
 					ambient[]=
 					{
 						{0.69999999,0.60000002,0.60000002},
@@ -1114,17 +1259,17 @@ class CfgWorlds
 					ambientCloud[]=
 					{
 						{1,1,1},
-						1
+						6
 					};
 					ambientMid[]=
 					{
 						{0.55000001,0.60000002,0.89999998},
-						4.5
+						6.5
 					};
 					ambientMidCloud[]=
 					{
 						{0.55000001,0.60000002,0.89999998},
-						0.5
+						6.1
 					};
 					groundReflection[]=
 					{
@@ -1134,7 +1279,7 @@ class CfgWorlds
 					groundReflectionCloud[]=
 					{
 						{0.55000001,0.60000002,0.80000001},
-						0.25
+						2.25
 					};
 					bidirect[]={0,0,0};
 					bidirectCloud[]={0,0,0};
@@ -1172,7 +1317,7 @@ class CfgWorlds
 				};
 				class Lighting12
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=4;
 					sunOrMoon=1;
@@ -1252,7 +1397,7 @@ class CfgWorlds
 				};
 				class Lighting13
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=8;
 					sunOrMoon=1;
@@ -1332,7 +1477,7 @@ class CfgWorlds
 				};
 				class Lighting14
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=15;
 					sunOrMoon=1;
@@ -1412,7 +1557,7 @@ class CfgWorlds
 				};
 				class Lighting15
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=22;
 					sunOrMoon=1;
@@ -1467,7 +1612,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.13,0.18000001},
-						10
+						9
 					};
 					apertureMin=20;
 					apertureStandard=22;
@@ -1482,13 +1627,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,0.80000001},
-						10.5
+						11.5
 					};
 					swBrightness=1;
 				};
 				class Lighting16
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=35;
 					sunOrMoon=1;
@@ -1547,7 +1692,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.13,0.17},
-						10.75
+						9.45
 					};
 					apertureMin=28;
 					apertureStandard=35;
@@ -1562,13 +1707,13 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,0.80000001},
-						11
+						12
 					};
 					swBrightness=1;
 				};
 				class Lighting17
 				{
-					height=0;
+					height=0.01;
 					overcast=0.60000002;
 					sunAngle=40;
 					sunOrMoon=1;
@@ -1627,7 +1772,7 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.145,0.2},
-						11.2
+						9.3
 					};
 					apertureMin=33;
 					apertureStandard=36;
@@ -1642,30 +1787,34 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,0.80000001},
-						12
+						14
 					};
 					swBrightness=1;
 				};
 				class Lighting18
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=-15;
 					sunOrMoon=0;
-					diffuse[]={0.1,0.13,0.2};
-					diffuseCloud[]={0,0,0};
+					diffuse[]=
+					{
+						{0.1,0.13,0.2},
+						3.2
+					};
+					diffuseCloud[]={{0.1,0.13,0.2},1};
 					ambient[]=
 					{
 						{0.51999998,0.67000002,1},
-						0.050000001
+						3.6
 					};
-					ambientCloud[]={1,1,1};
+					ambientCloud[]={{1,1,1},3.2};
 					ambientMid[]=
 					{
 						{0.57200003,0.67000002,0.89999998},
-						0.0099999998
+						3.5
 					};
-					ambientMidCloud[]={1,1,1};
+					ambientMidCloud[]={{1,1,1},3};
 					groundReflection[]={0.57200003,0.67000002,0.89999998};
 					groundReflectionCloud[]={1,1,1};
 					bidirect[]={0.090000004,0.090000004,0.090000004};
@@ -1677,9 +1826,9 @@ class CfgWorlds
 						0.02
 					};
 					fogColor[]={0.090000004,0.13699999,0.22};
-					apertureMin=7;
-					apertureStandard=8;
-					apertureMax=9;
+					apertureMin=4;
+					apertureStandard=5.5;
+					apertureMax=7;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1690,32 +1839,36 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{1,1,1},
-						3
+						14,75
 					};
 					swBrightness=3;
 				};
 				class Lighting19
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=-4;
-					sunOrMoon=1;
-					diffuse[]={0.2,0.2,0.2};
-					diffuseCloud[]={0,0,0};
+					sunOrMoon=0.2;
+					diffuse[]=
+					{
+						{0.2,0.2,0.2},
+						0.21
+					};
+					diffuseCloud[]={{0,0,0},0.21};
 					ambient[]=
 					{
 						{0.5,0.55000001,1},
-						2
+						4
 					};
-					ambientCloud[]={1,1,1};
+					ambientCloud[]={{1,1,1},4};
 					ambientMid[]=
 					{
 						{0.55000001,0.55000001,0.85000002},
-						2
+						4
 					};
-					ambientMidCloud[]={1,1,1};
-					groundReflection[]={0.55000001,0.55000001,0.85000002};
-					groundReflectionCloud[]={1,1,1};
+					ambientMidCloud[]={{1,1,1},4};
+					groundReflection[]={{0.55000001,0.55000001,0.85000002},0.025};
+					groundReflectionCloud[]={{1,1,1},0.025};
 					bidirect[]={0.090000004,0.090000004,0.090000004};
 					bidirectCloud[]={0.090000004,0.090000004,0.090000004};
 					sky[]=
@@ -1729,9 +1882,9 @@ class CfgWorlds
 						7
 					};
 					fogColor[]={0.079999998,0.079999998,0.094999999};
-					apertureMin=7;
-					apertureStandard=8;
-					apertureMax=9;
+					apertureMin=4;
+					apertureStandard=6;
+					apertureMax=8;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1742,16 +1895,16 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.1,0.1,0.1},
-						3
+						17
 					};
 					swBrightness=3;
 				};
 				class Lighting20
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=0;
-					sunOrMoon=1;
+					sunOrMoon=0.6;
 					diffuse[]=
 					{
 						{0.375,0.22499999,0.039999999},
@@ -1765,22 +1918,22 @@ class CfgWorlds
 					ambient[]=
 					{
 						{0.5,0.5,0.60000002},
-						2.5
+						5.5
 					};
 					ambientCloud[]=
 					{
 						{1,1,1},
-						1
+						5.2
 					};
 					ambientMid[]=
 					{
 						{0.55000001,0.5,0.80000001},
-						2
+						5.4
 					};
 					ambientMidCloud[]=
 					{
 						{1,1,1},
-						0.5
+						5
 					};
 					groundReflection[]=
 					{
@@ -1828,8 +1981,8 @@ class CfgWorlds
 				};
 				class Lighting21
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=4;
 					sunOrMoon=1;
 					diffuse[]=
@@ -1889,9 +2042,9 @@ class CfgWorlds
 						{0.125,0.125,0.14},
 						7.5
 					};
-					apertureMin=9;
-					apertureStandard=13;
-					apertureMax=30;
+					apertureMin=13;
+					apertureStandard=17;
+					apertureMax=40;
 					standardAvgLum=75;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1908,8 +2061,8 @@ class CfgWorlds
 				};
 				class Lighting22
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=8;
 					sunOrMoon=1;
 					diffuse[]=
@@ -1969,9 +2122,9 @@ class CfgWorlds
 						{0.125,0.125,0.15000001},
 						8
 					};
-					apertureMin=10;
-					apertureStandard=15;
-					apertureMax=40;
+					apertureMin=14;
+					apertureStandard=21;
+					apertureMax=55;
 					standardAvgLum=100;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1988,8 +2141,8 @@ class CfgWorlds
 				};
 				class Lighting23
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=15;
 					sunOrMoon=1;
 					diffuse[]=
@@ -2069,7 +2222,7 @@ class CfgWorlds
 				class Lighting24
 				{
 					height=0;
-					overcast=0.80000001;
+					overcast=0.90;
 					sunAngle=22;
 					sunOrMoon=1;
 					diffuse[]=
@@ -2127,10 +2280,10 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.12,0.16},
-						10
+						7.7
 					};
-					apertureMin=20;
-					apertureStandard=22;
+					apertureMin=40;
+					apertureStandard=47;
 					apertureMax=55;
 					standardAvgLum=250;
 					desiredLuminanceCoef=1;
@@ -2142,14 +2295,14 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.89999998,1,1},
-						6
+						7.5
 					};
 					swBrightness=1;
 				};
 				class Lighting25
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=35;
 					sunOrMoon=1;
 					diffuse[]=
@@ -2207,10 +2360,10 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.12,0.16},
-						10.75
+						8.65
 					};
-					apertureMin=28;
-					apertureStandard=35;
+					apertureMin=50;
+					apertureStandard=55;
 					apertureMax=60;
 					standardAvgLum=500;
 					desiredLuminanceCoef=1;
@@ -2222,14 +2375,14 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.89999998,1,1},
-						6
+						7.5
 					};
 					swBrightness=1;
 				};
 				class Lighting26
 				{
-					height=0;
-					overcast=0.80000001;
+					height=0.01;
+					overcast=0.90;
 					sunAngle=40;
 					sunOrMoon=1;
 					diffuse[]=
@@ -2287,10 +2440,10 @@ class CfgWorlds
 					fogColor[]=
 					{
 						{0.105,0.12,0.16},
-						11.5
+						8.95
 					};
-					apertureMin=33;
-					apertureStandard=36;
+					apertureMin=50;
+					apertureStandard=55;
 					apertureMax=60;
 					standardAvgLum=500;
 					desiredLuminanceCoef=1;
@@ -2302,7 +2455,7 @@ class CfgWorlds
 					cloudsColor[]=
 					{
 						{0.89999998,1,1},
-						7
+						8.7
 					};
 					swBrightness=1;
 				};
@@ -2316,6 +2469,132 @@ class CfgWorlds
 				class Rainy: DayLightingRainy
 				{
 					overcast=1;
+				};
+			};
+			class LightningsConfig: LightningsConfig
+			{
+				minCloudiness=0.80;
+				minProbability=0;
+				maxProbability=0.1;
+				minCount=0;
+				maxCount=1;
+				scatter=20;
+			};
+			class Overcast: Overcast
+			{
+				class Weather1: Weather1
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_clear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_clear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
+					overcast=0;
+					alpha=0.5;
+					size=0.1;
+					height=1;
+					bright=0.69999999;
+					speed=0;
+					through=0.45;
+					diffuse=1;
+					cloudDiffuse=0.94999999;
+					waves=0.2;
+					lightingOvercast=0;
+				};
+				class Weather7: Weather1
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_veryclear_horizont_sky.paa";
+					overcast=0.22;
+					alpha=0.6;
+					size=0.25;
+					height=0.92;
+					bright=0.47;
+					speed=0.22;
+					through=0.4;
+					diffuse=1;
+					cloudDiffuse=0.95;
+					waves=0.2;
+					lightingOvercast=0.1;
+				};
+				class Weather2: Weather2
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_clean_horizont_sky.paa";
+					overcast=0.40;
+					alpha=0.8;
+					size=0.45;
+					height=0.9;
+					bright=0.39;
+					speed=0.29;
+					through=0.36;
+					lightingOvercast=0.35;
+					diffuse=1;
+					waves=0.22;
+				};
+				class Weather3: Weather3
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_semicloudy_horizont_sky.paa";
+					overcast=0.58;
+					alpha=0.94;
+					size=0.55;
+					height=0.8;
+					bright=0.25;
+					speed=0.47;
+					through=0.35;
+					lightingOvercast=0.50;
+					diffuse=1;
+					waves=0.32;
+				};
+				class Weather4: Weather4
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_almostclear_horizont_sky.paa";
+					overcast=0.67;
+					alpha=0.99;
+					size=0.65;
+					height=0.75;
+					bright=0.1;
+					speed=0.6;
+					through=0.31;
+					lightingOvercast=0.72;
+					diffuse=0;
+					waves=0.4;
+				};
+				class Weather5: Weather5
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
+					overcast=0.84;
+					alpha=1;
+					size=0.8;
+					height=0.7;
+					bright=0.1;
+					speed=0.75;
+					through=0.2;
+					lightingovercast=0.84; //Earlier and smoother transition to dark overcast&fog
+					diffuse=0;
+					waves=0.97;
+				};
+				class Weather6: Weather5
+				{
+					sky="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_sky.paa";
+					skyR="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_lco.paa";
+					horizon="bp_sw\bp_sw_lighting\data\OldSky\sky_mostlycloudy_horizont_sky.paa";
+					overcast=0.97;
+					alpha=1;
+					bright=0.1;
+					size=1;
+					height=0.6;
+					speed=0.95;
+					through=0.1;
+					lightingOvercast=0.92;
+					diffuse=1;
+					waves=0.6;
 				};
 			};
 		};
@@ -2333,10 +2612,10 @@ class CfgWorlds
 			fadeNumElevations=8;
 			fadeNumDistances=8;
 			fadeEarthTest=1;
-			autoBrightness=1;
+			autoBrightness=0;
 			autoBrightnessStrength=0.1;
-			cloudGridWidth=64;
-			cloudGridLength=64;
+			cloudGridWidth=96;
+			cloudGridLength=96;
 			cloudGridHeight=16;
 			helperGridElevationSteps=24;
 			helperGridAzimuthSteps=15;
@@ -2345,7 +2624,7 @@ class CfgWorlds
 			helperAdjustCurvature=0;
 			helperNumLayers=120;
 			helperMaxDistance=160000;
-			helperNearCloudFade=0.1;
+			helperNearCloudFade=0.8;
 			helperChurn=10;
 			cloudWidth=40000;
 			cloudLength=40000;
@@ -2358,10 +2637,11 @@ class CfgWorlds
 			mieAsymmetry=0.50870001;
 			minimumLightElevationDegrees=6;
 			directLightCoef=1;
-			indirectLightCoef=0.039999999;
+			indirectLightCoef=0.04;
 			fogStart=0;
 			fogEnd=50000;
 			fogHeight=2000;
+			maxPrecipitationParticles = 1000000;
 			class DefaultKeyframe
 			{
 				rayleigh[]={0.0074900002,0.01388,0.02878};
@@ -2372,8 +2652,8 @@ class CfgWorlds
 				hazeEccentricity=1;
 				brightnessAdjustment=1;
 				cloudiness=0.60000002;
-				cloudBaseKm=2.8499999;
-				cloudHeightKm=6;
+				cloudBaseKm=0.25;
+				cloudHeightKm=4;
 				directLight=1;
 				indirectLight=1;
 				ambientLight=0.2;
@@ -2381,7 +2661,7 @@ class CfgWorlds
 				noisePersistence=0.53500003;
 				fractalAmplitude=2.3;
 				fractalWavelength=240;
-				extinction=8;
+				extinction=4.7;
 				diffusivity=0.001;
 			};
 			class Overcast
@@ -2389,49 +2669,77 @@ class CfgWorlds
 				class Weather1: DefaultKeyframe
 				{
 					overcast=0;
-					cloudiness=0;
+					cloudiness=0.02;
+					cloudBaseKm=0.2;
 					diffusivity=0.001;
 					seqFileKeyframe=0;
 				};
 				class Weather2: DefaultKeyframe
 				{
 					overcast=0.2;
-					cloudiness=0.25;
+					cloudiness=0.18;
+					extinction=5.2;
+					cloudBaseKm=0.2;
+					cloudHeightKm=4;
 					diffusivity=0.001;
+					indirectLight=0.85;
 					seqFileKeyframe=0;
 				};
 				class Weather3: DefaultKeyframe
 				{
 					overcast=0.40000001;
-					cloudiness=0.44999999;
+					cloudiness=0.36;
+					extinction=9.8;
+					cloudBaseKm=0.2;
+					cloudHeightKm=10;
 					diffusivity=0.001;
+					indirectLight=0.5;
 					seqFileKeyframe=3;
 				};
 				class Weather4: DefaultKeyframe
 				{
-					overcast=0.5;
-					cloudiness=0.46000001;
-					diffusivity=0.0099999998;
+					overcast=0.52;
+					cloudiness=0.45;
+					extinction=8.7;
+					diffusivity=0.001;
+					cloudBaseKm=0.3;
+					cloudHeightKm=13.5;
+					indirectLight=0.22;
 					seqFileKeyframe=4;
 				};
 				class Weather5: DefaultKeyframe
 				{
-					overcast=0.80000001;
-					cloudiness=0.80000001;
-					diffusivity=0.0099999998;
-					extinction=4.3000002;
-					cloudBaseKm=1.9;
-					cloudHeightKm=8;
+					overcast=0.72;
+					cloudiness=0.66;
+					diffusivity=0.001;
+					extinction=10;
+					cloudBaseKm=0.36;
+					cloudHeightKm=18;
+					indirectLight=0.12;
 					seqFileKeyframe=4;
 				};
 				class Weather6: DefaultKeyframe
 				{
-					overcast=1;
+					overcast=0.85;
+					cloudiness=0.80;
+					diffusivity=0.001;
+					extinction=9;
+					cloudBaseKm=0.38;
+					cloudHeightKm=20;
+					indirectLight=0.16;
+					directLight=0.8;
+					seqFileKeyframe=4;
+				};
+				class Weather7: DefaultKeyframe
+				{
+					overcast=0.97;
 					cloudiness=1;
 					diffusivity=0.001;
 					extinction=4;
-					cloudBaseKm=1.7;
-					cloudHeightKm=10;
+					cloudBaseKm=0.38;
+					cloudHeightKm=15;
+					indirectLight=1;
+					directLight=0.8;
 					seqFileKeyframe=4;
 				};
 			};
@@ -6544,11 +6852,11 @@ class CfgWorlds
 			};
 			class LightningsConfig: LightningsConfig
 			{
-				minCloudiness=0.72;
+				minCloudiness=0.80;
 				minProbability=0;
-				maxProbability=1;
+				maxProbability=0.1;
 				minCount=0;
-				maxCount=6;
+				maxCount=1;
 				scatter=20;
 			};
 		};
