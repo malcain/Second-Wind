@@ -14,6 +14,7 @@ class CfgPatches
 		{
 			"A3_Data_F",
 			"A3_Animals_F",
+			"A3_Characters_F",
 			"A3_Air_F"
 		};
 	};
@@ -897,7 +898,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="_this execVM ""\Tha_Sharks\scripts\shark_init.sqf""";
+			//init="_this execVM ""\Tha_Sharks\scripts\shark_init.sqf""";
 		};
 		class Wounds
 		{
@@ -971,7 +972,7 @@ class CfgVehicles
 		};
 		class EventHandlers
 		{
-			init="_this execVM ""\Tha_Sharks\scripts\shark_init.sqf""";
+			//init="_this execVM ""\Tha_Sharks\scripts\shark_init.sqf""";
 		};
 	};
 };
@@ -1131,10 +1132,20 @@ class cfgFunctions
 	{
 		class movement
 		{
+			class shark_init
+			{
+				file="\Tha_Sharks\functions\fnc_shark_init.sqf";
+				description="Init.";
+			};
 			class depthToTarget
 			{
 				file="\Tha_Sharks\functions\fnc_depthToTarget.sqf";
 				description="Proper shark depth changes according to target's depth. Scheduled environment.";
+			};
+			class roamingDepth
+			{
+				file="\Tha_Sharks\functions\fnc_roamingDepth.sqf";
+				description="Proper shark depth changes when roaming. Scheduled environment.";
 			};
 			class huntingBehavior
 			{

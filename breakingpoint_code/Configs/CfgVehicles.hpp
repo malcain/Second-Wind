@@ -1361,6 +1361,14 @@ class CfgVehicles
 		//extCameraParams[] = { 0.5, 10, 50, 0.5, 1, 10, 30, 0, 1 };
 		class ViewPilot: ViewPilot
         {
+			/*initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;*/
+			
             MinFov=0.45;//="tan(atan(0.75) / 1)";  def 0.25;
             MaxFov=0.80;//="tan(atan(0.75) / 1)";  def 1.25;
             InitFov=0.75;//="tan(atan(0.75) / 1)";  def 0.75;
@@ -1489,10 +1497,10 @@ class CfgVehicles
 			};
 		};
 		
-		class SoundEquipment {
+		/*class SoundEquipment {
 			soldier[] = {{"walk", {"A3\sounds_f\characters\movements\suit_run_01", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_02", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_03", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_04", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_05", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_06", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_07", 0.046234, 1, 30}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_08", 0.046234, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_01", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_02", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_03", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_04", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_05", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_06", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_07", 0.053096, 1, 32}}, {"run", {"A3\sounds_f\characters\movements\suit_run_08", 0.053096, 1, 32}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_01", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_02", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_03", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_04", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_05", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_06", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_07", 0.090000, 1, 35}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_08", 0.090000, 1, 35}}};
 			civilian[] = {{"walk", {"A3\sounds_f\characters\movements\suit_run_01", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_02", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_03", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_04", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_05", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_06", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_07", 0.046234, 1, 20}}, {"walk", {"A3\sounds_f\characters\movements\suit_run_08", 0.046234, 1, 20}}, {"run", {"A3\sounds_f\characters\movements\suit_run_01", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_02", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_03", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_04", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_05", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_06", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_07", 0.064433, 1, 30}}, {"run", {"A3\sounds_f\characters\movements\suit_run_08", 0.064433, 1, 30}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_01", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_02", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_03", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_04", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_05", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_06", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_07", 0.090000, 1, 40}}, {"sprint", {"A3\sounds_f\characters\movements\suit_sprint_08", 0.090000, 1, 40}}};
-		};
+		};*/
 
 		weapons[] = {"Throw","Put"};
 		magazines[] = {};

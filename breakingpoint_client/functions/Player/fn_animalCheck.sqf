@@ -21,7 +21,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	_PosList = [];
 	_PosSelect = [];
 	_mushroom = false;
-	_randomDistance = 700 + random 700;
+	_randomDistance = 800 + random 700;
 
 	//Find where animal likes
 	_type = selectRandom ANIMALS;

@@ -24,15 +24,12 @@ for "_i" from 1 to 12 step 0 do
 	if (_debug) then {player sideChat "Sharky searching"};
 
 	_nearestTarget = objNull;
-	_nearTargets = _shark nearEntities [["BP_Player","BP_Dog","Tuna_F","Turtle_F","Mullet_F"], 150];
+	_nearTargets = _shark nearEntities [["BP_Player","BP_Dog","Tuna_F","Turtle_F","Mullet_F"], 275];
 	if (count _nearTargets > 0) then {
 		_nearestTarget = selectRandom _nearTargets;
 	};
 	
 	/*_nearestTarget = getPos _shark nearestObject "Tuna_F";
-	if (_nearestTarget isEqualTo objNull) then {_nearestTarget = getPos _shark nearestObject "Turtle_F"};
-	if (_nearestTarget isEqualTo objNull) then {_nearestTarget = getPos _shark nearestObject "Mullet_F"};
-	//if (_nearestTarget isEqualTo objNull) then {_nearestTarget = getPos _shark nearestObject "CAManBase"};
 	//if (_nearestTarget isEqualTo objNull) then {_nearestTarget = getPos _shark nearestObject "Mackerel_F"};
 	//if (_nearestTarget isEqualTo objNull) then {_nearestTarget = getPos _shark nearestObject "Salema_F"};*/
 
@@ -42,7 +39,19 @@ for "_i" from 1 to 12 step 0 do
 
 		//Out of water check
 		_targetDepth = (getPosASLW _nearestTarget) select 2;
-		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget) or (_targetDepth > -2)) exitWith {};
+		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget) or (_targetDepth > -1.4)) exitWith {
+			//Roaming
+			_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth interpolate [2,3,0,1]", 5, 50];
+			_roamPos = (selectRandom _myPlaces) select 0;
+			_shark doMove _roamPos;
+			//_shark setDestination [_roamPos, "LEADER PLANNED", true];
+			//roaming depth
+			if (random 100 < 15) then {
+				//Change depth
+				[_shark] call SHARK_fnc_roamingDepth;
+				//[_shark] call BPServer_fnc_roamingDepth;
+			};
+		};
 
 		if (_debug) then {player sideChat format ["Sharky found %1",typeOf _nearestTarget]};
 
@@ -52,6 +61,7 @@ for "_i" from 1 to 12 step 0 do
 
 			//Change depth
 			[_shark,_nearestTarget] call SHARK_fnc_depthToTarget;
+			//[_shark,_nearestTarget] call BPServer_fnc_depthToTarget;
 
 			if ((!alive _shark) or (!alive _nearestTarget)) exitWith {true};
 			
@@ -60,23 +70,35 @@ for "_i" from 1 to 12 step 0 do
 			if (_distance <= 4.5) exitWith {true};
 
 			//Out of water check
-			if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget)) exitWith {true};
+			if ((isTouchingGround _nearestTarget) or (vehicle _nearestTarget != _nearestTarget)) exitWith {true};
 
 			//Direction
-			_relativeDir = _shark getDir _nearestTarget;
-			if (_relativeDir > 360) then {_relativeDir = _relativeDir - 360};
-			_targetPos = _shark getPos [_distance,_relativeDir];
+			//_relativeDir = _shark getDir _nearestTarget;
+			//if (_relativeDir > 360) then {_relativeDir = _relativeDir - 360};
+			//_targetPos = _shark getPos [_distance,_relativeDir];
+			_targetPos = position _nearestTarget;
+			//_shark setDestination [_targetPos, "LEADER PLANNED", true];
+			_shark doMove _targetPos;
 
-			_shark moveTo _targetPos;
-			if (_debug) then {hintSilent format ["DIST TO %1: %2",typeOf _nearestTarget, _distance]};
-
-			sleep 1;
+			sleep 1.5;
 			false;
 		};
 
 
 		//Out of water check
-		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget)) exitWith {};
+		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget)) exitWith {
+			//Roaming
+			_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth interpolate [2,3,0,1]", 5, 50];
+			_roamPos = (selectRandom _myPlaces) select 0;
+			_shark doMove _roamPos;
+			//_shark setDestination [_roamPos, "LEADER PLANNED", true];
+			//roaming depth
+			if (random 100 < 15) then {
+				//Change depth
+				[_shark] call SHARK_fnc_roamingDepth;
+				//[_shark] call BPServer_fnc_roamingDepth;
+			};
+		};
 
 		//Check attack angle view
 		_tPos = getPosASLW _nearestTarget;
@@ -94,12 +116,11 @@ for "_i" from 1 to 12 step 0 do
 		//bite anim
 		_shark switchMove selectRandom ["GreatWhite_Byte","GreatWhite_ByteLeft","GreatWhite_ByteRight"];
 		//run attack script only when in view
-		if ((_nearestTarget isKindOf "CAManBase") and (!_inView)) exitWith {};
+		if ((_nearestTarget isKindOf "BP_Player") and (!_inView)) exitWith {};
 
 		//Attack
 		if ((alive _nearestTarget) and (alive _shark)) then {
 			//fast swim
-			if (_debug) then {player sideChat "Sharky attacking"};
 			_shark switchMove "GreatWhite_S3";
 			// sleep 0.1;
 
@@ -119,8 +140,8 @@ for "_i" from 1 to 12 step 0 do
 			};
 
 			//Bleeding
-			//[_nearestTarget,_shark] execVM "\THA_Sharks\scripts\underwaterBleeding.sqf";
 			[_nearestTarget,_shark] spawn SHARK_fnc_underwaterBleeding;
+			//[_nearestTarget,_shark] spawn BPServer_fnc_underwaterBleeding;
 
 			//Victim dir
 			_sharkDir = getDir _shark;
@@ -164,15 +185,23 @@ for "_i" from 1 to 12 step 0 do
 				_nearestTarget setUnconscious false;
 				sleep 0.5;
 				_nearestTarget switchMove "AdvePercMstpSnonWnonDnon";
-				BP_MedicalEvent = "medSharkAttack";
+				BP_MedicalEvent = ["medSharkAttack",(netID _nearestTarget),(netID _nearestTarget)];
 				(owner _nearestTarget) publicVariableClient "BP_MedicalEvent";
 			};
 		};
 	} else {
 		//Roaming
-		_myPlaces = selectBestPlaces [position _shark, 75, "waterDepth interpolate [2,3,0,1]", 5, 50];
+		_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth interpolate [2,3,0,1]", 5, 50];
 		_roamPos = (selectRandom _myPlaces) select 0;
-		_shark moveTo _roamPos;
+		_shark doMove _roamPos;
+		//_shark setDestination [_roamPos, "LEADER PLANNED", true];
+		
+		//roaming depth
+		if (random 100 < 15) then {
+			//Change depth
+			[_shark] call SHARK_fnc_roamingDepth;
+			//[_shark] call BPServer_fnc_roamingDepth;
+		};
 	};
 
 	// exit if shark is dead

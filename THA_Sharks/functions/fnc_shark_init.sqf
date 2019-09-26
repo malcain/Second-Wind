@@ -17,8 +17,8 @@ waitUntil {time > 0};
 	_sharky setVariable ["BIS_fnc_animalBehaviour_disable", true];
 
 	// shark behaviour
-	[_sharky] spawn SHARK_fnc_huntingBehavior;
-	//[_sharky] spawn BPServer_fnc_huntingBehavior;
+	//[_sharky] spawn SHARK_fnc_huntingBehavior;
+	[_sharky] spawn BPServer_fnc_huntingBehavior;
 
 	//attach to pen to make shark sink
 	_sharkyKilledEH = _sharky addEventHandler ["Killed", {
@@ -33,15 +33,15 @@ waitUntil {time > 0};
 			_pen setDir (getDir (_this select 0));
 			(_this select 0) attachTo [_pen,[0,0,0.3]];
 			(_this select 0) removeEventHandler ["Killed",_thisEventHandler];
-			[(_this select 0),(_this select 0)] spawn SHARK_fnc_underwaterBleeding;
-			//[(_this select 0),(_this select 0)] spawn BPServer_fnc_underwaterBleeding;
+			//[(_this select 0),(_this select 0)] spawn SHARK_fnc_underwaterBleeding;
+			[(_this select 0),(_this select 0)] spawn BPServer_fnc_underwaterBleeding;
 		};
 	}];
 
 	//hit EH
 	_sharky addEventHandler ["Hit", {
-		[(_this select 0),(_this select 0)] spawn SHARK_fnc_underwaterBleeding;
-		//[(_this select 0),(_this select 0)] spawn BPServer_fnc_underwaterBleeding;
+		//[(_this select 0),(_this select 0)] spawn SHARK_fnc_underwaterBleeding;
+		[(_this select 0),(_this select 0)] spawn BPServer_fnc_underwaterBleeding;
 
 		_nearPlayers = _shark nearEntities ["BP_Player", 50];
 		if (count _nearPlayers > 0) then {
