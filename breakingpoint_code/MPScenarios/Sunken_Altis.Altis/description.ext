@@ -59,6 +59,13 @@ loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
 corpseManagerMode = 0;
 //class CfgRemoteExecCommands {};
 
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 80;
+};
+
 class BreakingPoint
 {
 	class CfgSettings

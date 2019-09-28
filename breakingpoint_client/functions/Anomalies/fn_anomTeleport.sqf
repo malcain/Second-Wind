@@ -9,9 +9,9 @@
 
 params ["_unit","_pos"];
 
-waitUntil {isNil{player getVariable "tele"}};
+//waitUntil {sleep 0.2; isNil{player getVariable "tele"} };
 
-player setVariable ["tele",true];
+//player setVariable ["tele",true];
 _height = 2;
 if (random 100 < 20) then {_height = 7 + random 550};
 //remoteExec ["BP_fnc_tp_effect",_unit];
@@ -27,4 +27,4 @@ sleep 0.5;
 _unit setPos [_pos select 0,_pos select 1,_height];
 //[_unit,[_pos select 0,_pos select 1,2]] remoteExec ["setPos",_unit];
 sleep (4 + random 3);
-player setVariable ["tele",nil];
+//player setVariable ["tele",nil];

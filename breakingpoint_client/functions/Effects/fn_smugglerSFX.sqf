@@ -5,8 +5,13 @@ fnc_effecte_princ_smug = {
 	_obj_princ_effect 	= _this select 0;
 	_sursa_princ_center	= _this select 1;
 
-	[_sursa_princ_center] spawn 
-	{_obj_princ_voice = _this select 0;	while {player distance _obj_princ_voice <1000} do {_obj_princ_voice say3D ["smugg_03", 500]; sleep 13}};
+	[_sursa_princ_center] spawn {
+		_obj_princ_voice = _this select 0;	
+		while {player distance _obj_princ_voice <1000} do {
+			_obj_princ_voice say3D ["smugg_03", 85];
+			sleep 13
+		}
+	};
 	
 	_basic_param = [[0,[0,0,0]],[0,[0,0,0],[0,0,0],0,0,[0,0,0,0],0,0]];
 	_center_smug = "#particlesource" createVehicleLocal (getPosATL _sursa_princ_center);
@@ -87,7 +92,7 @@ fnc_sec_effect_smug = {
 	while {player getVariable "loop_dust"} do
 	{
 		_rafala_smug = ["rafala_smug_01","rafala_smug_02","rafala_smug_03"] call BIS_fnc_selectRandom;
-		_obj_sec_center say3D [_rafala_smug, 500];
+		_obj_sec_center say3D [_rafala_smug, 85];
 
 		_suck_frunze = "#particlesource" createVehicleLocal (getPosATL _obj_sec_effect);
 		_suck_frunze setParticleCircle [5,[0,0,0]];
@@ -107,39 +112,47 @@ fnc_sec_effect_smug = {
 	};
 };
 
-fnc_check_detector_smug = {if ((headgear _this == detect_smug) or (goggles _this ==detect_smug) or (uniform _this ==detect_smug) or (vest _this ==detect_smug) or (Backpack _this ==detect_smug) or (detect_smug in (assigneditems _this  + items _this ))) then {true} else {false}};
+_detectionDevice = false;
+
+fnc_check_detector_smug = {
+	if ((vest _this == "V_RangerVest_BP") or (Backpack _this == "BP_RadioPack") or ("ItemRadio" in (assigneditems _this))) then {
+		true
+	} else {
+		false
+	} 
+};
 
 if (!hasInterface) exitwith {};
 
 _obj_sursa_smugg = _this select 0;
 _sursa_core		 = _this select 1;
 
-waitUntil {!isNil{_sursa_core getVariable "activeaza"}};
+//waitUntil {!isNil{_sursa_core getVariable "activeaza"}};
 
-if (detect_smug!="") then 
-{
+if (_detectionDevice) then {
 	while {!isnull _obj_sursa_smugg} do 
 	{
 		waitUntil {sleep 10; player distance _obj_sursa_smugg < 1000};
-		_sursa_core setVariable ["activeaza",true,true];
+		//_sursa_core setVariable ["activeaza",true,true];
 		[_obj_sursa_smugg,_sursa_core] spawn fnc_sec_effect_smug;
-		waitUntil {player call fnc_check_detector_smug};
+		waitUntil {sleep 10; player call fnc_check_detector_smug};
 		player_chk_det =true;
-		[] spawn {waitUntil{sleep 1; !(player call fnc_check_detector_smug)}; player_chk_det =false};
+		[] spawn {
+			waitUntil{ sleep 10; !(player call fnc_check_detector_smug)}; player_chk_det = false
+		};
 		[_obj_sursa_smugg,_sursa_core] call fnc_effecte_princ_smug;
 		player setVariable ["loop_dust",false];
 		sleep 30;
 	};
-} else 
+} else {
+	player_chk_det = true;
+	while {!isnull _obj_sursa_smugg} do 
 	{
-		player_chk_det = true;
-		while {!isnull _obj_sursa_smugg} do 
-		{
-			waitUntil {sleep 10; player distance _obj_sursa_smugg < 1000}; 
-			_sursa_core setVariable ["activeaza",true,true];
-			[_obj_sursa_smugg,_sursa_core] spawn fnc_sec_effect_smug;
-			[_obj_sursa_smugg,_sursa_core] call fnc_effecte_princ_smug;
-			player setVariable ["loop_dust",false];
-			sleep 30;
-		};
+		waitUntil {sleep 10; player distance _obj_sursa_smugg < 1000}; 
+		//_sursa_core setVariable ["activeaza",true,true];
+		[_obj_sursa_smugg,_sursa_core] spawn fnc_sec_effect_smug;
+		[_obj_sursa_smugg,_sursa_core] call fnc_effecte_princ_smug;
+		player setVariable ["loop_dust",false];
+		sleep 30;
 	};
+};

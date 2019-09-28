@@ -38,7 +38,7 @@ class CfgFactions
 			class Level_Base {
 				maxHealth = 12000;
 				regenRate = 0;
-				regenRateSitting = 15;
+				regenRateSitting = 20;
 				class Spawn : BP_BaseGear {};
 				class Uniform : BP_BaseGear {};
 				class Vest : BP_BaseGear {};

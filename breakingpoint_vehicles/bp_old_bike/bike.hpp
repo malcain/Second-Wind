@@ -69,7 +69,7 @@ class CfgVehicles
 			init = "_this call BP_fnc_vehicleInit;";
 			killed = "_this call BP_fnc_vehicleKilled;";
 			handledamage = "_this call BP_fnc_damageHandlerVehicle;";
-			getin = "_this call BP_fnc_vehicleInteract;";
+			getin = "_this call BP_fnc_vehicleInteract; _this disableCollisionWith player";
 			getout = "_this call BP_fnc_vehicleInteract;";
         };
 	};

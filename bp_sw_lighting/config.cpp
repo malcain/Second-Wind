@@ -429,7 +429,8 @@ class CfgWorlds
 		class Sea
 		{
 			seaTexture = "a3\data_f\seatexture_co.paa";
-			seaMaterial = "#water";
+			//seaMaterial = "#water";
+			seaMaterial = "#waterriver";
 			shoreMaterial = "#shore";
 			shoreFoamMaterial = "#shorefoam";
 			shoreWetMaterial = "#shorewet";
@@ -482,7 +483,7 @@ class CfgWorlds
 			refractionMinCoef = 0.03;
 			refractionMaxCoef = 0.14;
 			refractionMaxDist = 5.1;
-			specularMaxIntensity = 100;
+			specularMaxIntensity = 300;
 			specularPowerOvercast0 = 750;
 			specularPowerOvercast1 = 50;
 			specularNormalModifyCoef = 0.015;
@@ -2788,6 +2789,7 @@ class CfgWorlds
 					cloudBaseKm=0.3;
 					cloudHeightKm=13.5;
 					indirectLight=0.22;
+					directLight=0.9;
 					seqFileKeyframe=4;
 				};
 				class Weather5: DefaultKeyframe

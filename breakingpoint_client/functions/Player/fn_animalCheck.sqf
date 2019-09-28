@@ -35,7 +35,7 @@ if (_nearbyAnimals < BP_MaxAnimals) then
 	//http://resources.bisimulations.com/wiki/selectBestPlaces
 	
 	_favouritezones = "(forest + meadow + trees) * (1 - houses) * (1 - sea)";
-	_mushroomZones = "forest - meadow * (1 - sea) * (1 - houses)";
+	_mushroomZones = "forest * (1 - meadow) * (1 - sea) * (1 - houses)";
 	
 	if (random 100 < 65) then {
 		_mushroom = true;

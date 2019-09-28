@@ -89,10 +89,10 @@ waitUntil
 			_rnd = ceil (random 8);
 			
 			//Coughing Sounds
-			[player,"cough",_rnd,false,25] call BP_fnc_objSpeak;
+			[player,"cough",_rnd,false,30] call BP_fnc_objSpeak;
 			
 			//Random Camera Shakes if Infected
-			if (_rnd < 3) then { addCamShake [2, 1, 25]; };
+			//if (_rnd < 3) then { addCamShake [2, 1, 25]; };
 			
 			//Lower Health as a result of infection
 			if (r_player_blood > 2500) then { r_player_blood = r_player_blood - 4; };

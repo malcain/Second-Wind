@@ -76,6 +76,20 @@ class CfgVehicles
 	//	cost = 0;
 	//};
 	
+	class SW_Smuggler : Thing
+	{
+		scope = public;
+		displayName = "Haven"; 
+		model="\A3\Weapons_f\dummyweapon.p3d";
+		vehicleClass = "Survival";
+		author = "Malcain";
+		destrType = "DestructNo";
+		side = 0;
+		accuracy = 5;
+		armor = 150;
+		cost = 0;
+	};
+	
 	class BP_Haven : Thing
 	{
 		scope = public;

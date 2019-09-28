@@ -58,6 +58,13 @@ corpseLimit = 9999;
 loadScreen = "\breakingpoint_ui\general\BP_screen_title.jpg";
 corpseManagerMode = 0;
 
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 80;
+};
+
 class BreakingPoint
 {
 	class CfgSettings

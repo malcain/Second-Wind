@@ -18,7 +18,7 @@ _playerID = clientOwner;
 };
 
 _bicycle disableCollisionWith _player;
-sleep 0.1;
+//sleep 0.1;
 _vecloc = getPosATL _bicycle;
 _location = [_vecloc select 0,_vecloc select 1,(_vecloc select 2) + 1];
 _bicycle setPosATL _location;
@@ -28,5 +28,5 @@ _bicycle enableSimulation false;
 _bicycle setPosATL [_vecloc select 0,_vecloc select 1,_vecloc select 2];
 _bicycle setVelocity [0,0,0];
 _bicycle enableSimulation true;
-sleep 3;
-_bicycle enableCollisionWith _player;
+//sleep 3;
+//_bicycle enableCollisionWith _player;

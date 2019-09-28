@@ -51010,7 +51010,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsFlare = 1;
 					cameraDir = "";
 					discreteDistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200};
-					discreteDistanceInitIndex = 6;
+					discreteDistanceInitIndex = 5;
 					distanceZoomMin = 100;
 					distanceZoomMax = 1200;
 				};
@@ -51045,7 +51045,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMax = 0.050000;
 					opticsZoomInit = 0.050000;
 					discreteDistance[] = {200, 300, 400, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000, 2050, 2100, 2150, 2200, 2250, 2300};
-					discreteDistanceInitIndex = 2;
+					discreteDistanceInitIndex = 1;
 					distanceZoomMin = 200;
 					distanceZoomMax = 2300;
 					discretefov[] = {0.050000, 0.016667, 0.009};
@@ -51142,8 +51142,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMin = 0.070900;
 					opticsZoomMax = 0.175000;
 					opticsZoomInit = 0.175000;
-					discreteDistance[] = {100, 200, 300, 400, 500};
-					discreteDistanceInitIndex = 2;
+					discreteDistance[] = {50, 100, 200, 300, 400, 500};
+					discreteDistanceInitIndex = 0;
 					distanceZoomMin = 100;
 					distanceZoomMax = 500;
 					//discretefov[] = {0.175000, 0.070900};

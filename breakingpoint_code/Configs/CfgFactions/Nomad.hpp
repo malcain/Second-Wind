@@ -43,7 +43,7 @@
 			
 			class Level_0 : Level_Base 
 			{
-				regenRateSitting = 15;
+				regenRateSitting = 20;
 				class Spawn
 				{
 					//Array Of Toolbelt Items
@@ -73,7 +73,7 @@
 			};
 			
 			class Level_1 : Level_Base {
-				regenRateSitting = 20;
+				regenRateSitting = 25;
 				class Spawn
 				{
 					//Array Of Toolbelt Items
@@ -109,7 +109,7 @@
 				};
 			};
 			class Level_2 : Level_Base {
-				regenRateSitting = 25;
+				regenRateSitting = 30;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};
@@ -144,14 +144,14 @@
 				};
 			};
 			class Level_3 : Level_Base {
-				regenRateSitting = 30;
+				regenRateSitting = 35;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
-					primary[] = {};
+					primary[] = {"BP_CZ455"};
 					launcher[] = {"MeleeHatchet"};
-					handgun[] = {};
+					handgun[] = {"Binocular"};
 					clothing[] = {"BP_Refugee_3"};
 					backpack[] = {"BP_Hpack"};
 					vest[] = {};
@@ -172,22 +172,22 @@
 				class Backpack : BP_BaseGear 
 				{
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_CZ455"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
+					magazines[] = {"BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"Binocular"};
+					items[] = {"BP_MRT"};
 				};
 			};
 			class Level_4 : Level_Base {
-				regenRateSitting = 30;
+				regenRateSitting = 35;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
-					primary[] = {};
+					primary[] = {"BP_CZ455"};
 					launcher[] = {"MeleeHatchet"};
-					handgun[] = {};
+					handgun[] = {"Binocular"};
 					clothing[] = {"BP_Refugee_4"};
 					backpack[] = {"BP_Hpack"};
 					vest[] = {"V_TacChestrig_oli_BP"};
@@ -208,11 +208,11 @@
 				class Backpack : BP_BaseGear 
 				{
 					//Array Of Weapons Inside Backpack
-					weapons[] = {"BP_CZ455"};
+					weapons[] = {};
 					//Array Of Magazines Inside Backpack
-					magazines[] = {"BP_MRT","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
+					magazines[] = {"BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","BP_5Rnd_22_Mag","ItemDuctTape","ItemKnife","ChemY","ChemY","ChemY"};
 					//Array Of Items Inside Backpack ( Add to Spawn Toolbelt If they should be assigned )
-					items[] = {"Binocular"};
+					items[] = {"BP_MRT"};
 				};
 			};
 		};

@@ -94,7 +94,7 @@ if !(isNull _container) then
 		if (_container isKindOf "BP_GunCabinet") then {
 			_allMags = magazineCargo _container;
 			clearBackpackCargoGlobal _container;
-			clearItemCargoGlobal _container;
+			//clearItemCargoGlobal _container;
 			{
 				_acessories = ["Bullet", "AccessoryMuzzle", "AccessoryPointer", "AccessorySights", "AccessoryBipod"];
 				_itemType = _x call BIS_fnc_itemType;
