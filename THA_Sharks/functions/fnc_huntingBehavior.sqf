@@ -21,7 +21,10 @@ for "_i" from 1 to 12 step 0 do
 	//disable animal behaviour
 	//_shark setVariable ["BIS_fnc_animalBehaviour_disable", true];
 
-	if (_debug) then {player sideChat "Sharky searching"};
+	if (getPosASLW _shark select 2 > -0.2) then {
+		[_shark] call SHARK_fnc_roamingDepth;
+		//[_shark] call BPServer_fnc_roamingDepth;
+	};
 
 	_nearestTarget = objNull;
 	_nearTargets = _shark nearEntities [["BP_Player","BP_Dog","Tuna_F","Turtle_F","Mullet_F"], 275];
@@ -39,7 +42,7 @@ for "_i" from 1 to 12 step 0 do
 
 		//Out of water check
 		_targetDepth = (getPosASLW _nearestTarget) select 2;
-		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget) or (_targetDepth > -1.4)) exitWith {
+		if (isTouchingGround _nearestTarget or (!isNull objectParent player) or (_targetDepth > -1.4) or !(isNull attachedTo _nearestTarget)) exitWith {
 			//Roaming
 			_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth interpolate [2,3,0,1]", 5, 50];
 			_roamPos = (selectRandom _myPlaces) select 0;
@@ -70,7 +73,7 @@ for "_i" from 1 to 12 step 0 do
 			if (_distance <= 4.5) exitWith {true};
 
 			//Out of water check
-			if ((isTouchingGround _nearestTarget) or (vehicle _nearestTarget != _nearestTarget)) exitWith {true};
+			if (isTouchingGround _nearestTarget or (!isNull objectParent player) or ((getPosASLW _nearestTarget) select 2 > -1.4)) exitWith {true};
 
 			//Direction
 			//_relativeDir = _shark getDir _nearestTarget;
@@ -85,10 +88,11 @@ for "_i" from 1 to 12 step 0 do
 		};
 
 
+		_tPos = getPosASLW _nearestTarget;
 		//Out of water check
-		if ((isTouchingGround (vehicle _nearestTarget)) or (vehicle _nearestTarget != _nearestTarget)) exitWith {
+		if (isTouchingGround _nearestTarget or (!isNull objectParent player) or (_tPos select 2 > -1.4)) exitWith {
 			//Roaming
-			_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth interpolate [2,3,0,1]", 5, 50];
+			_myPlaces = selectBestPlaces [position _shark, 125, "waterDepth", 5, 50];
 			_roamPos = (selectRandom _myPlaces) select 0;
 			_shark doMove _roamPos;
 			//_shark setDestination [_roamPos, "LEADER PLANNED", true];
@@ -101,7 +105,6 @@ for "_i" from 1 to 12 step 0 do
 		};
 
 		//Check attack angle view
-		_tPos = getPosASLW _nearestTarget;
 		_sharkPos = getPosASLW _shark;
 		_inAngle = [_sharkPos,(getDir _shark),120,_tPos] call BIS_fnc_inAngleSector;
 		_inView = false;
@@ -185,8 +188,13 @@ for "_i" from 1 to 12 step 0 do
 				_nearestTarget setUnconscious false;
 				sleep 0.5;
 				_nearestTarget switchMove "AdvePercMstpSnonWnonDnon";
-				BP_MedicalEvent = ["medSharkAttack",(netID _nearestTarget),(netID _nearestTarget)];
-				(owner _nearestTarget) publicVariableClient "BP_MedicalEvent";
+				if (_nearestTarget == player) then {
+					["medSharkAttack",(netID player),(netID player)] call BP_fnc_medicalEvent;
+				} else {
+					["medSharkAttack",(netID _nearestTarget),(netID _nearestTarget)] remoteExecCall ["BPServer_fnc_medicalUpdate",2];
+					//BP_MedicalEvent = ["medSharkAttack",(netID _nearestTarget),(netID _nearestTarget)];
+					//(owner _nearestTarget) publicVariableClient "BP_MedicalEvent";
+				};
 			};
 		};
 	} else {

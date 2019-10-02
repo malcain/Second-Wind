@@ -12,7 +12,7 @@ scriptName "BP_Music";
 waitUntil
 {
 	if (isNil "r_player_dead") exitWith {};
-	if (r_player_dead) exitWith {};
+	if (r_player_dead) exitWith {true};
 	
 	waitUntil {!r_player_unconscious};
 	waitUntil {!r_pitchWhine};

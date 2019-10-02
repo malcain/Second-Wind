@@ -9,20 +9,21 @@
 
 private ["_isAir","_inVehicle","_spawnZombies"];
 //_isAir = objectparent player iskindof "air";
-_inMovingVehicle = speed player > 90;
+//_inMovingVehicle = speed player > 90;
 
-_nearbyBuildings = (getPos player) nearObjects ["building",340];
+//_nearbyBuildings = (getPos player) nearObjects ["building",150];
+_nearbyBuildings = nearestTerrainObjects [player, ["Chapel", "Fuelstation","BUILDING", "HOUSE","CHURCH","RUIN", "TOURISM","BUNKER", "FORTRESS","VIEW-TOWER", "LIGHTHOUSE", "QUAY","HOSPITAL","BUSSTOP","POWERSOLAR"], 220];
 _spawnZombies = true;
 _spawnLoot = true;
 _underwater = false;
 
 //Limit Zombie Spawning to 18 Local Zombies Per Player / Limit Zombie Spawning to 24 per 300m Bubble
 if (BP_LocalZeds > 18 || {BP_NearbyZombies >= 22}) then { _spawnZombies = false; };
-if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
+//if (BP_NearbyLootNum > 45) then { _spawnLoot = false; };
 
 {
 	if (isObjectHidden _x) exitwith {};
-	if ((getPosASLW _x select 2) < -1.5) then {_underwater = true;};
+	if ((getPosASLW _x select 2) < -1.5) then {_underwater = true};
 	_type = typeOf _x;
 	_config = configFile >> "CfgBuildingLoot" >> _type;
 	/*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _type)) then
@@ -39,7 +40,7 @@ if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 			[_x] call BP_fnc_logicSpawnLoot;
 		};
 	} else {
-		if (_canLoot && {damage _x < 0.8}) then
+		if (_canLoot && {damage _x < 0.85}) then
 		{
 			
 			//Zombies
@@ -54,15 +55,15 @@ if (BP_NearbyLootNum > 60) then { _spawnLoot = false; };
 			
 			
 			//Loot
-			if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
-			{
-				if (_dis < 320 && {_dis > 30} && {!_inMovingVehicle} && {_spawnLoot}) then {
+			//if (BP_LootGlobal < BP_LootMax) then // && {!BP_HC_Connected}) then
+			//{
+				//if (_dis < 350 && {_dis > 15} && {!_inMovingVehicle}) then {
 					[_x] call BP_fnc_buildingSpawnLoot;
 					//_handle = [_x] spawn BP_fnc_buildingSpawnLoot;
 					//[_handle] call BP_fnc_addThreadHandle;
 					//waitUntil {scriptDone _handle};
-				};
-			};
+				//};
+			//};
 		};
 	};
 	true

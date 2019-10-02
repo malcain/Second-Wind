@@ -108,7 +108,7 @@ item103[] = {"Response_1",4,218,-361.734772,298.226898,-261.734772,348.226837,0.
 item104[] = {"Faction_Dialog",2,250,-314.298584,205.854370,-214.298584,255.854370,0.000000,"Faction Dialog"};
 item105[] = {"True",8,218,-261.594452,296.823730,-161.594452,346.823730,0.000000,"True"};
 item106[] = {"Timeout",4,218,-186.100128,1002.039124,-86.100128,1052.039185,0.000000,"Timeout"};
-item107[] = {"____FAKE____",9,1441812,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
+item107[] = {"____FAKE____",9,1245212,0.000000,0.000000,0.000000,0.000000,0.000000,"____FAKE____"};
 version=1;
 class LayoutItems
 {
@@ -269,8 +269,8 @@ link119[] = {104,105};
 link120[] = {105,25};
 link121[] = {106,88};
 link122[] = {95,107};
-globals[] = {0.000000,0,0,0,0,640,480,1,256,6316128,1,-471.469208,587.749756,1860.508301,952.312866,1031,884,1};
-window[] = {2,-1,-1,-1,-1,1081,182,1763,182,3,1049};
+globals[] = {0.000000,0,0,0,0,640,480,1,256,6316128,1,-712.986145,829.261414,2187.979980,1107.575684,1299,910,1};
+window[] = {2,-1,-1,-1,-1,925,26,1607,26,3,1317};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -339,7 +339,8 @@ class FSM
                                         to="Collect";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _myTime) > 7) and (!isnil ""bis_fnc_init"") and (!isNull player) and (player == player)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/"enableSaving [false, false];" \n
+                                        action=/*%FSM<ACTION""">*/"player allowDamage false;" \n
+                                         "enableSaving [false, false];" \n
                                          "//enableRadio false;" \n
                                          "enableSentences false;" \n
                                          "showSubtitles false;" \n
@@ -348,7 +349,6 @@ class FSM
                                          "enableTeamSwitch false;" \n
                                          "enableSatNormalOnDetail false;" \n
                                          "disableUserInput true;" \n
-                                         "player allowDamage false;" \n
                                          "player enableSimulation false;" \n
                                          "player disableConversation true;"/*%FSM</ACTION""">*/;
                                 };
@@ -651,9 +651,7 @@ class FSM
                          """colorCorrections"" ppEffectCommit 0;" \n
                          "" \n
                          "player setOxygenRemaining 1;" \n
-                         "if (sunOrMoon < 0.3) then {" \n
-                         "	call BP_fnc_shoulderLight;" \n
-                         "};" \n
+                         "//if (sunOrMoon < 0.3) then {call BP_fnc_shoulderLight};" \n
                          "" \n
                          "//Work out survival time" \n
                          "/*" \n
@@ -718,7 +716,6 @@ class FSM
                         itemno = 16;
                         init = /*%FSM<STATEINIT""">*/"BP_AuthPaused = false;" \n
                          "BP_authed = true;" \n
-                         "player allowDamage true;" \n
                          "bpLoginResult = nil;" \n
                          "bpSetupResult = nil;" \n
                          "" \n
@@ -751,6 +748,8 @@ class FSM
                          "	[_survival] spawn BP_fnc_loginUI;" \n
                          "};" \n
                          "" \n
+                         "player switchMove """";" \n
+                         "" \n
                          "if (!isNil ""BP_selectClass"") then {" \n
                          "" \n
                          "	[player,_class] call BP_fnc_factionGear;" \n
@@ -772,6 +771,12 @@ class FSM
                          "	_dog setName [""Dog"",""Dog"",""""];" \n
                          "	_dog setVariable [""bodyName"",""Dog"",true];" \n
                          "	};" \n
+                         "};" \n
+                         "" \n
+                         "if (worldName == ""Altis"") then {" \n
+                         "	[player] spawn BP_fnc_allowDamage;" \n
+                         "} else {" \n
+                         "	player allowDamage true;" \n
                          "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -1291,9 +1296,16 @@ class FSM
                          "		//		};" \n
                          "		//	};" \n
                          "		//};" \n
-                         "		" \n
+                         "		BP_SpawnSelect = false;" \n
+                         "		if (_class in [1,4,5] && (cntStrongholds select 0) > 0) then {" \n
+                         "			BP_SpawnSelect = true;" \n
+                         "		} else {" \n
+                         "			if (_class in [2,6] && (cntStrongholds select 1) > 0) then {" \n
+                         "				BP_SpawnSelect = true;" \n
+                         "			};" \n
+                         "		};" \n
                          "		//Show Random Spawn Selection Screen" \n
-                         "		if (BP_SpawnSelect) then //if (BP_SpawnSelect and BP_Strongholds < 1) then" \n
+                         "		if (BP_SpawnSelect and _playerFactionPoints > -1) then //if (BP_SpawnSelect and BP_Strongholds < 1) then" \n
                          "		{" \n
                          "			createDialog _dialogSpawn;" \n
                          "			while {BP_spawnLocation < 1} do {" \n

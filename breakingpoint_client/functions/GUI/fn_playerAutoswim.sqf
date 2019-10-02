@@ -19,7 +19,7 @@ if (time - BP_lastCheckBit > 1) then
 	r_interrupt = true;
 	//r_action_rest = false;
 		
-	if ((getPosASLW player select 2) > -1) exitWith {};
+	if ((getPosASLW player select 2) > -1 or {isTouchingGround player}) exitWith {};
 	//if ((getterrainheightASL position player) > -1.5) exitWith {};
 	
 	if (!BP_AutoRun && {!r_fracture_legs} && {!(r_hit_legs > 0)}) then 
@@ -65,7 +65,7 @@ if (time - BP_lastCheckBit > 1) then
 				sleep 0.05;
 				
 				//Condition Checks
-				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASLW player select 2) > -1});
+				(r_interrupt || {!BP_AutoRun} || {!alive player} || {r_fracture_legs} || {r_hit_legs > 0} || {(getPosASLW player select 2) > -1} || {isTouchingGround player});
 			};
 			
 			BP_AutoRun = false;

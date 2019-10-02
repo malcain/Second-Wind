@@ -10,18 +10,20 @@ waitUntil {time > 0};
 
 //if (isServer) then {
 
-	private ["_sharky","_ornate01","_ornate02","_catShark","_sharkyKilledEH","_pen","_thisEventHandler"];
-	_sharky = _this select 0;
+	params ["_sharkID","_catShark","_sharkKilledEH","_pen","_thisEventHandler"];
+	_shark = objectFromNetID _sharkID;
+	[_shark] joinSilent (group player);
+	(group player) selectLeader _shark;
 
 	//disable BI animal behaviour
-	_sharky setVariable ["BIS_fnc_animalBehaviour_disable", true];
+	//_shark setVariable ["BIS_fnc_animalBehaviour_disable", true];
 
 	// shark behaviour
-	[_sharky] spawn SHARK_fnc_huntingBehavior;
-	//[_sharky] spawn BPServer_fnc_huntingBehavior;
+	[_shark] spawn SHARK_fnc_huntingBehavior;
+	//[_shark] spawn BPServer_fnc_huntingBehavior;
 
 	//attach to pen to make shark sink
-	_sharkyKilledEH = _sharky addEventHandler ["Killed", {
+	_sharkKilledEH = _shark addEventHandler ["Killed", {
 		if (isServer) then {
 			private ["_pen"];
 			{
@@ -39,7 +41,7 @@ waitUntil {time > 0};
 	}];
 
 	//hit EH
-	_sharky addEventHandler ["Hit", {
+	_shark addEventHandler ["Hit", {
 		[(_this select 0),(_this select 0)] spawn SHARK_fnc_underwaterBleeding;
 		//[(_this select 0),(_this select 0)] spawn BPServer_fnc_underwaterBleeding;
 

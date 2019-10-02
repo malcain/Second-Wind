@@ -53,9 +53,10 @@ _posFree = ((count (_buildingPos nearEntities ["CAManBase",2])) == 0);
 if (!_noZedNearby or !_posFree) exitWith {};
 
 //Check if zedz have already spawned here earlier
-_nearByObj = count (nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize]);
-//if (_nearByObj > 0 && (_zedsNearby > _min)) exitWith {};
-if (_nearByObj > 0) exitWith {};
+//_nearByObj = count (nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize]);
+_nearByObj = _buildingPos nearSupplies _buildingSize;
+
+if (count _nearByObj > 0) exitWith {};
 
 //Zombies Only Spawn in Cleared Buildings with no other zombies
 //_clean = {alive _x} count (_buildingPos nearEntities ["zZombie_Base",_buildingSize]) == 0;

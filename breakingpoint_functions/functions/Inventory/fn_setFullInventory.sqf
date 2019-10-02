@@ -14,7 +14,7 @@ private ["_unit", "_data", "_name", "_value"];
 _unit = _this select 0;
 _data = _this select 1;
 
-if (_unit isKindOf "BP_DeadBody") then
+if (_unit isKindOf "BP_DeadBody" or (_unit isKindOf "BP_DeadBodyX")) then
 {
 	{
 		_name = _x select 0;

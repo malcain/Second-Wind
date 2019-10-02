@@ -5,7 +5,12 @@
 */
 
 _waterSource = _this;
-_leakPos = _waterSource modelToWorld [0.67,0.21,0.11];
+
+_modelPos = [0,-0.13,-0.42];
+if (_waterSource isKindOf "Land_ConcreteWell_02_F") then {
+	_modelPos = [0.67,0.21,0.11];
+};
+_leakPos = _waterSource modelToWorld _modelPos;
 _leak_obj = createVehicle ["Land_HelipadEmpty_F", _leakPos, [], 0, "CAN_COLLIDE"];
 
 sleep 0.5;

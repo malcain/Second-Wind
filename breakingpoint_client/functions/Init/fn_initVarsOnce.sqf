@@ -14,7 +14,8 @@ BP_ZombieClasses = ["zZombie_Base","z_villager1","z_villager2","z_villager3","z_
 BP_LootClasses = [];
 BP_StorageClasses = [];
 BP_NearbyLootBox = [];
-BP_NearbyLootNum = 22;
+SW_FreshLog = false;
+//BP_NearbyLootNum = 22;
 
 [0x3B,false] call OptionWheel_fnc_setWheelKey;
 AllActions = [["Heal",BP_fnc_playerHeal],["Bandage",BP_fnc_playerBandage],["Stats",BP_fnc_loadFactionStatsDiary]];
@@ -420,7 +421,8 @@ BP_ZedMaxNearby = getNumber (_cfgSettings >> "Zombies" >> "maxNearby");
 BP_ZedMaxLocal = getNumber (_cfgSettings >> "Zombies" >> "maxLocal");
 BP_ZedMaxGlobal = getNumber (_cfgSettings >> "Zombies" >> "maxGlobal");
 
-BP_SpawnSelect = (getNumber (_cfgSettings >> "SpawnPos" >> "enabled") == 1);
+//BP_SpawnSelect = (getNumber (_cfgSettings >> "SpawnPos" >> "enabled") == 1);
+BP_SpawnSelect = false;
 
 BP_Factions = (getNumber (_cfgSettings >> "Factions" >> "enabled") == 1);
 

@@ -13,6 +13,8 @@ params ["_iItem","_iClass","_iLootType","_iPos"];
 
 //if (BP_LootGlobal >= BP_LootMax && {!isServer}) exitWith {};
 //if (surfaceIsWater _iPos) exitWith {};
+_height = (_iPos select 2) + 0.3;
+_iPos set [2,_height];
 
 if (isNil "_iClass") then
 {

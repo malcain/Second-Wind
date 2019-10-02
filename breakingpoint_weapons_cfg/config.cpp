@@ -46667,7 +46667,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		model = "\breakingpoint_weapons\models\M110\BP_M110.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_M110_rifle_x_ca.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_Mk316Mod0", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
+		magazines[] = { "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
 		inertia = 0.3248;
 		recoil = "recoil_ebr";
 		initSpeed = -1.04;
@@ -46936,7 +46936,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		model = "\breakingpoint_weapons\models\M110\BP_SR25.p3d";
 		picture = "\breakingpoint_weapons\icons\gear_sr25_rifle_x_ca.paa";
 		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_Mk316Mod0", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
+		magazines[] = {"BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
 		inertia = 0.375000;
 		modes[] = {"Single", "far_optic1", "far_optic2"};
 
@@ -47877,7 +47877,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\breakingpoint_weapons\icons\gear_G36DMR_rifle_x_ca.paa";
 		displayName = "G36 DMR";
 		descriptionshort = "A medium/long range Heavy Barrel Designated Marksman version of the G36 Rifle";
-		magazines[] = {"BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
+		magazines[] = {"BP_30Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_30Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
 		handAnim[] = {"OFP2_ManSkeleton", "\A3\Weapons_F\Rifles\MX\data\Anim\MX_dmr.rtm"};
 		recoil = "recoil_ebr";
 		initSpeed = -0.98;
@@ -48133,7 +48133,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\breakingpoint_weapons\icons\gear_dmr_rifle_x_ca.paa";
 		displayName = "M14 DMR";
 		descriptionshort = "M14 Designated Marksman Rifle";
-		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
+		magazines[] = {"BP_30Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_30Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M60E4.rtm"};
 		inertia = 0.300000;
 		initSpeed = -1.02;
@@ -48369,7 +48369,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 		picture = "\breakingpoint_weapons\icons\gear_dmr_rifle_x_ca.paa";
 		displayName = "M14 RIS DMR";
 		descriptionshort = "M14 RIS Designated Marksman Rifle";
-		magazines[] = {"BP_20Rnd_762x51_BPMag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
+		magazines[] = {"BP_30Rnd_762x51_M80A1", "BP_10Rnd_762mk316_Mag", "BP_10Rnd_762x51_Mag", "BP_10Rnd_762m80a1_Mag", "BP_20Rnd_762x51_Mk316Mod0", "BP_20Rnd_762x51_M80A1", "BP_20Rnd_762x51_BPMag", "BP_30Rnd_762x51_BPMag", "BP_5Rnd_762x51_Mag", "BP_5Rnd_762mk316_Mag", "BP_5Rnd_762m80a1_Mag", "BP_10Rnd_762Rubber_Mag"};
 		handAnim[] = {"OFP2_ManSkeleton", "\breakingpoint_weapons\anim\M60E4.rtm"};
 		inertia = 0.250000;
 		initSpeed = -1.04;
@@ -57180,7 +57180,7 @@ class CfgAmmo {
 		airFriction = -0.0013;
 		caliber = 0.5;
 		deflecting = 20;
-		hit = 10.90;
+		hit = 12.01;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
@@ -57240,7 +57240,7 @@ class CfgAmmo {
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
 	};
 	class BP_556x45_Ball_Tracer_Yellow: B_556x45_Ball{
-		hit = 12.87;
+		hit = 14.15;
 		typicalSpeed = 940;
 		indirectHit = 0;
 		indirectHitRange = 0;
@@ -57283,7 +57283,7 @@ class CfgAmmo {
 		};
 	};
 	class BP_556x45_Ball_Tracer_Red: B_556x45_Ball{
-		hit = 12.87;
+		hit = 14.15;
 		typicalSpeed = 940;
 		indirectHit = 0;
 		indirectHitRange = 0;
@@ -57331,7 +57331,7 @@ class CfgAmmo {
 		airFriction = -0.0011;
 		caliber = 0.9;
 		deflecting = 20;
-		hit = 12.4;
+		hit = 13.6;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_green";
@@ -57767,7 +57767,7 @@ class CfgAmmo {
 
 	class BP_556x45_Ball: B_556x45_Ball //LEFT OFF HERE
 	{
-		hit = 12.87;
+		hit = 14.15;
 		typicalSpeed = 940;
 		indirectHit = 0;
 		indirectHitRange = 0;
@@ -57856,7 +57856,7 @@ class CfgAmmo {
 
 	class BP_556x45old_Ball: B_556x45_Ball
 	{
-		hit = 10.87;
+		hit = 11.96;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		typicalSpeed = 820;
@@ -57900,7 +57900,7 @@ class CfgAmmo {
 
 	class BP_556x45_BallMk262: B_556x45_Ball
 	{
-		hit = 17.95;
+		hit = 19.75;
 		indirectHit = 0;
 		typicalSpeed = 886;
 		indirectHitRange = 0;
@@ -59403,7 +59403,7 @@ class CfgAmmo {
 
 	class BP_300AAC_Ball: B_762x51_Ball
 	{
-	    hit = 15.00;
+	    hit = 16.50;
 		typicalSpeed = 723;
 		simulationStep = 0.09;
 		indirectHit = 0;
@@ -59444,7 +59444,7 @@ class CfgAmmo {
 
 	class BP_300AAC_OVPBall: B_762x51_Ball
 	{
-	    hit = 16.20;
+	    hit = 17.80;
 		typicalSpeed = 767;
 		simulationStep = 0.09;
 		indirectHit = 0;
@@ -59485,7 +59485,7 @@ class CfgAmmo {
 
 	class BP_223_Ball: B_408_Ball
 	{
-	    hit = 14.15;
+	    hit = 15.56;
 		cartridge = "FxCartridge_762";
 		typicalSpeed = 1056;
 		simulationStep = 0.10;
@@ -59577,7 +59577,7 @@ class CfgAmmo {
 
 	class BP_223BTHP_Ball: B_408_Ball
 	{
-	    hit = 14.85;
+	    hit = 16.33;
 		cartridge = "FxCartridge_762";
 		typicalSpeed = 893;
 		simulationStep = 0.13;
@@ -59671,7 +59671,7 @@ class CfgAmmo {
 
 	class BP_250_Ball: B_408_Ball
 	{
-	    hit = 17.15;
+	    hit = 18.86;
 		cartridge = "FxCartridge_762";
 		typicalSpeed = 1219;
 		simulationStep = 0.14;
@@ -59765,7 +59765,7 @@ class CfgAmmo {
 
 	class BP_3006_Spring: B_408_Ball
 	{
-	    hit = 20.70;
+	    hit = 22.77;
 		cartridge = "FxCartridge_762";
 		typicalSpeed = 902;
 		simulationStep = 0.09;
@@ -59811,7 +59811,7 @@ class CfgAmmo {
 
 	class BP_3006M_Spring: B_408_Ball
 	{
-	    hit = 22.25;
+	    hit = 24.47;
 		cartridge = "FxCartridge_762";
 		typicalSpeed = 938;
 		simulationStep = 0.11;
@@ -59858,7 +59858,7 @@ class CfgAmmo {
 
 	class BP_303B_Ball: B_762x51_Ball
 	{
-	    hit = 19.55;
+	    hit = 21.45;
 		typicalSpeed = 818;
 		caliber = 1.2700000;
 		simulationStep = 0.09;
@@ -59903,7 +59903,7 @@ class CfgAmmo {
 
 	class BP_303B_JSP: B_762x51_Ball
 	{
-		hit = 21.6;
+		hit = 23.76;
 		typicalSpeed = 844;
 		caliber = 1.09;//bekfix lowered because SoftPoint
 		simulationStep = 0.09;
@@ -59935,7 +59935,7 @@ class CfgAmmo {
 
 	class BP_22LR_Ball: B_9x21_Ball
 	{
-	    hit = 9.65;
+	    hit = 10.6;
 		typicalSpeed = 300; //old - 520, changed to 300 to make them subsonic.
 		caliber = 0.200000;
 		simulationStep = 0.09;
@@ -60225,7 +60225,7 @@ class CfgAmmo {
 
 	class BP_9x19_Ball: B_9x21_Ball
 	{
-	    hit = 9.45;
+	    hit = 10.38;
 		typicalSpeed = 390;
 		simulationStep = 0.09;
 		audibleFire = 10;
@@ -60263,7 +60263,7 @@ class CfgAmmo {
 
 	class BP_9x21_Ball: B_9x21_Ball
 	{
-		hit = 9.47;
+		hit = 10.41;
 		typicalSpeed = 320;
 		audibleFire = 12;
 		visibleFire = 10;
@@ -60301,7 +60301,7 @@ class CfgAmmo {
 
 	class BP_9x18_Ball: B_9x21_Ball
 	{
-	    hit = 9.35;
+	    hit = 10.28;
 		typicalSpeed = 319;
 		audibleFire = 8.00000;
 		visibleFire = 10;
@@ -60338,7 +60338,7 @@ class CfgAmmo {
 
 	class BP_9x19OVP_Ball: B_9x21_Ball
 	{
-	    hit = 9.80;
+	    hit = 10.78;
 		typicalSpeed = 335;
 		caliber = 0.3;
 		audibleFire = 15;
@@ -60377,7 +60377,7 @@ class CfgAmmo {
 
 	class BP_765x17_Ball: B_9x21_Ball
 	{
-	    hit = 9.60;
+	    hit = 10.56;
 		typicalSpeed = 310;
 		caliber = 0.55;
 		audibleFire = 10;
@@ -60415,7 +60415,7 @@ class CfgAmmo {
 
 	class BP_45ACP: B_45ACP_Ball
 	{
-	    hit = 13.95;
+	    hit = 14.34;
 		typicalSpeed = 280;
 		audibleFire = 18;
 		visibleFire = 10;
@@ -60452,7 +60452,7 @@ class CfgAmmo {
 
 	class BP_45GOV: B_45ACP_Ball
 	{
-	    hit = 20.65;
+	    hit = 22.71;
 		typicalSpeed = 617;
 		caliber = 1.4;
 		audibleFire = 23;
@@ -60498,7 +60498,7 @@ class CfgAmmo {
 
 	class BP_45JHP: B_45ACP_Ball
 	{
-	    hit = 15.99;
+	    hit = 17.6;
 		typicalSpeed = 350;
 		airFriction = -0.002000;
 		audibleFire = 12;
@@ -60580,7 +60580,7 @@ class CfgAmmo {
 
 	class BP_357mag_ball: B_45ACP_Ball
 	{
-		hit = 14.100000;
+		hit = 15.5;
 		cartridge = "FxCartridge_Small";
 		typicalSpeed = 450;
 		airFriction = -0.001500;
@@ -60626,7 +60626,7 @@ class CfgAmmo {
 
 	class BP_500Mag_ball : Bulletbase
 	{
-		hit = 20.85;
+		hit = 22.93;
 		cartridge = "FxCartridge_Small";
 		typicalSpeed = 600;
 		airFriction = -0.0011;
@@ -60673,7 +60673,7 @@ class CfgAmmo {
 
 	class BP_44Mag_ball : Bulletbase
 	{
-		hit = 18.00;
+		hit = 19.80;
 		cartridge = "FxCartridge_Small";
 		typicalSpeed = 460;
 		indirectHit = 0;
@@ -60729,7 +60729,7 @@ class CfgAmmo {
 
 	class BP_12Gauge_Slug: BulletBase
 	{
-		hit = 23;
+		hit = 25.3;
 		indirectHit = 0;
 		indirectHitRange = 0;
 		cartridge = "FxCartridge_slug";
@@ -60782,7 +60782,7 @@ class CfgAmmo {
 
 	class BP_12Gauge_Buck: BulletBase
 	{
-		hit = 9.50;
+		hit = 10.45;
 		//indirectHit = 4;
 		//indirectHitRange = 0.400000;
 		cartridge = "FxCartridge_slug";
@@ -60809,7 +60809,7 @@ class CfgAmmo {
 
 	class BP_12Gauge_Buck2: BulletBase
 	{
-		hit = 9.90;
+		hit = 10.89;
 		//indirectHit = 4;
 		//indirectHitRange = 0.400000;
 		cartridge = "FxCartridge_slug";

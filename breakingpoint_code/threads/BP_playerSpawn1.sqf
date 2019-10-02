@@ -9,26 +9,28 @@
 
 scriptName "BP_playerSpawn1"; 
 
-_lastPos = [0,0,0];
+//_lastPos = [0,0,0];
 _lastSpawnCheck = diag_tickTime;
+_longSpawnCheck = diag_tickTime;
 
 waitUntil 
 {
-	_camPos = positionCameraToWorld [0,0,0];
+	//_camPos = positionCameraToWorld [0,0,0];
 	
-	if (((_lastPos distance _camPos) > 135) || {(diag_tickTime - _lastSpawnCheck) > 35}) then
-	{
+	//if (((_lastPos distance _camPos) > 115) || {(diag_tickTime - _lastSpawnCheck) > 30}) then {
+	if ((diag_tickTime - _lastSpawnCheck) > 25) then {
 		_lastSpawnCheck = diag_tickTime;
-		_lastPos = _camPos;
+		//_lastPos = _camPos;
 		
 		//Update Zombie/Loot Counts
 		call BP_fnc_updateVars;
 		
-		sleep 1;
-		
 		//Loot / Zombies
 		call BP_fnc_spawnCheck;
-		
+	};
+	
+	if ((diag_tickTime - _longSpawnCheck) > 70) then {
+		_longSpawnCheck = diag_tickTime;
 		//Animals
 		call BP_fnc_animalCheck;
 		
@@ -77,10 +79,9 @@ waitUntil
 	};
 	
 	_position = getPosATL player;
-	BP_NearbyLootBox = _position nearEntities ["BP_LootBox",300];
-	BP_NearbyLootBox = BP_NearbyLootBox + (_position nearObjects ["GroundWeaponHolder_Scripted",300]);
-	
-	BP_NearbyLootNum = {
+	BP_NearbyLootBox = _position nearEntities ["BP_LootBox",240];
+	BP_NearbyLootBox = BP_NearbyLootBox + (_position nearObjects ["GroundWeaponHolder_Scripted",240]);
+	{
 		_distanceTo = player distance _x;
 		if (isObjectHidden _x) then {
 			if (_distanceTo < 100) then {
@@ -95,7 +96,7 @@ waitUntil
 			};
 		};
 		true;
-	} count BP_NearbyLootBox;
+	} forEach BP_NearbyLootBox;
 
 	//Update Group Members
 	BP_Group = call BP_fnc_groupGetMembers;
@@ -109,8 +110,10 @@ waitUntil
 	
 	//Reveal Nearby Units / Cars / Helicopters
 	{ player reveal _x } forEach allUnits;
-	{ player reveal _x } forEach entities "Car";
-	{ player reveal _x } forEach entities "Helicopter";
+	//{ player reveal _x } forEach entities "Car";
+	//{ player reveal _x } forEach entities "Helicopter";
+	_nearVehicles = player nearEntities [["Car", "Helicopter", "Ship"], 250];
+	{ player reveal _x } forEach _nearVehicles;
 	
 	//Inside Buildings
 	//_building = nearestObject [player, "HouseBase"];

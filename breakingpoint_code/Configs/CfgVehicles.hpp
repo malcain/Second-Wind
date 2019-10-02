@@ -62,19 +62,21 @@ class CfgVehicles
 		};
 	};
 	
-	//class BP_Stronghold : Thing
-	//{
-	//	scope = public;
-	//	displayName = "Stronghold"; 
-	//	model="\A3\Weapons_f\dummyweapon.p3d";
-	//	vehicleClass = "Survival";
-	//	author = "Breaking Point";
-	//	destrType = "DestructNo";
-	//	side = 0;
-	//	accuracy = 5;
-	//	armor = 150;
-	//	cost = 0;
-	//};
+	class Helipad_base_F;
+	class SW_StrongholdSpawn : Helipad_base_F
+	{
+		scope = 2;
+		displayName = "Stronghold Spawn"; 
+		model = "\A3\Structures_F\Mil\Helipads\HelipadEmpty_F.p3d";
+		//model="\A3\Weapons_f\dummyweapon.p3d";
+		//model="\bp_sw\bp_sw_box\bp_platform.p3d";
+		vehicleClass = "Survival";
+		author = "Malcain";
+		icon = "iconObject";
+		destrType = "DestructNo";
+		armor = 150;
+		mapSize=0.2;
+	};
 	
 	class SW_Smuggler : Thing
 	{
@@ -429,13 +431,25 @@ class CfgVehicles
 	class GroundWeaponHolder;
 	//class ThingX;
 	class NATO_Box_Base;
-	class BP_DeadBody : NATO_Box_Base 
+	class BP_DeadBody : GroundWeaponHolder 
 	{
 		scope = private;
 		displayName = "Dead Body";
 		model="\A3\Weapons_f\dummyweapon.p3d";
 		vehicleClass = "Survival";
 		//forceSupply = false;
+		maximumLoad = 1000;
+		//waterLinearDampingCoefY=1;
+		//waterAngularDampingCoef=0.1;
+	};
+	class BP_DeadBodyX : NATO_Box_Base 
+	{
+		scope = private;
+		displayName = "Dead Body";
+		model="\A3\Weapons_f\dummyweapon.p3d";
+		vehicleClass = "Survival";
+		//forceSupply = false;
+		armor = 1000;
 		maximumLoad = 1000;
 		//waterLinearDampingCoefY=1;
 		//waterAngularDampingCoef=0.1;
@@ -455,21 +469,24 @@ class CfgVehicles
 		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
 	};
 	
-	class BP_SkeletonRemains1 : BP_DeadBody 
+	class BP_SkeletonRemains1 : BP_DeadBodyX 
 	{
 		scope = protected;
+		armor = 1000;
 		model = "\bp_sw\bp_sw_box\bp_Skeleton_1.p3d";
 	};
 	
-	class BP_SkeletonRemains2 : BP_DeadBody 
+	class BP_SkeletonRemains2 : BP_DeadBodyX 
 	{
 		scope = protected;
+		armor = 1000;
 		model = "\bp_sw\bp_sw_box\bp_Skeleton_2.p3d";
 	};
 	
-	class BP_SkeletonRemains3 : BP_DeadBody 
+	class BP_SkeletonRemains3 : BP_DeadBodyX 
 	{
 		scope = protected;
+		armor = 1000;
 		model = "\bp_sw\bp_sw_box\bp_Skeleton_3.p3d";
 	};
 	
@@ -6503,7 +6520,7 @@ class CfgVehicles
 		typicalCargo[] = {};
 		hiddenSelections[]= {"camo1", "camo2"};
 		hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\van_01_ext_CO.paa", "\breakingpoint_vehicles\textures\van_01_tank_CO.paa"};
-		hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\van_01_ext.rvmat", "\breakingpoint_vehicles\textures\van_01_tank.rvmat"};
+		//hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\van_01_ext.rvmat", "\breakingpoint_vehicles\textures\van_01_tank.rvmat"};
 		class TransportMagazines{};
 		class TransportWeapons{};
 		class TransportItems {};
@@ -6767,7 +6784,7 @@ class CfgVehicles
 		typicalCargo[] = {};
 		hiddenSelections[]= {"camo1", "camo2"};
 		//hiddenSelectionsTextures[] = {"\breakingpoint_vehicles\textures\van_01_ext_CO.paa", "\breakingpoint_vehicles\textures\van_01_adds_CO.paa"};
-		hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\van_01_ext.rvmat", "\breakingpoint_vehicles\textures\van_01_adds.rvmat"};
+		//hiddenSelectionsMaterials[] = {"\breakingpoint_vehicles\textures\van_01_ext.rvmat", "\breakingpoint_vehicles\textures\van_01_adds.rvmat"};
 		class TransportMagazines{};
 		class TransportWeapons{};
 		class TransportItems {};

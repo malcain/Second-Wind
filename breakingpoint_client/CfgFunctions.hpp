@@ -241,6 +241,7 @@ class CfgFunctions
 			class spawnLootHeliCrash {};
 			class selfActions {};
 			class tempSpeedBoost {};
+			class allowDamage {};
 		};
 		class Vehicle {
 			file = "\breakingpoint_client\functions\Vehicle";
@@ -262,6 +263,7 @@ class CfgFunctions
 			class buildingSpawnLoot {};
 			class buildingSpawnZombies {};
 			class logicSpawnLoot {};
+			class dynamicSpawnLoot {};
 			class mapOpened {};
 			class thirskSnow {};
 			class dvdCheck {};

@@ -201,7 +201,7 @@ waitUntil
 	};
 
 	//Exit Thread If Player Is Dead
-	if (r_player_dead) exitWith {};
+	if (r_player_dead) exitWith {true};
 	
 	//Thread Delay
 	sleep 2;

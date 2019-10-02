@@ -339,9 +339,12 @@ if (typeOf (vehicle player) in BP_LoadObject) then {
 	player removeAction s_player_loadTurretAmmo;
 	s_player_loadTurretAmmo = -1;
 };
-
-if (!isNull _cursorobject && {isNull _cursorTarget} && {!_inVehicle} && {player distance _cursorobject < 5}) then //has some kind of cursorobject
+//{isNull _cursorTarget} &&
+if (!isNull _cursorobject && {!_inVehicle} && {player distance _cursorobject < 5}) then //has some kind of cursorobject
 {
+
+	_isWaterColumn = [["water_source","concretewell_02"],str (_cursorobject)] call BP_fnc_inStringArray;
+	if (_isWaterColumn) then {_cursorTarget = _cursorobject};
 	
 	if (_hasFuelE) then {
 		_fuelTank = ["tank_rust",str(_cursorObject),false] call BP_fnc_inString;
@@ -416,14 +419,15 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	_safeLocked = (_cursorTarget getVariable ["locked",false]);
 	
 	//WaterColumn
-	_isWaterColumn = _cursorTarget isKindOf "Land_ConcreteWell_02_F";
+	//_isWaterColumn = ((_cursorTarget isKindOf "Land_ConcreteWell_02_F") or (["water_source_f",str(_cursorObject),false] call BP_fnc_inString);
+	_isWaterColumn = [["water_source","concretewell_02"],str (_cursorTarget)] call BP_fnc_inStringArray;
 
 	_rawmeat = meatraw;
 	_hasRawMeat = false;
 	{ if (_x in magazines player) exitWith { _hasRawMeat = true; }; } count _rawmeat;
 
 	if (_hasFuelE) then {
-		_fuelsource = [["Feed","fuelstation","trailercistern"],str (_cursorTarget)] call BP_fnc_inStringArray;
+		_fuelsource = [["fs_feed","feed","fuelstation","trailercistern"],str (_cursorTarget)] call BP_fnc_inStringArray;
 		if (_fuelsource) then { _isFuel = true; };
 	};
 	
@@ -934,7 +938,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 		} count _hitpoints;
 	};
 
-	if (!_isMan && {_cursorTarget isKindOf "BP_DeadBody"} && {_canDo} && {!_isUndead}) then
+	if (!_isMan && (_cursorTarget isKindOf "BP_DeadBody" or _cursorTarget isKindOf "BP_DeadBodyX") && {_canDo} && {!_isUndead}) then
 	{
 		if (s_player_destroyGrave < 0) then {
 			s_player_destroyGrave = player addAction ["Destroy Grave", { deleteVehicle (_this select 3); player removeAction s_player_destroyGrave; s_player_destroyGrave = -1; },_cursorTarget, 0, false, true, "",""];

@@ -56,6 +56,7 @@ _fallVelocity = (velocity _unit) select 2;
 //if (_source == player) exitWith {};
 //if (isNull _source) exitWith {};
 if (_ammo == "" && {_fallVelocity > - 0.25} && {_selfDamage}) exitWith {};
+if (_ammo == "" && SW_FreshLog) exitWith {};
 
 // Heart Hit
 //if (_isHeartHit and (_damage > 1)) exitWith

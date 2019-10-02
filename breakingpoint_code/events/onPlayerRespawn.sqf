@@ -15,6 +15,8 @@ if (!isMultiplayer) exitWith {};
 //Fetch Event Input Params
 params ["_newUnit","_oldUnit","_respawn","_respawnDelay"];
 
+player allowdamage false;
+
 //Wait Until Mission Init
 waitUntil {missionNameSpace getVariable ["bis_fnc_init",false]};
 

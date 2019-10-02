@@ -7,32 +7,13 @@
 	Alderon Games Pty Ltd
 */
 
-_building = _this select 0;
+params ["_buildingType","_buildingPos","_lootCnt"];
 
-if (isNull _building) exitWith {};
-
-_buildingType = _x getVariable ["lootType",""];
+//_buildingType = _x getVariable ["lootType",""];
 
 if (_buildingType == "") exitWith {};
 
-//Loot timer vars
-_serverTime = servertime;
-_timer = _x getVariable ["loottimer",0];
-
-//logout spawn timer
-if (diag_tickTime < 60) exitWith {};
-//Loot timer
-if ((_serverTime - _timer) < 100) exitwith {};
-
-_x setVariable ["loottimer",_serverTime,true];
-
-_buildingPos = getPosATL _building;
-_buildingSize = _x getVariable ["lootRadius",5];
-_lootMin = _x getVariable ["minLoot",1];
-_lootMax = _x getVariable ["maxLoot",1];
-
-
-if (_lootMax > 4) then { _lootMax = 4; };
+_buildingSize = 5;
 
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
 /*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
@@ -41,20 +22,10 @@ _config = configFile >> "CfgBuildingLoot" >> _buildingType;
 };*/
 _itemTypes = [] + getArray (_config >> "itemType");
 
+
 //Check Valid Logic Data
 if (_buildingType == "") exitWith {};
 
-//Process Loot Min / Max Random
-private "_lootRnd";
-
-if (_lootMin == _lootMax) then {
-	_lootRnd = _lootMax;
-} else {
-	_lootRnd = round (random _lootMax);
-};
-if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
-if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };
-if (_lootRnd < 1) exitWith {};
 
 //Make sure no nearby players in the building so they don't get crushed by spawning loot
 _nearby = [_buildingPos,10] call BP_fnc_nearbyPlayers;
@@ -64,9 +35,7 @@ if (_nearby) exitWith {};
 //_nearByObj = nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],10];
 _nearByObj = _buildingPos nearSupplies 7;
 
-if (count _nearByObj >= _lootMax) exitWith {};
-
-for "_i" from 1 to _lootRnd do
+for "_i" from 1 to _lootCnt do
 {
 	//Find Index Of Building Type
 	_index = BP_CBLBase find _buildingType;
@@ -81,7 +50,7 @@ for "_i" from 1 to _lootRnd do
 		_itemType = _itemTypes select _index;
 
 		private "_iPos";
-		if (_lootRnd == 1) then {
+		if (_lootCnt == 1) then {
 			_iPos = _buildingPos;
 		} else {
 			_iPos = [_buildingPos,_buildingSize,(random 360)] call BIS_fnc_relPos;

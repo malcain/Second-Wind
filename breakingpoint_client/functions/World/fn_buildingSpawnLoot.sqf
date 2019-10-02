@@ -13,27 +13,28 @@ if (isNull _building) exitWith {};
 
 _buildingPos = getPosATL _building;
 _buildingType = typeOf _building;
-_buildingSize = ((sizeOf _buildingType)+5);
+_buildingSize = (sizeOf _buildingType);
 _config = configFile >> "CfgBuildingLoot" >> _buildingType;
+_underwater = false;
 /*if (isClass (missionConfigFile >> "CfgBuildingLoot" >> _buildingType)) then
 {
 	_config = missionConfigFile >> "CfgBuildingLoot" >> _buildingType;
 };*/
 
 //Exit If Loot Is Disabled
-if (!BP_Loot) exitWith {};
+//if (!BP_Loot) exitWith {};
 
 //Exit If Loot Above Global Limit
-if (BP_LootGlobal > BP_LootMax) exitWith {};
+//if (BP_LootGlobal > BP_LootMax) exitWith {};
 
 //Check Building Isn't Locked
 _locked = (_building getVariable ['bis_disabled_Door',0] == 1);
 if (_locked) exitWith {};
 
 //building is in water
-if ((getPosASLW _building select 2) < -1.5) then { 
+if ((getPosASLW _building select 2) < -2.7) then { 
 	_underwater = true;
-	_buildingSize = _buildingSize + 15;
+	_buildingSize = _buildingSize + 10;
 };
 
 //Check If Building Is A Haven
@@ -66,6 +67,16 @@ _lootChance = getNumber (_config >> "lootChance");
 
 //Fail-Safe Checks
 if (_positions isEqualTo []) exitWith {};
+
+//Make sure no nearby players in the building so they don't get crushed by spawning loot
+_nearby = [_buildingPos,_buildingSize] call BP_fnc_nearbyPlayers;
+if (_nearby) exitWith {};
+
+//Check if loot exists already
+_nearByObj = _buildingPos nearSupplies (_buildingSize*0.6);
+//_nearByObj = nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize];
+if (count _nearByObj > _lootMin) exitWith {};
+
 //if (_lootMax < 1) exitWith {};
 
 //Process Loot Min / Max Random
@@ -75,17 +86,15 @@ if (_lootMin == _lootMax) then {
 } else {
 	_lootRnd = _lootMin + round (random _lootMax) min _lootMax;
 };
-if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
-if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };
-if (_lootRnd < 1) exitWith {};
-
-//Make sure no nearby players in the building so they don't get crushed by spawning loot
-_nearby = [_buildingPos,_buildingSize] call BP_fnc_nearbyPlayers;
-if (_nearby) exitWith {};
-
-//Check if loot exists already
-_nearByObj = nearestObjects [_buildingPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"],_buildingSize];
-if (count _nearByObj > _lootMin) exitWith {};
+//if (_lootRnd > _lootMax) then { _lootRnd = _lootMax; };
+//if (_lootRnd < _lootMin) then { _lootRnd = _lootMin; };
+if (_lootRnd < 1) exitWith {
+	_pos = selectRandom _positions;
+	_iPos = _building modelToWorld _pos;
+	_item = createVehicle ["GroundWeaponHolder_Scripted", _iPos, [], 0, "CAN_COLLIDE"];
+	_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
+	_item enableDynamicSimulation true;
+};
 
 //Shuffle Building Loot Positions
 _posShuffle = [];
@@ -102,7 +111,8 @@ for "_i" from 1 to (count _positions) do {
 	_iPos = _building modelToWorld _x;
 	
 	//Check If Any Loot Boxes are in that world position
-	_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
+	//_nearby = nearestObjects [_iPos, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
+	_nearby = _iPos nearSupplies 1;
 
 	if (_nearby isEqualTo []) then
 	{
@@ -117,7 +127,13 @@ for "_i" from 1 to (count _positions) do {
 			_index = floor(random _cntWeights);
 			_index = _weights select _index;
 			_itemType = _itemTypes select _index;
+			//underwater check
 			if (_underwater && ((_itemType select 1) != "object")) exitwith {};
+			if (_underwater) then {
+				_position2D = [_buildingPos, 2, 20, 4, 1] call BIS_fnc_findSafePos;
+				if (_position2D isEqualTo []) exitwith {};
+				_iPos = [_position2D select 0,_position2D select 1, (_iPos select 2) + random 2] 
+			};
 			
 			if (count _itemType > 2) then {
 				[_itemType select 0, _itemType select 1, _itemType select 2, _iPos] call BP_fnc_spawnLoot;
@@ -148,7 +164,8 @@ if (_rnd < _lootChanceSpc) then {
 	//Calculate Item Position in World Space
 	_iPosSpecial = _building modelToWorld _spawnPos;
 	//Check If Any Loot Boxes are in that world position
-	_nearby = nearestObjects [_iPosSpecial, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
+	//_nearby = nearestObjects [_iPosSpecial, ["BP_LootBox","WeaponHolder","WeaponHolderSimulated"], 1];
+	_nearby = _iPosSpecial nearSupplies 1;
 	
 	if (_nearby isEqualTo []) then
 	{
