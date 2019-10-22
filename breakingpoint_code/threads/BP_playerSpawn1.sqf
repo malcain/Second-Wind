@@ -18,7 +18,7 @@ waitUntil
 	//_camPos = positionCameraToWorld [0,0,0];
 	
 	//if (((_lastPos distance _camPos) > 115) || {(diag_tickTime - _lastSpawnCheck) > 30}) then {
-	if ((diag_tickTime - _lastSpawnCheck) > 25) then {
+	if ((diag_tickTime - _lastSpawnCheck) > 22) then {
 		_lastSpawnCheck = diag_tickTime;
 		//_lastPos = _camPos;
 		

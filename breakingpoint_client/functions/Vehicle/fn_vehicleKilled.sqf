@@ -26,7 +26,7 @@ _x setVariable ["fire",_x,true];
 } forEach crew _vehicle;*/
 
 if (local _vehicle) then {
-	{ 
+	{
 		_x action ["Eject",_vehicle];
 		//[_this,2] call BP_fnc_medicalKnockDown;
 		//_x setVariable ["fire",_x,true];

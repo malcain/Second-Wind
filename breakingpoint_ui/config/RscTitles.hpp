@@ -276,6 +276,23 @@ class RscTitles
 			text = "\breakingpoint_ui\errors\BP_AuthFailed.jpg";
 		};
 	};
+	
+	class BP_InvalidFOV {
+		idd = -1;
+		movingEnable = "false";
+		duration = 46;
+		fadein = 0;
+		name = "AuthFailed";
+		controls[] = {"AuthFailed"};
+		
+		class AuthFailed : RscPicture {
+			x = "0.00001 * safezoneW + safezoneX";
+			y = "0.00001 * safezoneH + safezoneY";
+			w = "1 * safezoneW";
+			h = "1 * safezoneH";
+			text = "\breakingpoint_ui\errors\BP_InvalidFOV.jpg";
+		};
+	};
 
 	class BP_InvalidVersion {
 		idd = -1;

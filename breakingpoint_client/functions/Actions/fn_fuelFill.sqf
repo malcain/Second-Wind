@@ -18,7 +18,7 @@ _fuelstation = false;
 _hasFuel = false;
 _fuelTank = false;
 
-_fuelstation = [["Feed","fuelstation"],str (_cursorobject)] call BP_fnc_inStringArray;
+_fuelstation = [["fs_feed","feed","fuelstation"],str (_cursorobject)] call BP_fnc_inStringArray;
 if (_fuelstation) then { 
 	_hasFuel = true;
 	_valid = true;

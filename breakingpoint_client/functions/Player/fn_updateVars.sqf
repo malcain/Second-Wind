@@ -7,7 +7,7 @@
 
 if (isNil "r_player_dead") exitWith {};
 
-BP_LootGlobal = (count entities "BP_LootBox");
+//BP_LootGlobal = (count entities "BP_LootBox");
 
 private ["_allZeds","_aliveZeds","_localZeds","_remoteZeds","_deadZeds"];
 
@@ -17,7 +17,7 @@ _localZeds = 0;
 _remoteZeds = 0;
 _deadZeds = 0;
 
-{
+/*{
 	// All Zombies
 	_allZeds = _allZeds + 1;
 
@@ -33,17 +33,17 @@ _deadZeds = 0;
 	} else {
 		_remoteZeds = _remoteZeds + 1;
 	};
-} count entities "zZombie_Base";
+} count entities "zZombie_Base";*/
 
 _position = getPosATL player;
 
-BP_LocalZeds = _localZeds;
+//BP_LocalZeds = _localZeds;
 BP_NearbyZombies = {alive _x} count (_position nearEntities ["zZombie_Base",325]);
 //BP_NearbyLootBox = {alive _x} count (_position nearEntities ["BP_LootBox",275]);
 //BP_NearbyLootBox = BP_NearbyLootBox + count _position nearObjects ["GroundWeaponHolder_Scripted",275];
-BP_GlobalZeds = _aliveZeds;
+//BP_GlobalZeds = _aliveZeds;
 //BP_SpawnZombies = {alive _x AND local _x} count (_position nearEntities ["zZombie_Base",RADIUS]);
-BP_RemoteZeds = _remoteZeds;
-BP_DeadZeds = _deadZeds;
+//BP_RemoteZeds = _remoteZeds;
+//BP_DeadZeds = _deadZeds;
 
-BP_maxCurrentZeds = BP_GlobalZeds;
+//BP_maxCurrentZeds = BP_GlobalZeds;

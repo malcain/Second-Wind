@@ -592,17 +592,16 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =
 		{	
+			{"BP_AWSM","weapon"},
+			{"BP_SVDK_DES","weaponA"},
 			{"BP_Binocular_Hunter","weaponNA"},
 			{"ItemKnife","magazine"},	
 			{"ItemGPS","toolbelt"},
-			{"ItemBandage","magazine"},
-			{"ItemPainkiller","magazine"},
 			{"ItemMorphine","magazine"},
 			{"ItemAdrenaline","magazine"},
 			{"ItemFieldDressing","magazine"},
 			{"ItemAntibiotic","magazine"},
 			{"ItemSurgeryKit","toolbelt"},
-			{"ItemMap","toolbelt"},
 			{"BP_SPack","backpack"},
 			{"ItemSoda1","magazine"},
 			{"ItemSoda2","magazine"},
@@ -643,8 +642,6 @@ class CfgObjectLoot {
 			{"BP_556x45_StanagSD","magazine"},
 			{"BP_556x45_Stanag_Tracer","magazine"},
 			{"BP_93x64_SVDK","magazine"},
-			{"BP_15Rnd_9x21_Rubber","magazine"},
-			{"BP_30Rnd_9x21_Mag","magazine"},
 			{"BP_15Rnd_9x19OVP","magazine"},
 			{"BP_15Rnd_45JHP","magazine"},
 			{"BP_optic_ACOG","toolbelt"},
@@ -669,7 +666,6 @@ class CfgObjectLoot {
 			{"BP_L14X","toolbelt"},
 			{"Rangefinder","weaponNA"},
 			{"V_PlateCarrierIA1_dgtl_BP","vest"},
-			{"V_TacVest_oli_BP","vest"},
 			{"HandGrenade","magazine"},
 			{"BP_UGL_FlareGreen","magazine"},
 			{"BP_M84_Flash","magazine"},
@@ -677,34 +673,33 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	
 		{	
-			0.15,	//Hunting Binoculars
-			0.10,	//Hunting Knife
-			0.10,	//GPS		
-			0.10,	//BANDAGE			
-			0.10,	//PAIN KILLER
+			0.01,	//SVDK Des
+			0.01,	//AWSM
+			0.14,	//Hunting Binoculars
+			0.05,	//Hunting Knife
+			0.10,	//GPS
 			0.08,	//MORPHINE
 			0.10,	//ADRENALINE
 			0.08, 	//FIELD DRESSING
 		    0.10, 	//ANTIBIOTIC
-		    0.05, 	//SURGERY KIT
-			0.10,	//Map
+		    0.04, 	//SURGERY KIT
 			0.01,	//CZECH SURVIVAL PACK
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
-			0.02,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
+			0.03,	//FOOD
 			0.04,	//MILITARY SURVIVAL PACK
 			0.04,	//MILITARY British PACK
 			0.01,	//STONE GHILLIE
@@ -728,8 +723,6 @@ class CfgObjectLoot {
 			0.05,	//StanagSD
 			0.05,	//Stanag_Tracer
 			0.05,	//93x64_SVDK
-			0.05,   //15Rnd_9x21_Rubber
-			0.15,   //30Rnd_9x21_Mag
 			0.05,   //15Rnd_9x19OVP
 			0.10,   //15Rnd_45JHP
 			0.03,   //ACOG
@@ -754,10 +747,9 @@ class CfgObjectLoot {
 			0.03,   //BP_L14X
 			0.01,   //RANGEFINDER
 			0.01,	//PLATE CARRIER
-			0.03,	//TAC VEST
 			0.04,	//HAND GRENADE
-			0.06,	//Flare green
-			0.04,	//Flashbang
+			0.05,	//Flare green
+			0.03,	//Flashbang
 			0.01	//338Lapua_Mag
 		};
 	};
@@ -2414,7 +2406,6 @@ class CfgObjectLoot {
 			{"BP_R700","weaponA"},
 			{"BP_WinCoy2","weaponA"},
 			{"BP_Uzi","weapon"},
-			{"BP_M21","weaponA"},
 			{"BP_FNFALK","weapon"},
 			{"BP_SVDK","weaponA"},
 			{"BP_Win70","weaponA"},
@@ -2436,7 +2427,6 @@ class CfgObjectLoot {
 			0.10,	//R700
 			0.10,	//R7 CDL
 			0.07,   //UZI
-			0.00, 	//M21
 			0.04, 	//FNFALK
 			0.01, 	//SVDK
 			0.01, 	//WIN70
@@ -2494,13 +2484,14 @@ class CfgObjectLoot {
 			0.02,   //REM7 PRECISION BARREL
 			0.02,   //UNERTL 32X
 			0.02,   //VX3
+			0.01,   //Remington 7 suppressed barrel
 			0.09,   //.22-250
-			0.02,   //300 WINMAG
+			0.03,   //300 WINMAG
 			0.10,   //30-06 MAG
 			0.04,   //5RND 762
 			0.08,   //5RND Mauser
 			0.09,   //10RND GRENDEL
-			0.04,   //10RND Lapua
+			0.05,   //10RND Lapua
 			0.05,    //10RND 303 BRIT
 			0.04,    //10RND 303 BRIT
 			0.05,	//2RND BUCKSHOT
@@ -2546,15 +2537,15 @@ class CfgObjectLoot {
 			0.10,   //Hunting shotgun sawed off
 			0.05,   //ENFIELD MKIII
 			0.05,   //ENFIELD SCOPED
-			0.12,   //ENFIELD OLD
+			0.11,   //ENFIELD OLD
 			0.01,   //HA550
 			0.02,   //MC550
-			0.02,   //REM7 CDL
+			0.03,   //REM7 CDL
 			0.03,   //REM6
 			0.02,   //KAR98
 			0.02,   //WINCHESTER MODEL 70
 			0.01,   //WINCHESTER MODEL 70 SUPER GRADE
-			0.05    //CZ550 OLD
+			0.07    //CZ550 OLD
 		};
 	};
 
@@ -2587,6 +2578,7 @@ class CfgObjectLoot {
 			{"ItemMap","toolbelt"},
 			{"BP_CZst_br","toolbelt"},
 			{"BP_CZmod_br","toolbelt"},
+			{"BP_CZSup_br","toolbelt"},
 			{"BP_R7P","toolbelt"},
 			{"BP_R7Sup","toolbelt"},
 			{"BP_Unertl8x","toolbelt"},
@@ -2624,7 +2616,8 @@ class CfgObjectLoot {
 			0.03,   //MAP
 			0.06,   //CZ STANDARD BARREL
 			0.02,   //CZ PRECISION BARREL
-			0.02,   //REM7 PRECISION BARREL
+			0.01,   //CZ PRECISION BARREL W/Suppressor
+			0.03,   //REM7 PRECISION BARREL
 			0.01,   //REM7 PRECISION BARREL W/Suppressor
 			0.02,   //UNERTL 18X
 			0.02,   //UNERTL 32X

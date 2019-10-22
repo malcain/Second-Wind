@@ -75,7 +75,7 @@ class Ranger : BP_BaseFaction
 			class Spawn
 			{
 				//Array Of Toolbelt Items
-				toolbelt[] = {"ItemCompass"};
+				toolbelt[] = {"ItemMap","ItemCompass"};
 				//Array Of Random (Clothing,Backpack,Vest)
 				primary[] = {};
 				launcher[] = {};
@@ -109,7 +109,7 @@ class Ranger : BP_BaseFaction
 		class Level_2 : Level_Base {
 			class Spawn {
 				//Array Of Toolbelt Items
-				toolbelt[] = {"ItemCompass"};
+				toolbelt[] = {"ItemMap","ItemCompass"};
 				//Array Of Random (Clothing,Backpack,Vest)
 				primary[] = {};
 				launcher[] = {};
@@ -143,7 +143,7 @@ class Ranger : BP_BaseFaction
 		class Level_3 : Level_Base {
 			class Spawn {
 				//Array Of Toolbelt Items
-				toolbelt[] = {"ItemCompass"};
+				toolbelt[] = {"ItemMap","ItemCompass"};
 				//Array Of Random (Clothing,Backpack,Vest)
 				primary[] = {};
 				launcher[] = {};
@@ -178,7 +178,7 @@ class Ranger : BP_BaseFaction
 		class Level_4 : Level_Base {
 			class Spawn {
 				//Array Of Toolbelt Items
-				toolbelt[] = {"ItemCompass"};
+				toolbelt[] = {"ItemMap","ItemCompass"};
 				//Array Of Random (Clothing,Backpack,Vest)
 				primary[] = {};
 				launcher[] = {};
@@ -220,7 +220,7 @@ class Ranger : BP_BaseFaction
 	{
 		base = 0;
 		min = -3000;
-		max = 11000;
+		max = 12000;
 		//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
 		levels[]={0,2000,5000,10000};
 		class Aid {

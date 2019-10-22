@@ -169,6 +169,7 @@ BP_clientPreload = 	false;
 BP_LocalZeds = 			0;
 BP_NearbyZombies = 		0;
 BP_GlobalZeds = 		0;
+BP_maxCurrentZeds = 	0;
 BP_SpawnZombies = 		0;
 BP_RemoteZeds = 		0;
 BP_DeadZeds = 			0;

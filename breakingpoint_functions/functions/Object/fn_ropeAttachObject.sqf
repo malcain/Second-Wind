@@ -44,20 +44,22 @@ private ["_dropRope","_ropeCarrier","_ropeHolder","_ropeLength","_AttachmentPoin
 		},[_ropeCarrier]
 	];
 
-		// Different offsets for boats
+		_carrierPoint = [0,-0.04,0];
 		_AttachmentPoint = [0,0,0];
-		/*switch true do {
-			case (_object isKindOf "Rubber_duck_base_F") : {_AttachmentPoint = [0,2.4,-0.6]};
+		// Different offsets for boats
+		switch true do {
+			//case (_object isKindOf "Rubber_duck_base_F") : {_AttachmentPoint = [0,2.4,-0.6]};
 			case (_object isKindOf "Boat_Armed_01_Base_F") : {_AttachmentPoint = "slingLoadCargo1"};
-			case (_object isKindOf "Boat_Civil_01_Base_F") : {_AttachmentPoint = [0,3.58,-0.14]};
-			case (_object isKindOf "ASH_MKVSOC") : {_AttachmentPoint = [-0.15,10.6,-1.2]};
+			//case (_object isKindOf "Boat_Civil_01_Base_F") : {_AttachmentPoint = [0,3.58,-0.14]};
+			case (_object isKindOf "Ship") : {_AttachmentPoint = [0,0,-0.9]};
+			//case (_object isKindOf "ASH_MKVSOC") : {_AttachmentPoint = [-0.15,10.6,-1.2]};
 			default {_AttachmentPoint = [0,0,0]};
-		};*/
+		};
 
 
 		// Create rope
 		sleep 0.2;
-		_rope = ropeCreate [_ropeCarrier,_AttachmentPoint,_object,_AttachmentPoint,10];
+		_rope = ropeCreate [_ropeCarrier,_carrierPoint,_object,_AttachmentPoint,10];
 		//_object setMass 45;
 		_object disablecollisionwith player;
 		//Drop rope event
@@ -68,6 +70,11 @@ private ["_dropRope","_ropeCarrier","_ropeHolder","_ropeLength","_AttachmentPoin
 					_ropeCarrier setVelocity [0,0,-0.1];
 					player removeAction _dropRope;
 				};
+			if ((position player select 2) > 0.5 && {!isTouchingGround player}) then {
+				detach _ropeCarrier;
+				_ropeCarrier setVelocity [0,0,-0.1];
+				player removeAction _dropRope;
+			};
 		    if (str ("PaperCar" countType attachedObjects player) == "0") exitWith {false};
 		    sleep 0.5;
 		 };

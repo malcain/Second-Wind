@@ -35,7 +35,7 @@ item30[] = {"",7,210,1021.033081,-131.063568,1029.032837,-123.063568,0.000000,""
 item31[] = {"",7,210,1020.999573,-1304.000000,1029.000488,-1295.999878,0.000000,""};
 item32[] = {"",7,210,196.000000,121.000000,204.000000,129.000000,0.000000,""};
 item33[] = {"",7,210,196.479202,-6.246673,204.479202,1.753327,0.000000,""};
-item34[] = {"Moving",2,250,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
+item34[] = {"Moving",2,4346,354.872925,451.878143,454.872833,501.878204,0.000000,"Moving"};
 item35[] = {"",7,210,1020.996704,376.950623,1028.996948,384.950653,0.000000,""};
 item36[] = {"Second_Wind_Tamed",-1,250,-450.000000,-75.000000,-100.000000,-25.000000,0.000000,"Second Wind Tamed Dog FSM"};
 item37[] = {"Created_By_Malca",-1,250,-432.461609,-30.564850,-113.786621,16.694519,0.000000,"Created By Malcain"};
@@ -230,8 +230,8 @@ link100[] = {84,87};
 link101[] = {85,80};
 link102[] = {86,80};
 link103[] = {87,84};
-globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-482.250305,1190.618408,636.512207,-528.143188,1343,935,1};
-window[] = {2,-1,-1,-1,-1,813,751,1711,151,3,1361};
+globals[] = {0.000000,0,0,0,0,640,480,1,606,6316128,1,-368.944031,1077.311523,776.433594,-203.531143,1343,910,1};
+window[] = {2,-1,-1,-32000,-32000,844,182,1142,182,3,1361};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -481,7 +481,7 @@ class FSM
                          "if (_cantSee) then {" \n
                          "_moveType = ""LEADER PLANNED"";" \n
                          "};" \n
-                         "if (_distance > 150) then {" \n
+                         "if (_distance > 100) then {" \n
                          "_replan = true;" \n
                          "};" \n
                          "_dog setDestination [player modelToWorld [2,1,0], _moveType, _replan];" \n
@@ -499,7 +499,10 @@ class FSM
                          "" \n
                          "if (speed _dog < 1) then {" \n
                          "	_animation = ""Dog_Walk"";" \n
-                         "};"/*%FSM</STATEINIT""">*/;
+                         "};" \n
+                         "" \n
+                         "//_gradient = _dog call BP_fnc_getTerrainGradient;" \n
+                         "//[_dog, _gradient, 0] call BIS_fnc_setPitchBank;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -668,9 +671,21 @@ class FSM
                                         priority = 0.000000;
                                         to="Chase";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 1)"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((diag_tickTime - _waitTime) > 1.2)"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"if ((random 1) < 0.3) then {" \n
                                          "	[_dog,""dog_growl"",0,false] call BP_fnc_objSpeak;" \n
+                                         "};" \n
+                                         "" \n
+                                         "//_isInside = [_attackTarget] call BP_fnc_isInsideBuilding;" \n
+                                         "if ((_dog distance2D _attackTarget) < 15) then {" \n
+                                         "	_inView = [_dog, ""VIEW""] checkVisibility [getPosASL _dog, eyePos _attackTarget];" \n
+                                         "	if (_inView == 0) then {" \n
+                                         "		_animation = ""Dog_Run""" \n
+                                         "	} else {" \n
+                                         "		_animation = ""Dog_Sprint""" \n
+                                         "	};" \n
+                                         "} else {" \n
+                                         "	_animation = ""Dog_Sprint""" \n
                                          "};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

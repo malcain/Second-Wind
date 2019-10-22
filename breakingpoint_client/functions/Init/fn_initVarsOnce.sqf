@@ -17,9 +17,9 @@ BP_NearbyLootBox = [];
 SW_FreshLog = false;
 //BP_NearbyLootNum = 22;
 
-[0x3B,false] call OptionWheel_fnc_setWheelKey;
-AllActions = [["Heal",BP_fnc_playerHeal],["Bandage",BP_fnc_playerBandage],["Stats",BP_fnc_loadFactionStatsDiary]];
-[AllActions,{call (_this select 1);},0.3,0.15] call OptionWheel_fnc_setWheel;
+//[0x3B,false] call OptionWheel_fnc_setWheelKey;
+//AllActions = [["Heal",BP_fnc_playerHeal],["Bandage",BP_fnc_playerBandage],["Stats",BP_fnc_loadFactionStatsDiary]];
+//[AllActions,{call (_this select 1);},0.3,0.15] call OptionWheel_fnc_setWheel;
 //,["Tow Box", [cursorObject,player] call BP_fnc_ropeAttachObject]
 
 bis_disabled_Door = nil;

@@ -76,8 +76,10 @@ class CfgWorlds
 	class DefaultLighting;
 	class Altis: CAWorld
 	{
-		latitude = 0;
+		latitude = -25;
 		longitude = 0;
+		//longitude = 16.661;
+		//latitude = -35.152;
 		class AmbientA3
 		{
 			class Radius40_60
@@ -436,8 +438,8 @@ class CfgWorlds
 			shoreWetMaterial = "#shorewet";
 			WaterMapScale = 20;
 			WaterGrid = 50;
-			MaxTide = 167;
-			MaxWave = 3.25; //0.25
+			MaxTide = 136;
+			MaxWave = 2.75; //0.25
 			SeaWaveXScale="1.5/50";
 			SeaWaveZScale="0.75/50";
 			SeaWaveHScale=2.0; //1
@@ -1196,12 +1198,12 @@ class CfgWorlds
 					diffuse[]=
 					{
 						{0.1,0.13,0.2},
-						3.5
+						4
 					};
 					diffuseCloud[]=
 					{
 						{0.1,0.13,0.2},
-						3
+						3.5
 					};
 					ambient[]=
 					{
@@ -1246,9 +1248,9 @@ class CfgWorlds
 						{0.09,0.117,0.17},
 						0.0001
 					};
-					apertureMin=4;
-					apertureStandard=6;
-					apertureMax=8;
+					apertureMin=3.5;
+					apertureStandard=5.5;
+					apertureMax=7.5;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1272,7 +1274,7 @@ class CfgWorlds
 					diffuse[]=
 					{
 						{0.090000004,0.090000004,0.2},
-						2.5
+						2.75
 					};
 					diffuseCloud[]={{0,0,0},2.25};
 					ambient[]=
@@ -1306,8 +1308,8 @@ class CfgWorlds
 						{0.15000001,0.15000001,0.175},
 						2
 					};
-					apertureMin=5;
-					apertureStandard=6;
+					apertureMin=4.5;
+					apertureStandard=5.75;
 					apertureMax=7;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
@@ -1910,9 +1912,9 @@ class CfgWorlds
 						0.02
 					};
 					fogColor[]={0.09,0.137,0.22};
-					apertureMin=4;
-					apertureStandard=5.5;
-					apertureMax=7;
+					apertureMin=3;
+					apertureStandard=4.5;
+					apertureMax=6;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -1966,9 +1968,9 @@ class CfgWorlds
 						7
 					};
 					fogColor[]={0.08,0.08,0.095};
-					apertureMin=4;
-					apertureStandard=6;
-					apertureMax=8;
+					apertureMin=3.5;
+					apertureStandard=5.5;
+					apertureMax=7.5;
 					standardAvgLum=4;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -2127,8 +2129,8 @@ class CfgWorlds
 						4.5
 					};
 					apertureMin=14;
-					apertureStandard=31;
-					apertureMax=42;
+					apertureStandard=33;
+					apertureMax=45;
 					standardAvgLum=75;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -2207,8 +2209,8 @@ class CfgWorlds
 						5.5
 					};
 					apertureMin=16;
-					apertureStandard=34;
-					apertureMax=52;
+					apertureStandard=35;
+					apertureMax=55;
 					standardAvgLum=100;
 					desiredLuminanceCoef=1;
 					desiredLuminanceCoefCloud=1;
@@ -2287,7 +2289,7 @@ class CfgWorlds
 						7.2
 					};
 					apertureMin=20;
-					apertureStandard=38;
+					apertureStandard=41;
 					apertureMax=55;
 					standardAvgLum=175;
 					desiredLuminanceCoef=1;
@@ -2367,7 +2369,7 @@ class CfgWorlds
 						7.7
 					};
 					apertureMin=24;
-					apertureStandard=42;
+					apertureStandard=44;
 					apertureMax=55;
 					standardAvgLum=250;
 					desiredLuminanceCoef=1;

@@ -79,10 +79,12 @@ class BreakingPoint
 			//Random Spawns
 			Altis[] =
 			{
-					{0,{9897.28,19364.5,0}},//Galati
-					{0,{5678.08,19491.2,0}},//Dump
-					{0,{8429.36,18582.7,0}},//Syrta
-					{0,{10795.4,17584.1,0}} //Orino
+					{0,{10344.5,14400.3,0}},//Dionysis factory
+					{0,{11133.2,17571.2,0}},//Orino
+					{0,{9970.07,21165.2,0}},//East of Abdera
+					{0,{8638.76,20540.8,0}}, //West of Abdera
+					{0,{6245.13,19817.5,0}},//Dump Turbines
+					{0,{6787.02,19324.3,0}} //East of Dump
 			};
 			
 			//Location Specific Spawns
@@ -333,7 +335,7 @@ class BreakingPoint
 		class Animals
 		{
 			enabled = true;
-			max = 6;
+			max = 8;
 			distance = 1700;
 		};
 

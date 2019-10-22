@@ -72,7 +72,7 @@
 			class Level_1 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
@@ -106,7 +106,7 @@
 			class Level_2 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
@@ -141,7 +141,7 @@
 			class Level_3 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
@@ -175,7 +175,7 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeClub"};
@@ -211,7 +211,7 @@
 		class Points {
 			base = 0;
 			min = -3000;
-			max = 11000;
+			max = 12000;
 			//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
 			levels[]={0,2000,5000,10000};
 			class Aid
@@ -250,7 +250,7 @@
 					dressing = -100;
 					morphine = -100;
 					surgery = -200;
-					gut = 300;
+					gut = 240;
 				};
 				class Outlaw {
 					food = -50;
@@ -326,48 +326,48 @@
 			};
 			class Kill {
 				class scavenger {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
 					Dog = 10;
 				};
 				class Ranger {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 80;
 					Level_3 = 120;
 					Level_4 = 150;
 					Dog = 10;
 				};
 				class Outlaw {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
 					Dog = 10;
 				};
 				class Hunter {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 150;
 					Dog = 10;
 				};
 				class Nomad {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 100;
 					Dog = 15;
 				};
 				class Survivalist {
-					Level_0 = 25;
-					Level_1 = 40;
+					Level_0 = 30;
+					Level_1 = 50;
 					Level_2 = 75;
 					Level_3 = 100;
 					Level_4 = 125;

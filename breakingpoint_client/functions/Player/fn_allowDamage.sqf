@@ -12,7 +12,7 @@ params ["_player"];
 _time = diag_tickTime;
 SW_FreshLog = true;
 
-waituntil {sleep 0.1; (speed player > 0 or ((diag_tickTime - _time) > 7))};
+waituntil {sleep 0.1; (speed player > 0 or ((diag_tickTime - _time) > 6))};
 
 player allowDamage true;
 

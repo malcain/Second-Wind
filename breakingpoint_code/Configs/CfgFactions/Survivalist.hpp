@@ -75,7 +75,7 @@
 				class Spawn
 				{
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {};
@@ -237,7 +237,7 @@
 		{
 			base = 0;
 			min = -3000;
-			max = 11000;
+			max = 12000;
 			//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
 			levels[]={0,2000,5000,10000};
 			class Aid {

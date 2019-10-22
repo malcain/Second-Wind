@@ -185,8 +185,8 @@ link78[] = {61,57};
 link79[] = {62,59};
 link80[] = {63,59};
 link81[] = {64,36};
-globals[] = {0.000000,0,0,0,0,640,480,1,187,6316128,1,-1016.716614,673.449951,646.459595,-440.163910,1375,884,1};
-window[] = {2,-1,-1,-1,-1,838,104,1312,104,3,1393};
+globals[] = {0.000000,0,0,0,0,640,480,1,187,6316128,1,-1016.716614,673.449951,646.459595,-440.163910,1375,910,1};
+window[] = {2,-1,-1,-1,-1,864,130,1338,130,3,1393};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -525,8 +525,8 @@ class FSM
                                          "" \n
                                          "if (_stuck && !_cantSee && {_oldstuck}) then {" \n
                                          "	_agent setDir ([_agent, _target] call BIS_fnc_dirTo);" \n
-                                         "	_agent playmovenow ""afalpknlmstpsnonwnondnon"";" \n
-                                         "	_agent setVelocitymodelspace [0,6,5];" \n
+                                         "	//_agent playmovenow ""afalpknlmstpsnonwnondnon"";" \n
+                                         "	//_agent setVelocitymodelspace [0,6,5];" \n
                                          "};"/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/

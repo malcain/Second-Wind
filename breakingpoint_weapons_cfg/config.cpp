@@ -44605,8 +44605,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_Rem6: BP_MXM
 	{
 	    scope = 2;
-		maxZeroing = 800;
-		discreteDistance[] = {200,300,400,500,600,700};
+		maxZeroing = 1200;
+		discreteDistance[] = {200,300,400,500,600,700,800};
 		displayName = "Remington Grendel";
 		descriptionUse = "Remington Grendel";
 		model = "\breakingpoint_weapons\models\Rem6\BP_Rem6.p3d";
@@ -44651,7 +44651,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 1.896000;
 			recoil = "recoil_single_prone_mx";
 			recoilProne = "recoil_single_prone_mx";
-			dispersion = 0.000497;
+			dispersion = 0.000417;
 		};
 		muzzles[] = {"this", "Butt"};
 		class GunParticles
@@ -45064,7 +45064,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			};
 			dispersion = 0.04000;
 			soundContinuous = 0;
-			reloadTime = 2.350000;
+			reloadTime = 2.250000;
 		};
 		muzzles[] = {"this", "Butt"};
 		class GunParticles
@@ -45519,9 +45519,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				begin4[] = {"\breakingpoint_jsrs\sounds\M16SD_s2.wav", 1.060000, 0.7, 1200};
 				soundBegin[] = {"begin1", 0.250000, "begin2", 0.250000, "begin3", 0.250000, "begin4", 0.250000};
  			};
-			dispersion = 0.02082;
+			dispersion = 0.01824;
 			soundContinuous = 0;
-			reloadTime = 2.350000;
+			reloadTime = 2.100000;
 		};
 		muzzles[] = {"this", "Butt"};
 		class GunParticles
@@ -45663,9 +45663,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				begin3[] = {"\breakingpoint_jsrs\sounds\762MB_s3.wav", 1.450000, 0.9, 2000};
 				soundBegin[] = {"begin1", 0.340000, "begin2", 0.330000, "begin3", 0.330000};
  			};
-			dispersion = 0.000452;
+			dispersion = 0.000212;
 			soundContinuous = 0;
-			reloadTime = 2.250000;
+			reloadTime = 2.050000;
 			//recoil = "recoil_single_primary_prone_1outof10";
 			//recoilProne = "recoil_single_primary_prone_1outof10";
 			minRange = 2;
@@ -45819,9 +45819,9 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				begin3[] = {"\breakingpoint_jsrs\sounds\762MB_s3.wav", 1.450000, 0.9, 2000};
 				soundBegin[] = {"begin1", 0.340000, "begin2", 0.330000, "begin3", 0.330000};
  			};
-			dispersion = 0.000602;
+			dispersion = 0.000402;
 			soundContinuous = 0;
-			reloadTime = 2.250000;
+			reloadTime = 2.050000;
 			recoil = "recoil_single_gm6";
 			recoilProne = "recoil_single_prone_gm6";
 		};
@@ -45927,7 +45927,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				begin3[] = {"breakingpoint_jsrs\sounds\FAMAS_s3.wav", 1.412538, 1, 550};
 				soundBegin[] = {"begin1", 0.3400000, "begin2", 0.3300000, "begin3", 0.3300000};
  			};
-			dispersion = 0.0892;
+			dispersion = 0.0812;
 			soundContinuous = 0;
 			reloadTime = 1.750000;
 			//recoil = "recoil_single_mk20";
@@ -46034,7 +46034,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 				begin3[] = {"breakingpoint_jsrs\sounds\M16sd_s1.wav", 1.112538, 0.87, 700};
 				soundBegin[] = {"begin1", 0.340000, "begin2", 0.330000, "begin3", 0.330000};
  			};
-			dispersion = 0.0792;
+			dispersion = 0.0676;
 			soundContinuous = 0;
 			reloadTime = 1.650000;
 			recoil = "recoil_single_mk20";
@@ -46343,7 +46343,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			};
 			dispersion = 0.000762;
 			soundContinuous = 0;
-			reloadTime = 2.250000;
+			reloadTime = 2.050000;
 			//recoil = "recoil_single_gm6";
 			//recoilProne = "recoil_single_prone_gm6";
 		};
@@ -46457,7 +46457,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			};
 			dispersion = 0.000762;
 			soundContinuous = 0;
-			reloadTime = 2.250000;
+			reloadTime = 2.050000;
 			//recoil = "recoil_single_gm6";
 			//recoilProne = "recoil_single_prone_gm6";
 		};
@@ -49351,8 +49351,8 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 	class BP_SVD: Rifle_Base_F_BP
 	{
 		scope = 2;
-		maxZeroing = 1000;
-		discreteDistance[] = {200,300,400,500,600,700,800,900,1000};
+		maxZeroing = 1300;
+		discreteDistance[] = {200,300,400,500,600,700,800,900,1000,1100,1200};
 		magazines[] = {"BP_762x54_SVD", "BP_762x54_7N1_10rnd", "BP_762x54_7N13_10rnd"};
 		reloadAction = "GestureReloadEBR";
 		picture = "\breakingpoint_weapons\icons\gear_svd_rifle_x_ca.paa";
@@ -49497,7 +49497,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 			reloadTime = 0.085000;
 			//recoil = "recoil_single_ebr";
 			//recoilProne = "recoil_single_prone_ebr";
-			dispersion = 0.000742;
+			dispersion = 0.000556;
 			minRange = 2;
 			minRangeProbab = 1.000000;
 			midRange = 250;
@@ -51424,7 +51424,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
 					opticsZoomMax = 0.062900;
 					opticsZoomInit = 0.062900;
 					discreteDistance[] = {200,300,400,500,600,700,800,900,1000};//Real pso does not have 50m from 100-300
-					discreteDistanceInitIndex = 2;
+					discreteDistanceInitIndex = 1;
 					modelOptics[] = {"breakingpoint_weapons\scopes\bek_pso_r0.p3d","breakingpoint_weapons\scopes\bek_pso_r1.p3d"};
 					distanceZoomMin = 100;
 					distanceZoomMax = 1000;
@@ -52464,7 +52464,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			alternativeFire = "Zasleh2";  // class in cfgWeapons with model of muzzle flash
  			class MuzzleCoef
 			{
- 				dispersionCoef = 0.015f;
+ 				dispersionCoef = 0.01f;
  				artilleryDispersionCoef = 1.0f;
  				fireLightCoef = 1.2f;
   				recoilCoef = 1.0f;
@@ -52510,7 +52510,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			alternativeFire = "Zasleh2";  // class in cfgWeapons with model of muzzle flash
  			class MuzzleCoef
 			{
- 				dispersionCoef = 0.030f;
+ 				dispersionCoef = 0.01f;
  				artilleryDispersionCoef = 1.0f;
  				fireLightCoef = 0.3f;
  				recoilCoef = 1.0f;
@@ -52556,7 +52556,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			alternativeFire = "Zasleh2";  // class in cfgWeapons with model of muzzle flash
  			class MuzzleCoef
 			{
- 				dispersionCoef = 0.04f;
+ 				dispersionCoef = 0.025f;
  				artilleryDispersionCoef = 1.0f;
  				fireLightCoef = 1.0f;
  				recoilCoef = 1.0f;
@@ -52601,7 +52601,7 @@ class BP_arifle_AKS_base_F : arifle_AKS_base_F { //AKS-74U Base
  			muzzleEnd = "zaslehPoint"; // memory point in muzzle supressor's model
  			alternativeFire = "Zasleh2";  // class in cfgWeapons with model of muzzle flash
  			class MuzzleCoef {
- 				dispersionCoef = 0.1f;
+ 				dispersionCoef = 0.08f;
  				artilleryDispersionCoef = 1.0f;
  				fireLightCoef = 1.3f;
  				recoilCoef = 1.1f;
@@ -56828,7 +56828,7 @@ class CfgAmmo {
 		typicalSpeed = 85;
 		//explosive = 1;
 		//explosionTime = 0.1;
-		timeToLive = 0.020;
+		timeToLive = 0.100;
 		airFriction = -0.000001;
 		soundFly[] = {"", 0, 1};
 		soundEngine[] = {"", 0, 1};
@@ -57178,7 +57178,7 @@ class CfgAmmo {
 
 		class BP_B_545x39_Ball_F : BulletBase {
 		airFriction = -0.0013;
-		caliber = 0.5;
+		caliber = 0.78;
 		deflecting = 20;
 		hit = 12.01;
 		indirectHit = 0;
@@ -57246,7 +57246,7 @@ class CfgAmmo {
 		indirectHitRange = 0;
 		simulationStep = 0.10;
 		airFriction = -0.001670;
-		caliber = 0.500000;
+		caliber = 0.900000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 		tracerScale = 1;
 		tracerStartTime = 0.050000;
@@ -57289,7 +57289,7 @@ class CfgAmmo {
 		indirectHitRange = 0;
 		simulationStep = 0.10;
 		airFriction = -0.001670;
-		caliber = 0.500000;
+		caliber = 0.900000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale = 1;
 		tracerStartTime = 0.050000;
@@ -57773,7 +57773,7 @@ class CfgAmmo {
 		indirectHitRange = 0;
 		simulationStep = 0.10;
 		airFriction = -0.001670;
-		caliber = 0.500000;
+		caliber = 0.900000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 		tracerScale = 1;
 		tracerStartTime = 0.050000;
@@ -57861,7 +57861,7 @@ class CfgAmmo {
 		indirectHitRange = 0;
 		typicalSpeed = 820;
 		airFriction = -0.001970;
-		caliber = 0.500000;
+		caliber = 0.900000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 		tracerScale = 1;
 		tracerStartTime = 0.050000;
@@ -57951,7 +57951,7 @@ class CfgAmmo {
 		indirectHitRange = 0;
 		typicalSpeed = 910;
 		airFriction = -0.000982;
-		caliber = 0.900000;
+		caliber = 1.000000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 		legFracture = true;
 		tracerScale = 1;
@@ -58338,7 +58338,7 @@ class CfgAmmo {
 		visibleFire = 10;
 		typicalSpeed = 880;
 		simulationStep = 0.09;
-		caliber = 0.500000;
+		caliber = 0.780000;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale = 1.000000;
 		tracerStartTime = 0.114000;//100m delay
@@ -58424,7 +58424,7 @@ class CfgAmmo {
 		visibleFire = 10;
 		typicalSpeed = 895;
 		simulationStep = 0.09;
-		caliber = 0.2;//low value to simulate HP poor penetration
+		caliber = 0.6;//low value to simulate HP poor penetration
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
 		tracerScale = 1;
 		tracerStartTime = 0.125;
@@ -58490,7 +58490,7 @@ class CfgAmmo {
 		cost = 1.200000;
 		airLock = 1;
 		typicalSpeed = 719;
-		caliber = 0.8500;
+		caliber = 1.24;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_white";
 		tracerScale = 0.600000;
 		tracerStartTime = 0.007500;
@@ -58635,7 +58635,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 10; //Between 0 -> 100
+			KnockoutChance = 15; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58665,7 +58665,7 @@ class CfgAmmo {
 		tracerScale = 0.600000;
 		tracerStartTime = 0.007500;
 		tracerEndTime = 5;
-		airFriction = -0.000590;
+		airFriction = -0.000575;
 		class Medical
 		{
 			//Instant Bleeding (Bullet will always make you bleed on impact)
@@ -58679,7 +58679,7 @@ class CfgAmmo {
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 49;
+			BleedingChance = 75;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
@@ -58687,7 +58687,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 1; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 20; //Between 0 -> 100
+			KnockoutChance = 25; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;
@@ -58731,7 +58731,7 @@ class CfgAmmo {
 			// Bleeding Level (Rate of blood loss)
 			// 0 - 30bps / 1 - 50bps / 2 - 100bps / 3 - 175bps /4 - 175bps Surgery Kit
 			BleedingLevel = 3;
-			BleedingChance = 55;
+			BleedingChance = 100;
 
 			// Infection (Bullet Wound Chance Of Infection)
 			Infection = 0; // 0 - Disabled / 1 - Enabled
@@ -58999,7 +58999,7 @@ class CfgAmmo {
 		audibleFire = 22;
 		visibleFire = 10;
 		airFriction = -0.000783;
-		caliber = 0.800000;
+		caliber = 1.14;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_556x45_Ball", 0.214813, 1, 50};
@@ -59411,7 +59411,7 @@ class CfgAmmo {
 		audibleFire = 12;
 		visibleFire = 10;
 		airFriction = -0.001462;
-		caliber = 0.850000;
+		caliber = 1.350000;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x51_Ball", 0.254813, 1, 50};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_762x51_Ball_far", 1.081838, 1, 180};
 		class Medical
@@ -59492,7 +59492,7 @@ class CfgAmmo {
 		audibleFire = 15;
 		visibleFire = 10;
 		airFriction = -0.001294;
-		caliber = 0.70000;
+		caliber = 0.75000;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball", 0.214813, 1, 50};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball_far", 0.981838, 1, 150};
 		class CamShakeHit
@@ -59584,7 +59584,7 @@ class CfgAmmo {
 		audibleFire = 20;
 		visibleFire = 10;
 		airFriction = -0.000985;
-		caliber = 0.90000;
+		caliber = 0.92000;
 		legFracture = true;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball", 0.214813, 1, 50};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball_far", 0.981838, 1, 150};
@@ -59772,7 +59772,7 @@ class CfgAmmo {
 		audibleFire = 27;
 		visibleFire = 10;
 		airFriction = -0.000855;
-		caliber = 1.270000;
+		caliber = 1.440000;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball", 0.214813, 1, 50};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball_far", 0.981838, 1, 150};
 		class CamShakeHit
@@ -59818,7 +59818,7 @@ class CfgAmmo {
 		audibleFire = 26;
 		visibleFire = 10;
 		airFriction = -0.000908;
-		caliber = 1.700000;
+		caliber = 1.740000;
 		legFracture = true;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball", 0.214813, 1, 50};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_762x54_Ball_far", 1.181838, 1, 175};
@@ -59860,7 +59860,7 @@ class CfgAmmo {
 	{
 	    hit = 21.45;
 		typicalSpeed = 818;
-		caliber = 1.2700000;
+		caliber = 1.4700000;
 		simulationStep = 0.09;
 		airFriction = -0.001132;
 		visibleFire = 10;
@@ -59905,7 +59905,7 @@ class CfgAmmo {
 	{
 		hit = 23.76;
 		typicalSpeed = 844;
-		caliber = 1.09;//bekfix lowered because SoftPoint
+		caliber = 1.3;//bekfix lowered because SoftPoint
 		simulationStep = 0.09;
 		airFriction = -0.001132;
 		visibleFire = 10;
@@ -59937,7 +59937,7 @@ class CfgAmmo {
 	{
 	    hit = 10.6;
 		typicalSpeed = 300; //old - 520, changed to 300 to make them subsonic.
-		caliber = 0.200000;
+		caliber = 0.250000;
 		simulationStep = 0.09;
 		audibleFire = 2;
 		visibleFire = 10;
@@ -60268,7 +60268,7 @@ class CfgAmmo {
 		audibleFire = 12;
 		visibleFire = 10;
 		simulationStep = 0.09;
-		caliber = 0.4;
+		caliber = 0.42;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_9x19_Ball", 0.054813, 1, 20};
 		supersonicCrackFar[] = {/*"\breakingpoint_jsrs\sounds\B_9x19_Ball_far", 1.081838, 1, 100*/};
 		class Medical
@@ -60379,7 +60379,7 @@ class CfgAmmo {
 	{
 	    hit = 10.56;
 		typicalSpeed = 310;
-		caliber = 0.55;
+		caliber = 0.65;
 		audibleFire = 10;
 		visibleFire = 10;
 		simulationStep = 0.09;
@@ -60454,7 +60454,7 @@ class CfgAmmo {
 	{
 	    hit = 22.71;
 		typicalSpeed = 617;
-		caliber = 1.4;
+		caliber = 1.48;
 		audibleFire = 23;
 		visibleFire = 10;
 		airFriction = -0.001918;
@@ -60587,7 +60587,7 @@ class CfgAmmo {
 		audibleFire = 25.00000;
 		visibleFire = 10;
 		simulationStep = 0.09;
-		caliber = 0.300000;
+		caliber = 0.400000;
 		supersonicCrackNear[] = {"\breakingpoint_jsrs\sounds\B_9x19_Ball", 0.274813, 1, 40};
 		supersonicCrackFar[] = {"\breakingpoint_jsrs\sounds\B_9x19_Ball_far", 1.101838, 1, 150};
 		class CamShakeHit
@@ -60617,7 +60617,7 @@ class CfgAmmo {
 
 			// Knockout (Bullet Wound Chance Of Knockout)
 			Knockout = 0; // 0 - Disabled / 1 - Enabled
-			KnockoutChance = 0.2; //Between 0 -> 100
+			KnockoutChance = 0; //Between 0 -> 100
 
 			//Blood Damage Scale
 			scale = 0;

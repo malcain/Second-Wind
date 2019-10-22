@@ -469,21 +469,39 @@ class CfgVehicles
 		model = "\A3\Structures_F\Civ\Dead\HumanSkeleton_F.p3d";
 	};
 	
-	class BP_SkeletonRemains1 : BP_DeadBodyX 
+	class BP_SkeletonRemains1 : BP_DeadBody
+	{
+		scope = protected;
+		model = "\bp_sw\bp_sw_box\bp_Skeleton_1.p3d";
+	};
+	
+	class BP_SkeletonRemains2 : BP_DeadBody
+	{
+		scope = protected;
+		model = "\bp_sw\bp_sw_box\bp_Skeleton_2.p3d";
+	};
+	
+	class BP_SkeletonRemains3 : BP_DeadBody
+	{
+		scope = protected;
+		model = "\bp_sw\bp_sw_box\bp_Skeleton_3.p3d";
+	};
+	
+	class BP_SkeletonRemainsUW1 : BP_DeadBodyX 
 	{
 		scope = protected;
 		armor = 1000;
 		model = "\bp_sw\bp_sw_box\bp_Skeleton_1.p3d";
 	};
 	
-	class BP_SkeletonRemains2 : BP_DeadBodyX 
+	class BP_SkeletonRemainsUW2 : BP_DeadBodyX 
 	{
 		scope = protected;
 		armor = 1000;
 		model = "\bp_sw\bp_sw_box\bp_Skeleton_2.p3d";
 	};
 	
-	class BP_SkeletonRemains3 : BP_DeadBodyX 
+	class BP_SkeletonRemainsUW3 : BP_DeadBodyX 
 	{
 		scope = protected;
 		armor = 1000;

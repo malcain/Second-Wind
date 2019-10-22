@@ -589,26 +589,39 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	*/
 
 	// Force Save (Vehicle)
-	if (_isVehicle and _canDo and _isNotDestroyed) then {
+	/*if (_isVehicle and _canDo and _isNotDestroyed) then {
 		if (s_player_saveVehicle < 0) then {
 			s_player_saveVehicle = player addAction [format ["Force Save %1",_targetName], { _this call BP_fnc_forceSave; },_cursorTarget, 1, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_saveVehicle;
 		s_player_saveVehicle = -1;
-	};
+	};*/
 
-	// Push Vehicle
-	if (_isVehicle and _canDo and _isNotDestroyed) then {
+	// Push Vehicle && Force Save
+	if (_isVehicle && {_canDo} && {_isNotDestroyed}) then {
 		if (s_player_pushBoat < 0) then {
 			s_player_pushBoat = player addAction [format ["Push Vehicle %1",_targetName], { _this spawn BP_fnc_pushBoat; },_cursorTarget, 1, false, true, "", ""];
+		};
+		if (s_player_saveVehicle < 0) then {
+			s_player_saveVehicle = player addAction [format ["Force Save %1",_targetName], { _this call BP_fnc_forceSave; },_cursorTarget, 1, false, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_pushBoat;
 		s_player_pushBoat = -1;
+		player removeAction s_player_saveVehicle;
+		s_player_saveVehicle = -1;
 	};
 
-
+	if (_isVehicle && {_canDo} && {_isNotDestroyed} && {_cursorTarget isKindOf "Ship"}) then {
+		if (s_player_towVehicle < 0) then {
+			s_player_towVehicle = player addAction [format ["Tow %1",_targetName], { (_this select 3) spawn BP_fnc_ropeAttachObject; },_cursorTarget, 1, false, true, "", ""];
+		};
+	} else {
+		player removeAction s_player_towVehicle;
+		s_player_towVehicle = -1;
+	};
+	
 	//Destroy Vehicle
 	if (_hasIED and {_isVehicle} and {_isNotDestroyed}) then
 	{
@@ -1036,6 +1049,8 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	s_player_saveVehicle = -1;
 	player removeAction s_player_pushBoat;
 	s_player_pushBoat = -1;
+	player removeAction s_player_towVehicle;
+	s_player_towVehicle = -1;
 	player removeAction s_player_groupAdd;
 	s_player_groupAdd = -1;
 	player removeAction s_player_groupDel;

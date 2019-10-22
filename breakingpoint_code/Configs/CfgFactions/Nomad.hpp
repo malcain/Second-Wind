@@ -221,7 +221,7 @@
 		{
 			base = 0;
 			min = -3000;
-			max = 11000;
+			max = 12000;
 			//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
 			levels[]={0,2000,5000,10000};
 			class Aid {

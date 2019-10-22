@@ -24,5 +24,9 @@ if (_points == 0) exitWith { cutText ["No Points Gained.","PLAIN DOWN"]; };
 if (_points > 0) then {
 	cutText [format ["+%1 Points",_points],"PLAIN DOWN"];
 } else {
-	cutText [format ["%1 Points",_points],"PLAIN DOWN"];
+	if (_points >= -400 && _points <= -100) then {
+		cutText [format ["\n %1 Points",_points],"PLAIN DOWN"];
+	} else {
+		cutText [format ["%1 Points",_points],"PLAIN DOWN"];
+	};
 };

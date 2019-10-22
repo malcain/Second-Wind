@@ -50,6 +50,7 @@
 	s_player_refuelVeh = -1;
 	s_player_siphonfuel =	-1;
 	s_player_pushBoat = -1;
+	s_player_towVehicle = -1;
 	s_player_ejectParacute = -1;
 	s_player_getInDriverVeh = -1;
 	s_player_getInCargoVeh = -1;

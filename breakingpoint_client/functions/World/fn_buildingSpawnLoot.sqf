@@ -34,7 +34,7 @@ if (_locked) exitWith {};
 //building is in water
 if ((getPosASLW _building select 2) < -2.7) then { 
 	_underwater = true;
-	_buildingSize = _buildingSize + 10;
+	_buildingSize = _buildingSize + 45;
 };
 
 //Check If Building Is A Haven
@@ -69,7 +69,7 @@ _lootChance = getNumber (_config >> "lootChance");
 if (_positions isEqualTo []) exitWith {};
 
 //Make sure no nearby players in the building so they don't get crushed by spawning loot
-_nearby = [_buildingPos,_buildingSize] call BP_fnc_nearbyPlayers;
+_nearby = [_buildingPos,_buildingSize*0.5] call BP_fnc_nearbyPlayers;
 if (_nearby) exitWith {};
 
 //Check if loot exists already
@@ -130,6 +130,9 @@ for "_i" from 1 to (count _positions) do {
 			//underwater check
 			if (_underwater && ((_itemType select 1) != "object")) exitwith {};
 			if (_underwater) then {
+				_item = createVehicle ["GroundWeaponHolder_Scripted", _buildingPos, [], 0, "CAN_COLLIDE"];
+				_item setVehiclePosition [_buildingPos, [], 0, "CAN_COLLIDE"];
+				_item enableDynamicSimulation true;
 				_position2D = [_buildingPos, 2, 20, 4, 1] call BIS_fnc_findSafePos;
 				if (_position2D isEqualTo []) exitwith {};
 				_iPos = [_position2D select 0,_position2D select 1, (_iPos select 2) + random 2] 

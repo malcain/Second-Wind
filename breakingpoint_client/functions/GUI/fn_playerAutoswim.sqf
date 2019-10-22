@@ -59,7 +59,7 @@ if (time - BP_lastCheckBit > 1) then
 				//Don't Autorun While TranQ
 				if (r_player_unconscious or lifeState player == "INCAPACITATED") exitWith {true};
 				
-				player playActionNow "FastF";
+				player playActionNow "WalkF";
 				
 				//Delay
 				sleep 0.05;

@@ -12,7 +12,7 @@ private ["_isAir","_inVehicle","_spawnZombies"];
 //_inMovingVehicle = speed player > 90;
 
 //_nearbyBuildings = (getPos player) nearObjects ["building",150];
-_nearbyBuildings = nearestTerrainObjects [player, ["Chapel", "Fuelstation","BUILDING", "HOUSE","CHURCH","RUIN", "TOURISM","BUNKER", "FORTRESS","VIEW-TOWER", "LIGHTHOUSE", "QUAY","HOSPITAL","BUSSTOP","POWERSOLAR"], 220];
+_nearbyBuildings = nearestTerrainObjects [player, ["Chapel", "Fuelstation","BUILDING", "HOUSE","CHURCH","RUIN", "TOURISM","BUNKER", "FORTRESS","VIEW-TOWER", "LIGHTHOUSE", "QUAY","HOSPITAL","BUSSTOP","POWERSOLAR"], 210];
 _spawnZombies = true;
 _spawnLoot = true;
 _underwater = false;

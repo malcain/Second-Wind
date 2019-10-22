@@ -75,7 +75,7 @@
 				class Spawn
 				{
 					//Array Of Toolbelt Items
-					toolbelt[] = {"G_MM_Hockey_Mask"};
+					toolbelt[] = {"ItemMap","G_MM_Hockey_Mask"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeShovel"};
@@ -109,7 +109,7 @@
 			class Level_2 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"G_MM_FaceFork","Scavenger_Goggles"};
+					toolbelt[] = {"ItemMap","G_MM_FaceFork","Scavenger_Goggles"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeShovel"};
@@ -150,7 +150,7 @@
 			class Level_3 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {};
+					toolbelt[] = {"ItemMap"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeShovel"};
@@ -192,7 +192,7 @@
 			class Level_4 : Level_Base {
 				class Spawn {
 					//Array Of Toolbelt Items
-					toolbelt[] = {"G_MM_Crow_Dazzle_Mask","ItemToolbox"};
+					toolbelt[] = {"ItemMap","G_MM_Crow_Dazzle_Mask","ItemToolbox"};
 					//Array Of Random (Clothing,Backpack,Vest)
 					primary[] = {};
 					launcher[] = {"MeleeShovel"};
@@ -237,7 +237,7 @@
 		{
 			base = 0;
 			min = -3000;
-			max = 11000;
+			max = 12000;
 			//Dont Include Level 0 ( Evil ) It's auto detected if < base value.
 			levels[] = {0,2000,5000,10000};
 			class Aid {
