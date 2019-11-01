@@ -158,7 +158,7 @@ class CfgMagazines
 		model = "\breakingpoint\models\bp_cereal6.p3d";
 		picture = "\breakingpoint\textures\icons\bp_cereal6_ca.paa";
 		descriptionShort = "A Ranger's best friend!";
-		bloodRegen = 1500;
+		bloodRegen = 500;
 	};
 
 	class ItemCan1 : ItemCereal {
@@ -833,11 +833,11 @@ class CfgMagazines
 	class BlueprintHavenReinforce : ItemBlueprint {
 		displayName = "Blueprint Haven Reinforcement Kit";
 		descriptionUse = "Blueprint Haven Reinforcement Kit";
-		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside an unlocked haven. Havens can be upgraded up to 5 times.<br/>Reinforced materials save the haven in case of destruction events. Downgraded by 1 for each house destruction event (cannot be downgraded more than once every 3 hours). <br/>Requires- Water Barrel(located nearby), Shovel, 3x Bag of Cement, 1x Bag of Sand, 2x Steel.";
+		descriptionShort = "Allows for the reinforcement of a Safe Haven Hideout. Can only be used inside an unlocked haven. Havens can be upgraded up to 5 times.<br/>Reinforced materials save the haven in case of destruction events. Downgraded by 1 for each house destruction event (cannot be downgraded more than once every 3 hours). <br/>Requires- Water Barrel(located nearby), Shovel, 3x Bag of Cement, 1x Bag of Sand, 1x Steel.";
 		class Construction {
 			Object = "BP_HavenReinforcement";  // Not a real object
 			Weapons[] = {"MeleeShovel"};
-			Materials[] = {"PartSteel","PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag", "ItemSandBag"};
+			Materials[] = {"PartSteel", "ItemCementBag", "ItemCementBag", "ItemCementBag", "ItemSandBag"};
 		};
 	};
 	

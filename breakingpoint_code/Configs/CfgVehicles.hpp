@@ -6550,7 +6550,7 @@ class CfgVehicles
 		transportMaxWeapons = 5;
 		transportMaxBackpacks = 10;
 		transportFuel = 0;
-		fuelCapacity = 1000;
+		fuelCapacity = 800;
 		
 		class ViewPilot: ViewPilot
 		{
@@ -6665,7 +6665,7 @@ class CfgVehicles
 		transportMaxWeapons = 10;
 		transportMaxBackpacks = 10;
 		transportFuel = 0;
-		fuelCapacity = 1250;
+		fuelCapacity = 800;
 		
 		class ViewPilot: ViewPilot
 		{

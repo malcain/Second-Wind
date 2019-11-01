@@ -43,7 +43,7 @@
 			
 			class Level_0 : Level_Base 
 			{
-				regenRateSitting = 20;
+				regenRateSitting = 25;
 				class Spawn
 				{
 					//Array Of Toolbelt Items
@@ -74,6 +74,7 @@
 			
 			class Level_1 : Level_Base {
 				regenRateSitting = 25;
+				regenRate = 5;
 				class Spawn
 				{
 					//Array Of Toolbelt Items
@@ -109,7 +110,8 @@
 				};
 			};
 			class Level_2 : Level_Base {
-				regenRateSitting = 30;
+				regenRateSitting = 25;
+				regenRate = 10;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};
@@ -144,7 +146,8 @@
 				};
 			};
 			class Level_3 : Level_Base {
-				regenRateSitting = 35;
+				regenRateSitting = 25;
+				regenRate = 15;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};
@@ -180,7 +183,8 @@
 				};
 			};
 			class Level_4 : Level_Base {
-				regenRateSitting = 35;
+				regenRateSitting = 20;
+				regenRate = 20;
 				class Spawn {
 					//Array Of Toolbelt Items
 					toolbelt[] = {"ItemMap"};

@@ -146,7 +146,9 @@ waitUntil
 			r_player_blood = _newHealth;
 		};
 	} else {
-		r_player_blood = (r_player_blood + _regenRate);
+		if (r_player_blood < 12000) then {
+			r_player_blood = (r_player_blood + _regenRate);
+		};
 	};
 
 	//Resting
@@ -164,10 +166,10 @@ waitUntil
 		_isNomad = (_factionName == "Nomad");
 		_isNomadTraitor = (_isNomad and _factionLevel < 1);
 		
-		if (r_player_blood == 12000) exitWith { cutText ["Full health reached.", "PLAIN DOWN"]; };
+		if (r_player_blood >= 12000) exitWith { cutText ["Full health reached.", "PLAIN DOWN"]; };
 		
-		if ((r_player_blood > 9600) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
-		if ((r_action_restTime > 6) or (_isNomad)) then {
+		//if ((r_player_blood > 9600) and (!_isNomad or _isNomadTraitor)) exitWith { cutText ["Maximum health regeneration reached.", "PLAIN DOWN"]; };
+		if ((r_action_restTime > 4) or (_isNomad)) then {
 			r_player_blood = r_player_blood + _regenRateSitting;
 			titleRsc ["Default","PLAIN",0];
 			titleRsc ["BP_Resting","PLAIN",0];
@@ -246,7 +248,7 @@ waitUntil
 	if (r_player_adrenaline) then { _recoil = 1; };
 		
 	//Handle Enabling and Disabling Fatigue
-	if (r_hit_legs > 0 and !r_player_adrenaline) then {
+	if (r_hit_legs > 0 && {!r_player_adrenaline}) then {
 		player enableStamina true;
 	} else {
 		player enableStamina false;
@@ -281,9 +283,9 @@ waitUntil
 		playSound "heartbeat_1";
 		if ((diag_tickTime - r_player_adrenalineTime) > 60) then {
 			r_player_adrenaline = false;
-			r_hit_legs = 0.001;
-			player enableStamina true;
-			player setFatigue 1;
+			//r_hit_legs = 0.001;
+			//player enableStamina true;
+			//player setFatigue 1;
 		};
 	};
 	

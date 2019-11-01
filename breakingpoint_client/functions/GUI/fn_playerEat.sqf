@@ -9,9 +9,9 @@
 
 _isHostage = player getVariable ["med_hostage", false];
 
-if (time - BP_lastCheckBit > 1) then
-{
+if (time - BP_lastCheckBit > 1 && time - r_lastCheckEat > 5) then {
 	BP_lastCheckBit = time;
+	r_lastCheckEat = time;
 	if (!r_player_unconscious and !_isHostage) then {
 		_foodClass = "";
 		{

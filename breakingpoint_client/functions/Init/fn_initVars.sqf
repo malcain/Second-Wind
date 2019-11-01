@@ -61,6 +61,7 @@ BP_hasFire = objNull; //Last Created Fireplace
 
 //Actions
 call BP_fnc_resetSelfActions;
+r_lastCheckEat = 0;
 
 //Arm And Leg Health
 r_hit_legs = 0;

@@ -51,8 +51,8 @@ if ((_itemorignal == "FoodMushroom") && {!_inVehicle}) then
 if (_itemorignal == "FoodPlayerCooked") then {
 	_class = player getVariable ["class",0];
 	if (_class == 3) then {
-		_regen = _regen+700;
-		[player,1.2] call BP_fnc_tempSpeedBoost;
+		_regen = _regen+750;
+		[player,1.2] spawn BP_fnc_tempSpeedBoost;
 	};
 };
 

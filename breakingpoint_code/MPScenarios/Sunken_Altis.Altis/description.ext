@@ -30,7 +30,7 @@ OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
 skipLobby = 1;
-//unsafeCVL = 1;
+unsafeCVL = 1; 
 disableChannels[]=
 {
 	{0,true,true},	// Global

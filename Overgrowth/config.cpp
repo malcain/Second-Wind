@@ -406,71 +406,71 @@ class CfgVehicles
 	//Enoch
 	class Land_House_1W01_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W02_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W03_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W04_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W05_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W06_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W07_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W08_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W09_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W10_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W11_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_1W12_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_2W01_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_2W03_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_House_2W04_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_Camp_House_01_brown_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	class Land_Workshop_03_F : House_F
 	{
-		armor = 5000;
+		armor = 6000;
 	};
 	//Malden
 	class i_House_Big_02_b_base_F: House_F 

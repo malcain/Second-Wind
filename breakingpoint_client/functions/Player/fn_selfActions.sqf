@@ -378,8 +378,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	_ownerID = _cursorTarget getVariable ["CharacterID","0"];
 	_isAnimal = ((_cursorTarget isKindOf "Animal") or (_cursorTarget isKindOf "Animal_Base_F") or (_cursorTarget isKindOf "BP_Dog"));
 	_isZombie = (_cursorTarget isKindOf "zZombie_base");
-	//_isPlayer = (typeOf _cursorTarget in BP_AllPlayers);
-	_isPlayer = isPlayer _cursorTarget;
+	_isPlayer = (_cursorTarget isKindOf "BP_Player");
 	_isDestructable = _cursorTarget isKindOf "BuiltItems";
 	_isCookable = (inflamed _cursorTarget or _isStove);
 	_isWater = false;
@@ -398,16 +397,21 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	_targetUndead = (_cursorTarget getVariable ["class",0] == 7);
 	_sameFaction = false;
 
-	_playerClass = player getVariable ["class",0];
-	_cursorTargetClass =_cursorTarget getVariable ["class",0];
-	if (_playerClass in [1,4,5] && _cursorTargetClass in [1,4,5]) then {
-		_sameFaction = true;
-	} else {
-		if (_playerClass in [2,6] && _cursorTargetClass in [2,6]) then
-		{
-			_sameFaction = true;
-		} else {
-			_sameFaction = false;
+	if (_isPlayerChar) then {
+		_playerClass = player getVariable ["class",0];
+		_playerFactionPoints = player call BP_fnc_getFactionPoints;
+		_cursorTargetClass =_cursorTarget getVariable ["class",0];
+		_cursorTargetPoints = player call BP_fnc_getFactionPoints;
+		if (_playerFactionPoints > -1 && {_cursorTargetPoints > -1}) then {
+			if (_playerClass in [1,4,5] && _cursorTargetClass in [1,4,5]) then {
+				_sameFaction = true;
+			} else {
+				if (_playerClass in [2,6] && _cursorTargetClass in [2,6]) then {
+					_sameFaction = true;
+				} else {
+					_sameFaction = false;
+				};
+			};
 		};
 	};
 
@@ -791,7 +795,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 
 	/* Gut Player / Animal / Hostage / Zombie */
 	_canGut = (!_isAlive or _isTargetUnconscious or _isTargetHostage);
-	if (_canGut and (_isAnimal or _isZombie or _isPlayer) and !_isHarvested and _hasKnife and _canDo) then {
+	if (_canGut and (_isAnimal or _isZombie or _isMan) and {!_isHarvested} and {_hasKnife} and {_canDo}) then {
 		if (s_player_butcher < 0) then {
 			_text = "Gut Body";
 			if (_isAnimal) then { _text = "Gut Animal"; };

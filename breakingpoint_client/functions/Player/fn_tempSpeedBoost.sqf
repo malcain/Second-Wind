@@ -10,6 +10,7 @@ _speedcoef = getAnimSpeedCoef _unit;
 sleep 1;
 if (_speedcoef < 1.12) then {
 	player setAnimSpeedCoef _speedIncr;
-	sleep 10;
-	player setAnimSpeedCoef _speedcoef;
+	player setFatigue 0;
+	sleep 30;
+	player setAnimSpeedCoef 1;
 };

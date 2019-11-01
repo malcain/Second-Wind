@@ -119,7 +119,7 @@ switch (_type) do {
 	};
 	case "medAdrenaline": {
 		if (r_player_adrenaline) then {
-			[15] call BP_fnc_death;
+			//[15] call BP_fnc_death;
 		} else {	
 			r_player_adrenaline = true;
 			r_player_adrenalineTime = diag_tickTime;
