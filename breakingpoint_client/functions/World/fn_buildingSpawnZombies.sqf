@@ -78,7 +78,7 @@ if (_chanceRnd > 80 or {_chanceRnd < 30}) then {
 	_nearestRoad = selectRandom ((position _building) nearRoads 15);
 	if !(isNil "_nearestRoad") then {
 		_position = [_nearestRoad, 1, 3, 1, 0] call BIS_fnc_findSafePos;
-		if (_position isEqualTo []) exitwith {};
+		if (count _position > 2) exitwith {};
 		[_position,_unitTypes,false] call BP_fnc_zombieGenerate;
 	} else {
 		_position = [_buildingPos, 1, 20, 3, 0] call BIS_fnc_findSafePos;

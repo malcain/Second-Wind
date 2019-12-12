@@ -343,7 +343,7 @@ if (typeOf (vehicle player) in BP_LoadObject) then {
 if (!isNull _cursorobject && {!_inVehicle} && {player distance _cursorobject < 5}) then //has some kind of cursorobject
 {
 
-	_isWaterColumn = [["water_source","concretewell_02"],str (_cursorobject)] call BP_fnc_inStringArray;
+	_isWaterColumn = [["water_source","concretewell_02","pumpa"],str (_cursorobject)] call BP_fnc_inStringArray;
 	if (_isWaterColumn) then {_cursorTarget = _cursorobject};
 	
 	if (_hasFuelE) then {
@@ -424,7 +424,7 @@ if ((!isNull _cursorTarget) and !_inVehicle and (player distance _cursorTarget <
 	
 	//WaterColumn
 	//_isWaterColumn = ((_cursorTarget isKindOf "Land_ConcreteWell_02_F") or (["water_source_f",str(_cursorObject),false] call BP_fnc_inString);
-	_isWaterColumn = [["water_source","concretewell_02"],str (_cursorTarget)] call BP_fnc_inStringArray;
+	_isWaterColumn = [["water_source","concretewell_02","pumpa"],str (_cursorTarget)] call BP_fnc_inStringArray;
 
 	_rawmeat = meatraw;
 	_hasRawMeat = false;

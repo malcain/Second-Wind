@@ -1,10 +1,4 @@
 /*
-  Breaking Point Mod for Arma 3
-
-  Released under Arma Public Share Like Licence (APL-SA)
-  https://www.bistudio.com/community/licenses/arma-public-license-share-alike
-
-  Alderon Games Pty Ltd
 */
 
 #include "infiSTAR_AdminMenu.hpp"
@@ -79,12 +73,12 @@ class BreakingPoint
 			//Random Spawns
 			Altis[] =
 			{
-					{0,{10344.5,14400.3,0}},//Dionysis factory
-					{0,{11133.2,17571.2,0}},//Orino
-					{0,{9970.07,21165.2,0}},//East of Abdera
-					{0,{8638.76,20540.8,0}}, //West of Abdera
-					{0,{6245.13,19817.5,0}},//Dump Turbines
-					{0,{6787.02,19324.3,0}} //East of Dump
+				{0,{10344.5,14400.3,0}},//Dionysis factory
+				{0,{11133.2,17571.2,0}},//Orino
+				{0,{9970.07,21165.2,0}},//East of Abdera
+				{0,{8638.76,20540.8,0}}, //West of Abdera
+				{0,{6245.13,19817.5,0}},//Dump Turbines
+				{0,{6787.02,19324.3,0}} //East of Dump
 			};
 			
 			//Location Specific Spawns

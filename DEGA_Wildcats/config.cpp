@@ -9,6 +9,7 @@ class CfgVehicles
 	{
 		class Turrets;
 		class HitPoints;
+		class ViewPilot;
 	};
 	class Helicopter_Base_F: Helicopter
 	{
@@ -47,6 +48,22 @@ class CfgVehicles
 		side = 3;
 		scopeCurator = 0;		// 2 means available from Zeus, whereas 0 means hidden		
 		faction = "CIV_F";
+		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		/* Breaking Point : Custom Event Handlers */
 		class BP_DefaultEventHandlers

@@ -191,6 +191,22 @@ class CfgVehicles
 		
 		class EventHandlers : BP_VehicleEventHandlers {};
 		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
         AGM_FastRoping = 1;         //  X    Z    Y
         AGM_FastRoping_Positions[] = {{0.6, -5, -0.5}, {-0.2, -5, -0.5}};		
 		

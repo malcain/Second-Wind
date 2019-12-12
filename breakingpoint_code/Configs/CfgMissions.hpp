@@ -38,9 +38,9 @@ class CfgMissions
 		};
 
 		// Stratis
-		class BP2_BreakingPoint {
-			briefingName = "Breaking Point";
-			directory = "breakingpoint_code\MPScenarios\BP2_BreakingPoint.Stratis";
+		class Stratis {
+			briefingName = "Stratis";
+			directory = "breakingpoint_code\MPScenarios\Stratis.Stratis";
 		};	
 		
 		// Thirsk Winter
@@ -131,6 +131,12 @@ class CfgMissions
 		class BP13_BreakingPoint {
 			briefingName = "Breaking Point";
 			directory = "breakingpoint_code\MPScenarios\BP13_BreakingPoint.Enoch";
+		};
+		
+		//New Esseker
+		class New_Esseker {
+			briefingName = "New Esseker";
+			directory = "breakingpoint_code\MPScenarios\New_Esseker.Esseker";
 		};
 	};
 };

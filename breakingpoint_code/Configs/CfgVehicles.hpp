@@ -4367,6 +4367,22 @@ class CfgVehicles
 		transportMaxBackpacks = 3;
 		armor = 50;
 		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitGlass1 {
 				armor = 0.8;
@@ -4499,6 +4515,22 @@ class CfgVehicles
 		supplyRadius = 1.2;
 		laserScanner = false;
 		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
+		
 		class HitPoints {
 			class HitHull {
 				armor = 1;
@@ -4598,6 +4630,22 @@ class CfgVehicles
 		transportMaxBackpacks = 3;
 		supplyRadius = 1.2;
 		laserScanner = false;
+		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		class HitPoints {
 			class HitHull {
@@ -7210,6 +7258,22 @@ class CfgVehicles
 		transportMaxBackpacks = 10;
 		
 		armor = 50;
+		
+		extCameraPosition[] = { 0, 0.2, 0 };
+		class ViewPilot: ViewPilot
+		{
+			initAngleX = 0;
+			minAngleX = -30;
+			maxAngleX = 30;
+
+			initAngleY = 0;
+			minAngleY = -140;
+			maxAngleY = 140;
+
+			MinFov=0.40;
+			MaxFov=0.80;
+			InitFov=0.75;
+		};
 		
 		//Redefine Render Targets To Remove ThermaL
 		class RenderTargets {

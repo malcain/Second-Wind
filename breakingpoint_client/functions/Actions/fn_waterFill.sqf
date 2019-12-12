@@ -104,6 +104,12 @@ _objectsWell = 	nearestObjects [_playerPos, [], 4];
 	
 } forEach _objectsWell;
 
+_isWaterColumn = [["concretewell_02","pumpa"],str (cursorTarget)] call BP_fnc_inStringArray;
+if (_isWaterColumn) then {
+	_invalid = false;
+	_canFill = true;
+};
+
 if (_invalid) exitwith {};
 
 if (!_canFill) then {

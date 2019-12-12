@@ -60,7 +60,7 @@ switch (_iClass) do {
 			_magRndCount = round(random 2) + 1;
 			if (_magRndCount > 0) then {
 				for "_i" from 1 to _magRndCount do {
-					_amount = 2 + round random parsenumber (_ammoClass select [3,2]);
+					_amount = 4 + round random parsenumber (_ammoClass select [3,2]);
 					_item addMagazineAmmoCargo [_ammoClass,1,_amount];
 				};
 			};
@@ -81,7 +81,7 @@ switch (_iClass) do {
 			_ammoClass = _mags select 0;
 			_magRndCount = round(random 1) + 1;
 			for "_i" from 1 to _magRndCount do {
-				_amount = 2 + round random parsenumber (_ammoClass select [3,2]);
+				_amount = 4 + round random parsenumber (_ammoClass select [3,2]);
 				_item addMagazineAmmoCargo [_ammoClass,1,_amount];
 			};
 		};
@@ -104,7 +104,7 @@ switch (_iClass) do {
 		_magRndCount = round(random 2) + 2;
 		if (_magRndCount > 0) then {
 			for "_i" from 1 to _magRndCount do {
-				_amount = 2 + round random parsenumber (_ammoClass select [3,2]);
+				_amount = 4 + round random parsenumber (_ammoClass select [3,2]);
 				_item addMagazineAmmoCargo [_ammoClass,1,_amount];
 			};
 		};
@@ -123,7 +123,7 @@ switch (_iClass) do {
 		_item setVehiclePosition [_iPos, [], 0, "CAN_COLLIDE"];
 		_item enableDynamicSimulation true;
 		for "_i" from 1 to _magRndCount do {
-			_amount = 2 + round random parsenumber (_iItem select [3,2]);
+			_amount = 4 + round random parsenumber (_iItem select [3,2]);
 			_item addMagazineAmmoCargo [_iItem,1,_amount];
 		};
 	};

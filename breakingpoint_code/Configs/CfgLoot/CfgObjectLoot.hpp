@@ -594,6 +594,11 @@ class CfgObjectLoot {
 		{	
 			{"BP_AWSM","weapon"},
 			{"BP_SVDK_DES","weaponA"},
+			{"BP_M110","weapon"},
+			{"BP_SR25","weaponA"},
+			{"BP_M14RIS","weapon"},
+			{"BP_M25WF","weaponA"},
+			{"BP_MXM_black","weapon"},
 			{"BP_Binocular_Hunter","weaponNA"},
 			{"ItemKnife","magazine"},	
 			{"ItemGPS","toolbelt"},
@@ -626,6 +631,7 @@ class CfgObjectLoot {
 			{"BP_Survivalist_4_Dirt","uniform"},
 			{"BP_Survivalist_4_Snow","uniform"},
 			{"BP_Survivalist_4_Corn","uniform"},
+			{"BP_Rebel_4_Taki","uniform"},
 			{"BP_Survivalist_4_Night","uniform"},
 			{"BP_200Rnd_556x45_MINIMI","magazine"},
 			{"BP_100Rnd_762x51_MINIMI","magazine"},
@@ -675,6 +681,11 @@ class CfgObjectLoot {
 		{	
 			0.01,	//SVDK Des
 			0.01,	//AWSM
+			0.01,	//M110
+			0.01,	//SR-25
+			0.01,	//M14RIS
+			0.01,	//M25WF
+			0.01,	//MXM Black
 			0.14,	//Hunting Binoculars
 			0.05,	//Hunting Knife
 			0.10,	//GPS
@@ -708,6 +719,7 @@ class CfgObjectLoot {
 			0.01,	//Snow GHILLIE
 			0.01,	//Corn GHILLIE
 			0.01,	//Night GHILLIE
+			0.01,	//Outlaw Taki
 			0.05,   //200Rnd_556
 			0.05,   //100Rnd_762
 			0.05,   //100Rnd_65
@@ -1062,6 +1074,7 @@ class CfgObjectLoot {
 		lootChance = 0.27;
 		lootPos[] = {};
 		itemType[] =	{
+			{"BP_Rebel_4_Taki","uniform"},
 			{"ItemBook1","magazine"},
 			{"ItemBook2","magazine"},
 			{"ItemBook3","magazine"},
@@ -1101,6 +1114,7 @@ class CfgObjectLoot {
 		};
 		
 		itemChance[] =	{
+			0.01,	//Outlaw taki
 			0.10,	//BOOK
 			0.10,	//BOOK
 			0.07,	//BOOK
@@ -1713,7 +1727,10 @@ class CfgObjectLoot {
 			{"BP_LeeEnfield_old","weapon"},
 			{"BP_Crossbow","weapon"},
 			{"BP_Crossbow_DigitCamo","weaponA"},
-			{"BP_MP5","weapon"}
+			{"BP_MP5","weapon"},
+			{"BP_Tavor","weaponA"},	
+			{"BP_M16A4","weaponA"},
+			{"BP_M4_300","weaponA"}
 
 		};
 		itemChance[] =	{
@@ -1737,7 +1754,10 @@ class CfgObjectLoot {
 			0.02,	//ENFIELD old
 			0.03,	//Crossbow
 			0.03,	//Crossbow
-			0.10	//Mp5
+			0.10,	//Mp5
+			0.02,	//Tavor
+			0.02,	//BP_M16A4
+			0.02	//BP_M4_300
 		};
 	};
 	
@@ -1896,7 +1916,9 @@ class CfgObjectLoot {
 			{"BP_M24DES","weaponA"},
 			{"BP_M4_300","weaponA"},
 			{"BP_AK74U","weapon"},
-			{"BP_M16a4","weapon"}
+			{"BP_M16a4","weapon"},
+			{"BP_DMR_Officer","weapon"},
+			{"BP_MXC","weapon"}
 		};
 		itemChance[] =	{
 			0.03,   //M4_300MK
@@ -1912,7 +1934,10 @@ class CfgObjectLoot {
 			0.01,   //M24 DESERT
 			0.02,	//AR15 OLD
 			0.25,	//AKS74U
-			0.17   //M16A2
+			0.17,   //M16A2
+			0.01,   //M14 DMR
+			0.01,   //Scar Heavy
+			0.02    //MXC
 		};
 	};
 	
@@ -2076,6 +2101,7 @@ class CfgObjectLoot {
 		lootPos[] = {};
 		itemType[] =	{
 			{"BP_SVD","weapon"},
+			{"BP_ScarH","weaponA"},
 			{"BP_AR10","weapon"},
 			{"BP_SA582","weapon"},
 			{"BP_M16OLD","weapon"},
@@ -2099,6 +2125,7 @@ class CfgObjectLoot {
 		};
 		itemChance[] =	{
 			0.02,	//SVD
+			0.01,	//Scar H
 			0.07,   //AR10
 			0.05,   //AKM RIS
 			0.11,   //BP_M16 OLD

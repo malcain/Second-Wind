@@ -28,7 +28,8 @@ class RscDisplayStart : RscStandardDisplay
 		
 		class LoadingStart : RscPicture {
 			idc = 2310;
-			text = "\breakingpoint_ui\general\BP_screen_title2.jpg";
+			//text = "\breakingpoint_ui\general\BP_screen_title2.jpg";
+			text = "\breakingpoint_ui\general\New_Esseker.jpg";
 			x = 0 * safezoneW + safezoneX;
 			y = 0 * safezoneH + safezoneY;
 			w = 1 * safezoneW;

@@ -9,6 +9,7 @@
 
 private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_isDead"];
 
+if (!isMultiplayer) exitWith {};
 disableSerialization;
 
 waitUntil {_display = findDisplay 49;!isNull _display;};

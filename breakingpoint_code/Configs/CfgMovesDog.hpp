@@ -442,7 +442,7 @@ class CfgMovesDog_BP : CfgMovesAnimal_Base_F
 			actions="FinSprint";
 			file="\A3\animals_f_beta\Dog\data\Anim\dogRun";
 			duty=0.5;
-			speed=-0.8; //-1.47
+			speed=-0.75; //-1.47
 			connectTo[]={};
 			interpolateTo[]=
 			{

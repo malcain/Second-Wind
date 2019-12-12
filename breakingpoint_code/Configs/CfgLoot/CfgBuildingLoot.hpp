@@ -71,10 +71,6 @@ class CfgBuildingLoot
 			{"BP_LuggageCaseBG","object","Residential"},
 			{"BP_LuggageCaseRED","object","Residential"},
 			{"BP_Bag3","object","Residential"},
-			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
-			{"ItemKnife","magazine"},
-			{"BP_Kitbag_cbr","backpack"},
 			{"Binocular","weaponNA"},
 			{"WaterbotEmpty","magazine"},
 			{"ItemTennisBall","magazine"},
@@ -130,27 +126,23 @@ class CfgBuildingLoot
 		itemChance[] =	{
 			0.01,	//BP_Surplus
 			0.01,	//BP_CardBoardBox2
-			0.10,	//BP_CardBoardBox3
-			0.10,	//BP_Trashcan
+			0.12,	//BP_CardBoardBox3
+			0.05,	//BP_Trashcan
 			0.10,   //BP_Bag1
-			0.10,   //BP_Bag2
-			0.10,   //BP_LuggageCaseBG
-			0.10,   //BP_LuggageCaseRED
-			0.10,   //BP_Bag3
-			0.02,	//Compass
-			0.02,	//Map
-			0.02,	//Knife
-			0.02,	//Sportbag
-			0.02,	//Binocular
+			0.05,   //BP_Bag2
+			0.15,   //BP_LuggageCaseBG
+			0.15,   //BP_LuggageCaseRED
+			0.15,   //BP_Bag3
+			0.01,	//Binocular
 			0.01,	//WaterbotEmptyTLE
 			0.01,	//TENNISBALL			
-			0.02,	//DUCTTAPE
+			0.01,	//DUCTTAPE
 			0.01,	//WATERTAPE
-			0.02,	//BACKPACK
-			0.02,	//BACKPACK
-			0.02,	//BACKPACK
-			0.02,	//TRASH
-			0.02,	//TRASH
+			0.01,	//BACKPACK
+			0.01,	//BACKPACK
+			0.01,	//BACKPACK
+			0.01,	//TRASH
+			0.01,	//TRASH
 			0.01,	//TRASH
 			0.01,	//TRASH
 			0.01,	//TRASH
@@ -162,25 +154,25 @@ class CfgBuildingLoot
 			0.01,	//FOOD
 			0.01,	//FOOD
 			0.01,	//BlueprintCrate
-			0.03,	//Makarov
-			0.02,	//AlarmClock
+			0.02,	//Makarov
+			0.01,	//AlarmClock
 			0.01,	//CZ550 Old
 			0.01,	//CZ455
 			0.01,	//REM7
 			0.01,	//1866
 			0.01,	//R300
-			0.02,	//BANDOLIER OLIVE
+			0.01,	//BANDOLIER OLIVE
 			0.01,   //BENELLI
 			0.01,   //REM870
-			0.02,	//45ACP
-			0.02,	//303B
-			0.02,	//22LR
-			0.02,	//PAINKILLER
+			0.01,	//45ACP
+			0.01,	//303B
+			0.01,	//22LR
+			0.01,	//PAINKILLER
 			0.01,	//ANTIBIOTIC
-			0.02,	//DUCT TAPE
-			0.02,	//BANDAGE
+			0.01,	//DUCT TAPE
+			0.01,	//BANDAGE
 			0.01,	//KATANA
-			0.01,	//HATCHET
+			0.02,	//HATCHET
 			0.01,   //Shovel
 			0.01,	//Crowbar
 			0.01,   //Club
@@ -191,7 +183,7 @@ class CfgBuildingLoot
 			0.01,    //CRATE BLUEPRINT
 			0.02,	//Crossbow
 			0.01,	//Crossbow
-			0.02	//Crossbow Arrow
+			0.01	//Crossbow Arrow
 		};		
 	};
 	
@@ -213,67 +205,7 @@ class CfgBuildingLoot
 			{"BP_Bag3","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential2"},
 			{"BP_LuggageCaseGR","object","Residential"},
-			{"BP_LuggageCaseBG","object","Residential"},
-			{"ItemMorphine","magazine"},
-			{"ItemFieldDressing","magazine"},
-			{"ItemDuctTape","magazine"},
-			{"ItemCompass","toolbelt"},
-			{"ItemMap","toolbelt"},
-			{"ItemKnife","magazine"},
-			{"BP_Garand","weapon"},
-			{"BP_GarandK","weapon"},
-            {"BP_Kar98","weapon"},
-			{"BP_Kar98k","weapon"},
-			{"BP_BAR","weapon"},
-			{"BP_1911","weapon"},
-			{"BP_SVT40","weapon"},
-			{"BP_SVT40","weaponA"},
-			{"BP_M1903","weaponA"},
-			{"BP_M1903K","weaponA"},
-			{"Binocular","weaponNA"},
-			{"WaterbotEmpty","magazine"},
-			{"ItemTennisBall","magazine"},
-			{"ItemDuctTape","magazine"},
-			{"ItemWaterTape","magazine"},
-			{"BP_Kitbag_sgg","backpack"},
-			{"BP_Kitbag_cbr","backpack"},
-			{"BP_Kitbag_mcamo","backpack"},
-			{"ItemBook1","magazine"},
-			{"ItemBook2","magazine"},
-			{"ItemBook3","magazine"},
-			{"ItemMug","magazine"},
-			{"ItemPottery","magazine"},
-			{"ItemVideoTape","magazine"},
-			{"ItemZipDisk","magazine"},
-			{"ItemCards","magazine"},
-			{"ItemSoda1","magazine"},
-			{"ItemSoda2","magazine"},
-			{"ItemCan1","magazine"},
-			{"ItemCan2","magazine"},
-			{"BP_Mak_Old","weapon"},
-			{"BP_AlarmClock_Black","magazine"},
-			{"BP_CZ550_old","weaponA"},
-			{"BP_CZ455","weaponA"},
-			{"BP_WinCoy","weaponA"},
-			{"BP_1866","weapon"},
-			{"BP_R300","weaponA"},
-			{"V_Rangemaster_belt_BP","vest"},
-			{"MeleeKatana","weaponNA"},
-			{"BP_Benelli","weapon"},
-			{"BP_Rem870","weapon"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"ItemPainkiller","magazine"},
-			{"ItemAntibiotic","magazine"},
-			{"ItemDuctTape","magazine"},
-			{"ItemBandage","magazine"},
-			{"Meleehatchet","weaponNA"},
-			{"MeleeShovel","weaponNA"},
-			{"BlueprintFuelBarrel","magazine"},
-			{"BP_Crossbow","weapon"},
-			{"BP_Crossbow_DigitCamo","weaponA"},
-			{"BP_Arrow_Mag","magazine"}
+			{"BP_LuggageCaseBG","object","Residential"}
 		};
 		itemChance[] =	{
 			0.01,	//BP_Surplus
@@ -286,67 +218,7 @@ class CfgBuildingLoot
 			0.01,   //BP_Bag3 Residential2
 			0.01,   //BP_LuggageCaseGR
 			0.10,   //BP_LuggageCaseGR
-			0.10,   //BP_LuggageCaseBG
-			0.03,	//Morphine
-			0.03,	//FieldDressing
-			0.01,	//Duct_Tape
-			0.01,	//Compass
-			0.01,	//Map
-			0.01,	//Knife
-			0.01,	//Garand
-			0.01,	//GarandK
-			0.01,	//Kar98
-			0.01,	//Kar98K
-			0.01,	//Bar
-			0.01,	//1911
-			0.01,	//SVT40
-			0.01,	//SVT40A
-			0.01,	//M1903
-			0.01,	//M1903K
-			0.01,	//Binocular
-			0.01,	//WaterbotEmptyTLE
-			0.01,	//TENNISBALL			
-			0.01,	//DUCTTAPE
-			0.01,	//WATERTAPE
-			0.01,	//BACKPACK
-			0.01,	//BACKPACK
-			0.01,	//BACKPACK
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//TRASH
-			0.01,	//SODA
-			0.01,	//SODA
-			0.01,	//FOOD
-			0.01,	//FOOD
-			0.02,	//Makarov
-			0.01,	//AlarmClock
-			0.01,	//CZ550 Old
-			0.01,	//CZ455
-			0.01,	//REM7
-			0.01,	//1866
-			0.01,	//R300
-			0.01,	//BANDOLIER OLIVE
-			0.01,	//KATANA
-			0.01,   //BENELLI
-			0.01,   //REM870
-			0.01,	//45ACP
-			0.01,	//303B
-			0.01,	//22LR
-			0.02,	//PAINKILLER
-			0.01,	//ANTIBIOTIC
-			0.01,	//DUCT TAPE
-			0.01,	//BANDAGE
-			0.01,	//HATCHET
-			0.01,   //Shovel
-			0.01,    //barrel Fuel BLUEPRINT
-			0.02,	//Crossbow
-			0.01,	//Crossbow
-			0.01	//Crossbow Arrow
+			0.10   //BP_LuggageCaseBG
 		};		
 	};
 	
@@ -422,31 +294,10 @@ class CfgBuildingLoot
 			{"BP_LeeEnfield2","weaponA"},
 			{"Binocular","toolbelt"},
 			{"BP_M8","toolbelt"},
-			{"Itemcan3","magazine"},
-			{"V_Chestrig_khk_BP","vest"},
-			{"V_Rangemaster_belt_BP","vest"},
-			{"BP_m9","weapon"},
-			{"BP_Lupara","weapon"},
-			{"ItemGPS","toolbelt"},
-			{"BlueprintHaven", "magazine"},
-			{"BP_5Rnd_762x51_Mag","magazine"},
-			{"BP_7Rnd_45acp","magazine"},
-			{"BP_10Rnd_303_Mag","magazine"},
-			{"BP_5Rnd_22_Mag","magazine"},
-			{"BP_5Rnd_500Mag","magazine"},
-			{"BP_10Rnd_303_JSP_Mag","magazine"},
-			{"ItemPainkiller","magazine"},
-			{"ItemAntibiotic","magazine"},
-			{"WaterbotEmpty","magazine"},
-			{"ItemTennisBall","magazine"},
-			{"ItemBandage","magazine"},
-			{"ItemElectronics","magazine"},
-			{"ItemElectricalWire","magazine"},
-			{"ItemCanvasMaterial","magazine"},
-			{"ItemNettingMaterial","magazine"}
+			{"Itemcan3","magazine"}
 		};
 		itemChance[] =	{
-			0.15,	//BP_CardBoardBox1
+			0.25,	//BP_CardBoardBox1
 			0.01,	//BP_CardBoardBox2
 			0.04,	//BP_CardBoardBox3
 			0.03,	//BP_DustbinBLK
@@ -458,48 +309,27 @@ class CfgBuildingLoot
 			0.07,   //BP_BriefbagOrangeSide
 			0.01,	//Mountain DEW
 			0.01,	//Soda
-			0.02,	//WATCH
-			0.02,	//COMPASS
-			0.02,	//MAP
+			0.01,	//WATCH
+			0.01,	//COMPASS
+			0.01,	//MAP
 			0.01,	//M1911
-			0.02,	//KNIFE
-			0.02,	//MATCHES
+			0.01,	//KNIFE
+			0.01,	//MATCHES
 			0.01,	//RADIO
 			0.01,	//SW.500
-			0.02,   //COLT 45
-			0.02,   //G17
+			0.01,   //COLT 45
+			0.01,   //G17
 			0.01,   //6RND .45JHP
-			0.02,   //CZ455
-			0.02,   //CZ455 SUP
+			0.01,   //CZ455
+			0.01,   //CZ455 SUP
 			0.01, 	//KIT SAGE
 			0.01, 	//KIT CBR
 			0.01,   //KIT CAMO
 			0.01,   //LEE ENFIELD
 			0.01,   //LEE ENFIELD SCOPED
 			0.02,	//BINOCULARS
-			0.02,	//S&W500 Scope
-			0.01,   //CAN 3
-			0.01,	//TAC VEST
-			0.02,	//BANDOLIER OLIVE
-			0.02,	//M9
-			0.02,	//LUPARA
-			0.01,	//GPS
-			0.01,	//HAVEN LOCK
-			0.01,   //M24 CLIP
-			0.02,	//45ACP
-			0.02,	//303B
-			0.02,	//22LR
-			0.02,	//.500SW
-			0.02,	//303_JSP_Mag
-			0.02,	//PAINKILLER
-			0.01,	//ANTIBIOTIC
-			0.01,	//WATER BOTTLE
-			0.01,	//TENNIS BALL
-			0.02,	//BANDAGE
-			0.01,	//ELECTRONICS
-			0.01,	//WIRE
-			0.01,	//CANVAS MATERIAL
-			0.01	//NETTING MATERIAL	
+			0.01,	//S&W500 Scope
+			0.01   //CAN 3
 		};		
 	};
 	class Office2: Default {
@@ -567,29 +397,29 @@ class CfgBuildingLoot
 			{"ItemDuctTape","magazine"}
 		};
 		itemChance[] =	{
-			0.15,	//BP_MedicalBox
-			0.15,	//BP_MedicalBag
+			0.17,	//BP_MedicalBox
+			0.17,	//BP_MedicalBag
 			0.04,   //BP_Bag1
 			0.02,   //Weapons
 			0.04,   //BP_Bag2
-			0.05,	//BANDAGE
-			0.05,	//PAINKILLER
-			0.05,	//MORPHINE
-			0.05,	//FIELD DRESSING
-			0.05,	//ANTIBIOTIC
+			0.04,	//BANDAGE
+			0.04,	//PAINKILLER
+			0.04,	//MORPHINE
+			0.04,	//FIELD DRESSING
+			0.04,	//ANTIBIOTIC
 			0.02,   //SURGERY KIT
-			0.03,   //Adrenaline
-			0.03,	//KNIFE
-			0.03,	//MATCHES
+			0.02,   //Adrenaline
+			0.02,	//KNIFE
+			0.02,	//MATCHES
 			0.01,	//BOOK
 			0.01,	//BOOK
 			0.01,	//BOOK
-			0.02,	//MUG
+			0.01,	//MUG
 			0.01,	//POTTERY
 			0.01, 	//VIDEO TAPE
 			0.01, 	//ZIPDISK
-			0.02,	//TOILET PAPER
-			0.03,	//GLUE
+			0.01,	//TOILET PAPER
+			0.02,	//GLUE
 			0.02	//DUCT TAPE
 		};		
 	};
@@ -627,18 +457,18 @@ class CfgBuildingLoot
 			{"ItemDuctTape","magazine"}
 		};
 		itemChance[] =	{
-			0.10,	//BP_MedicalBag
-			0.15,	//BP_Researcherbox
+			0.15,	//BP_MedicalBag
+			0.20,	//BP_Researcherbox
 			0.12,   //BP_PlasticBox
 			0.01,   //BP_PlasticBox MilitaryAirfieldAcc
-			0.05,	//BANDAGE
-			0.05,	//PAINKILLER
-			0.05,	//MORPHINE
-			0.05,	//FIELD DRESSING
-			0.05,	//ANTIBIOTIC
+			0.04,	//BANDAGE
+			0.04,	//PAINKILLER
+			0.04,	//MORPHINE
+			0.04,	//FIELD DRESSING
+			0.04,	//ANTIBIOTIC
 			0.03,   //SURGERY KIT
 			0.03,   //Adrenaline
-			0.02,	//KNIFE
+			0.01,	//KNIFE
 			0.01,	//MATCHES
 			0.01,	//BOOK
 			0.01,	//BOOK
@@ -975,93 +805,24 @@ class CfgBuildingLoot
 			{"BP_WeaponCrate_WWII","object","MilitarySurplusWpn"},
 			{"BP_Trashcan","object","Trash"},
 			{"BP_Bag1","object","Generic"},
-			{"optic_Aco","toolbelt"},
 			{"optic_mrco","toolbelt"},
-			{"BP_CPad","toolbelt"},
 			{"ItemMorphine","magazine"},
 			{"ItemFieldDressing","magazine"},
-			{"ItemKnife","magazine"},
-			{"ItemMap","toolbelt"},
-			{"ItemRadio","toolbelt"},
-			{"BP_AFG","toolbelt"},
-			{"BP_UGL_FlareWhite","magazine"},
-			{"ItemPainkiller","magazine"},
-			{"SmokeShell","magazine"},
-		    {"BP_Kitbag_sgg","backpack"},
-			{"BP_Kitbag_cbr","backpack"},
-			{"BP_Kitbag_mcamo","backpack"},
-		    {"BP_FieldPack_blk","backpack"},
-			{"BP_FieldPack_ocamo","backpack"},
-			{"BP_FieldPack_oucamo","backpack"},
-			{"BP_FieldPack_cbr","backpack"},			
-			{"V_Rangemaster_belt_BP","vest"},
-			{"BlueprintCrate1","magazine"},
-			{"BlueprintCache1","magazine"},
-			{"V_Chestrig_rgr_BP","vest"},
-			{"ItemSurgeryKit","toolbelt"},
-			{"V_BandollierB_khk_BP","vest"},
-			{"BP_m9","weapon"},
-			{"BP_G17","weapon"},
-            {"BP_M16OLD","weapon"},
-			{"BP_AR10","weapon"},
-			{"BP_SW45","weapon"},
-			{"BP_SUD_AK74M","weapon"},
-			{"BP_AK74U","weapon"},
-			{"BP_M4Old","weapon"},
-			{"BP_M4","weaponA"},
-			{"BP_M4K","weapon"},
-			{"BP_Benelli","weapon"},
-			{"BP_R300","weaponA"},
 			{"BP_SVT40","weapon"},
-			{"BP_LeeEnfield2","weaponA"},
-			{"BP_MP5","weapon"}
+			{"BP_LeeEnfield2","weaponA"}
 		};
 		itemChance[] =	{
 			0.16,	//BP_AmmoBoxNew
 			0.25,   //BP_AmmoCrateOld
 			0.17,   //BP_WeaponCrateOld
-			0.03,   //BP_WeaponCrate_WWII
+			0.05,   //BP_WeaponCrate_WWII
 			0.07,   //TRASH
 			0.04,   //GENERIC
-			0.01,	//ACO OPTIC
 			0.01,	//HAMR OPTIC
-			0.01,	//CHEEKPIECE
 			0.01,	//Morphine
 			0.01,	//Field Dressing
-			0.01,	//KNIFE
-			0.01,	//MAPA
-			0.01,	//RADIO
-			0.01,	//AFG
-			0.01,	//PAINKILLERS
-			0.01,	//SMOKE
-			0.01, 	//KIT SAGE
-			0.01, 	//KIT CBR
-			0.01,   //KIT CAMO
-			0.01, 	//FIELD BLACK
-			0.01, 	//FIELD HEX
-			0.01,   //FIELD URBAN
-            0.01,   //FIELD TAN			
-			0.01,	//BANDOLIER OLIVE
-			0.01,   //TENT BLUEPRINT
-			0.01,   //CRATE BLUEPRINT
-			0.01,   //Survival Rig
-			0.01,   //SURGERY KIT
-			0.01,	//Bandolier Mid
-			0.01,	//M9
-			0.01,	//G17
-			0.01,	//M16
-			0.01,	//AR10
-			0.01,	//SW45
-			0.01,	//AK74m	
-			0.01,	//AKS74U	
-			0.01,	//OLD M4
-			0.01,	//M4
-			0.01,	//M4K
-			0.01,	//BENELLI
-			0.01,	//R300
 			0.01,	//SVT40
-			0.01,	//ENFIELD SCOPED
-			0.01	//Mp5
+			0.01	//ENFIELD SCOPED
 		};		
 	};
 	class MilitarySpecial: Default {
@@ -1080,40 +841,11 @@ class CfgBuildingLoot
 			{"BP_Bag1","object","Generic"},
 			{"BP_Trashcan","object","Trash"},
 			{"BP_MedicalBox","object","Hospital"},
-			{"BP_M4_300MK","weapon"},
-			{"BP_m9","weapon"},
-			{"BP_G18","weapon"},
-			{"BP_G17","weapon"},
-			{"BP_1911","weapon"},
-			{"BP_SUD_AK74M","weapon"},
-			{"BP_SUD_AK107","weapon"},
-			{"BP_M4","weaponA"},
-			{"BP_M4OLD","weapon"},
-			{"BP_Benelli","weapon"},
-			{"BP_AKM","weapon"},
-			{"BP_AR10","weapon"},
-			{"BP_SVT40","weapon"},
-			{"BP_1911MDes","weapon"},
-			{"BP_M4_300","weaponA"},
-			{"BP_M4_300k","weapon"},
-			{"BP_AK74U","weapon"},
+			{"BP_M4_300MK","weaponA"},
+			{"BP_AR10","weaponA"},
 			{"BP_SVT40","weaponA"},
-			{"BP_M16OLD","weapon"},
-			{"optic_Aco","toolbelt"},
-			{"optic_mrco","toolbelt"},
-			{"Binocular","weaponNA"},
-			{"BP_CPad","toolbelt"},
-			{"BP_AFG","toolbelt"},
-			{"ItemKnife","magazine"},
-			{"ItemMap","toolbelt"}, 
-            {"ItemSoda1","magazine"},
-			{"ItemCan1","magazine"},
-			{"ItemBandage","magazine"},
-			{"ItemPainkiller","magazine"},
 			{"HandGrenade","magazine"},
 			{"SmokeShellRed","magazine"},
-			{"optic_holosight","toolbelt"},
-			{"V_Rangemaster_belt_BP","vest"},
 			{"V_HarnessOGL_brn_BP","vest"},
 			{"BP_gemtech9","toolbelt"}
 		};
@@ -1127,39 +859,10 @@ class CfgBuildingLoot
 			0.07,   //Trashcan
 			0.01,    //BP_MedicalBox
 			0.01,	//M4_300MK
-			0.01,	//M9
-			0.01,	//G18
-			0.01,	//G17
-			0.01,	//1911
-			0.01,	//AK74m	
-			0.01,	//AK107	
-			0.01,	//M4A1
-			0.01,	//M4A1
-			0.01,	//BENELLI
-			0.01,	//AKM
 			0.01,	//AR10
 			0.01,	//SVT40
-			0.01,	//1911DES
-			0.01,	//M4300
-			0.01,   //M4300K
-			0.01,	//AKS74U
-			0.01,	//SVT40 PSO
-			0.01,    //AR15
-			0.01,	//ACO OPTIC
-			0.01,	//HAMR OPTIC
-			0.01,	//BINOCULARS
-			0.01,	//CHEEKPIECE
-			0.01,	//AFG
-			0.01,	//KNIFE
-			0.01,	//MAPA
-			0.01,   //Soda
-			0.01,   //Food
-			0.01,	//BANDAGE
-			0.01,	//PAINKILLER
 			0.01,	//HAND GRENADE
 			0.01,	//SMOKE GRENADE RED
-			0.01,	//HOLO
-			0.01,	//BANDOLIER OLIVE
 			0.01,   //TAC VEST
 			0.01   //GEMTECH 9MM SUPPR
 		};		
