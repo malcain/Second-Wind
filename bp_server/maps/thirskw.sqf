@@ -1,0 +1,1 @@
+call compile preprocessFileLineNumbers "\bp_server\maps\thirsk.sqf";
