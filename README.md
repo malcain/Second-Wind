@@ -1,7 +1,8 @@
 # Second-Wind
 Breaking Point Mod ( Core Client / Server Code + Assets ) 
 
-##Configuration
+##Configuration##
+
 Download the BreakingPoint Client + Server files to your server (A batch file will be included in a tools folder for steam cmd users).
 
 Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
