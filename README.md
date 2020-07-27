@@ -1,29 +1,29 @@
 # Second-Wind
 Breaking Point Mod ( Core Client / Server Code + Assets ) 
 
-Configuration
+##Configuration
 Download the BreakingPoint Client + Server files to your server (A batch file will be included in a tools folder for steam cmd users).
 
 Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
 
 Copy the ServerConfig folder to your ArmA server directory.
 Open the BreakingPointExt.ini in ServerConfig and change the database ip, name, username, password and port to the ones you setup earlier.
- [DATABASE]
+``` [DATABASE]
  ip = 127.0.0.1
  port = 3306
  database = breakingpointmod
  username = root
  password =
-
+```
 
 Open the config.cfg in ServerConfig directory and setup your instance, this is important to remember for each server you host.
- class Params
+``` class Params
  {
  	instance = 1;
  	debug = false;
  };
 To can find instance values in your database manager: go to the instance table and look at the world id.
-
+```
 
 Set the correct mission file for the map you'd like to run.
  /*
@@ -38,7 +38,7 @@ Set the correct mission file for the map you'd like to run.
  "BP8_BreakingPoint.Chernarus" //Chernarus
  "BP9_BreakingPoint.namalsk" //Namalsk
  */
- class Missions
+``` class Missions
  {
    class BreakingPoint
    {
@@ -51,7 +51,7 @@ Set the correct mission file for the map you'd like to run.
  	  };
    };
  };
-
+```
 
 
 
