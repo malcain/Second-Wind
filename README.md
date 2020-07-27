@@ -3,9 +3,9 @@ Breaking Point Mod ( Core Client / Server Code + Assets )
 
 ## Configuration
 
-Download the BreakingPoint Client + Server files to your server (A batch file will be included in a tools folder for steam cmd users).
+* Download the BreakingPoint Client + Server files to your server (A batch file will be included in a tools folder for steam cmd users).
 
-Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
+* Import the included breakingpoint.sql file from the SQL folder to a clean database and make sure you have a sql account that has full access to that database.
 
 Copy the ServerConfig folder to your ArmA server directory.
 Open the BreakingPointExt.ini in ServerConfig and change the database ip, name, username, password and port to the ones you setup earlier.
