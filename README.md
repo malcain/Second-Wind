@@ -54,6 +54,6 @@ Set the correct mission file for the map you'd like to run.
 ```
 
 
-
 Copy the included server_start.bat file from the Tools folder to your server directory and edit as necessary (The defaults provided will work for a 64 Bit server running on port 2302).
+
 Double click the batch file and wait for the server to start, if everything went successfully you should see the server start and a console displayed saying the following.
