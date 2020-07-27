@@ -26,7 +26,7 @@ To can find instance values in your database manager: go to the instance table a
 ```
 
 Set the correct mission file for the map you'd like to run.
- /*
+``` /*
  List of mission names.
  "BP1_BreakingPoint.Altis" //Altis
  "BP2_BreakingPoint.Stratis" //Stratis
@@ -38,6 +38,7 @@ Set the correct mission file for the map you'd like to run.
  "BP8_BreakingPoint.Chernarus" //Chernarus
  "BP9_BreakingPoint.namalsk" //Namalsk
  */
+ ```
 ``` class Missions
  {
    class BreakingPoint
